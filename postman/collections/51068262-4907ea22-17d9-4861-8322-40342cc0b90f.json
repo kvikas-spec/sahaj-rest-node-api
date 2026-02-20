@@ -4531,12 +4531,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/ApprovalForm14List?pageNo=1&pageLength=10&Form14SearchDetail=1&consumerNo=3000295985",
+							"raw": "{{api_gateway_url}}/{{customer-reg}}/MeterMaster/ApprovalForm14List?pageNo=1&pageLength=10&Form14SearchDetail=1&consumerNo=3000295985",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
-								"{{customer_base_url}}",
+								"{{customer-reg}}",
 								"MeterMaster",
 								"ApprovalForm14List"
 							],
