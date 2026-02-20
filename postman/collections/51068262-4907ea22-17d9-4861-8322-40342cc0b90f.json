@@ -7293,6 +7293,7 @@
 											],
 											"variable": [
 												{
+													"id": "fb4ed330-a334-4586-87e7-3245bb46afa3",
 													"key": "MeterReadingId",
 													"value": "321024"
 												}
@@ -7332,6 +7333,7 @@
 											],
 											"variable": [
 												{
+													"id": "c4281e4c-1c48-4c95-866d-9b5fe580cf13",
 													"key": "MeterReadingId",
 													"value": "321024"
 												}
@@ -7432,6 +7434,7 @@
 											],
 											"variable": [
 												{
+													"id": "dd753024-1e7a-4be6-8c8c-9d2b70665753",
 													"key": "MeterReadingId",
 													"value": "321024"
 												}
@@ -7471,6 +7474,7 @@
 											],
 											"variable": [
 												{
+													"id": "81a8ad8e-5a05-4417-9694-9207bb1d7292",
 													"key": "MeterReadingId",
 													"value": "321119"
 												}
@@ -7510,6 +7514,7 @@
 											],
 											"variable": [
 												{
+													"id": "13f25046-2060-4e41-93fc-3a8289c26b90",
 													"key": "MeterReadingId",
 													"value": "321025"
 												}
@@ -7610,6 +7615,7 @@
 											],
 											"variable": [
 												{
+													"id": "128d885a-0083-43e9-a173-05ae78ffb2a1",
 													"key": "MeterReadingId",
 													"value": "321024"
 												}
@@ -7649,6 +7655,7 @@
 											],
 											"variable": [
 												{
+													"id": "01dd1f91-2538-4d04-a54e-3a4dbfbf5180",
 													"key": "MeterReadingId",
 													"value": "321387"
 												}
@@ -7951,6 +7958,7 @@
 							],
 							"variable": [
 								{
+									"id": "378cebcc-e9f6-4f8f-8651-28faa7ff9d35",
 									"key": "MasterTableName",
 									"value": "ConnectionStatusMaster"
 								}
