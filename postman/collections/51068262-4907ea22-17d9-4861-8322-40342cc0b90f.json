@@ -4452,7 +4452,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/_MeterDetailsUpdationList?pageNo=1&pageSize=10&isFilter=1&meterNo=EC000078&MeterDetailsUpdationList=1",
+							"raw": "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/_MeterDetailsUpdationList?pageNo=1&pageSize=10",
 							"host": [
 								"{{api_gateway_url}}"
 							],
@@ -4472,11 +4472,13 @@
 								},
 								{
 									"key": "isFilter",
-									"value": "1"
+									"value": "1",
+									"disabled": true
 								},
 								{
 									"key": "meterNo",
-									"value": "EC000078"
+									"value": "EC000078",
+									"disabled": true
 								},
 								{
 									"key": "IsDisconnectedMeter",
@@ -4505,7 +4507,8 @@
 								},
 								{
 									"key": "MeterDetailsUpdationList",
-									"value": "1"
+									"value": "1",
+									"disabled": true
 								}
 							]
 						}
@@ -4531,7 +4534,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{api_gateway_url}}/{{customer_reg_url}}/MeterMaster/ApprovalForm14List?pageNo=1&pageLength=10&isFilter=1&wardId=15&mru=15",
+							"raw": "{{api_gateway_url}}/{{customer_reg_url}}/MeterMaster/ApprovalForm14List?pageNo=1&pageLength=10&Form14SearchDetail=1&consumerNo=3000295985",
 							"host": [
 								"{{api_gateway_url}}"
 							],
@@ -4556,11 +4559,13 @@
 								},
 								{
 									"key": "isFilter",
-									"value": "1"
+									"value": "1",
+									"disabled": true
 								},
 								{
 									"key": "wardId",
-									"value": "15"
+									"value": "15",
+									"disabled": true
 								},
 								{
 									"key": "ApplicationNo",
@@ -4569,8 +4574,7 @@
 								},
 								{
 									"key": "Form14SearchDetail",
-									"value": "1",
-									"disabled": true
+									"value": "1"
 								},
 								{
 									"key": "consumerNo",
@@ -4579,13 +4583,12 @@
 								},
 								{
 									"key": "consumerNo",
-									"value": "3000295985",
-									"disabled": true
+									"value": "3000295985"
 								},
 								{
 									"key": "mru",
 									"value": "15",
-									"type": "text"
+									"disabled": true
 								}
 							]
 						}
@@ -6742,6 +6745,7 @@
 										{
 											"listen": "test",
 											"script": {
+												"id": "a2cacf42-bfd4-4ce1-9a81-e7a215eb133e",
 												"exec": [
 													"// Visualization Script",
 													"// Visualization Script",
@@ -6845,8 +6849,7 @@
 												],
 												"type": "text/javascript",
 												"packages": {},
-												"requests": {},
-												"id": "a2cacf42-bfd4-4ce1-9a81-e7a215eb133e"
+												"requests": {}
 											}
 										}
 									],
@@ -6873,7 +6876,7 @@
 											]
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetListOfCustomerMeterReadingDetails?pageNo=1&pageSize=10&isFilter=1&sort=ConsumerNumber:DESC",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetListOfCustomerMeterReadingDetails?pageNo=1&pageSize=10&BillGenerateRequestWithReadingId=50313&isFilter=1&sort=ConsumerNumber:DESC",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6893,8 +6896,7 @@
 												},
 												{
 													"key": "BillGenerateRequestWithReadingId",
-													"value": "40315",
-													"disabled": true
+													"value": "50313"
 												},
 												{
 													"key": "ConsumerNumber",
