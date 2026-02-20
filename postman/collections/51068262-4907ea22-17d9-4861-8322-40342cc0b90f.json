@@ -4531,12 +4531,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{api_gateway_url}}/{{customer-reg}}/MeterMaster/ApprovalForm14List?pageNo=1&pageLength=10&Form14SearchDetail=1&consumerNo=3000295985",
+							"raw": "{{api_gateway_url}}/{{customer_reg_url}}/MeterMaster/ApprovalForm14List?pageNo=1&pageLength=10&isFilter=1&wardId=15&mru=15",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
-								"{{customer-reg}}",
+								"{{customer_reg_url}}",
 								"MeterMaster",
 								"ApprovalForm14List"
 							],
@@ -4556,13 +4556,11 @@
 								},
 								{
 									"key": "isFilter",
-									"value": "1",
-									"disabled": true
+									"value": "1"
 								},
 								{
 									"key": "wardId",
-									"value": "89447",
-									"disabled": true
+									"value": "15"
 								},
 								{
 									"key": "ApplicationNo",
@@ -4571,7 +4569,8 @@
 								},
 								{
 									"key": "Form14SearchDetail",
-									"value": "1"
+									"value": "1",
+									"disabled": true
 								},
 								{
 									"key": "consumerNo",
@@ -4580,7 +4579,13 @@
 								},
 								{
 									"key": "consumerNo",
-									"value": "3000295985"
+									"value": "3000295985",
+									"disabled": true
+								},
+								{
+									"key": "mru",
+									"value": "15",
+									"type": "text"
 								}
 							]
 						}
