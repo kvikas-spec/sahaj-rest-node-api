@@ -7710,7 +7710,7 @@
 							"name": "InvoiceGeneration",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "PrintBill",
 									"id": "51068262-3311a941-542a-4057-b82d-85bed85d6d7a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
