@@ -7720,7 +7720,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"ConsumerCode\": [1001234567, 1001234568, 1001234569],\n  \"Cycle\": 202401,\n  \"WardId\": 5,\n  \"AccountTypeId\": 1,\n  \"StartDate\": \"2024-01-01\",\n  \"EndDate\": \"2024-01-31\"\n}",
+											"raw": "{\n  \"ConsumerCode\": [],//[1001234567, 1001234568, 1001234569],\n  \"Cycle\": 2501,\n  \"WardId\": 5,\n  \"AccountTypeId\": 1,\n  \"StartDate\": \"2024-01-01\",\n  \"EndDate\": \"2024-01-31\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
