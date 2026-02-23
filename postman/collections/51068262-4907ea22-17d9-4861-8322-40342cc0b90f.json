@@ -7707,8 +7707,21 @@
 							"id": "51068262-0b640285-cf78-4354-b001-663617a6b7e8"
 						},
 						{
-							"name": "New Folder",
-							"item": [],
+							"name": "InvoiceGeneration",
+							"item": [
+								{
+									"name": "New Request",
+									"id": "51068262-3311a941-542a-4057-b82d-85bed85d6d7a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
 							"id": "51068262-48707742-c62f-4b98-b4d2-7fdced789592"
 						},
 						{
