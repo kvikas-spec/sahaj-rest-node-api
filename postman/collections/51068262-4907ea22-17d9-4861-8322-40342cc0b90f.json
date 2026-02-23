@@ -7976,7 +7976,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    // \"sort\": \"MeterStatusName:ASC\",\n    // \"force\": true,\n    \"whereClause\": {\n        \"IsActive\": true\n        // \"MeterCompanyId\": \"16\"\n        // \"MeterStatusId\": \"10018\"\n    }\n    // \"attributes\": [\"RouteId\", \"Area\"],\n    // \"sort\": \"Area:ASC\"\n}",
+							"raw": "{\n    // \"sort\": \"MeterStatusName:ASC\",\n    \"force\": true,\n    \"whereClause\": {\n        \"IsActive\": true\n        // \"MeterCompanyId\": \"16\"\n        // \"MeterStatusId\": \"10018\"\n    }\n    // \"attributes\": [\"RouteId\", \"Area\"],\n    // \"sort\": \"Area:ASC\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7996,7 +7996,7 @@
 							"variable": [
 								{
 									"key": "MasterTableName",
-									"value": "ConnectionStatusMaster"
+									"value": "PromoMaster"
 								}
 							]
 						}
