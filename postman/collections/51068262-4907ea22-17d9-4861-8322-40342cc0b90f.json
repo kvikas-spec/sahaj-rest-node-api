@@ -4534,7 +4534,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{api_gateway_url}}/{{customer_reg_url}}/MeterMaster/ApprovalForm14List?pageNo=1&pageLength=10&Form14SearchDetail=1&consumerNo=3000295985",
+							"raw": "{{api_gateway_url}}/{{customer_reg_url}}/MeterMaster/ApprovalForm14List?pageNo=1&pageLength=10&Form14SearchDetail=1&consumerNo=3000298547",
 							"host": [
 								"{{api_gateway_url}}"
 							],
@@ -4583,7 +4583,7 @@
 								},
 								{
 									"key": "consumerNo",
-									"value": "3000295985"
+									"value": "3000298547"
 								},
 								{
 									"key": "mru",
@@ -7720,7 +7720,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"ConsumerCode\": [],//[1001234567, 1001234568, 1001234569],\n  \"Cycle\": 2501,\n  \"WardId\": 5,\n  \"AccountTypeId\": 1,\n  \"StartDate\": \"2024-01-01\",\n  \"EndDate\": \"2024-01-31\"\n}",
+											"raw": "{\n  \"ConsumerCode\": [3000293911],//[1001234567, 1001234568, 1001234569],\n  \"Cycle\": 0,\n  \"WardId\": 0,\n  \"AccountTypeId\": 1,\n  \"StartDate\": \"2025-01-01\",\n  \"EndDate\": \"2025-12-31\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
