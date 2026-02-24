@@ -28591,7 +28591,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"to\": \"vy24754@gmail.com\",\n    \"subject\": \"Test Email from Notification Service\",\n    \"html\": \"<h1>Hello!</h1><p>This is a test email.</p>\",\n    \"text\": \"Hello! This is a test email.\"\n    // \"cc\": \"cc@example.com\",\n    // \"bcc\": \"bcc@example.com\"\n  }",
+							"raw": "{\n    \"to\": \"vy24754@gmail.com\",\n    \"subject\": \"Test Email from Notification Service\",\n    \"html\": `\n<!doctype html>\n<html dir=\"ltr\" lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <title>New Tab</title>\n    <style>\n      body {\n        background: #FFFFFF;\n        margin: 0;\n      }\n\n      #backgroundImage {\n        border: none;\n        height: 100%;\n        pointer-events: none;\n        position: fixed;\n        top: 0;\n        visibility: hidden;\n        width: 100%;\n      }\n\n      [show-background-image] #backgroundImage {\n        visibility: visible;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe id=\"backgroundImage\" src=\"\"></iframe>\n    <ntp-app></ntp-app>\n    <script type=\"module\" src=\"new_tab_page.js\"></script>\n    <link rel=\"stylesheet\" href=\"chrome://resources/css/text_defaults_md.css\">\n    <link rel=\"stylesheet\" href=\"chrome://theme/colors.css?sets=ui,chrome\">\n    <link rel=\"stylesheet\" href=\"shared_vars.css\">\n  </body>\n</html>`\n    // \"text\": \"Hello! This is a test email.\"\n    // \"cc\": \"cc@example.com\",\n    // \"bcc\": \"bcc@example.com\"\n  }",
 							"options": {
 								"raw": {
 									"language": "json"
