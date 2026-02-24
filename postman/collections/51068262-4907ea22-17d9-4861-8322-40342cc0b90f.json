@@ -28582,8 +28582,36 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"to\": \"vy24754@gmail.com\",\n    \"subject\": \"Test Email from Notification Service\",\n    \"html\": \"<h1>Hello!</h1><p>This is a test email.</p>\",\n    \"text\": \"Hello! This is a test email.\"\n    // \"cc\": \"cc@example.com\",\n    // \"bcc\": \"bcc@example.com\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3005/api/v1/notifications/email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"notifications",
+								"email"
+							]
+						}
 					},
 					"response": []
 				}
