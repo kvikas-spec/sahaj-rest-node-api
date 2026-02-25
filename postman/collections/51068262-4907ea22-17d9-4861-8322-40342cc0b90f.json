@@ -516,7 +516,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "",
+							"raw": "{\n    \"templeteID\": 1,\n    \"replacements\": {\n        \"{OTP}\": 123456,\n        \"{OTPValidTime}\": \"\"\n    },\n    \"toEmail\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"mailType\": 0,\n    \"Gname\": \"Meerut\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
