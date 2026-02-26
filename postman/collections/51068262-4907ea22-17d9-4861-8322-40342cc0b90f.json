@@ -4484,7 +4484,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/_MeterDetailsUpdationList?pageNo=1&pageSize=10",
+							"raw": "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/_MeterDetailsUpdationList?pageNo=1&pageSize=10&isDownload=1",
 							"host": [
 								"{{api_gateway_url}}"
 							],
@@ -4541,6 +4541,10 @@
 									"key": "MeterDetailsUpdationList",
 									"value": "1",
 									"disabled": true
+								},
+								{
+									"key": "isDownload",
+									"value": "1"
 								}
 							]
 						}
