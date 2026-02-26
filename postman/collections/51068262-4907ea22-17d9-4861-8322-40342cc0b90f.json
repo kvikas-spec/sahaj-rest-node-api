@@ -4484,7 +4484,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/_MeterDetailsUpdationList?pageNo=1&pageSize=20&MeterDetailsUpdationList=1",
+							"raw": "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/_MeterDetailsUpdationList?pageNo=1&pageSize=10&MeterDetailsUpdationList=1",
 							"host": [
 								"{{api_gateway_url}}"
 							],
@@ -4500,7 +4500,7 @@
 								},
 								{
 									"key": "pageSize",
-									"value": "20"
+									"value": "10"
 								},
 								{
 									"key": "isFilter",
