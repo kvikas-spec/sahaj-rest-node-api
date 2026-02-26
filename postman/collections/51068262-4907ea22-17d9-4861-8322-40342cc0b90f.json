@@ -4484,7 +4484,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/_MeterDetailsUpdationList?pageNo=1&pageSize=10&isDownload=1",
+							"raw": "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/_MeterDetailsUpdationList?pageNo=1&pageSize=20&MeterDetailsUpdationList=1",
 							"host": [
 								"{{api_gateway_url}}"
 							],
@@ -4500,11 +4500,11 @@
 								},
 								{
 									"key": "pageSize",
-									"value": "10"
+									"value": "20"
 								},
 								{
 									"key": "isFilter",
-									"value": "1",
+									"value": "110",
 									"disabled": true
 								},
 								{
@@ -4534,17 +4534,17 @@
 								},
 								{
 									"key": "isAssignToAgency",
-									"value": "",
-									"disabled": true
-								},
-								{
-									"key": "MeterDetailsUpdationList",
 									"value": "1",
 									"disabled": true
 								},
 								{
-									"key": "isDownload",
+									"key": "MeterDetailsUpdationList",
 									"value": "1"
+								},
+								{
+									"key": "isDownload",
+									"value": "1",
+									"disabled": true
 								}
 							]
 						}
