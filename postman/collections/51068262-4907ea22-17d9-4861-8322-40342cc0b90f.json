@@ -15,6 +15,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "84574b35-0007-499c-885d-ea22a39a47c6",
 								"exec": [
 									"let accessToken = pm.response.headers.get(\"x-access-token\");",
 									"let refreshToken = pm.response.headers.get(\"x-refresh-token\");",
@@ -30,8 +31,7 @@
 								],
 								"type": "text/javascript",
 								"packages": {},
-								"requests": {},
-								"id": "84574b35-0007-499c-885d-ea22a39a47c6"
+								"requests": {}
 							}
 						}
 					],
@@ -67,7 +67,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 105947\n}",
+							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 123456\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -18859,14 +18859,50 @@
 							]
 						},
 						{
-							"name": "New Request",
+							"name": "digital-jmr-data",
 							"id": "51068262-8c1d90b8-4dd6-4e7a-8386-4b163677a3db",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customer-registration/digital-jmr-data?IsCreate=false&ConsumerNumber=3000298658&MeterSerialNo=11035&MeterReading=1250.75&MeterCompany=1%27 \\\n--header Authorization:",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customer-registration",
+										"digital-jmr-data"
+									],
+									"query": [
+										{
+											"key": "IsCreate",
+											"value": "false"
+										},
+										{
+											"key": "ConsumerNumber",
+											"value": "3000298658"
+										},
+										{
+											"key": "MeterSerialNo",
+											"value": "11035"
+										},
+										{
+											"key": "MeterReading",
+											"value": "1250.75"
+										},
+										{
+											"key": "MeterCompany",
+											"value": "1%27 \\\n--header Authorization:"
+										}
+									]
+								}
 							},
 							"response": []
 						}
