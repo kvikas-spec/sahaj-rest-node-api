@@ -15,6 +15,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "84574b35-0007-499c-885d-ea22a39a47c6",
 								"exec": [
 									"let accessToken = pm.response.headers.get(\"x-access-token\");",
 									"let refreshToken = pm.response.headers.get(\"x-refresh-token\");",
@@ -30,8 +31,7 @@
 								],
 								"type": "text/javascript",
 								"packages": {},
-								"requests": {},
-								"id": "84574b35-0007-499c-885d-ea22a39a47c6"
+								"requests": {}
 							}
 						}
 					],
@@ -67,7 +67,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 123456\n}",
+							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 105947\n}",
 							"options": {
 								"raw": {
 									"language": "json"
