@@ -15,6 +15,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "84574b35-0007-499c-885d-ea22a39a47c6",
 								"exec": [
 									"let accessToken = pm.response.headers.get(\"x-access-token\");",
 									"let refreshToken = pm.response.headers.get(\"x-refresh-token\");",
@@ -30,8 +31,7 @@
 								],
 								"type": "text/javascript",
 								"packages": {},
-								"requests": {},
-								"id": "84574b35-0007-499c-885d-ea22a39a47c6"
+								"requests": {}
 							}
 						}
 					],
@@ -67,7 +67,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 123456\n}",
+							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 105947\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -93,6 +93,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "9dd9fe8b-bc34-4b33-bf78-4d3711f263a1",
 								"exec": [
 									"// ========== DEBUG: Response Status ==========",
 									"console.log(\"========== LOGIN RESPONSE DEBUG ==========\");",
@@ -147,8 +148,7 @@
 								],
 								"type": "text/javascript",
 								"packages": {},
-								"requests": {},
-								"id": "9dd9fe8b-bc34-4b33-bf78-4d3711f263a1"
+								"requests": {}
 							}
 						}
 					],
@@ -500,6 +500,38 @@
 								"auth",
 								"users",
 								"SaveUserRegistration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/send-email-template",
+					"id": "51068262-94c38a4d-2c03-424d-b5f4-ad363fc30268",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"templeteID\": 117,\n    \"replacements\": {\n        \"{OTP}\": 123456,\n        \"{OTPValidTime}\": 60\n    },\n    \"toEmail\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"mailType\": 0,\n    \"Gname\": \"Meerut\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_gateway_url}}/auth/users/send-email-template",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"auth",
+								"users",
+								"send-email-template"
 							]
 						}
 					},
@@ -4452,7 +4484,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/_MeterDetailsUpdationList?pageNo=1&pageSize=10&isFilter=1&meterNo=EC000078&MeterDetailsUpdationList=1",
+							"raw": "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/_MeterDetailsUpdationList?pageNo=1&pageSize=10&MeterDetailsUpdationList=1",
 							"host": [
 								"{{api_gateway_url}}"
 							],
@@ -4472,11 +4504,13 @@
 								},
 								{
 									"key": "isFilter",
-									"value": "1"
+									"value": "110",
+									"disabled": true
 								},
 								{
 									"key": "meterNo",
-									"value": "EC000078"
+									"value": "EC000078",
+									"disabled": true
 								},
 								{
 									"key": "IsDisconnectedMeter",
@@ -4500,12 +4534,17 @@
 								},
 								{
 									"key": "isAssignToAgency",
-									"value": "",
+									"value": "1",
 									"disabled": true
 								},
 								{
 									"key": "MeterDetailsUpdationList",
 									"value": "1"
+								},
+								{
+									"key": "isDownload",
+									"value": "1",
+									"disabled": true
 								}
 							]
 						}
@@ -4531,12 +4570,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/ApprovalForm14List?pageNo=1&pageLength=10&Form14SearchDetail=1&consumerNo=3000295985",
+							"raw": "{{api_gateway_url}}/{{customer_reg_url}}/MeterMaster/ApprovalForm14List?pageNo=1&pageSize=1",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
-								"{{customer_base_url}}",
+								"{{customer_reg_url}}",
 								"MeterMaster",
 								"ApprovalForm14List"
 							],
@@ -4551,8 +4590,8 @@
 									"value": "1"
 								},
 								{
-									"key": "pageLength",
-									"value": "10"
+									"key": "pageSize",
+									"value": "1"
 								},
 								{
 									"key": "isFilter",
@@ -4561,7 +4600,7 @@
 								},
 								{
 									"key": "wardId",
-									"value": "89447",
+									"value": "15",
 									"disabled": true
 								},
 								{
@@ -4571,7 +4610,8 @@
 								},
 								{
 									"key": "Form14SearchDetail",
-									"value": "1"
+									"value": "1",
+									"disabled": true
 								},
 								{
 									"key": "consumerNo",
@@ -4580,7 +4620,19 @@
 								},
 								{
 									"key": "consumerNo",
-									"value": "3000295985"
+									"value": "3000298547",
+									"disabled": true
+								},
+								{
+									"key": "mru",
+									"value": "15",
+									"disabled": true
+								},
+								{
+									"key": "isDownload",
+									"value": "1",
+									"type": "text",
+									"disabled": true
 								}
 							]
 						}
@@ -5036,7 +5088,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ConsumerNumber\": \"2600503322\",\n  \"MonthlyChangeId\": \"0\",\n  \"TransactionDate\": \"2026-01-14\",\n  \"OldMeterNumber\": \"18200\",\n  \"NewMeterNumber\": \"18201\",\n  \"OldMeterCompanyId\": \"1\",\n  \"NewMeterCompanyId\": \"2\",\n  \"OldMeterType\": \"G4\",\n  \"NewMeterType\": \"G8\",\n  \"MeterNoDate\": \"2026-01-14\",\n  \"OldReading\": \"120\",\n  \"NewReading\": \"125\",\n  \"OldUnitDiff\": \"5\",\n  \"NewUnitDiff\": \"5\",\n  \"UnitDiffRemark\": \"Adjustment\",\n  \"OldFamilyMembers\": \"4\",\n  \"NewFamilyMembers\": \"5\",\n  \"FamilyMemberDate\": \"2026-01-14\",\n  \"OldTotalPoints\": \"2\",\n  \"NewTotalPoints\": \"3\",\n  \"Cycle\": \n  \"PointChangeDate\": \"2026-01-14\",\n  \"MeterPrice\": \"3500\",\n  \"MeterInstallmentAmount\": \"500\",\n  \"TotalMeterInstallmentNumber\": \"7\",\n  \"ChallanId\": \"10123,10124\",\n  \"Remark\": \"Meter replaced\",\n  \"NewMeterRemark\": \"New G6 installed\",\n  \"MeterPhotoName\": \"Meerut/customer-reg/meter-replacement/sample.jpeg\"\n}\n",
+							"raw": "{\n  \"ConsumerNumber\": \"2600503322\",\n  \"MonthlyChangeId\": \"0\",\n  \"TransactionDate\": \"2026-01-14\",\n  \"OldMeterNumber\": \"18200\",\n  \"NewMeterNumber\": \"18201\",\n  \"OldMeterCompanyId\": \"1\",\n  \"NewMeterCompanyId\": \"2\",\n  \"OldMeterType\": \"G4\",\n  \"NewMeterType\": \"G8\",\n  \"MeterNoDate\": \"2026-01-14\",\n  \"OldReading\": \"120\",\n  \"NewReading\": \"125\",\n  \"OldUnitDiff\": \"5\",\n  \"NewUnitDiff\": \"5\",\n  \"UnitDiffRemark\": \"Adjustment\",\n  \"OldFamilyMembers\": \"4\",\n  \"NewFamilyMembers\": \"5\",\n  \"FamilyMemberDate\": \"2026-01-14\",\n  \"OldTotalPoints\": \"2\",\n  \"NewTotalPoints\": \"3\",\n  \"Cycle\": 0,\n  \"PointChangeDate\": \"2026-01-14\",\n  \"MeterPrice\": \"3500\",\n  \"MeterInstallmentAmount\": \"500\",\n  \"TotalMeterInstallmentNumber\": \"7\",\n  \"ChallanId\": \"10123,10124\",\n  \"Remark\": \"Meter replaced\",\n  \"NewMeterRemark\": \"New G6 installed\",\n  \"MeterPhotoName\": \"Meerut/customer-reg/meter-replacement/sample.jpeg\"\n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5079,7 +5131,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    // \"ids\": [70155, \"aaa\"] //MonthlyChangeId\n    \"ids\": [120158]\n}",
+							"raw": "{\n    // \"ids\": [70155, \"aaa\"] //MonthlyChangeId\n    \"ids\": [160177]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -6098,7 +6150,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "// {\n//   \"ConsumerNumber\": 3000297617,\n//   \"Cycle\": 2519,\n//   \"WardId\": 39,\n//   \"ReadingDate\": \"2026-02-02\",\n//   \"BillDate\": \"2026-02-02\",\n//   \"CurrentReading\": 3,\n//   \"PreviousReading\": 2,\n//   \"MeterStatusId\": 1,\n//   \"AccountTypeId\": 1,\n//   \"Remarks\": \"Meter reading taken successfully\",\n//   \"UploadedFile\": \"\" //file url or filename\n// }\n{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1771496942554-457455599_up arrow.png\",\n    \"ConsumerNumber\": 3000297617,\n    \"Cycle\": \"2601\",\n    \"WardId\": 15,\n    \"ReadingDate\": \"2026-02-12\",\n    \"BillDate\": \"2026-02-12\",\n    \"FullName\": \"Ramesh Kumar\",\n    \"BillNumber\": 458796,\n    \"CurrentReading\": 2,\n    \"PreviousReading\": 0,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    // \"UploadedFile\": \"Meerut/meter-reading/1771496942554-457455599_up arrow.png\",\n    \"UnitUsed\": 2\n}\n// {\n//     \"ConsumerNumber\": 10000001,\n//     \"Cycle\": 202402,\n//     \"AccountTypeId\": 1,\n//     \"WardId\": 12,\n//     \"FullName\": \"Ramesh Kumar\",\n//     \"BillNumber\": 458796,\n//     \"ReadingDate\": \"19/02/2026\",\n//     \"MeterStatusId\": 1,\n//     \"MeterCompanyId\": 3,\n//     \"MeterNumber\": \"GG-2024-8899\",\n//     \"MeterType\": \"LHS\",\n//     \"PreviousReading\": 1250.50,\n//     \"CurrentReading\": 1300.75,\n//     \"UnitUsed\": 50.25\n// }",
+											"raw": "// {\n//   \"ConsumerNumber\": 3000297617,\n//   \"Cycle\": 2519,\n//   \"WardId\": 39,\n//   \"ReadingDate\": \"2026-02-02\",\n//   \"BillDate\": \"2026-02-02\",\n//   \"CurrentReading\": 3,\n//   \"PreviousReading\": 2,\n//   \"MeterStatusId\": 1,\n//   \"AccountTypeId\": 1, \n//   \"Remarks\": \"Meter reading taken successfully\",\n//   \"UploadedFile\": \"\" //file url or filename\n// }\n{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1771496942554-457455599_up arrow.png\", //MeterBillReceiptImagePath\n    \"ConsumerNumber\": 3000297617,\n    \"Cycle\": \"2601\",\n    \"WardId\": 15,\n    \"ReadingDate\": \"2026-02-12\",\n    \"BillDate\": \"2026-02-12\",\n    \"FullName\": \"Ramesh Kumar\",\n    \"BillNumber\": 458796,\n    \"CurrentReading\": 2,\n    \"PreviousReading\": 0,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully..\",\n    // \"UploadedFile\": \"Meerut/meter-reading/1771496942554-457455599_up arrow.png\",\n    \"UnitUsed\": 2\n}\n// {\n//     \"ConsumerNumber\": 10000001,\n//     \"Cycle\": 202402,\n//     \"AccountTypeId\": 1,\n//     \"WardId\": 12,\n//     \"FullName\": \"Ramesh Kumar\",\n//     \"BillNumber\": 458796,\n//     \"ReadingDate\": \"19/02/2026\",\n//     \"MeterStatusId\": 1,\n//     \"MeterCompanyId\": 3,\n//     \"MeterNumber\": \"GG-2024-8899\",\n//     \"MeterType\": \"LHS\",\n//     \"PreviousReading\": 1250.50,\n//     \"CurrentReading\": 1300.75,\n//     \"UnitUsed\": 50.25\n// }",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6563,9 +6615,8 @@
 											],
 											"variable": [
 												{
-													"id": "a23a6b97-6ca1-49cf-be64-96520f98bbe2",
 													"key": "BillGenerateRequestWithReadingId",
-													"value": "40315"
+													"value": "50313"
 												}
 											]
 										}
@@ -6738,6 +6789,7 @@
 										{
 											"listen": "test",
 											"script": {
+												"id": "a2cacf42-bfd4-4ce1-9a81-e7a215eb133e",
 												"exec": [
 													"// Visualization Script",
 													"// Visualization Script",
@@ -6841,8 +6893,7 @@
 												],
 												"type": "text/javascript",
 												"packages": {},
-												"requests": {},
-												"id": "a2cacf42-bfd4-4ce1-9a81-e7a215eb133e"
+												"requests": {}
 											}
 										}
 									],
@@ -6869,7 +6920,7 @@
 											]
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetListOfCustomerMeterReadingDetails?pageNo=1&pageSize=10&isFilter=1&sort=ConsumerNumber:DESC",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetListOfCustomerMeterReadingDetails?pageNo=1&pageSize=10&BillGenerateRequestWithReadingId=50313&isFilter=1&sort=ConsumerNumber:DESC",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6889,8 +6940,7 @@
 												},
 												{
 													"key": "BillGenerateRequestWithReadingId",
-													"value": "40315",
-													"disabled": true
+													"value": "50313"
 												},
 												{
 													"key": "ConsumerNumber",
@@ -7708,6 +7758,44 @@
 							"id": "51068262-0b640285-cf78-4354-b001-663617a6b7e8"
 						},
 						{
+							"name": "InvoiceGeneration",
+							"item": [
+								{
+									"name": "PrintBill",
+									"id": "51068262-3311a941-542a-4057-b82d-85bed85d6d7a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ConsumerCode\": [3000293911, 3000293910, 3000293912 ],\n  \"Cycle\": 0,\n  \"WardId\": 0,\n  \"AccountTypeId\": 1,\n  \"StartDate\": \"2025-01-01\",\n  \"EndDate\": \"2025-12-31\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/PrintBill",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"postpaid-invoice",
+												"PrintBill"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "51068262-48707742-c62f-4b98-b4d2-7fdced789592"
+						},
+						{
 							"name": "listOfBillGenerateRequest",
 							"id": "51068262-28cece2f-7592-4fa1-a6c3-3ccd3251bcab",
 							"protocolProfileBehavior": {
@@ -7939,7 +8027,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    // \"sort\": \"MeterStatusName:ASC\",\n    // \"force\": true,\n    \"whereClause\": {\n        \"IsActive\": true\n        // \"MeterCompanyId\": \"16\"\n        // \"MeterStatusId\": \"10018\"\n    }\n    // \"attributes\": [\"RouteId\", \"Area\"],\n    // \"sort\": \"Area:ASC\"\n}",
+							"raw": "{\n    // \"sort\": \"MeterStatusName:ASC\",\n    \"force\": true,\n    \"whereClause\": {\n        \"IsActive\": true\n        // \"MeterCompanyId\": \"16\"\n        // \"MeterStatusId\": \"10018\"\n    }\n    // \"attributes\": [\"RouteId\", \"Area\"],\n    // \"sort\": \"Area:ASC\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7960,7 +8048,7 @@
 								{
 									"id": "378cebcc-e9f6-4f8f-8651-28faa7ff9d35",
 									"key": "MasterTableName",
-									"value": "ConnectionStatusMaster"
+									"value": "PromoMaster"
 								}
 							]
 						}
@@ -28535,6 +28623,52 @@
 				}
 			],
 			"id": "51068262-453ff9cd-a5fa-4a5e-9e73-2726521a7fc3"
+		},
+		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "sendSampleMail",
+					"id": "51068262-fcd628ff-3ff3-42e4-9bdc-c651409f3f60",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"to\": \"vy24754@gmail.com\",\n  \"subject\": \"Test Email from Notification Service from postman\",\n  \"html\": \"<!doctype html><html lang='en'>  <head>    <meta name='viewport' content='width=device-width, initial-scale=1.0'>    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>    <title>Simple Transactional Email</title>    <style media='all' type='text/css'>@media all {  .btn-primary table td:hover {    background-color: #ec0867 !important;  }  .btn-primary a:hover {    background-color: #ec0867 !important;    border-color: #ec0867 !important;  }}@media only screen and (max-width: 640px) {  .main p,.main td,.main span {    font-size: 16px !important;  }  .wrapper {    padding: 8px !important;  }  .content {    padding: 0 !important;  }  .container {    padding: 0 !important;    padding-top: 8px !important;    width: 100% !important;  }  .main {    border-left-width: 0 !important;    border-radius: 0 !important;    border-right-width: 0 !important;  }  .btn table {    max-width: 100% !important;    width: 100% !important;  }  .btn a {    font-size: 16px !important;    max-width: 100% !important;    width: 100% !important;  }}@media all {  .ExternalClass {    width: 100%;  }  .ExternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass font,.ExternalClass td,.ExternalClass div {    line-height: 100%;  }  .apple-link a {    color: inherit !important;    font-family: inherit !important;    font-size: inherit !important;    font-weight: inherit !important;    line-height: inherit !important;    text-decoration: none !important;  }  #MessageViewBody a {    color: inherit;    text-decoration: none;    font-size: inherit;    font-family: inherit;    font-weight: inherit;    line-height: inherit;  }}</style>  </head>  <body style='font-family: Helvetica, sans-serif; -webkit-font-smoothing: antialiased; font-size: 16px; line-height: 1.3; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #f4f5f6; margin: 0; padding: 0;'>    <table role='presentation' border='0' cellpadding='0' cellspacing='0' class='body' style='border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #f4f5f6; width: 100%;' width='100%' bgcolor='#f4f5f6'>      <tr>        <td style='font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top;' valign='top'>&nbsp;</td>        <td class='container' style='font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top; max-width: 600px; padding: 0; padding-top: 24px; width: 600px; margin: 0 auto;' width='600' valign='top'>          <div class='content' style='box-sizing: border-box; display: block; margin: 0 auto; max-width: 600px; padding: 0;'>            <span class='preheader' style='color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;'>This is preheader text. Some clients will show this text as a preview.</span>            <table role='presentation' border='0' cellpadding='0' cellspacing='0' class='main' style='border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background: #ffffff; border: 1px solid #eaebed; border-radius: 16px; width: 100%;' width='100%'>              <tr>                <td class='wrapper' style='font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top; box-sizing: border-box; padding: 24px;' valign='top'>                  <p style='font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;'>Hi there</p>                  <p style='font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;'>Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.</p>                  <table role='presentation' border='0' cellpadding='0' cellspacing='0' class='btn btn-primary' style='border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; box-sizing: border-box; width: 100%; min-width: 100%;' width='100%'>                    <tbody>                      <tr>                        <td align='left' style='font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top; padding-bottom: 16px;' valign='top'>                          <table role='presentation' border='0' cellpadding='0' cellspacing='0' style='border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;'>                            <tbody>                              <tr>                                <td style='font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top; border-radius: 4px; text-align: center; background-color: #0867ec;' valign='top' align='center' bgcolor='#0867ec'> <a href='http://htmlemail.io' target='_blank' style='border: solid 2px #0867ec; border-radius: 4px; box-sizing: border-box; cursor: pointer; display: inline-block; font-size: 16px; font-weight: bold; margin: 0; padding: 12px 24px; text-decoration: none; text-transform: capitalize; background-color: #0867ec; border-color: #0867ec; color: #ffffff;'>Call To Action</a> </td>                              </tr>                            </tbody>                          </table>                        </td>                      </tr>                    </tbody>                  </table>                  <p style='font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;'>This is a really simple email template. It's sole purpose is to get the recipient to click the button with no distractions.</p>                  <p style='font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;'>Good luck! Hope it works.</p>                </td>              </tr>              </table>            <div class='footer' style='clear: both; padding-top: 24px; text-align: center; width: 100%;'>              <table role='presentation' border='0' cellpadding='0' cellspacing='0' style='border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;' width='100%'>                <tr>                  <td class='content-block' style='font-family: Helvetica, sans-serif; vertical-align: top; color: #9a9ea6; font-size: 16px; text-align: center;' valign='top' align='center'>                    <span class='apple-link' style='color: #9a9ea6; font-size: 16px; text-align: center;'>Company Inc, 7-11 Commercial Ct, Belfast BT1 2NB</span>                    <br> Don't like these emails? <a href='http://htmlemail.io/blog' style='text-decoration: underline; color: #9a9ea6; font-size: 16px; text-align: center;'>Unsubscribe</a>.                  </td>                </tr>                <tr>                  <td class='content-block powered-by' style='font-family: Helvetica, sans-serif; vertical-align: top; color: #9a9ea6; font-size: 16px; text-align: center;' valign='top' align='center'>                    Powered by <a href='http://htmlemail.io' style='color: #9a9ea6; font-size: 16px; text-align: center; text-decoration: none;'>HTMLemail.io</a>                  </td>                </tr>              </table>            </div></div>        </td>        <td style='font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top;' valign='top'>&nbsp;</td>      </tr>    </table>  </body></html>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3005/api/v1/notifications/email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"notifications",
+								"email"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "51068262-2035951f-cb59-427f-88fb-9e6e379a2b2b"
 		},
 		{
 			"name": "http://localhost:8080/api/v1/customer-registration/miscellaneous/form13-search/3000298511/0",
