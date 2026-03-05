@@ -7198,6 +7198,45 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "RejectFullReversalInvoice",
+									"id": "51068262-c51d5205-6442-436b-bdf6-902832c8b07e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ids\":[7173113] // DemandMasterId\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/RejectFullReversalInvoice/:DemandMasterId",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"postpaid-invoice",
+												"RejectFullReversalInvoice",
+												":DemandMasterId"
+											],
+											"variable": [
+												{
+													"key": "DemandMasterId",
+													"value": "7163052"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "51068262-2070a6dd-6f4a-4895-b7c5-6254876ad9ba"
