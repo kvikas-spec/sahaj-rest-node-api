@@ -15,7 +15,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "84574b35-0007-499c-885d-ea22a39a47c6",
 								"exec": [
 									"let accessToken = pm.response.headers.get(\"x-access-token\");",
 									"let refreshToken = pm.response.headers.get(\"x-refresh-token\");",
@@ -31,7 +30,8 @@
 								],
 								"type": "text/javascript",
 								"packages": {},
-								"requests": {}
+								"requests": {},
+								"id": "84574b35-0007-499c-885d-ea22a39a47c6"
 							}
 						}
 					],
@@ -93,7 +93,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "9dd9fe8b-bc34-4b33-bf78-4d3711f263a1",
 								"exec": [
 									"// ========== DEBUG: Response Status ==========",
 									"console.log(\"========== LOGIN RESPONSE DEBUG ==========\");",
@@ -148,7 +147,8 @@
 								],
 								"type": "text/javascript",
 								"packages": {},
-								"requests": {}
+								"requests": {},
+								"id": "9dd9fe8b-bc34-4b33-bf78-4d3711f263a1"
 							}
 						}
 					],
@@ -959,7 +959,7 @@
 									"query": [
 										{
 											"key": "file",
-											"value": null,
+											"value": "",
 											"disabled": true
 										}
 									]
@@ -3749,11 +3749,11 @@
 										},
 										{
 											"key": "consumerNo",
-											"value": null
+											"value": ""
 										},
 										{
 											"key": "name",
-											"value": null
+											"value": ""
 										}
 									]
 								}
@@ -5013,7 +5013,7 @@
 								},
 								{
 									"key": "isdisconnectedpage",
-									"value": null,
+									"value": "",
 									"disabled": true
 								}
 							]
@@ -5057,13 +5057,12 @@
 							"query": [
 								{
 									"key": "isdisconnectedpage",
-									"value": null,
+									"value": "",
 									"disabled": true
 								}
 							],
 							"variable": [
 								{
-									"id": "ea61e3ce-18f6-48bf-876f-aaeccc5568cf",
 									"key": "id",
 									"value": "70155"
 								}
@@ -5255,7 +5254,6 @@
 							],
 							"variable": [
 								{
-									"id": "071930ab-9f56-418c-91dc-a01202f6811b",
 									"key": "MeterMasterBulkUploadId",
 									"value": "10187"
 								}
@@ -5286,7 +5284,6 @@
 							],
 							"variable": [
 								{
-									"id": "d42a8bff-7191-47ab-b8fe-c433e1928fbd",
 									"key": "MeterNoAssignmentToAgencyBlukUploadId",
 									"value": "20065"
 								}
@@ -5317,7 +5314,6 @@
 							],
 							"variable": [
 								{
-									"id": "bae43320-f7e3-4fa5-ae89-63adb0247822",
 									"key": "MeterNoAssignmentToAgencyBlukUploadId",
 									"value": "20066"
 								}
@@ -5470,7 +5466,6 @@
 							],
 							"variable": [
 								{
-									"id": "6eb1845f-0834-420b-95a8-68cf35e2269a",
 									"key": "folderPath",
 									"value": "customer-registration"
 								}
@@ -5509,7 +5504,6 @@
 							],
 							"variable": [
 								{
-									"id": "0a9844d2-78ff-4cda-96bc-04461e594960",
 									"key": "file_url",
 									"value": "Meerut/meter-installation/1770705286403-427397612_Screenshot from 2025-12-10 15-10-03.png"
 								}
@@ -6244,7 +6238,7 @@
 											"query": [
 												{
 													"key": "TransactionDate",
-													"value": null
+													"value": ""
 												}
 											]
 										}
@@ -6526,7 +6520,6 @@
 											],
 											"variable": [
 												{
-													"id": "3126915f-39da-419f-8629-a02b537e271d",
 													"key": "mruUpdateBulkUploadId",
 													"value": "10032"
 												}
@@ -6789,7 +6782,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "a2cacf42-bfd4-4ce1-9a81-e7a215eb133e",
 												"exec": [
 													"// Visualization Script",
 													"// Visualization Script",
@@ -6893,7 +6885,8 @@
 												],
 												"type": "text/javascript",
 												"packages": {},
-												"requests": {}
+												"requests": {},
+												"id": "a2cacf42-bfd4-4ce1-9a81-e7a215eb133e"
 											}
 										}
 									],
@@ -7032,7 +7025,6 @@
 											],
 											"variable": [
 												{
-													"id": "d0d9d140-b7bb-4e03-94c9-22a62149672d",
 													"key": "DemandMasterId",
 													"value": "7120090"
 												}
@@ -7303,7 +7295,6 @@
 											],
 											"variable": [
 												{
-													"id": "1d90064e-c6fe-42cc-9609-5e9f31377cc4",
 													"key": "MeterReadingId",
 													"value": "321025"
 												}
@@ -7343,7 +7334,6 @@
 											],
 											"variable": [
 												{
-													"id": "fb4ed330-a334-4586-87e7-3245bb46afa3",
 													"key": "MeterReadingId",
 													"value": "321024"
 												}
@@ -7383,7 +7373,6 @@
 											],
 											"variable": [
 												{
-													"id": "c4281e4c-1c48-4c95-866d-9b5fe580cf13",
 													"key": "MeterReadingId",
 													"value": "321024"
 												}
@@ -7484,7 +7473,6 @@
 											],
 											"variable": [
 												{
-													"id": "dd753024-1e7a-4be6-8c8c-9d2b70665753",
 													"key": "MeterReadingId",
 													"value": "321024"
 												}
@@ -7524,7 +7512,6 @@
 											],
 											"variable": [
 												{
-													"id": "81a8ad8e-5a05-4417-9694-9207bb1d7292",
 													"key": "MeterReadingId",
 													"value": "321119"
 												}
@@ -7564,7 +7551,6 @@
 											],
 											"variable": [
 												{
-													"id": "13f25046-2060-4e41-93fc-3a8289c26b90",
 													"key": "MeterReadingId",
 													"value": "321025"
 												}
@@ -7665,7 +7651,6 @@
 											],
 											"variable": [
 												{
-													"id": "128d885a-0083-43e9-a173-05ae78ffb2a1",
 													"key": "MeterReadingId",
 													"value": "321024"
 												}
@@ -7705,7 +7690,6 @@
 											],
 											"variable": [
 												{
-													"id": "01dd1f91-2538-4d04-a54e-3a4dbfbf5180",
 													"key": "MeterReadingId",
 													"value": "321387"
 												}
@@ -7745,7 +7729,6 @@
 											],
 											"variable": [
 												{
-													"id": "7ecf2b38-b93c-4766-b686-5a9750fa9af5",
 													"key": "MeterReadingId",
 													"value": "321025"
 												}
@@ -7913,7 +7896,6 @@
 									],
 									"variable": [
 										{
-											"id": "caaeee68-a9e4-4bc4-8187-960a55021d15",
 											"key": "billGenId",
 											"value": "134520"
 										}
@@ -7951,7 +7933,6 @@
 									],
 									"variable": [
 										{
-											"id": "78da437d-402b-494a-a08e-6c9778a3b545",
 											"key": "billGenId",
 											"value": "134520"
 										}
@@ -8046,7 +8027,6 @@
 							],
 							"variable": [
 								{
-									"id": "378cebcc-e9f6-4f8f-8651-28faa7ff9d35",
 									"key": "MasterTableName",
 									"value": "PromoMaster"
 								}
@@ -9674,11 +9654,11 @@
 										},
 										{
 											"key": "consumerNo",
-											"value": null
+											"value": ""
 										},
 										{
 											"key": "name",
-											"value": null
+											"value": ""
 										},
 										{
 											"key": "pageSize",
@@ -12196,7 +12176,6 @@
 									],
 									"variable": [
 										{
-											"id": "8b3e94fe-75a0-44ec-adab-62523116660a",
 											"key": "rateId",
 											"value": "79"
 										}
@@ -12397,11 +12376,11 @@
 										},
 										{
 											"key": "Address",
-											"value": null
+											"value": ""
 										},
 										{
 											"key": "pageSize",
-											"value": null
+											"value": ""
 										}
 									]
 								}
@@ -12590,11 +12569,11 @@
 										},
 										{
 											"key": "Address",
-											"value": null
+											"value": ""
 										},
 										{
 											"key": "pageSize",
-											"value": null
+											"value": ""
 										}
 									]
 								}
@@ -12783,7 +12762,7 @@
 										},
 										{
 											"key": "pageSize",
-											"value": null
+											"value": ""
 										}
 									]
 								}
@@ -13193,7 +13172,7 @@
 										},
 										{
 											"key": "address",
-											"value": null
+											"value": ""
 										},
 										{
 											"key": "pageSize",
@@ -13806,7 +13785,7 @@
 										},
 										{
 											"key": "Address",
-											"value": null
+											"value": ""
 										}
 									]
 								}
@@ -14008,7 +13987,7 @@
 										},
 										{
 											"key": "Address",
-											"value": null
+											"value": ""
 										}
 									]
 								}
@@ -14206,7 +14185,7 @@
 										},
 										{
 											"key": "Address",
-											"value": null
+											"value": ""
 										}
 									]
 								}
@@ -14404,7 +14383,7 @@
 										},
 										{
 											"key": "Address",
-											"value": null
+											"value": ""
 										}
 									]
 								}
@@ -17607,11 +17586,11 @@
 										},
 										{
 											"key": "Address",
-											"value": null
+											"value": ""
 										},
 										{
 											"key": "pa",
-											"value": null
+											"value": ""
 										}
 									]
 								}
@@ -17806,7 +17785,7 @@
 										},
 										{
 											"key": "Address",
-											"value": null
+											"value": ""
 										}
 									]
 								}
@@ -18050,7 +18029,7 @@
 										},
 										{
 											"key": "Address",
-											"value": null
+											"value": ""
 										},
 										{
 											"key": "pageSize",
@@ -18878,6 +18857,18 @@
 									"body": "{\n    \"success\": true,\n    \"message\": \"JMR approved successfully\",\n    \"data\": {\n        \"transactionId\": 1341824688\n    }\n}"
 								}
 							]
+						},
+						{
+							"name": "New Request",
+							"id": "51068262-8c1d90b8-4dd6-4e7a-8386-4b163677a3db",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "51068262-b46a1cca-c349-4e4d-b098-dbee95767d23"
@@ -20294,7 +20285,6 @@
 											],
 											"variable": [
 												{
-													"id": "06d098b5-2232-4fb0-9f6e-98497ec56f38",
 													"key": "consumerNumber",
 													"value": "511902688"
 												}
@@ -21898,7 +21888,6 @@
 											],
 											"variable": [
 												{
-													"id": "bf0b6efd-1616-4a60-81ef-c66df6740ee8",
 													"key": "consumerNumber",
 													"value": "511902688"
 												}
@@ -22389,7 +22378,7 @@
 												},
 												{
 													"key": "ConsumerNumber",
-													"value": null
+													"value": ""
 												},
 												{
 													"key": "sEcho",
@@ -23608,7 +23597,6 @@
 											],
 											"variable": [
 												{
-													"id": "635216e4-7a88-4267-b931-ba8f833335b3",
 													"key": "consumerNumber",
 													"value": "3000297766"
 												}
@@ -24237,7 +24225,7 @@
 												},
 												{
 													"key": "ConsumerNumber",
-													"value": null
+													"value": ""
 												}
 											]
 										}
@@ -24768,11 +24756,11 @@
 												},
 												{
 													"key": "customerName",
-													"value": null
+													"value": ""
 												},
 												{
 													"key": "mobileNumber",
-													"value": null
+													"value": ""
 												},
 												{
 													"key": "pageSize",
@@ -26064,11 +26052,11 @@
 												},
 												{
 													"key": "customerName",
-													"value": null
+													"value": ""
 												},
 												{
 													"key": "mobileNumber",
-													"value": null
+													"value": ""
 												},
 												{
 													"key": "pageSize",
