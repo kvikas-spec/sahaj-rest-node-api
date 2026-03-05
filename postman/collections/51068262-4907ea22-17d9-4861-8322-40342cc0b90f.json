@@ -4570,7 +4570,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{api_gateway_url}}/{{customer_reg_url}}/MeterMaster/ApprovalForm14List?pageNo=1&pageSize=1",
+							"raw": "{{api_gateway_url}}/{{customer_reg_url}}/MeterMaster/ApprovalForm14List?pageNo=1&pageSize=10&Form14SearchDetail=1&consumerNo=3000298274",
 							"host": [
 								"{{api_gateway_url}}"
 							],
@@ -4591,7 +4591,7 @@
 								},
 								{
 									"key": "pageSize",
-									"value": "1"
+									"value": "10"
 								},
 								{
 									"key": "isFilter",
@@ -4610,8 +4610,7 @@
 								},
 								{
 									"key": "Form14SearchDetail",
-									"value": "1",
-									"disabled": true
+									"value": "1"
 								},
 								{
 									"key": "consumerNo",
@@ -4620,8 +4619,7 @@
 								},
 								{
 									"key": "consumerNo",
-									"value": "3000298547",
-									"disabled": true
+									"value": "3000298274"
 								},
 								{
 									"key": "mru",
