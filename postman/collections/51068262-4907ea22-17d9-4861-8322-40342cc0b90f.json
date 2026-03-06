@@ -7826,7 +7826,29 @@
 									},
 									"request": {
 										"method": "GET",
-										"header": []
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoiceFullReversalDetails/:consumerNumber",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"postpaid-invoice",
+												"InvoiceFullReversalDetails",
+												":consumerNumber"
+											],
+											"variable": [
+												{
+													"key": "consumerNumber",
+													"value": ""
+												}
+											]
+										}
 									},
 									"response": []
 								}
