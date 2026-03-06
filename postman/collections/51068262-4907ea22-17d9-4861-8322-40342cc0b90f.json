@@ -7819,7 +7819,7 @@
 							"name": "InvoiceFullReversal",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "InvoiceFullReversalDetails",
 									"id": "51068262-a07ded1f-0b44-44ac-a840-14d6bbe15b41",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
