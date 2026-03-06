@@ -7816,8 +7816,21 @@
 							"id": "51068262-48707742-c62f-4b98-b4d2-7fdced789592"
 						},
 						{
-							"name": "New Folder",
-							"item": [],
+							"name": "InvoiceFullReversal",
+							"item": [
+								{
+									"name": "New Request",
+									"id": "51068262-a07ded1f-0b44-44ac-a840-14d6bbe15b41",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
 							"id": "51068262-02c5e993-a993-4af3-8dac-90e6efaaf039"
 						},
 						{
