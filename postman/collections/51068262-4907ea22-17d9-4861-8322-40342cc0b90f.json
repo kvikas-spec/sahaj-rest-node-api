@@ -8150,7 +8150,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/billing-payment/payment/GetTotalAmount?fromDate=2024-01-01&toDate=2024-12-31&wrdId=5&cycle=3&AcntTypeId=1&isFilter=true",
+									"raw": "{{api_gateway_url}}/billing-payment/payment/GetTotalAmount?isFilter=1&fromDate=2024-01-01&toDate=2024-12-31&wrdId=5&AcntTypeId=1&cycle=3",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -8161,29 +8161,8 @@
 									],
 									"query": [
 										{
-											"key": "pageNo",
-											"value": "1",
-											"disabled": true
-										},
-										{
-											"key": "pageSize",
-											"value": "10",
-											"disabled": true
-										},
-										{
 											"key": "isFilter",
-											"value": "1",
-											"disabled": true
-										},
-										{
-											"key": "consumerNo",
-											"value": "0",
-											"disabled": true
-										},
-										{
-											"key": "custName",
-											"value": "Ramesh",
-											"disabled": true
+											"value": "1"
 										},
 										{
 											"key": "fromDate",
@@ -8198,26 +8177,12 @@
 											"value": "5"
 										},
 										{
-											"key": "chqNumber",
-											"value": "1234567",
-											"disabled": true
-										},
-										{
-											"key": "paidAmount",
-											"value": "5000",
-											"disabled": true
-										},
-										{
-											"key": "cycle",
-											"value": "3"
-										},
-										{
 											"key": "AcntTypeId",
 											"value": "1"
 										},
 										{
-											"key": "isFilter",
-											"value": "true"
+											"key": "cycle",
+											"value": "3"
 										}
 									]
 								}
