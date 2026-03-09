@@ -8188,6 +8188,59 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "GetTotalAmount Copy",
+							"id": "51068262-08ebcb1a-00c9-4798-9d1c-cb7fae794d55",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/billing-payment/payment/GetTotalAmount?isFilter=1&fromDate=2024-01-01&toDate=2024-12-31&wrdId=5&AcntTypeId=1&cycle=3",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"billing-payment",
+										"payment",
+										"GetTotalAmount"
+									],
+									"query": [
+										{
+											"key": "isFilter",
+											"value": "1"
+										},
+										{
+											"key": "fromDate",
+											"value": "2024-01-01"
+										},
+										{
+											"key": "toDate",
+											"value": "2024-12-31"
+										},
+										{
+											"key": "wrdId",
+											"value": "5"
+										},
+										{
+											"key": "AcntTypeId",
+											"value": "1"
+										},
+										{
+											"key": "cycle",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "51068262-33b0eff4-6021-45ce-ada1-c04ca0d37835"
