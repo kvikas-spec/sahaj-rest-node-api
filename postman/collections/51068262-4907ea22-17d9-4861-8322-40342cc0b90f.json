@@ -7863,6 +7863,15 @@
 									"request": {
 										"method": "POST",
 										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"DemandMasterId\": 7163041,\n    \"ConsumerNumber\": 3000297944\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
 											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/ReversalFullInvoiceDetails/",
 											"host": [
