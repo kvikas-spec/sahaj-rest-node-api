@@ -8190,7 +8190,7 @@
 							"response": []
 						},
 						{
-							"name": "GetTotalAmount Copy",
+							"name": "UploadExcelForChequeList",
 							"id": "51068262-08ebcb1a-00c9-4798-9d1c-cb7fae794d55",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
