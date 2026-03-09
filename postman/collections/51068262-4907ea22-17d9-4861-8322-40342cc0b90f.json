@@ -8196,47 +8196,28 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
+								"method": "POST",
 								"header": [],
 								"body": {
-									"mode": "raw",
-									"raw": ""
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"uuid": "13694eba-44fc-4c70-bedb-0a3df7f97e0d",
+											"src": "/home/vikaskumar/Downloads/ChequeList.xlsx"
+										}
+									]
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/billing-payment/payment/GetTotalAmount?isFilter=1&fromDate=2024-01-01&toDate=2024-12-31&wrdId=5&AcntTypeId=1&cycle=3",
+									"raw": "{{api_gateway_url}}/billing-payment/payment/UploadExcelForChequeList",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"billing-payment",
 										"payment",
-										"GetTotalAmount"
-									],
-									"query": [
-										{
-											"key": "isFilter",
-											"value": "1"
-										},
-										{
-											"key": "fromDate",
-											"value": "2024-01-01"
-										},
-										{
-											"key": "toDate",
-											"value": "2024-12-31"
-										},
-										{
-											"key": "wrdId",
-											"value": "5"
-										},
-										{
-											"key": "AcntTypeId",
-											"value": "1"
-										},
-										{
-											"key": "cycle",
-											"value": "3"
-										}
+										"UploadExcelForChequeList"
 									]
 								}
 							},
