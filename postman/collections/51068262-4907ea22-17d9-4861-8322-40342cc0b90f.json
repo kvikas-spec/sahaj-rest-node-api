@@ -7861,8 +7861,20 @@
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
-										"header": []
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/ReversalFullInvoiceDetails/",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"postpaid-invoice",
+												"ReversalFullInvoiceDetails",
+												""
+											]
+										}
 									},
 									"response": []
 								}
