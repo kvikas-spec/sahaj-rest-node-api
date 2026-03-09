@@ -8073,7 +8073,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/billing-payment/payment/GetBillReceiptPendingChequeList?pageNo=1&pageSize=10&isFilter=true&consumerNo=0&custName=Ramesh&fromDate=2024-01-01&toDate=2024-12-31&wrdId=5&chqNumber=1234567&paidAmount=5000&cycle=3&AcntTypeId=1",
+									"raw": "{{api_gateway_url}}/billing-payment/payment/GetBillReceiptPendingChequeList?pageNo=1&pageSize=10&isFilter=1&consumerNo=0&custName=Ramesh&fromDate=2024-01-01&toDate=2024-12-31&wrdId=5&chqNumber=1234567&paidAmount=5000&cycle=3&AcntTypeId=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -8093,7 +8093,7 @@
 										},
 										{
 											"key": "isFilter",
-											"value": "true"
+											"value": "1"
 										},
 										{
 											"key": "consumerNo",
