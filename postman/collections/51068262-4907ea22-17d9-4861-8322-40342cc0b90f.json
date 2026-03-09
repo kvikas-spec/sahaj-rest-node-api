@@ -8057,6 +8057,11 @@
 					"id": "51068262-882c6fdc-4037-497c-a156-ee7ffaf23412"
 				},
 				{
+					"name": "New Folder",
+					"item": [],
+					"id": "51068262-33b0eff4-6021-45ce-ada1-c04ca0d37835"
+				},
+				{
 					"name": "health-check",
 					"id": "51068262-1d7d9570-1df0-4cc8-828b-f04fb5a24718",
 					"protocolProfileBehavior": {
