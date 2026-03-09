@@ -4570,7 +4570,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{api_gateway_url}}/{{customer_reg_url}}/MeterMaster/ApprovalForm14List?pageNo=1&pageSize=10&Form14SearchDetail=1&consumerNo=3000298709",
+							"raw": "{{api_gateway_url}}/{{customer_reg_url}}/MeterMaster/ApprovalForm14List?pageNo=1&pageSize=10",
 							"host": [
 								"{{api_gateway_url}}"
 							],
@@ -4610,7 +4610,8 @@
 								},
 								{
 									"key": "Form14SearchDetail",
-									"value": "1"
+									"value": "1",
+									"disabled": true
 								},
 								{
 									"key": "consumerNo",
@@ -4619,7 +4620,8 @@
 								},
 								{
 									"key": "consumerNo",
-									"value": "3000298709"
+									"value": "3000298709",
+									"disabled": true
 								},
 								{
 									"key": "mru",
@@ -7845,7 +7847,7 @@
 											"variable": [
 												{
 													"key": "consumerNumber",
-													"value": ""
+													"value": "3000297944"
 												}
 											]
 										}
