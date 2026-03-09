@@ -7049,7 +7049,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoiceReversalDetails?consumerNumber=3000297617",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoiceReversalDetails?consumerNumber=3000297944",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -7061,7 +7061,7 @@
 											"query": [
 												{
 													"key": "consumerNumber",
-													"value": "3000297617"
+													"value": "3000297944"
 												}
 											]
 										}
