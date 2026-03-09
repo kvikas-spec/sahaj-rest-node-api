@@ -8060,14 +8060,29 @@
 					"name": "PaymentStatus",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "GetBillReceiptPendingChequeList",
 							"id": "51068262-673050c6-3ee7-468d-a393-16cf525e11e8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    // \"sort\": \"MeterStatusName:ASC\",\n    \"force\": true,\n    \"whereClause\": {\n        \"IsActive\": true,\n        // \"MeterCompanyId\": \"16\"\n        \"MeterStatusId\": \"5\" // lockcase -5, NEGATIVECONSUMPTION: 12,\n    },\n    \"attributes\": [\"RejectionReason\", \"MeterReadingRejectionId\"],\n    \"sort\": \"MeterReadingRejectionId:ASC\"\n}"
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/billing-payment/payment/GetBillReceiptPendingChequeList",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"billing-payment",
+										"payment",
+										"GetBillReceiptPendingChequeList"
+									]
+								}
 							},
 							"response": []
 						}
