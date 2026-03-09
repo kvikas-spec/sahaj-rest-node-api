@@ -7855,7 +7855,7 @@
 									"response": []
 								},
 								{
-									"name": "New Request",
+									"name": "ReversalFullInvoiceDetails",
 									"id": "51068262-89e60521-56c5-46a8-ab28-7becfc86315a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
