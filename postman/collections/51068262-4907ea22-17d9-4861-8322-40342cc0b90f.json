@@ -8140,7 +8140,7 @@
 							"variable": [
 								{
 									"key": "MasterTableName",
-									"value": "PromoMaster"
+									"value": "MeterReadingRejectionMaster"
 								}
 							]
 						}
