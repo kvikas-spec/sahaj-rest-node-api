@@ -29041,6 +29041,28 @@
 						"header": []
 					},
 					"response": []
+				},
+				{
+					"name": "health-check Copy",
+					"id": "51068262-90632938-6af8-47ee-88e2-a629d8032aad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/billing-payment/health",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"billing-payment",
+								"health"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "51068262-fbf4574d-ec16-4d89-af54-461b62be3590"
