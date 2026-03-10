@@ -29070,22 +29070,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/crm/example/GetComplaintRegisterdetails/:id",
+							"raw": "{{api_gateway_url}}/crm/example/GetComplaintRegisterList",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
 								"crm",
 								"example",
-								"GetComplaintRegisterdetails",
-								":id"
-							],
-							"variable": [
-								{
-									"id": "6749978e-e08c-4810-a51f-a5abebdce07c",
-									"key": "id",
-									"value": "121795"
-								}
+								"GetComplaintRegisterList"
 							]
 						}
 					},
