@@ -8302,14 +8302,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/billing-payment/payment/UpdateBillReceipt",
+									"raw": "{{api_gateway_url}}/billing-payment/payment/ApproveCheque",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"billing-payment",
 										"payment",
-										"UpdateBillReceipt"
+										"ApproveCheque"
 									]
 								}
 							},
