@@ -29040,13 +29040,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/crm//GetComplaintRegisterList/:id",
+							"raw": "{{api_gateway_url}}/crm/example/GetComplaintRegisterList/:id",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
 								"crm",
-								"",
+								"example",
 								"GetComplaintRegisterList",
 								":id"
 							],
