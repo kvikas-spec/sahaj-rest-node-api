@@ -8240,8 +8240,37 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Cookie",
+										"value": "connect.sid=your_session_cookie"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"BillReceiptId\": 101,\n    \"paymentStatus\": \"Invoice Payment\",\n    \"ReturnReason\": \"Insufficient funds\",\n    \"ChequeReturnByBankId\": 5,\n    \"InwardNumber\": \"INW-2024-001\",\n    \"QRVNumber\": \"QRV-001\",\n    \"ChequeReturnedApprovedDate\": \"2026-03-10\"\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/billing-payment/payment/update",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"billing-payment",
+										"payment",
+										"update"
+									]
+								}
 							},
 							"response": []
 						}
