@@ -67,7 +67,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 123456\n}",
+							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 389424\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8234,7 +8234,7 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "UpdateBillReceipt",
 							"id": "51068262-f05df920-2845-4e78-af25-f9316e99a1ac",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
