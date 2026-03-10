@@ -29038,7 +29038,25 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/crm//GetComplaintRegisterList/:id",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"crm",
+								"",
+								"GetComplaintRegisterList",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "121796"
+								}
+							]
+						}
 					},
 					"response": []
 				},
