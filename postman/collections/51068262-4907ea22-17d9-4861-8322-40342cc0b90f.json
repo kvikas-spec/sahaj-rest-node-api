@@ -8273,6 +8273,47 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "ApproveCheque",
+							"id": "51068262-ad4cd206-2c62-4a09-908f-d9fb46b6ce86",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Cookie",
+										"value": "connect.sid=your_session_cookie"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"BillReceiptId\": 299100,\n    \"paymentStatus\": \"Invoice Payment\",\n    \"ReturnReason\": \"Refer to drawer\",\n    \"ChequeReturnByBankId\": 10055\n    // \"InwardNumber\": \"INW-2024-001\",\n    // \"QRVNumber\": \"QRV-001\",\n    // \"ChequeReturnedApprovedDate\": \"2026-03-10\"\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/billing-payment/payment/UpdateBillReceipt",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"billing-payment",
+										"payment",
+										"UpdateBillReceipt"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "51068262-33b0eff4-6021-45ce-ada1-c04ca0d37835"
