@@ -29052,12 +29052,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/billing-payment/health",
+							"raw": "{{api_gateway_url}}/crm/health",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
-								"billing-payment",
+								"crm",
 								"health"
 							]
 						}
