@@ -29061,6 +29061,37 @@
 					"response": []
 				},
 				{
+					"name": "GetComplaintRegisterdetails Copy",
+					"id": "51068262-e9a7f0d6-79a5-4d14-b041-a7b4d3ce1322",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/crm/example/GetComplaintRegisterdetails/:id",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"crm",
+								"example",
+								"GetComplaintRegisterdetails",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "6749978e-e08c-4810-a51f-a5abebdce07c",
+									"key": "id",
+									"value": "121795"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "health-check",
 					"id": "51068262-90632938-6af8-47ee-88e2-a629d8032aad",
 					"protocolProfileBehavior": {
