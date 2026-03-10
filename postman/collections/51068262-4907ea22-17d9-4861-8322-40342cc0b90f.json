@@ -29070,7 +29070,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/crm/example/GetComplaintRegisterList",
+							"raw": "{{api_gateway_url}}/crm/example/GetComplaintRegisterList?pageNo=1&pageSize=10",
 							"host": [
 								"{{api_gateway_url}}"
 							],
@@ -29078,6 +29078,21 @@
 								"crm",
 								"example",
 								"GetComplaintRegisterList"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "isFilter",
+									"value": "0",
+									"disabled": true
+								}
 							]
 						}
 					},
