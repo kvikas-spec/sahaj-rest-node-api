@@ -29043,7 +29043,7 @@
 					"response": []
 				},
 				{
-					"name": "health-check Copy",
+					"name": "health-check",
 					"id": "51068262-90632938-6af8-47ee-88e2-a629d8032aad",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -29052,13 +29052,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/crm/health",
+							"raw": "{{api_gateway_url}}/crm/health-check",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
 								"crm",
-								"health"
+								"health-check"
 							]
 						}
 					},
