@@ -7256,7 +7256,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetLockConsumptionApproval?isFilter=1&pageNo=1&pageSize=10&sort=MeterReadingId:DESC",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetLockConsumptionApproval?isFilter=1&pageNo=1&pageSize=10&sort=MeterReadingId:DESC&isHouseLockApproval=1",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -7284,8 +7284,7 @@
 												},
 												{
 													"key": "isHouseLockApproval",
-													"value": "1",
-													"disabled": true
+													"value": "1"
 												},
 												{
 													"key": "ConsumerNumber",
@@ -7436,7 +7435,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetNegativeConsumptionApproval?isFilter=1&pageNo=1&pageSize=10&sort=MeterReadingId:DESC&isNegativeConsumptionApproval=1",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetNegativeConsumptionApproval?isFilter=1&pageNo=1&pageSize=10&sort=MeterReadingId:DESC&isNegativeConsumptionApproval=1&wardId=14",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -7468,13 +7467,12 @@
 												},
 												{
 													"key": "ConsumerNumber",
-													"value": "3000297811",
+													"value": "3000293873",
 													"disabled": true
 												},
 												{
 													"key": "wardId",
-													"value": "",
-													"disabled": true
+													"value": "14"
 												}
 											]
 										}
