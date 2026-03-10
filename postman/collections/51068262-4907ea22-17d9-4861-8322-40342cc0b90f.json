@@ -29061,7 +29061,7 @@
 					"response": []
 				},
 				{
-					"name": "GetComplaintRegisterdetails Copy",
+					"name": "GetComplaintRegisterList",
 					"id": "51068262-e9a7f0d6-79a5-4d14-b041-a7b4d3ce1322",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
