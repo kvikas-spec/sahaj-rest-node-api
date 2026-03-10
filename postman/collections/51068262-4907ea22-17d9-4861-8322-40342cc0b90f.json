@@ -29031,7 +29031,7 @@
 			"name": "CRM",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "GetComplaintRegisterdetails",
 					"id": "51068262-a1152d58-3fd7-4143-a75f-7fdc9a227f14",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -29040,20 +29040,20 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/crm/example/GetComplaintRegisterList/:id",
+							"raw": "{{api_gateway_url}}/crm/example/GetComplaintRegisterdetails/:id",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
 								"crm",
 								"example",
-								"GetComplaintRegisterList",
+								"GetComplaintRegisterdetails",
 								":id"
 							],
 							"variable": [
 								{
 									"key": "id",
-									"value": "121796"
+									"value": "121795"
 								}
 							]
 						}
