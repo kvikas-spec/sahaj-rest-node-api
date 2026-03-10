@@ -93,6 +93,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "9dd9fe8b-bc34-4b33-bf78-4d3711f263a1",
 								"exec": [
 									"// ========== DEBUG: Response Status ==========",
 									"console.log(\"========== LOGIN RESPONSE DEBUG ==========\");",
@@ -147,8 +148,7 @@
 								],
 								"type": "text/javascript",
 								"packages": {},
-								"requests": {},
-								"id": "9dd9fe8b-bc34-4b33-bf78-4d3711f263a1"
+								"requests": {}
 							}
 						}
 					],
@@ -8261,14 +8261,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/billing-payment/payment/update",
+									"raw": "{{api_gateway_url}}/billing-payment/payment/UpdateBillReceipt",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"billing-payment",
 										"payment",
-										"update"
+										"UpdateBillReceipt"
 									]
 								}
 							},
