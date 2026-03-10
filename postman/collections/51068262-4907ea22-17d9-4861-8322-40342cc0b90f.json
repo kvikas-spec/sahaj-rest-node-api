@@ -8294,7 +8294,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "// {\n//     \"BillReceiptId\": 299100,\n//     \"paymentStatus\": \"Invoice Payment\",\n//     \"ReturnReason\": \"Refer to drawer\",\n//     \"ChequeReturnByBankId\": 10055\n//     // \"InwardNumber\": \"INW-2024-001\",\n//     // \"QRVNumber\": \"QRV-001\",\n//     // \"ChequeReturnedApprovedDate\": \"2026-03-10\"\n//   }\n{\n    \"billReceiptID\": 278981,\n    \"isFromBouncePage\": false,\n    \"paymentStatus\": \"Invoice Payment\",\n    \"chequeApproveAndRejectDate\": \"10/03/2026\"\n}",
+									"raw": "// {\n//     \"BillReceiptId\": 299100,\n//     \"paymentStatus\": \"Invoice Payment\",\n//     \"ReturnReason\": \"Refer to drawer\",\n//     \"ChequeReturnByBankId\": 10055\n//     // \"InwardNumber\": \"INW-2024-001\",\n//     // \"QRVNumber\": \"QRV-001\",\n//     // \"ChequeReturnedApprovedDate\": \"2026-03-10\"\n//   }\n{\n    \"billReceiptID\": 299100,\n    \"isFromBouncePage\": false,\n    \"paymentStatus\": \"Invoice Payment\",\n    \"chequeApproveAndRejectDate\": \"2026-03-10\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
