@@ -67,7 +67,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 389424\n}",
+							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 123456\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8199,6 +8199,11 @@
 								}
 							],
 							"id": "51068262-ac57e7de-a5eb-4886-8323-e716ad8b64b3"
+						},
+						{
+							"name": "New Folder",
+							"item": [],
+							"id": "51068262-0d287180-c33d-445a-9712-6ea4fb4dbcc8"
 						},
 						{
 							"name": "GetBillReceiptPendingChequeList",
