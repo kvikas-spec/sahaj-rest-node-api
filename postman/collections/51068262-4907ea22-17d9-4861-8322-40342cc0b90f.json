@@ -8168,7 +8168,7 @@
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "POST",
+										"method": "GET",
 										"header": [
 											{
 												"key": "Content-Type",
@@ -8181,7 +8181,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"billReceiptID\": 289075,\n    \"isFromBouncePage\": false,\n    \"paymentStatus\": \"Invoice Payment\",\n    \"chequeApproveAndRejectDate\": \"2026-03-10\"\n}"
+											"raw": ""
 										},
 										"url": {
 											"raw": "{{api_gateway_url}}/billing-payment/payment/GetChequeDepositionList",
