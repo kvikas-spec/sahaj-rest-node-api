@@ -6239,7 +6239,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "// {\n//   \"ConsumerNumber\": 3000297617,\n//   \"Cycle\": 2519,\n//   \"WardId\": 39,\n//   \"ReadingDate\": \"2026-02-02\",\n//   \"BillDate\": \"2026-02-02\",\n//   \"CurrentReading\": 3,\n//   \"PreviousReading\": 2,\n//   \"MeterStatusId\": 1,\n//   \"AccountTypeId\": 1, \n//   \"Remarks\": \"Meter reading taken successfully\",\n//   \"UploadedFile\": \"\" //file url or filename\n// }\n// {\n//     \"MeterReadingId\": 0,\n//     \"Latitude\": \"19\",\n//     \"Longitude\": \"18\",\n//     \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1771496942554-457455599_up arrow.png\", //MeterBillReceiptImagePath\n//     \"ConsumerNumber\": 3000297617,\n//     \"Cycle\": \"2601\",\n//     \"WardId\": 15,\n//     \"ReadingDate\": \"2026-02-12\",\n//     \"BillDate\": \"2026-02-12\",\n//     \"FullName\": \"Ramesh Kumar\",\n//     \"BillNumber\": 458796,\n//     \"CurrentReading\": 2,\n//     \"PreviousReading\": 0,\n//     \"MeterStatusId\": 1,\n//     \"AccountTypeId\": 1,\n//     \"Remarks\": \"Meter reading taken successfully..\",\n//     // \"UploadedFile\": \"Meerut/meter-reading/1771496942554-457455599_up arrow.png\",\n//     \"UnitUsed\": 2\n// }\n// {\n//     \"ConsumerNumber\": 10000001,\n//     \"Cycle\": 202402,\n//     \"AccountTypeId\": 1,\n//     \"WardId\": 12,\n//     \"FullName\": \"Ramesh Kumar\",\n//     \"BillNumber\": 458796,\n//     \"ReadingDate\": \"19/02/2026\",\n//     \"MeterStatusId\": 1,\n//     \"MeterCompanyId\": 3,\n//     \"MeterNumber\": \"GG-2024-8899\",\n//     \"MeterType\": \"LHS\",\n//     \"PreviousReading\": 1250.50,\n//     \"CurrentReading\": 1300.75,\n//     \"UnitUsed\": 50.25\n// }\n\n{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1773210933131-858305496_Vector.png\",\n    \"ConsumerNumber\": 3000297770,\n    \"Cycle\": \"2502\",\n    \"WardId\": 39,\n    \"ReadingDate\": \"2026-03-11\",\n    \"BillDate\": \"2026-03-11\",\n    \"FullName\": \"aa\",\n    \"BillNumber\": 0,\n    \"CurrentReading\": 93,\n    \"PreviousReading\": 90,\n    \"MeterStatusId\": 9,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 3\n}",
+											"raw": "// {\n//   \"ConsumerNumber\": 3000297617,\n//   \"Cycle\": 2519,\n//   \"WardId\": 39,\n//   \"ReadingDate\": \"2026-02-02\",\n//   \"BillDate\": \"2026-02-02\",\n//   \"CurrentReading\": 3,\n//   \"PreviousReading\": 2,\n//   \"MeterStatusId\": 1,\n//   \"AccountTypeId\": 1, \n//   \"Remarks\": \"Meter reading taken successfully\",\n//   \"UploadedFile\": \"\" //file url or filename\n// }\n// {\n//     \"MeterReadingId\": 0,\n//     \"Latitude\": \"19\",\n//     \"Longitude\": \"18\",\n//     \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1771496942554-457455599_up arrow.png\", //MeterBillReceiptImagePath\n//     \"ConsumerNumber\": 3000297617,\n//     \"Cycle\": \"2601\",\n//     \"WardId\": 15,\n//     \"ReadingDate\": \"2026-02-12\",\n//     \"BillDate\": \"2026-02-12\",\n//     \"FullName\": \"Ramesh Kumar\",\n//     \"BillNumber\": 458796,\n//     \"CurrentReading\": 2,\n//     \"PreviousReading\": 0,\n//     \"MeterStatusId\": 1,\n//     \"AccountTypeId\": 1,\n//     \"Remarks\": \"Meter reading taken successfully..\",\n//     // \"UploadedFile\": \"Meerut/meter-reading/1771496942554-457455599_up arrow.png\",\n//     \"UnitUsed\": 2\n// }\n// {\n//     \"ConsumerNumber\": 10000001,\n//     \"Cycle\": 202402,\n//     \"AccountTypeId\": 1,\n//     \"WardId\": 12,\n//     \"FullName\": \"Ramesh Kumar\",\n//     \"BillNumber\": 458796,\n//     \"ReadingDate\": \"19/02/2026\",\n//     \"MeterStatusId\": 1,\n//     \"MeterCompanyId\": 3,\n//     \"MeterNumber\": \"GG-2024-8899\",\n//     \"MeterType\": \"LHS\",\n//     \"PreviousReading\": 1250.50,\n//     \"CurrentReading\": 1300.75,\n//     \"UnitUsed\": 50.25\n// }\n\n{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1773210933131-858305496_Vector.png\",\n    \"ConsumerNumber\": 3000297770,\n    \"Cycle\": \"2502\",\n    \"WardId\": 39,\n    \"ReadingDate\": \"2026-03-11\",\n    \"BillDate\": \"2026-03-11\",\n    \"FullName\": \"aa\",\n    \"BillNumber\": 0,\n    \"CurrentReading\": 93,\n    \"PreviousReading\": 90,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 3\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7886,7 +7886,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"ConsumerCode\": [3000297770],//[3000293911, 3000293910, 3000293912 ],\n  \"Cycle\": 0,\n  \"WardId\": 39,\n  \"AccountTypeId\": 1,\n  \"StartDate\": \"2026-03-11\",\n  \"EndDate\": \"2026-03-11\"\n}",
+											"raw": "{\n  \"ConsumerCode\": [3000297770],//[3000293911, 3000293910, 3000293912 ],\n  \"Cycle\": 0,\n  \"WardId\": 39,\n  \"AccountTypeId\": 1,\n  \"StartDate\": \"2025-01-01\",\n  \"EndDate\": \"2026-03-11\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -8550,7 +8550,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    // \"sort\": \"MeterStatusName:ASC\",\n    \"force\": true,\n    \"whereClause\": {\n        \"IsActive\": true,\n        // \"MeterCompanyId\": \"16\"\n        \"MeterStatusId\": \"5\" // lockcase -5, NEGATIVECONSUMPTION: 12,\n    },\n    \"attributes\": [\"RejectionReason\", \"MeterReadingRejectionId\"],\n    \"sort\": \"MeterReadingRejectionId:ASC\"\n}",
+							"raw": "// {\n//     // \"sort\": \"MeterStatusName:ASC\",\n//     \"force\": true,\n//     \"whereClause\": {\n//         \"IsActive\": true,\n//         // \"MeterCompanyId\": \"16\"\n//         \"MeterStatusId\": \"5\" // lockcase -5, NEGATIVECONSUMPTION: 12,\n//     },\n//     \"attributes\": [\"RejectionReason\", \"MeterReadingRejectionId\"],\n//     \"sort\": \"MeterReadingRejectionId:ASC\"\n// }\n\n{\n    // \"sort\": \"MeterStatusName:ASC\",\n    // \"force\": true,\n    \"whereClause\": {\n        \"IsActive\": true\n        // \"MeterCompanyId\": \"16\"\n        // \"MeterStatusId\": \"5\" // lockcase -5, NEGATIVECONSUMPTION: 12,\n    },\n    \"attributes\": [\"MeterStatusId\", \"MeterStatusName\"],\n    \"sort\": \"MeterStatusId:ASC\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8570,7 +8570,7 @@
 							"variable": [
 								{
 									"key": "MasterTableName",
-									"value": "MeterReadingRejectionMaster"
+									"value": "MeterStatusMaster"
 								}
 							]
 						}
