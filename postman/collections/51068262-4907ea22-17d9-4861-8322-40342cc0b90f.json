@@ -8162,14 +8162,38 @@
 									"id": "51068262-b74d152c-9001-49fa-abad-f594a60a46cc"
 								},
 								{
-									"name": "New Request",
+									"name": "GetChequeDepositionList",
 									"id": "51068262-928aeb00-5119-46e6-9205-d7a73150a1ce",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
-										"header": []
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Cookie",
+												"value": "connect.sid=your_session_cookie"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"billReceiptID\": 289075,\n    \"isFromBouncePage\": false,\n    \"paymentStatus\": \"Invoice Payment\",\n    \"chequeApproveAndRejectDate\": \"2026-03-10\"\n}"
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/payment/GetChequeDepositionList",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"payment",
+												"GetChequeDepositionList"
+											]
+										}
 									},
 									"response": []
 								}
