@@ -7908,7 +7908,7 @@
 									"response": []
 								},
 								{
-									"name": "GetBillPrintRequestList",
+									"name": "BillPrintRequestList",
 									"id": "51068262-5a15eefc-44b9-40d8-a652-b257fcd35f54",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -7921,14 +7921,14 @@
 											"raw": "s"
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/GetBillPrintRequestList",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/BillPrintRequestList",
 											"host": [
 												"{{api_gateway_url}}"
 											],
 											"path": [
 												"billing-payment",
 												"postpaid-invoice",
-												"GetBillPrintRequestList"
+												"BillPrintRequestList"
 											]
 										}
 									},
