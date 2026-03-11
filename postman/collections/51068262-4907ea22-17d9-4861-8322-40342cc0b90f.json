@@ -8178,7 +8178,7 @@
 											"raw": ""
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/payment/GetChequeDepositionList?pageNo=1&pageSize=10&isFilter=1&consumerNumber=3000295327",
+											"raw": "{{api_gateway_url}}/billing-payment/payment/GetChequeDepositionList?pageNo=1&pageSize=10&isFilter=1&fromDate=2025-01-01&toDate=2025-12-31",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -8202,17 +8202,16 @@
 												},
 												{
 													"key": "fromDate",
-													"value": "2024-01-01",
-													"disabled": true
+													"value": "2025-01-01"
 												},
 												{
 													"key": "toDate",
-													"value": "2024-12-31",
-													"disabled": true
+													"value": "2025-12-31"
 												},
 												{
 													"key": "consumerNumber",
-													"value": "3000295327"
+													"value": "3000295327",
+													"disabled": true
 												}
 											]
 										}
