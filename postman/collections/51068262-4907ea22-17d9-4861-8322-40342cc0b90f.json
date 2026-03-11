@@ -8058,6 +8058,11 @@
 					"name": "PaymentStatus",
 					"item": [
 						{
+							"name": "ChequeDeposition",
+							"item": [],
+							"id": "51068262-ac57e7de-a5eb-4886-8323-e716ad8b64b3"
+						},
+						{
 							"name": "GetBillReceiptPendingChequeList",
 							"id": "51068262-673050c6-3ee7-468d-a393-16cf525e11e8",
 							"protocolProfileBehavior": {
