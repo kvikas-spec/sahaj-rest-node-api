@@ -8523,7 +8523,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/payment/GetPOSDepositionList?pageNo=1&pageSize=10&isFilter=true&fromDate=2024-01-01&toDate=2024-12-31&consumerNumber=123456",
+											"raw": "{{api_gateway_url}}/billing-payment/payment/GetPOSDepositionList?pageNo=1&pageSize=10&isFilter=1&fromDate=2024-01-01&toDate=2024-12-31&consumerNumber=123456",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -8543,7 +8543,7 @@
 												},
 												{
 													"key": "isFilter",
-													"value": "true"
+													"value": "1"
 												},
 												{
 													"key": "fromDate",
