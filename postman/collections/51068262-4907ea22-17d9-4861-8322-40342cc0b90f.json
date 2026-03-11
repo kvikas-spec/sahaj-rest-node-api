@@ -8289,178 +8289,178 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "GetTotalAmount",
+									"id": "51068262-d7946025-a5d5-4ba3-b3e0-0a328496899a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/payment/GetTotalAmount?isFilter=1&fromDate=2024-01-01&toDate=2024-12-31&wrdId=5&AcntTypeId=1&cycle=3",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"payment",
+												"GetTotalAmount"
+											],
+											"query": [
+												{
+													"key": "isFilter",
+													"value": "1"
+												},
+												{
+													"key": "fromDate",
+													"value": "2024-01-01"
+												},
+												{
+													"key": "toDate",
+													"value": "2024-12-31"
+												},
+												{
+													"key": "wrdId",
+													"value": "5"
+												},
+												{
+													"key": "AcntTypeId",
+													"value": "1"
+												},
+												{
+													"key": "cycle",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "UploadExcelForChequeList",
+									"id": "51068262-08ebcb1a-00c9-4798-9d1c-cb7fae794d55",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"uuid": "13694eba-44fc-4c70-bedb-0a3df7f97e0d",
+													"src": "/home/vikaskumar/Downloads/ChequeList.xlsx"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/payment/UploadExcelForChequeList",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"payment",
+												"UploadExcelForChequeList"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "UpdateBillReceipt",
+									"id": "51068262-f05df920-2845-4e78-af25-f9316e99a1ac",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Cookie",
+												"value": "connect.sid=your_session_cookie"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"BillReceiptId\": 299100,\n    \"paymentStatus\": \"Invoice Payment\",\n    \"ReturnReason\": \"Refer to drawer\",\n    \"ChequeReturnByBankId\": 10055\n    // \"InwardNumber\": \"INW-2024-001\",\n    // \"QRVNumber\": \"QRV-001\",\n    // \"ChequeReturnedApprovedDate\": \"2026-03-10\"\n  }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/payment/UpdateBillReceipt",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"payment",
+												"UpdateBillReceipt"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ApproveCheque",
+									"id": "51068262-ad4cd206-2c62-4a09-908f-d9fb46b6ce86",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Cookie",
+												"value": "connect.sid=your_session_cookie"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"billReceiptID\": 289075,\n    \"isFromBouncePage\": false,\n    \"paymentStatus\": \"Invoice Payment\",\n    \"chequeApproveAndRejectDate\": \"2026-03-10\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/payment/ApproveCheque",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"payment",
+												"ApproveCheque"
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "51068262-0d287180-c33d-445a-9712-6ea4fb4dbcc8"
-						},
-						{
-							"name": "GetTotalAmount",
-							"id": "51068262-d7946025-a5d5-4ba3-b3e0-0a328496899a",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/billing-payment/payment/GetTotalAmount?isFilter=1&fromDate=2024-01-01&toDate=2024-12-31&wrdId=5&AcntTypeId=1&cycle=3",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"billing-payment",
-										"payment",
-										"GetTotalAmount"
-									],
-									"query": [
-										{
-											"key": "isFilter",
-											"value": "1"
-										},
-										{
-											"key": "fromDate",
-											"value": "2024-01-01"
-										},
-										{
-											"key": "toDate",
-											"value": "2024-12-31"
-										},
-										{
-											"key": "wrdId",
-											"value": "5"
-										},
-										{
-											"key": "AcntTypeId",
-											"value": "1"
-										},
-										{
-											"key": "cycle",
-											"value": "3"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "UploadExcelForChequeList",
-							"id": "51068262-08ebcb1a-00c9-4798-9d1c-cb7fae794d55",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "file",
-											"type": "file",
-											"uuid": "13694eba-44fc-4c70-bedb-0a3df7f97e0d",
-											"src": "/home/vikaskumar/Downloads/ChequeList.xlsx"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/billing-payment/payment/UploadExcelForChequeList",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"billing-payment",
-										"payment",
-										"UploadExcelForChequeList"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "UpdateBillReceipt",
-							"id": "51068262-f05df920-2845-4e78-af25-f9316e99a1ac",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Cookie",
-										"value": "connect.sid=your_session_cookie"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"BillReceiptId\": 299100,\n    \"paymentStatus\": \"Invoice Payment\",\n    \"ReturnReason\": \"Refer to drawer\",\n    \"ChequeReturnByBankId\": 10055\n    // \"InwardNumber\": \"INW-2024-001\",\n    // \"QRVNumber\": \"QRV-001\",\n    // \"ChequeReturnedApprovedDate\": \"2026-03-10\"\n  }",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/billing-payment/payment/UpdateBillReceipt",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"billing-payment",
-										"payment",
-										"UpdateBillReceipt"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "ApproveCheque",
-							"id": "51068262-ad4cd206-2c62-4a09-908f-d9fb46b6ce86",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Cookie",
-										"value": "connect.sid=your_session_cookie"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"billReceiptID\": 289075,\n    \"isFromBouncePage\": false,\n    \"paymentStatus\": \"Invoice Payment\",\n    \"chequeApproveAndRejectDate\": \"2026-03-10\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/billing-payment/payment/ApproveCheque",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"billing-payment",
-										"payment",
-										"ApproveCheque"
-									]
-								}
-							},
-							"response": []
 						}
 					],
 					"id": "51068262-33b0eff4-6021-45ce-ada1-c04ca0d37835"
