@@ -67,7 +67,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 123456\n}",
+							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 431341\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7914,11 +7914,11 @@
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "POST",
+										"method": "GET",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"ConsumerCode\": [3000297770],//[3000293911, 3000293910, 3000293912 ],\n  \"Cycle\": 0,\n  \"WardId\": 39,\n  \"AccountTypeId\": 1,\n  \"StartDate\": \"2025-01-01\",\n  \"EndDate\": \"2026-03-11\"\n}"
+											"raw": "s"
 										},
 										"url": {
 											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/GetBillPrintRequestList",
