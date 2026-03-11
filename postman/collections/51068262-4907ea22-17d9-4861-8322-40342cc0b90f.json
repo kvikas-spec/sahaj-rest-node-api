@@ -8521,7 +8521,18 @@
 									},
 									"request": {
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/payment/GetPOSDepositionList",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"payment",
+												"GetPOSDepositionList"
+											]
+										}
 									},
 									"response": []
 								}
