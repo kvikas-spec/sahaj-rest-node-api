@@ -8523,7 +8523,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/payment/GetPOSDepositionList",
+											"raw": "{{api_gateway_url}}/billing-payment/payment/GetPOSDepositionList?isFilter=0",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -8531,6 +8531,13 @@
 												"billing-payment",
 												"payment",
 												"GetPOSDepositionList"
+											],
+											"query": [
+												{
+													"key": "isFilter",
+													"value": "0",
+													"type": "text"
+												}
 											]
 										}
 									},
