@@ -8570,14 +8570,85 @@
 							"name": "POSUpdation",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "GetBillReceiptPendingPOSList",
 									"id": "51068262-1bdfc3ee-c7a1-4fa9-9d81-1cbfc2184235",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
 									"request": {
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/payment/GetBillReceiptPendingPOSList?pageNo=1&pageSize=10",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"payment",
+												"GetBillReceiptPendingPOSList"
+											],
+											"query": [
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												},
+												{
+													"key": "isFilter",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "consumerNo",
+													"value": "0",
+													"disabled": true
+												},
+												{
+													"key": "wrdId",
+													"value": "0",
+													"disabled": true
+												},
+												{
+													"key": "AcntTypeId",
+													"value": "0",
+													"disabled": true
+												},
+												{
+													"key": "paidAmount",
+													"value": "0",
+													"disabled": true
+												},
+												{
+													"key": "cycle",
+													"value": "0",
+													"disabled": true
+												},
+												{
+													"key": "chqNumber",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "custName",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "fromDate",
+													"value": "2024-01-01",
+													"disabled": true
+												},
+												{
+													"key": "toDate",
+													"value": "2024-12-31",
+													"disabled": true
+												}
+											]
+										}
 									},
 									"response": []
 								}
