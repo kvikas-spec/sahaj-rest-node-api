@@ -67,7 +67,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 431341\n}",
+							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 405133\n}",
 							"options": {
 								"raw": {
 									"language": "json"
