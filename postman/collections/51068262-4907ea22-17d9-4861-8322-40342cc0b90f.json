@@ -6177,7 +6177,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/listOfDetails?isFilter=1&pageNo=1&pageSize=20&ConsumerNumber=3000297770",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/listOfDetails?isFilter=1&pageNo=1&pageSize=20&ConsumerNumber=3000297944",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6211,7 +6211,7 @@
 												},
 												{
 													"key": "ConsumerNumber",
-													"value": "3000297770"
+													"value": "3000297944"
 												},
 												{
 													"key": "wardId",
@@ -8020,7 +8020,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/listOfGenerateBill?pageNo=3&pageSize=10&isFilter=1",
+									"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/listOfGenerateBill?pageNo=5&pageSize=10&isFilter=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -8032,7 +8032,7 @@
 									"query": [
 										{
 											"key": "pageNo",
-											"value": "3"
+											"value": "5"
 										},
 										{
 											"key": "pageSize",
