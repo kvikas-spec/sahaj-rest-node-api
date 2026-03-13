@@ -8077,7 +8077,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "// {\n//     \"CycleMasterVM\": {\n//         \"ConsumerCode\": [3000297617],\n//         \"WardList\": [15],\n//         \"AccountTypeId\": 1 // send account type id from get api\n//     }\n// }\n{\n    \"CycleMasterVM\": {\n        \"ConsumerCode\": [],\n        \"WardList\": [\n            \"16\",\n            \"8\",\n            \"1\"\n        ],\n        \"AccountTypeId\": 1\n    }\n}",
+									"raw": "// {\n//     \"CycleMasterVM\": {\n//         \"ConsumerCode\": [3000297617],\n//         \"WardList\": [15],\n//         \"AccountTypeId\": 1 // send account type id from get api\n//     }\n// }\n{\n    \"CycleMasterVM\": {\n        \"ConsumerCode\": [3000297770],\n        \"WardList\": [],\n        \"AccountTypeId\": 1\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
