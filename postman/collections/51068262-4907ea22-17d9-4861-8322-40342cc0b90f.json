@@ -6354,7 +6354,7 @@
 											"raw": "{\n    \"TransactionDate\":\"\"\n}"
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetConsumerSCMValidation?ConsNo=3000297770&CycleNo=2502&UnitUsed=93&MeterStatusId=1&readingDate=11/03/2026",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetConsumerSCMValidation?ConsNo=3000297944&CycleNo=2505&UnitUsed=-3&MeterStatusId=12&readingDate=2026-03-04",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6366,23 +6366,23 @@
 											"query": [
 												{
 													"key": "ConsNo",
-													"value": "3000297770"
+													"value": "3000297944"
 												},
 												{
 													"key": "CycleNo",
-													"value": "2502"
+													"value": "2505"
 												},
 												{
 													"key": "UnitUsed",
-													"value": "93"
+													"value": "-3"
 												},
 												{
 													"key": "MeterStatusId",
-													"value": "1"
+													"value": "12"
 												},
 												{
 													"key": "readingDate",
-													"value": "11/03/2026"
+													"value": "2026-03-04"
 												}
 											]
 										}
