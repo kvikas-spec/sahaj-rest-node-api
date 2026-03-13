@@ -8020,7 +8020,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/listOfGenerateBill?pageNo=5&pageSize=10&isFilter=1",
+									"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/listOfGenerateBill?pageNo=1&pageSize=10&isFilter=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -8032,7 +8032,7 @@
 									"query": [
 										{
 											"key": "pageNo",
-											"value": "5"
+											"value": "1"
 										},
 										{
 											"key": "pageSize",
