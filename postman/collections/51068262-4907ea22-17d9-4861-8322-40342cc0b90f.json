@@ -6403,7 +6403,7 @@
 											"raw": "{\n    \"TransactionDate\":\"2025-06-21T00:00:00.000Z\"\n}"
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/getCycle?ConsNo=3000297617",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/getCycle?ConsNo=3000297992",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6415,7 +6415,7 @@
 											"query": [
 												{
 													"key": "ConsNo",
-													"value": "3000297617"
+													"value": "3000297992"
 												}
 											]
 										}
@@ -6436,7 +6436,7 @@
 											"raw": "{\n    \"TransactionDate\":\"\"\n}"
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/SearchDemandMaster?ConsumerNum=3000297617&CycleNumber=2501",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/SearchDemandMaster?ConsumerNum=3000297992&CycleNumber=2501",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6448,7 +6448,7 @@
 											"query": [
 												{
 													"key": "ConsumerNum",
-													"value": "3000297617"
+													"value": "3000297992"
 												},
 												{
 													"key": "CycleNumber",
