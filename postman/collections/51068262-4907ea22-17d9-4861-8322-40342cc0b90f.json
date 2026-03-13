@@ -8126,14 +8126,21 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/BillGeneration",
+									"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/BillGeneration/:DemanadGenerateRequestId",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"billing-payment",
 										"postpaid-invoice",
-										"BillGeneration"
+										"BillGeneration",
+										":DemanadGenerateRequestId"
+									],
+									"variable": [
+										{
+											"key": "DemanadGenerateRequestId",
+											"value": ""
+										}
 									]
 								}
 							},
