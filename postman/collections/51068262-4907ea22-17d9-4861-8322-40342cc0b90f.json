@@ -8020,7 +8020,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/listOfGenerateBill?pageNo=1&pageSize=10&isFilter=1&sort=DemanadGenerateRequestId:ASC",
+									"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/listOfGenerateBill?pageNo=3&pageSize=10&isFilter=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -8032,7 +8032,7 @@
 									"query": [
 										{
 											"key": "pageNo",
-											"value": "1"
+											"value": "3"
 										},
 										{
 											"key": "pageSize",
@@ -8049,7 +8049,8 @@
 										},
 										{
 											"key": "sort",
-											"value": "DemanadGenerateRequestId:ASC"
+											"value": "DemanadGenerateRequestId:ASC",
+											"disabled": true
 										}
 									]
 								}
