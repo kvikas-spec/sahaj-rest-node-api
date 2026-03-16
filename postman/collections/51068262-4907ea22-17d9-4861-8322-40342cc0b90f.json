@@ -8711,6 +8711,15 @@
 									"request": {
 										"method": "POST",
 										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"billReceiptID\": 168909,\n    \"paymentStatus\": \"Invoice Payment\",\n    \"chequeApproveAndRejectDate\": null\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
 											"raw": "{{api_gateway_url}}/billing-payment/payment/ApprovePOS",
 											"host": [
@@ -8726,14 +8735,25 @@
 									"response": []
 								},
 								{
-									"name": "New Request",
+									"name": "UpdateBillReceiptPOS",
 									"id": "51068262-77012930-3410-481b-96b2-308fb25b97e8",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
-										"header": []
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/payment/UpdateBillReceiptPOS",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"payment",
+												"UpdateBillReceiptPOS"
+											]
+										}
 									},
 									"response": []
 								}
