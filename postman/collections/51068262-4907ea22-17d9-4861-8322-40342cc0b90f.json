@@ -8617,7 +8617,7 @@
 							"id": "51068262-604a0119-96ea-4868-a5ba-94597fbd9715"
 						},
 						{
-							"name": "POSUpdation",
+							"name": "ApprovePOS",
 							"item": [
 								{
 									"name": "GetBillReceiptPendingPOSList",
@@ -8699,6 +8699,30 @@
 												}
 											]
 										}
+									},
+									"response": []
+								},
+								{
+									"name": "New Request",
+									"id": "51068262-85e2a11c-c8e0-477e-b933-88c4dd63703d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								},
+								{
+									"name": "New Request",
+									"id": "51068262-77012930-3410-481b-96b2-308fb25b97e8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
 									},
 									"response": []
 								}
