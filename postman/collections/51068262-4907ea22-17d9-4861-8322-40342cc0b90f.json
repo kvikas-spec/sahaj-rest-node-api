@@ -8617,7 +8617,7 @@
 							"id": "51068262-604a0119-96ea-4868-a5ba-94597fbd9715"
 						},
 						{
-							"name": "ApprovePOS",
+							"name": "POS Updation",
 							"item": [
 								{
 									"name": "GetBillReceiptPendingPOSList",
