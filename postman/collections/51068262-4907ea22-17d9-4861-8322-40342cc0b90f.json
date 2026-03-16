@@ -8743,6 +8743,15 @@
 									"request": {
 										"method": "POST",
 										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"BillReceiptId\": 168909,\n  \"paymentStatus\": \"Invoice Payment\",\n  \"ReturnReason\": \"Insufficient Funds\",\n  \"ChequeReturnByBankId\": 5,\n  \"InwardNumber\": \"INW-2024-001\",\n  \"QRVNumber\": \"QRV-2024-001\",\n  \"ChequeReturnedApprovedDate\": \"2024-03-15\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
 											"raw": "{{api_gateway_url}}/billing-payment/payment/UpdateBillReceiptPOS",
 											"host": [
