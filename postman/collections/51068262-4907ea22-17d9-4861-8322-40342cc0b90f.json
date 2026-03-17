@@ -8811,7 +8811,7 @@
 							"name": "OnlinePaymentVerification",
 							"item": [
 								{
-									"name": "CommonMasterDatalist Copy",
+									"name": "CommonMasterDatalist- PaymentType",
 									"id": "51068262-1b0747db-56c3-4b4c-a235-50c12bd319b4",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
