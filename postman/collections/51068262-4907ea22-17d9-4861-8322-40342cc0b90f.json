@@ -8806,6 +8806,44 @@
 								}
 							],
 							"id": "51068262-7efaeec0-b5f6-4212-bfc2-e00859826953"
+						},
+						{
+							"name": "OnlinePaymentVerification",
+							"item": [
+								{
+									"name": "TransactionStatus Copy",
+									"id": "51068262-838a9f33-3027-46b0-bf4e-bcadc272db00",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"TransactionId\":\"12345678\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/payment/TransactionStatus",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"payment",
+												"TransactionStatus"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "51068262-8ab6a15d-19e6-4a2d-bb7e-be5db8436cb4"
 						}
 					],
 					"id": "51068262-33b0eff4-6021-45ce-ada1-c04ca0d37835"
