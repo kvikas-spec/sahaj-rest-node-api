@@ -8589,7 +8589,19 @@
 												}
 											]
 										},
-										"description": "payload--\n\n{ // \"sort\": \"MeterStatusName:ASC\", \"force\": true, \"whereClause\": { \"IsActive\": true // \"MeterCompanyId\": \"16\" // \"MeterStatusId\": \"5\" // lockcase -5, NEGATIVECONSUMPTION: 12, }, \"attributes\": \\[\"BankId\", \"BankName\"\\], \"sort\": \"BankName:ASC\"}"
+										"description": "payload--\n\n{ // \"sort\": \"MeterStatusName:ASC\", \"force\": true, \"whereClause\": { \"IsActive\": true // \"MeterCompanyId\": \"16\" // \"MeterStatusId\": \"5\" // lockcase -5, NEGATIVECONSUMPTION: 12, }, \"attributes\": \\[\"BankId\", \"BankName\"\\], \"sort\": \"BankName:ASC\"}\n\nMasterTableName--\n\nBankMaster"
+									},
+									"response": []
+								},
+								{
+									"name": "ReturnReason",
+									"id": "51068262-3dfdf085-0fe4-476a-ab87-47617e5ea806",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
 									},
 									"response": []
 								}
