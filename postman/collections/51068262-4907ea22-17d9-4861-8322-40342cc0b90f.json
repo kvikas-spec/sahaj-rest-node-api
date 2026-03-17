@@ -8773,14 +8773,25 @@
 							"name": "OnlinePaymentStatus",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "TransactionStatus",
 									"id": "51068262-e84b9b25-000c-49b0-a344-b2efb67db41d",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
 									"request": {
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/payment/TransactionStatus",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"payment",
+												"TransactionStatus"
+											]
+										}
 									},
 									"response": []
 								}
