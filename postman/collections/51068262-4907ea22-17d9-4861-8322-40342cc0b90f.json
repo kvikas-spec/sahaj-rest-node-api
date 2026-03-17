@@ -8703,7 +8703,7 @@
 									"response": []
 								},
 								{
-									"name": "New Request",
+									"name": "ApprovePOS",
 									"id": "51068262-85e2a11c-c8e0-477e-b933-88c4dd63703d",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
