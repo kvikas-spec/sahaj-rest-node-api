@@ -8811,6 +8811,44 @@
 							"name": "OnlinePaymentVerification",
 							"item": [
 								{
+									"name": "CommonMasterDatalist Copy",
+									"id": "51068262-1b0747db-56c3-4b4c-a235-50c12bd319b4",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "// {\n//     // \"sort\": \"MeterStatusName:ASC\",\n//     \"force\": true,\n//     \"whereClause\": {\n//         \"IsActive\": true,\n//         // \"MeterCompanyId\": \"16\"\n//         \"MeterStatusId\": \"5\" // lockcase -5, NEGATIVECONSUMPTION: 12,\n//     },\n//     \"attributes\": [\"RejectionReason\", \"MeterReadingRejectionId\"],\n//     \"sort\": \"MeterReadingRejectionId:ASC\"\n// }\n\n{\n    // \"sort\": \"MeterStatusName:ASC\",\n    // \"force\": true,\n    \"whereClause\": {\n        \"IsActive\": true\n        // \"MeterCompanyId\": \"16\"\n        // \"MeterStatusId\": \"5\" // lockcase -5, NEGATIVECONSUMPTION: 12,\n    }\n    // \"attributes\": [\"MeterStatusId\", \"MeterStatusName\"],\n    // \"sort\": \"MeterStatusId:ASC\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/CommonMasterDatalist/:MasterTableName",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"CommonMasterDatalist",
+												":MasterTableName"
+											],
+											"variable": [
+												{
+													"key": "MasterTableName",
+													"value": "PaymentTypeMasters"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
 									"name": "UploadAllGAPaymentVerificationFile",
 									"id": "51068262-838a9f33-3027-46b0-bf4e-bcadc272db00",
 									"protocolProfileBehavior": {
