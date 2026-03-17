@@ -8779,8 +8779,17 @@
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
+										"method": "POST",
 										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"TransactionId\":\"12345678\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
 											"raw": "{{api_gateway_url}}/billing-payment/payment/TransactionStatus",
 											"host": [
