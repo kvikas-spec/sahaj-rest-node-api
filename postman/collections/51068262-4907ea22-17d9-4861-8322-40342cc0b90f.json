@@ -8821,7 +8821,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "// {\n//     // \"sort\": \"MeterStatusName:ASC\",\n//     \"force\": true,\n//     \"whereClause\": {\n//         \"IsActive\": true,\n//         // \"MeterCompanyId\": \"16\"\n//         \"MeterStatusId\": \"5\" // lockcase -5, NEGATIVECONSUMPTION: 12,\n//     },\n//     \"attributes\": [\"RejectionReason\", \"MeterReadingRejectionId\"],\n//     \"sort\": \"MeterReadingRejectionId:ASC\"\n// }\n\n{\n    // \"sort\": \"MeterStatusName:ASC\",\n    // \"force\": true,\n    \"whereClause\": {\n        \"IsActive\": true,\n        \"PaymentTypeId\": [5, 16, 17]\n        // \"MeterCompanyId\": \"16\"\n        // \"MeterStatusId\": \"5\" // lockcase -5, NEGATIVECONSUMPTION: 12,\n    },\n    \"attributes\": [\"PaymentTypeId\", \"PaymentType\"],\n    \"sort\": \"PaymentType:ASC\"\n}",
+											"raw": "// {\n//     // \"sort\": \"MeterStatusName:ASC\",\n//     \"force\": true,\n//     \"whereClause\": {\n//         \"IsActive\": true,\n//         // \"MeterCompanyId\": \"16\"\n//         \"MeterStatusId\": \"5\" // lockcase -5, NEGATIVECONSUMPTION: 12,\n//     },\n//     \"attributes\": [\"RejectionReason\", \"MeterReadingRejectionId\"],\n//     \"sort\": \"MeterReadingRejectionId:ASC\"\n// }\n\n{\n    // \"sort\": \"MeterStatusName:ASC\",\n    \"force\": true,\n    \"whereClause\": {\n        \"IsActive\": true,\n        \"PaymentTypeId\": [5, 16, 17]\n        // \"MeterCompanyId\": \"16\"\n        // \"MeterStatusId\": \"5\" // lockcase -5, NEGATIVECONSUMPTION: 12,\n    },\n    \"attributes\": [\"PaymentTypeId\", \"PaymentType\"],\n    \"sort\": \"PaymentType:ASC\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -8841,7 +8841,7 @@
 											"variable": [
 												{
 													"key": "MasterTableName",
-													"value": "PaymentTypeMasters"
+													"value": "PaymentTypeMaster"
 												}
 											]
 										}
