@@ -29922,12 +29922,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/crm/health-check",
+							"raw": "{{api_gateway_url}}/dra/health-check",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
-								"crm",
+								"dra",
 								"health-check"
 							]
 						}
