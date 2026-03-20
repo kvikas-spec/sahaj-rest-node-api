@@ -29854,12 +29854,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/dra/example/GetComplaintRegisterdetails/:id",
+							"raw": "{{api_gateway_url}}/debt-recovery-agency/example/GetComplaintRegisterdetails/:id",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
-								"dra",
+								"debt-recovery-agency",
 								"example",
 								"GetComplaintRegisterdetails",
 								":id"
@@ -29884,12 +29884,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/dra/example/GetComplaintRegisterList?pageNo=1&pageSize=10",
+							"raw": "{{api_gateway_url}}/debt-recovery-agency/example/GetComplaintRegisterList?pageNo=1&pageSize=10",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
-								"dra",
+								"debt-recovery-agency",
 								"example",
 								"GetComplaintRegisterList"
 							],
@@ -29922,12 +29922,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/dra/health-check",
+							"raw": "{{api_gateway_url}}/debt-recovery-agency/health-check",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
-								"dra",
+								"debt-recovery-agency",
 								"health-check"
 							]
 						}
