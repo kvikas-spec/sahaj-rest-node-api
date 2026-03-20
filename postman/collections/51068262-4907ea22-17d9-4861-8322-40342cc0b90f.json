@@ -8492,7 +8492,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "// {\n//     \"BillReceiptId\": 299100,\n//     \"paymentStatus\": \"Invoice Payment\",\n//     \"ReturnReason\": \"Refer to drawer\",\n//     \"ChequeReturnByBankId\": 10055\n//     // \"InwardNumber\": \"INW-2024-001\",\n//     // \"QRVNumber\": \"QRV-001\",\n//     // \"ChequeReturnedApprovedDate\": \"2026-03-10\"\n//   }\n{\n    \"BillReceiptId\": 299231,\n    \"paymentStatus\": \"After Sales Service Payment\",\n    \"ChequeReturnedApprovedDate\": \"2026-03-18\",\n    \"isFromBouncePage\": false\n}",
+											"raw": "// {\n//     \"BillReceiptId\": 299100,\n//     \"paymentStatus\": \"Invoice Payment\",\n//     \"ReturnReason\": \"Refer to drawer\",\n//     \"ChequeReturnByBankId\": 10055\n//     // \"InwardNumber\": \"INW-2024-001\",\n//     // \"QRVNumber\": \"QRV-001\",\n//     // \"ChequeReturnedApprovedDate\": \"2026-03-10\"\n//   }\n{\n    \"BillReceiptId\": 289077,\n    \"paymentStatus\": \"Invoice Payment\",\n    \"ReturnReason\": \"Amt. in words and figures differs\",\n    \"ChequeReturnByBankId\": 10056\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -29840,6 +29840,103 @@
 				}
 			],
 			"id": "51068262-fbf4574d-ec16-4d89-af54-461b62be3590"
+		},
+		{
+			"name": "CRM Copy",
+			"item": [
+				{
+					"name": "GetComplaintRegisterdetails",
+					"id": "51068262-66e898ba-8bc5-4c4b-b828-684a79400b01",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/crm/example/GetComplaintRegisterdetails/:id",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"crm",
+								"example",
+								"GetComplaintRegisterdetails",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "1d1000ac-ff8a-465c-a4e1-cac4dcc7431e",
+									"key": "id",
+									"value": "121795"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetComplaintRegisterList",
+					"id": "51068262-74be8f77-f57c-45ed-9df3-78961594385d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/crm/example/GetComplaintRegisterList?pageNo=1&pageSize=10",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"crm",
+								"example",
+								"GetComplaintRegisterList"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "isFilter",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "health-check",
+					"id": "51068262-ced2a677-5f1d-4464-b221-ed3a9c885766",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/crm/health-check",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"crm",
+								"health-check"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "51068262-523fbbcc-0391-4151-bc7b-c43b749b9ddb"
 		},
 		{
 			"name": "http://localhost:8080/api/v1/customer-registration/miscellaneous/form13-search/3000298511/0",
