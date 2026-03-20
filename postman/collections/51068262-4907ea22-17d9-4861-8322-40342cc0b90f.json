@@ -29842,7 +29842,7 @@
 			"id": "51068262-fbf4574d-ec16-4d89-af54-461b62be3590"
 		},
 		{
-			"name": "CRM Copy",
+			"name": "DRA",
 			"item": [
 				{
 					"name": "GetComplaintRegisterdetails",
@@ -29854,19 +29854,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/crm/example/GetComplaintRegisterdetails/:id",
+							"raw": "{{api_gateway_url}}/dra/example/GetComplaintRegisterdetails/:id",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
-								"crm",
+								"dra",
 								"example",
 								"GetComplaintRegisterdetails",
 								":id"
 							],
 							"variable": [
 								{
-									"id": "1d1000ac-ff8a-465c-a4e1-cac4dcc7431e",
 									"key": "id",
 									"value": "121795"
 								}
@@ -29885,12 +29884,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/crm/example/GetComplaintRegisterList?pageNo=1&pageSize=10",
+							"raw": "{{api_gateway_url}}/dra/example/GetComplaintRegisterList?pageNo=1&pageSize=10",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
-								"crm",
+								"dra",
 								"example",
 								"GetComplaintRegisterList"
 							],
