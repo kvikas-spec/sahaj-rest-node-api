@@ -67,7 +67,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 421521\n}",
+							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 123456\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7886,7 +7886,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"ConsumerCode\": [3000298797],//[3000293911, 3000293910, 3000293912 ],\n  \"Cycle\": 0,\n  \"WardId\": 11,\n  \"AccountTypeId\": 1,\n  \"StartDate\": \"2026-01-01\",\n  \"EndDate\": \"2026-03-18\"\n}",
+											"raw": "{\n  \"ConsumerCode\": [3000298799],//[3000293911, 3000293910, 3000293912 ],\n  \"Cycle\": 0,\n  \"WardId\": 11,\n  \"AccountTypeId\": 1,\n  \"StartDate\": \"2026-01-01\",\n  \"EndDate\": \"2026-03-18\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -8492,7 +8492,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"BillReceiptId\": 299100,\n    \"paymentStatus\": \"Invoice Payment\",\n    \"ReturnReason\": \"Refer to drawer\",\n    \"ChequeReturnByBankId\": 10055\n    // \"InwardNumber\": \"INW-2024-001\",\n    // \"QRVNumber\": \"QRV-001\",\n    // \"ChequeReturnedApprovedDate\": \"2026-03-10\"\n  }",
+											"raw": "// {\n//     \"BillReceiptId\": 299100,\n//     \"paymentStatus\": \"Invoice Payment\",\n//     \"ReturnReason\": \"Refer to drawer\",\n//     \"ChequeReturnByBankId\": 10055\n//     // \"InwardNumber\": \"INW-2024-001\",\n//     // \"QRVNumber\": \"QRV-001\",\n//     // \"ChequeReturnedApprovedDate\": \"2026-03-10\"\n//   }\n{\n    \"BillReceiptId\": 299231,\n    \"paymentStatus\": \"After Sales Service Payment\",\n    \"ChequeReturnedApprovedDate\": \"2026-03-18\",\n    \"isFromBouncePage\": false\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -8533,7 +8533,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"billReceiptID\": 289075,\n    \"isFromBouncePage\": false,\n    \"paymentStatus\": \"Invoice Payment\",\n    \"chequeApproveAndRejectDate\": \"2026-03-10\"\n}",
+											"raw": "// {\n//     \"billReceiptID\": 289075,\n//     \"isFromBouncePage\": false,\n//     \"paymentStatus\": \"Invoice Payment\",\n//     \"chequeApproveAndRejectDate\": \"2026-03-10\"\n// }\n{\n    \"billReceiptID\": 299233,\n    \"isFromBouncePage\": false,\n    \"paymentStatus\": \"After Sales Service Payment\",\n    \"chequeApproveAndRejectDate\": \"2026-03-18\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
