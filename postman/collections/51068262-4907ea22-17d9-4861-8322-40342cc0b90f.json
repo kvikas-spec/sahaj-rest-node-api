@@ -8834,6 +8834,38 @@
 									"response": []
 								},
 								{
+									"name": "UploadExcelForPOSList",
+									"id": "51068262-ec05bd0c-88ff-4cd0-ad68-dcb449dc7aa9",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/payment/UploadExcelForPOSList",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"payment",
+												"UploadExcelForPOSList"
+											]
+										}
+									},
+									"response": []
+								},
+								{
 									"name": "ReturnReason",
 									"id": "51068262-b36018c4-e022-465c-a39f-e6f1dd9b9043",
 									"protocolProfileBehavior": {
