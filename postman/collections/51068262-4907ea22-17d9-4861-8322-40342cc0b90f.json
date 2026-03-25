@@ -6475,7 +6475,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/_MROGeneratedDetails?consumerNumber=3000298808",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/_MROGeneratedDetails?consumerNumber=3000297251",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6487,7 +6487,7 @@
 											"query": [
 												{
 													"key": "consumerNumber",
-													"value": "3000298808"
+													"value": "3000297251"
 												}
 											]
 										}
