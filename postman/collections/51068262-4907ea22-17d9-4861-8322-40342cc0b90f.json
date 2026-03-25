@@ -7079,7 +7079,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/MarkInvoiceDefectiveDetais?consumerNumber=3000298803",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/MarkInvoiceDefectiveDetais?consumerNumber=3000298808",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -7091,7 +7091,7 @@
 											"query": [
 												{
 													"key": "consumerNumber",
-													"value": "3000298803"
+													"value": "3000298808"
 												}
 											]
 										}
@@ -8077,7 +8077,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "// {\n//     \"CycleMasterVM\": {\n//         \"ConsumerCode\": [3000297617],\n//         \"WardList\": [15],\n//         \"AccountTypeId\": 1 // send account type id from get api\n//     }\n// }\n{\n    \"CycleMasterVM\": {\n        \"ConsumerCode\":[3000298741],//[3000297410, 3000297593],\n        \"WardList\": [], // ,36,31\n        \"AccountTypeId\": 1\n    }\n}",
+									"raw": "// {\n//     \"CycleMasterVM\": {\n//         \"ConsumerCode\": [3000297617],\n//         \"WardList\": [15],\n//         \"AccountTypeId\": 1 // send account type id from get api\n//     }\n// }\n{\n    \"CycleMasterVM\": {\n        \"ConsumerCode\":[3000297725],//[3000297410, 3000297593],\n        \"WardList\": [], // ,36,31\n        \"AccountTypeId\": 1\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
