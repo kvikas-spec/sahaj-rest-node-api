@@ -6403,7 +6403,7 @@
 											"raw": "{\n    \"TransactionDate\":\"2025-06-21T00:00:00.000Z\"\n}"
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/getCycle?ConsNo=3000297947",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/getCycle?ConsNo=3000295870",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6415,7 +6415,7 @@
 											"query": [
 												{
 													"key": "ConsNo",
-													"value": "3000297947"
+													"value": "3000295870"
 												}
 											]
 										}
@@ -6436,7 +6436,7 @@
 											"raw": "{\n    \"TransactionDate\":\"\"\n}"
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/SearchDemandMaster?ConsumerNum=3000297947&CycleNumber=2601",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/SearchDemandMaster?ConsumerNum=3000295870&CycleNumber=2601",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6448,7 +6448,7 @@
 											"query": [
 												{
 													"key": "ConsumerNum",
-													"value": "3000297947"
+													"value": "3000295870"
 												},
 												{
 													"key": "CycleNumber",
@@ -7079,7 +7079,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/MarkInvoiceDefectiveDetais?consumerNumber=3000298808",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/MarkInvoiceDefectiveDetais?consumerNumber=3000297947",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -7091,7 +7091,7 @@
 											"query": [
 												{
 													"key": "consumerNumber",
-													"value": "3000298808"
+													"value": "3000297947"
 												}
 											]
 										}
@@ -7144,7 +7144,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoiceReversalDetails?consumerNumber=3000297944",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoiceReversalDetails?consumerNumber=111111111503330",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -7156,7 +7156,7 @@
 											"query": [
 												{
 													"key": "consumerNumber",
-													"value": "3000297944"
+													"value": "111111111503330"
 												}
 											]
 										}
@@ -8176,7 +8176,7 @@
 									"variable": [
 										{
 											"key": "billGenId",
-											"value": "354555"
+											"value": "134526"
 										}
 									]
 								}
