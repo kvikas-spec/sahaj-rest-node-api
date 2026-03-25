@@ -7079,7 +7079,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/MarkInvoiceDefectiveDetais?consumerNumber=30002411639",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/MarkInvoiceDefectiveDetais?consumerNumber=3000298803",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -7091,7 +7091,7 @@
 											"query": [
 												{
 													"key": "consumerNumber",
-													"value": "30002411639"
+													"value": "3000298803"
 												}
 											]
 										}
@@ -7121,7 +7121,7 @@
 											"variable": [
 												{
 													"key": "DemandMasterId",
-													"value": "7120090"
+													"value": "7343392"
 												}
 											]
 										}
