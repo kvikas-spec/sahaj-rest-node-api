@@ -30033,7 +30033,7 @@
 					"response": []
 				},
 				{
-					"name": "GetComplaintRegisterdetails Copy",
+					"name": "GetDRACustomerAllotmentDetails",
 					"id": "51068262-442d6e70-9a7a-4312-afd7-ba827c3318ad",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
