@@ -29965,12 +29965,34 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "health-check Copy",
+					"id": "51068262-e602c5e4-12d8-45e6-aa9f-54fa729c6190",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/debt-recovery-agency/health-check",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"debt-recovery-agency",
+								"health-check"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "51068262-523fbbcc-0391-4151-bc7b-c43b749b9ddb"
 		},
 		{
-			"name": "New Folder",
+			"name": "Revenue-Recovery",
 			"item": [],
 			"id": "51068262-e14c08ab-a854-491c-8307-7e5872ecbc82"
 		},
