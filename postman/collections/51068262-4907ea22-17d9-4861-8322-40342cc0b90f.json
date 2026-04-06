@@ -29945,44 +29945,6 @@
 					"response": []
 				},
 				{
-					"name": "GetComplaintRegisterList Copy",
-					"id": "51068262-503b2b73-00a8-42e7-bba7-9c301cbc5983",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{api_gateway_url}}/debt-recovery-agency/example/GetComplaintRegisterList?pageNo=1&pageSize=10",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"debt-recovery-agency",
-								"example",
-								"GetComplaintRegisterList"
-							],
-							"query": [
-								{
-									"key": "pageNo",
-									"value": "1"
-								},
-								{
-									"key": "pageSize",
-									"value": "10"
-								},
-								{
-									"key": "isFilter",
-									"value": "0",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "health-check",
 					"id": "51068262-ced2a677-5f1d-4464-b221-ed3a9c885766",
 					"protocolProfileBehavior": {
@@ -30027,6 +29989,44 @@
 							"path": [
 								"revenue-recovery",
 								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetComplaintRegisterList Copy",
+					"id": "51068262-503b2b73-00a8-42e7-bba7-9c301cbc5983",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/debt-recovery-agency/example/GetComplaintRegisterList?pageNo=1&pageSize=10",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"debt-recovery-agency",
+								"example",
+								"GetComplaintRegisterList"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "isFilter",
+									"value": "0",
+									"disabled": true
+								}
 							]
 						}
 					},
