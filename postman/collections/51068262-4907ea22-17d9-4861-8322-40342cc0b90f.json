@@ -30042,19 +30042,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/debt-recovery-agency/example/GetComplaintRegisterdetails/:id",
+							"raw": "{{api_gateway_url}}/revenue-recovery/example/GetDRACustomerAllotmentDetails/:id",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
-								"debt-recovery-agency",
+								"revenue-recovery",
 								"example",
-								"GetComplaintRegisterdetails",
+								"GetDRACustomerAllotmentDetails",
 								":id"
 							],
 							"variable": [
 								{
-									"id": "d48ead29-8100-483e-88f5-e4372c03a0e8",
 									"key": "id",
 									"value": "121795"
 								}
