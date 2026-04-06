@@ -30004,14 +30004,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/revenue-recovery/example/GetComplaintRegisterList?pageNo=1&pageSize=10",
+							"raw": "{{api_gateway_url}}/revenue-recovery/example/GetDRACustomerAllotmentList?pageNo=1&pageSize=10",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
 								"revenue-recovery",
 								"example",
-								"GetComplaintRegisterList"
+								"GetDRACustomerAllotmentList"
 							],
 							"query": [
 								{
