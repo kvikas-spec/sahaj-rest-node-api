@@ -8312,7 +8312,7 @@
 											"raw": ""
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/payment/GetBillReceiptPendingChequeList?pageNo=1&pageSize=10",
+											"raw": "{{api_gateway_url}}/billing-payment/payment/GetBillReceiptPendingChequeList?pageNo=1&pageSize=10&isFilter=1&consumerNo=3000123456",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -8332,13 +8332,11 @@
 												},
 												{
 													"key": "isFilter",
-													"value": "1",
-													"disabled": true
+													"value": "1"
 												},
 												{
 													"key": "consumerNo",
-													"value": "3000295702",
-													"disabled": true
+													"value": "3000123456"
 												},
 												{
 													"key": "custName",
@@ -8849,7 +8847,7 @@
 													"key": "file",
 													"type": "file",
 													"uuid": "55b6fb10-d70e-4b41-9da4-0ae63c176c34",
-													"src": "/home/vikaskumar/Downloads/POSList.xlsx"
+													"src": "/home/vikaskumar/Downloads/POSList (1).xlsx"
 												}
 											]
 										},
@@ -29970,6 +29968,11 @@
 				}
 			],
 			"id": "51068262-523fbbcc-0391-4151-bc7b-c43b749b9ddb"
+		},
+		{
+			"name": "New Folder",
+			"item": [],
+			"id": "51068262-e14c08ab-a854-491c-8307-7e5872ecbc82"
 		},
 		{
 			"name": "http://localhost:8080/api/v1/customer-registration/miscellaneous/form13-search/3000298511/0",
