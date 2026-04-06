@@ -29982,12 +29982,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/debt-recovery-agency/health",
+							"raw": "{{api_gateway_url}}/revenue-recovery/health",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
-								"debt-recovery-agency",
+								"revenue-recovery",
 								"health"
 							]
 						}
