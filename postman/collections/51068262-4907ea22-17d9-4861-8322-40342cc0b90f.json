@@ -29995,7 +29995,7 @@
 					"response": []
 				},
 				{
-					"name": "GetComplaintRegisterList Copy",
+					"name": "GetDRACustomerAllotmentList",
 					"id": "51068262-503b2b73-00a8-42e7-bba7-9c301cbc5983",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
