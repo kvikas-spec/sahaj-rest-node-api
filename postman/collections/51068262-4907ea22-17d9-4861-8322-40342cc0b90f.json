@@ -30031,6 +30031,37 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "GetComplaintRegisterdetails Copy",
+					"id": "51068262-442d6e70-9a7a-4312-afd7-ba827c3318ad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/debt-recovery-agency/example/GetComplaintRegisterdetails/:id",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"debt-recovery-agency",
+								"example",
+								"GetComplaintRegisterdetails",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "d48ead29-8100-483e-88f5-e4372c03a0e8",
+									"key": "id",
+									"value": "121795"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "51068262-e14c08ab-a854-491c-8307-7e5872ecbc82"
