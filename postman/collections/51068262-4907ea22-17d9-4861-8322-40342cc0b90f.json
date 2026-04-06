@@ -30042,7 +30042,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/revenue-recovery/example/GetDRACustomerAllotmentDetails/:id",
+							"raw": "{{api_gateway_url}}/revenue-recovery/example/GetDRACustomerAllotmentDetails/:CustomerAllotmentId",
 							"host": [
 								"{{api_gateway_url}}"
 							],
@@ -30050,12 +30050,12 @@
 								"revenue-recovery",
 								"example",
 								"GetDRACustomerAllotmentDetails",
-								":id"
+								":CustomerAllotmentId"
 							],
 							"variable": [
 								{
-									"key": "id",
-									"value": "121795"
+									"key": "CustomerAllotmentId",
+									"value": "20941"
 								}
 							]
 						}
