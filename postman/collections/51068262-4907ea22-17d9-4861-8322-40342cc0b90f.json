@@ -7257,7 +7257,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoiceReversalDetails?consumerNumber=111111111503330",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoiceReversalDetails?consumerNumber=3000298014",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -7269,7 +7269,7 @@
 											"query": [
 												{
 													"key": "consumerNumber",
-													"value": "111111111503330"
+													"value": "3000298014"
 												}
 											]
 										}
@@ -7376,7 +7376,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"ids\":[7173113] // DemandMasterId\n}\n",
+											"raw": "{\n  \"ids\":[7393870] // DemandMasterId\n}\n",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -8080,7 +8080,7 @@
 											"variable": [
 												{
 													"key": "consumerNumber",
-													"value": "3000297944"
+													"value": "3000298014"
 												}
 											]
 										}
@@ -8098,7 +8098,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"DemandMasterId\": 7163041,\n    \"ConsumerNumber\": 3000297944\n}",
+											"raw": "{\n    \"DemandMasterId\": 7393870,\n    \"ConsumerNumber\": 3000298014\n}",
 											"options": {
 												"raw": {
 													"language": "json"
