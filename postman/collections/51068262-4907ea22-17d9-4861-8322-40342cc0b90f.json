@@ -6516,7 +6516,7 @@
 											"raw": "{\n    \"TransactionDate\":\"2025-06-21T00:00:00.000Z\"\n}"
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/getCycle?ConsNo=3000295870",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/getCycle?ConsNo=3000298180",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6528,7 +6528,7 @@
 											"query": [
 												{
 													"key": "ConsNo",
-													"value": "3000295870"
+													"value": "3000298180"
 												}
 											]
 										}
