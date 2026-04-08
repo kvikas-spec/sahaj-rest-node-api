@@ -6352,7 +6352,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1773210933131-858305496_Vector.png\",\n    \"ConsumerNumber\": 3000297229,\n    \"Cycle\": \"2601\",\n    \"WardId\": 33,\n    \"ReadingDate\": \"2026-03-26\",\n    \"BillDate\": \"2026-03-26\",\n    \"FullName\": \"Dharma Khatua\",\n    \"BillNumber\": 0,\n    \"CurrentReading\": 100,\n    \"PreviousReading\": 0,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 100\n}",
+											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1775583409648-548881823_istockphoto-1363573384-612x612.jpg\",\n    \"ConsumerNumber\": 3000298036,\n    \"Cycle\": \"2607\",\n    \"WardId\": 12,\n    \"ReadingDate\": \"2026-03-31\",\n    \"BillDate\": \"2026-03-31\",\n    \"FullName\": \"Dharmadev Khatua\",\n    \"BillNumber\": 800000535918,\n    \"CurrentReading\": 5,\n    \"PreviousReading\": 0,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 5\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6588,7 +6588,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/_MROGeneratedDetails?consumerNumber=3000297251",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/_MROGeneratedDetails?consumerNumber=3000298160",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6600,7 +6600,7 @@
 											"query": [
 												{
 													"key": "consumerNumber",
-													"value": "3000297251"
+													"value": "3000298160"
 												}
 											]
 										}
@@ -8252,7 +8252,7 @@
 									"variable": [
 										{
 											"key": "DemanadGenerateRequestId",
-											"value": "324580"
+											"value": "344575"
 										}
 									]
 								}
