@@ -6549,7 +6549,7 @@
 											"raw": "{\n    \"TransactionDate\":\"\"\n}"
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/SearchDemandMaster?ConsumerNum=3000295870&CycleNumber=2601",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/SearchDemandMaster?ConsumerNum=3000298190&CycleNumber=2601",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6561,7 +6561,7 @@
 											"query": [
 												{
 													"key": "ConsumerNum",
-													"value": "3000295870"
+													"value": "3000298190"
 												},
 												{
 													"key": "CycleNumber",
