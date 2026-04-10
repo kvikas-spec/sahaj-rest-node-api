@@ -7708,7 +7708,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/RejectNegativeConsumption/:MeterReadingId",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/RejectNegativeConsumption/",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -7716,13 +7716,7 @@
 												"billing-payment",
 												"meter-reading",
 												"RejectNegativeConsumption",
-												":MeterReadingId"
-											],
-											"variable": [
-												{
-													"key": "MeterReadingId",
-													"value": ""
-												}
+												""
 											]
 										}
 									},
