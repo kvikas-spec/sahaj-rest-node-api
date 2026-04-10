@@ -7643,7 +7643,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetNegativeConsumptionApproval?isFilter=1&pageNo=1&pageSize=10&sort=MeterReadingId:DESC&isNegativeConsumptionApproval=1&wardId=14",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetNegativeConsumptionApproval?isFilter=1&pageNo=1&pageSize=10&isNegativeConsumptionApproval=1",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -7667,7 +7667,8 @@
 												},
 												{
 													"key": "sort",
-													"value": "MeterReadingId:DESC"
+													"value": "MeterReadingId:DESC",
+													"disabled": true
 												},
 												{
 													"key": "isNegativeConsumptionApproval",
@@ -7680,7 +7681,8 @@
 												},
 												{
 													"key": "wardId",
-													"value": "14"
+													"value": "14",
+													"disabled": true
 												}
 											]
 										}
