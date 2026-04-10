@@ -8425,7 +8425,7 @@
 											"raw": ""
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/payment/GetBillReceiptPendingChequeList?pageNo=1&pageSize=10&isFilter=1&consumerNo=3000123456",
+											"raw": "{{api_gateway_url}}/billing-payment/payment/GetBillReceiptPendingChequeList?pageNo=1&pageSize=10&isFilter=1",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -8449,7 +8449,8 @@
 												},
 												{
 													"key": "consumerNo",
-													"value": "3000123456"
+													"value": "3000123456",
+													"disabled": true
 												},
 												{
 													"key": "custName",
@@ -8807,7 +8808,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/payment/GetBillReceiptPendingPOSList?pageNo=1&pageSize=10",
+											"raw": "{{api_gateway_url}}/billing-payment/payment/GetBillReceiptPendingPOSList?pageNo=1&pageSize=10&isFilter=true&posNumber=23143",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -8827,8 +8828,7 @@
 												},
 												{
 													"key": "isFilter",
-													"value": "true",
-													"disabled": true
+													"value": "true"
 												},
 												{
 													"key": "consumerNo",
@@ -8856,9 +8856,8 @@
 													"disabled": true
 												},
 												{
-													"key": "chqNumber",
-													"value": "",
-													"disabled": true
+													"key": "posNumber",
+													"value": "23143"
 												},
 												{
 													"key": "custName",
