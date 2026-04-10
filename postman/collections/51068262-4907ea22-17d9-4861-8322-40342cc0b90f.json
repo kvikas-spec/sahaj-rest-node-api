@@ -6352,7 +6352,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1775803802759-296502674_Screenshot from 2026-04-09 17-07-39.png\",\n    \"ConsumerNumber\": 3000298206,\n    \"Cycle\": \"2603\",\n    \"WardId\": 11,\n    \"ReadingDate\": \"2026-04-07\",\n    \"BillDate\": \"2026-04-09\",\n    \"FullName\": \"nonflexi5500\",\n    \"BillNumber\": 3000298206202601,\n    \"CurrentReading\": 100,\n    \"PreviousReading\": 100,\n    \"MeterStatusId\": 5,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 0\n}",
+											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1775808077984-12715899_Screenshot from 2026-03-23 12-56-01.png\",\n    \"ConsumerNumber\": 3000298224,\n    \"Cycle\": \"2602\",\n    \"WardId\": 11,\n    \"ReadingDate\": \"2026-03-15\",\n    \"BillDate\": \"2026-03-15\",\n    \"FullName\": \"METERREADINGS\",\n    \"BillNumber\": 3000298224202601,\n    \"CurrentReading\": 20,\n    \"PreviousReading\": 22,\n    \"MeterStatusId\": 12,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": -2\n}",
 											"options": {
 												"raw": {
 													"language": "json"
