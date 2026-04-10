@@ -7878,7 +7878,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"MeterReadingId\": 321024,\n  \"MeterReadingRejectionId\": 7,\n  \"OthersReason\": \"Incorrect meter reading captured during field visit.\"\n}\n",
+											"raw": "{\n    \"MeterReadingId\": \"361426\",\n    \"MeterReadingRejectionId\": \"8\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
