@@ -7700,7 +7700,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"MeterReadingId\": 321024,\n  \"MeterReadingRejectionId\": 7,\n  \"OthersReason\": \"Incorrect meter reading captured during field visit.\"\n}\n",
+											"raw": "{\n  \"MeterReadingId\": 321119,\n  \"MeterReadingRejectionId\": 7,\n  \"OthersReason\": \"Incorrect meter reading captured during field visit.\"\n}\n",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7721,7 +7721,7 @@
 											"variable": [
 												{
 													"key": "MeterReadingId",
-													"value": "321024"
+													"value": ""
 												}
 											]
 										}
