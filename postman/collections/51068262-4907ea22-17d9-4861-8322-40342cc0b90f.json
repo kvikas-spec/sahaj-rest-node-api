@@ -8644,7 +8644,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "// {\n//     \"billReceiptID\": 289075,\n//     \"isFromBouncePage\": false,\n//     \"paymentStatus\": \"Invoice Payment\",\n//     \"chequeApproveAndRejectDate\": \"2026-03-10\"\n// }\n{\n    \"billReceiptID\": 509238,\n    \"isFromBouncePage\": false,\n    \"paymentStatus\": \"Security Deposit Payment\",\n    \"chequeApproveAndRejectDate\": \"2026-04-10\"\n}",
+											"raw": "// {\n//     \"billReceiptID\": 289075,\n//     \"isFromBouncePage\": false,\n//     \"paymentStatus\": \"Invoice Payment\",\n//     \"chequeApproveAndRejectDate\": \"2026-03-10\"\n// }\n{\n    \"billReceiptID\": 509239,\n    \"isFromBouncePage\": false,\n    \"paymentStatus\": \"After Sales Service Payment\",\n    \"chequeApproveAndRejectDate\": \"2026-04-10\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
