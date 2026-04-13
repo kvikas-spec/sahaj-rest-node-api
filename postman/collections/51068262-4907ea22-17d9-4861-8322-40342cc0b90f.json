@@ -9227,7 +9227,7 @@
 					"response": []
 				},
 				{
-					"name": "CommonMasterDatalist Copy",
+					"name": "GAMaster",
 					"id": "51068262-dafb605f-659f-4334-800b-d8f3fb93426b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -9256,9 +9256,8 @@
 							],
 							"variable": [
 								{
-									"id": "8935daad-2e26-4a47-be22-60eda9a935ef",
 									"key": "MasterTableName",
-									"value": "WardMaster"
+									"value": "GAMaster"
 								}
 							]
 						}
