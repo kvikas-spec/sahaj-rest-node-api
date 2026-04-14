@@ -6827,7 +6827,7 @@
 											"variable": [
 												{
 													"key": "BillGenerateRequestWithReadingId",
-													"value": "70311"
+													"value": "80310"
 												}
 											]
 										}
@@ -6889,6 +6889,7 @@
 										{
 											"listen": "test",
 											"script": {
+												"id": "40b52f7d-42d5-4f8b-83ec-853574b9641d",
 												"exec": [
 													"// Visualization Script",
 													"// Visualization Script",
@@ -6992,8 +6993,7 @@
 												],
 												"type": "text/javascript",
 												"packages": {},
-												"requests": {},
-												"id": "40b52f7d-42d5-4f8b-83ec-853574b9641d"
+												"requests": {}
 											}
 										}
 									],
@@ -7007,6 +7007,11 @@
 											{
 												"key": "Authorization",
 												"value": "Bearer <token>"
+											},
+											{
+												"key": "x-region-id",
+												"value": "{{region}}",
+												"type": "text"
 											}
 										],
 										"body": {
