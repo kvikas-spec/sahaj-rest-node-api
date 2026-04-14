@@ -67,7 +67,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"ABHISHEK.GOTHWAL@GAIL.CO.IN\",\n    \"otp\": 123456\n}",
+							"raw": "{\n    \"username\": \"MEHULMISTRY@YOPMAIL.COM\",\n    \"otp\": 123456\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -275,7 +275,7 @@
 							"basic": [
 								{
 									"key": "username",
-									"value": "ABHISHEK.GOTHWAL@GAIL.CO.IN",
+									"value": "MEHULMISTRY@YOPMAIL.COM",
 									"type": "string"
 								},
 								{
