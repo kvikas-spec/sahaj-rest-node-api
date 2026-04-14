@@ -7185,7 +7185,7 @@
 											]
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetListOfCustomerMeterReadingDetails?pageNo=1&pageSize=10&BillGenerateRequestWithReadingId=40042&isFilter=1&sort=ConsumerNumber:DESC",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetListOfCustomerMeterReadingDetails?pageNo=1&pageSize=10&BillGenerateRequestWithReadingId=60309&isFilter=1&sort=ConsumerNumber:DESC",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -7205,7 +7205,7 @@
 												},
 												{
 													"key": "BillGenerateRequestWithReadingId",
-													"value": "40042"
+													"value": "60309"
 												},
 												{
 													"key": "ConsumerNumber",
