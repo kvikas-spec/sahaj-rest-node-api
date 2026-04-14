@@ -6835,7 +6835,7 @@
 									"response": []
 								},
 								{
-									"name": "BillGenerateRequestWithReadingId",
+									"name": "BillGenerationWithMeterReading",
 									"id": "51068262-ec58ff70-2473-46cc-8f23-2549e1b30801",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -6863,19 +6863,18 @@
 											}
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/AcceptRejectDataMeterReadingData/:BillGenerateRequestWithReadingId",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/BillGenerationWithMeterReading/:BillGenerateRequestWithReadingId",
 											"host": [
 												"{{api_gateway_url}}"
 											],
 											"path": [
 												"billing-payment",
 												"meter-reading",
-												"AcceptRejectDataMeterReadingData",
+												"BillGenerationWithMeterReading",
 												":BillGenerateRequestWithReadingId"
 											],
 											"variable": [
 												{
-													"id": "2f2e314d-5231-4f60-acdf-1731066d2431",
 													"key": "BillGenerateRequestWithReadingId",
 													"value": "60309"
 												}
