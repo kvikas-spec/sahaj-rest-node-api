@@ -7000,6 +7000,7 @@
 										{
 											"listen": "test",
 											"script": {
+												"id": "a2cacf42-bfd4-4ce1-9a81-e7a215eb133e",
 												"exec": [
 													"// Visualization Script",
 													"// Visualization Script",
@@ -7103,8 +7104,7 @@
 												],
 												"type": "text/javascript",
 												"packages": {},
-												"requests": {},
-												"id": "a2cacf42-bfd4-4ce1-9a81-e7a215eb133e"
+												"requests": {}
 											}
 										}
 									],
@@ -7118,6 +7118,11 @@
 											{
 												"key": "Authorization",
 												"value": "Bearer <token>"
+											},
+											{
+												"key": "x-region-id",
+												"value": "{{region}}",
+												"type": "text"
 											}
 										],
 										"body": {
@@ -7131,7 +7136,7 @@
 											]
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetListOfCustomerMeterReadingDetails?pageNo=1&pageSize=10&BillGenerateRequestWithReadingId=50313&isFilter=1&sort=ConsumerNumber:DESC",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetListOfCustomerMeterReadingDetails?pageNo=1&pageSize=10&BillGenerateRequestWithReadingId=60309&isFilter=1&sort=ConsumerNumber:DESC",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -7151,7 +7156,7 @@
 												},
 												{
 													"key": "BillGenerateRequestWithReadingId",
-													"value": "50313"
+													"value": "60309"
 												},
 												{
 													"key": "ConsumerNumber",
