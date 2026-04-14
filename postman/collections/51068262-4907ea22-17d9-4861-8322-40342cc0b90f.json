@@ -6835,6 +6835,56 @@
 									"response": []
 								},
 								{
+									"name": "BillGenerateRequestWithReadingId",
+									"id": "51068262-ec58ff70-2473-46cc-8f23-2549e1b30801",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											},
+											{
+												"key": "x-region-id",
+												"value": "{{region}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"flag\": true\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/AcceptRejectDataMeterReadingData/:BillGenerateRequestWithReadingId",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"meter-reading",
+												"AcceptRejectDataMeterReadingData",
+												":BillGenerateRequestWithReadingId"
+											],
+											"variable": [
+												{
+													"id": "2f2e314d-5231-4f60-acdf-1731066d2431",
+													"key": "BillGenerateRequestWithReadingId",
+													"value": "60309"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
 									"name": "MeterReadingWithFileUpload",
 									"event": [
 										{
