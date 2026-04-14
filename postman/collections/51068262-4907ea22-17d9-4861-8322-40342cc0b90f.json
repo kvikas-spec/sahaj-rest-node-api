@@ -6754,6 +6754,11 @@
 											{
 												"key": "Authorization",
 												"value": "Bearer <token>"
+											},
+											{
+												"key": "x-region-id",
+												"value": "{{region}}",
+												"type": "text"
 											}
 										],
 										"body": {
@@ -30519,6 +30524,11 @@
 		{
 			"key": "customer_reg_url_gasin",
 			"value": ""
+		},
+		{
+			"key": "region",
+			"value": "",
+			"type": "default"
 		}
 	]
 }
