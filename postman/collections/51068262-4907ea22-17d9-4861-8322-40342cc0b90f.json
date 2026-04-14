@@ -6797,6 +6797,11 @@
 											{
 												"key": "Authorization",
 												"value": "Bearer <token>"
+											},
+											{
+												"key": "x-region-id",
+												"value": "{{region}}",
+												"type": "text"
 											}
 										],
 										"body": {
