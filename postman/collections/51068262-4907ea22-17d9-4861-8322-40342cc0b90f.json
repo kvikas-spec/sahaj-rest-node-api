@@ -30312,8 +30312,8 @@
 					"response": []
 				},
 				{
-					"name": "GetDRACustomerAllotmentList",
-					"id": "51068262-36d4bd63-24b1-4076-acb4-212d7182be83",
+					"name": "health-check Copy",
+					"id": "51068262-ef058984-364a-425f-b1e9-535a5104da01",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -30321,60 +30321,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/revenue-recovery/example/GetDRACustomerAllotmentList?pageNo=1&pageSize=10",
+							"raw": "{{api_gateway_url}}/reports/health",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
-								"revenue-recovery",
-								"example",
-								"GetDRACustomerAllotmentList"
-							],
-							"query": [
-								{
-									"key": "pageNo",
-									"value": "1"
-								},
-								{
-									"key": "pageSize",
-									"value": "10"
-								},
-								{
-									"key": "isFilter",
-									"value": "0",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GetDRACustomerAllotmentDetails",
-					"id": "51068262-a1271774-3760-425e-a67c-ce6d7e88724b",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{api_gateway_url}}/revenue-recovery/example/GetDRACustomerAllotmentDetails/:CustomerAllotmentId",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"revenue-recovery",
-								"example",
-								"GetDRACustomerAllotmentDetails",
-								":CustomerAllotmentId"
-							],
-							"variable": [
-								{
-									"id": "9e0ab89b-2957-4e50-8e0a-c5c62933ecba",
-									"key": "CustomerAllotmentId",
-									"value": "20941"
-								}
+								"reports",
+								"health"
 							]
 						}
 					},
