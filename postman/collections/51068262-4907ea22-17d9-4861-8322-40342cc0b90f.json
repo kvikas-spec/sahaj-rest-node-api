@@ -6827,7 +6827,7 @@
 											"variable": [
 												{
 													"key": "BillGenerateRequestWithReadingId",
-													"value": "80313"
+													"value": "80314"
 												}
 											]
 										}
@@ -7326,7 +7326,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoiceReversalDetails?consumerNumber=3000298229",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoiceReversalDetails?consumerNumber=3000295131",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -7338,7 +7338,7 @@
 											"query": [
 												{
 													"key": "consumerNumber",
-													"value": "3000298229"
+													"value": "3000295131"
 												}
 											]
 										}
