@@ -30359,6 +30359,78 @@
 			"id": "51068262-701c18d7-6f18-4f7f-a8da-9b80e2a99a0f"
 		},
 		{
+			"name": "Masters",
+			"item": [
+				{
+					"name": "health-check",
+					"id": "51068262-59a7fa2f-e795-4e1e-924a-3ebdc235b7cf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/health",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCustomersList",
+					"id": "51068262-3ea7653c-8d9b-4e98-8726-0aca0667152f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/customers/GetCustomersList?pageNo=1&pageSize=10",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"customers",
+								"GetCustomersList"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "isFilter",
+									"value": "0",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "isDownload",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "51068262-3275e1e5-797b-4bca-8181-0a2631540fcf"
+		},
+		{
 			"name": "http://localhost:8080/api/v1/customer-registration/miscellaneous/form13-search/3000298511/0",
 			"id": "51068262-a54033e3-6073-4e8e-a7cc-d8406d3fdaf4",
 			"protocolProfileBehavior": {
