@@ -30436,6 +30436,45 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Configure-Role Copy",
+							"id": "51068262-32ff06a8-9576-421b-a498-b6ac08592145",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"UserRoleID\": 3,\n    \"LinkID\": 101,\n    \"IsReadOnly\": false,\n    \"IsReadWrite\": true\n  },\n  {\n    \"UserRoleID\": 3,\n    \"LinkID\": 102,\n    \"IsReadOnly\": true,\n    \"IsReadWrite\": false\n  },\n  {\n    \"UserRoleID\": 3,\n    \"LinkID\": 105,\n    \"IsReadOnly\": false,\n    \"IsReadWrite\": true\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Configure-Role",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"AuthorizationManagement",
+										"Configure-Role"
+									],
+									"query": [
+										{
+											"key": "RoleID",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "51068262-0d8c55b3-01ec-487d-ba7d-69ba69c80357"
