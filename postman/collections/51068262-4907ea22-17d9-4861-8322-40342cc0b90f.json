@@ -30312,7 +30312,7 @@
 					"response": []
 				},
 				{
-					"name": "customers",
+					"name": "GetCustomersList",
 					"id": "51068262-ef058984-364a-425f-b1e9-535a5104da01",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -30321,13 +30321,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/reports/customers",
+							"raw": "{{api_gateway_url}}/reports/customers/GetCustomersList",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
 								"reports",
-								"customers"
+								"customers",
+								"GetCustomersList"
 							]
 						}
 					},
