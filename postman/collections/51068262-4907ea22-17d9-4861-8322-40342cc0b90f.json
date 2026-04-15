@@ -30418,7 +30418,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Configure-Role",
+									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Configure-Role?RoleID=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30429,15 +30429,9 @@
 									],
 									"query": [
 										{
-											"key": "isFilter",
-											"value": "0",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "isDownload",
+											"key": "RoleID",
 											"value": "1",
-											"disabled": true
+											"type": "text"
 										}
 									]
 								}
