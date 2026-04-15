@@ -30371,12 +30371,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/reports/health",
+							"raw": "{{api_gateway_url}}/masters/health",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
-								"reports",
+								"masters",
 								"health"
 							]
 						}
