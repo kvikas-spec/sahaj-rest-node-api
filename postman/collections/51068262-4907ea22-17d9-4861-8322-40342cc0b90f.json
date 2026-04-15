@@ -30393,13 +30393,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/reports/customers/GetCustomersList?pageNo=1&pageSize=10",
+							"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/GetCustomersList?pageNo=1&pageSize=10",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
-								"reports",
-								"customers",
+								"masters",
+								"AuthorizationManagement",
 								"GetCustomersList"
 							],
 							"query": [
