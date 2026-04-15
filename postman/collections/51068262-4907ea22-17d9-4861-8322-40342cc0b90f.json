@@ -30321,7 +30321,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/reports/customers/GetCustomersList?pageNo=1&pageSize=10&isDownload=1",
+							"raw": "{{api_gateway_url}}/reports/customers/GetCustomersList?pageNo=1&pageSize=10",
 							"host": [
 								"{{api_gateway_url}}"
 							],
@@ -30348,7 +30348,7 @@
 								{
 									"key": "isDownload",
 									"value": "1",
-									"type": "text"
+									"disabled": true
 								}
 							]
 						}
