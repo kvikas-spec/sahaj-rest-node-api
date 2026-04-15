@@ -30312,7 +30312,7 @@
 					"response": []
 				},
 				{
-					"name": "health-check Copy",
+					"name": "customers",
 					"id": "51068262-ef058984-364a-425f-b1e9-535a5104da01",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -30321,13 +30321,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_gateway_url}}/reports/health",
+							"raw": "{{api_gateway_url}}/reports/customers",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
 								"reports",
-								"health"
+								"customers"
 							]
 						}
 					},
