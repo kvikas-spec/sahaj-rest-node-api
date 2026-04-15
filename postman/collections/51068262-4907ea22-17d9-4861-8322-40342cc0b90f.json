@@ -30407,6 +30407,50 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Role-Master Copy",
+							"id": "51068262-75a1d2f7-cf1d-4f99-abc0-bda85f6a6e5a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Role-Master?pageNo=1&pageSize=10",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"AuthorizationManagement",
+										"Role-Master"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										},
+										{
+											"key": "isFilter",
+											"value": "0",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "isDownload",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "51068262-0d8c55b3-01ec-487d-ba7d-69ba69c80357"
