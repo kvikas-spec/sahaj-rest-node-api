@@ -30287,6 +30287,103 @@
 			"id": "51068262-e14c08ab-a854-491c-8307-7e5872ecbc82"
 		},
 		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "health-check",
+					"id": "51068262-904f7252-f4e3-4c65-9550-f220e5dfa7b3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/health",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDRACustomerAllotmentList",
+					"id": "51068262-36d4bd63-24b1-4076-acb4-212d7182be83",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/revenue-recovery/example/GetDRACustomerAllotmentList?pageNo=1&pageSize=10",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"revenue-recovery",
+								"example",
+								"GetDRACustomerAllotmentList"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "isFilter",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDRACustomerAllotmentDetails",
+					"id": "51068262-a1271774-3760-425e-a67c-ce6d7e88724b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/revenue-recovery/example/GetDRACustomerAllotmentDetails/:CustomerAllotmentId",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"revenue-recovery",
+								"example",
+								"GetDRACustomerAllotmentDetails",
+								":CustomerAllotmentId"
+							],
+							"variable": [
+								{
+									"id": "9e0ab89b-2957-4e50-8e0a-c5c62933ecba",
+									"key": "CustomerAllotmentId",
+									"value": "20941"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "51068262-701c18d7-6f18-4f7f-a8da-9b80e2a99a0f"
+		},
+		{
 			"name": "http://localhost:8080/api/v1/customer-registration/miscellaneous/form13-search/3000298511/0",
 			"id": "51068262-a54033e3-6073-4e8e-a7cc-d8406d3fdaf4",
 			"protocolProfileBehavior": {
