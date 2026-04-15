@@ -30363,52 +30363,53 @@
 			"item": [
 				{
 					"name": "AuthorizationManagement",
-					"item": [],
-					"id": "51068262-0d8c55b3-01ec-487d-ba7d-69ba69c80357"
-				},
-				{
-					"name": "Role-Master",
-					"id": "51068262-3ea7653c-8d9b-4e98-8726-0aca0667152f",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Role-Master?pageNo=1&pageSize=10",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"masters",
-								"AuthorizationManagement",
-								"Role-Master"
-							],
-							"query": [
-								{
-									"key": "pageNo",
-									"value": "1"
-								},
-								{
-									"key": "pageSize",
-									"value": "10"
-								},
-								{
-									"key": "isFilter",
-									"value": "0",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "isDownload",
-									"value": "1",
-									"disabled": true
+					"item": [
+						{
+							"name": "Role-Master",
+							"id": "51068262-3ea7653c-8d9b-4e98-8726-0aca0667152f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Role-Master?pageNo=1&pageSize=10",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"AuthorizationManagement",
+										"Role-Master"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										},
+										{
+											"key": "isFilter",
+											"value": "0",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "isDownload",
+											"value": "1",
+											"disabled": true
+										}
+									]
 								}
-							]
+							},
+							"response": []
 						}
-					},
-					"response": []
+					],
+					"id": "51068262-0d8c55b3-01ec-487d-ba7d-69ba69c80357"
 				},
 				{
 					"name": "health-check",
