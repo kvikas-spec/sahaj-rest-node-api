@@ -30362,29 +30362,12 @@
 			"name": "Masters",
 			"item": [
 				{
-					"name": "health-check",
-					"id": "51068262-59a7fa2f-e795-4e1e-924a-3ebdc235b7cf",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{api_gateway_url}}/masters/health",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"masters",
-								"health"
-							]
-						}
-					},
-					"response": []
+					"name": "AuthorizationManagement",
+					"item": [],
+					"id": "51068262-0d8c55b3-01ec-487d-ba7d-69ba69c80357"
 				},
 				{
-					"name": "GetCustomersList",
+					"name": "Role-Master",
 					"id": "51068262-3ea7653c-8d9b-4e98-8726-0aca0667152f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -30422,6 +30405,28 @@
 									"value": "1",
 									"disabled": true
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "health-check",
+					"id": "51068262-59a7fa2f-e795-4e1e-924a-3ebdc235b7cf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/masters/health",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"masters",
+								"health"
 							]
 						}
 					},
