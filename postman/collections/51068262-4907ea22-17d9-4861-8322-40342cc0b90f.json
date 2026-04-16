@@ -582,13 +582,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{api_gateway_url}}/auth/temp-token",
+							"raw": "{{api_gateway_url}}/auth/GetMyAccess",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
 								"auth",
-								"temp-token"
+								"GetMyAccess"
 							]
 						}
 					},
