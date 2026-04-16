@@ -30418,7 +30418,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Configure-Role?RoleID=1",
+									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Configure-Role?RoleID=27",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30430,7 +30430,7 @@
 									"query": [
 										{
 											"key": "RoleID",
-											"value": "1"
+											"value": "27"
 										}
 									]
 								}
