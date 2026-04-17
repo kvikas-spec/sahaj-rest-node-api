@@ -30665,7 +30665,7 @@
 							"response": []
 						},
 						{
-							"name": "_GetUserCreationList Copy",
+							"name": "SaveUserRegistration",
 							"id": "51068262-f244d63c-fd5d-46cb-b3ed-19b7aa805727",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
