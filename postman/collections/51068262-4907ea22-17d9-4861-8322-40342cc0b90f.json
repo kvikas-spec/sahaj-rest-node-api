@@ -30693,7 +30693,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"RegistrationVM\": {\n    \"IsMobileFlag\": 0,\n    \"IsADUsers\": true,\n    \"AgencyId\": 1,\n    \"FirstName\": \"Vikas\",\n    \"MiddleName\": \"Kumar\",\n    \"Surname\": \"Updated\",\n    \"Address\": \"Updated Address\",\n    \"DateOfJoining\": \"2026-01-01\",\n    \"Designation\": \"Senior Developer\",\n    \"PhoneNumber\": \"9876543210\",\n    \"AltMobileNumber\": \"9123456780\",\n    \"Department\": \"IT\",\n    \"EmailId\": \"vikas.updated@example.com\",\n    \"EmployeeId\": \"EMP1001\",\n    \"Password\": \"AlreadyEncryptedPassword\",\n    \"RoleID\": 3,\n    \"Roles\": \"3,4\",\n    \"localGAIds\": [1]\n  }\n}\n\n    // \"UserID\": 25,\n    // \"EncryptedUserID\": \"EncryptedValueHere\",\n",
+									"raw": "{\n  \"RegistrationVM\": {\n    \"EncryptedUserID\": \"EGEw9W00HB3HId6amyOLDw==\", // update case\n    \"IsMobileFlag\": 0,\n    \"IsADUsers\": true,\n    \"AgencyId\": 1,\n    \"FirstName\": \"Vikas\",\n    \"MiddleName\": \"Kumar\",\n    \"Surname\": \"Updated\",\n    \"Address\": \"Updated Address\",\n    \"DateOfJoining\": \"2026-01-01\",\n    \"Designation\": \"Senior Developer\",\n    \"PhoneNumber\": \"9876543210\",\n    \"AltMobileNumber\": \"9123456780\",\n    \"Department\": \"IT\",\n    \"EmailId\": \"vikas@kpt.com\",\n    \"EmployeeId\": \"EMP1001\",\n    // \"Password\": \"AlreadyEncryptedPassword\",\n    \"RoleID\": 3,\n    \"Roles\": \"3,4\",\n    \"localGAIds\": [1]\n  }\n}\n\n    // \"UserID\": 25,\n    // \"EncryptedUserID\": \"EncryptedValueHere\",\n    // \"EncryptedUserID\": \"EGEw9W00HB3HId6amyOLDw==\",\n",
 									"options": {
 										"raw": {
 											"language": "json"
