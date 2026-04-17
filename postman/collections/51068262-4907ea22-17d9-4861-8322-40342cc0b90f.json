@@ -30627,8 +30627,21 @@
 					"id": "51068262-0d8c55b3-01ec-487d-ba7d-69ba69c80357"
 				},
 				{
-					"name": "User Creation",
-					"item": [],
+					"name": "UserCreation",
+					"item": [
+						{
+							"name": "New Request",
+							"id": "51068262-5745e1ff-6946-4006-897c-e75afb2d4a8c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "51068262-6ce22e1f-de89-4073-b890-51d09d34108f"
 				},
 				{
