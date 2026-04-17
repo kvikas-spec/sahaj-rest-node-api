@@ -30630,14 +30630,25 @@
 					"name": "UserCreation",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "_GetUserCreationList",
 							"id": "51068262-5745e1ff-6946-4006-897c-e75afb2d4a8c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Users",
+										"_GetUserCreationList"
+									]
+								}
 							},
 							"response": []
 						}
