@@ -30627,6 +30627,11 @@
 					"id": "51068262-0d8c55b3-01ec-487d-ba7d-69ba69c80357"
 				},
 				{
+					"name": "User Creation",
+					"item": [],
+					"id": "51068262-6ce22e1f-de89-4073-b890-51d09d34108f"
+				},
+				{
 					"name": "health-check",
 					"id": "51068262-59a7fa2f-e795-4e1e-924a-3ebdc235b7cf",
 					"protocolProfileBehavior": {
