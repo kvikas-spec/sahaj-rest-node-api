@@ -30651,7 +30651,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList",
+									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList?isFilter=1&Search=vikas",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30659,6 +30659,18 @@
 										"masters",
 										"Users",
 										"_GetUserCreationList"
+									],
+									"query": [
+										{
+											"key": "isFilter",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "Search",
+											"value": "vikas",
+											"type": "text"
+										}
 									]
 								}
 							},
