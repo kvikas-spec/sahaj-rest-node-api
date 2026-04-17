@@ -30573,13 +30573,13 @@
 							"response": []
 						},
 						{
-							"name": "Save Configure-Role Copy",
+							"name": "IsActiveRole",
 							"id": "51068262-07e3c6d7-d1e9-4363-bc5f-994f093252bf",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "POST",
+								"method": "PATCH",
 								"header": [
 									{
 										"key": "x-region-id",
@@ -30589,7 +30589,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "[\n    {\n        \"LinkID\": \"290578\",\n        \"LinkName\": \"OBD Calls Status\",\n        \"Action\": \"OBDCallStatus\",\n        \"Controller\": \"OtherReport\",\n        \"ModuleID\": \"37\",\n        \"ModuleName\": \"Reports\",\n        \"IsDefault\": true,\n        \"IsSingle\": false,\n        \"CssClass\": \"fa fa-binoculars\",\n        \"ViewIndex\": 21,\n        \"IsAssigned\": false,\n        \"IsReadOnly\": false,\n        \"IsReadWrite\": true,\n        \"UserRoleID\": 2\n    }\n]\n\n    // {\n    //     \"UserRoleID\": 3,\n    //     \"LinkID\": 101,\n    //     \"IsReadOnly\": false,\n    //     \"IsReadWrite\": true\n    // },",
+									"raw": "",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -30597,20 +30597,20 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Configure-Role",
+									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/IsActiveRole/:Id",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
 										"AuthorizationManagement",
-										"Configure-Role"
+										"IsActiveRole",
+										":Id"
 									],
-									"query": [
+									"variable": [
 										{
-											"key": "RoleID",
-											"value": "2",
-											"disabled": true
+											"key": "Id",
+											"value": ""
 										}
 									]
 								}
