@@ -30433,9 +30433,15 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Role-Master?pageNo=1&pageSize=10",
+									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Role-Master?pageNo=11&pageSize=10",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30447,7 +30453,7 @@
 									"query": [
 										{
 											"key": "pageNo",
-											"value": "1"
+											"value": "11"
 										},
 										{
 											"key": "pageSize",
@@ -30597,7 +30603,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/IsActiveRole/:Id",
+									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/IsActiveRole/:RoleID",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30605,11 +30611,11 @@
 										"masters",
 										"AuthorizationManagement",
 										"IsActiveRole",
-										":Id"
+										":RoleID"
 									],
 									"variable": [
 										{
-											"key": "Id",
+											"key": "RoleID",
 											"value": ""
 										}
 									]
