@@ -31099,6 +31099,49 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "51068262-e596b634-6415-4ff7-bffa-8a9ac323d01e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer <your_token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"DepartmentId\": 0,\n    \"Department\": \"Accounts\",\n    \"Remarks\": \"Accounts department\"\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/department-master/AddEditDepartmentMasterDetails",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"department-master",
+										"AddEditDepartmentMasterDetails"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "51068262-afb36cc2-bea9-40c9-8735-9e0e668aabe3"
