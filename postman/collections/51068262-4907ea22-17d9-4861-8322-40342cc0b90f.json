@@ -30722,7 +30722,44 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"value\": \"test@example.com\",\n    \"encUserID\": \"0\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/IsEmailIdExist?value&encUserID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"IsEmailIdExist"
+									],
+									"query": [
+										{
+											"key": "value",
+											"value": null
+										},
+										{
+											"key": "encUserID",
+											"value": null
+										}
+									]
+								}
 							},
 							"response": []
 						}
