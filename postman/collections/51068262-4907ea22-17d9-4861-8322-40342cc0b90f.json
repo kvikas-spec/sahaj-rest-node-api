@@ -30738,15 +30738,13 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:3000/api/user/IsEmailIdExist?value&encUserID",
-									"protocol": "http",
+									"raw": "{{api_gateway_url}}/masters/Users/IsEmailIdExist?value&encUserID",
 									"host": [
-										"localhost"
+										"{{api_gateway_url}}"
 									],
-									"port": "3000",
 									"path": [
-										"api",
-										"user",
+										"masters",
+										"Users",
 										"IsEmailIdExist"
 									],
 									"query": [
