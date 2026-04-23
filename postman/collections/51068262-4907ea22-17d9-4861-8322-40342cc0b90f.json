@@ -30738,7 +30738,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/IsEmailIdExist?value=MANISHA.SAIN@GAIL.CO.IN&encUserID=0",
+									"raw": "{{api_gateway_url}}/masters/Users/IsEmailIdExist?value=MANISH.SAIN@GAIL.CO.IN&encUserID=0",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30750,7 +30750,7 @@
 									"query": [
 										{
 											"key": "value",
-											"value": "MANISHA.SAIN@GAIL.CO.IN"
+											"value": "MANISH.SAIN@GAIL.CO.IN"
 										},
 										{
 											"key": "encUserID",
