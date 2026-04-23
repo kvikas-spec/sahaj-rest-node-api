@@ -31015,7 +31015,7 @@
 					"name": "DepartmentMasters",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "GetDeparmentList",
 							"id": "51068262-9b516760-0141-4812-9f15-a9ace04a8084",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -31038,7 +31038,7 @@
 							"response": []
 						},
 						{
-							"name": "New Request Copy",
+							"name": "IsActiveDepartmentMaster",
 							"id": "51068262-1e6b6866-387f-4c66-872a-3103ce0a4dcf",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -31047,21 +31047,20 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DepartmentMasters//IsActiveDepartmentMaster/:Id",
+									"raw": "{{api_gateway_url}}/masters/DepartmentMasters/IsActiveDepartmentMaster/:Id",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
 										"DepartmentMasters",
-										"",
 										"IsActiveDepartmentMaster",
 										":Id"
 									],
 									"variable": [
 										{
 											"key": "Id",
-											"value": ""
+											"value": "72"
 										}
 									]
 								}
