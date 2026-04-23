@@ -30828,7 +30828,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/IsMobileNoExist?AgencyId=30076",
+									"raw": "{{api_gateway_url}}/masters/Users/IsMobileNoExist?value=9304047599",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30839,8 +30839,8 @@
 									],
 									"query": [
 										{
-											"key": "AgencyId",
-											"value": "30076"
+											"key": "value",
+											"value": "9304047599"
 										}
 									]
 								}
