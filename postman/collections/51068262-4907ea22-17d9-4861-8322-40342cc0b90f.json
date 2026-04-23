@@ -31038,7 +31038,7 @@
 							"response": []
 						},
 						{
-							"name": "GetDeparmentList Copy",
+							"name": "IsDepartmentNameExist",
 							"id": "51068262-83f14072-1b44-477b-b745-5a7fd2691180",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -31047,14 +31047,25 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DepartmentMasters/GetDeparmentList",
+									"raw": "{{api_gateway_url}}/masters/DepartmentMasters/IsDepartmentNameExist?value&DepartmentId",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
 										"DepartmentMasters",
-										"GetDeparmentList"
+										"IsDepartmentNameExist"
+									],
+									"query": [
+										{
+											"key": "value",
+											"value": null
+										},
+										{
+											"key": "DepartmentId",
+											"value": null,
+											"type": "text"
+										}
 									]
 								}
 							},
