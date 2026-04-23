@@ -31120,7 +31120,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"DepartmentId\": 0,\n    \"Department\": \"Accounts\",\n    \"Remarks\": \"Accounts department\"\n  }",
+									"raw": "{\n    \"DepartmentId\": 94,\n    \"Department\": \"Accounts\",\n    \"Remarks\": \"Accounts department\"\n  }",
 									"options": {
 										"raw": {
 											"language": "json"
