@@ -30777,7 +30777,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"value\": \"EMP001\",\n    \"localGAId\": 5,\n    \"encUserID\": \"U2FsdGVkX1+abc123encrypted==\"\n  }",
+									"raw": "{\n    \"value\": \"00005013\",\n    \"localGAId\": 1,\n    \"encUserID\": \"0\"\n  }",
 									"options": {
 										"raw": {
 											"language": "json"
