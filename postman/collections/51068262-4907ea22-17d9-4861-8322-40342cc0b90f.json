@@ -31024,14 +31024,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DepartmentMasters/_GetUserCreationList",
+									"raw": "{{api_gateway_url}}/masters/DepartmentMasters/GetDeparmentList",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
 										"DepartmentMasters",
-										"_GetUserCreationList"
+										"GetDeparmentList"
 									]
 								}
 							},
