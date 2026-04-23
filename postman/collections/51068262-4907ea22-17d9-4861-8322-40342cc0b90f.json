@@ -30715,7 +30715,7 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "IsEmailIdExist",
 							"id": "51068262-2fe2fc6d-00ad-43e7-84eb-d7f445651921",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -30738,7 +30738,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/IsEmailIdExist?value&encUserID",
+									"raw": "{{api_gateway_url}}/masters/Users/IsEmailIdExist?value=test@example.com&encUserID=0",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30750,11 +30750,11 @@
 									"query": [
 										{
 											"key": "value",
-											"value": null
+											"value": "test@example.com"
 										},
 										{
 											"key": "encUserID",
-											"value": null
+											"value": "0"
 										}
 									]
 								}
