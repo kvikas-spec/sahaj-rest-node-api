@@ -30963,6 +30963,43 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "ChangePassword Copy",
+							"id": "51068262-75e1547a-07aa-431f-b35b-95ce3f99e74c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"UserID\": 1,\n    \"NewPassword\": \"U2FsdGVkX1+encryptedBase64StringHere==\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Users/ChangePassword",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Users",
+										"ChangePassword"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "51068262-6ce22e1f-de89-4073-b890-51d09d34108f"
