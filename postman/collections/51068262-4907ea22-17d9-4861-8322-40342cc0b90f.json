@@ -30762,7 +30762,54 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "CheckIfMeterReaderAgency",
+							"id": "51068262-7db8f076-0a86-48b3-92ee-d6be504f6d95",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"value\": \"test@example.com\",\n    \"encUserID\": \"0\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Users/CheckIfMeterReaderAgency?value=MANISH.SAIN@GAIL.CO.IN&encUserID=0",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Users",
+										"CheckIfMeterReaderAgency"
+									],
+									"query": [
+										{
+											"key": "value",
+											"value": "MANISH.SAIN@GAIL.CO.IN"
+										},
+										{
+											"key": "encUserID",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "IsEmployeeIdExist",
 							"id": "51068262-3c0b196f-8ac9-4783-a8e7-b4cde8731f31",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
