@@ -31190,7 +31190,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    // \"CNGPromoTandCTemplateMasterId\": 5, // update case\n    \"TemplateText\": \"These are the terms and conditions for CNG Promo...\"\n}\n// \"CNGPromoTandCTemplateMasterId\": 5,",
+									"raw": "{\n    \"CNGPromoTandCTemplateMasterId\": 2, // update case\n    \"TemplateText\": \"<p>These are the terms and conditions for CNG Promo...</p>\"\n}\n// \"CNGPromoTandCTemplateMasterId\": 5,",
 									"options": {
 										"raw": {
 											"language": "json"
