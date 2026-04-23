@@ -30785,7 +30785,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/CheckIfMeterReaderAgency?value=MANISH.SAIN@GAIL.CO.IN&encUserID=0",
+									"raw": "{{api_gateway_url}}/masters/Users/CheckIfMeterReaderAgency?AgencyId=30076",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30796,12 +30796,8 @@
 									],
 									"query": [
 										{
-											"key": "value",
-											"value": "MANISH.SAIN@GAIL.CO.IN"
-										},
-										{
-											"key": "encUserID",
-											"value": "0"
+											"key": "AgencyId",
+											"value": "30076"
 										}
 									]
 								}
