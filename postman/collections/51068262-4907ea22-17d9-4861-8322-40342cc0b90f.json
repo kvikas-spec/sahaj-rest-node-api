@@ -31047,7 +31047,7 @@
 								"method": "PATCH",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DepartmentMasters/IsActiveDepartmentMaster/:Id",
+									"raw": "{{api_gateway_url}}/masters/DepartmentMasters/IsActiveDepartmentMaster/:DepartmentId",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -31055,11 +31055,11 @@
 										"masters",
 										"DepartmentMasters",
 										"IsActiveDepartmentMaster",
-										":Id"
+										":DepartmentId"
 									],
 									"variable": [
 										{
-											"key": "Id",
+											"key": "DepartmentId",
 											"value": "72"
 										}
 									]
