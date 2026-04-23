@@ -30885,14 +30885,39 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "ChangePassword",
 							"id": "51068262-52860b0a-0eb3-41c3-9a5e-3fa58c2d5f86",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"UserID\": 1,\n    \"NewPassword\": \"U2FsdGVkX1+encryptedBase64StringHere==\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Users/ChangePassword",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Users",
+										"ChangePassword"
+									]
+								}
 							},
 							"response": []
 						}
