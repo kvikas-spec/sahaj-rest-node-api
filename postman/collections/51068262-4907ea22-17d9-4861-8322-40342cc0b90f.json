@@ -31146,7 +31146,31 @@
 				},
 				{
 					"name": "Terms & Conditions Template Master",
-					"item": [],
+					"item": [
+						{
+							"name": "GetDeparmentList Copy",
+							"id": "51068262-f7bae3e2-3bda-454c-b143-3b1cf52a690d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DepartmentMasters/GetDeparmentList",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DepartmentMasters",
+										"GetDeparmentList"
+									]
+								}
+							},
+							"response": []
+						}
+					],
 					"id": "51068262-e7ea58e9-7f57-4fab-9ca7-1bbe1b25b646"
 				},
 				{
