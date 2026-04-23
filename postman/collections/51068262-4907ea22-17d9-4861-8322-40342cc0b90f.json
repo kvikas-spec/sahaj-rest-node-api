@@ -31148,7 +31148,7 @@
 					"name": "Terms & Conditions Template Master",
 					"item": [
 						{
-							"name": "GetDeparmentList Copy",
+							"name": "_TermsAndConditions",
 							"id": "51068262-f7bae3e2-3bda-454c-b143-3b1cf52a690d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -31157,14 +31157,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DepartmentMasters/GetDeparmentList",
+									"raw": "{{api_gateway_url}}/masters/Template/_TermsAndConditions",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DepartmentMasters",
-										"GetDeparmentList"
+										"Template",
+										"_TermsAndConditions"
 									]
 								}
 							},
