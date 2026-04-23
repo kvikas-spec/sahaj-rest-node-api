@@ -31024,13 +31024,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList",
+									"raw": "{{api_gateway_url}}/masters/DepartmentMasters/_GetUserCreationList",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"Users",
+										"DepartmentMasters",
 										"_GetUserCreationList"
 									]
 								}
