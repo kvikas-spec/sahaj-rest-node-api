@@ -31171,14 +31171,45 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "TermsAndCondition",
 							"id": "51068262-d1d32da4-3b8d-4b9e-b22a-2fb808466b16",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer <your_token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"TemplateText\": \"These are the terms and conditions for CNG Promo...\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/template/TermsAndCondition",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"template",
+										"TermsAndCondition"
+									]
+								}
 							},
 							"response": []
 						}
