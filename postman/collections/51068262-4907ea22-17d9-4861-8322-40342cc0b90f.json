@@ -30651,7 +30651,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList?isFilter=1&Search=vikas",
+									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30664,12 +30664,18 @@
 										{
 											"key": "isFilter",
 											"value": "1",
-											"type": "text"
+											"disabled": true
 										},
 										{
 											"key": "Search",
 											"value": "vikas",
-											"type": "text"
+											"disabled": true
+										},
+										{
+											"key": "EncryptedUserID",
+											"value": "1KDitePWSKflBEj4ok9btw==",
+											"type": "text",
+											"disabled": true
 										}
 									]
 								}
@@ -30900,7 +30906,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"value\": \"00005013\",\n    \"localGAId\": 1,\n    \"encUserID\": \"0\"\n  }",
+									"raw": "{\n    \"encId\": \"0\"\n  }",
 									"options": {
 										"raw": {
 											"language": "json"
