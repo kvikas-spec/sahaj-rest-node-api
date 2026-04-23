@@ -30768,8 +30768,33 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"value\": \"EMP001\",\n    \"localGAId\": 5,\n    \"encUserID\": \"U2FsdGVkX1+abc123encrypted==\"\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Users/employee-id",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Users",
+										"employee-id"
+									]
+								}
 							},
 							"response": []
 						}
