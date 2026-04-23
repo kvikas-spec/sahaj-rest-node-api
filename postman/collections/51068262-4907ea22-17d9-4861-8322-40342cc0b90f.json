@@ -31036,6 +31036,37 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "New Request Copy",
+							"id": "51068262-1e6b6866-387f-4c66-872a-3103ce0a4dcf",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DepartmentMasters//IsActiveDepartmentMaster/:Id",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DepartmentMasters",
+										"",
+										"IsActiveDepartmentMaster",
+										":Id"
+									],
+									"variable": [
+										{
+											"key": "Id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "51068262-afb36cc2-bea9-40c9-8735-9e0e668aabe3"
