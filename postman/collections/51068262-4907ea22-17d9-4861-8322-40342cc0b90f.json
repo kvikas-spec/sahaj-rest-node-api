@@ -30785,14 +30785,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/employee-id",
+									"raw": "{{api_gateway_url}}/masters/Users/IsEmployeeIdExist",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
 										"Users",
-										"employee-id"
+										"IsEmployeeIdExist"
 									]
 								}
 							},
