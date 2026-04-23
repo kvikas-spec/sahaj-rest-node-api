@@ -31012,6 +31012,35 @@
 					"id": "51068262-6ce22e1f-de89-4073-b890-51d09d34108f"
 				},
 				{
+					"name": "DepartmentMasters",
+					"item": [
+						{
+							"name": "New Request",
+							"id": "51068262-9b516760-0141-4812-9f15-a9ace04a8084",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Users",
+										"_GetUserCreationList"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "51068262-afb36cc2-bea9-40c9-8735-9e0e668aabe3"
+				},
+				{
 					"name": "health-check",
 					"id": "51068262-59a7fa2f-e795-4e1e-924a-3ebdc235b7cf",
 					"protocolProfileBehavior": {
