@@ -31198,14 +31198,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:3000/api/template/TermsAndCondition",
-									"protocol": "http",
+									"raw": "{{api_gateway_url}}/masters/template/TermsAndCondition",
 									"host": [
-										"localhost"
+										"{{api_gateway_url}}"
 									],
-									"port": "3000",
 									"path": [
-										"api",
+										"masters",
 										"template",
 										"TermsAndCondition"
 									]
