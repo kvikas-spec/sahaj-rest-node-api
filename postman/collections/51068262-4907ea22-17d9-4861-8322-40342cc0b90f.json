@@ -30805,6 +30805,49 @@
 							"response": []
 						},
 						{
+							"name": "CheckIfMeterReaderAgency Copy",
+							"id": "51068262-82548012-f065-4188-8db3-62feaa26a904",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"value\": \"test@example.com\",\n    \"encUserID\": \"0\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Users/CheckIfMeterReaderAgency?AgencyId=30076",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Users",
+										"CheckIfMeterReaderAgency"
+									],
+									"query": [
+										{
+											"key": "AgencyId",
+											"value": "30076"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "IsEmployeeIdExist",
 							"id": "51068262-3c0b196f-8ac9-4783-a8e7-b4cde8731f31",
 							"protocolProfileBehavior": {
