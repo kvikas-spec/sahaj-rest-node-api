@@ -30971,7 +30971,7 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "POST",
+								"method": "PATCH",
 								"header": [
 									{
 										"key": "Content-Type",
@@ -30980,7 +30980,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"UserID\": 1,\n    \"NewPassword\": \"U2FsdGVkX1+encryptedBase64StringHere==\"\n}",
+									"raw": "",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -30988,14 +30988,21 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/ChangePassword",
+									"raw": "{{api_gateway_url}}/masters/Users/IsActiveUser/:EncryptedUserID",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
 										"Users",
-										"ChangePassword"
+										"IsActiveUser",
+										":EncryptedUserID"
+									],
+									"variable": [
+										{
+											"key": "EncryptedUserID",
+											"value": ""
+										}
 									]
 								}
 							},
