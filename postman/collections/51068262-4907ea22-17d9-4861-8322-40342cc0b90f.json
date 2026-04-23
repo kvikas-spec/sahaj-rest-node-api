@@ -31101,7 +31101,7 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "AddEditDepartmentMasterDetails",
 							"id": "51068262-e596b634-6415-4ff7-bffa-8a9ac323d01e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -31128,15 +31128,13 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:3000/api/department-master/AddEditDepartmentMasterDetails",
-									"protocol": "http",
+									"raw": "{{api_gateway_url}}/masters/DepartmentMasters/AddEditDepartmentMasterDetails",
 									"host": [
-										"localhost"
+										"{{api_gateway_url}}"
 									],
-									"port": "3000",
 									"path": [
-										"api",
-										"department-master",
+										"masters",
+										"DepartmentMasters",
 										"AddEditDepartmentMasterDetails"
 									]
 								}
