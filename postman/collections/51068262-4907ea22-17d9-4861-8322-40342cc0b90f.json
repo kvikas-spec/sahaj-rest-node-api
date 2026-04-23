@@ -30828,14 +30828,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/CheckIfMeterReaderAgency?AgencyId=30076",
+									"raw": "{{api_gateway_url}}/masters/Users/IsMobileNoExist?AgencyId=30076",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
 										"Users",
-										"CheckIfMeterReaderAgency"
+										"IsMobileNoExist"
 									],
 									"query": [
 										{
