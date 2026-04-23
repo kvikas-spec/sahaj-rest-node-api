@@ -31047,7 +31047,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DepartmentMasters/IsDepartmentNameExist?value&DepartmentId",
+									"raw": "{{api_gateway_url}}/masters/DepartmentMasters/IsDepartmentNameExist?value=IT&DepartmentId=0",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -31059,12 +31059,11 @@
 									"query": [
 										{
 											"key": "value",
-											"value": null
+											"value": "IT"
 										},
 										{
 											"key": "DepartmentId",
-											"value": null,
-											"type": "text"
+											"value": "0"
 										}
 									]
 								}
