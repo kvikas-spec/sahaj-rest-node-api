@@ -31171,6 +31171,36 @@
 							"response": []
 						},
 						{
+							"name": "ActiveDeactiveTermsAndConditions",
+							"id": "51068262-c620e460-4ce3-482f-8afc-28f3d731c725",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Template/ActiveDeactiveTermsAndConditions/:CNGPromoTandCTemplateMasterId",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Template",
+										"ActiveDeactiveTermsAndConditions",
+										":CNGPromoTandCTemplateMasterId"
+									],
+									"variable": [
+										{
+											"key": "CNGPromoTandCTemplateMasterId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "TermsAndCondition",
 							"id": "51068262-d1d32da4-3b8d-4b9e-b22a-2fb808466b16",
 							"protocolProfileBehavior": {
