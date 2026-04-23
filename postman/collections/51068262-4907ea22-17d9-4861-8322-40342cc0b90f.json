@@ -30805,7 +30805,7 @@
 							"response": []
 						},
 						{
-							"name": "CheckIfMeterReaderAgency Copy",
+							"name": "IsMobileNoExist",
 							"id": "51068262-82548012-f065-4188-8db3-62feaa26a904",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -30879,6 +30879,43 @@
 										"masters",
 										"Users",
 										"IsEmployeeIdExist"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetDecryptedUserId",
+							"id": "51068262-3a115cb1-0cb4-4395-8b1b-18b6421abd6a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"value\": \"00005013\",\n    \"localGAId\": 1,\n    \"encUserID\": \"0\"\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Users/GetDecryptedUserId",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Users",
+										"GetDecryptedUserId"
 									]
 								}
 							},
