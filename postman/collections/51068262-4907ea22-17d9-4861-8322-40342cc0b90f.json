@@ -30791,7 +30791,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/CheckIfMeterReaderAgency?AgencyId=30076",
+									"raw": "{{api_gateway_url}}/masters/Users/CheckIfMeterReaderAgency?AgencyId=84&encUserID=0",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30803,7 +30803,11 @@
 									"query": [
 										{
 											"key": "AgencyId",
-											"value": "30076"
+											"value": "84"
+										},
+										{
+											"key": "encUserID",
+											"value": "0"
 										}
 									]
 								}
