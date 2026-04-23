@@ -31044,7 +31044,7 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
+								"method": "PATCH",
 								"header": [],
 								"url": {
 									"raw": "{{api_gateway_url}}/masters/DepartmentMasters/IsActiveDepartmentMaster/:Id",
