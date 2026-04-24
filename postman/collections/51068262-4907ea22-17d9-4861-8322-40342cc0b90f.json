@@ -30960,7 +30960,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"UserID\": 1,\n    \"NewPassword\": \"U2FsdGVkX1+encryptedBase64StringHere==\"\n}",
+									"raw": "{\n    \"UserID\": \"50192\",\n    \"NewPassword\": \"JGQeE+G3v6ChYu1HXw8mXw==\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
