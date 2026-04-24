@@ -30651,7 +30651,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList?isFilter=1&EncryptedUserID=BPIRLTbxzKi223zdlNo8gA==&pageSize=10",
+									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList?isFilter=1&EncryptedUserID=BPIRLTbxzKi223zdlNo8gA==",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30672,8 +30672,7 @@
 										},
 										{
 											"key": "EncryptedUserID",
-											"value": "BPIRLTbxzKi223zdlNo8gA==",
-											"type": "text"
+											"value": "BPIRLTbxzKi223zdlNo8gA=="
 										},
 										{
 											"key": "GAId",
@@ -30687,7 +30686,8 @@
 										},
 										{
 											"key": "pageSize",
-											"value": "10"
+											"value": "10",
+											"disabled": true
 										}
 									]
 								}
