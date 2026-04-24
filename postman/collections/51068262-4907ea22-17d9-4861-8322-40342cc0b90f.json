@@ -30651,7 +30651,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList?pageNo=1&pageSize=1000",
+									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList?GAId=1&pageNo=2&pageSize=10",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30679,16 +30679,15 @@
 										},
 										{
 											"key": "GAId",
-											"value": "1",
-											"disabled": true
-										},
-										{
-											"key": "pageNo",
 											"value": "1"
 										},
 										{
+											"key": "pageNo",
+											"value": "2"
+										},
+										{
 											"key": "pageSize",
-											"value": "1000"
+											"value": "10"
 										}
 									]
 								}
