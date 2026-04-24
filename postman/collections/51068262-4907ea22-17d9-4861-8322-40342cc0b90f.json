@@ -6419,7 +6419,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1776435070705-181975698_Screenshot from 2026-04-10 12-01-28.png\",\n    \"ConsumerNumber\": 3000298135,\n    \"Cycle\": \"2601\",\n    \"WardId\": 12,\n    \"ReadingDate\": \"2026-04-15\",\n    \"BillDate\": \"2026-04-15\",\n    \"FullName\": \"Dharmadev Khatua\",\n    \"BillNumber\": 3000298135202601,\n    \"CurrentReading\": 20,\n    \"PreviousReading\": 4,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 16\n}",
+											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1776949172915-419097260_GailGasInvoice(20260414)-c1c0424c-1487-47c4-946a-f4555af530c7-1.pdf\",\n    \"ConsumerNumber\": 3000038618,\n    \"Cycle\": \"2601\",\n    \"WardId\": 11,\n    \"ReadingDate\": \"2026-04-23\",\n    \"BillDate\": \"2026-04-23\",\n    \"FullName\": \"Meter reading\",\n    \"BillNumber\": 3000038618202601,\n    \"CurrentReading\": 22,\n    \"PreviousReading\": 20,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 2\n}",
 											"options": {
 												"raw": {
 													"language": "json"
