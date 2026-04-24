@@ -30651,7 +30651,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList",
+									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList?GAId=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30676,6 +30676,11 @@
 											"value": "1KDitePWSKflBEj4ok9btw==",
 											"type": "text",
 											"disabled": true
+										},
+										{
+											"key": "GAId",
+											"value": "1",
+											"type": "text"
 										}
 									]
 								}
