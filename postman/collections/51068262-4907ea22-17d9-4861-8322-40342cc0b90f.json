@@ -30447,7 +30447,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Role-Master?pageNo=11&pageSize=10",
+									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Role-Master?pageNo=1&pageSize=10",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30459,7 +30459,7 @@
 									"query": [
 										{
 											"key": "pageNo",
-											"value": "11"
+											"value": "1"
 										},
 										{
 											"key": "pageSize",
@@ -30497,7 +30497,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Configure-Role?RoleID=40112",
+									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Configure-Role?RoleID=2",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30509,7 +30509,7 @@
 									"query": [
 										{
 											"key": "RoleID",
-											"value": "40112"
+											"value": "2"
 										}
 									]
 								}
