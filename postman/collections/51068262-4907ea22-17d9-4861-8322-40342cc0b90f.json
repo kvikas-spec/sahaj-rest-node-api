@@ -7464,7 +7464,7 @@
 											"raw": "{\n  \"txtConsumerNumber\": \"3000297997\",\n  \"ConsumerId\": \"\",\n  \"DemandMasterId\": \"7173105\",\n  \"DemandCalculationId\": \"\",\n  \"AddedBy\": \"0\",\n  \"IsDataFound\": \"False\",\n  \"RouteID\": \"0\",\n  \"TaxDetailId\": \"20049\",\n  \"BillRateMasterId\": \"20044\",\n  \"AccountTypeId\": \"1\",\n  \"Cycle\": \"2501\",\n  \"ApprovedBy\": \"0\",\n  \"ConsumerNumber\": \"3000297997\",\n  \"DemandAccumlateRoundOff\": \"0\",\n  \"MeterStatus\": \"\",\n  \"IsMeterReading\": \"False\",\n  \"NewCurrentReading\": \"15.000\",\n  \"NewUnitUsed\": \"14.750\",\n  \"NewConsumptionCharges\": \"737.50\",\n  \"NewNetworkTariffCharge\": \"42.04\",\n  \"NewCGST\": \"77.95\",\n  \"NewChequeReturnCharge\": \"0.00\",\n  \"NewCGSTOnChequeReturnCharges\": \"0.00\",\n  \"NewSGSTOnChequeReturnCharges\": \"0.00\",\n  \"NewInterest\": \"0.00\",\n  \"NewEstimateAmount\": \"0.00\",\n  \"NewEDICharges\": \"0.00\",\n  \"NewFlexiCharges\": \"0.00\",\n  \"NewCGSTOnFlexiCharges\": \"0.00\",\n  \"NewSGSTOnFlexiCharges\": \"0.00\",\n  \"NewEquipmentSDAmount\": \"0.00\",\n  \"NewConsumptionSDAmount\": \"0.00\",\n  \"NewTotalAmount\": \"0.00\",\n  \"NewPayableAmount\": \"0.00\",\n  \"MessageStatus\": \"\",\n  \"ConsumerName\": \"aa\",\n  \"Ward\": \"PREPAID MRU 03\",\n  \"ReadingDate\": \"01-02-2025\",\n  \"BillDate\": \"01-02-2025\",\n  \"BillDueDate\": \"22-02-2025\",\n  \"OldCurrentReading\": \"15.000\",\n  \"LastReading\": \"0.250\",\n  \"OldUnitUsed\": \"14.750\",\n  \"OldConsumptionCharges\": \"737.50\",\n  \"OldNetworkTariffCharge\": \"42.04\",\n  \"OldCGST\": \"77.95\",\n  \"AdditionalVAT\": \"0.00\",\n  \"SurchargeForVAT\": \"15.59\",\n  \"PromoConsumption\": \"-737.50\",\n  \"PromoNetworkTeriff\": \"-42.04\",\n  \"PromoVAT\": \"-77.95\",\n  \"PromoAdditionalVAT\": \"0.00\",\n  \"PromoSurchargeForVAT\": \"-15.59\",\n  \"OldChequeReturnCharge\": \"0.00\",\n  \"OldCGSTOnChequeReturnCharges\": \"0.00\",\n  \"OldSGSTOnChequeReturnCharges\": \"0.00\",\n  \"OldEstimateAmount\": \"0.00\",\n  \"CGSTONExtraPipeCharge\": \"0.00\",\n  \"SGSTONExtraPipeCharge\": \"0.00\",\n  \"OldFlexiCharges\": \"0.00\",\n  \"OldCGSTOnFlexiCharges\": \"0.00\",\n  \"OldSGSTOnFlexiCharges\": \"0.00\",\n  \"OldEDICharges\": \"0.00\",\n  \"OldEquipmentSDAmount\": \"0.00\",\n  \"OldConsumptionSDAmount\": \"0.00\",\n  \"OldInterest\": \"0.00\",\n  \"AdvancePayment\": \"0.00\",\n  \"DiscountForOnlinePayment\": \"0.00\",\n  \"DiscountForSelfBilling\": \"0.00\",\n  \"OldTotalAmount\": \"0.00\",\n  \"OldRoundingOff\": \"0.00\",\n  \"OldBillAmount\": \"0.00\",\n  \"OldAdjustmentAmount\": \"0.00\",\n  \"OldPayableAmount\": \"0.00\",\n  \"IsReversal\": \"false\"\n}\n"
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/getInvoiceFullReversalPendingList?pageNo=1&pageSize=10&isFilter=1&order=DateGenerated:DESC",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/getInvoiceFullReversalPendingList?pageNo=1&pageSize=10&order=DateGenerated:DESC",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -7484,7 +7484,8 @@
 												},
 												{
 													"key": "isFilter",
-													"value": "1"
+													"value": "1",
+													"disabled": true
 												},
 												{
 													"key": "ConsumerNo",
