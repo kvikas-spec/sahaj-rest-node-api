@@ -31329,6 +31329,29 @@
 							"response": []
 						},
 						{
+							"name": "GetEmailMasterGaWiseList",
+							"id": "51068262-d53ca57e-31a3-411b-abca-767962bdf2cc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/SystemInterlock/GetEmailMasterGaWiseList",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"SystemInterlock",
+										"GetEmailMasterGaWiseList"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "SystemInterlock Copy",
 							"id": "51068262-6a329434-c282-40ff-bc59-8a848a50426e",
 							"protocolProfileBehavior": {
