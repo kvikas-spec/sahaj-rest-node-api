@@ -8171,7 +8171,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?consumerNumber=3000038652&demandMasterId=5257109",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?consumerNumber=3000038650&demandMasterId=5257108",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -8183,11 +8183,11 @@
 											"query": [
 												{
 													"key": "consumerNumber",
-													"value": "3000038652"
+													"value": "3000038650"
 												},
 												{
 													"key": "demandMasterId",
-													"value": "5257109"
+													"value": "5257108"
 												}
 											]
 										}
