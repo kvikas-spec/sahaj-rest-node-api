@@ -31338,14 +31338,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/SystemInterlock/_GetNotAllowGenerateBillOfVIPBPs",
+									"raw": "{{api_gateway_url}}/masters/SystemInterlock/ActiveDeactiveNotAllowGenerateBillOfVIPBPs",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
 										"SystemInterlock",
-										"_GetNotAllowGenerateBillOfVIPBPs"
+										"ActiveDeactiveNotAllowGenerateBillOfVIPBPs"
 									]
 								}
 							},
