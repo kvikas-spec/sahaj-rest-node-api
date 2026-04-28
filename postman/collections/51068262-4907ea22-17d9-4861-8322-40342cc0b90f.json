@@ -31307,7 +31307,31 @@
 					"item": [
 						{
 							"name": "SaP_API_Email_Mapping",
-							"item": [],
+							"item": [
+								{
+									"name": "GetSAPAPIEmailMappingList",
+									"id": "51068262-c6d05ca1-94a1-4581-a9bd-3ecdff39c2b8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/GetSAPAPIEmailMappingList",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"GetSAPAPIEmailMappingList"
+											]
+										}
+									},
+									"response": []
+								}
+							],
 							"id": "51068262-c196729d-911d-4686-bf74-4e09181c62f0"
 						},
 						{
@@ -31351,29 +31375,6 @@
 										"masters",
 										"SystemInterlock",
 										"GetEmailMasterGaWiseList"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "GetSAPAPIEmailMappingList",
-							"id": "51068262-c6d05ca1-94a1-4581-a9bd-3ecdff39c2b8",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/SystemInterlock/GetSAPAPIEmailMappingList",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"SystemInterlock",
-										"GetSAPAPIEmailMappingList"
 									]
 								}
 							},
