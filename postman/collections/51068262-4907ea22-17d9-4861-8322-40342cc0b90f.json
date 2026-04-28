@@ -8153,6 +8153,38 @@
 									"response": []
 								},
 								{
+									"name": "PrintBill Copy",
+									"id": "51068262-a82c39e7-33c3-4263-9b3f-dec411168e7b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ConsumerCode\": [3000038618],//[3000293911, 3000293910, 3000293912 ],\n  \"Cycle\": 0,\n  \"WardId\": 0,\n  \"AccountTypeId\": 1,\n  \"StartDate\": \"2026-01-01\",\n  \"EndDate\": \"2026-04-24\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"postpaid-invoice",
+												"InvoicePDFPrint"
+											]
+										}
+									},
+									"response": []
+								},
+								{
 									"name": "BillPrintRequestList",
 									"id": "51068262-5a15eefc-44b9-40d8-a652-b257fcd35f54",
 									"protocolProfileBehavior": {
