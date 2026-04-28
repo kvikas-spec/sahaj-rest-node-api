@@ -6534,7 +6534,7 @@
 											"raw": "{\n    \"TransactionDate\":\"\"\n}"
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetConsumerSCMValidation?ConsNo=3000297944&CycleNo=2505&UnitUsed=-3&MeterStatusId=12&readingDate=2026-03-04",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetConsumerSCMValidation?[11:56 AM] Prudwiraj Burada\n?ConsNo=3000038663&CycleNo=2601&UnitUsed=12&MeterStatusId=1&readingDate=2026-03-13",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6545,24 +6545,24 @@
 											],
 											"query": [
 												{
-													"key": "ConsNo",
-													"value": "3000297944"
+													"key": "[11:56 AM] Prudwiraj Burada\n?ConsNo",
+													"value": "3000038663"
 												},
 												{
 													"key": "CycleNo",
-													"value": "2505"
+													"value": "2601"
 												},
 												{
 													"key": "UnitUsed",
-													"value": "-3"
-												},
-												{
-													"key": "MeterStatusId",
 													"value": "12"
 												},
 												{
+													"key": "MeterStatusId",
+													"value": "1"
+												},
+												{
 													"key": "readingDate",
-													"value": "2026-03-04"
+													"value": "2026-03-13"
 												}
 											]
 										}
