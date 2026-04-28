@@ -31335,17 +31335,24 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
+								"method": "PUT",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/SystemInterlock/ActiveDeactiveNotAllowGenerateBillOfVIPBPs",
+									"raw": "{{api_gateway_url}}/masters/SystemInterlock/ActiveDeactiveNotAllowGenerateBillOfVIPBPs/:GAId",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
 										"SystemInterlock",
-										"ActiveDeactiveNotAllowGenerateBillOfVIPBPs"
+										"ActiveDeactiveNotAllowGenerateBillOfVIPBPs",
+										":GAId"
+									],
+									"variable": [
+										{
+											"key": "GAId",
+											"value": "1"
+										}
 									]
 								}
 							},
