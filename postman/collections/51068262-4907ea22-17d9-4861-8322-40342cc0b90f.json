@@ -31375,6 +31375,35 @@
 							"response": []
 						},
 						{
+							"name": "CheckSAPAPIEmailMappingExistOrNot",
+							"id": "51068262-3980c85e-72fa-4a17-8140-c814533cafea",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/SystemInterlock/CheckSAPAPIEmailMappingExistOrNot?Email",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"SystemInterlock",
+										"CheckSAPAPIEmailMappingExistOrNot"
+									],
+									"query": [
+										{
+											"key": "Email",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "SystemInterlock Copy",
 							"id": "51068262-6a329434-c282-40ff-bc59-8a848a50426e",
 							"protocolProfileBehavior": {
