@@ -31380,6 +31380,37 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "SystemInterlock Copy 2",
+							"id": "51068262-178cca84-838d-4ee3-b85a-52b3ee9940ae",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/SystemInterlock/ActiveDeactiveNotAllowGenerateBillOfVIPBPs/:GAId",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"SystemInterlock",
+										"ActiveDeactiveNotAllowGenerateBillOfVIPBPs",
+										":GAId"
+									],
+									"variable": [
+										{
+											"id": "e3e553f2-2415-4eef-aa9b-67ca93533577",
+											"key": "GAId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "51068262-9af2a8cb-5dd9-40e2-9f05-0d445db07c31"
