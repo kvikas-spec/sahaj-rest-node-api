@@ -31455,6 +31455,36 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "SystemInterlock Copy",
+									"id": "51068262-6a329434-c282-40ff-bc59-8a848a50426e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/ActiveDeactiveNotAllowGenerateBillOfVIPBPs/:GAId",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"ActiveDeactiveNotAllowGenerateBillOfVIPBPs",
+												":GAId"
+											],
+											"variable": [
+												{
+													"key": "GAId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "51068262-15f0974a-7562-4d89-b4ba-1fae992ad8ce"
@@ -31477,36 +31507,6 @@
 										"masters",
 										"SystemInterlock",
 										"GetEmailMasterGaWiseList"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "SystemInterlock Copy",
-							"id": "51068262-6a329434-c282-40ff-bc59-8a848a50426e",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/SystemInterlock/ActiveDeactiveNotAllowGenerateBillOfVIPBPs/:GAId",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"SystemInterlock",
-										"ActiveDeactiveNotAllowGenerateBillOfVIPBPs",
-										":GAId"
-									],
-									"variable": [
-										{
-											"key": "GAId",
-											"value": "1"
-										}
 									]
 								}
 							},
