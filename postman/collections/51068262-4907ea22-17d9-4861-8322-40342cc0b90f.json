@@ -31229,6 +31229,29 @@
 							"response": []
 						},
 						{
+							"name": "_TermsAndConditions Copy",
+							"id": "51068262-dd6a6527-b065-4447-a453-c1939a832dc6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Template/_TermsAndConditions",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Template",
+										"_TermsAndConditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "ActiveDeactiveTermsAndConditions",
 							"id": "51068262-c620e460-4ce3-482f-8afc-28f3d731c725",
 							"protocolProfileBehavior": {
@@ -31301,6 +31324,11 @@
 						}
 					],
 					"id": "51068262-e7ea58e9-7f57-4fab-9ca7-1bbe1b25b646"
+				},
+				{
+					"name": "SystemInterlock",
+					"item": [],
+					"id": "51068262-9af2a8cb-5dd9-40e2-9f05-0d445db07c31"
 				},
 				{
 					"name": "health-check",
