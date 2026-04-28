@@ -31412,6 +31412,15 @@
 							"request": {
 								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"EmailId\": \"vikas@yopmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "{{api_gateway_url}}/masters/SystemInterlock/AddEditSAPAPIEmailMappingMaster",
 									"host": [
