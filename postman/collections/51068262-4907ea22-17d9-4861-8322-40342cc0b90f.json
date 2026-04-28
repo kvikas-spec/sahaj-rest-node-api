@@ -31306,7 +31306,7 @@
 					"name": "SystemInterlock",
 					"item": [
 						{
-							"name": "SystemInterlock",
+							"name": "NotAllowGenerateBillVIPBPConfig",
 							"id": "51068262-dd6a6527-b065-4447-a453-c1939a832dc6",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -31417,7 +31417,7 @@
 							"response": []
 						},
 						{
-							"name": "ActiveDeactive-GetEmailMasterGaWiseList Copy",
+							"name": "ActiveDeactive-NotAllowGenerateBillVIPBPConfig",
 							"id": "51068262-cd266233-d882-463a-969d-010b136b1bfc",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -31439,12 +31439,10 @@
 									],
 									"variable": [
 										{
-											"id": "6cbba682-45a0-4f9d-b6f0-4d92bbfe4a99",
 											"key": "TableName",
-											"value": "EmailMasterGaWise"
+											"value": "NotAllowGenerateBillVIPBPConfig"
 										},
 										{
-											"id": "032d1ad8-10cb-45c3-a7dd-7f39661458bd",
 											"key": "Id",
 											"value": "5"
 										}
