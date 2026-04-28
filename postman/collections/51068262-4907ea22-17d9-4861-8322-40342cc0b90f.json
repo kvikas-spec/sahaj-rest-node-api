@@ -31330,6 +31330,102 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "CheckSAPAPIEmailMappingExistOrNot",
+									"id": "51068262-3980c85e-72fa-4a17-8140-c814533cafea",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/CheckSAPAPIEmailMappingExistOrNot?Email=vikas@yopmail.com",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"CheckSAPAPIEmailMappingExistOrNot"
+											],
+											"query": [
+												{
+													"key": "Email",
+													"value": "vikas@yopmail.com"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CheckSAPAPIEmailMappingExistOrNot Copy",
+									"id": "51068262-19f4b5b1-3ce5-4ba7-a571-1a885696ceaf",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"SAPAPIEmailMappingMasterId\": \"1\",\n    \"EmailId\": \"vikas247@yopmail.com\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/AddEditSAPAPIEmailMappingMaster",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"AddEditSAPAPIEmailMappingMaster"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ActiveDeactive-SapapiEmailMappingMaster",
+									"id": "51068262-75eddd7c-a9f9-4f34-aaf3-1a86850bfc33",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/ActiveDeactive/:TableName/:Id",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"ActiveDeactive",
+												":TableName",
+												":Id"
+											],
+											"variable": [
+												{
+													"key": "TableName",
+													"value": "SapapiEmailMappingMaster"
+												},
+												{
+													"key": "Id",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "51068262-c196729d-911d-4686-bf74-4e09181c62f0"
@@ -31375,67 +31471,6 @@
 										"masters",
 										"SystemInterlock",
 										"GetEmailMasterGaWiseList"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "CheckSAPAPIEmailMappingExistOrNot",
-							"id": "51068262-3980c85e-72fa-4a17-8140-c814533cafea",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/SystemInterlock/CheckSAPAPIEmailMappingExistOrNot?Email=vikas@yopmail.com",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"SystemInterlock",
-										"CheckSAPAPIEmailMappingExistOrNot"
-									],
-									"query": [
-										{
-											"key": "Email",
-											"value": "vikas@yopmail.com"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "CheckSAPAPIEmailMappingExistOrNot Copy",
-							"id": "51068262-19f4b5b1-3ce5-4ba7-a571-1a885696ceaf",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"SAPAPIEmailMappingMasterId\": \"1\",\n    \"EmailId\": \"vikas247@yopmail.com\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/SystemInterlock/AddEditSAPAPIEmailMappingMaster",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"SystemInterlock",
-										"AddEditSAPAPIEmailMappingMaster"
 									]
 								}
 							},
@@ -31535,41 +31570,6 @@
 										{
 											"key": "Id",
 											"value": "5"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "ActiveDeactive-SapapiEmailMappingMaster",
-							"id": "51068262-75eddd7c-a9f9-4f34-aaf3-1a86850bfc33",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/SystemInterlock/ActiveDeactive/:TableName/:Id",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"SystemInterlock",
-										"ActiveDeactive",
-										":TableName",
-										":Id"
-									],
-									"variable": [
-										{
-											"key": "TableName",
-											"value": "SapapiEmailMappingMaster"
-										},
-										{
-											"key": "Id",
-											"value": "1"
 										}
 									]
 								}
