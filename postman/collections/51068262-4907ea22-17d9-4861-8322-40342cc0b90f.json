@@ -31414,7 +31414,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"EmailId\": \"vikas@yopmail.com\"\n}",
+									"raw": "{\n    \"SAPAPIEmailMappingMasterId\": \"1\",\n    \"EmailId\": \"vikas247@yopmail.com\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
