@@ -31490,62 +31490,68 @@
 							"id": "51068262-15f0974a-7562-4d89-b4ba-1fae992ad8ce"
 						},
 						{
-							"name": "GetEmailMasterGaWiseList",
-							"id": "51068262-d53ca57e-31a3-411b-abca-767962bdf2cc",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/SystemInterlock/GetEmailMasterGaWiseList",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"SystemInterlock",
-										"GetEmailMasterGaWiseList"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "ActiveDeactive-GetEmailMasterGaWiseList",
-							"id": "51068262-178cca84-838d-4ee3-b85a-52b3ee9940ae",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/SystemInterlock/ActiveDeactive/:TableName/:Id",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"SystemInterlock",
-										"ActiveDeactive",
-										":TableName",
-										":Id"
-									],
-									"variable": [
-										{
-											"key": "TableName",
-											"value": "EmailMasterGaWise"
-										},
-										{
-											"key": "Id",
-											"value": "5"
+							"name": "Set Emails First Invoice not Generated",
+							"item": [
+								{
+									"name": "GetEmailMasterGaWiseList",
+									"id": "51068262-d53ca57e-31a3-411b-abca-767962bdf2cc",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/GetEmailMasterGaWiseList",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"GetEmailMasterGaWiseList"
+											]
 										}
-									]
+									},
+									"response": []
+								},
+								{
+									"name": "ActiveDeactive-GetEmailMasterGaWiseList",
+									"id": "51068262-178cca84-838d-4ee3-b85a-52b3ee9940ae",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/ActiveDeactive/:TableName/:Id",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"ActiveDeactive",
+												":TableName",
+												":Id"
+											],
+											"variable": [
+												{
+													"key": "TableName",
+													"value": "EmailMasterGaWise"
+												},
+												{
+													"key": "Id",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"response": []
 								}
-							},
-							"response": []
+							],
+							"id": "51068262-cef7a5dc-8ae8-4113-9240-a0ae17a3757e"
 						},
 						{
 							"name": "ActiveDeactive-NotAllowGenerateBillVIPBPConfig",
