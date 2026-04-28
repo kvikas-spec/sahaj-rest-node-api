@@ -31384,7 +31384,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/SystemInterlock/CheckSAPAPIEmailMappingExistOrNot?Email",
+									"raw": "{{api_gateway_url}}/masters/SystemInterlock/CheckSAPAPIEmailMappingExistOrNot?Email=vikas@gmail.com",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -31396,7 +31396,7 @@
 									"query": [
 										{
 											"key": "Email",
-											"value": null
+											"value": "vikas@gmail.com"
 										}
 									]
 								}
