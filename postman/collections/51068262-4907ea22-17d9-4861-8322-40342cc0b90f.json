@@ -31536,7 +31536,7 @@
 							"response": []
 						},
 						{
-							"name": "ActiveDeactive-NotAllowGenerateBillVIPBPConfig Copy",
+							"name": "ActiveDeactive-SapapiEmailMappingMaster",
 							"id": "51068262-75eddd7c-a9f9-4f34-aaf3-1a86850bfc33",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -31558,14 +31558,12 @@
 									],
 									"variable": [
 										{
-											"id": "c6ac547e-0ba0-4469-8684-33d205aed7c7",
 											"key": "TableName",
-											"value": "NotAllowGenerateBillVIPBPConfig"
+											"value": "SapapiEmailMappingMaster"
 										},
 										{
-											"id": "64d1eccf-2d3c-4209-b615-9354c3332d2c",
 											"key": "Id",
-											"value": "5"
+											"value": "1"
 										}
 									]
 								}
