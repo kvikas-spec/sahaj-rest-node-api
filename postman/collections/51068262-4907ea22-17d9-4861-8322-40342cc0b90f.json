@@ -31404,6 +31404,29 @@
 							"response": []
 						},
 						{
+							"name": "CheckSAPAPIEmailMappingExistOrNot Copy",
+							"id": "51068262-19f4b5b1-3ce5-4ba7-a571-1a885696ceaf",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/SystemInterlock/AddEditSAPAPIEmailMappingMaster",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"SystemInterlock",
+										"AddEditSAPAPIEmailMappingMaster"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "SystemInterlock Copy",
 							"id": "51068262-6a329434-c282-40ff-bc59-8a848a50426e",
 							"protocolProfileBehavior": {
