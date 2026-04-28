@@ -31315,14 +31315,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/_TermsAndConditions",
+									"raw": "{{api_gateway_url}}/masters/SystemInterlock/_GetNotAllowGenerateBillOfVIPBPs",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"Template",
-										"_TermsAndConditions"
+										"SystemInterlock",
+										"_GetNotAllowGenerateBillOfVIPBPs"
 									]
 								}
 							},
