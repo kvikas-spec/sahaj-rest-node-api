@@ -8153,7 +8153,7 @@
 									"response": []
 								},
 								{
-									"name": "PrintBill Copy",
+									"name": "InvoicePDFPrint",
 									"id": "51068262-a82c39e7-33c3-4263-9b3f-dec411168e7b",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -8171,7 +8171,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?consumerNumber=3000298595&demandMasterId=7174097",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?consumerNumber=3000038652&demandMasterId=5257109",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -8183,11 +8183,11 @@
 											"query": [
 												{
 													"key": "consumerNumber",
-													"value": "3000298595"
+													"value": "3000038652"
 												},
 												{
 													"key": "demandMasterId",
-													"value": "7174097"
+													"value": "5257109"
 												}
 											]
 										}
