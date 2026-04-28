@@ -31391,21 +31391,25 @@
 								"method": "PUT",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/SystemInterlock/ActiveDeactiveNotAllowGenerateBillOfVIPBPs/:GAId",
+									"raw": "{{api_gateway_url}}/masters/SystemInterlock/ActiveDeactive/:TableName/:Id",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
 										"SystemInterlock",
-										"ActiveDeactiveNotAllowGenerateBillOfVIPBPs",
-										":GAId"
+										"ActiveDeactive",
+										":TableName",
+										":Id"
 									],
 									"variable": [
 										{
-											"id": "e3e553f2-2415-4eef-aa9b-67ca93533577",
-											"key": "GAId",
-											"value": "1"
+											"key": "TableName",
+											"value": ""
+										},
+										{
+											"key": "Id",
+											"value": ""
 										}
 									]
 								}
