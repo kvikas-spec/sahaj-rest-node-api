@@ -31431,27 +31431,9 @@
 							"id": "51068262-c196729d-911d-4686-bf74-4e09181c62f0"
 						},
 						{
-							"name": "NotAllowGenerateBillVIPBPConfig",
-							"id": "51068262-dd6a6527-b065-4447-a453-c1939a832dc6",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/SystemInterlock/_GetNotAllowGenerateBillOfVIPBPs",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"SystemInterlock",
-										"_GetNotAllowGenerateBillOfVIPBPs"
-									]
-								}
-							},
-							"response": []
+							"name": "GA Wise For Not Allowing Bill Generation Of VIP Customers",
+							"item": [],
+							"id": "51068262-15f0974a-7562-4d89-b4ba-1fae992ad8ce"
 						},
 						{
 							"name": "GetEmailMasterGaWiseList",
@@ -31501,6 +31483,29 @@
 											"key": "GAId",
 											"value": "1"
 										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "NotAllowGenerateBillVIPBPConfig",
+							"id": "51068262-dd6a6527-b065-4447-a453-c1939a832dc6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/SystemInterlock/_GetNotAllowGenerateBillOfVIPBPs",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"SystemInterlock",
+										"_GetNotAllowGenerateBillOfVIPBPs"
 									]
 								}
 							},
