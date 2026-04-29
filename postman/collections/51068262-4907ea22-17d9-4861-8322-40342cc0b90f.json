@@ -31580,7 +31580,7 @@
 									"response": []
 								},
 								{
-									"name": "CheckSAPAPIEmailMappingExistOrNot Copy 2",
+									"name": "AddEditGAWiseEmails",
 									"id": "51068262-eb7c0e27-0ce9-488b-8759-d4ee1ce2745a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -31590,7 +31590,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    // \"SAPAPIEmailMappingMasterId\": \"1\",\n    \"EmailId\": \"vikas2473@yopmail.com\"\n}",
+											"raw": "{\n    // \"SAPAPIEmailMappingMasterId\": \"1\",\n    \"EmailID\": \"vikas2473@yopmail.com\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -31598,14 +31598,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/masters/SystemInterlock/AddEditSAPAPIEmailMappingMaster",
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/AddEditGAWiseEmails",
 											"host": [
 												"{{api_gateway_url}}"
 											],
 											"path": [
 												"masters",
 												"SystemInterlock",
-												"AddEditSAPAPIEmailMappingMaster"
+												"AddEditGAWiseEmails"
 											]
 										}
 									},
