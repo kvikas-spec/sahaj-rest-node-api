@@ -30753,7 +30753,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"RegistrationVM\": {\n        // \"EncryptedUserID\": \"61nqR+RHpTZe2mKxhXivug==\",\n        \"IsMobileFlag\": 0,\n        \"IsADUsers\": false,\n        \"AgencyId\": 73,\n        \"FirstName\": \"Prudwi\",\n        \"MiddleName\": \"\",\n        \"Surname\": \"raj\",\n        \"Address\": \"Hello\",\n        \"DateOfJoining\": null,\n        \"Designation\": null,\n        \"PhoneNumber\": \"9589483421\",\n        \"AltMobileNumber\": null,\n        \"Department\": null,\n        \"EmailId\": \"prudwiraj@gmail.com\",\n        \"EmployeeId\": \"Prudwi\",\n        \"RoleID\": \"1\",\n        \"Roles\": \"1\",\n        \"localGAIds\": [\n            1\n        ],\n        \"UserImage\": \"\"\n    }\n}",
+									"raw": "{\n    \"RegistrationVM\": {\n        // \"EncryptedUserID\": \"61nqR+RHpTZe2mKxhXivug==\",\n        \"IsMobileFlag\": 0,\n        \"IsADUsers\": false,\n        \"AgencyId\": 73,\n        \"FirstName\": \"Prudwi\",\n        \"MiddleName\": \"\",\n        \"Surname\": \"raj\",\n        \"Address\": \"Hello\",\n        \"DateOfJoining\": null,\n        \"Designation\": null,\n        \"PhoneNumber\": \"9589483421\",\n        \"AltMobileNumber\": null,\n        \"Department\": null,\n        \"EmailId\": \"prudwiraj1@gmail.com\",\n        \"EmployeeId\": \"Prudwi\",\n        \"RoleID\": \"1\",\n        \"Roles\": \"1\",\n        \"localGAIds\": [\n            1\n        ],\n        \"UserImage\": \"\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
