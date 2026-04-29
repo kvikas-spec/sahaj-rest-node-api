@@ -67,7 +67,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"ANK08195@GAIL.CO.IN\",\n    \"otp\": 123456\n}\n\n// Meerut - ANK08195@GAIL.CO.IN\n// Patna -  SANJEEV.KUMAR2@GAIL.CO.IN\n ",
+							"raw": "{\n    \"username\": \"prudwiraj@gmail.com\",\n    \"otp\": 123456\n}\n\n// Meerut - ANK08195@GAIL.CO.IN\n// Patna -  SANJEEV.KUMAR2@GAIL.CO.IN\n ",
 							"options": {
 								"raw": {
 									"language": "json"
