@@ -31549,6 +31549,67 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "CheckEmailMasterGaWiseMappingExistOrNot",
+									"id": "51068262-d09b26cd-2cd0-4470-8cdd-e125f664edc1",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/CheckEmailMasterGaWiseMappingExistOrNot?Email=manish.goel@gail.co.in",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"CheckEmailMasterGaWiseMappingExistOrNot"
+											],
+											"query": [
+												{
+													"key": "Email",
+													"value": "manish.goel@gail.co.in"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CheckSAPAPIEmailMappingExistOrNot Copy 2",
+									"id": "51068262-eb7c0e27-0ce9-488b-8759-d4ee1ce2745a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    // \"SAPAPIEmailMappingMasterId\": \"1\",\n    \"EmailId\": \"vikas2473@yopmail.com\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/AddEditSAPAPIEmailMappingMaster",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"AddEditSAPAPIEmailMappingMaster"
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "51068262-cef7a5dc-8ae8-4113-9240-a0ae17a3757e"
