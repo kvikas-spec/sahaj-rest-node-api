@@ -6419,7 +6419,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1777299558619-880074413_T8A4EQJ.jpg\",\n    \"ConsumerNumber\": 3000038652,\n    \"Cycle\": \"2601\",\n    \"WardId\": 11,\n    \"ReadingDate\": \"2026-03-11\",\n    \"BillDate\": \"2026-03-11\",\n    \"FullName\": \"Reading date\",\n    \"BillNumber\": 3000038652202501,\n    \"CurrentReading\": 11,\n    \"PreviousReading\": 5,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 6\n}",
+											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1777443051972-994106987_Invoice_Batch_1777385587566.pdf\",\n    \"ConsumerNumber\": 3000038685,\n    \"Cycle\": \"2601\",\n    \"WardId\": 12,\n    \"ReadingDate\": \"2026-03-24\",\n    \"BillDate\": \"2026-03-24\",\n    \"FullName\": \"Promoscheme\",\n    \"BillNumber\": 3000038685202601,\n    \"CurrentReading\": 28,\n    \"PreviousReading\": 8,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 20\n}",
 											"options": {
 												"raw": {
 													"language": "json"
