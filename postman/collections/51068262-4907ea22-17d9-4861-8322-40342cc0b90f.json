@@ -30753,7 +30753,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"RegistrationVM\": {\n    \"EncryptedUserID\": \"hatvduz6S9rMsFY~tlwm3Q==\", // update case\n    \"IsMobileFlag\": 0,\n    \"IsADUsers\": true,\n    \"AgencyId\": 1,\n    \"FirstName\": \"Vikas\",\n    \"MiddleName\": \"Kumar\",\n    \"Surname\": \"Updated\",\n    \"Address\": \"Updated Address\",\n    \"DateOfJoining\": \"2026-01-01\",\n    \"Designation\": \"Senior Developer\",\n    \"PhoneNumber\": \"9876543210\",\n    \"AltMobileNumber\": \"9123456780\",\n    \"Department\": \"IT\",\n    \"EmailId\": \"vikas@kpt.com\",\n    \"EmployeeId\": \"EMP1001\",\n    // \"Password\": \"AlreadyEncryptedPassword\",\n    \"RoleID\": 2,\n    \"Roles\": \"2,6\",\n    \"localGAIds\": [1]\n  }\n}\n\n    // \"UserID\": 25,\n    // \"EncryptedUserID\": \"EncryptedValueHere\",\n    // \"EncryptedUserID\": \"EGEw9W00HB3HId6amyOLDw==\",\n",
+									"raw": "{\n    \"RegistrationVM\": {\n        \"EncryptedUserID\": \"61nqR+RHpTZe2mKxhXivug==\",\n        \"IsMobileFlag\": 0,\n        \"IsADUsers\": false,\n        \"AgencyId\": 73,\n        \"FirstName\": \"Prudwi\",\n        \"MiddleName\": \"\",\n        \"Surname\": \"raj\",\n        \"Address\": \"Hello\",\n        \"DateOfJoining\": null,\n        \"Designation\": null,\n        \"PhoneNumber\": \"9589483421\",\n        \"AltMobileNumber\": null,\n        \"Department\": null,\n        \"EmailId\": \"prudwiraj@gmail.com\",\n        \"EmployeeId\": \"Prudwi\",\n        \"RoleID\": \"1\",\n        \"Roles\": \"1\",\n        \"localGAIds\": [\n            73\n        ],\n        \"UserImage\": \"\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
