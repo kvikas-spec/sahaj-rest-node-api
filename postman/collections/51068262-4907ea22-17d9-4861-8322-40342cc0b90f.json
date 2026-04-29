@@ -30693,7 +30693,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList?isFilter=1&EncryptedUserID=BPIRLTbxzKi223zdlNo8gA==",
+									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList?isFilter=1&Search=prudwiraj@gmail.com",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30709,12 +30709,12 @@
 										},
 										{
 											"key": "Search",
-											"value": "vikas",
-											"disabled": true
+											"value": "prudwiraj@gmail.com"
 										},
 										{
 											"key": "EncryptedUserID",
-											"value": "BPIRLTbxzKi223zdlNo8gA=="
+											"value": "BPIRLTbxzKi223zdlNo8gA==",
+											"disabled": true
 										},
 										{
 											"key": "GAId",
