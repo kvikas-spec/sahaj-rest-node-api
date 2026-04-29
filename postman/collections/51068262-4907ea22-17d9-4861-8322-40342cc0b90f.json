@@ -31001,7 +31001,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"UserID\": \"73431\",\n    \"NewPassword\": \"wEno7uMszBg8zG0MF+KGBQ==\"\n}",
+									"raw": "{\n    // \"UserID\": \"73431\",\n    \"forcePasswordChange\": true,\n    \"NewPassword\": \"wEno7uMszBg8zG0MF+KGBQ==\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
