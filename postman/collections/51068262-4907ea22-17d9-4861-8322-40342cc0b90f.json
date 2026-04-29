@@ -274,13 +274,13 @@
 							"type": "basic",
 							"basic": [
 								{
-									"key": "password",
-									"value": "1234567",
+									"key": "username",
+									"value": "ANK08195@GAIL.CO.IN",
 									"type": "string"
 								},
 								{
-									"key": "username",
-									"value": "prudwiraj@gmail.com",
+									"key": "password",
+									"value": "1234567",
 									"type": "string"
 								}
 							]
