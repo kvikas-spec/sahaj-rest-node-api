@@ -31819,6 +31819,11 @@
 							"id": "51068262-3d001fc8-0399-4e1d-ac9c-a5bdc8fa90af"
 						},
 						{
+							"name": "DRP2 DPNG Target",
+							"item": [],
+							"id": "51068262-a4148d10-b363-430e-afff-7735a4223a63"
+						},
+						{
 							"name": "ActiveDeactive-NotAllowGenerateBillVIPBPConfig",
 							"id": "51068262-cd266233-d882-463a-969d-010b136b1bfc",
 							"protocolProfileBehavior": {
