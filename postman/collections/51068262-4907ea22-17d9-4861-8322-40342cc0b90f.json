@@ -31820,7 +31820,31 @@
 						},
 						{
 							"name": "DRP2 DPNG Target",
-							"item": [],
+							"item": [
+								{
+									"name": "MeterReadingRejectionMaster Copy",
+									"id": "51068262-53c54be9-1ffb-4bd1-b140-7799c0362cf1",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/GetDailyProgressDPNGTargetList",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"GetDailyProgressDPNGTargetList"
+											]
+										}
+									},
+									"response": []
+								}
+							],
 							"id": "51068262-a4148d10-b363-430e-afff-7735a4223a63"
 						},
 						{
