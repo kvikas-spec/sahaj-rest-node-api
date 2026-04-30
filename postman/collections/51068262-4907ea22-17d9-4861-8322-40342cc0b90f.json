@@ -31779,6 +31779,43 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "ActiveDeactive-GetEmailMasterGaWiseList Copy",
+									"id": "51068262-0a56658c-1efb-4b8d-84ed-4d48591881d1",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/ActiveDeactive/:TableName/:Id",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"ActiveDeactive",
+												":TableName",
+												":Id"
+											],
+											"variable": [
+												{
+													"id": "edcb6914-f003-4f91-91ec-9a75b54ef064",
+													"key": "TableName",
+													"value": "EmailMasterGaWise"
+												},
+												{
+													"id": "c74eee18-d559-4872-8054-105bc40117f1",
+													"key": "Id",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "51068262-3d001fc8-0399-4e1d-ac9c-a5bdc8fa90af"
