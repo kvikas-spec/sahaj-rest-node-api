@@ -31749,33 +31749,23 @@
 									"response": []
 								},
 								{
-									"name": "IsRejectionReasonExists Copy",
+									"name": "SystemInterlockService",
 									"id": "51068262-82812f4c-5cb3-4fd2-9712-89d2340a1402",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
+										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/masters/SystemInterlock/IsRejectionReasonExists?meterStatusId=5&value=HOUSE WAS LOCKED",
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/AddEditMeterRejectionDetails",
 											"host": [
 												"{{api_gateway_url}}"
 											],
 											"path": [
 												"masters",
 												"SystemInterlock",
-												"IsRejectionReasonExists"
-											],
-											"query": [
-												{
-													"key": "meterStatusId",
-													"value": "5"
-												},
-												{
-													"key": "value",
-													"value": "HOUSE WAS LOCKED"
-												}
+												"AddEditMeterRejectionDetails"
 											]
 										}
 									},
