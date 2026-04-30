@@ -31747,6 +31747,39 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "IsRejectionReasonExists Copy",
+									"id": "51068262-82812f4c-5cb3-4fd2-9712-89d2340a1402",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/IsRejectionReasonExists?meterStatusId=5&value=HOUSE WAS LOCKED",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"IsRejectionReasonExists"
+											],
+											"query": [
+												{
+													"key": "meterStatusId",
+													"value": "5"
+												},
+												{
+													"key": "value",
+													"value": "HOUSE WAS LOCKED"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "51068262-3d001fc8-0399-4e1d-ac9c-a5bdc8fa90af"
