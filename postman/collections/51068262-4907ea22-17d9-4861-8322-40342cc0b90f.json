@@ -67,7 +67,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"prudwiraj@gmail.com\",\n    \"otp\": 123456\n}\n\n// Meerut - ANK08195@GAIL.CO.IN\n// Patna -  SANJEEV.KUMAR2@GAIL.CO.IN\n ",
+							"raw": "{\n    \"username\": \"ANK08195@GAIL.CO.IN\",\n    \"otp\": 123456\n}\n\n// Meerut - ANK08195@GAIL.CO.IN\n// Patna -  SANJEEV.KUMAR2@GAIL.CO.IN\n ",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -275,7 +275,7 @@
 							"basic": [
 								{
 									"key": "username",
-									"value": "prudwiraj1@gmail.com",
+									"value": "ANK08195@GAIL.CO.IN",
 									"type": "string"
 								},
 								{
@@ -6419,7 +6419,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1777443051972-994106987_Invoice_Batch_1777385587566.pdf\",\n    \"ConsumerNumber\": 3000038685,\n    \"Cycle\": \"2601\",\n    \"WardId\": 12,\n    \"ReadingDate\": \"2026-03-24\",\n    \"BillDate\": \"2026-03-24\",\n    \"FullName\": \"Promoscheme\",\n    \"BillNumber\": 3000038685202601,\n    \"CurrentReading\": 28,\n    \"PreviousReading\": 8,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 20\n}",
+											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1777535829312-975928249_Abnormal Consumption Approval (1).pdf\",\n    \"ConsumerNumber\": 3000038716,\n    \"Cycle\": \"2601\",\n    \"WardId\": 11,\n    \"ReadingDate\": \"2026-03-09\",\n    \"BillDate\": \"2026-03-09\",\n    \"FullName\": \"meter reading promo\",\n    \"BillNumber\": 3000038716202601,\n    \"CurrentReading\": 20,\n    \"PreviousReading\": 10,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 10\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6459,7 +6459,7 @@
 											"formdata": []
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetLastReadingDateByConsumerNo?ConsNo=3000297617&CycleNo=2519",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetLastReadingDateByConsumerNo?ConsNo=3000038711&CycleNo=2601",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6471,11 +6471,11 @@
 											"query": [
 												{
 													"key": "ConsNo",
-													"value": "3000297617"
+													"value": "3000038711"
 												},
 												{
 													"key": "CycleNo",
-													"value": "2519"
+													"value": "2601"
 												}
 											]
 										}
@@ -29032,7 +29032,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/agency-assignment-billing/getAssignForMeterReadingAndInvoicingToAgencyListallMRUList?isFilter=&BpNumber=&search=&pageNo=1&WardId=&AreaId=&fromDate=&toDate=&pagesize=10",
+											"raw": "{{api_gateway_url}}/billing-payment/agency-assignment-billing/getAssignForMeterReadingAndInvoicingToAgencyListallMRUList?isFilter=1&BpNumber=3000038703&search=&pageNo=1&WardId=&AreaId=&fromDate=&toDate=&pagesize=10",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -29044,11 +29044,11 @@
 											"query": [
 												{
 													"key": "isFilter",
-													"value": ""
+													"value": "1"
 												},
 												{
 													"key": "BpNumber",
-													"value": ""
+													"value": "3000038703"
 												},
 												{
 													"key": "search",
@@ -31613,6 +31613,110 @@
 								}
 							],
 							"id": "51068262-cef7a5dc-8ae8-4113-9240-a0ae17a3757e"
+						},
+						{
+							"name": "GA Wise Days After 21 Days",
+							"item": [
+								{
+									"name": "GetMasterTableData",
+									"id": "51068262-aa548c03-8dcf-47dc-a44e-9257ea06c20e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/GetMasterTableData/:TableName",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"GetMasterTableData",
+												":TableName"
+											],
+											"variable": [
+												{
+													"key": "TableName",
+													"value": "AutomatedMroGenerationDays"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "EditAutomatedMROGenerationDays",
+									"id": "51068262-26a4d3e1-51e2-42e8-8a32-24730ef916de",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"AutomatedMROGenerationDaysId\": 1,\n    \"AutomatedMROGenerationDays\": 21\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/EditAutomatedMROGenerationDays",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"EditAutomatedMROGenerationDays"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "51068262-b8b02a58-dfc7-4a6d-9928-92ad9c44ca66"
+						},
+						{
+							"name": "New Folder",
+							"item": [
+								{
+									"name": "MeterReadingRejectionMaster",
+									"id": "51068262-312ba489-cc30-4c96-9c0a-7f3bd869b29c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/GetMasterTableData/:TableName",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"GetMasterTableData",
+												":TableName"
+											],
+											"variable": [
+												{
+													"key": "TableName",
+													"value": "MeterReadingRejectionMaster"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "51068262-3d001fc8-0399-4e1d-ac9c-a5bdc8fa90af"
 						},
 						{
 							"name": "ActiveDeactive-NotAllowGenerateBillVIPBPConfig",
