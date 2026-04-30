@@ -31725,7 +31725,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/masters/SystemInterlock/IsRejectionReasonExists",
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/IsRejectionReasonExists?meterStatusId=5&value=HOUSE WAS LOCKED",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -31733,6 +31733,16 @@
 												"masters",
 												"SystemInterlock",
 												"IsRejectionReasonExists"
+											],
+											"query": [
+												{
+													"key": "meterStatusId",
+													"value": "5"
+												},
+												{
+													"key": "value",
+													"value": "HOUSE WAS LOCKED"
+												}
 											]
 										}
 									},
