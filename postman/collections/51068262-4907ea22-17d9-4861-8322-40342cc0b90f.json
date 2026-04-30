@@ -31714,6 +31714,37 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "MeterReadingRejectionMaster Copy",
+									"id": "51068262-b1ed1579-8fc5-4d82-b498-2b5f55914886",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/GetMasterTableData/:TableName",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"GetMasterTableData",
+												":TableName"
+											],
+											"variable": [
+												{
+													"id": "6e3bdfbf-c660-4ae9-a7a3-1172910a1176",
+													"key": "TableName",
+													"value": "MeterReadingRejectionMaster"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "51068262-3d001fc8-0399-4e1d-ac9c-a5bdc8fa90af"
