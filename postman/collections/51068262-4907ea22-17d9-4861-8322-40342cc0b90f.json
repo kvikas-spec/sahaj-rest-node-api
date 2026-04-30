@@ -31749,7 +31749,7 @@
 									"response": []
 								},
 								{
-									"name": "SystemInterlockService",
+									"name": "AddEditMeterRejectionDetails",
 									"id": "51068262-82812f4c-5cb3-4fd2-9712-89d2340a1402",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -31781,7 +31781,7 @@
 									"response": []
 								},
 								{
-									"name": "ActiveDeactive-GetEmailMasterGaWiseList Copy",
+									"name": "ActiveDeactive-MeterReadingRejectionMaster",
 									"id": "51068262-0a56658c-1efb-4b8d-84ed-4d48591881d1",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -31803,14 +31803,12 @@
 											],
 											"variable": [
 												{
-													"id": "edcb6914-f003-4f91-91ec-9a75b54ef064",
 													"key": "TableName",
-													"value": "EmailMasterGaWise"
+													"value": "MeterReadingRejectionMaster"
 												},
 												{
-													"id": "c74eee18-d559-4872-8054-105bc40117f1",
 													"key": "Id",
-													"value": "5"
+													"value": "13"
 												}
 											]
 										}
