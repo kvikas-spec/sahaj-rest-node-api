@@ -289,7 +289,8 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Basic TklSQUpQQU5DSEFMMUBXRUJNWU5FU1lTVEVNUy5DT006MTIzNDU2Nw=="
+								"value": "Basic TklSQUpQQU5DSEFMMUBXRUJNWU5FU1lTVEVNUy5DT006MTIzNDU2Nw==",
+								"disabled": true
 							},
 							{
 								"key": "content-type",
