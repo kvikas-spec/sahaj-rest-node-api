@@ -32449,7 +32449,41 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [
+							{
+								"key": "x-region-id",
+								"value": "GailGas_Common"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/masters/EscalationMatrix/GetEscalationMatrixList?pageNo=1&pageSize=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"masters",
+								"EscalationMatrix",
+								"GetEscalationMatrixList"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -32461,7 +32495,45 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [
+							{
+								"key": "x-region-id",
+								"value": "GailGas_Common"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/masters/EscalationMatrix/IsEscalationExist?EscalationMatrixId=0&DepartmentId=1&ComplaintLevelId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"masters",
+								"EscalationMatrix",
+								"IsEscalationExist"
+							],
+							"query": [
+								{
+									"key": "EscalationMatrixId",
+									"value": "0"
+								},
+								{
+									"key": "DepartmentId",
+									"value": "1"
+								},
+								{
+									"key": "ComplaintLevelId",
+									"value": "1"
+								}
+							]
+						}
 					},
 					"response": []
 				}
