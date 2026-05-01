@@ -32614,6 +32614,18 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "curl -X GET \"{{api_gateway_url}}/masters/GAwiseBillingAddress/GetGAAddress\" \\   -H \"Content-Type: application/json\"",
+							"id": "51068262-e3ae38d0-5822-4f19-9cfa-4c1849cf1225",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "51068262-94af1685-7a2b-4f48-90bd-103c190e9da8"
