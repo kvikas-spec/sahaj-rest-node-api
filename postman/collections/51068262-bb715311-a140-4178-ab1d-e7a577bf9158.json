@@ -32536,14 +32536,48 @@
 					"name": "GAwiseBillingAddress",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "GetGAwiseBillAddressList",
 							"id": "51068262-f7dc6565-e397-47c1-bd26-ff80ec856f64",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/masters/GAwiseBillingAddress/GetGAwiseBillAddressList?billingAddress=Main%20Street&pageNo=1&pageSize=100",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"masters",
+										"GAwiseBillingAddress",
+										"GetGAwiseBillAddressList"
+									],
+									"query": [
+										{
+											"key": "billingAddress",
+											"value": "Main%20Street"
+										},
+										{
+											"key": "pageNo",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "100"
+										}
+									]
+								}
 							},
 							"response": []
 						}
