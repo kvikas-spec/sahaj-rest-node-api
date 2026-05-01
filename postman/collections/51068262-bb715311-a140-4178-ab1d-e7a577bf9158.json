@@ -32370,10 +32370,10 @@
 				},
 				{
 					"name": "Complaint Receiving Cells Details Master",
-					"id": "27e19aad-21ad-4c4c-a2ee-1e347c8010e9",
 					"item": [
 						{
 							"name": "Get Complaint Receiving Cells List",
+							"id": "51068262-bfd6918b-06f5-4890-915a-5d043275d4fe",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -32389,9 +32389,9 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/GetComplaintReceivingCellsList",
+									"raw": "{{api_gateway_url}}/api/v1/masters/ComplaintReceivingCells/GetComplaintReceivingCellsList",
 									"host": [
-										"{{baseUrl}}"
+										"{{api_gateway_url}}"
 									],
 									"path": [
 										"api",
@@ -32401,10 +32401,12 @@
 										"GetComplaintReceivingCellsList"
 									]
 								}
-							}
+							},
+							"response": []
 						},
 						{
 							"name": "Get Complaint Receiving Cells Edit Details",
+							"id": "51068262-04310651-8edf-4c7c-97c4-d778d7ae1113",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -32420,9 +32422,9 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/GetEditvalue?ID={{InChargeComplaintReceivingCellsId}}",
+									"raw": "{{api_gateway_url}}/api/v1/masters/ComplaintReceivingCells/GetEditvalue?ID={{InChargeComplaintReceivingCellsId}}",
 									"host": [
-										"{{baseUrl}}"
+										"{{api_gateway_url}}"
 									],
 									"path": [
 										"api",
@@ -32438,10 +32440,12 @@
 										}
 									]
 								}
-							}
+							},
+							"response": []
 						},
 						{
 							"name": "Add or Edit Complaint Receiving Cells Details",
+							"id": "51068262-0f2b0cee-be44-4a2c-97ba-d5939d5d4fb0",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -32471,9 +32475,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/AddEditComplaintReceivingCellsDetails",
+									"raw": "{{api_gateway_url}}/api/v1/masters/ComplaintReceivingCells/AddEditComplaintReceivingCellsDetails",
 									"host": [
-										"{{baseUrl}}"
+										"{{api_gateway_url}}"
 									],
 									"path": [
 										"api",
@@ -32483,10 +32487,12 @@
 										"AddEditComplaintReceivingCellsDetails"
 									]
 								}
-							}
+							},
+							"response": []
 						},
 						{
 							"name": "Activate / Deactivate Complaint Receiving Cells",
+							"id": "51068262-b687452f-b6ef-4952-9c2a-6095dcb480d8",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -32516,9 +32522,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/IsActiveComplaintReceivingCellsDetails",
+									"raw": "{{api_gateway_url}}/api/v1/masters/ComplaintReceivingCells/IsActiveComplaintReceivingCellsDetails",
 									"host": [
-										"{{baseUrl}}"
+										"{{api_gateway_url}}"
 									],
 									"path": [
 										"api",
@@ -32528,9 +32534,11 @@
 										"IsActiveComplaintReceivingCellsDetails"
 									]
 								}
-							}
+							},
+							"response": []
 						}
-					]
+					],
+					"id": "27e19aad-21ad-4c4c-a2ee-1e347c8010e9"
 				},
 				{
 					"name": "health-check",
