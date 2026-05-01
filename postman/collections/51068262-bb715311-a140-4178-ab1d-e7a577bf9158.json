@@ -32616,14 +32616,30 @@
 							"response": []
 						},
 						{
-							"name": "curl -X GET \"{{api_gateway_url}}/masters/GAwiseBillingAddress/GetGAAddress\" \\   -H \"Content-Type: application/json\"",
+							"name": "GetGAAddress",
 							"id": "51068262-e3ae38d0-5822-4f19-9cfa-4c1849cf1225",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/GAwiseBillingAddress/GetGAAddress",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"GAwiseBillingAddress",
+										"GetGAAddress"
+									]
+								}
 							},
 							"response": []
 						}
