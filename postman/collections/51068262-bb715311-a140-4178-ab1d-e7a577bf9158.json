@@ -32550,15 +32550,11 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/masters/GAwiseBillingAddress/GetGAwiseBillAddressList?billingAddress=Main%20Street&pageNo=1&pageSize=100",
-									"protocol": "http",
+									"raw": "{{api_gateway_url}}/masters/GAwiseBillingAddress/GetGAwiseBillAddressList?pageNo=1&pageSize=10",
 									"host": [
-										"localhost"
+										"{{api_gateway_url}}"
 									],
-									"port": "8080",
 									"path": [
-										"api",
-										"v1",
 										"masters",
 										"GAwiseBillingAddress",
 										"GetGAwiseBillAddressList"
@@ -32566,7 +32562,8 @@
 									"query": [
 										{
 											"key": "billingAddress",
-											"value": "Main%20Street"
+											"value": "Main%20Street",
+											"disabled": true
 										},
 										{
 											"key": "pageNo",
@@ -32574,7 +32571,7 @@
 										},
 										{
 											"key": "pageSize",
-											"value": "100"
+											"value": "10"
 										}
 									]
 								}
