@@ -32420,6 +32420,170 @@
 					]
 				},
 				{
+					"name": "Complaint Receiving Cells Details Master",
+					"id": "27e19aad-21ad-4c4c-a2ee-1e347c8010e9",
+					"item": [
+						{
+							"name": "Get Complaint Receiving Cells List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "{{regionId}}",
+										"type": "text"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/GetComplaintReceivingCellsList",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"masters",
+										"ComplaintReceivingCells",
+										"GetComplaintReceivingCellsList"
+									]
+								}
+							}
+						},
+						{
+							"name": "Get Complaint Receiving Cells Edit Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "{{regionId}}",
+										"type": "text"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/GetEditvalue?ID={{InChargeComplaintReceivingCellsId}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"masters",
+										"ComplaintReceivingCells",
+										"GetEditvalue"
+									],
+									"query": [
+										{
+											"key": "ID",
+											"value": "{{InChargeComplaintReceivingCellsId}}"
+										}
+									]
+								}
+							}
+						},
+						{
+							"name": "Add or Edit Complaint Receiving Cells Details",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{accessToken}}",
+										"type": "text"
+									},
+									{
+										"key": "x-region-id",
+										"value": "{{regionId}}",
+										"type": "text"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"InChargeComplaintReceivingCellsId\": 0,\n  \"InChargeComplaintReceivingCellsDetails\": \"Sample complaint receiving cells details\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/AddEditComplaintReceivingCellsDetails",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"masters",
+										"ComplaintReceivingCells",
+										"AddEditComplaintReceivingCellsDetails"
+									]
+								}
+							}
+						},
+						{
+							"name": "Activate / Deactivate Complaint Receiving Cells",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{accessToken}}",
+										"type": "text"
+									},
+									{
+										"key": "x-region-id",
+										"value": "{{regionId}}",
+										"type": "text"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"InChargeComplaintReceivingCellsId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/IsActiveComplaintReceivingCellsDetails",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"masters",
+										"ComplaintReceivingCells",
+										"IsActiveComplaintReceivingCellsDetails"
+									]
+								}
+							}
+						}
+					]
+				},
+				{
 					"name": "health-check",
 					"id": "51068262-1112f955-49ea-4658-9aa2-7f348199ab92",
 					"protocolProfileBehavior": {
