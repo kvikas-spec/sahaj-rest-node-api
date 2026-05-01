@@ -31497,6 +31497,193 @@
           ]
         },
         {
+          "name": "EscalationMatrix",
+          "id": "27e19aad-21ad-4c4c-a2ee-1e347c8018d1",
+          "item": [
+            {
+              "name": "GetEscalationMatrixList",
+              "id": "6fba9cad-7864-4903-9b9c-74a6e456d8e8",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/EscalationMatrix/GetEscalationMatrixList?pageNo=1&pageSize=10",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "EscalationMatrix",
+                    "GetEscalationMatrixList"
+                  ],
+                  "query": [
+                    {
+                      "key": "pageNo",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "IsEscalationExist",
+              "id": "437f8228-9534-47e0-ae03-66d717039871",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/EscalationMatrix/IsEscalationExist?EscalationMatrixId=0&DepartmentId=1&ComplaintLevelId=1",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "EscalationMatrix",
+                    "IsEscalationExist"
+                  ],
+                  "query": [
+                    {
+                      "key": "EscalationMatrixId",
+                      "value": "0"
+                    },
+                    {
+                      "key": "DepartmentId",
+                      "value": "1"
+                    },
+                    {
+                      "key": "ComplaintLevelId",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GetEditvalue",
+              "id": "ed008c0b-53e3-42ef-9e9e-290aebcd9056",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/EscalationMatrix/GetEditvalue?ID=1",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "EscalationMatrix",
+                    "GetEditvalue"
+                  ],
+                  "query": [
+                    {
+                      "key": "ID",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "AddEditEscalationMatrixDetails",
+              "id": "9299f0d6-b6f0-4fd4-bf5a-fc76ccf95db2",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer <your_token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"escalationMatrixId\": 0,\n  \"departmentId\": 1,\n  \"complaintLevelId\": 1,\n  \"day\": 5,\n  \"ddluserIds\": \"50205,50206\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/EscalationMatrix/AddEditEscalationMatrixDetails",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "EscalationMatrix",
+                    "AddEditEscalationMatrixDetails"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "IsActiveEscalationMatrixMaster",
+              "id": "c2d99974-f029-4300-a057-bd2e23e70bba",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer <your_token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Id\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/EscalationMatrix/IsActiveEscalationMatrixMaster",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "EscalationMatrix",
+                    "IsActiveEscalationMatrixMaster"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
           "name": "Terms & Conditions Template Master",
           "item": [
             {
