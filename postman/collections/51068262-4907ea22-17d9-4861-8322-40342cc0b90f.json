@@ -31886,6 +31886,212 @@
 					"id": "51068262-9af2a8cb-5dd9-40e2-9f05-0d445db07c31"
 				},
 				{
+					"name": "CRM,Communication & Schemes",
+					"item": [
+						{
+							"name": "Complaint Type Master",
+							"item": [
+								{
+									"name": "New Request",
+									"id": "51068262-564742e6-b9af-44e8-8940-8ee8313096cb",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <ACCESS_TOKEN>"
+											},
+											{
+												"key": "x-region-id",
+												"value": "GailGas_Common"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8080/api/v1/masters/ComplaintTypeMaster/GetComplaintTypeList?pageNo=1&pageSize=50",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"masters",
+												"ComplaintTypeMaster",
+												"GetComplaintTypeList"
+											],
+											"query": [
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "50"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "51068262-50006c60-0d0f-4770-b6d3-b2804134e297"
+						},
+						{
+							"name": "ComplaintTypeMaster",
+							"item": [
+								{
+									"name": "GetComplaintTypeList",
+									"id": "51068262-d93d8fc9-a4e8-4668-9a61-fc65ea63c115",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/ComplaintTypeMaster/GetComplaintTypeList?pageNo=1&pageSize=10",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"ComplaintTypeMaster",
+												"GetComplaintTypeList"
+											],
+											"query": [
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "IsComplaintTypeExist",
+									"id": "51068262-b1c81b72-8392-47bc-8410-992ed6987dce",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/ComplaintTypeMaster/IsComplaintTypeExist?value=Gas Leak&ComplaintTypeId=0&DepartmentId=5",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"ComplaintTypeMaster",
+												"IsComplaintTypeExist"
+											],
+											"query": [
+												{
+													"key": "value",
+													"value": "Gas Leak"
+												},
+												{
+													"key": "ComplaintTypeId",
+													"value": "0"
+												},
+												{
+													"key": "DepartmentId",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "IsActiveComplaintType",
+									"id": "51068262-eba96495-c396-4f39-995c-9b1ad6a169d8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/ComplaintTypeMaster/IsActiveComplaintType/:ComplaintTypeId",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"ComplaintTypeMaster",
+												"IsActiveComplaintType",
+												":ComplaintTypeId"
+											],
+											"variable": [
+												{
+													"id": "1d687a36-ee85-4497-b9bc-2b72bc5927c0",
+													"key": "ComplaintTypeId",
+													"value": "123"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "AddEditComplaintTypeDetails",
+									"id": "51068262-91bfe973-d396-459a-963e-fe0a64b6801a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <your_token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"DepartmentId\": 5,\n    \"ComplaintsType\": \"Gas Leak\",\n    \"Remarks\": \"New complaint type\",\n    \"Note\": \"Created via API\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/ComplaintTypeMaster/AddEditComplaintTypeDetails",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"ComplaintTypeMaster",
+												"AddEditComplaintTypeDetails"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "51068262-28870818-9a32-402c-a1d3-47b3048629da"
+						}
+					],
+					"id": "51068262-d959f01f-1dc7-4919-bf0b-192b6e78800f"
+				},
+				{
 					"name": "health-check",
 					"id": "51068262-59a7fa2f-e795-4e1e-924a-3ebdc235b7cf",
 					"protocolProfileBehavior": {
