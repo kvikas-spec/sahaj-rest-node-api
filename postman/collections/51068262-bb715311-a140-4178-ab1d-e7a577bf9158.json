@@ -32577,6 +32577,43 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "51068262-eb094118-f29e-48a5-9b0e-144549a79475",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"BillingAddress\": \"123 Main Street, City\"\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/GAwiseBillingAddress/AddGAwiseBillAddress",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"GAwiseBillingAddress",
+										"AddGAwiseBillAddress"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "51068262-94af1685-7a2b-4f48-90bd-103c190e9da8"
