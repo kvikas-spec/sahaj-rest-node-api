@@ -32420,7 +32420,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/ComplaintReceivingCells/GetEditvalue?ID={{InChargeComplaintReceivingCellsId}}",
+									"raw": "{{api_gateway_url}}/masters/ComplaintReceivingCells/GetEditvalue?ID=3",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -32432,7 +32432,7 @@
 									"query": [
 										{
 											"key": "ID",
-											"value": "{{InChargeComplaintReceivingCellsId}}"
+											"value": "3"
 										}
 									]
 								}
@@ -32516,13 +32516,11 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/api/v1/masters/ComplaintReceivingCells/IsActiveComplaintReceivingCellsDetails",
+									"raw": "{{api_gateway_url}}/masters/ComplaintReceivingCells/IsActiveComplaintReceivingCellsDetails",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
-										"api",
-										"v1",
 										"masters",
 										"ComplaintReceivingCells",
 										"IsActiveComplaintReceivingCellsDetails"
