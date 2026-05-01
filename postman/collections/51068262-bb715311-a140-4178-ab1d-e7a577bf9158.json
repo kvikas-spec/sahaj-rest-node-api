@@ -32389,13 +32389,11 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/api/v1/masters/ComplaintReceivingCells/GetComplaintReceivingCellsList",
+									"raw": "{{api_gateway_url}}/masters/ComplaintReceivingCells/GetComplaintReceivingCellsList",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
-										"api",
-										"v1",
 										"masters",
 										"ComplaintReceivingCells",
 										"GetComplaintReceivingCellsList"
@@ -32422,13 +32420,11 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/api/v1/masters/ComplaintReceivingCells/GetEditvalue?ID={{InChargeComplaintReceivingCellsId}}",
+									"raw": "{{api_gateway_url}}/masters/ComplaintReceivingCells/GetEditvalue?ID={{InChargeComplaintReceivingCellsId}}",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
-										"api",
-										"v1",
 										"masters",
 										"ComplaintReceivingCells",
 										"GetEditvalue"
@@ -32475,13 +32471,11 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/api/v1/masters/ComplaintReceivingCells/AddEditComplaintReceivingCellsDetails",
+									"raw": "{{api_gateway_url}}/masters/ComplaintReceivingCells/AddEditComplaintReceivingCellsDetails",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
-										"api",
-										"v1",
 										"masters",
 										"ComplaintReceivingCells",
 										"AddEditComplaintReceivingCellsDetails"
