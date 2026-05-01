@@ -1,0 +1,79 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}/billing-payment/refund/request-list?sEcho=1&iDisplayLength=10&iDisplayStart=0&iSortCol_0=2&sSortDir_0=desc&IsFilter=1"
+  method: GET
+  queryParams:
+    - key: ConsumerNumber
+      value: "3000000128"
+      disabled: true
+    - key: sEcho
+      value: "1"
+    - key: iDisplayLength
+      value: "10"
+    - key: iDisplayStart
+      value: "0"
+    - key: iSortCol_0
+      value: "2"
+    - key: sSortDir_0
+      value: desc
+    - key: IsFilter
+      value: "1"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1769772019524-266495
+    content-type: application/json; charset=utf-8
+    Content-Length: "665"
+    etag: W/"299-9bUQgCmPid2pnX4S5i22cP7ajvM"
+    Vary: Accept-Encoding
+    date: Fri, 30 Jan 2026 11:20:19 GMT
+    connection: close
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "sEcho": "1",
+              "iTotalRecords": 1,
+              "iTotalDisplayRecords": 1,
+              "aaData": [
+                  {
+                      "SrNo": "1",
+                      "RefundRequestId": "136",
+                      "ConsumerNumber": "3000294782",
+                      "BankId": "10056",
+                      "BankName": "AHMEDABAD MERCANTILE CO-OP BANK LTD ",
+                      "Branch": "2121asdas",
+                      "BankAccountNumber": "121",
+                      "IFSCCode": "2332132142421",
+                      "BankAccountHolderName": "`2`1qwa",
+                      "ConnectionStatusId": "1",
+                      "RejectionReason": null,
+                      "ConnectionStatusName": "Connected (REGULAR)",
+                      "MeterReading": 0,
+                      "MeterReadingDate": "2022-01-01T00:00:00.000Z",
+                      "MeterReadingDateStr": "01-01-2022",
+                      "MeterSerialNo": "212134e3321321",
+                      "RequestNumber": "3000000128",
+                      "FullName": "New Test",
+                      "Address": "ff Society, Nr. Priya Flat, B/H S.S Hospital"
+                  }
+              ]
+          }
+      }
+order: 1000

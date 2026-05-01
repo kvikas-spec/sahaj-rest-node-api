@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/GetWardListwithAllWards"
+method: GET
+order: 18000

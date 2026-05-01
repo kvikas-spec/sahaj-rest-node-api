@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/DisapproveForm14/:id"
+method: DELETE
+headers:
+  Content-Type: application/json
+  Authorization: Bearer YOUR_JWT_TOKEN
+queryParams:
+  - key: isdisconnectedpage
+    value: ""
+    disabled: true
+pathVariables:
+  id: "70155"
+body:
+  type: text
+  content: |-
+    {
+        "IsPrepaidMeter": false, 
+        "ConsumerNumber": 2600503322
+    }
+order: 13000

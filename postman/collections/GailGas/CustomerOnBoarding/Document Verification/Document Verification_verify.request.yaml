@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/document-verifyndreject"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "CustomerId": 280640,
+      "ApplicationNumber": "A3000298069",
+      "IsVerification": true
+    }
+order: 5000

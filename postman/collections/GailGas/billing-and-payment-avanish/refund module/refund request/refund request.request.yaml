@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/refund/refund-request/"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "ConsumerNumber": "511902688",
+      "RefundRequestId": "0",
+      "BankId": "2",
+      "Branch": "Connaught Place",
+      "IFSCCode": "SBIN0000123",
+      "BankAccountNumber": "123456789012",
+      "BankAccountHolderName": "AVANISH ",
+      "RefundReason": "Excess payment",
+      "RefundAmount":"2500",
+      "remarks": "Refund requested due to over billing",
+      "fileUrls":["fileUrl1", "fileUrl2"]
+    }
+examples: ./.resources/refund request.resources/examples
+order: 2000

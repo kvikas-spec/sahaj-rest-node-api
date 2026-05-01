@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/meter-reading/RejectLockConsumption/:MeterReadingId"
+method: PATCH
+pathVariables:
+  MeterReadingId: "321024"
+body:
+  type: json
+  content: |
+    {
+      "MeterReadingId": 321024,
+      "MeterReadingRejectionId": 7,
+      "OthersReason": "Incorrect meter reading captured during field visit."
+    }
+order: 4000

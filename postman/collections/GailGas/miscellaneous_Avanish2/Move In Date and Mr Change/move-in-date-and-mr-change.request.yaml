@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/move-in-date-and-mr-change/"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "id":3000294786
+    }
+examples: ./.resources/move-in-date-and-mr-change.resources/examples
+order: 2000

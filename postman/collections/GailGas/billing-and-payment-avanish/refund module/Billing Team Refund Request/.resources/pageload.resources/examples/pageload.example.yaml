@@ -1,0 +1,261 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}/billing-payment/refund/request-list?IsFilter=&ConsumerNumber&sEcho=1&iDisplayStart=0&iDisplayLength=10&iSortCol_0=3&sSortDir_0=asc"
+  method: GET
+  queryParams:
+    IsFilter: ""
+    ConsumerNumber: null
+    sEcho: "1"
+    iDisplayStart: "0"
+    iDisplayLength: "10"
+    iSortCol_0: "3"
+    sSortDir_0: asc
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770031438310-919433
+    content-type: application/json; charset=utf-8
+    etag: W/"14c9-vYvHnUt0bY1VTPby/N6pT/YPI24"
+    Vary: Accept-Encoding
+    content-encoding: br
+    date: Mon, 02 Feb 2026 11:23:58 GMT
+    connection: close
+    Content-Length: "1239"
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "sEcho": "1",
+              "iTotalRecords": 15,
+              "iTotalDisplayRecords": 15,
+              "aaData": [
+                  {
+                      "SrNo": "2",
+                      "RefundRequestId": "131",
+                      "ConsumerNumber": "3000293870",
+                      "BankId": "10006",
+                      "BankName": "BANK OF BARODA",
+                      "Branch": "BOB BRANCH",
+                      "BankAccountNumber": "346369546546",
+                      "IFSCCode": "BOBIFSC0003",
+                      "BankAccountHolderName": "BANK HOLDER",
+                      "ConnectionStatusId": "1",
+                      "RejectionReason": null,
+                      "ConnectionStatusName": "Connected",
+                      "MeterReading": 100,
+                      "MeterReadingDate": "2023-07-05T00:00:00.000Z",
+                      "MeterReadingDateStr": "05-07-2023",
+                      "MeterSerialNo": "5435FGDGHF",
+                      "RequestNumber": "3000000124",
+                      "FullName": "test8 test",
+                      "Address": "25 test, sama"
+                  },
+                  {
+                      "SrNo": "3",
+                      "RefundRequestId": "133",
+                      "ConsumerNumber": "3000293871",
+                      "BankId": "10006",
+                      "BankName": "BANK OF BARODA",
+                      "Branch": "BOB BRANCH",
+                      "BankAccountNumber": "34534534534",
+                      "IFSCCode": "BOBIFSC0044",
+                      "BankAccountHolderName": "BOB BANK HOLDER",
+                      "ConnectionStatusId": "1",
+                      "RejectionReason": null,
+                      "ConnectionStatusName": "Connected (NEW CONNECTION)",
+                      "MeterReading": 10,
+                      "MeterReadingDate": "2023-07-05T00:00:00.000Z",
+                      "MeterReadingDateStr": "05-07-2023",
+                      "MeterSerialNo": "DZFD3456",
+                      "RequestNumber": "3000000125",
+                      "FullName": "test9 test",
+                      "Address": "26 test, sama"
+                  },
+                  {
+                      "SrNo": "4",
+                      "RefundRequestId": "134",
+                      "ConsumerNumber": "3000294041",
+                      "BankId": "10044",
+                      "BankName": "BANK OF MADURA",
+                      "Branch": "BOM111",
+                      "BankAccountNumber": "3456486546345",
+                      "IFSCCode": "BOMIFSC0088",
+                      "BankAccountHolderName": "BOM BANK NAME4324",
+                      "ConnectionStatusId": "2",
+                      "RejectionReason": null,
+                      "ConnectionStatusName": "NotConnected (RECONNECTION)",
+                      "MeterReading": 0,
+                      "MeterReadingDate": null,
+                      "MeterReadingDateStr": "",
+                      "MeterSerialNo": null,
+                      "RequestNumber": "3000000126",
+                      "FullName": "test dummy",
+                      "Address": "34 ggxgxhx, bxbxnnxxn"
+                  },
+                  {
+                      "SrNo": "11",
+                      "RefundRequestId": "148",
+                      "ConsumerNumber": "3000294307",
+                      "BankId": "10040",
+                      "BankName": "ABN AMRO BANK N.V.",
+                      "Branch": "ABN",
+                      "BankAccountNumber": "4976233232362",
+                      "IFSCCode": "BOB456588998",
+                      "BankAccountHolderName": "sujal vdh",
+                      "ConnectionStatusId": "2",
+                      "RejectionReason": null,
+                      "ConnectionStatusName": "NotConnected (REGULAR)",
+                      "MeterReading": null,
+                      "MeterReadingDate": null,
+                      "MeterReadingDateStr": "",
+                      "MeterSerialNo": null,
+                      "RequestNumber": "3000000140",
+                      "FullName": "sujal vdh",
+                      "Address": "536 bzbx, bxxbx"
+                  },
+                  {
+                      "SrNo": "5",
+                      "RefundRequestId": "136",
+                      "ConsumerNumber": "3000294782",
+                      "BankId": "10056",
+                      "BankName": "AHMEDABAD MERCANTILE CO-OP BANK LTD ",
+                      "Branch": "2121asdas",
+                      "BankAccountNumber": "121",
+                      "IFSCCode": "2332132142421",
+                      "BankAccountHolderName": "`2`1qwa",
+                      "ConnectionStatusId": "1",
+                      "RejectionReason": null,
+                      "ConnectionStatusName": "Connected (REGULAR)",
+                      "MeterReading": 0,
+                      "MeterReadingDate": "2022-01-01T00:00:00.000Z",
+                      "MeterReadingDateStr": "01-01-2022",
+                      "MeterSerialNo": "212134e3321321",
+                      "RequestNumber": "3000000128",
+                      "FullName": "New Test",
+                      "Address": "ff Society, Nr. Priya Flat, B/H S.S Hospital"
+                  },
+                  {
+                      "SrNo": "7",
+                      "RefundRequestId": "138",
+                      "ConsumerNumber": "3000295271",
+                      "BankId": "10055",
+                      "BankName": "ABHYUDAYA CO-OP BANK LTD ",
+                      "Branch": "Test",
+                      "BankAccountNumber": "23232323",
+                      "IFSCCode": "FASd",
+                      "BankAccountHolderName": "Teast",
+                      "ConnectionStatusId": "1",
+                      "RejectionReason": null,
+                      "ConnectionStatusName": "Connected",
+                      "MeterReading": 4565,
+                      "MeterReadingDate": "2023-07-20T00:00:00.000Z",
+                      "MeterReadingDateStr": "20-07-2023",
+                      "MeterSerialNo": "2323",
+                      "RequestNumber": "3000000130",
+                      "FullName": "Pankaj Mandod Lalva",
+                      "Address": "12 12, 12"
+                  },
+                  {
+                      "SrNo": "6",
+                      "RefundRequestId": "137",
+                      "ConsumerNumber": "3000295272",
+                      "BankId": "10040",
+                      "BankName": "ABN AMRO BANK N.V.",
+                      "Branch": "Test",
+                      "BankAccountNumber": "34343483",
+                      "IFSCCode": "test",
+                      "BankAccountHolderName": "Test",
+                      "ConnectionStatusId": "1",
+                      "RejectionReason": null,
+                      "ConnectionStatusName": "Connected (REGULAR)",
+                      "MeterReading": 0,
+                      "MeterReadingDate": "2023-07-12T00:00:00.000Z",
+                      "MeterReadingDateStr": "12-07-2023",
+                      "MeterSerialNo": "6598",
+                      "RequestNumber": "3000000129",
+                      "FullName": "Hemal patel weg",
+                      "Address": "1212 xcxvcv, tarsali"
+                  },
+                  {
+                      "SrNo": "9",
+                      "RefundRequestId": "146",
+                      "ConsumerNumber": "3000295274",
+                      "BankId": "10040",
+                      "BankName": "ABN AMRO BANK N.V.",
+                      "Branch": "ABN",
+                      "BankAccountNumber": "4965326562356",
+                      "IFSCCode": "BOBt4238434u",
+                      "BankAccountHolderName": "Hemal Patel 1212",
+                      "ConnectionStatusId": "2",
+                      "RejectionReason": null,
+                      "ConnectionStatusName": "NotConnected (NEW CONNECTION)",
+                      "MeterReading": null,
+                      "MeterReadingDate": null,
+                      "MeterReadingDateStr": "",
+                      "MeterSerialNo": null,
+                      "RequestNumber": "3000000138",
+                      "FullName": "Hemal patel 1212",
+                      "Address": "21212 1213243, tarsali"
+                  },
+                  {
+                      "SrNo": "12",
+                      "RefundRequestId": "150",
+                      "ConsumerNumber": "3000295472",
+                      "BankId": "10040",
+                      "BankName": "ABN AMRO BANK N.V.",
+                      "Branch": "ABN",
+                      "BankAccountNumber": "4968665665665",
+                      "IFSCCode": "BOB468956569",
+                      "BankAccountHolderName": "Niraj",
+                      "ConnectionStatusId": "2",
+                      "RejectionReason": null,
+                      "ConnectionStatusName": "NotConnected (TEMPORARY CLOSE)",
+                      "MeterReading": null,
+                      "MeterReadingDate": null,
+                      "MeterReadingDateStr": "",
+                      "MeterSerialNo": null,
+                      "RequestNumber": "3000000141",
+                      "FullName": "Niraj6F6 dRaBa9lx3A",
+                      "Address": "1 8zDVgY2oqK, mTT9PbPJgL"
+                  },
+                  {
+                      "SrNo": "13",
+                      "RefundRequestId": "151",
+                      "ConsumerNumber": "3000295474",
+                      "BankId": "10040",
+                      "BankName": "ABN AMRO BANK N.V.",
+                      "Branch": "BOBDS",
+                      "BankAccountNumber": "4946556565665",
+                      "IFSCCode": "BOBejweo2121",
+                      "BankAccountHolderName": "Niraj",
+                      "ConnectionStatusId": "2",
+                      "RejectionReason": null,
+                      "ConnectionStatusName": "NotConnected (REGULAR)",
+                      "MeterReading": null,
+                      "MeterReadingDate": null,
+                      "MeterReadingDateStr": "",
+                      "MeterSerialNo": null,
+                      "RequestNumber": "3000000142",
+                      "FullName": "Niraj6F677 rO3pOeq8Yh",
+                      "Address": "1 tLVwyhOs6X, 3vKFUENVSo"
+                  }
+              ]
+          }
+      }
+order: 1000

@@ -1,0 +1,26 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/add-piping-extra"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "ConsumerNumber": "3000298076",
+      "RateId": 54,
+      "PipingUnit": "25",
+      "TotalAmount": "700",
+      "CGST": "63",
+      "SGST": "63",
+      "CGSTper": "9.00",
+      "SGSTper": "9.00",
+      "PayableAmount": "826.00",
+      "ExtraPipingdetailsList": [
+        {
+          "MiscRateId": "54",
+          "ExtraPipingUnit": "2",
+          "Amount": "700"
+        }
+      ]
+    }
+examples: ./.resources/Feasibility and extra piping estimation_Add Copy.resources/examples
+order: 2000

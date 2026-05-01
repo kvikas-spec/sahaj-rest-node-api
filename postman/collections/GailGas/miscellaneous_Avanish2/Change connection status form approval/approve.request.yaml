@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/approved-form13/2"
+method: GET
+body:
+  type: urlencoded
+order: 4000

@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/gas-in/list?pageNo=1&IsFilter=1&ConsumerNumber=&StatusId=9&AgencyTypeId=&AgencyUserId=1&pageSize=&Address="
+method: GET
+queryParams:
+  pageNo: "1"
+  IsFilter: "1"
+  ConsumerNumber: ""
+  StatusId: "9"
+  AgencyTypeId: ""
+  AgencyUserId: "1"
+  pageSize: ""
+  Address: ""
+order: 4000

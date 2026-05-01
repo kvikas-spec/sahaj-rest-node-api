@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/cng-operation/retrofitter-vehicle-dealer/reject-customer-documents"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "customerRegistrationId": 2,
+        "rejectionReason": "Invalid documents submitted"
+    }
+examples: ./.resources/rejection.resources/examples
+order: 3000

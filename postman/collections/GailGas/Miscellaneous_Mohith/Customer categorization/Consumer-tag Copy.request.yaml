@@ -1,0 +1,89 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/consumer-tag"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ApplicationNumber
+      value: "3000297958"
+    - type: text
+      key: TransactionId
+      value: "0"
+    - type: text
+      key: ConsumerId
+      value: "170607"
+    - type: text
+      key: ConsumerRegistrationId
+      value: "0"
+    - type: text
+      key: ConsumerNumber
+      value: "3000297958"
+    - type: text
+      key: Profession
+      value: ""
+    - type: text
+      key: OwnerName
+      value: ""
+    - type: text
+      key: OwnerPhoneNumber
+      value: ""
+    - type: text
+      key: AllowedStatus
+      value: "false"
+    - type: text
+      key: IsStatusChange
+      value: "false"
+    - type: text
+      key: FirstName
+      value: HM
+    - type: text
+      key: MiddleName
+      value: HM
+    - type: text
+      key: Surname
+      value: ""
+    - type: text
+      key: MobileNumber
+      value: "1234123456"
+    - type: text
+      key: Address
+      value: Test,Test,AHMED
+    - type: text
+      key: City
+      value: AHMED
+    - type: text
+      key: PinCode
+      value: "123456"
+    - type: text
+      key: EmailId
+      value: ""
+    - type: text
+      key: IsBulk
+      value: "false"
+    - type: text
+      key: IsBlock
+      value: "false"
+    - type: text
+      key: IsUrgent
+      value: "false"
+    - type: text
+      key: NonFeasible
+      value: "false"
+    - type: text
+      key: CustomerNotWillingToTakeGas
+      value: "false"
+    - type: text
+      key: TagID
+      value: "4"
+    - type: text
+      key: BuilderBPNumber
+      value: "0"
+    - type: text
+      key: Remark
+      value: Remaks text
+    - type: file
+      key: file
+      src:
+        - /home/mohithharibabu/Downloads/dummy_adhar.jpg
+order: 2000

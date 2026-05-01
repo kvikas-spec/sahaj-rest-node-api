@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/payment/UploadExcelForChequeList"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: file
+      src:
+        - /home/vikaskumar/Downloads/ChequeList (1).xlsx
+order: 3000

@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/approve-selected"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "ids": [2]
+    }
+order: 3000

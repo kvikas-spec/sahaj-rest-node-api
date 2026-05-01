@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/form12CurrentDetail"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "id": 3000298030
+    }
+order: 1000

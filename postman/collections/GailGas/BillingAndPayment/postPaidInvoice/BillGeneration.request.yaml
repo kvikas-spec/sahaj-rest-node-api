@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/BillGeneration/:DemanadGenerateRequestId"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Cookie: connect.sid=YOUR_SESSION_COOKIE
+pathVariables:
+  DemanadGenerateRequestId: "67974"
+body:
+  type: json
+  content: ""
+order: 15000

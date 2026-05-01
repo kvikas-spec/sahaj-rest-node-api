@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/upload-registration-documents-BPNumber"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ApplicationNumber
+      value: A3000298076
+    - type: text
+      key: DocumentID
+      value: 23,28
+    - type: text
+      key: DocumentNumber
+      value: Doc1,Doc2
+    - type: text
+      key: file_url
+      value: dummypathurl/
+    - type: text
+      key: file_url
+      value: dummypathurl/
+order: 4000

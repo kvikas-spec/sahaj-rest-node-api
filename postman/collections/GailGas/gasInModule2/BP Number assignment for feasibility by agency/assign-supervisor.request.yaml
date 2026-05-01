@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/assign-supervisor/"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "ids": [
+            71810,
+            71809,
+            71808
+        ],
+        "supervisorId": 10227
+    }
+order: 4000

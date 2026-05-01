@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/MruUpdateBulkUpload"
+method: POST
+headers:
+  Authorization: Bearer <ACCESS_TOKEN>
+body:
+  type: formdata
+  content:
+    - type: file
+      key: file
+      src:
+        - /home/vikaskumar/Downloads/MRUUpdateInBulk (14) 1.xlsx
+    - type: text
+      key: NewWardId
+      value: "7"
+order: 1000

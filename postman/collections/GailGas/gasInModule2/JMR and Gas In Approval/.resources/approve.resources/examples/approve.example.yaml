@@ -1,0 +1,75 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/update-jmr-approval"
+  method: POST
+  body:
+    type: formdata
+    content:
+      - type: text
+        key: ConsumerNumber
+        value: " 4000331755"
+      - type: text
+        key: ISUpdateMeterDetails
+        value: "false"
+      - type: text
+        key: MeterSerialNo
+        value: GAIL-MTR-88291
+      - type: text
+        key: MeterCompanyId
+        value: "5"
+      - type: text
+        key: MeterType
+        value: LHS
+      - type: text
+        key: MeterReading
+        value: "0"
+      - type: text
+        key: TransactionDate
+        value: 2026-01-22
+      - type: text
+        key: JMRDate
+        value: 2026-01-22
+      - type: text
+        key: WardId
+        value: "12"
+      - type: text
+        key: MeterDetailsRemarks
+        value: Meter installed successfully
+      - type: text
+        key: MeterRemarks
+        value: JMR approved
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1769087695222-138813
+    content-type: application/json; charset=utf-8
+    Content-Length: "90"
+    etag: W/"5a-UcOr8YyRlpiwOjDxzX59wxRPjVY"
+    date: Thu, 22 Jan 2026 13:14:55 GMT
+    connection: close
+    Vary: Accept-Encoding
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "message": "JMR approved successfully",
+          "data": {
+              "transactionId": 1341824688
+          }
+      }
+order: 1000

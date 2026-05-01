@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/AuthorizationManagement/GetMyAccess"
+method: GET
+order: 3000

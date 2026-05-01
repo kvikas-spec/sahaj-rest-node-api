@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/meter-reading/SearchDemandMaster?ConsumerNum=3000298190&CycleNumber=2601"
+method: GET
+queryParams:
+  ConsumerNum: "3000298190"
+  CycleNumber: "2601"
+body:
+  type: text
+  content: |-
+    {
+        "TransactionDate":""
+    }
+order: 7000

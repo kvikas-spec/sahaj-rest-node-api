@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/AssignBillSelected"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "ids": ["7064738"],
+        "UserId":170944,
+        "AssignedBillDate":"03-02-2026"
+    }
+order: 3000

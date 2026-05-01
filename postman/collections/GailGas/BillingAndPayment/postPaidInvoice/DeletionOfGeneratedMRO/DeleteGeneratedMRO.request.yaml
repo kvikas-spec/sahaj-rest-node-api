@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/DeleteGeneratedMRO"
+method: POST
+headers:
+  Content-Type: application/json
+  Cookie: connect.sid=YOUR_SESSION_COOKIE_HERE
+body:
+  type: json
+  content: |-
+    {
+      "DemandMasterId": 7543875,
+      "ConsumerNumber": 0,
+      "Cycle": 2601
+    }
+order: 2000

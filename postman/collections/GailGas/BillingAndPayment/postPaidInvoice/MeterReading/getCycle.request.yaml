@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/meter-reading/getCycle?ConsNo=3000038663"
+method: GET
+queryParams:
+  ConsNo: "3000038663"
+body:
+  type: text
+  content: |-
+    {
+        "TransactionDate":"2025-06-21T00:00:00.000Z"
+    }
+order: 6000

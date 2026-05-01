@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/meter-reading/GetLastReadingDateByConsumerNo?ConsNo=3000038711&CycleNo=2601"
+method: GET
+headers:
+  Authorization: Bearer <ACCESS_TOKEN>
+queryParams:
+  ConsNo: "3000038711"
+  CycleNo: "2601"
+body:
+  type: formdata
+  content: []
+order: 3000

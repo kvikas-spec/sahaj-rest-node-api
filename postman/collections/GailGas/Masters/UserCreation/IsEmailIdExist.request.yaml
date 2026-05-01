@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Users/IsEmailIdExist?value=MANISH.SAIN@GAIL.CO.IN&encUserID=0"
+method: GET
+headers:
+  Content-Type: application/json
+queryParams:
+  value: MANISH.SAIN@GAIL.CO.IN
+  encUserID: "0"
+body:
+  type: json
+  content: |-
+    {
+        "value": "test@example.com",
+        "encUserID": "0"
+    }
+order: 3000

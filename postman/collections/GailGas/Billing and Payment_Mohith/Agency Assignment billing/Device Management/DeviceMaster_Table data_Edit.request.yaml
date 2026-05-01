@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/addnewdevice"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "IsActive": false,
+
+      "AgencyIdHidden": 20055,
+      "AgencyId": 20055,
+      "DeviceName": "Device name updated",
+      "DeviceCode": "Device code",
+      "DeviceModel": "Device model",
+      "IMEI": "111",
+      "IMEI2": "111",
+      "Remarks": "NA"
+    }
+order: 3000

@@ -1,0 +1,25 @@
+$kind: http-request
+name: New Request
+url: https://admintest.gailgas-png.in/Meter-Reading
+method: POST
+headers:
+  accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+  accept-language: en-US,en;q=0.9
+  cache-control: max-age=0
+  content-length: "28174"
+  origin: https://admintest.gailgas-png.in
+  priority: u=0, i
+  referer: https://admintest.gailgas-png.in/
+  sec-ch-ua: '"Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"'
+  sec-ch-ua-mobile: ?0
+  sec-ch-ua-platform: '"Linux"'
+  sec-fetch-dest: document
+  sec-fetch-mode: navigate
+  sec-fetch-site: same-origin
+  upgrade-insecure-requests: "1"
+  user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+  Cookie: ASP.NET_SessionId=s4amt2qkjzuaou45wwtlppg1; __RequestVerificationToken=ExLn7SPIpGIEIGsPReKqqbtTYgMJaeC9p3PV7is6CSuzm2vTodYoEDRgwnWoieUVIYUekfArlcY27IV98xfLWxFeYTBrrfU4GSJBJY-zvGM1; .ASPXAUTH=5C0194AF064CE80AC4FA0008AB9C40C2A1B8C3BC6295CA147EB4F0DFA1FE6A16E4B962DE8CA1FB1422136358401428365E7AE66BC716DA87D1F1D4579FCCD1555E496A6A1475421C9C0705B9622B229D78BB597E5AD169C31F632416E9B4BB3210D3B98EBABD58F29139C4B5D46D65F4CC1B0FB9DD47E0E82A8374F6EB7F750D
+body:
+  type: formdata
+  content: []
+order: 3000

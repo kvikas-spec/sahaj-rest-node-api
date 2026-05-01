@@ -1,0 +1,38 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/_MeterDetailsUpdationList?pageNo=1&pageSize=10&MeterDetailsUpdationList=1"
+method: GET
+headers:
+  Content-Type: application/json
+  Authorization: Bearer <YOUR_TOKEN>
+queryParams:
+  - key: pageNo
+    value: "1"
+  - key: pageSize
+    value: "10"
+  - key: isFilter
+    value: "110"
+    disabled: true
+  - key: meterNo
+    value: EC000078
+    disabled: true
+  - key: IsDisconnectedMeter
+    value: "1"
+    disabled: true
+  - key: isReassign
+    value: "1"
+    disabled: true
+  - key: AgencyId
+    value: "20053"
+    disabled: true
+  - key: LotNumber
+    value: "20260203002217"
+    disabled: true
+  - key: isAssignToAgency
+    value: "1"
+    disabled: true
+  - key: MeterDetailsUpdationList
+    value: "1"
+  - key: isDownload
+    value: "1"
+    disabled: true
+order: 1000

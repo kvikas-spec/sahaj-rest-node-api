@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/refund/add-billing-team/verify"
+method: POST
+body:
+  type: json
+  content: |
+    
+    {
+      "RefundRequestId": 150,
+      "IsVerification": false,
+      "RejectionReason": "hgte54tb 54tw35y566 54 tgre5t"
+    }
+examples: ./.resources/reject.resources/examples
+order: 5000

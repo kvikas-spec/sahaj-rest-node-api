@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/cng-operation/customer-registration/documents-view"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "customerRegistrationId": 6342342354235
+    }
+examples: ./.resources/on click document.resources/examples
+order: 1000

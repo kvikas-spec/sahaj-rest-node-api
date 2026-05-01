@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/bpnumberlist"
+method: GET
+queryParams:
+  - key: pageNo
+    value: "2"
+    disabled: true
+  - key: AgencyTypeId
+    value: "1"
+    disabled: true
+  - key: IsUnAssigned
+    value: "0"
+    disabled: true
+  - key: ConsumerNumber
+    value: "3000298121"
+    disabled: true
+  - key: IsFilter
+    value: "1"
+    disabled: true
+  - key: pagesize
+    value: "2"
+    disabled: true
+order: 1000

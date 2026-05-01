@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/MeterAssingAgency"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "AgencyId": 20053,
+        "ids": [
+            11660
+        ]
+    }
+order: 7000

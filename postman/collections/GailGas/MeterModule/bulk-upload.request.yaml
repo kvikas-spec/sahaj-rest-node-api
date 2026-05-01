@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/bulk-upload"
+method: POST
+headers:
+  Authorization: Bearer <TOKEN>
+body:
+  type: formdata
+  content:
+    - type: file
+      key: file
+      src:
+        - /home/vikaskumar/Downloads/MeterDetails.xlsx
+order: 4000

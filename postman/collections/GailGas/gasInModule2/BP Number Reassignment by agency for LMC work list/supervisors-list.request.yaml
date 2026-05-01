@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/supervisors/?AgencyId=1"
+method: GET
+queryParams:
+  AgencyId: "1"
+order: 6000

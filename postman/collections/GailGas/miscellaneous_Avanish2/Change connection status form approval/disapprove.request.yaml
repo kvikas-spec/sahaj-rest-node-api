@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/disapprove-form13"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "changeConnectionStatusId": 2,
+        "disapproveRemark": "Documents are incomplete and verification failed."
+    }
+examples: ./.resources/disapprove.resources/examples
+order: 3000

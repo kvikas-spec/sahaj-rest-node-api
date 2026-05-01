@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/_Form12_CurrentLst"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+        // "detail": "vikas"
+    }
+order: 23000

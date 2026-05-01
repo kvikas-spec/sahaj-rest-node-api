@@ -1,0 +1,81 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}/billing-payment/cng-operation/customer-registration/documents-view"
+  method: POST
+  body:
+    type: json
+    content: |-
+      {
+          "customerRegistrationId": 179
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770902754083-600293
+    content-type: application/json; charset=utf-8
+    Content-Length: "949"
+    etag: W/"3b5-+Gk+ZlgiFqZWgyRawbWVMwVqULk"
+    Vary: Accept-Encoding
+    date: Thu, 12 Feb 2026 13:25:54 GMT
+    connection: close
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "CustomerRegistrationId": "179",
+              "CustomerName": "Jeevan Patel",
+              "MobileNumber": "9836543543",
+              "VehicleNumber": "GJ00000069",
+              "Address": "T02/ Test apartment near test circle",
+              "GAId": 1,
+              "Files": [
+                  {
+                      "Year": 2024,
+                      "DocumentName": "image_20241011_072120.jpeg",
+                      "DocumentExtension": "jpeg",
+                      "DocumentType": "ID Proof"
+                  },
+                  {
+                      "Year": 2024,
+                      "DocumentName": "image3_20241011_072120.jpeg",
+                      "DocumentExtension": "jpeg",
+                      "DocumentType": "Address Proof"
+                  },
+                  {
+                      "Year": 2024,
+                      "DocumentName": "image4_20241011_072120.jpeg",
+                      "DocumentExtension": "jpeg",
+                      "DocumentType": "Certified Invoice"
+                  },
+                  {
+                      "Year": 2024,
+                      "DocumentName": "file-example_PDF_1MB_20241011_072120.pdf",
+                      "DocumentExtension": "pdf",
+                      "DocumentType": "Copy of Original RC with b EXTRACT-FORM"
+                  },
+                  {
+                      "Year": 2024,
+                      "DocumentName": "file-example_PDF_500_kB_20241011_072120.pdf",
+                      "DocumentExtension": "pdf",
+                      "DocumentType": "An affidavit from CNG vehicle owner declaring that all the documents and information submitted by them are correct."
+                  }
+              ]
+          }
+      }
+order: 1000

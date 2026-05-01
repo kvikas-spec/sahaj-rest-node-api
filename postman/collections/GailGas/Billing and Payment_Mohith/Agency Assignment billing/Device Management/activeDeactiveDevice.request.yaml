@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/activeDeactiveDevice"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "Id": 70035
+    }
+order: 4000

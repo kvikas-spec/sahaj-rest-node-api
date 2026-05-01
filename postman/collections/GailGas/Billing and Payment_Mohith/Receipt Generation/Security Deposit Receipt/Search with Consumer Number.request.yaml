@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/getCustomerFromApplicationNo"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "consumerNumber":3000298361
+    }
+order: 1000

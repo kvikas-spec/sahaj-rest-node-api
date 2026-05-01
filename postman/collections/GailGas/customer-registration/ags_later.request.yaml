@@ -1,0 +1,31 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/Agency-Master"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer <TOKEN>
+body:
+  type: json
+  content: |-
+    {
+      "ConsumerNumber": "CN123456",
+      "CustomerMiscDebitDetailsId": 0,
+      "ISUpdate": false,
+      "PipingUnit": 1,
+      "ExtraPipingDetails": [
+        {
+          "RowNo": 0,
+          "MiscRateId": 3,
+          "Rate": 150,
+          "ExtraPipingUnit": 10,
+          "Amount": 1500
+        }
+      ],
+      "TotalAmount": 1500,
+      "CGSTper": 9,
+      "CGST": 135,
+      "SGSTper": 9,
+      "SGST": 135,
+      "PayableAmount": 1770
+    }
+order: 3000

@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/reassign-agency/"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "ids": [
+            10224,
+            10225
+        ],
+        "agencyId": 30061
+    }
+order: 5000

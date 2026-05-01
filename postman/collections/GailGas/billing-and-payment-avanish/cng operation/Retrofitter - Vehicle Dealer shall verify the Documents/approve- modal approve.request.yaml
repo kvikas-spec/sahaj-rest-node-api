@@ -1,0 +1,12 @@
+$kind: http-request
+name: approve/ modal approve
+url: "{{api_gateway_url}}/billing-payment/cng-operation/retrofitter-vehicle-dealer/approve-customer-documents"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "customerRegistrationId": 7
+    }
+examples: ./.resources/approve- modal approve.resources/examples
+order: 4000

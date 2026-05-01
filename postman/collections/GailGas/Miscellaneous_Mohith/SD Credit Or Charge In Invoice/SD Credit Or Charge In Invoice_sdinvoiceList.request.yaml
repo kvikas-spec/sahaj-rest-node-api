@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/sd-invoice?pagesize=10&pageNo=1"
+method: GET
+queryParams:
+  - key: pagesize
+    value: "10"
+  - key: IsFilter
+    value: "1"
+    disabled: true
+  - key: pageNo
+    value: "1"
+  - key: ConsumerNumber
+    value: "3000294726"
+    disabled: true
+body:
+  type: formdata
+  content: []
+order: 1000

@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/chkDeviceMapping?UserId=22&DeviceId=30024"
+method: GET
+queryParams:
+  - key: UserId
+    value: "22"
+  - key: DeviceId
+    value: "30024"
+  - key: DevicemappingId
+    value: "3"
+    disabled: true
+order: 7000

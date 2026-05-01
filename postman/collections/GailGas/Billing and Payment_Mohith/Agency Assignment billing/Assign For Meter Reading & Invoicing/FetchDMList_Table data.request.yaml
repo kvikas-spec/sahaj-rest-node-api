@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/ManageDMList?isFilter=1&MruId=&AreaId=&AgencyId=44&pageNo=2&pagesize=1"
+method: GET
+queryParams:
+  - key: isFilter
+    value: "1"
+  - key: MruId
+    value: ""
+  - key: AreaId
+    value: ""
+  - key: BpNumber
+    value: ""
+    disabled: true
+  - key: search
+    value: Anand
+    disabled: true
+  - key: AgencyId
+    value: "44"
+  - key: pageNo
+    value: "2"
+  - key: pagesize
+    value: "1"
+order: 2000

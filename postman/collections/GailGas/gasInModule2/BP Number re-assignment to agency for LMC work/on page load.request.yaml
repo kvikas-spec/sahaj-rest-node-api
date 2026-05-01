@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/bp-number-reassignment-lmc/?pageNo=1&AgencyTypeId=&ConsumerNumber=&IsFilter=0&Address=&pageSize=10"
+method: GET
+queryParams:
+  pageNo: "1"
+  AgencyTypeId: ""
+  ConsumerNumber: ""
+  IsFilter: "0"
+  Address: ""
+  pageSize: "10"
+examples: ./.resources/on page load.resources/examples
+order: 1000

@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/refund/refund-rejected-rejected-list?sEcho=1&iDisplayStart=0&iDisplayLength=10&iSortCol_0=3&sSortDir_0=asc&IsFilter=1&ConsumerNumber=3000294796"
+method: GET
+queryParams:
+  sEcho: "1"
+  iDisplayStart: "0"
+  iDisplayLength: "10"
+  iSortCol_0: "3"
+  sSortDir_0: asc
+  IsFilter: "1"
+  ConsumerNumber: "3000294796"
+examples: ./.resources/search.resources/examples
+order: 2000

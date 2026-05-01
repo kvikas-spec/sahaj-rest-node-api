@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/reassign-bp-number/30336/"
+method: GET
+order: 2000

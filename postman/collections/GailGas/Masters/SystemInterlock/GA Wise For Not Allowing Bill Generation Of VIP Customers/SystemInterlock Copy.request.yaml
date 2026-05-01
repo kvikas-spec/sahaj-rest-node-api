@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/SystemInterlock/ActiveDeactiveNotAllowGenerateBillOfVIPBPs/:GAId"
+method: PUT
+pathVariables:
+  GAId: "1"
+order: 2000

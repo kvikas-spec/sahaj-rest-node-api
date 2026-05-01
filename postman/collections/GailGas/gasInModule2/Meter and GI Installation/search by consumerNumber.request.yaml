@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/rfc-pending-list/?pageNo=1&IsFilter=1&ConsumerNumber=3000298337&AgencyTypeId=&AgencyUserId=&Address=&pageSize="
+method: GET
+queryParams:
+  pageNo: "1"
+  IsFilter: "1"
+  ConsumerNumber: "3000298337"
+  AgencyTypeId: ""
+  AgencyUserId: ""
+  Address: ""
+  pageSize: ""
+examples: ./.resources/search by consumerNumber.resources/examples
+order: 2000

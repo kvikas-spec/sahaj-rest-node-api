@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/DeleteMeterDetails?id=20"
+method: DELETE
+headers:
+  Content-Type: application/json
+  Authorization: Bearer YOUR_JWT_TOKEN
+queryParams:
+  - key: id
+    value: "20"
+  - key: isdisconnectedpage
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: |-
+    {
+        "IsPrepaidMeter": false, 
+        "ConsumerNumber": 18180
+    }
+order: 12000

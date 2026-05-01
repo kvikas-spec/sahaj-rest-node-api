@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/approval-form13-list/?sEcho=1&iDisplayStart=0&iDisplayLength=10&isFilter=1&wardId=2&consumerNo=&name="
+method: GET
+queryParams:
+  sEcho: "1"
+  iDisplayStart: "0"
+  iDisplayLength: "10"
+  isFilter: "1"
+  wardId: "2"
+  consumerNo: ""
+  name: ""
+order: 2000

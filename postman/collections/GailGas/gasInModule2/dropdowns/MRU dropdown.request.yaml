@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/wards/all"
+method: GET
+examples: ./.resources/MRU dropdown.resources/examples
+order: 2000

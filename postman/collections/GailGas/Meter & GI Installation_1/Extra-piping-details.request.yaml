@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/extra-piping-details-by-rfc"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+    "ConsumerNumber": 3000503350
+    }
+order: 2000

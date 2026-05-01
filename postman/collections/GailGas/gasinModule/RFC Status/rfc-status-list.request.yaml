@@ -1,0 +1,5 @@
+$kind: http-request
+name: rfc-status/list
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/rfc-status/list"
+method: GET
+order: 1000

@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/DeviceMaster?IsFilter=0"
+method: GET
+queryParams:
+  - key: IsFilter
+    value: "0"
+  - key: pageNo
+    value: "3"
+    disabled: true
+  - key: pagesize
+    value: "1"
+    disabled: true
+order: 1000

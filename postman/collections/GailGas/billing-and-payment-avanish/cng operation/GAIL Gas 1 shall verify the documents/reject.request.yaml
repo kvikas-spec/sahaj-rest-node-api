@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/cng-operation/gailgas1/reject-customer-documents"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "customerRegistrationId": 400,
+        "rejectionReason": "Documents are invalid"
+    }
+examples: ./.resources/reject.resources/examples
+order: 3000

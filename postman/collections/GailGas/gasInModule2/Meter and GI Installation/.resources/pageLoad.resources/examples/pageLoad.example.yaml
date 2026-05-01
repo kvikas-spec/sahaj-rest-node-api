@@ -1,0 +1,222 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/rfc-pending-list/?pageNo=1&IsFilter=0&ConsumerNumber=&AgencyTypeId=&AgencyUserId=&Address&pageSize"
+  method: GET
+  queryParams:
+    pageNo: "1"
+    IsFilter: "0"
+    ConsumerNumber: ""
+    AgencyTypeId: ""
+    AgencyUserId: ""
+    Address: null
+    pageSize: null
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770724431375-417178
+    content-type: application/json; charset=utf-8
+    etag: W/"f14-8s2dU6BGuPgoiJFmfI14Ob5Or6g"
+    date: Tue, 10 Feb 2026 11:53:51 GMT
+    connection: close
+    Vary: Accept-Encoding
+    Content-Encoding: br
+    Transfer-Encoding: chunked
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": [
+              {
+                  "CustomerId": "530657",
+                  "ConsumerNumber": "3000298337",
+                  "FullName": "Prudwi raj",
+                  "MobileNumber": "999474****",
+                  "Address": "456 544, 444",
+                  "StatusId": "6",
+                  "AgencyId": "30076",
+                  "SupervisorId": null,
+                  "AgencyAssignedDate": "02/10/2026",
+                  "SupervisorAssignedDate": null,
+                  "IsEdit": "false",
+                  "AgencyName": "COCO FILLER 2",
+                  "SupervisorName": "",
+                  "ISMeterStatus": "false",
+                  "ISGIStatus": "false"
+              },
+              {
+                  "CustomerId": "290644",
+                  "ConsumerNumber": "3000298074",
+                  "FullName": "Gas test5",
+                  "MobileNumber": "866546****",
+                  "Address": "34344545 Gas test5, Gas test5",
+                  "StatusId": "8",
+                  "AgencyId": "46",
+                  "SupervisorId": null,
+                  "AgencyAssignedDate": "02/06/2026",
+                  "SupervisorAssignedDate": null,
+                  "IsEdit": "false",
+                  "AgencyName": "CRD",
+                  "SupervisorName": "",
+                  "ISMeterStatus": "true",
+                  "ISGIStatus": "false"
+              },
+              {
+                  "CustomerId": "290641",
+                  "ConsumerNumber": "3000298071",
+                  "FullName": "c",
+                  "MobileNumber": "767876****",
+                  "Address": "343 gas test2, gas test2",
+                  "StatusId": "6",
+                  "AgencyId": "30071",
+                  "SupervisorId": "150857",
+                  "AgencyAssignedDate": "02/04/2026",
+                  "SupervisorAssignedDate": "02/05/2026",
+                  "IsEdit": "false",
+                  "AgencyName": "AMBA AUTO SALES AND SERVICE",
+                  "SupervisorName": "JOHN",
+                  "ISMeterStatus": "false",
+                  "ISGIStatus": "false"
+              },
+              {
+                  "CustomerId": "290640",
+                  "ConsumerNumber": "3000298070",
+                  "FullName": "gas test1",
+                  "MobileNumber": "765567****",
+                  "Address": "233 gas test1, gas test1",
+                  "StatusId": "7",
+                  "AgencyId": "30061",
+                  "SupervisorId": "160930",
+                  "AgencyAssignedDate": "02/04/2026",
+                  "SupervisorAssignedDate": "02/04/2026",
+                  "IsEdit": "false",
+                  "AgencyName": "ARJUN RETROFITTER",
+                  "SupervisorName": "DAVID",
+                  "ISMeterStatus": "false",
+                  "ISGIStatus": "true"
+              },
+              {
+                  "CustomerId": "280640",
+                  "ConsumerNumber": "3000298069",
+                  "FullName": "MOHITH Feb3",
+                  "MobileNumber": "984802****",
+                  "Address": "House Society, street",
+                  "StatusId": "7",
+                  "AgencyId": "24",
+                  "SupervisorId": null,
+                  "AgencyAssignedDate": "02/04/2026",
+                  "SupervisorAssignedDate": null,
+                  "IsEdit": "false",
+                  "AgencyName": "DMA!",
+                  "SupervisorName": "",
+                  "ISMeterStatus": "false",
+                  "ISGIStatus": "true"
+              },
+              {
+                  "CustomerId": "270640",
+                  "ConsumerNumber": "3000298067",
+                  "FullName": "Abhishekk",
+                  "MobileNumber": "984802****",
+                  "Address": "1 1, 1",
+                  "StatusId": "8",
+                  "AgencyId": "30061",
+                  "SupervisorId": "160930",
+                  "AgencyAssignedDate": "02/07/2026",
+                  "SupervisorAssignedDate": "02/07/2026",
+                  "IsEdit": "false",
+                  "AgencyName": "ARJUN RETROFITTER",
+                  "SupervisorName": "DAVID",
+                  "ISMeterStatus": "true",
+                  "ISGIStatus": "false"
+              },
+              {
+                  "CustomerId": "230641",
+                  "ConsumerNumber": "3000298042",
+                  "FullName": "testing13",
+                  "MobileNumber": "778442****",
+                  "Address": "testing13 testing13, testing13",
+                  "StatusId": "6",
+                  "AgencyId": "20054",
+                  "SupervisorId": "100814",
+                  "AgencyAssignedDate": "02/03/2026",
+                  "SupervisorAssignedDate": "02/03/2026",
+                  "IsEdit": "false",
+                  "AgencyName": "MYCORE",
+                  "SupervisorName": "MYCORE",
+                  "ISMeterStatus": "false",
+                  "ISGIStatus": "false"
+              },
+              {
+                  "CustomerId": "150268",
+                  "ConsumerNumber": "3000297600",
+                  "FullName": "prepaid ",
+                  "MobileNumber": "987654****",
+                  "Address": "a a, a",
+                  "StatusId": "8",
+                  "AgencyId": "44",
+                  "SupervisorId": "10163",
+                  "AgencyAssignedDate": "06/18/2025",
+                  "SupervisorAssignedDate": "06/18/2025",
+                  "IsEdit": "false",
+                  "AgencyName": "MY AGENCY",
+                  "SupervisorName": "BAIJUO",
+                  "ISMeterStatus": "true",
+                  "ISGIStatus": "true"
+              },
+              {
+                  "CustomerId": "127804",
+                  "ConsumerNumber": "3000295092",
+                  "FullName": "Dhaval",
+                  "MobileNumber": "962443****",
+                  "Address": "23 Anand Upvan Society, New Way",
+                  "StatusId": "7",
+                  "AgencyId": "47",
+                  "SupervisorId": "130828",
+                  "AgencyAssignedDate": "02/10/2026",
+                  "SupervisorAssignedDate": "02/10/2026",
+                  "IsEdit": "false",
+                  "AgencyName": "BHARTI ",
+                  "SupervisorName": "NEERAJ",
+                  "ISMeterStatus": "false",
+                  "ISGIStatus": "true"
+              },
+              {
+                  "CustomerId": "97625",
+                  "ConsumerNumber": "3000294883",
+                  "FullName": "Dhaval",
+                  "MobileNumber": "962443****",
+                  "Address": "23 Anand Upvan Society, New Way",
+                  "StatusId": "6",
+                  "AgencyId": "10051",
+                  "SupervisorId": "170934",
+                  "AgencyAssignedDate": "11/22/2022",
+                  "SupervisorAssignedDate": "09/08/2025",
+                  "IsEdit": "false",
+                  "AgencyName": "RED PANDA",
+                  "SupervisorName": "POOJADRA",
+                  "ISMeterStatus": "false",
+                  "ISGIStatus": "false"
+              }
+          ],
+          "pagination": {
+              "totalRecords": 15,
+              "totalPages": 2,
+              "currentPage": 1,
+              "pageSize": 10
+          }
+      }
+order: 1000

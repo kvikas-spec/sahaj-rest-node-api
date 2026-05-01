@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/getFailedSkipReasonsUp/:billGenId"
+method: GET
+queryParams:
+  - key: isFilter
+    value: "1"
+    disabled: true
+pathVariables:
+  billGenId: "344570"
+order: 16000

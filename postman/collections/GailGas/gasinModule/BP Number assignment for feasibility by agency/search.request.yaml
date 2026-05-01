@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/allocate-bpno-to-agency/?pageNo=1&AgencyId=&ConsumerNumber=3000298042&IsFilter=0&Address="
+method: GET
+queryParams:
+  pageNo: "1"
+  AgencyId: ""
+  ConsumerNumber: "3000298042"
+  IsFilter: "0"
+  Address: ""
+order: 1000

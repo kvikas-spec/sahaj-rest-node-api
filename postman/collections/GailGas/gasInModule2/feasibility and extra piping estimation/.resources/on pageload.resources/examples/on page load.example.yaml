@@ -1,0 +1,205 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/feasibility-pendingData/?pageNo=1&AgencyTypeId=&AgencyUserId=&StatusId=4&ConsumerNumber=&IsFilter=&Address=&pageSize"
+  method: GET
+  queryParams:
+    pageNo: "1"
+    AgencyTypeId: ""
+    AgencyUserId: ""
+    StatusId: "4"
+    ConsumerNumber: ""
+    IsFilter: ""
+    Address: ""
+    pageSize: null
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770623157475-215428
+    content-type: application/json; charset=utf-8
+    etag: W/"d10-DAZU1eFbj7CuZ/6gMy7/80bBLXI"
+    date: Mon, 09 Feb 2026 07:45:57 GMT
+    connection: close
+    Vary: Accept-Encoding
+    Content-Encoding: br
+    Transfer-Encoding: chunked
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "data": [
+                  {
+                      "SrNo": "145",
+                      "CustomerId": "290650",
+                      "ConsumerNumber": "3000298080",
+                      "FullName": "Dinesh",
+                      "MobileNumber": "776665****",
+                      "Address": "13 Test, Test",
+                      "AgencyId": null,
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": null,
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "144",
+                      "CustomerId": "290643",
+                      "ConsumerNumber": "3000298073",
+                      "FullName": "Gas test4",
+                      "MobileNumber": "866546****",
+                      "Address": "34344545 Gas test4, Gas test4",
+                      "AgencyId": "30061",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/05/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "ARJUN RETROFITTER",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "143",
+                      "CustomerId": "240645",
+                      "ConsumerNumber": "3000298057",
+                      "FullName": "test 49",
+                      "MobileNumber": "987654****",
+                      "Address": "4545 test 49, test 49",
+                      "AgencyId": "30070",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/03/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "KATARIA AUTOMOBILES",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "142",
+                      "CustomerId": "240644",
+                      "ConsumerNumber": "3000298056",
+                      "FullName": "Test",
+                      "MobileNumber": "655774****",
+                      "Address": "7667 Test, Test",
+                      "AgencyId": "47",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/03/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "BHARTI ",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "141",
+                      "CustomerId": "240643",
+                      "ConsumerNumber": "3000298055",
+                      "FullName": "Test",
+                      "MobileNumber": "989989****",
+                      "Address": "87 Test, Test",
+                      "AgencyId": "30055",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/04/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "NEW AGENCY NEW AGENCY NEW AGENCY NEW AGENCY NEW AG",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "140",
+                      "CustomerId": "230644",
+                      "ConsumerNumber": "3000298045",
+                      "FullName": "testing 34",
+                      "MobileNumber": "878765****",
+                      "Address": "3434 testing 34, testing 34",
+                      "AgencyId": "47",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/02/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "BHARTI ",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "139",
+                      "CustomerId": "230643",
+                      "ConsumerNumber": "3000298044",
+                      "FullName": "testing 31",
+                      "MobileNumber": "656565****",
+                      "Address": "3434 testing 31, testing 31",
+                      "AgencyId": "30076",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/02/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "COCO FILLER 2",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "138",
+                      "CustomerId": "230641",
+                      "ConsumerNumber": "3000298042",
+                      "FullName": "testing13",
+                      "MobileNumber": "778442****",
+                      "Address": "testing13 testing13, testing13",
+                      "AgencyId": "20054",
+                      "SupervisorId": "100814",
+                      "AgencyAssignedDate": "02/03/2026",
+                      "SupervisorAssignedDate": "02/03/2026",
+                      "IsEdit": "false",
+                      "AgencyName": "MYCORE",
+                      "SupervisorName": "MYCORE"
+                  },
+                  {
+                      "SrNo": "137",
+                      "CustomerId": "220642",
+                      "ConsumerNumber": "3000298040",
+                      "FullName": "twtdsd",
+                      "MobileNumber": "678432****",
+                      "Address": "twtdsd twtdsd, twtdsd",
+                      "AgencyId": "30077",
+                      "SupervisorId": "160911",
+                      "AgencyAssignedDate": "02/03/2026",
+                      "SupervisorAssignedDate": "02/03/2026",
+                      "IsEdit": "false",
+                      "AgencyName": "NEW DMA",
+                      "SupervisorName": "NANI"
+                  },
+                  {
+                      "SrNo": "136",
+                      "CustomerId": "220641",
+                      "ConsumerNumber": "3000298039",
+                      "FullName": "tettst",
+                      "MobileNumber": "955567****",
+                      "Address": "tettst tettst, tettst",
+                      "AgencyId": "46",
+                      "SupervisorId": "70804",
+                      "AgencyAssignedDate": "02/04/2026",
+                      "SupervisorAssignedDate": "02/04/2026",
+                      "IsEdit": "false",
+                      "AgencyName": "CRD",
+                      "SupervisorName": "HIRAL HM"
+                  }
+              ],
+              "pagination": {
+                  "totalRecords": 145,
+                  "pageSize": 10,
+                  "currentPage": 1,
+                  "totalPages": 15
+              }
+          }
+      }
+order: 1000

@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/reAssignBillSelected"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "ids": [101308],
+      "FromUserId": "10205",
+      "ToUserId": "160937",
+      "AssignedBillDate": "29-1-2026"
+    }
+order: 7000

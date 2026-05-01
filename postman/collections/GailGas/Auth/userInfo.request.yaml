@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}/user/user-info"
+method: GET
+headers:
+  x-refresh-token: "{{refresh_token}}"
+auth:
+  type: bearer
+  credentials:
+    token: "{{access_token}}"
+order: 7000

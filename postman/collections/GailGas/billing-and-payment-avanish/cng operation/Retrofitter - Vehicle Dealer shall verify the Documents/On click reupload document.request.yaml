@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/cng-operation/retrofitter-vehicle-dealer/reupload-customer-documents"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "customerRegistrationId": 7
+    }
+examples: ./.resources/On click reupload document.resources/examples
+order: 5000

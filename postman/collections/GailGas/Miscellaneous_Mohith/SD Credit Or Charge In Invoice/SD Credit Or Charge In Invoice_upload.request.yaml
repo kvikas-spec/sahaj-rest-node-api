@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/upload-sd-invoice"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: file
+      src:
+        - /home/mohithharibabu/Downloads/ChargeSDInInvoiceSample.xlsx
+order: 2000

@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/ComplaintTypeMaster/IsComplaintTypeExist?value=Gas Leak&ComplaintTypeId=0&DepartmentId=5"
+method: GET
+queryParams:
+  value: Gas Leak
+  ComplaintTypeId: "0"
+  DepartmentId: "5"
+order: 2000

@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/refund/add-bank-website/verification"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "RefundRequestId": 126,
+      "IsVerification": false,
+      "RejectionReason": "jksd fr ghrsae ghare"
+    }
+examples: ./.resources/reject.resources/examples
+order: 6000

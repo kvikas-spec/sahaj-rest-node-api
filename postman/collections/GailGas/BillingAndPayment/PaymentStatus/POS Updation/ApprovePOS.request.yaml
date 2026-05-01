@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/payment/ApprovePOS"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "billReceiptID": 209179,
+        "paymentStatus": "Security Deposit Payment",
+        "chequeApproveAndRejectDate": null
+    }
+order: 2000

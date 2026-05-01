@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/customerstatuslistbyid?statusId=2"
+method: GET
+queryParams:
+  statusId: "2"
+body:
+  type: json
+  content: |
+    {
+      "ConsumerNumber": 3000297958
+
+    }
+order: 4000

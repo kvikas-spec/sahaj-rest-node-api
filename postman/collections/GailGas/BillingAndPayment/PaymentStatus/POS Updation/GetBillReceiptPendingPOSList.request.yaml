@@ -1,0 +1,37 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/payment/GetBillReceiptPendingPOSList?pageNo=1&pageSize=10&isFilter=true&posNumber=23143"
+method: GET
+queryParams:
+  - key: pageNo
+    value: "1"
+  - key: pageSize
+    value: "10"
+  - key: isFilter
+    value: "true"
+  - key: consumerNo
+    value: "0"
+    disabled: true
+  - key: wrdId
+    value: "0"
+    disabled: true
+  - key: AcntTypeId
+    value: "0"
+    disabled: true
+  - key: paidAmount
+    value: "0"
+    disabled: true
+  - key: cycle
+    value: "0"
+    disabled: true
+  - key: posNumber
+    value: "23143"
+  - key: custName
+    value: ""
+    disabled: true
+  - key: fromDate
+    value: 2024-01-01
+    disabled: true
+  - key: toDate
+    value: 2024-12-31
+    disabled: true
+order: 1000

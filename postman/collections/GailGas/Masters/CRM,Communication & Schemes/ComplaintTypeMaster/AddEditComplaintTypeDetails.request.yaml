@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/ComplaintTypeMaster/AddEditComplaintTypeDetails"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer <your_token>
+body:
+  type: json
+  content: |-
+    {
+        "DepartmentId": 5,
+        "ComplaintsType": "Gas Leak",
+        "Remarks": "New complaint type",
+        "Note": "Created via API"
+    }
+order: 4000

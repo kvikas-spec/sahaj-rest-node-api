@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/single-sd-invoice"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "ConsumerNumber": 111111111503327
+    }
+order: 3000

@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/refund/verify-process-details?ConsumerNumber=3000295472"
+method: GET
+queryParams:
+  ConsumerNumber: "3000295472"
+examples: ./.resources/verify and process.resources/examples
+order: 3000

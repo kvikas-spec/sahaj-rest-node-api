@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{api_gateway_url}}/document-upload/files/:folderPath"
+method: POST
+pathVariables:
+  folderPath: user-image
+body:
+  type: formdata
+  content:
+    - type: file
+      key: files
+      src:
+        - /home/vikaskumar/Pictures/Screenshots/Screenshot from 2026-04-18 09-09-27.png
+    - type: file
+      key: files
+      src: []
+      disabled: true
+order: 2000

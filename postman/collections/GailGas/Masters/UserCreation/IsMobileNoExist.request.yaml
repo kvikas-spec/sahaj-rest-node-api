@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Users/IsMobileNoExist?value=9304047599"
+method: GET
+headers:
+  Content-Type: application/json
+queryParams:
+  value: "9304047599"
+body:
+  type: json
+  content: |-
+    {
+        "value": "test@example.com",
+        "encUserID": "0"
+    }
+order: 5000

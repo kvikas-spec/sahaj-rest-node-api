@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/SystemInterlock/GetMasterTableData/:TableName"
+method: GET
+pathVariables:
+  TableName: AutomatedMroGenerationDays
+order: 1000

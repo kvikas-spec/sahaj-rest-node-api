@@ -1,0 +1,98 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/bp-reassignment-lmc-work-list/?pageNo=1&AgencyId=&ConsumerNumber=&IsFilter=1&Address=87&pageSize=100"
+  method: GET
+  queryParams:
+    pageNo: "1"
+    AgencyId: ""
+    ConsumerNumber: ""
+    IsFilter: "1"
+    Address: "87"
+    pageSize: "100"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770721379686-664847
+    content-type: application/json; charset=utf-8
+    Content-Length: "1008"
+    etag: W/"3f0-7MWEDGfkkj2MlAJgKwOpBBTybAc"
+    date: Tue, 10 Feb 2026 11:02:59 GMT
+    connection: close
+    Vary: Accept-Encoding
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "filter": 1,
+              "pagination": {
+                  "recordCount": 5,
+                  "pageCount": 1,
+                  "currentPage": 1,
+                  "pageSize": 100
+              },
+              "data": [
+                  {
+                      "SrNo": "5",
+                      "CustomerAllotmentId": "82174",
+                      "ConsumerNumber": "3000295460",
+                      "FullName": "QA",
+                      "MobileNumber": "766666****",
+                      "Address": "87 naa, naa",
+                      "SupervisorName": "AISHA "
+                  },
+                  {
+                      "SrNo": "4",
+                      "CustomerAllotmentId": "20643",
+                      "ConsumerNumber": "3000294258",
+                      "FullName": "Installment to 500 OFF",
+                      "MobileNumber": "798794****",
+                      "Address": "79879 9879879, 789798",
+                      "SupervisorName": "SUJAL"
+                  },
+                  {
+                      "SrNo": "3",
+                      "CustomerAllotmentId": "20383",
+                      "ConsumerNumber": "3000293839",
+                      "FullName": "HHH",
+                      "MobileNumber": "788689****",
+                      "Address": "8989 7787, 77887",
+                      "SupervisorName": "karan"
+                  },
+                  {
+                      "SrNo": "2",
+                      "CustomerAllotmentId": "20162",
+                      "ConsumerNumber": "3000293576",
+                      "FullName": "hshah",
+                      "MobileNumber": "856595****",
+                      "Address": "87 ajajaja, ajajaja",
+                      "SupervisorName": "karan"
+                  },
+                  {
+                      "SrNo": "1",
+                      "CustomerAllotmentId": "20148",
+                      "ConsumerNumber": "3000293561",
+                      "FullName": "testy",
+                      "MobileNumber": "333366****",
+                      "Address": "87 hdjjx, bxbbzx",
+                      "SupervisorName": "BHARAT"
+                  }
+              ]
+          }
+      }
+order: 1000

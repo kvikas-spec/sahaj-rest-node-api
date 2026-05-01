@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/document-upload/health"
+method: GET
+order: 1000

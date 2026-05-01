@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/SystemInterlock/GetDailyProgressDPNGTargetList"
+method: GET
+order: 1000

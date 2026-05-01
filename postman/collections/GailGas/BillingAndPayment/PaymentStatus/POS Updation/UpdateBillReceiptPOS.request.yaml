@@ -1,0 +1,36 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/payment/UpdateBillReceiptPOS"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "BillReceiptId": 209180,
+      "paymentStatus": "Security Deposit Payment",
+      "ReturnReason": "Funds insufficient",
+      "ChequeReturnByBankId": 10055,
+    //   "InwardNumber": "INW-2024-001",
+    //   "QRVNumber": "QRV-2024-001",
+      "ChequeReturnedApprovedDate": "2024-03-15"
+    }
+
+    // {
+    //             "Id": "209180",
+    //             "ConsumerNumber": "3000295326",
+    //             "WardId": "31",
+    //             "AccountTypeId": "1",
+    //             "WardName": "TEST23",
+    //             "MobileNumber": "235353****",
+    //             "ConsumerName": "Dinesh  Kadam",
+    //             "CycleNumber": "0",
+    //             "AddedDate": "05-03-2026",
+    //             "ReceiptDate": "16-02-2026",
+    //             "ReceiptNumber": "Reg-1-20260216-00002",
+    //             "ChequeDDNumber": null,
+    //             "ChequeDDDate": null,
+    //             "BankId": null,
+    //             "PaidAmount": 2500,
+    //             "POSNumber": "POS123456",
+    //             "paymentStatus": "Security Deposit Payment"
+    //         },
+order: 3000

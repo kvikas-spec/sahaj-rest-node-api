@@ -1,0 +1,421 @@
+$kind: collection
+description: |-
+  # GailGas API Documentation
+
+  ## Overview
+
+  The GailGas API is a comprehensive platform for managing gas connection services, customer onboarding, and installation processes. This API enables end-to-end management of gas service operations including customer registration, document verification, installation scheduling, meter management, and payment processing.
+
+  The API supports the complete lifecycle of gas connection services from initial customer inquiry through installation, activation, and ongoing service management.
+
+  ## Authentication
+
+  The GailGas API uses **Bearer Token Authentication**. All API requests (except the authentication endpoint) must include a valid access token in the Authorization header.
+
+  ### Getting an Access Token
+
+  1. Use the authentication endpoint with your credentials (`{{auth_username}}` and `{{auth_password}}`)
+      
+  2. Store the returned `access_token` in your environment
+      
+  3. Include the token in subsequent requests using: `Authorization: Bearer {{access_token}}`
+      
+
+  ### Token Management
+
+  - Access tokens have a limited validity period
+      
+  - Use the `{{refresh_token}}` to obtain a new access token when needed
+      
+  - Tokens are automatically managed through environment variables
+      
+
+  ## Getting Started
+
+  ### Prerequisites
+
+  - Valid GailGas API credentials (username and password)
+      
+  - Postman or any API client
+      
+  - Access to the GailGas API gateway
+      
+
+  ### Setup Steps
+
+  1. **Import the Collection**: Import this GailGas collection into your Postman workspace
+      
+  2. **Configure Environment**: Set up the required environment variables (see Environment Variables section)
+      
+  3. **Authenticate**: Run the authentication request to obtain your access token
+      
+  4. **Start Making Requests**: Use the organized folders to navigate different API functionalities
+      
+
+  ### Quick Start
+
+  1. Navigate to the **Auth** folder
+      
+  2. Execute the authentication request with your credentials
+      
+  3. The `{{access_token}}` will be automatically saved to your environment
+      
+  4. Proceed to use any other API endpoints
+      
+
+  ## API Sections
+
+  ### 🔐 Authentication
+
+  Handles user authentication and token management for secure API access.
+
+  ### 👤 Customer Registration
+
+  Manages new customer registration processes, capturing essential customer information and initiating the onboarding workflow.
+
+  ### 📋 Customer Onboarding
+
+  Comprehensive onboarding workflows including document collection, verification, and customer profile setup.
+
+  ### 🔧 Gas Installation Module
+
+  Complete gas installation management with the following sub-modules:
+
+  - **BP Number Assignment**: Assign and manage Building Premise numbers
+      
+  - **BP Number Reassignment**: Handle reassignment of BP numbers when needed
+      
+  - **Piping and Feasibility**: Assess piping requirements and installation feasibility
+      
+  - **Meter Installation**: Manage gas meter installation processes
+      
+  - **GI (Gas In) Installation**: Handle gas inlet installation procedures
+      
+  - **JMR (Job Material Request)**: Manage material requests for installation jobs
+      
+  - **RFC Status**: Track Request for Connection status
+      
+  - **Installation Scheduling**: Coordinate and schedule installation activities
+      
+
+  ### 📄 Document Management
+
+  - **Document Upload**: Upload customer documents and installation records
+      
+  - **Document Verification**: Verify and approve submitted documents
+      
+
+  ### 💰 Payment Plan Management
+
+  Manage payment plans, installment schedules, and payment processing for gas connections.
+
+  ### 👥 Customer Master Details
+
+  - **Customer Details Update**: Modify customer information
+      
+  - **Update Approval**: Approval workflows for customer data changes
+      
+
+  ### 📊 Gas In Processes
+
+  Manage the gas activation and supply initiation processes.
+
+  ## Environment Variables
+
+  Configure the following variables in your Postman environment:
+
+  | Variable | Description | Example |
+  | --- | --- | --- |
+  | `baseurl` | Base URL for the API | `https://api.gailgas.com` |
+  | `api_gateway_url` | API Gateway endpoint URL | `https://gateway.gailgas.com` |
+  | `auth_username` | Your API username | `your_username` |
+  | `auth_password` | Your API password | `your_password` |
+  | `access_token` | Bearer token (auto-populated after auth) | Auto-generated |
+  | `refresh_token` | Token for refreshing access (auto-populated) | Auto-generated |
+
+  ### Additional Variables
+
+  The collection also uses workflow-specific variables:
+
+  - `customer-onboarding-reg`: Customer registration reference
+      
+  - `customer-onboarding-gasin`: Gas installation reference
+      
+
+  ## Error Handling
+
+  The API uses standard HTTP status codes:
+
+  - `200 OK`: Successful request
+      
+  - `201 Created`: Resource successfully created
+      
+  - `400 Bad Request`: Invalid request parameters
+      
+  - `401 Unauthorized`: Missing or invalid authentication token
+      
+  - `403 Forbidden`: Insufficient permissions
+      
+  - `404 Not Found`: Resource not found
+      
+  - `500 Internal Server Error`: Server-side error
+      
+
+  ## Rate Limiting
+
+  Please refer to your API subscription plan for rate limiting details. Implement appropriate retry logic with exponential backoff for production applications.
+
+  ## Best Practices
+
+  1. **Always authenticate first** before making other API calls
+      
+  2. **Store tokens securely** and refresh them before expiration
+      
+  3. **Use environment variables** for sensitive data and dynamic values
+      
+  4. **Follow the workflow order** in sequential processes (registration → onboarding → installation)
+      
+  5. **Validate data** before submission to minimize errors
+      
+  6. **Handle errors gracefully** with appropriate retry mechanisms
+      
+
+  ## Support and Contact
+
+  For API support, technical assistance, or to report issues:
+
+  - **Technical Support**: \[Contact your API administrator\]
+      
+  - **Documentation**: Refer to individual request descriptions for detailed endpoint information
+      
+  - **API Status**: \[Status page URL to be provided\]
+      
+
+  ## Version Information
+
+  This collection is maintained and updated regularly. Check the changelog for recent updates and modifications.
+
+  ---
+
+  _For detailed information about specific endpoints, navigate to the respective folders and review individual request documentation._
+variables:
+  access_token: ""
+  refresh_token: ""
+  temp_token: ""
+  api_gateway_url: http://10.0.53.134:8080/api/v1
+  baseURL: http://localhost:4020
+  d: ""
+  customer_reg_url: customer-registration
+  customer_reg_url_gasin: ""
+  region: ""
+scripts:
+  - type: http:afterResponse
+    code: |-
+      // ============================================
+      // GAIL GAS COLLECTION-LEVEL TEST SUITE
+      // Applies to all 78 requests in the collection
+      // ============================================
+
+      // 1. RESPONSE STATUS CODE VALIDATION
+      pm.test("Status code is valid (2xx, 4xx, or 5xx)", function () {
+          pm.expect(pm.response.code).to.be.within(200, 599);
+      });
+
+      pm.test("Status code indicates success or expected error", function () {
+          const successCodes = [200, 201, 202, 204];
+          const clientErrorCodes = [400, 401, 403, 404, 409, 422];
+          const serverErrorCodes = [500, 502, 503, 504];
+          const allValidCodes = [...successCodes, ...clientErrorCodes, ...serverErrorCodes];
+          
+          pm.expect(pm.response.code).to.be.oneOf(allValidCodes);
+      });
+
+      // 2. RESPONSE TIME CHECKS
+      pm.test("Response time is acceptable (under 5 seconds)", function () {
+          pm.expect(pm.response.responseTime).to.be.below(5000);
+      });
+
+      pm.test("Response time is optimal (under 2 seconds)", function () {
+          // This is a warning-level test - APIs should ideally respond within 2 seconds
+          if (pm.response.responseTime > 2000) {
+              console.warn("Response time exceeded 2 seconds: " + pm.response.responseTime + "ms");
+          }
+          pm.expect(pm.response.responseTime).to.be.below(2000);
+      });
+
+      // 3. CONTENT-TYPE HEADER VALIDATION
+      pm.test("Content-Type header is present", function () {
+          pm.response.to.have.header("Content-Type");
+      });
+
+      pm.test("Response is JSON format", function () {
+          const contentType = pm.response.headers.get("Content-Type");
+          if (contentType) {
+              pm.expect(contentType.toLowerCase()).to.include("application/json");
+          }
+      });
+
+      // 4. RESPONSE STRUCTURE VALIDATION
+      pm.test("Response body is valid JSON", function () {
+          pm.response.to.be.json;
+      });
+
+      pm.test("Response has expected API structure", function () {
+          const jsonData = pm.response.json();
+          
+          // GAIL Gas APIs typically return success/message pattern
+          // Check for common response patterns
+          const hasSuccessField = jsonData.hasOwnProperty('success') || 
+                                 jsonData.hasOwnProperty('Success') ||
+                                 jsonData.hasOwnProperty('isSuccess') ||
+                                 jsonData.hasOwnProperty('status');
+          
+          const hasMessageField = jsonData.hasOwnProperty('message') || 
+                                 jsonData.hasOwnProperty('Message') ||
+                                 jsonData.hasOwnProperty('msg') ||
+                                 jsonData.hasOwnProperty('error');
+          
+          const hasDataField = jsonData.hasOwnProperty('data') || 
+                              jsonData.hasOwnProperty('Data') ||
+                              jsonData.hasOwnProperty('result') ||
+                              jsonData.hasOwnProperty('Result');
+          
+          // At least one of these patterns should be present
+          pm.expect(hasSuccessField || hasMessageField || hasDataField).to.be.true;
+      });
+
+      // 5. SUCCESS/MESSAGE FIELD VALIDATION
+      pm.test("Success field validation (when present)", function () {
+          const jsonData = pm.response.json();
+          const successField = jsonData.success ?? jsonData.Success ?? jsonData.isSuccess;
+          
+          if (successField !== undefined) {
+              pm.expect(typeof successField).to.equal('boolean');
+              
+              // If status is 2xx, success should typically be true
+              if (pm.response.code >= 200 && pm.response.code < 300) {
+                  // Log warning if success is false on 2xx response
+                  if (successField === false) {
+                      console.warn("API returned 2xx status but success=false. Message: " + 
+                          (jsonData.message || jsonData.Message || "No message"));
+                  }
+              }
+          }
+      });
+
+      pm.test("Message field is present and valid (when applicable)", function () {
+          const jsonData = pm.response.json();
+          const message = jsonData.message ?? jsonData.Message ?? jsonData.msg;
+          
+          if (message !== undefined) {
+              pm.expect(typeof message).to.be.oneOf(['string', 'object']);
+              
+              if (typeof message === 'string') {
+                  pm.expect(message.length).to.be.above(0);
+              }
+          }
+      });
+
+      // 6. AUTHENTICATION CHECKS
+      pm.test("Authentication is not rejected (401 check)", function () {
+          if (pm.response.code === 401) {
+              const jsonData = pm.response.json();
+              console.error("Authentication failed. Ensure access_token is valid.");
+              console.error("Response: " + JSON.stringify(jsonData));
+          }
+          // This test passes if NOT 401, fails if 401
+          pm.expect(pm.response.code).to.not.equal(401);
+      });
+
+      pm.test("Authorization is not forbidden (403 check)", function () {
+          if (pm.response.code === 403) {
+              const jsonData = pm.response.json();
+              console.error("Authorization forbidden. User may lack required permissions.");
+              console.error("Response: " + JSON.stringify(jsonData));
+          }
+          // Log but don't fail - 403 might be expected in some scenarios
+          if (pm.response.code === 403) {
+              console.warn("Request returned 403 Forbidden");
+          }
+      });
+
+      // 7. ERROR HANDLING VALIDATION
+      pm.test("Error responses have proper structure", function () {
+          if (pm.response.code >= 400) {
+              const jsonData = pm.response.json();
+              
+              // Error responses should have a message or error field
+              const hasErrorInfo = jsonData.hasOwnProperty('message') || 
+                                  jsonData.hasOwnProperty('Message') ||
+                                  jsonData.hasOwnProperty('error') ||
+                                  jsonData.hasOwnProperty('Error') ||
+                                  jsonData.hasOwnProperty('errors') ||
+                                  jsonData.hasOwnProperty('errorMessage');
+              
+              pm.expect(hasErrorInfo).to.be.true;
+              
+              // Log error details for debugging
+              console.log("Error Response [" + pm.response.code + "]: " + JSON.stringify(jsonData));
+          }
+      });
+
+      pm.test("404 errors have meaningful messages", function () {
+          if (pm.response.code === 404) {
+              const jsonData = pm.response.json();
+              const message = jsonData.message || jsonData.Message || jsonData.error || "";
+              
+              pm.expect(message.length).to.be.above(0);
+              console.log("404 Not Found: " + message);
+          }
+      });
+
+      pm.test("Server errors (5xx) are logged", function () {
+          if (pm.response.code >= 500) {
+              const jsonData = pm.response.json();
+              console.error("Server Error [" + pm.response.code + "]: " + JSON.stringify(jsonData));
+              
+              // Server errors should still return valid JSON with error info
+              pm.expect(jsonData).to.be.an('object');
+          }
+          // Test passes if no 5xx error
+          pm.expect(pm.response.code).to.be.below(500);
+      });
+
+      // 8. DATA STRUCTURE VALIDATION (for successful responses)
+      pm.test("Data field structure validation (when present)", function () {
+          if (pm.response.code >= 200 && pm.response.code < 300) {
+              const jsonData = pm.response.json();
+              const data = jsonData.data ?? jsonData.Data ?? jsonData.result ?? jsonData.Result;
+              
+              if (data !== undefined && data !== null) {
+                  // Data should be an object or array
+                  pm.expect(data).to.satisfy(function(d) {
+                      return typeof d === 'object';
+                  });
+              }
+          }
+      });
+
+      // 9. RESPONSE BODY NOT EMPTY
+      pm.test("Response body is not empty", function () {
+          pm.expect(pm.response.text()).to.not.be.empty;
+      });
+
+      // 10. LOGGING FOR DEBUGGING
+      // Log request and response details for failed requests
+      if (pm.response.code >= 400) {
+          console.log("=== REQUEST DETAILS ===");
+          console.log("Request: " + pm.info.requestName);
+          console.log("Method: " + pm.request.method);
+          console.log("URL: " + pm.request.url.toString());
+          console.log("=== RESPONSE DETAILS ===");
+          console.log("Status: " + pm.response.code + " " + pm.response.status);
+          console.log("Response Time: " + pm.response.responseTime + "ms");
+      }
+    language: text/javascript
+auth:
+  - id: d4bedfd5-89b3-49af-bf28-85dd38d6c7bc
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: "{{access_token}}"

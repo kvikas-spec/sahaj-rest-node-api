@@ -1,0 +1,62 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/upload-bp-reassignment-feasibility-bulk-upload/"
+  method: POST
+  body:
+    type: formdata
+    content:
+      - type: file
+        key: UploadedFile
+        src:
+          - /home/avanishkumarmaurya/Downloads/testing1.xlsx
+      - type: text
+        key: AgencyId
+        value: "30061"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770820120017-834669
+    content-type: application/json; charset=utf-8
+    Content-Length: "259"
+    etag: W/"103-7v/CMFUcGC/HGlsLhKaAIgFsrLE"
+    date: Wed, 11 Feb 2026 14:28:40 GMT
+    connection: close
+    Vary: Accept-Encoding
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "uploadId": "270348",
+              "processed": 1,
+              "unprocessed": 2,
+              "uprocessedData": [
+                  {
+                      "ConsumerNumber": 3423423423,
+                      "Description": "BP number not found!",
+                      "AgencyId": 30061
+                  },
+                  {
+                      "ConsumerNumber": 3423434,
+                      "Description": "BP number not found!",
+                      "AgencyId": 30061
+                  }
+              ]
+          }
+      }
+order: 1000

@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/payment/TransactionStatus"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "TransactionId":"12345678"
+    }
+order: 1000

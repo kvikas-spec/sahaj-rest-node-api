@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/cng-operation/gailgas1/verify-documents?pageNo=1&agencyId=&customerName=Krishana&pageSize=100"
+method: GET
+queryParams:
+  - key: pageNo
+    value: "1"
+  - key: agencyId
+    value: ""
+  - key: customerName
+    value: Krishana
+  - key: mobileNumber
+    value: "985454"
+    disabled: true
+  - key: pageSize
+    value: "100"
+examples: ./.resources/search.resources/examples
+order: 2000

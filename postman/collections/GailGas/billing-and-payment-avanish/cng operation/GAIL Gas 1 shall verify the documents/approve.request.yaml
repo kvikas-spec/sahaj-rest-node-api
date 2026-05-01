@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/cng-operation/gailgas1/approve-customer-documents"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "customerRegistrationId": 1
+      }
+examples: ./.resources/approve.resources/examples
+order: 4000

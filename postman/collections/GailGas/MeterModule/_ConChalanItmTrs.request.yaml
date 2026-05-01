@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/_ConChalanItmTrs?ConsChallanId=70155"
+method: GET
+headers:
+  Content-Type: application/json
+  Authorization: Bearer <YOUR_TOKEN>
+queryParams:
+  ConsChallanId: "70155"
+order: 3000

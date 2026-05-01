@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/UploadRegistrationDocuments"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ApplicationNumber
+      value: A3000298091
+    - type: text
+      key: DocumentID
+      value: 28,35
+    - type: text
+      key: DocumentNumber
+      value: PAN CARD,ELECTRICITY BILL
+    - type: text
+      key: file_url
+      value: PANCARDurl/
+    - type: text
+      key: file_url
+      value: ELECTRICITY BILLurl/
+order: 3000

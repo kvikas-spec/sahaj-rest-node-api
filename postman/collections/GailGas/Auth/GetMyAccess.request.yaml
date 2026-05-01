@@ -1,0 +1,24 @@
+$kind: http-request
+url: "{{api_gateway_url}}/auth/GetMyAccess"
+method: GET
+headers:
+  x-refresh-token: "{{refresh_token}}"
+auth:
+  type: bearer
+  credentials:
+    token: "{{access_token}}"
+scripts:
+  - type: afterResponse
+    code: |-
+      // Parse the response body JSON
+      const responseBody = pm.response.json();
+
+      // Extract access_token and refresh_token from response body
+      let temp_token = responseBody.temp_token;
+      console.log(temp_token, "temp_token")
+      // Set tokens in environment variables
+      if (temp_token) {
+          pm.environment.set("tempfile_token", temp_token);
+      }
+    language: text/javascript
+order: 6000

@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/refund/refund-customer/:consumerNumber"
+method: GET
+pathVariables:
+  consumerNumber: "511902688"
+examples: ./.resources/search.resources/examples
+order: 1000

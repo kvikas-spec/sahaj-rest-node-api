@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/customer-registration/Inquiry/AddRemarkToInquiryData"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+        "remark": "Mr vikas kumar need extra pipeline for her new house",
+        "inquiryID": 20040
+    }
+order: 3000

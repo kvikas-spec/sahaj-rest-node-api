@@ -1,0 +1,235 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/feasibility-pendingData/?pageNo=1&AgencyTypeId=&AgencyUserId=&StatusId=4&ConsumerNumber=&IsFilter=1&Address=test&pageSize=12"
+  method: GET
+  queryParams:
+    pageNo: "1"
+    AgencyTypeId: ""
+    AgencyUserId: ""
+    StatusId: "4"
+    ConsumerNumber: ""
+    IsFilter: "1"
+    Address: test
+    pageSize: "12"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770724106872-46955
+    content-type: application/json; charset=utf-8
+    etag: W/"f8b-d8x6GuxUCbg7BNnzkmwFzmjS1+s"
+    date: Tue, 10 Feb 2026 11:48:26 GMT
+    connection: close
+    Vary: Accept-Encoding
+    Content-Encoding: br
+    Transfer-Encoding: chunked
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "data": [
+                  {
+                      "SrNo": "32",
+                      "CustomerId": "290643",
+                      "ConsumerNumber": "3000298073",
+                      "FullName": "Gas test4",
+                      "MobileNumber": "866546****",
+                      "Address": "34344545 Gas test4, Gas test4",
+                      "AgencyId": "30061",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/05/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "ARJUN RETROFITTER",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "31",
+                      "CustomerId": "240645",
+                      "ConsumerNumber": "3000298057",
+                      "FullName": "test 49",
+                      "MobileNumber": "987654****",
+                      "Address": "4545 test 49, test 49",
+                      "AgencyId": "30070",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/03/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "KATARIA AUTOMOBILES",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "30",
+                      "CustomerId": "240643",
+                      "ConsumerNumber": "3000298055",
+                      "FullName": "Test",
+                      "MobileNumber": "989989****",
+                      "Address": "87 Test, Test",
+                      "AgencyId": "30055",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/04/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "NEW AGENCY NEW AGENCY NEW AGENCY NEW AGENCY NEW AG",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "29",
+                      "CustomerId": "230644",
+                      "ConsumerNumber": "3000298045",
+                      "FullName": "testing 34",
+                      "MobileNumber": "878765****",
+                      "Address": "3434 testing 34, testing 34",
+                      "AgencyId": "47",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/02/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "BHARTI ",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "28",
+                      "CustomerId": "230643",
+                      "ConsumerNumber": "3000298044",
+                      "FullName": "testing 31",
+                      "MobileNumber": "656565****",
+                      "Address": "3434 testing 31, testing 31",
+                      "AgencyId": "30076",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/02/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "COCO FILLER 2",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "27",
+                      "CustomerId": "170570",
+                      "ConsumerNumber": "3000297924",
+                      "FullName": "Saini",
+                      "MobileNumber": "745878****",
+                      "Address": "41 test, test ",
+                      "AgencyId": "30061",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/09/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "ARJUN RETROFITTER",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "26",
+                      "CustomerId": "170569",
+                      "ConsumerNumber": "3000297923",
+                      "FullName": "Paras",
+                      "MobileNumber": "879687****",
+                      "Address": "G09 Test apartment, Test",
+                      "AgencyId": "30061",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/09/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "ARJUN RETROFITTER",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "25",
+                      "CustomerId": "170568",
+                      "ConsumerNumber": "3000297922",
+                      "FullName": "Manav",
+                      "MobileNumber": "145896****",
+                      "Address": "1 test 74, Abhilasha",
+                      "AgencyId": "30061",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/09/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "ARJUN RETROFITTER",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "24",
+                      "CustomerId": "170567",
+                      "ConsumerNumber": "3000297921",
+                      "FullName": "Moksh",
+                      "MobileNumber": "142585****",
+                      "Address": "10 test 74, Abhilasha",
+                      "AgencyId": "30061",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/09/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "ARJUN RETROFITTER",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "23",
+                      "CustomerId": "170565",
+                      "ConsumerNumber": "3000297919",
+                      "FullName": "Mansi testing",
+                      "MobileNumber": "748596****",
+                      "Address": "74 test 74, Abhilasha",
+                      "AgencyId": "30061",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/09/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "ARJUN RETROFITTER",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "22",
+                      "CustomerId": "170331",
+                      "ConsumerNumber": "3000297685",
+                      "FullName": "test",
+                      "MobileNumber": "878787****",
+                      "Address": "test tes, tes",
+                      "AgencyId": "30061",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/10/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "ARJUN RETROFITTER",
+                      "SupervisorName": ""
+                  },
+                  {
+                      "SrNo": "21",
+                      "CustomerId": "149920",
+                      "ConsumerNumber": "3000297252",
+                      "FullName": "hh",
+                      "MobileNumber": "978875****",
+                      "Address": "1 test, test",
+                      "AgencyId": "30061",
+                      "SupervisorId": null,
+                      "AgencyAssignedDate": "02/10/2026",
+                      "SupervisorAssignedDate": null,
+                      "IsEdit": "false",
+                      "AgencyName": "ARJUN RETROFITTER",
+                      "SupervisorName": ""
+                  }
+              ],
+              "pagination": {
+                  "totalRecords": 32,
+                  "pageSize": 12,
+                  "currentPage": 1,
+                  "totalPages": 3
+              }
+          }
+      }
+order: 1000

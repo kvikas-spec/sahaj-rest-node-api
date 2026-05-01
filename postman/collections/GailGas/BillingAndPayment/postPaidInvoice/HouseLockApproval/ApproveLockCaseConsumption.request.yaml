@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/meter-reading/ApproveLockCaseConsumption/:MeterReadingId"
+method: PATCH
+pathVariables:
+  MeterReadingId: "611437"
+body:
+  type: json
+  content: ""
+order: 3000

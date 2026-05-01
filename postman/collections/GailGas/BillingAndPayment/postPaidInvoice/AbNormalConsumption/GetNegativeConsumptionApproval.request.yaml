@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/meter-reading/GetNegativeConsumptionApproval?isFilter=1&pageNo=1&pageSize=10&sort=MeterReadingId:DESC&isAbNormalConsumptionApproval=1"
+method: GET
+queryParams:
+  - key: isFilter
+    value: "1"
+  - key: pageNo
+    value: "1"
+  - key: pageSize
+    value: "10"
+  - key: sort
+    value: MeterReadingId:DESC
+  - key: isAbNormalConsumptionApproval
+    value: "1"
+  - key: ConsumerNumber
+    value: "3000297811"
+    disabled: true
+  - key: wardId
+    value: ""
+    disabled: true
+order: 1000

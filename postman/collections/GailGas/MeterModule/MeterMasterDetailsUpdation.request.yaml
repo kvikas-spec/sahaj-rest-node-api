@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/MeterMasterDetailsUpdation"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer YOUR_JWT_TOKEN
+body:
+  type: text
+  content: |-
+    {
+    "MeterMasterId": 25,
+      "MeterNumber": 18200,
+      "MeterType": "LHS",
+      "MeterCompanyId": 1,
+      "IsPrepaidMeter": true
+    }
+order: 11000

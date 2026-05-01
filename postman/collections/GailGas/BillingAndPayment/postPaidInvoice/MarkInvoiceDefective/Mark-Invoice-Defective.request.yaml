@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/Mark-Invoice-Defective/:DemandMasterId"
+method: PATCH
+pathVariables:
+  DemandMasterId: "7573875"
+order: 2000

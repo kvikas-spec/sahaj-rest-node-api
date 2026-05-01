@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/gas-leakage/disapprove"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "GasLeakageId": 30083
+    }
+examples: ./.resources/disapprove.resources/examples
+order: 4000

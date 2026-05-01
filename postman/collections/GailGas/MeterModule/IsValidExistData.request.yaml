@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/IsValidExistData?meterNumber=3000&meterCompanyId=1&meterType=LHS"
+method: GET
+queryParams:
+  - key: meterNumber
+    value: "3000"
+  - key: meterCompanyId
+    value: "1"
+  - key: meterType
+    value: LHS
+  - key: metermasterId
+    value: ""
+    disabled: true
+order: 22000

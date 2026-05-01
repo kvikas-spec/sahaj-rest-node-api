@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/DepartmentMasters/AddEditDepartmentMasterDetails"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer <your_token>
+body:
+  type: json
+  content: |-
+    {
+        "DepartmentId": 94,
+        "Department": "Accounts",
+        "Remarks": "Accounts department"
+      }
+order: 4000

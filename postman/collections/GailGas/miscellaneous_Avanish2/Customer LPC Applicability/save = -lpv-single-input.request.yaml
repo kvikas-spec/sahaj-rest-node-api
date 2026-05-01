@@ -1,0 +1,14 @@
+$kind: http-request
+name: save = /lpv-single-input
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/lpv-single-input"
+method: POST
+headers:
+  user-agent: '"avanish"'
+body:
+  type: json
+  content: |-
+    {
+        "ConsumerNumber": 4000331923,
+        "IsLPC": true
+    }
+order: 2000

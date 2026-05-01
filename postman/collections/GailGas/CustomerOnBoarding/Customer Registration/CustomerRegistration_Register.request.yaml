@@ -1,0 +1,40 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/registration"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "CustomerId": null,
+      "ApplicationNumber": null,
+      "IsPrepaidMeter": true,
+      "FirstName": "avanish",
+      "MiddleName": "Testing",
+      "TransactionDate": "2026-01-28",
+      "TypeOfHouse": "Independent",
+      "Floor": "1",
+      "HouseNo": "1",
+      "Society": "1",
+      "Street": "1",
+      "LandMark": "Test",
+      "CityId": 8,
+      "State": "Uttar Pradesh",
+      "PinCode": "123456",
+      "AreaId": 43,
+      "OthersAreaName": null,
+      "MobileNumber": "9848022338",
+      "PhoneNumber": "9848022338",
+      "ResidencePhoneNumber": "012345",
+      "EmailId": "mail@test.com",
+      "EmailAddress2": "mailtwo@test.com",
+      "Ownership": "Owner",
+      "SchemeId": 3,
+      "IsBulk": false,
+      "UrgentVerification": false,
+      "LPGConn": "Yes",
+      "LPGConsumerNumber": "lpgtest001",
+      "UniqueID": "12345678123456789",
+      "OMCName": 1,
+      "DealerName": "Test Dealer name"
+    }
+order: 6000

@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/_DocumentVerificationDoneList?ConsumerNumber=3000298074"
+method: GET
+queryParams:
+  - key: pageNo
+    value: "1"
+    disabled: true
+  - key: ConsumerNumber
+    value: "3000298074"
+  - key: IsFilter
+    value: "1"
+    disabled: true
+  - key: Address
+    value: ""
+    disabled: true
+order: 1000

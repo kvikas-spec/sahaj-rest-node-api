@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Users/_GetUserCreationList?isFilter=1&Search=prudwiraj@gmail.com"
+method: GET
+headers:
+  x-region-id: Meerut
+queryParams:
+  - key: isFilter
+    value: "1"
+  - key: Search
+    value: prudwiraj@gmail.com
+  - key: EncryptedUserID
+    value: BPIRLTbxzKi223zdlNo8gA==
+    disabled: true
+  - key: GAId
+    value: "1"
+    disabled: true
+  - key: pageNo
+    value: "2"
+    disabled: true
+  - key: pageSize
+    value: "10"
+    disabled: true
+order: 1000

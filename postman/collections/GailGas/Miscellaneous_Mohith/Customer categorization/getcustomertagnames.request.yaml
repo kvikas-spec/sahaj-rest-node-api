@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/getcustomertagnames"
+method: GET
+order: 3000

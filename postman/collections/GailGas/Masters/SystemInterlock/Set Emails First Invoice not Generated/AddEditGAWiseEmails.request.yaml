@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/SystemInterlock/AddEditGAWiseEmails"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "ID": "6",
+        "EmailID": "vikas247@yopmail.com"
+    }
+order: 4000

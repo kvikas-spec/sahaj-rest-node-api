@@ -1,0 +1,20 @@
+$kind: http-request
+url: https://admintest.gailgas-png.in/Payment/GetCustomerdataMeterReadingDetails
+method: POST
+headers:
+  accept: application/json, text/javascript, */*; q=0.01
+  accept-language: en-US,en;q=0.9
+  content-type: application/x-www-form-urlencoded; charset=UTF-8
+  origin: https://admintest.gailgas-png.in
+  priority: u=1, i
+  referer: https://admintest.gailgas-png.in/
+  sec-ch-ua: '"Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"'
+  sec-ch-ua-mobile: ?0
+  sec-ch-ua-platform: '"Linux"'
+  sec-fetch-dest: empty
+  sec-fetch-mode: cors
+  sec-fetch-site: same-origin
+  user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+  x-requested-with: XMLHttpRequest
+  Cookie: ASP.NET_SessionId=ms5snutxvfw1ioob5cczuetl; __RequestVerificationToken=l3gUM7Pk1LTszfjz7ofkSsSF4E5IZj14-VZgf61OjnJspZoBep-r5EE9fYFrHJ_nzhNVvwf9ZpKbYj5qYvOpyPwj_Otl1tUIp2_Q4AxnUAI1; .ASPXAUTH=EFA8BBC44D69A6BDA28A2DF347DAF7EE9DFB5B9AE72189207374B41FEF48743161051CC59AE119A48A7D55E9086F6C4666795A7BAB3C4D046E31BDD05835AE78D97CF67B5BC266D19A854C2B7F39004431A0E3E9F82E15DD5CCF86F8C4A7E33C9E3375ECB54E851201FF2DB0A1374E760D1C60D08C822024AF3A04391104B73B
+order: 2000

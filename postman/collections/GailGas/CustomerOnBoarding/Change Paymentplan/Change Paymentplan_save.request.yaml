@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/changePaymentPlan"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "ConsumerNumber": "3000298003",
+      "FirstName": "Rahul",
+      "Address": "123 Main Road",
+      "City": "Mumbai",
+      "PinCode": "400001",
+      "MobileNumber": "9876543210",
+      "OldSchemeId": 3,
+      "SchemeId": 7,
+      "TransactionDate": "2026-01-30",
+      "Remark": "Nothing"
+    }
+order: 1000

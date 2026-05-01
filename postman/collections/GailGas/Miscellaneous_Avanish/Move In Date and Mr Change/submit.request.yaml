@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/move-in-date-and-mr-change-data/"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "ConsumerNumber": 4000331662,
+        "NewSwitchOnDate": "2024-12-01",
+        "NewOpeningReading": 25
+    }
+order: 3000

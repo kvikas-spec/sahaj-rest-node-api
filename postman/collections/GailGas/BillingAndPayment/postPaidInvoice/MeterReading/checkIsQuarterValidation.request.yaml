@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/meter-reading/checkIsQuarterValidation?TransactionDate="
+method: GET
+queryParams:
+  TransactionDate: ""
+body:
+  type: json
+  content: |-
+    {
+        "TransactionDate":""
+    }
+order: 4000

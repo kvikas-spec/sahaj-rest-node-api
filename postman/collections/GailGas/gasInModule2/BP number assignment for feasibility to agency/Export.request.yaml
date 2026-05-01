@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/exportDocumentVerificationDone?IsFilter=1"
+method: GET
+queryParams:
+  IsFilter: "1"
+order: 4000

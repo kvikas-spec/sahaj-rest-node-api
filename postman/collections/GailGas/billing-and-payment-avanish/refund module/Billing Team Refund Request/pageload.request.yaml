@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/refund/request-list?IsFilter=&ConsumerNumber=&sEcho=1&iDisplayStart=0&iDisplayLength=10&iSortCol_0=3&sSortDir_0=asc"
+method: GET
+queryParams:
+  IsFilter: ""
+  ConsumerNumber: ""
+  sEcho: "1"
+  iDisplayStart: "0"
+  iDisplayLength: "10"
+  iSortCol_0: "3"
+  sSortDir_0: asc
+examples: ./.resources/pageload.resources/examples
+order: 1000

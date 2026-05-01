@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/meter-reading/RejectNegativeConsumption/:MeterReadingId"
+method: PATCH
+pathVariables:
+  MeterReadingId: "361426"
+body:
+  type: json
+  content: |-
+    {
+        "MeterReadingId": "361426",
+        "MeterReadingRejectionId": "8"
+    }
+order: 2000

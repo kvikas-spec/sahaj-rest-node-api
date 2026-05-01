@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/AssingAgency/"
+method: POST
+body:
+  type: json
+  content: |+
+    {
+        "ids": [10258],
+        "AgencyId": 30072
+    }
+
+
+
+order: 5000

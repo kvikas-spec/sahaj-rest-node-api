@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/meter-reading/UploadMeterReadingWithFileUploadData"
+method: POST
+headers:
+  Authorization: Bearer <token>
+  x-region-id: "{{region}}"
+body:
+  type: formdata
+  content:
+    - type: file
+      key: file
+      src:
+        - /home/vikaskumar/Downloads/MRfileuploadouruat.xlsx
+order: 1000

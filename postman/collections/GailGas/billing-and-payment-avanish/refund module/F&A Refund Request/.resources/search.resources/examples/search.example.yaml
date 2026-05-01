@@ -1,0 +1,72 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}/billing-payment/refund/bank-website-refund-request-list?sEcho=1&iDisplayStart=0&iDisplayLength=10&iSortCol_0=2&sSortDir_0=asc&IsFilter=1&ConsumerNumber=3000297766"
+  method: GET
+  queryParams:
+    sEcho: "1"
+    iDisplayStart: "0"
+    iDisplayLength: "10"
+    iSortCol_0: "2"
+    sSortDir_0: asc
+    IsFilter: "1"
+    ConsumerNumber: "3000297766"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770118467565-879317
+    content-type: application/json; charset=utf-8
+    Content-Length: "685"
+    etag: W/"2ad-pJZnoahcjrS8V9ayAksqQrxkg9E"
+    Vary: Accept-Encoding
+    date: Tue, 03 Feb 2026 11:34:27 GMT
+    connection: close
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "sEcho": 1,
+              "iTotalRecords": 1,
+              "iTotalDisplayRecords": 1,
+              "aaData": [
+                  {
+                      "SrNo": "1",
+                      "RefundRequestId": "10162",
+                      "ConsumerNumber": "3000297766",
+                      "BankId": "10055",
+                      "BankName": "ABHYUDAYA CO-OP BANK LTD ",
+                      "Branch": "5yrfdgcv",
+                      "BankAccountNumber": "56666666666",
+                      "IFSCCode": "drh56364",
+                      "BankAccountHolderName": "poojA COOLKARNI",
+                      "ConnectionStatusId": "1",
+                      "ConnectionStatusName": "Connected (REGULAR)",
+                      "MeterReading": 0.23,
+                      "MeterReadingDate": "2025-02-10T00:00:00.000Z",
+                      "MeterReadingDateStr": "10-02-2025",
+                      "MeterSerialNo": "98826",
+                      "RequestNumber": "3000000161",
+                      "FullName": "aa aa",
+                      "Address": "aa aa, aa",
+                      "VoucherFile": "RefundRequestVoucher_3000297766_20250811_034253.pdf",
+                      "RefundAmount": 3894
+                  }
+              ]
+          }
+      }
+order: 1000

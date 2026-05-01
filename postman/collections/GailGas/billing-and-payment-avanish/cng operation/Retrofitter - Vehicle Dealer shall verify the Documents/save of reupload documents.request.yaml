@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/cng-operation/retrofitter-vehicle-dealer/save-reupload-customer-documents"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "CustomerRegistrationId":7,
+        "IdProof": "idProofFileUrl",
+        "AddressProof": "addressProofFileUrl",
+        "CertifiedInvoice": "certifiedInvoiceFileUrl"
+    }
+examples: ./.resources/save of reupload documents.resources/examples
+order: 6000

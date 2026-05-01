@@ -1,0 +1,39 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_reg_url}}/MeterMaster/ApprovalForm14List?pageNo=1&pageSize=10"
+method: GET
+headers:
+  Content-Type: application/json
+  Authorization: Bearer <YOUR_TOKEN>
+queryParams:
+  - key: sEcho
+    value: "1"
+    disabled: true
+  - key: pageNo
+    value: "1"
+  - key: pageSize
+    value: "10"
+  - key: isFilter
+    value: "1"
+    disabled: true
+  - key: wardId
+    value: "15"
+    disabled: true
+  - key: ApplicationNo
+    value: "2356764"
+    disabled: true
+  - key: Form14SearchDetail
+    value: "1"
+    disabled: true
+  - key: consumerNo
+    value: kush
+    disabled: true
+  - key: consumerNo
+    value: "3000298709"
+    disabled: true
+  - key: mru
+    value: "15"
+    disabled: true
+  - key: isDownload
+    value: "1"
+    disabled: true
+order: 2000

@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/meter-companies"
+method: GET
+examples: ./.resources/getMeterCompany.resources/examples
+order: 1000

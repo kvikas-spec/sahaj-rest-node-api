@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/SystemInterlock/CheckEmailMasterGaWiseMappingExistOrNot?Email=manish.goel@gail.co.in"
+method: GET
+queryParams:
+  Email: manish.goel@gail.co.in
+order: 3000

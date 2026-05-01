@@ -1,0 +1,187 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/move-in-date-and-mr-change/"
+  method: POST
+  body:
+    type: json
+    content: |-
+      {
+          "id":3000294786
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770982263883-263470
+    content-type: application/json; charset=utf-8
+    etag: W/"c97-Tqf8T31o4Lyp4NAYUyhfWjZoNEU"
+    date: Fri, 13 Feb 2026 11:31:03 GMT
+    connection: close
+    Vary: Accept-Encoding
+    Content-Encoding: br
+    Transfer-Encoding: chunked
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "CustomerId": "97528",
+              "ApplicationNumber": "A3000294786",
+              "AccountTypeId": "1",
+              "FirstName": "Dhaval",
+              "MiddleName": "Gurjar",
+              "PhoneNumber": "1234567890",
+              "MobileNumber": "1234567889",
+              "EmailId": "Dhaval@gmail.com",
+              "City": "Meerut",
+              "PinCode": "123456",
+              "WardId": "21",
+              "IsActive": true,
+              "TransactionId": "439326044",
+              "DateGenerated": "2022-07-21T13:38:48.317Z",
+              "DateGeneratedDate": 20220721,
+              "TransactionDate": "2022-07-21T00:00:00.000Z",
+              "TransactionDateInt": 20220721,
+              "IsDelete": false,
+              "HouseNo": "91",
+              "Society": "ABC ",
+              "Street": "XYZ Road",
+              "State": "Uttar Pradesh",
+              "Ownership": "Owner",
+              "LPGConn": false,
+              "UniqueID": "0",
+              "OMCName": 0,
+              "DealerName": "",
+              "LPGConsumerNumber": "",
+              "IsBulk": false,
+              "RegistrationType": "1",
+              "IsLPC": false,
+              "TagID": 21,
+              "SchemeId": 3,
+              "PromoId": 1,
+              "PromoUsed": 0,
+              "PromoRemaining": 0,
+              "ConsumerNumber": "3000294786",
+              "ConnectionStatusId": 9,
+              "RouteCode": null,
+              "SerialNumber": null,
+              "SwitchOnDate": "2022-05-01T00:00:00.000Z",
+              "SwitchOnDateInt": 20220501,
+              "MeterNumber": "123",
+              "Remark": "Blocked",
+              "MeterStatusId": "12",
+              "ConnectionStatusChangeDate": null,
+              "LastConnectionStatusId": null,
+              "SafeCustodyExpiryDate": null,
+              "OldConnectionStatusChangeDate": null,
+              "OldSafeCustodyExpiryDate": null,
+              "DateUpdated": "2022-09-20T18:21:33.007Z",
+              "DateUpdatedInt": 20220920,
+              "MeterType": "LHS",
+              "OpeningReading": 12,
+              "UrgentVerification": false,
+              "AreaId": "12",
+              "ResidencePhoneNumber": null,
+              "StatusId": "10",
+              "IsAssigned": null,
+              "Latitude": null,
+              "Longitude": null,
+              "CANumber": null,
+              "RemainingInstallment": 0,
+              "MeterCompanyId": "1",
+              "AddedBy": "10225",
+              "UpdatedBy": "22",
+              "BuilderConsumerNumber": "0",
+              "Phone3": null,
+              "EmailAddress2": null,
+              "MeterPhotoName": "",
+              "DateUpdatedNew": "2026-02-13T11:28:46.897Z",
+              "DateUpdatedNewInt": 20260213,
+              "SignatureName": null,
+              "Floor": "17",
+              "OthersAreaName": null,
+              "TypeOfHouse": "Multistorey",
+              "CustomerNotWillingToTakeGas": false,
+              "UpdatedByNew": "140854",
+              "LandMark": null,
+              "CityId": "0",
+              "RegistrationIPAddress": null,
+              "RegistrationLatitude": null,
+              "RegistrationLongitude": null,
+              "IsPrepaidMeter": null,
+              "ValveStatus": null,
+              "ValveStatusChangeDate": null,
+              "consumer": {
+                  "AccountTypeId": "1",
+                  "AccountTypeName": "DOMESTIC",
+                  "ApplicationNumber": "A3000294786",
+                  "City": "Meerut",
+                  "ConsumerId": "97528",
+                  "ConsumerNumber": "3000294786",
+                  "DateGenerated": "2022-07-21T13:38:48.317Z",
+                  "DateGeneratedDate": 20220721,
+                  "DateUpdated": "2022-09-20T18:21:33.007Z",
+                  "EmailId": "Dhaval@gmail.com",
+                  "EmailAddress2": null,
+                  "FirstName": "Dhaval",
+                  "IsActive": true,
+                  "MeterNumber": "123",
+                  "MiddleName": "Gurjar",
+                  "MobileNumber": "1234567889",
+                  "PhoneNumber": "1234567890",
+                  "PinCode": "123456",
+                  "Remark": "Blocked",
+                  "RouteCode": "/",
+                  "RouteId": null,
+                  "SerialNumber": null,
+                  "SwitchOnDate": "2022-05-01T00:00:00.000Z",
+                  "TransactionId": "439326044",
+                  "WardId": "21",
+                  "WardName": "03DC12B1",
+                  "ConnectionStatusId": 9,
+                  "TagID": 21,
+                  "MeterCompanyId": "1",
+                  "MeterType": "LHS",
+                  "IsPrepaidMeter": false,
+                  "OldWardId": "21",
+                  "OldRouteId": null,
+                  "OldSerialNo": null,
+                  "Address": "91,ABC ,XYZ Road",
+                  "Ownership": "Owner",
+                  "LPGConn": false,
+                  "LPGConsumerNumber": "",
+                  "UniqueID": "0",
+                  "DealerName": "",
+                  "OMCName": 0,
+                  "ApplicationDate": "2022-07-21",
+                  "OldMeterType": "LHS",
+                  "OpeningReading": 12,
+                  "AreaId": "12",
+                  "State": "Uttar Pradesh",
+                  "PromoId": 1,
+                  "HouseNo": "91",
+                  "Society": "ABC ",
+                  "Street": "XYZ Road",
+                  "Floor": "17",
+                  "TypeOfHouse": "Multistorey",
+                  "SwitchOnDateString": "2022-05-01",
+                  "OthersAreaNameExists": false,
+                  "OthersAreaName": null
+              }
+          }
+      }
+order: 1000

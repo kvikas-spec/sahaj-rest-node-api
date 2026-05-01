@@ -1,0 +1,750 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/AuthorizationManagement/Configure-Role"
+method: POST
+headers:
+  x-region-id: Meerut
+queryParams:
+  - key: RoleID
+    value: "2"
+    disabled: true
+body:
+  type: json
+  content: |-
+    {
+        "UserRoleID": "2",
+        "MenuDC": [
+            {
+                "UserRoleID": "1",
+                "LinkID": "130366",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130339",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "37",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "60237",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "60241",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "20",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "21",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "60244",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130394",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "90266",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "90265",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130433",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130439",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130434",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "24",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "60230",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "60231",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130388",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "22",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130351",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "30",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130347",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "33",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130299",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "32",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130311",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130368",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130395",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130397",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130431",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "90267",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "50238",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130427",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "50235",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "50236",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "60238",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "80248",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "15",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "16",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130298",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130292",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130293",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "28",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "100270",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130290",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130294",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130305",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130457",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130304",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130343",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130528",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "100271",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130345",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130284",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130285",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130287",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130414",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130490",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130504",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130323",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130372",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130381",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130510",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130418",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130403",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130404",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130405",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130407",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130408",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130422",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130424",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130425",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130409",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "35",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "60232",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130499",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130320",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "60228",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "34",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "50253",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "90251",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "50255",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "50254",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130516",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "9",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "100274",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130340",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130336",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "5",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "60229",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130411",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130472",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130462",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130476",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130477",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130468",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130502",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130512",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130374",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130445",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130448",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "12",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "90264",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "14",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "7",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130297",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "3",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "4",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130321",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130322",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130517",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "60239",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130628",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130629",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "50256",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130464",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130479",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130482",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130461",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130459",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "130452",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            },
+            {
+                "UserRoleID": "1",
+                "LinkID": "75",
+                "IsReadOnly": false,
+                "IsReadWrite": true
+            }
+        ]
+    }
+order: 4000

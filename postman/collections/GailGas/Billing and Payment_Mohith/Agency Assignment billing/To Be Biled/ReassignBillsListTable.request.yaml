@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/manageReassignBillsList"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "isFilter": "",
+        "MruId": "",
+        "AreaId": "",
+        "MeterRederID": "",
+        "StartDate": "",
+        "EndDate": "",
+        "ConsumerDetails": "",
+        "search": "",
+        "pageNo": "",
+        "pagesize": "",
+        "AgencyId": 47
+    }
+order: 3000

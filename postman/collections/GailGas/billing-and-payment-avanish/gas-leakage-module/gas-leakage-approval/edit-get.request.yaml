@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/gas-leakage/gas-leakage-data/30083"
+method: GET
+examples: ./.resources/edit-get.resources/examples
+order: 5000

@@ -1,0 +1,92 @@
+$kind: http-request
+url: https://admintest.gailgas-png.in/Bill/SaveBillGeneratedata
+method: POST
+headers:
+  accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+  accept-language: en-US,en;q=0.9
+  cache-control: max-age=0
+  content-type: application/x-www-form-urlencoded
+  origin: https://admintest.gailgas-png.in
+  priority: u=0, i
+  referer: https://admintest.gailgas-png.in/
+  sec-ch-ua: '"Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"'
+  sec-ch-ua-mobile: ?0
+  sec-ch-ua-platform: '"Linux"'
+  sec-fetch-dest: document
+  sec-fetch-mode: navigate
+  sec-fetch-site: same-origin
+  upgrade-insecure-requests: "1"
+  user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+  Cookie: ASP.NET_SessionId=c2fliczs2wh5ysvae2tbd2ho; __RequestVerificationToken=Zc9inysOxQIQHAphulXdzGvHKSHAcZxc4V7Dpqvrz7wDxwgv4LLZt11262_q6RGT5fGX-UWWSjIHmOSI7042ES_hCUz0iPRRP4lcNQ3U2co1; .ASPXAUTH=8F966614DE630707B7B66F127A3343B62BA8F41E775D89BFF026C8828E52CABA6460DE2F50DE93B2951F1585000C3D99CB4C01EDDE6469C027100D1246FAF51167FA3D7188B8D7A1D76342AAD9CD16842E6D4F6CDF2979A21E68131BCCA30D82956109F1FF412BE47A8B3E96C76064B1364C7B5118DA43964F66BC96E514F258
+body:
+  type: urlencoded
+  content:
+    - key: AccountTypeId
+      value: ""
+    - key: WardList
+      value: "40"
+    - key: AccountTypeCode
+      value: ""
+    - key: ConsumerCode
+      value: ""
+    - key: "2"
+      value: "false"
+    - key: "3"
+      value: "false"
+    - key: "10"
+      value: "false"
+    - key: "11"
+      value: "false"
+    - key: "12"
+      value: "false"
+    - key: "13"
+      value: "false"
+    - key: "14"
+      value: "false"
+    - key: "15"
+      value: "false"
+    - key: "16"
+      value: "false"
+    - key: "17"
+      value: "false"
+    - key: "18"
+      value: "false"
+    - key: "19"
+      value: "false"
+    - key: "20"
+      value: "false"
+    - key: "21"
+      value: "false"
+    - key: "22"
+      value: "false"
+    - key: "23"
+      value: "false"
+    - key: "25"
+      value: "false"
+    - key: "26"
+      value: "false"
+    - key: "30"
+      value: "false"
+    - key: "31"
+      value: "false"
+    - key: "33"
+      value: "false"
+    - key: "34"
+      value: "false"
+    - key: "35"
+      value: "false"
+    - key: "36"
+      value: "false"
+    - key: "37"
+      value: "false"
+    - key: "38"
+      value: "false"
+    - key: "39"
+      value: "false"
+    - key: "40"
+      value: "true"
+    - key: "40"
+      value: "false"
+    - key: __RequestVerificationToken
+      value: n1qtg50qQdiYNZbhG9A6ilpqP6OqrS7DkaaIAW6RjjO5SQqWmb2L8a8i3rLN9dL2Wfqg0o5Zw1YgK-akoQFRPuiV61E8E3eS56fhRpA5efvHmyO-_yUcSA6pv6ZPGa-F0
+order: 1000

@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/SystemInterlock/CheckSAPAPIEmailMappingExistOrNot?Email=vikas@yopmail.com"
+method: GET
+queryParams:
+  Email: vikas@yopmail.com
+order: 2000

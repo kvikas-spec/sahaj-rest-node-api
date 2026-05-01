@@ -1,0 +1,202 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/agencyList"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770291671087-554824
+    content-type: application/json; charset=utf-8
+    etag: W/"6c3-1L9lkgQozw6LT890llNhpSsmYuQ"
+    date: Thu, 05 Feb 2026 11:41:11 GMT
+    connection: close
+    Vary: Accept-Encoding
+    Content-Encoding: br
+    Transfer-Encoding: chunked
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": [
+              {
+                  "text": "---Select Agency---",
+                  "value": ""
+              },
+              {
+                  "text": "AMBA AUTO SALES AND SERVICE",
+                  "value": "30071"
+              },
+              {
+                  "text": "ARJUN RETROFITTER",
+                  "value": "30061"
+              },
+              {
+                  "text": "BHARTI ",
+                  "value": "47"
+              },
+              {
+                  "text": "COCO FILLER 2",
+                  "value": "30076"
+              },
+              {
+                  "text": "CRD",
+                  "value": "46"
+              },
+              {
+                  "text": "DMA!",
+                  "value": "24"
+              },
+              {
+                  "text": "DODO FILLER 1",
+                  "value": "30069"
+              },
+              {
+                  "text": "ITI 2",
+                  "value": "30075"
+              },
+              {
+                  "text": "ITI-1 ",
+                  "value": "30074"
+              },
+              {
+                  "text": "KATARIA AUTOMOBILES",
+                  "value": "30070"
+              },
+              {
+                  "text": "LMC AGENCY",
+                  "value": "20053"
+              },
+              {
+                  "text": "MEERUT MRA",
+                  "value": "20055"
+              },
+              {
+                  "text": "MY AGENCY",
+                  "value": "44"
+              },
+              {
+                  "text": "MYCORE",
+                  "value": "20054"
+              },
+              {
+                  "text": "NEW AGENCY NEW AGENCY NEW AGENCY NEW AGENCY NEW AG",
+                  "value": "30055"
+              },
+              {
+                  "text": "NEW DMA",
+                  "value": "30077"
+              },
+              {
+                  "text": "NIRAJ DODO FILLER DODO DODO DODO DODO",
+                  "value": "30067"
+              },
+              {
+                  "text": "OM VEHICLE DEALER",
+                  "value": "30060"
+              },
+              {
+                  "text": "ONE PLUS ",
+                  "value": "30057"
+              },
+              {
+                  "text": "PANCHAL RETRO",
+                  "value": "30064"
+              },
+              {
+                  "text": "PARAM COCO",
+                  "value": "30066"
+              },
+              {
+                  "text": "PARTH LMC",
+                  "value": "30058"
+              },
+              {
+                  "text": "PARTH RETROFITTER",
+                  "value": "30059"
+              },
+              {
+                  "text": "POOJA COCO",
+                  "value": "30084"
+              },
+              {
+                  "text": "POOJA DMA",
+                  "value": "30079"
+              },
+              {
+                  "text": "POOJA DODO ",
+                  "value": "30085"
+              },
+              {
+                  "text": "POOJA RETRO AGENCY",
+                  "value": "30083"
+              },
+              {
+                  "text": "PRAKASH VEHICLE DEALER",
+                  "value": "30062"
+              },
+              {
+                  "text": "PRATHAM MOTORS",
+                  "value": "30072"
+              },
+              {
+                  "text": "PREPAID_01",
+                  "value": "30081"
+              },
+              {
+                  "text": "RED PANDA",
+                  "value": "10051"
+              },
+              {
+                  "text": "RETROFITTER AGENCY UAT1",
+                  "value": "30068"
+              },
+              {
+                  "text": "SHINE CAR GAS",
+                  "value": "30073"
+              },
+              {
+                  "text": "TEST COMPL",
+                  "value": "30078"
+              },
+              {
+                  "text": "TEST DUMMY VEHICLE DEALER",
+                  "value": "30063"
+              },
+              {
+                  "text": "TEST1AGENCY",
+                  "value": "30056"
+              },
+              {
+                  "text": "TESTING DRA",
+                  "value": "10050"
+              },
+              {
+                  "text": "TESTING LMC",
+                  "value": "20052"
+              },
+              {
+                  "text": "TESTPREPAID",
+                  "value": "30080"
+              },
+              {
+                  "text": "VEHICLE DEALER UAT 1",
+                  "value": "30065"
+              }
+          ]
+      }
+order: 1000

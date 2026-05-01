@@ -1,0 +1,80 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/approval-form13-list/?sEcho=1&iDisplayStart=0&iDisplayLength=10&isFilter=0&wardId=&consumerNo&name&pageSize=10"
+  method: GET
+  queryParams:
+    sEcho: "1"
+    iDisplayStart: "0"
+    iDisplayLength: "10"
+    isFilter: "0"
+    wardId: ""
+    consumerNo: null
+    name: null
+    pageSize: "10"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770982507079-450814
+    content-type: application/json; charset=utf-8
+    Content-Length: "742"
+    etag: W/"2e6-w0eiDnA7/y1CPyyZDhF9kwPHQPo"
+    date: Fri, 13 Feb 2026 11:35:07 GMT
+    connection: close
+    Vary: Accept-Encoding
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "sEcho": "1",
+              "iTotalRecords": 1,
+              "iTotalDisplayRecords": 1,
+              "aaData": [
+                  {
+                      "ChangeConnectionStatusId": "60292",
+                      "ConsumerNumber": "3000297935",
+                      "EntryBy": "R A",
+                      "Cycle": "0",
+                      "TransactionDate": "2025-10-09T00:00:00.000Z",
+                      "NewConnectionStatusName": "TEMPORARY CLOSE",
+                      "OldConnectionStatusName": "REGULAR",
+                      "ReDisConnectionDate": "09-10-2025",
+                      "SafeCustodyYears": null,
+                      "MeterNumber": "2057",
+                      "MeterType": "RHS",
+                      "MeterCompanyName": "ELSTER",
+                      "Reading": 12,
+                      "ResolutionNumber": "",
+                      "ResolutionDate": "",
+                      "OldKitchenPoints": 0,
+                      "NewKitchenPoints": 0,
+                      "OldGeyserPoints": 0,
+                      "NewGeyserPoints": 0,
+                      "OldTotalPoints": 0,
+                      "NewTotalPoints": 0,
+                      "ChallanNumber": "",
+                      "WardName": "NADIYAD MRU",
+                      "RouteCode": " / ",
+                      "FullName": "aaa aa",
+                      "MobileNumber": "9632563325",
+                      "NewMeterRemark": ""
+                  }
+              ]
+          }
+      }
+order: 1000

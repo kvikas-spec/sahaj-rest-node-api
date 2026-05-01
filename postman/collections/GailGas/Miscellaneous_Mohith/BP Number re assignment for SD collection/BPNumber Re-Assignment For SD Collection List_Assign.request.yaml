@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/assignagency"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "AgencyId": 30070,
+      "ids": [
+        180638
+      ]
+    }
+order: 3000

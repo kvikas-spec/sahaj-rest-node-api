@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/meter-reading//UploadLockConsumptionDocument/:MeterReadingId"
+method: PATCH
+pathVariables:
+  MeterReadingId: "321025"
+body:
+  type: json
+  content: |-
+    {
+        "ApprovalRejectionDocument":"Meerut/meter-reading/22082025171349-3000297811.jpg"
+    }
+order: 2000

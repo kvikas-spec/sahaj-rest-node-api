@@ -1,0 +1,10 @@
+name: New Environment
+values:
+  - key: local
+    value: ''
+  - key: temp_token
+    value: ''
+  - key: access_token
+    value: ''
+  - key: refresh_token
+    value: ''

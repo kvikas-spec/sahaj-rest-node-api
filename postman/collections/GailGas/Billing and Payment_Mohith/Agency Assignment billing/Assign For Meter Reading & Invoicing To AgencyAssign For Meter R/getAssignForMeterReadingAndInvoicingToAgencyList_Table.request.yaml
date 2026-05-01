@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/getAssignForMeterReadingAndInvoicingToAgencyListallMRUList?isFilter=1&BpNumber=3000038703&search=&pageNo=1&WardId=&AreaId=&fromDate=&toDate=&pagesize=10"
+method: GET
+queryParams:
+  isFilter: "1"
+  BpNumber: "3000038703"
+  search: ""
+  pageNo: "1"
+  WardId: ""
+  AreaId: ""
+  fromDate: ""
+  toDate: ""
+  pagesize: "10"
+order: 1000

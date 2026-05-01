@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/GetMeterCompany"
+method: GET
+order: 17000

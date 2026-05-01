@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/SystemInterlock/EditAutomatedMROGenerationDays"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "AutomatedMROGenerationDaysId": 1,
+        "AutomatedMROGenerationDays": 21
+    }
+order: 2000

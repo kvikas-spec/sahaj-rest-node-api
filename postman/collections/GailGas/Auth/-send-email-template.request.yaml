@@ -1,0 +1,18 @@
+$kind: http-request
+name: /send-email-template
+url: "{{api_gateway_url}}/auth/users/send-email-template"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "templeteID": 117,
+        "replacements": {
+            "{OTP}": 123456,
+            "{OTPValidTime}": 60
+        },
+        "toEmail": "MEHULMISTRY@YOPMAIL.COM",
+        "mailType": 0,
+        "Gname": "Meerut"
+    }
+order: 10000

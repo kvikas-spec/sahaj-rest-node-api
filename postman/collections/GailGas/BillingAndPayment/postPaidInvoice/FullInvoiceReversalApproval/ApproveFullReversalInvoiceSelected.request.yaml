@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/ApproveFullReversalInvoiceSelected"
+method: POST
+queryParams:
+  - key: isFilter
+    value: "1"
+    disabled: true
+  - key: ConsumerNo
+    value: "134520"
+    disabled: true
+body:
+  type: json
+  content: |
+    {
+      "ids":[7163040] // DemandMasterId
+    }
+order: 2000

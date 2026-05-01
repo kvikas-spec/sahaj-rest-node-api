@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/upload-bp-assignment-feasibility-bulk-upload/"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: UploadedFile
+      src:
+        - /home/avanishkumarmaurya/Downloads/testing2.xlsx
+    - type: text
+      key: Controller
+      value: Customer
+    - type: text
+      key: Action
+      value: AccountTypeMaster
+    - type: text
+      key: AgencyId
+      value: "30071"
+examples: ./.resources/upload-bp-assignment-feasibility-bulk-upload.resources/examples
+order: 2000

@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/sd-bypass-interlock-movein/230285"
+method: DELETE
+examples: ./.resources/OFF.resources/examples
+order: 4000

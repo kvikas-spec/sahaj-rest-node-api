@@ -1,0 +1,141 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}/billing-payment/cng-operation/gailgas1/verify-documents?pageNo=1&agencyId=&customerName&mobileNumber&pageSize=100"
+  method: GET
+  queryParams:
+    pageNo: "1"
+    agencyId: ""
+    customerName: null
+    mobileNumber: null
+    pageSize: "100"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1771241299065-152214
+    content-type: application/json; charset=utf-8
+    etag: W/"9b1-gfXw6xDvuYcL5PfgCQfnV7tGZ2Y"
+    Vary: Accept-Encoding
+    content-encoding: br
+    date: Mon, 16 Feb 2026 11:28:19 GMT
+    connection: close
+    Content-Length: "571"
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "Pagination": {
+              "CurrentPage": "1",
+              "PageSize": "100",
+              "RecordCount": 9,
+              "PageCount": 1,
+              "CurrentPageIndex": 1
+          },
+          "Data": [
+              {
+                  "CustomerRegistrationId": "7",
+                  "CustomerName": "Krishana Patel",
+                  "MobileNumber": "985454****",
+                  "VehicleNumber": "GJ00000005",
+                  "Address": "Test apartment near test circle",
+                  "EmailId": null,
+                  "AgencyName": "PARTH RETROFITTER",
+                  "RegistrationDate": "2024-09-12T00:00:00.000Z"
+              },
+              {
+                  "CustomerRegistrationId": "99",
+                  "CustomerName": "Keval Patel",
+                  "MobileNumber": "963564****",
+                  "VehicleNumber": "GJ00000039",
+                  "Address": "T01/ Test apartment near test circle",
+                  "EmailId": null,
+                  "AgencyName": "ARJUN RETROFITTER",
+                  "RegistrationDate": "2024-09-30T00:00:00.000Z"
+              },
+              {
+                  "CustomerRegistrationId": "184",
+                  "CustomerName": "Nikhil Patel",
+                  "MobileNumber": "789147****",
+                  "VehicleNumber": "GJ00000074",
+                  "Address": "T30/ Test apartment near test circle",
+                  "EmailId": null,
+                  "AgencyName": "PARTH RETROFITTER",
+                  "RegistrationDate": "2024-10-14T00:00:00.000Z"
+              },
+              {
+                  "CustomerRegistrationId": "190",
+                  "CustomerName": "Nirmal Patel",
+                  "MobileNumber": "966348****",
+                  "VehicleNumber": "GJ00000077",
+                  "Address": "T32/ Test apartment near test circle",
+                  "EmailId": null,
+                  "AgencyName": "PARTH RETROFITTER",
+                  "RegistrationDate": "2024-10-14T00:00:00.000Z"
+              },
+              {
+                  "CustomerRegistrationId": "203",
+                  "CustomerName": "Vijay Talwar",
+                  "MobileNumber": "984528****",
+                  "VehicleNumber": "GJ00000080",
+                  "Address": "T23/ Test apartment near test circle",
+                  "EmailId": null,
+                  "AgencyName": "PARTH RETROFITTER",
+                  "RegistrationDate": "2024-10-17T00:00:00.000Z"
+              },
+              {
+                  "CustomerRegistrationId": "204",
+                  "CustomerName": "Kanan Patel",
+                  "MobileNumber": "741884****",
+                  "VehicleNumber": "GJ00000081",
+                  "Address": "T56/ Test apartment near test circle",
+                  "EmailId": null,
+                  "AgencyName": "PARTH RETROFITTER",
+                  "RegistrationDate": "2024-10-17T00:00:00.000Z"
+              },
+              {
+                  "CustomerRegistrationId": "238",
+                  "CustomerName": "Vimal Patel",
+                  "MobileNumber": "789663****",
+                  "VehicleNumber": "GJ00000087",
+                  "Address": "T963/ Test apartment",
+                  "EmailId": "vimalpatel100@gmail.com",
+                  "AgencyName": "PARTH RETROFITTER",
+                  "RegistrationDate": "2024-10-23T00:00:00.000Z"
+              },
+              {
+                  "CustomerRegistrationId": "240",
+                  "CustomerName": "gdsh",
+                  "MobileNumber": "567575****",
+                  "VehicleNumber": "FHFHFH",
+                  "Address": "fhfshs",
+                  "EmailId": null,
+                  "AgencyName": "AMBA AUTO SALES AND SERVICE",
+                  "RegistrationDate": "2024-10-01T00:00:00.000Z"
+              },
+              {
+                  "CustomerRegistrationId": "254",
+                  "CustomerName": "Mukund Panchal",
+                  "MobileNumber": "874165****",
+                  "VehicleNumber": "GJ00000098",
+                  "Address": "T/03A Test Apartment near test cinema",
+                  "EmailId": "mukundpanchal@gmail.com",
+                  "AgencyName": "PARTH RETROFITTER",
+                  "RegistrationDate": "2024-10-28T00:00:00.000Z"
+              }
+          ]
+      }
+order: 1000

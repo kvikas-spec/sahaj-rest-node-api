@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/BulkUploadReAssignToAgency?reAssign=1"
+method: POST
+queryParams:
+  reAssign: "1"
+body:
+  type: formdata
+  content:
+    - type: file
+      key: file
+      src:
+        - /home/vikaskumar/Downloads/MeterNoAssignmentToAgency.xlsx
+    - type: text
+      key: AgencyId
+      value: "2"
+order: 6000

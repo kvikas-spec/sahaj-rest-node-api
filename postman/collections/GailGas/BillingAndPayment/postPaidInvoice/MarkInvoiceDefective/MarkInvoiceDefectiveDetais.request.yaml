@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/MarkInvoiceDefectiveDetais?consumerNumber=3000295131"
+method: GET
+queryParams:
+  consumerNumber: "3000295131"
+order: 1000

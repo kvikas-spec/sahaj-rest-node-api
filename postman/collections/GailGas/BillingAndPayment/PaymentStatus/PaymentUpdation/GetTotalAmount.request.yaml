@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/payment/GetTotalAmount?isFilter=1&fromDate=2024-01-01&toDate=2024-12-31&wrdId=5&AcntTypeId=1&cycle=3"
+method: GET
+queryParams:
+  isFilter: "1"
+  fromDate: 2024-01-01
+  toDate: 2024-12-31
+  wrdId: "5"
+  AcntTypeId: "1"
+  cycle: "3"
+body:
+  type: text
+  content: ""
+order: 2000
