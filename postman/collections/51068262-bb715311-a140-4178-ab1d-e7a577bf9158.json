@@ -34994,6 +34994,492 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "CNG Promo Vehicle Type Master",
+					"item": [
+						{
+							"name": "Get CNG promo vehicle type list",
+							"id": "51068262-cngvehicle-01",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/VehicleTypeMaster?pageNo=1&pageSize=100",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"VehicleTypeMaster"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get active vehicle types dropdown",
+							"id": "51068262-cngvehicle-02",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/vehicle-types",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"vehicle-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Check vehicle type exists",
+							"id": "51068262-cngvehicle-03",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/VehicleTypeMaster/check?vehicleType=Car",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"VehicleTypeMaster",
+										"check"
+									],
+									"query": [
+										{
+											"key": "vehicleType",
+											"value": "Car"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add CNG promo vehicle type",
+							"id": "51068262-cngvehicle-04",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/VehicleTypeMaster",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"VehicleTypeMaster"
+									]
+								},
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"VehicleTypeMasterId\": 0,\n  \"VehicleType\": \"Car\",\n  \"Description\": \"Car vehicle type\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update CNG promo vehicle type",
+							"id": "51068262-cngvehicle-05",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/VehicleTypeMaster",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"VehicleTypeMaster"
+									]
+								},
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"VehicleTypeMasterId\": 1,\n  \"VehicleType\": \"Car\",\n  \"Description\": \"Updated car vehicle type\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Active/deactive CNG promo vehicle type",
+							"id": "51068262-cngvehicle-06",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/VehicleTypeMaster/1/active",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"VehicleTypeMaster",
+										"1",
+										"active"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export CNG promo vehicle type list",
+							"id": "51068262-cngvehicle-07",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/VehicleTypeMaster/export",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"VehicleTypeMaster",
+										"export"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Credit Points Master",
+					"item": [
+						{
+							"name": "Get credit points master list",
+							"id": "51068262-creditpoints-01",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/CreditPointsMaster?pageNo=1&pageSize=100&vehicleType=",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"CreditPointsMaster"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "100"
+										},
+										{
+											"key": "vehicleType",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save credit points master",
+							"id": "51068262-creditpoints-02",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/CreditPointsMaster",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"CreditPointsMaster"
+									]
+								},
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"VehicleTypeMasterId\": 1,\n  \"CreditPoints\": 10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Active/deactive credit points master",
+							"id": "51068262-creditpoints-03",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/CreditPointsMaster/1/active",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"CreditPointsMaster",
+										"1",
+										"active"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export credit points master list",
+							"id": "51068262-creditpoints-04",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/CreditPointsMaster/export?vehicleType=",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"CreditPointsMaster",
+										"export"
+									],
+									"query": [
+										{
+											"key": "vehicleType",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Credit Points Redeem Limit Master",
+					"item": [
+						{
+							"name": "Get credit points redeem limit master list",
+							"id": "51068262-redeemlimit-01",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/CreditPointsRedeemLimitMaster?pageNo=1&pageSize=100&vehicleType=",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"CreditPointsRedeemLimitMaster"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "100"
+										},
+										{
+											"key": "vehicleType",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save credit points redeem limit master",
+							"id": "51068262-redeemlimit-02",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/CreditPointsRedeemLimitMaster",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"CreditPointsRedeemLimitMaster"
+									]
+								},
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"VehicleTypeMasterId\": 1,\n  \"CreditPointsRedeemLimit\": 100,\n  \"DailyCreditPointsRedeemLimit\": 10,\n  \"MonthlyCreditPointsRedeemLimit\": 50\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Active/deactive credit points redeem limit master",
+							"id": "51068262-redeemlimit-03",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/CreditPointsRedeemLimitMaster/1/active",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"CreditPointsRedeemLimitMaster",
+										"1",
+										"active"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export credit points redeem limit master list",
+							"id": "51068262-redeemlimit-04",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/CreditPointsRedeemLimitMaster/export?vehicleType=",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"CreditPointsRedeemLimitMaster",
+										"export"
+									],
+									"query": [
+										{
+											"key": "vehicleType",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			],
 			"id": "51068262-bc5ef91a-fd4d-415b-976d-667cabe9da6e"
