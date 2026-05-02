@@ -30672,6 +30672,48 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Role-Master",
+							"id": "51068262-d4679c00-e316-48f8-8ba8-b0e33f55d6cb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer <your_token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Admin\"\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/Role-Master/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Role-Master",
+										"5"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "51068262-df380538-4b0e-4de8-8bad-eba19acc842b"
@@ -31065,18 +31107,6 @@
 										}
 									]
 								}
-							},
-							"response": []
-						},
-						{
-							"name": "Role-Master",
-							"id": "51068262-d4679c00-e316-48f8-8ba8-b0e33f55d6cb",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": []
 							},
 							"response": []
 						}
