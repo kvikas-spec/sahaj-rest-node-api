@@ -30540,6 +30540,15 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Admin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Role-Master",
 									"host": [
