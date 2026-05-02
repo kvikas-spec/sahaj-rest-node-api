@@ -35480,6 +35480,949 @@
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "CNGPromo Recipient Emails Master",
+					"item": [
+						{
+							"name": "Get recipient emails list",
+							"id": "51068262-recipientemails-01",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/RecipientEmailsMaster?pageNo=1&pageSize=100",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"RecipientEmailsMaster"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Check recipient email exists",
+							"id": "51068262-recipientemails-02",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/RecipientEmailsMaster/check?Email=test@example.com",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"RecipientEmailsMaster",
+										"check"
+									],
+									"query": [
+										{
+											"key": "Email",
+											"value": "test@example.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save recipient email",
+							"id": "51068262-recipientemails-03",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/RecipientEmailsMaster",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"RecipientEmailsMaster"
+									]
+								},
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"RecipientEmailsMasterId\": 0,\n  \"EmailId\": \"test@example.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Active/deactive recipient email",
+							"id": "51068262-recipientemails-04",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/RecipientEmailsMaster/1/active",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"RecipientEmailsMaster",
+										"1",
+										"active"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export recipient emails",
+							"id": "51068262-recipientemails-05",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/RecipientEmailsMaster/export",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"RecipientEmailsMaster",
+										"export"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Fleet Operator Vehicle Master",
+					"item": [
+						{
+							"name": "Get fleet operator vehicles",
+							"id": "51068262-fleetvehicle-01",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/FleetOperatorVehicleMaster?pageNo=1&pageSize=100&foCardNumber=&vehicleNumber=&isPhysicalCard=",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"FleetOperatorVehicleMaster"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "100"
+										},
+										{
+											"key": "foCardNumber",
+											"value": ""
+										},
+										{
+											"key": "vehicleNumber",
+											"value": ""
+										},
+										{
+											"key": "isPhysicalCard",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get fleet operator dropdown",
+							"id": "51068262-fleetvehicle-02",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/FleetOperatorVehicleMaster/fleet-operators",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"FleetOperatorVehicleMaster",
+										"fleet-operators"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get ownership dropdown",
+							"id": "51068262-fleetvehicle-03",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/FleetOperatorVehicleMaster/ownerships",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"FleetOperatorVehicleMaster",
+										"ownerships"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Check fleet operator vehicle exists",
+							"id": "51068262-fleetvehicle-04",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/FleetOperatorVehicleMaster/check-vehicle?VehicleNumber=GJ01AB1234",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"FleetOperatorVehicleMaster",
+										"check-vehicle"
+									],
+									"query": [
+										{
+											"key": "VehicleNumber",
+											"value": "GJ01AB1234"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export fleet operator vehicles",
+							"id": "51068262-fleetvehicle-05",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/FleetOperatorVehicleMaster/export?foCardNumber=&vehicleNumber=&isPhysicalCard=",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"FleetOperatorVehicleMaster",
+										"export"
+									],
+									"query": [
+										{
+											"key": "foCardNumber",
+											"value": ""
+										},
+										{
+											"key": "vehicleNumber",
+											"value": ""
+										},
+										{
+											"key": "isPhysicalCard",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save fleet operator vehicle - requires WCF config",
+							"id": "51068262-fleetvehicle-06",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/FleetOperatorVehicleMaster",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"FleetOperatorVehicleMaster"
+									]
+								},
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"FOCardNumber\": 1234567890,\n  \"VehicleMake\": \"Sample\",\n  \"VehicleTypeMasterId\": 1,\n  \"VehicleNumber\": \"GJ01AB1234\",\n  \"YearOfRegistration\": 2024,\n  \"Ownership\": \"Self\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete fleet operator vehicle - requires WCF config",
+							"id": "51068262-fleetvehicle-07",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/CNGPromo/FleetOperatorVehicleMaster/1234567890",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"CNGPromo",
+										"FleetOperatorVehicleMaster",
+										"1234567890"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CNG Rate Master",
+					"item": [
+						{
+							"name": "Get CNG rate list",
+							"id": "51068262-cngrate-01",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/CNGRateMaster?pageNo=1&pageSize=100",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"CNGRateMaster"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save CNG rate",
+							"id": "51068262-cngrate-02",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/CNGRateMaster",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"CNGRateMaster"
+									]
+								},
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"CNGRateMasterId\": 0,\n  \"CityId\": 1,\n  \"Rate\": 85,\n  \"EffectiveDate\": \"2026-05-02\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Active/deactive CNG rate",
+							"id": "51068262-cngrate-03",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/CNGRateMaster/1/active",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"CNGRateMaster",
+										"1",
+										"active"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export CNG rate list",
+							"id": "51068262-cngrate-04",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/CNGRateMaster/export",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"CNGRateMaster",
+										"export"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CNG Station Locator",
+					"item": [
+						{
+							"name": "Get CNG station locator list",
+							"id": "51068262-cngstation-01",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/CNGStationLocator?pageNo=1&pageSize=100",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"CNGStationLocator"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Check CNG station exists",
+							"id": "51068262-cngstation-02",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/CNGStationLocator/check?StationName=Sample%20Station",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"CNGStationLocator",
+										"check"
+									],
+									"query": [
+										{
+											"key": "StationName",
+											"value": "Sample%20Station"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save CNG station locator",
+							"id": "51068262-cngstation-03",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/CNGStationLocator",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"CNGStationLocator"
+									]
+								},
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"CNGStationLocatorId\": 0,\n  \"CityId\": 1,\n  \"CNGStationName\": \"Sample Station\",\n  \"Address\": \"Sample Address\",\n  \"Latitude\": \"23.0000\",\n  \"Longitude\": \"72.0000\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Active/deactive CNG station",
+							"id": "51068262-cngstation-04",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/CNGStationLocator/1/active",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"CNGStationLocator",
+										"1",
+										"active"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export CNG station locator list",
+							"id": "51068262-cngstation-05",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/CNGStationLocator/export",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"CNGStationLocator",
+										"export"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PNG Mitra Videos Master",
+					"item": [
+						{
+							"name": "Get PNG Mitra videos",
+							"id": "51068262-pngmitra-01",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/PNGMitraVideosMaster?pageNo=1&pageSize=100",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"PNGMitraVideosMaster"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Check PNG video title exists",
+							"id": "51068262-pngmitra-02",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/PNGMitraVideosMaster/check?Title=Safety%20Video",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"PNGMitraVideosMaster",
+										"check"
+									],
+									"query": [
+										{
+											"key": "Title",
+											"value": "Safety%20Video"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save PNG Mitra video",
+							"id": "51068262-pngmitra-03",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/PNGMitraVideosMaster",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"PNGMitraVideosMaster"
+									]
+								},
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"PNGVideosMasterId\": 0,\n  \"Title\": \"Safety Video\",\n  \"Description\": \"PNG safety video\",\n  \"YoutubeURl\": \"https://youtube.com/watch?v=sample\",\n  \"YoutubeOrOther\": \"Youtube\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Active/deactive PNG Mitra video",
+							"id": "51068262-pngmitra-04",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/PNGMitraVideosMaster/1/active",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"PNGMitraVideosMaster",
+										"1",
+										"active"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export PNG Mitra videos",
+							"id": "51068262-pngmitra-05",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/PNGMitraVideosMaster/export",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"PNGMitraVideosMaster",
+										"export"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Contact Number Master",
+					"item": [
+						{
+							"name": "Get contact number list",
+							"id": "51068262-contactnumber-01",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/ContactNumberMaster?pageNo=1&pageSize=100",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"ContactNumberMaster"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save contact number",
+							"id": "51068262-contactnumber-02",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/ContactNumberMaster",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"ContactNumberMaster"
+									]
+								},
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ComplaintContactNumberMasterId\": 0,\n  \"ComplaintTypeId\": 1,\n  \"ContactNumber\": \"18001029282\",\n  \"Remarks\": \"Customer care\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Active/deactive contact number",
+							"id": "51068262-contactnumber-03",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/ContactNumberMaster/1/active",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"ContactNumberMaster",
+										"1",
+										"active"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export contact numbers",
+							"id": "51068262-contactnumber-04",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Customer/ContactNumberMaster/export",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Customer",
+										"ContactNumberMaster",
+										"export"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			],
 			"id": "51068262-bc5ef91a-fd4d-415b-976d-667cabe9da6e"
