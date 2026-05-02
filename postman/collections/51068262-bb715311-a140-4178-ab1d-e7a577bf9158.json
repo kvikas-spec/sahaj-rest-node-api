@@ -32893,7 +32893,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/requests?pageNo=1&pageSize=50",
+                  "raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/requests?pageNo=1&pageSize=10",
                   "host": [
                     "{{api_gateway_url}}"
                   ],
@@ -32910,7 +32910,7 @@
                     },
                     {
                       "key": "pageSize",
-                      "value": "50"
+                      "value": "10"
                     }
                   ]
                 }
