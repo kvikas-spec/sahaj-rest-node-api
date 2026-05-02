@@ -31890,120 +31890,6 @@
 				{
 					"name": "CRM,Communication & Schemes",
 					"item": [
-            {
-							"name": "GAwiseBillingAddress",
-							"item": [
-								{
-									"name": "GetGAwiseBillAddressList",
-									"id": "51068262-f7dc6565-e397-47c1-bd26-ff80ec856f64",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"url": {
-											"raw": "{{api_gateway_url}}/masters/GAwiseBillingAddress/GetGAwiseBillAddressList?pageNo=1&pageSize=10",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"masters",
-												"GAwiseBillingAddress",
-												"GetGAwiseBillAddressList"
-											],
-											"query": [
-												{
-													"key": "billingAddress",
-													"value": "Main%20Street",
-													"disabled": true
-												},
-												{
-													"key": "pageNo",
-													"value": "1"
-												},
-												{
-													"key": "pageSize",
-													"value": "10"
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "AddGAwiseBillAddress",
-									"id": "51068262-eb094118-f29e-48a5-9b0e-144549a79475",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"BillingAddress\": \"GAIL Gas Limited 75/1, 1st floor, Opposite central excise and customs building,Above bank of baroda, Mangal pandey Nagar Meerut – 250004, Complaint Receiving Cell : 05422-508060, 9650503792, Nodal Officer: Mr.ABC, 987543210, Appellate Desk: Mr. XYZ, 987543211, appellate@gail.co.in. (Timings: 09:15 AM to 05:45 PM)\"\n  }",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{api_gateway_url}}/masters/GAwiseBillingAddress/AddGAwiseBillAddress",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"masters",
-												"GAwiseBillingAddress",
-												"AddGAwiseBillAddress"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "GetGAAddress",
-									"id": "51068262-e3ae38d0-5822-4f19-9cfa-4c1849cf1225",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"url": {
-											"raw": "{{api_gateway_url}}/masters/GAwiseBillingAddress/GetGAAddress",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"masters",
-												"GAwiseBillingAddress",
-												"GetGAAddress"
-											]
-										}
-									},
-									"response": []
-								}
-							],
-							"id": "51068262-94af1685-7a2b-4f48-90bd-103c190e9da8"
-						},
 						{
 							"name": "ComplaintTypeMaster",
 							"item": [
@@ -32656,6 +32542,120 @@
 								}
 							],
 							"id": "27e19aad-21ad-4c4c-a2ee-1e347c8010e9"
+						},
+						{
+							"name": "GAwiseBillingAddress",
+							"item": [
+								{
+									"name": "GetGAwiseBillAddressList",
+									"id": "51068262-f7dc6565-e397-47c1-bd26-ff80ec856f64",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/GAwiseBillingAddress/GetGAwiseBillAddressList?pageNo=1&pageSize=10",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"GAwiseBillingAddress",
+												"GetGAwiseBillAddressList"
+											],
+											"query": [
+												{
+													"key": "billingAddress",
+													"value": "Main%20Street",
+													"disabled": true
+												},
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "AddGAwiseBillAddress",
+									"id": "51068262-eb094118-f29e-48a5-9b0e-144549a79475",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"BillingAddress\": \"GAIL Gas Limited 75/1, 1st floor, Opposite central excise and customs building,Above bank of baroda, Mangal pandey Nagar Meerut – 250004, Complaint Receiving Cell : 05422-508060, 9650503792, Nodal Officer: Mr.ABC, 987543210, Appellate Desk: Mr. XYZ, 987543211, appellate@gail.co.in. (Timings: 09:15 AM to 05:45 PM)\"\n  }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/GAwiseBillingAddress/AddGAwiseBillAddress",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"GAwiseBillingAddress",
+												"AddGAwiseBillAddress"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetGAAddress",
+									"id": "51068262-e3ae38d0-5822-4f19-9cfa-4c1849cf1225",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/GAwiseBillingAddress/GetGAAddress",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"GAwiseBillingAddress",
+												"GetGAAddress"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "51068262-94af1685-7a2b-4f48-90bd-103c190e9da8"
 						},
 						{
 							"name": "Customize Notification",
