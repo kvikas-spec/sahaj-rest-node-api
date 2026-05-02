@@ -34134,6 +34134,808 @@
               "response": []
             }
           ]
+        },
+        {
+          "name": "Send SMS In Bulk",
+          "item": [
+            {
+              "name": "Get send SMS in bulk list",
+              "id": "51068262-sendsms-01",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Template/SendSMSInBulk?pageNo=1&pageSize=100",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Template",
+                    "SendSMSInBulk"
+                  ],
+                  "query": [
+                    {
+                      "key": "pageNo",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "100"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get send SMS in bulk templates",
+              "id": "51068262-sendsms-02",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Template/SendSMSInBulk/templates",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Template",
+                    "SendSMSInBulk",
+                    "templates"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get send SMS in bulk template detail",
+              "id": "51068262-sendsms-03",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Template/SendSMSInBulk/template-detail?customizedSMSInBulkTemplateDetailsId=1",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Template",
+                    "SendSMSInBulk",
+                    "template-detail"
+                  ],
+                  "query": [
+                    {
+                      "key": "customizedSMSInBulkTemplateDetailsId",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Save send SMS in bulk - mobile numbers",
+              "id": "51068262-sendsms-04",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Template/SendSMSInBulk",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Template",
+                    "SendSMSInBulk"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CustomizedSMSInBulkTemplateDetailsId\": 1,\n  \"SMSCategory\": 3,\n  \"SMSCategoryDetails\": \"9876543210,9876543211\",\n  \"MRUIds\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Save send SMS in bulk - BP numbers",
+              "id": "51068262-sendsms-05",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Template/SendSMSInBulk",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Template",
+                    "SendSMSInBulk"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CustomizedSMSInBulkTemplateDetailsId\": 1,\n  \"SMSCategory\": 2,\n  \"SMSCategoryDetails\": \"3000000001,3000000002\",\n  \"MRUIds\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Save send SMS in bulk - MRU",
+              "id": "51068262-sendsms-06",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Template/SendSMSInBulk",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Template",
+                    "SendSMSInBulk"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CustomizedSMSInBulkTemplateDetailsId\": 1,\n  \"SMSCategory\": 1,\n  \"SMSCategoryDetails\": \"\",\n  \"MRUIds\": \"1,2\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Cancel send SMS in bulk request",
+              "id": "51068262-sendsms-07",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Template/SendSMSInBulk/1/cancel",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Template",
+                    "SendSMSInBulk",
+                    "1",
+                    "cancel"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Export send SMS in bulk list",
+              "id": "51068262-sendsms-08",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Template/SendSMSInBulk/export",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Template",
+                    "SendSMSInBulk",
+                    "export"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Request For OBD Calls",
+          "item": [
+            {
+              "name": "Get OBD service types",
+              "id": "51068262-obd-01",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Customer/RequestForOBDCalls/types",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Customer",
+                    "RequestForOBDCalls",
+                    "types"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get OBD request list",
+              "id": "51068262-obd-02",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Customer/RequestForOBDCalls?pageNo=1&pageSize=100",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Customer",
+                    "RequestForOBDCalls"
+                  ],
+                  "query": [
+                    {
+                      "key": "pageNo",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "100"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get estimated OBD request count",
+              "id": "51068262-obd-03",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Customer/RequestForOBDCalls/count?type=1&days=7&wardId=0&consumerNumbers=",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Customer",
+                    "RequestForOBDCalls",
+                    "count"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "1"
+                    },
+                    {
+                      "key": "days",
+                      "value": "7"
+                    },
+                    {
+                      "key": "wardId",
+                      "value": "0"
+                    },
+                    {
+                      "key": "consumerNumbers",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Save request for OBD calls",
+              "id": "51068262-obd-04",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Customer/RequestForOBDCalls",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Customer",
+                    "RequestForOBDCalls"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Type\": 1,\n  \"Days\": 7,\n  \"WardId\": 0,\n  \"ConsumerNumbers\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Save request for OBD calls by BP numbers",
+              "id": "51068262-obd-05",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Customer/RequestForOBDCalls",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Customer",
+                    "RequestForOBDCalls"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Type\": 2,\n  \"Days\": 30,\n  \"WardId\": 0,\n  \"ConsumerNumbers\": \"3000000001,3000000002\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Cancel request for OBD calls",
+              "id": "51068262-obd-06",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Customer/RequestForOBDCalls/1/cancel",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Customer",
+                    "RequestForOBDCalls",
+                    "1",
+                    "cancel"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Promotional Scheme",
+          "item": [
+            {
+              "name": "Get promotional scheme list",
+              "id": "51068262-promo-07",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/operational-mapping/promotional-scheme?pageNo=1&pageSize=100",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "operational-mapping",
+                    "promotional-scheme"
+                  ],
+                  "query": [
+                    {
+                      "key": "pageNo",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "100"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Add promotional scheme",
+              "id": "51068262-promo-08",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/operational-mapping/promotional-scheme",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "operational-mapping",
+                    "promotional-scheme"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"PromoType\": \"Amount\",\n  \"promotypeValue\": 100\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Active/deactive promotional scheme",
+              "id": "51068262-promo-09",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/operational-mapping/promotional-scheme/1/active",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "operational-mapping",
+                    "promotional-scheme",
+                    "1",
+                    "active"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Export promotional scheme list",
+              "id": "51068262-promo-10",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/operational-mapping/promotional-scheme/export",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "operational-mapping",
+                    "promotional-scheme",
+                    "export"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Referral Scheme Master",
+          "item": [
+            {
+              "name": "Get referral scheme list",
+              "id": "51068262-referral-11",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/billing/referral-master?pageNo=1&pageSize=100",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "billing",
+                    "referral-master"
+                  ],
+                  "query": [
+                    {
+                      "key": "pageNo",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "100"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get referral scheme by id",
+              "id": "51068262-referral-12",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/billing/referral-master/1",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "billing",
+                    "referral-master",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get referral company list",
+              "id": "51068262-referral-13",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/billing/referral-master/companies",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "billing",
+                    "referral-master",
+                    "companies"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Check company active referral",
+              "id": "51068262-referral-14",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/billing/referral-master/check-active?CompanyId=1",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "billing",
+                    "referral-master",
+                    "check-active"
+                  ],
+                  "query": [
+                    {
+                      "key": "CompanyId",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Add referral scheme",
+              "id": "51068262-referral-15",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/billing/referral-master",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "billing",
+                    "referral-master"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ReferralSchemeMasterId\": 0,\n  \"CompanyId\": 1,\n  \"ReferralSchemeName\": \"Sample Referral Scheme\",\n  \"Discount\": 50,\n  \"RefereeDiscount\": 50,\n  \"ReferralSchemeLimitPerCalendarYear\": 5,\n  \"Remarks\": \"Sample referral scheme\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Update referral scheme",
+              "id": "51068262-referral-16",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/billing/referral-master",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "billing",
+                    "referral-master"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ReferralSchemeMasterId\": 1,\n  \"CompanyId\": 1,\n  \"ReferralSchemeName\": \"Updated Referral Scheme\",\n  \"Discount\": 50,\n  \"RefereeDiscount\": 50,\n  \"ReferralSchemeLimitPerCalendarYear\": 5,\n  \"Remarks\": \"Updated referral scheme\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Active/deactive referral scheme",
+              "id": "51068262-referral-17",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/billing/referral-master/1/active",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "billing",
+                    "referral-master",
+                    "1",
+                    "active"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
         }
       ],
       "id": "51068262-bc5ef91a-fd4d-415b-976d-667cabe9da6e"
