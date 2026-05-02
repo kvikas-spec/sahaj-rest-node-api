@@ -30693,7 +30693,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"name\": \"Admin\"\n  }",
+									"raw": "{\n    \"name\": \"Admin\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
