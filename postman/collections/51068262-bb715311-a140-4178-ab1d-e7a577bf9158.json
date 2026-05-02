@@ -32995,6 +32995,217 @@
               "response": []
             }
           ]
+        },
+        {
+          "name": "Customized Notification Template Master",
+          "item": [
+            {
+              "name": "Get customized notification template list",
+              "id": "51068262-d53a4405-9ee0-41a3-98f5-f78d3211cbca",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster?pageNo=1&pageSize=10",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Template",
+                    "CustomizedNotificationTemplateMaster"
+                  ],
+                  "query": [
+                    {
+                      "key": "pageNo",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get customized notification template by TemplateId",
+              "id": "51068262-c4a2e1f4-3f20-4727-91a1-8ea260c590c7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster/1",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Template",
+                    "CustomizedNotificationTemplateMaster",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get predefined template tags",
+              "id": "51068262-d59063bf-3463-4ab2-9b56-5b43bf7d68f2",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster/tags",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Template",
+                    "CustomizedNotificationTemplateMaster",
+                    "tags"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Add customized notification template",
+              "id": "51068262-a6db267e-6ffc-464e-8fc0-19e48637fe04",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Template",
+                    "CustomizedNotificationTemplateMaster"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TemplateId\": 0,\n  \"TemplateTitle\": \"Sample Template\",\n  \"TemplateCode\": \"SAMPLE_TEMPLATE\",\n  \"TemplateText\": \"Dear {ConsumerName}, your message text\",\n  \"IsSMS\": true,\n  \"IsEmail\": true,\n  \"EmailSubject\": \"Sample Subject\",\n  \"OnlyEnglishText\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Update customized notification template",
+              "id": "51068262-a747523a-539c-488b-98a3-9c05c360b810",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Template",
+                    "CustomizedNotificationTemplateMaster"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TemplateId\": 1,\n  \"TemplateTitle\": \"Updated Template\",\n  \"TemplateCode\": \"UPDATED_TEMPLATE\",\n  \"TemplateText\": \"Dear {ConsumerName}, updated message text\",\n  \"IsSMS\": true,\n  \"IsEmail\": true,\n  \"EmailSubject\": \"Updated Subject\",\n  \"OnlyEnglishText\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Active/deactive customized notification template",
+              "id": "51068262-49b3f6ee-5239-4710-9416-b964b66b5100",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster/1/active",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Template",
+                    "CustomizedNotificationTemplateMaster",
+                    "1",
+                    "active"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Export customized notification template list",
+              "id": "51068262-9a020315-b640-431b-acc0-ac74cc1f03e4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster/export",
+                  "host": [
+                    "{{api_gateway_url}}"
+                  ],
+                  "path": [
+                    "masters",
+                    "Template",
+                    "CustomizedNotificationTemplateMaster",
+                    "export"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
         }
       ],
       "id": "51068262-bc5ef91a-fd4d-415b-976d-667cabe9da6e"
