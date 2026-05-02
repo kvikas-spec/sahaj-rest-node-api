@@ -30701,13 +30701,13 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:3000/Role-Master/5",
-									"protocol": "http",
+									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Role-Master/5",
 									"host": [
-										"localhost"
+										"{{api_gateway_url}}"
 									],
-									"port": "3000",
 									"path": [
+										"masters",
+										"AuthorizationManagement",
 										"Role-Master",
 										"5"
 									]
