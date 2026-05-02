@@ -30701,7 +30701,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Role-Master/:RoleID",
+									"raw": "{{api_gateway_url}}/masters/AuthorizationManagement/Role-Master/",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30709,13 +30709,7 @@
 										"masters",
 										"AuthorizationManagement",
 										"Role-Master",
-										":RoleID"
-									],
-									"variable": [
-										{
-											"key": "RoleID",
-											"value": ""
-										}
+										""
 									]
 								}
 							},
