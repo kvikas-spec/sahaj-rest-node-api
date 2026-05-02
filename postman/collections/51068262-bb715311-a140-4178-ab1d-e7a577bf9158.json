@@ -31205,300 +31205,6 @@
 					"id": "51068262-342d01a8-405f-45c3-bf53-14c01c861f20"
 				},
 				{
-					"name": "ComplaintTypeMaster",
-					"item": [
-						{
-							"name": "GetComplaintTypeList",
-							"id": "51068262-5f7a155e-e570-4588-9439-0557f8084c47",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/ComplaintTypeMaster/GetComplaintTypeList?pageNo=1&pageSize=10",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"ComplaintTypeMaster",
-										"GetComplaintTypeList"
-									],
-									"query": [
-										{
-											"key": "pageNo",
-											"value": "1"
-										},
-										{
-											"key": "pageSize",
-											"value": "10"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "IsComplaintTypeExist",
-							"id": "51068262-d93fb27c-cd08-4f98-b28f-5f4049887946",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/ComplaintTypeMaster/IsComplaintTypeExist?value=Gas Leak&ComplaintTypeId=0&DepartmentId=5",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"ComplaintTypeMaster",
-										"IsComplaintTypeExist"
-									],
-									"query": [
-										{
-											"key": "value",
-											"value": "Gas Leak"
-										},
-										{
-											"key": "ComplaintTypeId",
-											"value": "0"
-										},
-										{
-											"key": "DepartmentId",
-											"value": "5"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "IsActiveComplaintType",
-							"id": "51068262-5dbb1eda-1d96-458f-af98-d31e55f2ea12",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "PATCH",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/ComplaintTypeMaster/IsActiveComplaintType/:ComplaintTypeId",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"ComplaintTypeMaster",
-										"IsActiveComplaintType",
-										":ComplaintTypeId"
-									],
-									"variable": [
-										{
-											"key": "ComplaintTypeId",
-											"value": "123"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "AddEditComplaintTypeDetails",
-							"id": "51068262-c33ea279-fcf9-4a7a-9b9f-11c53753004e",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer <your_token>"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"DepartmentId\": 5,\n    \"ComplaintsType\": \"Gas Leak\",\n    \"Remarks\": \"New complaint type\",\n    \"Note\": \"Created via API\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/ComplaintTypeMaster/AddEditComplaintTypeDetails",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"ComplaintTypeMaster",
-										"AddEditComplaintTypeDetails"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"id": "51068262-1843d8e4-893f-4df1-90f6-01a7b24d2a94"
-				},
-				{
-					"name": "ComplaintSubCategoryMaster",
-					"item": [
-						{
-							"name": "GetComplaintSubCategoryList",
-							"id": "51068262-81312756-6b97-4568-8156-0b5269765ba2",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/ComplaintSubCategoryMaster/GetComplaintSubCategoryList?pageNo=1&pageSize=10",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"ComplaintSubCategoryMaster",
-										"GetComplaintSubCategoryList"
-									],
-									"query": [
-										{
-											"key": "pageNo",
-											"value": "1"
-										},
-										{
-											"key": "pageSize",
-											"value": "10"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "IsComplaintSubCategoryExist",
-							"id": "51068262-1a909738-cc1e-4597-8f4a-83c1c5f5bcc2",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/ComplaintSubCategoryMaster/IsComplaintSubCategoryExist?value=Gas Leak Sub&ComplaintSubCategoryMasterId=0&ComplaintTypeId=5",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"ComplaintSubCategoryMaster",
-										"IsComplaintSubCategoryExist"
-									],
-									"query": [
-										{
-											"key": "value",
-											"value": "Gas Leak Sub"
-										},
-										{
-											"key": "ComplaintSubCategoryMasterId",
-											"value": "0"
-										},
-										{
-											"key": "ComplaintTypeId",
-											"value": "5"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "IsActiveComplaintSubCategory",
-							"id": "51068262-a29c04a4-c994-4fb7-8f99-ee9a7657e4ce",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "PATCH",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/ComplaintSubCategoryMaster/IsActiveComplaintSubCategory/:ComplaintSubCategoryMasterId",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"ComplaintSubCategoryMaster",
-										"IsActiveComplaintSubCategory",
-										":ComplaintSubCategoryMasterId"
-									],
-									"variable": [
-										{
-											"key": "ComplaintSubCategoryMasterId",
-											"value": "123"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "AddEditComplaintSubCategoryDetails",
-							"id": "51068262-85bc0506-7e5a-472e-977f-4011378d7439",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer <your_token>"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"ComplaintTypeId\": 5,\n    \"ComplaintsSubCategory\": \"Gas Leak Sub Category\",\n    \"Remarks\": \"New sub category\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/ComplaintSubCategoryMaster/AddEditComplaintSubCategoryDetails",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"ComplaintSubCategoryMaster",
-										"AddEditComplaintSubCategoryDetails"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"id": "51068262-d121d224-8932-45fd-8cf7-b502856f728c"
-				},
-				{
 					"name": "Terms & Conditions Template Master",
 					"item": [
 						{
@@ -32182,890 +31888,1185 @@
 					"id": "51068262-305602d8-fa50-4b78-9d75-3b8ef8213e73"
 				},
 				{
-					"name": "EscalationMatrix",
-					"item": [
-						{
-							"name": "GetEscalationMatrixList",
-							"id": "6fba9cad-7864-4903-9b9c-74a6e456d8e8",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/EscalationMatrix/GetEscalationMatrixList?pageNo=1&pageSize=10",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"EscalationMatrix",
-										"GetEscalationMatrixList"
-									],
-									"query": [
-										{
-											"key": "pageNo",
-											"value": "1"
-										},
-										{
-											"key": "pageSize",
-											"value": "10"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "IsEscalationExist",
-							"id": "437f8228-9534-47e0-ae03-66d717039871",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/EscalationMatrix/IsEscalationExist?EscalationMatrixId=0&DepartmentId=1&ComplaintLevelId=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"EscalationMatrix",
-										"IsEscalationExist"
-									],
-									"query": [
-										{
-											"key": "EscalationMatrixId",
-											"value": "0"
-										},
-										{
-											"key": "DepartmentId",
-											"value": "1"
-										},
-										{
-											"key": "ComplaintLevelId",
-											"value": "1"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "GetEditvalue",
-							"id": "ed008c0b-53e3-42ef-9e9e-290aebcd9056",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/EscalationMatrix/GetEditvalue?ID=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"EscalationMatrix",
-										"GetEditvalue"
-									],
-									"query": [
-										{
-											"key": "ID",
-											"value": "1"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "AddEditEscalationMatrixDetails",
-							"id": "9299f0d6-b6f0-4fd4-bf5a-fc76ccf95db2",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer <your_token>"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"escalationMatrixId\": 0,\n  \"departmentId\": 1,\n  \"complaintLevelId\": 1,\n  \"day\": 5,\n  \"ddluserIds\": \"50205,50206\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/EscalationMatrix/AddEditEscalationMatrixDetails",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"EscalationMatrix",
-										"AddEditEscalationMatrixDetails"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "IsActiveEscalationMatrixMaster",
-							"id": "c2d99974-f029-4300-a057-bd2e23e70bba",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer <your_token>"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"Id\": 1\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/EscalationMatrix/IsActiveEscalationMatrixMaster",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"EscalationMatrix",
-										"IsActiveEscalationMatrixMaster"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"id": "27e19aad-21ad-4c4c-a2ee-1e347c8018d1"
-				},
-				{
-					"name": "Complaint Receiving Cells Details Master",
-					"item": [
-						{
-							"name": "Get Complaint Receiving Cells List",
-							"id": "51068262-727b88aa-9a20-4737-86a9-511e8d66606a",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "{{regionId}}",
-										"type": "text"
-									},
-									{
-										"key": "content-type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/GetComplaintReceivingCellsList",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"masters",
-										"ComplaintReceivingCells",
-										"GetComplaintReceivingCellsList"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Complaint Receiving Cells Edit Details",
-							"id": "51068262-93621dbe-e97b-43fd-9147-1e1a77b8fadf",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "{{regionId}}",
-										"type": "text"
-									},
-									{
-										"key": "content-type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/GetEditvalue?ID={{InChargeComplaintReceivingCellsId}}",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"masters",
-										"ComplaintReceivingCells",
-										"GetEditvalue"
-									],
-									"query": [
-										{
-											"key": "ID",
-											"value": "{{InChargeComplaintReceivingCellsId}}"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Add or Edit Complaint Receiving Cells Details",
-							"id": "51068262-0fecc6ed-1eeb-4137-9ebf-cb3d025812f3",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{accessToken}}",
-										"type": "text"
-									},
-									{
-										"key": "x-region-id",
-										"value": "{{regionId}}",
-										"type": "text"
-									},
-									{
-										"key": "content-type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"InChargeComplaintReceivingCellsId\": 0,\n  \"InChargeComplaintReceivingCellsDetails\": \"Sample complaint receiving cells details\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/AddEditComplaintReceivingCellsDetails",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"masters",
-										"ComplaintReceivingCells",
-										"AddEditComplaintReceivingCellsDetails"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Activate / Deactivate Complaint Receiving Cells",
-							"id": "51068262-550b26e7-8db2-4fde-87ed-c951a0515899",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{accessToken}}",
-										"type": "text"
-									},
-									{
-										"key": "x-region-id",
-										"value": "{{regionId}}",
-										"type": "text"
-									},
-									{
-										"key": "content-type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"InChargeComplaintReceivingCellsId\": 1\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/IsActiveComplaintReceivingCellsDetails",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"masters",
-										"ComplaintReceivingCells",
-										"IsActiveComplaintReceivingCellsDetails"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"id": "27e19aad-21ad-4c4c-a2ee-1e347c8010e9"
-				},
-				{
-					"name": "Customize Notification",
-					"item": [
-						{
-							"name": "Get MRU/Ward list",
-							"id": "51068262-801a3648-96d9-4eff-89cd-29c49a3983fd",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/wards",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"NotificationManagement",
-										"wards"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Email/SMS template dropdown",
-							"id": "51068262-fb4e77f2-cb28-4c94-8c37-f6f77a4db0da",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/templates?Email=true&SMS=true",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"NotificationManagement",
-										"templates"
-									],
-									"query": [
-										{
-											"key": "Email",
-											"value": "true"
-										},
-										{
-											"key": "SMS",
-											"value": "true"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get template text",
-							"id": "51068262-ac46776e-1ccf-4d25-ba03-566d89907fef",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/template-text?TemplateId=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"NotificationManagement",
-										"template-text"
-									],
-									"query": [
-										{
-											"key": "TemplateId",
-											"value": "1"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get email subject",
-							"id": "51068262-b51d7e4a-68c8-4dee-a9d5-b07a3a07a341",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/email-subject?TemplateId=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"NotificationManagement",
-										"email-subject"
-									],
-									"query": [
-										{
-											"key": "TemplateId",
-											"value": "1"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Create customized notification request by MRU/Ward",
-							"id": "51068262-a693acd6-9ddf-408c-9cb7-0f1eff9f962e",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"WardList\": \"1,2\",\n  \"IsEmail\": true,\n  \"IsSMS\": true,\n  \"EmailTemplateId\": 1,\n  \"EmailSubject\": \"Subject from selected template\",\n  \"HtmlContent\": \"Notification template text\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"NotificationManagement"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Create customized notification request by BP Number",
-							"id": "51068262-e6bca702-fd18-40b5-b2bb-bb7a23a028f0",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"ConsumerNumber\": \"1000000001,1000000002\",\n  \"IsEmail\": true,\n  \"IsSMS\": false,\n  \"EmailTemplateId\": 1,\n  \"EmailSubject\": \"Subject from selected template\",\n  \"HtmlContent\": \"Notification template text\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"NotificationManagement"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get send notification request list",
-							"id": "51068262-c0f15769-35ae-4cb8-acf8-f34d7494820a",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/requests?pageNo=1&pageSize=10",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"NotificationManagement",
-										"requests"
-									],
-									"query": [
-										{
-											"key": "pageNo",
-											"value": "1"
-										},
-										{
-											"key": "pageSize",
-											"value": "10"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get customized notification status details",
-							"id": "51068262-8c8b3eaa-04c0-4d5a-b75b-17e848d116c9",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/requests/1/details",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"NotificationManagement",
-										"requests",
-										"1",
-										"details"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Export send notification request list data",
-							"id": "51068262-57730e64-8711-4ec6-95f1-b14dd5c0b2a3",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/requests/export",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"NotificationManagement",
-										"requests",
-										"export"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Cancel notification request",
-							"id": "51068262-2eca622a-c9d2-420f-aeb8-0929157bd2e2",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "PATCH",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/requests/1/cancel",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"NotificationManagement",
-										"requests",
-										"1",
-										"cancel"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"id": "51068262-9ecc962b-ceec-4661-b818-f3c9e05ee72a"
-				},
-				{
-					"name": "Customized Notification Template Master",
-					"item": [
-						{
-							"name": "Get customized notification template list",
-							"id": "51068262-d53a4405-9ee0-41a3-98f5-f78d3211cbca",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster?pageNo=1&pageSize=10",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"CustomizedNotificationTemplateMaster"
-									],
-									"query": [
-										{
-											"key": "pageNo",
-											"value": "1"
-										},
-										{
-											"key": "pageSize",
-											"value": "10"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get customized notification template by TemplateId",
-							"id": "51068262-c4a2e1f4-3f20-4727-91a1-8ea260c590c7",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster/1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"CustomizedNotificationTemplateMaster",
-										"1"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get predefined template tags",
-							"id": "51068262-d59063bf-3463-4ab2-9b56-5b43bf7d68f2",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster/tags",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"CustomizedNotificationTemplateMaster",
-										"tags"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Add customized notification template",
-							"id": "51068262-a6db267e-6ffc-464e-8fc0-19e48637fe04",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"TemplateId\": 0,\n  \"TemplateTitle\": \"Sample Template\",\n  \"TemplateCode\": \"SAMPLE_TEMPLATE\",\n  \"TemplateText\": \"Dear {ConsumerName}, your message text\",\n  \"IsSMS\": true,\n  \"IsEmail\": true,\n  \"EmailSubject\": \"Sample Subject\",\n  \"OnlyEnglishText\": true\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"CustomizedNotificationTemplateMaster"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Update customized notification template",
-							"id": "51068262-a747523a-539c-488b-98a3-9c05c360b810",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"TemplateId\": 1,\n  \"TemplateTitle\": \"Updated Template\",\n  \"TemplateCode\": \"UPDATED_TEMPLATE\",\n  \"TemplateText\": \"Dear {ConsumerName}, updated message text\",\n  \"IsSMS\": true,\n  \"IsEmail\": true,\n  \"EmailSubject\": \"Updated Subject\",\n  \"OnlyEnglishText\": true\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"CustomizedNotificationTemplateMaster"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Active/deactive customized notification template",
-							"id": "51068262-49b3f6ee-5239-4710-9416-b964b66b5100",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "PATCH",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster/1/active",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"CustomizedNotificationTemplateMaster",
-										"1",
-										"active"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Export customized notification template list",
-							"id": "51068262-9a020315-b640-431b-acc0-ac74cc1f03e4",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster/export",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Template",
-										"CustomizedNotificationTemplateMaster",
-										"export"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"id": "51068262-ce28ca13-01c4-4dff-8c23-430d5ac41900"
-				},
-				{
 					"name": "CRM,Communication & Schemes",
-					"item": [],
+					"item": [
+						{
+							"name": "ComplaintTypeMaster",
+							"item": [
+								{
+									"name": "GetComplaintTypeList",
+									"id": "51068262-5f7a155e-e570-4588-9439-0557f8084c47",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/ComplaintTypeMaster/GetComplaintTypeList?pageNo=1&pageSize=10",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"ComplaintTypeMaster",
+												"GetComplaintTypeList"
+											],
+											"query": [
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "IsComplaintTypeExist",
+									"id": "51068262-d93fb27c-cd08-4f98-b28f-5f4049887946",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/ComplaintTypeMaster/IsComplaintTypeExist?value=Gas Leak&ComplaintTypeId=0&DepartmentId=5",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"ComplaintTypeMaster",
+												"IsComplaintTypeExist"
+											],
+											"query": [
+												{
+													"key": "value",
+													"value": "Gas Leak"
+												},
+												{
+													"key": "ComplaintTypeId",
+													"value": "0"
+												},
+												{
+													"key": "DepartmentId",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "IsActiveComplaintType",
+									"id": "51068262-5dbb1eda-1d96-458f-af98-d31e55f2ea12",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/ComplaintTypeMaster/IsActiveComplaintType/:ComplaintTypeId",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"ComplaintTypeMaster",
+												"IsActiveComplaintType",
+												":ComplaintTypeId"
+											],
+											"variable": [
+												{
+													"key": "ComplaintTypeId",
+													"value": "123"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "AddEditComplaintTypeDetails",
+									"id": "51068262-c33ea279-fcf9-4a7a-9b9f-11c53753004e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <your_token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"DepartmentId\": 5,\n    \"ComplaintsType\": \"Gas Leak\",\n    \"Remarks\": \"New complaint type\",\n    \"Note\": \"Created via API\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/ComplaintTypeMaster/AddEditComplaintTypeDetails",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"ComplaintTypeMaster",
+												"AddEditComplaintTypeDetails"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "51068262-1843d8e4-893f-4df1-90f6-01a7b24d2a94"
+						},
+						{
+							"name": "ComplaintSubCategoryMaster",
+							"item": [
+								{
+									"name": "GetComplaintSubCategoryList",
+									"id": "51068262-81312756-6b97-4568-8156-0b5269765ba2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/ComplaintSubCategoryMaster/GetComplaintSubCategoryList?pageNo=1&pageSize=10",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"ComplaintSubCategoryMaster",
+												"GetComplaintSubCategoryList"
+											],
+											"query": [
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "IsComplaintSubCategoryExist",
+									"id": "51068262-1a909738-cc1e-4597-8f4a-83c1c5f5bcc2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/ComplaintSubCategoryMaster/IsComplaintSubCategoryExist?value=Gas Leak Sub&ComplaintSubCategoryMasterId=0&ComplaintTypeId=5",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"ComplaintSubCategoryMaster",
+												"IsComplaintSubCategoryExist"
+											],
+											"query": [
+												{
+													"key": "value",
+													"value": "Gas Leak Sub"
+												},
+												{
+													"key": "ComplaintSubCategoryMasterId",
+													"value": "0"
+												},
+												{
+													"key": "ComplaintTypeId",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "IsActiveComplaintSubCategory",
+									"id": "51068262-a29c04a4-c994-4fb7-8f99-ee9a7657e4ce",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/ComplaintSubCategoryMaster/IsActiveComplaintSubCategory/:ComplaintSubCategoryMasterId",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"ComplaintSubCategoryMaster",
+												"IsActiveComplaintSubCategory",
+												":ComplaintSubCategoryMasterId"
+											],
+											"variable": [
+												{
+													"key": "ComplaintSubCategoryMasterId",
+													"value": "123"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "AddEditComplaintSubCategoryDetails",
+									"id": "51068262-85bc0506-7e5a-472e-977f-4011378d7439",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <your_token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"ComplaintTypeId\": 5,\n    \"ComplaintsSubCategory\": \"Gas Leak Sub Category\",\n    \"Remarks\": \"New sub category\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/ComplaintSubCategoryMaster/AddEditComplaintSubCategoryDetails",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"ComplaintSubCategoryMaster",
+												"AddEditComplaintSubCategoryDetails"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "51068262-d121d224-8932-45fd-8cf7-b502856f728c"
+						},
+						{
+							"name": "EscalationMatrix",
+							"item": [
+								{
+									"name": "GetEscalationMatrixList",
+									"id": "6fba9cad-7864-4903-9b9c-74a6e456d8e8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/EscalationMatrix/GetEscalationMatrixList?pageNo=1&pageSize=10",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"EscalationMatrix",
+												"GetEscalationMatrixList"
+											],
+											"query": [
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "IsEscalationExist",
+									"id": "437f8228-9534-47e0-ae03-66d717039871",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/EscalationMatrix/IsEscalationExist?EscalationMatrixId=0&DepartmentId=1&ComplaintLevelId=1",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"EscalationMatrix",
+												"IsEscalationExist"
+											],
+											"query": [
+												{
+													"key": "EscalationMatrixId",
+													"value": "0"
+												},
+												{
+													"key": "DepartmentId",
+													"value": "1"
+												},
+												{
+													"key": "ComplaintLevelId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetEditvalue",
+									"id": "ed008c0b-53e3-42ef-9e9e-290aebcd9056",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/EscalationMatrix/GetEditvalue?ID=1",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"EscalationMatrix",
+												"GetEditvalue"
+											],
+											"query": [
+												{
+													"key": "ID",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "AddEditEscalationMatrixDetails",
+									"id": "9299f0d6-b6f0-4fd4-bf5a-fc76ccf95db2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <your_token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"escalationMatrixId\": 0,\n  \"departmentId\": 1,\n  \"complaintLevelId\": 1,\n  \"day\": 5,\n  \"ddluserIds\": \"50205,50206\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/EscalationMatrix/AddEditEscalationMatrixDetails",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"EscalationMatrix",
+												"AddEditEscalationMatrixDetails"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "IsActiveEscalationMatrixMaster",
+									"id": "c2d99974-f029-4300-a057-bd2e23e70bba",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <your_token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"Id\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/EscalationMatrix/IsActiveEscalationMatrixMaster",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"EscalationMatrix",
+												"IsActiveEscalationMatrixMaster"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "27e19aad-21ad-4c4c-a2ee-1e347c8018d1"
+						},
+						{
+							"name": "Complaint Receiving Cells Details Master",
+							"item": [
+								{
+									"name": "Get Complaint Receiving Cells List",
+									"id": "51068262-727b88aa-9a20-4737-86a9-511e8d66606a",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-region-id",
+												"value": "{{regionId}}",
+												"type": "text"
+											},
+											{
+												"key": "content-type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/GetComplaintReceivingCellsList",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"masters",
+												"ComplaintReceivingCells",
+												"GetComplaintReceivingCellsList"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Complaint Receiving Cells Edit Details",
+									"id": "51068262-93621dbe-e97b-43fd-9147-1e1a77b8fadf",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-region-id",
+												"value": "{{regionId}}",
+												"type": "text"
+											},
+											{
+												"key": "content-type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/GetEditvalue?ID={{InChargeComplaintReceivingCellsId}}",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"masters",
+												"ComplaintReceivingCells",
+												"GetEditvalue"
+											],
+											"query": [
+												{
+													"key": "ID",
+													"value": "{{InChargeComplaintReceivingCellsId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add or Edit Complaint Receiving Cells Details",
+									"id": "51068262-0fecc6ed-1eeb-4137-9ebf-cb3d025812f3",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{accessToken}}",
+												"type": "text"
+											},
+											{
+												"key": "x-region-id",
+												"value": "{{regionId}}",
+												"type": "text"
+											},
+											{
+												"key": "content-type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"InChargeComplaintReceivingCellsId\": 0,\n  \"InChargeComplaintReceivingCellsDetails\": \"Sample complaint receiving cells details\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/AddEditComplaintReceivingCellsDetails",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"masters",
+												"ComplaintReceivingCells",
+												"AddEditComplaintReceivingCellsDetails"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Activate / Deactivate Complaint Receiving Cells",
+									"id": "51068262-550b26e7-8db2-4fde-87ed-c951a0515899",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{accessToken}}",
+												"type": "text"
+											},
+											{
+												"key": "x-region-id",
+												"value": "{{regionId}}",
+												"type": "text"
+											},
+											{
+												"key": "content-type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"InChargeComplaintReceivingCellsId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/IsActiveComplaintReceivingCellsDetails",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"masters",
+												"ComplaintReceivingCells",
+												"IsActiveComplaintReceivingCellsDetails"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "27e19aad-21ad-4c4c-a2ee-1e347c8010e9"
+						},
+						{
+							"name": "Customize Notification",
+							"item": [
+								{
+									"name": "Get MRU/Ward list",
+									"id": "51068262-801a3648-96d9-4eff-89cd-29c49a3983fd",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/wards",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"NotificationManagement",
+												"wards"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Email/SMS template dropdown",
+									"id": "51068262-fb4e77f2-cb28-4c94-8c37-f6f77a4db0da",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/templates?Email=true&SMS=true",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"NotificationManagement",
+												"templates"
+											],
+											"query": [
+												{
+													"key": "Email",
+													"value": "true"
+												},
+												{
+													"key": "SMS",
+													"value": "true"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get template text",
+									"id": "51068262-ac46776e-1ccf-4d25-ba03-566d89907fef",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/template-text?TemplateId=1",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"NotificationManagement",
+												"template-text"
+											],
+											"query": [
+												{
+													"key": "TemplateId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get email subject",
+									"id": "51068262-b51d7e4a-68c8-4dee-a9d5-b07a3a07a341",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/email-subject?TemplateId=1",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"NotificationManagement",
+												"email-subject"
+											],
+											"query": [
+												{
+													"key": "TemplateId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create customized notification request by MRU/Ward",
+									"id": "51068262-a693acd6-9ddf-408c-9cb7-0f1eff9f962e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"WardList\": \"1,2\",\n  \"IsEmail\": true,\n  \"IsSMS\": true,\n  \"EmailTemplateId\": 1,\n  \"EmailSubject\": \"Subject from selected template\",\n  \"HtmlContent\": \"Notification template text\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"NotificationManagement"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create customized notification request by BP Number",
+									"id": "51068262-e6bca702-fd18-40b5-b2bb-bb7a23a028f0",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ConsumerNumber\": \"1000000001,1000000002\",\n  \"IsEmail\": true,\n  \"IsSMS\": false,\n  \"EmailTemplateId\": 1,\n  \"EmailSubject\": \"Subject from selected template\",\n  \"HtmlContent\": \"Notification template text\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"NotificationManagement"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get send notification request list",
+									"id": "51068262-c0f15769-35ae-4cb8-acf8-f34d7494820a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/requests?pageNo=1&pageSize=10",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"NotificationManagement",
+												"requests"
+											],
+											"query": [
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get customized notification status details",
+									"id": "51068262-8c8b3eaa-04c0-4d5a-b75b-17e848d116c9",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/requests/1/details",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"NotificationManagement",
+												"requests",
+												"1",
+												"details"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Export send notification request list data",
+									"id": "51068262-57730e64-8711-4ec6-95f1-b14dd5c0b2a3",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/requests/export",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"NotificationManagement",
+												"requests",
+												"export"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Cancel notification request",
+									"id": "51068262-2eca622a-c9d2-420f-aeb8-0929157bd2e2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/requests/1/cancel",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"NotificationManagement",
+												"requests",
+												"1",
+												"cancel"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "51068262-9ecc962b-ceec-4661-b818-f3c9e05ee72a"
+						},
+						{
+							"name": "Customized Notification Template Master",
+							"item": [
+								{
+									"name": "Get customized notification template list",
+									"id": "51068262-d53a4405-9ee0-41a3-98f5-f78d3211cbca",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster?pageNo=1&pageSize=10",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"CustomizedNotificationTemplateMaster"
+											],
+											"query": [
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get customized notification template by TemplateId",
+									"id": "51068262-c4a2e1f4-3f20-4727-91a1-8ea260c590c7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster/1",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"CustomizedNotificationTemplateMaster",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get predefined template tags",
+									"id": "51068262-d59063bf-3463-4ab2-9b56-5b43bf7d68f2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster/tags",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"CustomizedNotificationTemplateMaster",
+												"tags"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add customized notification template",
+									"id": "51068262-a6db267e-6ffc-464e-8fc0-19e48637fe04",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"TemplateId\": 0,\n  \"TemplateTitle\": \"Sample Template\",\n  \"TemplateCode\": \"SAMPLE_TEMPLATE\",\n  \"TemplateText\": \"Dear {ConsumerName}, your message text\",\n  \"IsSMS\": true,\n  \"IsEmail\": true,\n  \"EmailSubject\": \"Sample Subject\",\n  \"OnlyEnglishText\": true\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"CustomizedNotificationTemplateMaster"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update customized notification template",
+									"id": "51068262-a747523a-539c-488b-98a3-9c05c360b810",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"TemplateId\": 1,\n  \"TemplateTitle\": \"Updated Template\",\n  \"TemplateCode\": \"UPDATED_TEMPLATE\",\n  \"TemplateText\": \"Dear {ConsumerName}, updated message text\",\n  \"IsSMS\": true,\n  \"IsEmail\": true,\n  \"EmailSubject\": \"Updated Subject\",\n  \"OnlyEnglishText\": true\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"CustomizedNotificationTemplateMaster"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Active/deactive customized notification template",
+									"id": "51068262-49b3f6ee-5239-4710-9416-b964b66b5100",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster/1/active",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"CustomizedNotificationTemplateMaster",
+												"1",
+												"active"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Export customized notification template list",
+									"id": "51068262-9a020315-b640-431b-acc0-ac74cc1f03e4",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster/export",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"CustomizedNotificationTemplateMaster",
+												"export"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "51068262-ce28ca13-01c4-4dff-8c23-430d5ac41900"
+						}
+					],
 					"id": "51068262-6328181d-5ee3-4ba2-88a2-70a39aef6e09"
 				},
 				{
