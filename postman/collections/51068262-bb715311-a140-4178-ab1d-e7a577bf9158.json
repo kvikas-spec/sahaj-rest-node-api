@@ -35730,7 +35730,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/masters/Customer/CNGRateMaster?pageNo=1&pageSize=100",
+											"raw": "{{api_gateway_url}}/masters/Customer/CNGRateMaster?pageNo=1&pageSize=10",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -35746,7 +35746,7 @@
 												},
 												{
 													"key": "pageSize",
-													"value": "100"
+													"value": "10"
 												}
 											]
 										}
