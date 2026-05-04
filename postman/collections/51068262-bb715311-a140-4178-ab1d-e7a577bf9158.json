@@ -30746,7 +30746,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList?isFilter=1&Search=prudwiraj@gmail.com&isEscalationMatrix=1",
+									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList?isFilter=1&isEscalationMatrix=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30762,7 +30762,8 @@
 										},
 										{
 											"key": "Search",
-											"value": "prudwiraj@gmail.com"
+											"value": "prudwiraj@gmail.com",
+											"disabled": true
 										},
 										{
 											"key": "EncryptedUserID",
