@@ -30746,7 +30746,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList?isFilter=1&Search=prudwiraj@gmail.com",
+									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList?isFilter=1&Search=prudwiraj@gmail.com&isEscalationMatrix=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30783,6 +30783,10 @@
 											"key": "pageSize",
 											"value": "10",
 											"disabled": true
+										},
+										{
+											"key": "isEscalationMatrix",
+											"value": "1"
 										}
 									]
 								}
