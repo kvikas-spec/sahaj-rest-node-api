@@ -1159,11 +1159,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}{{customer_reg_url}}/get-GAstateandcity",
+									"raw": "{{api_gateway_url}}{{customer_reg_url}}/Customer-Master/get-GAstateandcity",
 									"host": [
 										"{{api_gateway_url}}{{customer_reg_url}}"
 									],
 									"path": [
+										"Customer-Master",
 										"get-GAstateandcity"
 									]
 								}
