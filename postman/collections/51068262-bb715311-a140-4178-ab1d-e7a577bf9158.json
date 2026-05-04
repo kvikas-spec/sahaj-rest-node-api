@@ -33677,7 +33677,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"CompanyId\": 1,\n  \"IsEmail\": true,\n  \"IsSMS\": true,\n  \"EmailTemplateId\": 1,\n  \"EmailSubject\": \"Subject from selected template\",\n  \"HtmlContent\": \"Notification template text\"\n}",
+											"raw": "{\n  \"CompanyId\": 1,\n  \"IsEmail\": true,\n  \"IsSMS\": true,\n  \"EmailTemplateId\": 11,\n  \"EmailSubject\": \"Subject from selected template\",\n  \"HtmlContent\": \"Notification template text\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
