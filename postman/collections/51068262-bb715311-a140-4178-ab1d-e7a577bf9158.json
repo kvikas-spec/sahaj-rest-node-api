@@ -35722,8 +35722,69 @@
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
-										"header": []
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI1MDIwNSIsIlJvbGVJRCI6IjIiLCJTdXJuYW1lIjoicmR0ZmdoIiwiRmlyc3ROYW1lIjoiQU5LMDgxOTUiLCJNaWRkbGVOYW1lIjoiIiwiUGhvbmVOdW1iZXIiOiI5NzU1NTUwOTY5IiwiRW1haWxJZCI6IkFOSzA4MTk1QEdBSUwuQ08uSU4iLCJBZGRyZXNzIjoiZHJmZ2hqIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOm51bGwsIkRlcGFydG1lbnQiOm51bGwsIkVtcGxveWVlSWQiOiIwMDAwODE5NSIsIlVzZXJOYW1lIjoiQU5LMDgxOTVAR0FJTC5DTy5JTiIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoicWl1M2JkbHloM3JjMnNndDU1ZHByazNlIiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAyMC0xMS0wOFQxNjoyNzowMy43ODBaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjAxMTA4LCJVcGRhdGVkRGF0ZSI6IjIwMjYtMDQtMjdUMTQ6NDM6MDcuMTEzWiIsIlVwZGF0ZWREYXRlSW50IjoyMDI2MDQyNywiQWRkZWRCeSI6IjEzMSIsIlVwZGF0ZWRCeSI6IjUwMjA1IiwiVHJhbnNhY3Rpb25JZCI6IjI1MDc3MzI4MzgiLCJBZ2VuY3lJZCI6IjUwIiwiSXNNb2JpbGUiOmZhbHNlLCJJc0FEVXNlcnMiOnRydWUsIlVzZXJJbWFnZSI6IkNvbW1vbi91c2VyLWltYWdlcy8xNzc3MzAwOTg2OTE2LTU1OTAxNDE2MV9kb3dubG9hZC5qcGciLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGVJbnQiOm51bGwsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IlU0MDIwMERMMjAwOEdPSTE3ODYxNCIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiKzkxLTExLTI2MTg1OTQxIiwiV2Vic2l0ZVVybCI6Ind3dy5nYWlsZ2FzLmNvbSIsIkVtYWlsSWQiOiJnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IjE4MDAxMDI5MjgyIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9wcm9kdWN0cy9wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL3Byb2R1Y3RzL3BuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lci5nYWlsZ2FzcG5nLmNvbS9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExNjUiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwczovL2N1c3RvbWVyLmdhaWxnYXNwbmcuY29tL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHBzOi8vY3VzdG9tZXIuZ2FpbGdhc3BuZy5jb20vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycC5pY2ljaS5iYW5rLmluL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzc3OTc4NjAxLCJleHAiOjE3Nzc5ODIyMDF9.LGMEfbBYk_401OuIopH7YL6qiI3kBmHsgeNmJ4I9aWM"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"type": "text",
+													"key": "FOCardNumber",
+													"value": "1234567890"
+												},
+												{
+													"type": "text",
+													"key": "VehicleMake",
+													"value": "Sample"
+												},
+												{
+													"type": "text",
+													"key": "VehicleTypeMasterId",
+													"value": "1"
+												},
+												{
+													"type": "text",
+													"key": "VehicleNumber",
+													"value": "GJ01AB1234"
+												},
+												{
+													"type": "text",
+													"key": "YearOfRegistration",
+													"value": "2024"
+												},
+												{
+													"type": "text",
+													"key": "Ownership",
+													"value": "Self"
+												},
+												{
+													"type": "file",
+													"key": "RCBook",
+													"src": "/home/vikaskumar/Pictures/Screenshots/Screenshot from 2026-05-05 12-56-18.png"
+												},
+												{
+													"type": "file",
+													"key": "AgreementForAttachedVehicle",
+													"src": "/home/vikaskumar/Pictures/Screenshots/Screenshot from 2026-05-05 12-55-22.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/CNGPromo/FleetOperatorVehicleMaster",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"CNGPromo",
+												"FleetOperatorVehicleMaster"
+											]
+										}
 									},
 									"response": []
 								}
