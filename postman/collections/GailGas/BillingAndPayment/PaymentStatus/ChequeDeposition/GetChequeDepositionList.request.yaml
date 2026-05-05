@@ -1,0 +1,24 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/payment/GetChequeDepositionList?pageNo=1&pageSize=10&isFilter=1&fromDate=2025-01-01&toDate=2025-12-31"
+method: GET
+headers:
+  Content-Type: application/json
+  Cookie: connect.sid=your_session_cookie
+queryParams:
+  - key: pageNo
+    value: "1"
+  - key: pageSize
+    value: "10"
+  - key: isFilter
+    value: "1"
+  - key: fromDate
+    value: 2025-01-01
+  - key: toDate
+    value: 2025-12-31
+  - key: consumerNumber
+    value: "3000295327"
+    disabled: true
+body:
+  type: text
+  content: ""
+order: 1000

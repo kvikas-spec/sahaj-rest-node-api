@@ -1,0 +1,37 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/form-13"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "ChangeConnectionStatusId": 0,
+      "ConsumerNumber": 1234567890,
+      "Cycle": 0,
+      "TransactionDate": "2026-01-13T10:30:00",
+      "OldConnectionStatusId": 1,
+      "NewConnectionStatusId": 2,
+      "ReDisConnectionDate": "2026-01-15T00:00:00",
+
+      "MeterNumber": "MTR-987654",
+      "MeterCompanyId": 3,
+      "MeterType": "Domestic",
+      "Reading": 125.50,
+
+      "ResolutionNumber": "RES-2026-01",
+      "ResolutionDate": "2026-01-10T00:00:00",
+
+      "OldKitchenPoints": 1,
+      "NewKitchenPoints": 2,
+      "OldGeyserPoints": 0,
+      "NewGeyserPoints": 1,
+      "OldTotalPoints": 1,
+      "NewTotalPoints": 3,
+
+      "ChallanNumber": "1001,1002",
+      "ConsumerChallanId": "1001,1002",
+
+      "Remark": "Meter replaced due to fault",
+      "NewMeterRemark": "New meter installed successfully"
+    }
+order: 2000

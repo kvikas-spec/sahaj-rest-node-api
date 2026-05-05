@@ -1,0 +1,5 @@
+$kind: http-request
+name: Active/deactive referral scheme
+url: "{{api_gateway_url}}/masters/billing/referral-master/1/active"
+method: PATCH
+order: 7000

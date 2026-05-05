@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/manage-jmr-document/3000298331"
+method: GET
+examples: ./.resources/manage-jmr-document.resources/examples
+order: 6000

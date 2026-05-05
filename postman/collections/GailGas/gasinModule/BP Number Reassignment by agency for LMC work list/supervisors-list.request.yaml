@@ -1,0 +1,4 @@
+$kind: http-request
+url: localhost:4000/supervisors/
+method: GET
+order: 3000

@@ -1,0 +1,11 @@
+$kind: http-request
+name: on/off== /active-deactive-lpc
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/active-deactive-lpc/"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "id":394
+    }
+order: 3000

@@ -1,0 +1,156 @@
+$kind: http-example
+name: /gas-in/list
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/gas-in/list?pageNo=1&IsFilter=0&ConsumerNumber=&StatusId=9&AgencyTypeId=&AgencyUserId=&pageSize=&Address"
+  method: GET
+  queryParams:
+    pageNo: "1"
+    IsFilter: "0"
+    ConsumerNumber: ""
+    StatusId: "9"
+    AgencyTypeId: ""
+    AgencyUserId: ""
+    pageSize: ""
+    Address: null
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770792253937-226331
+    content-type: application/json; charset=utf-8
+    etag: W/"8cd-fxPZj3EAT0WsPbq84BGrlZNsmm0"
+    date: Wed, 11 Feb 2026 06:44:14 GMT
+    connection: close
+    Vary: Accept-Encoding
+    Content-Encoding: br
+    Transfer-Encoding: chunked
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": [
+              {
+                  "SrNo": "6",
+                  "CustomerId": "128068",
+                  "ConsumerNumber": "3000295355",
+                  "FullName": "sam3",
+                  "MobileNumber": "989541****",
+                  "Address": "2 test3, test125",
+                  "TPinCode": "390002",
+                  "AgencyId": "47",
+                  "SupervisorId": "10176",
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": "08/21/2023",
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": "08/21/2023",
+                  "AgencyName": "BHARTI ",
+                  "SupervisorName": "BHARGAVI"
+              },
+              {
+                  "SrNo": "5",
+                  "CustomerId": "97643",
+                  "ConsumerNumber": "3000294901",
+                  "FullName": "Dhaval",
+                  "MobileNumber": "962443****",
+                  "Address": "23 Anand Upvan Society, New Way",
+                  "TPinCode": "388450",
+                  "AgencyId": "44",
+                  "SupervisorId": "10228",
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": "11/24/2022",
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": "11/24/2022",
+                  "AgencyName": "MY AGENCY",
+                  "SupervisorName": "DHAVAL"
+              },
+              {
+                  "SrNo": "4",
+                  "CustomerId": "126",
+                  "ConsumerNumber": "30003684996",
+                  "FullName": "Hardik",
+                  "MobileNumber": "875487****",
+                  "Address": "54 TYU, 4 HARMANBHAI S CHAL OPP NILAM APPART SUBHANPURA VADODARA",
+                  "TPinCode": "390002",
+                  "AgencyId": null,
+                  "SupervisorId": null,
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": null,
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": null,
+                  "AgencyName": "",
+                  "SupervisorName": ""
+              },
+              {
+                  "SrNo": "3",
+                  "CustomerId": "110",
+                  "ConsumerNumber": "804507516",
+                  "FullName": "IST123",
+                  "MobileNumber": "0849098****",
+                  "Address": "14 TYU, RTY VADODARA",
+                  "TPinCode": "390004",
+                  "AgencyId": "47",
+                  "SupervisorId": "10176",
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": "02/01/2021",
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": "02/01/2021",
+                  "AgencyName": "BHARTI ",
+                  "SupervisorName": "BHARGAVI"
+              },
+              {
+                  "SrNo": "2",
+                  "CustomerId": "48",
+                  "ConsumerNumber": "5454545454",
+                  "FullName": "Test8",
+                  "MobileNumber": "321321****",
+                  "Address": "120 test, test VADODARA",
+                  "TPinCode": "390008",
+                  "AgencyId": null,
+                  "SupervisorId": null,
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": null,
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": null,
+                  "AgencyName": "",
+                  "SupervisorName": ""
+              },
+              {
+                  "SrNo": "1",
+                  "CustomerId": "28",
+                  "ConsumerNumber": "400004",
+                  "FullName": "rajesh",
+                  "MobileNumber": "741852****",
+                  "Address": "1 abcd, abce VADODARA",
+                  "TPinCode": "390008",
+                  "AgencyId": null,
+                  "SupervisorId": null,
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": null,
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": null,
+                  "AgencyName": "",
+                  "SupervisorName": ""
+              }
+          ],
+          "pagination": {
+              "totalRecords": 6,
+              "pageCount": 1,
+              "currentPage": 1,
+              "pageSize": 10
+          }
+      }
+order: 1000

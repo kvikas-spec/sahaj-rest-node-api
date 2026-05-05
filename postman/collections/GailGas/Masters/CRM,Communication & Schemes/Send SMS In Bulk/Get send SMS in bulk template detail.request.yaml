@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Template/SendSMSInBulk/template-detail?customizedSMSInBulkTemplateDetailsId=1"
+method: GET
+queryParams:
+  customizedSMSInBulkTemplateDetailsId: "1"
+order: 3000

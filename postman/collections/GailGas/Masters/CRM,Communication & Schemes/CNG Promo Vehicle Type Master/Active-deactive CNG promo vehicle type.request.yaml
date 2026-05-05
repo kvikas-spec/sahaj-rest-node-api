@@ -1,0 +1,5 @@
+$kind: http-request
+name: Active/deactive CNG promo vehicle type
+url: "{{api_gateway_url}}/masters/CNGPromo/VehicleTypeMaster/1/active"
+method: PATCH
+order: 6000

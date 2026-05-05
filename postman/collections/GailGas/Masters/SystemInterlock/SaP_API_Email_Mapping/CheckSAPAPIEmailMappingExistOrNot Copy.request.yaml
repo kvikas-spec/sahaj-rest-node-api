@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/SystemInterlock/AddEditSAPAPIEmailMappingMaster"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        // "SAPAPIEmailMappingMasterId": "1",
+        "EmailId": "vikas2473@yopmail.com"
+    }
+order: 3000

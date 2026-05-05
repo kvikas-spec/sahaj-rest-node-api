@@ -1,0 +1,5 @@
+$kind: http-request
+name: Active/deactive CNG rate
+url: "{{api_gateway_url}}/masters/Customer/CNGRateMaster/1/active"
+method: PATCH
+order: 3000

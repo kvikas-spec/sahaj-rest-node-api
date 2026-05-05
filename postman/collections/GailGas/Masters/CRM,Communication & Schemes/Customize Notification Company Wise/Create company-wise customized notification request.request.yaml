@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Template/CustomizedNotificationCompanyWise"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "CompanyId": 1,
+      "IsEmail": true,
+      "IsSMS": true,
+      "EmailTemplateId": 11,
+      "EmailSubject": "Subject from selected template",
+      "HtmlContent": "Notification template text"
+    }
+order: 4000

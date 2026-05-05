@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/form12approvallist?pageNo=5&pageSize=10&IsFilter=1&consumerNo=3000298077"
+method: GET
+queryParams:
+  pageNo: "5"
+  pageSize: "10"
+  IsFilter: "1"
+  consumerNo: "3000298077"
+order: 1000

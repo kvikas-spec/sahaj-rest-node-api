@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Customer/CNGStationLocator"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "CNGStationLocatorId": 0,
+      "CityId": 1,
+      "CNGStationName": "Sample Station",
+      "Address": "Sample Address",
+      "Latitude": "23.0000",
+      "Longitude": "72.0000"
+    }
+order: 3000

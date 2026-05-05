@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/payment/UploadExcelForPOSList"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: file
+      src: /home/vikaskumar/Downloads/POSList (1).xlsx
+order: 4000

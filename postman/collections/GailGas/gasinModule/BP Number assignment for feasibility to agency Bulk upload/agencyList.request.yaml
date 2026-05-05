@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/agencyList"
+method: GET
+order: 1000

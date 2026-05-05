@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/PrintBill"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "ConsumerCode": [3000038652],//[3000293911, 3000293910, 3000293912 ],
+      "Cycle": 0,
+      "WardId": 0,
+      "AccountTypeId": 1,
+      "StartDate": "2026-01-01",
+      "EndDate": "2026-04-24"
+    //   "demandMasterId": 5257108
+    }
+order: 1000

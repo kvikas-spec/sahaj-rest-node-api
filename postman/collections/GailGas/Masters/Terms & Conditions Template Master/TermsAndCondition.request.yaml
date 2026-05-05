@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/template/TermsAndCondition"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer <your_token>
+body:
+  type: json
+  content: |-
+    {
+        "CNGPromoTandCTemplateMasterId": 2, // update case
+        "TemplateText": "<p>These are the terms and conditions for CNG Promo...</p>"
+    }
+    // "CNGPromoTandCTemplateMasterId": 5,
+order: 3000

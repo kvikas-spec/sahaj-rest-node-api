@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/operational-mapping/promotional-scheme"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "PromoType": "Amount",
+      "promotypeValue": 100
+    }
+order: 2000

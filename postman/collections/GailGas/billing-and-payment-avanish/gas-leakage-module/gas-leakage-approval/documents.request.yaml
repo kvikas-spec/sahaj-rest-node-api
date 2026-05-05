@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/gas-leakage/view-gas-leakage-document?gasLeakageId=30085"
+method: GET
+queryParams:
+  gasLeakageId: "30085"
+examples: ./.resources/documents.resources/examples
+order: 2000

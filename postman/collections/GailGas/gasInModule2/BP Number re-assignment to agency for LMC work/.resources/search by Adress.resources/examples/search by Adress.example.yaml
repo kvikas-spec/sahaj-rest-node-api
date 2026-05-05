@@ -1,0 +1,192 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/bp-number-reassignment-lmc/?pageNo=1&AgencyTypeId=&ConsumerNumber=&IsFilter=1&Address=a&pageSize=10"
+  method: GET
+  queryParams:
+    pageNo: "1"
+    AgencyTypeId: ""
+    ConsumerNumber: ""
+    IsFilter: "1"
+    Address: a
+    pageSize: "10"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770719031591-244667
+    content-type: application/json; charset=utf-8
+    etag: W/"c3c-ibKlCJTjuLhoblgli5GYyhs4z1s"
+    date: Tue, 10 Feb 2026 10:23:51 GMT
+    connection: close
+    Vary: Accept-Encoding
+    Content-Encoding: br
+    Transfer-Encoding: chunked
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": [
+              {
+                  "SrNo": "229",
+                  "CustomerId": "390647",
+                  "ConsumerNumber": "3000298150",
+                  "FullName": "Mrs. Meera patel",
+                  "MobileNumber": "987650****",
+                  "Address": "203 Shanti Apartments, Ring Road",
+                  "AgencyId": "30071",
+                  "SupervisorId": "150857",
+                  "StatusId": "9",
+                  "StatusName": " RFC done",
+                  "AgencyName": "AMBA AUTO SALES AND SERVICE",
+                  "SupervisorName": "JOHN"
+              },
+              {
+                  "SrNo": "228",
+                  "CustomerId": "300650",
+                  "ConsumerNumber": "3000298102",
+                  "FullName": "gail test11",
+                  "MobileNumber": "984546****",
+                  "Address": "rererr gail test11, gail test11",
+                  "AgencyId": "30060",
+                  "SupervisorId": null,
+                  "StatusId": "9",
+                  "StatusName": " RFC done",
+                  "AgencyName": "OM VEHICLE DEALER",
+                  "SupervisorName": ""
+              },
+              {
+                  "SrNo": "227",
+                  "CustomerId": "300649",
+                  "ConsumerNumber": "3000298101",
+                  "FullName": "gail test10",
+                  "MobileNumber": "656443****",
+                  "Address": "34545 gail test10, gail test10",
+                  "AgencyId": "30061",
+                  "SupervisorId": "160930",
+                  "StatusId": "9",
+                  "StatusName": " RFC done",
+                  "AgencyName": "ARJUN RETROFITTER",
+                  "SupervisorName": "DAVID"
+              },
+              {
+                  "SrNo": "226",
+                  "CustomerId": "300648",
+                  "ConsumerNumber": "3000298100",
+                  "FullName": "Gail testing",
+                  "MobileNumber": "967463****",
+                  "Address": "343 Gail testing, Gail testing",
+                  "AgencyId": "30070",
+                  "SupervisorId": null,
+                  "StatusId": "9",
+                  "StatusName": " RFC done",
+                  "AgencyName": "KATARIA AUTOMOBILES",
+                  "SupervisorName": ""
+              },
+              {
+                  "SrNo": "225",
+                  "CustomerId": "290649",
+                  "ConsumerNumber": "3000298079",
+                  "FullName": "Gas test10",
+                  "MobileNumber": "866544****",
+                  "Address": "34344545 Gas test10, Gas test10",
+                  "AgencyId": "30061",
+                  "SupervisorId": "160930",
+                  "StatusId": "9",
+                  "StatusName": " RFC done",
+                  "AgencyName": "ARJUN RETROFITTER",
+                  "SupervisorName": "DAVID"
+              },
+              {
+                  "SrNo": "224",
+                  "CustomerId": "290648",
+                  "ConsumerNumber": "3000298078",
+                  "FullName": "Gas test9",
+                  "MobileNumber": "866544****",
+                  "Address": "34344545 Gas test9, Gas test9",
+                  "AgencyId": "30061",
+                  "SupervisorId": "160930",
+                  "StatusId": "9",
+                  "StatusName": " RFC done",
+                  "AgencyName": "ARJUN RETROFITTER",
+                  "SupervisorName": "DAVID"
+              },
+              {
+                  "SrNo": "223",
+                  "CustomerId": "290645",
+                  "ConsumerNumber": "3000298075",
+                  "FullName": "Gas test6",
+                  "MobileNumber": "866546****",
+                  "Address": "34344545 Gas test6, Gas test6",
+                  "AgencyId": "30061",
+                  "SupervisorId": "160930",
+                  "StatusId": "6",
+                  "StatusName": "Feasibility Done",
+                  "AgencyName": "ARJUN RETROFITTER",
+                  "SupervisorName": "DAVID"
+              },
+              {
+                  "SrNo": "222",
+                  "CustomerId": "290644",
+                  "ConsumerNumber": "3000298074",
+                  "FullName": "Gas test5",
+                  "MobileNumber": "866546****",
+                  "Address": "34344545 Gas test5, Gas test5",
+                  "AgencyId": "46",
+                  "SupervisorId": null,
+                  "StatusId": "8",
+                  "StatusName": " Meter Installed",
+                  "AgencyName": "CRD",
+                  "SupervisorName": ""
+              },
+              {
+                  "SrNo": "221",
+                  "CustomerId": "290643",
+                  "ConsumerNumber": "3000298073",
+                  "FullName": "Gas test4",
+                  "MobileNumber": "866546****",
+                  "Address": "34344545 Gas test4, Gas test4",
+                  "AgencyId": "30061",
+                  "SupervisorId": null,
+                  "StatusId": "4",
+                  "StatusName": "Verification Done",
+                  "AgencyName": "ARJUN RETROFITTER",
+                  "SupervisorName": ""
+              },
+              {
+                  "SrNo": "220",
+                  "CustomerId": "290641",
+                  "ConsumerNumber": "3000298071",
+                  "FullName": "c",
+                  "MobileNumber": "767876****",
+                  "Address": "343 gas test2, gas test2",
+                  "AgencyId": "30071",
+                  "SupervisorId": "150857",
+                  "StatusId": "6",
+                  "StatusName": "Feasibility Done",
+                  "AgencyName": "AMBA AUTO SALES AND SERVICE",
+                  "SupervisorName": "JOHN"
+              }
+          ],
+          "pagination": {
+              "totalRecords": 229,
+              "pageCount": 23,
+              "currentPage": 1,
+              "pageSize": 10
+          },
+          "filter": 1
+      }
+order: 1000

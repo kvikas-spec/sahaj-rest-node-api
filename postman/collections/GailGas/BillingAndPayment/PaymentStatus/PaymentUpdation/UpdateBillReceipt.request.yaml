@@ -1,0 +1,25 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/payment/UpdateBillReceipt"
+method: POST
+headers:
+  Content-Type: application/json
+  Cookie: connect.sid=your_session_cookie
+body:
+  type: json
+  content: |-
+    // {
+    //     "BillReceiptId": 299100,
+    //     "paymentStatus": "Invoice Payment",
+    //     "ReturnReason": "Refer to drawer",
+    //     "ChequeReturnByBankId": 10055
+    //     // "InwardNumber": "INW-2024-001",
+    //     // "QRVNumber": "QRV-001",
+    //     // "ChequeReturnedApprovedDate": "2026-03-10"
+    //   }
+    {
+        "BillReceiptId": 289077,
+        "paymentStatus": "Invoice Payment",
+        "ReturnReason": "Amt. in words and figures differs",
+        "ChequeReturnByBankId": 10056
+    }
+order: 4000

@@ -1,0 +1,40 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/MeterReplacementForm?="
+method: POST
+headers:
+  Cookie: connect.sid=YOUR_SESSION_ID
+queryParams:
+  "": ""
+body:
+  type: json
+  content: |-
+    {
+        "ConsumerNumber": "3000298655",
+        "MonthlyChangeId": 0,
+        "TransactionDate": "2026-03-06T00:00:00",
+        "OldMeterNumber": "1262",
+        "NewMeterNumber": "EC000023",
+        "OldMeterCompanyId": 1,
+        "NewMeterCompanyId": 1,
+        "OldMeterType": "LHS",
+        "NewMeterType": "LHS",
+        "MeterNoDate": "2026-03-06T00:00:00",
+        "OldReading": 0,
+        "NewReading": 2,
+        "OldUnitDiff": 0,
+        "NewUnitDiff": 1,
+        "Remark": "tst",
+        "OldFamilyMembers": 0,
+        "NewFamilyMembers": 0,
+        "FamilyMemberDate": "2026-03-06T00:00:00",
+        "OldTotalPoints": 0,
+        "NewTotalPoints": 0,
+        "PointChangeDate": "2026-03-06T00:00:00",
+        "MeterPrice": 1,
+        "MeterInstallmentAmount": 1,
+        "TotalMeterInstallmentNumber": 1,
+        "NewMeterRemark": "test",
+        "ChallanId": "0",
+        "MeterPhotoName": "Meerut/customer-registration/1772793214550-344912449_istockphoto-1363573384-612x612.jpg"
+    }
+order: 14000

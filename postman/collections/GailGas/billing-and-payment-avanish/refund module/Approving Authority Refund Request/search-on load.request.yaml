@@ -1,0 +1,22 @@
+$kind: http-request
+name: search/on load
+url: "{{api_gateway_url}}/billing-payment/refund/request-list?sEcho=1&iDisplayLength=10&iDisplayStart=0&iSortCol_0=2&sSortDir_0=desc&IsFilter=0"
+method: GET
+queryParams:
+  - key: ConsumerNumber
+    value: "3000000128"
+    disabled: true
+  - key: sEcho
+    value: "1"
+  - key: iDisplayLength
+    value: "10"
+  - key: iDisplayStart
+    value: "0"
+  - key: iSortCol_0
+    value: "2"
+  - key: sSortDir_0
+    value: desc
+  - key: IsFilter
+    value: "0"
+examples: ./.resources/search-on load.resources/examples
+order: 1000

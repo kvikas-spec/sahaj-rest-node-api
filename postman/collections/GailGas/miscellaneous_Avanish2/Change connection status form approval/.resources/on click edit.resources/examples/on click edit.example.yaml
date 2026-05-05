@@ -1,0 +1,78 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/form-13/2"
+  method: GET
+  queryParams:
+    - key: ""
+      value: null
+      disabled: true
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1769167661029-464824
+    content-type: application/json; charset=utf-8
+    etag: W/"420-L4ZSufAGqroTWVtLlEv/xceH4Ew"
+    date: Fri, 23 Jan 2026 11:27:41 GMT
+    connection: close
+    Vary: Accept-Encoding
+    Content-Encoding: br
+    Transfer-Encoding: chunked
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "ChangeConnectionStatusId": "2",
+              "ConsumerNumber": "1234567890",
+              "Cycle": "0",
+              "TransactionDate": "2026-01-13T05:00:00.000Z",
+              "OldConnectionStatusId": "1",
+              "NewConnectionStatusId": "2",
+              "ReDisConnectionDate": "2026-01-14T18:30:00.000Z",
+              "SafeCustodyYears": null,
+              "MeterNumber": "MTR-987654",
+              "Reading": 125.5,
+              "ResolutionNumber": "RES-2026-01",
+              "ResolutionDate": "2026-01-09T18:30:00.000Z",
+              "OldKitchenPoints": 1,
+              "NewKitchenPoints": 2,
+              "OldGeyserPoints": 0,
+              "NewGeyserPoints": 1,
+              "OldTotalPoints": 1,
+              "NewTotalPoints": 3,
+              "ConsumerChallanNumber": "1001,1002",
+              "Remark": "Meter replaced due to fault",
+              "ApprovedBy": null,
+              "TransactionId": "1004353504",
+              "DateGenerated": "2026-01-13T11:53:53.790Z",
+              "DateGeneratedDate": 20260113,
+              "AddedBy": "130821",
+              "IsDelete": true,
+              "DisapprovedBy": "130821",
+              "DisapproveDate": "2026-01-23T07:43:02.730Z",
+              "DateUpdated": null,
+              "DateUpdatedDate": null,
+              "UpdatedBy": null,
+              "ApprovedDate": null,
+              "MeterCompanyId": "3",
+              "MeterType": "Domestic",
+              "NewMeterRemark": "New meter installed successfully",
+              "DisapproveRemark": "Documents are incomplete and verification failed."
+          }
+      }
+order: 1000

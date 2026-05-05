@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Customer/ContactNumberMaster"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "ComplaintContactNumberMasterId": 0,
+      "ComplaintTypeId": 1,
+      "ContactNumber": "18001029282",
+      "Remarks": "Customer care"
+    }
+order: 2000

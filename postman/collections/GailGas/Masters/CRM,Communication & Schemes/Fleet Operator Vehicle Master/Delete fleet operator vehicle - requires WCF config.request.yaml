@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/CNGPromo/FleetOperatorVehicleMaster/1234567890"
+method: DELETE
+order: 7000

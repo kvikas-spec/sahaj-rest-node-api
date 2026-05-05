@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/add-gi-rfc-status/"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "CustomerId": 180638,
+        "IsVerification": true
+    }
+order: 2000

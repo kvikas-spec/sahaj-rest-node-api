@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/CNGPromo/CreditPointsMaster/export?vehicleType="
+method: GET
+queryParams:
+  vehicleType: ""
+order: 4000

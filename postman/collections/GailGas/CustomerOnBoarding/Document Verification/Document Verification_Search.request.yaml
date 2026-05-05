@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/document-verification/pending?ApplicationNumber=A3000298040"
+method: GET
+queryParams:
+  - key: AgencyId
+    value: "1"
+    disabled: true
+  - key: ApplicationNumber
+    value: A3000298040
+  - key: pageNo
+    value: "1"
+    disabled: true
+  - key: IsFilter
+    value: "1"
+    disabled: true
+  - key: Address
+    value: ""
+    disabled: true
+order: 4000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/CNGPromo/FleetOperatorVehicleMaster/ownerships"
+method: GET
+order: 3000

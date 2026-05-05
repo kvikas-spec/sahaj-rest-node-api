@@ -1,0 +1,55 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}/billing-payment/gas-leakage/view-gas-leakage-document?gasLeakageId=30085"
+  method: GET
+  queryParams:
+    gasLeakageId: "30085"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1769684484122-588223
+    content-type: application/json; charset=utf-8
+    Content-Length: "252"
+    etag: W/"fc-6D3lWpA+xlOYlkK0txXwSPf5Ckc"
+    Vary: Accept-Encoding
+    date: Thu, 29 Jan 2026 11:01:24 GMT
+    connection: close
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "GasLeakageId": "30085",
+              "ConsumerNumber": "511902688",
+              "ListGasLeakageUpload": [
+                  {
+                      "DocumentName": "url1",
+                      "Name": "Photo",
+                      "Extension": "",
+                      "gasLeakageId": "70"
+                  },
+                  {
+                      "DocumentName": "url2",
+                      "Name": "Invoice",
+                      "Extension": "",
+                      "gasLeakageId": "71"
+                  }
+              ]
+          }
+      }
+order: 1000

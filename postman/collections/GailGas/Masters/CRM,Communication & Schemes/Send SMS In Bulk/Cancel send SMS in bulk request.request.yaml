@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Template/SendSMSInBulk/1/cancel"
+method: PATCH
+order: 7000

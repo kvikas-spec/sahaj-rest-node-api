@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Template/NotificationManagement/requests/export"
+method: GET
+order: 9000

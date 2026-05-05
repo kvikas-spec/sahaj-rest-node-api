@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/checkCustomerStatusByStatus"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+    "oldStatusId":4,
+    "newStatusId":10
+    }
+order: 2000

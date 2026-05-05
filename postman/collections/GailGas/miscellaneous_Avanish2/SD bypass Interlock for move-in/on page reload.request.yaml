@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/sd-interlock?isFilter=0&pageNo=1&pageSize=3"
+method: GET
+queryParams:
+  isFilter: "0"
+  pageNo: "1"
+  pageSize: "3"
+examples: ./.resources/on page reload.resources/examples
+order: 1000

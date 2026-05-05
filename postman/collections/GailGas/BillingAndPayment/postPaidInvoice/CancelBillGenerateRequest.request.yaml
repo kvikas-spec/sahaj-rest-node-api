@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/CancelBillGenerateRequest/:billGenId"
+method: DELETE
+queryParams:
+  - key: isFilter
+    value: "1"
+    disabled: true
+pathVariables:
+  billGenId: "154527"
+order: 17000

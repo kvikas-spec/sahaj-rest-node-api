@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Template/SendSMSInBulk"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "CustomizedSMSInBulkTemplateDetailsId": 1,
+      "SMSCategory": 3,
+      "SMSCategoryDetails": "9876543210,9876543211",
+      "MRUIds": ""
+    }
+order: 4000

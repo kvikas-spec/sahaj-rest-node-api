@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Users/IsEmployeeIdExist"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+        "value": "00005013",
+        "localGAId": 1,
+        "encUserID": "0"
+      }
+order: 6000

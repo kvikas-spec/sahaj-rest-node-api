@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/refund/corporate-office/document-verification"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "RefundRequestId": 131,
+        "ConsumerNumber": 3000293870,
+        "IsVerification": true
+    }
+examples: ./.resources/verify on modal.resources/examples
+order: 4000

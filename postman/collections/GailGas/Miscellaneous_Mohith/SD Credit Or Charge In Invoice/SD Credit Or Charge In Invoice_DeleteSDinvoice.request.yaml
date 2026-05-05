@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/DeleteSDChargeInInvoiceRecord"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "Id": 1
+    }
+order: 4000

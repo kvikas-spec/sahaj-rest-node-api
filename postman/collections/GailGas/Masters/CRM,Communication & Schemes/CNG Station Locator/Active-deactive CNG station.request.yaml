@@ -1,0 +1,5 @@
+$kind: http-request
+name: Active/deactive CNG station
+url: "{{api_gateway_url}}/masters/Customer/CNGStationLocator/1/active"
+method: PATCH
+order: 4000

@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/document-verifyndreject"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "CustomerId": 210662,
+      "ApplicationNumber": "A3000298090",
+      "IsVerification": false,
+      "ApplicationRejectionId": 20,
+      "RejectionReason": "Document mismatch"
+    }
+order: 6000

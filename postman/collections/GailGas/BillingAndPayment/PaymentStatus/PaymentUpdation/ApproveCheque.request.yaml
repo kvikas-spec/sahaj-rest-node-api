@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/payment/ApproveCheque"
+method: POST
+headers:
+  Content-Type: application/json
+  Cookie: connect.sid=your_session_cookie
+body:
+  type: json
+  content: |-
+    // {
+    //     "billReceiptID": 289075,
+    //     "isFromBouncePage": false,
+    //     "paymentStatus": "Invoice Payment",
+    //     "chequeApproveAndRejectDate": "2026-03-10"
+    // }
+    {
+        "billReceiptID": 509240,
+        "isFromBouncePage": false,
+        "paymentStatus": "After Sales Service Payment",
+        "chequeApproveAndRejectDate": "2026-04-10"
+    }
+order: 5000

@@ -1,0 +1,33 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/AddExtraPipingForJMRApproval"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "ConsumerNumber": 123456,
+      "TotalAmount": 1500,
+      "CGST": 135,
+      "SGST": 135,
+      "CGSTper": 9,
+      "SGSTper": 9,
+      "PayableAmount": 1770,
+      "PipingUnit": 20,
+      "IsUpdate": true,
+      "CustomerMiscDebitDetailsId": 12345,
+      "ExtraPipingdetailsList": [
+        {
+          "MiscRateId": 1,
+          "ExtraPipingUnit": 5,
+          "Amount": 500
+        },
+        {
+          "MiscRateId": 2,
+          "ExtraPipingUnit": 5,
+          "Amount": 1000
+        }
+      ]
+    }
+order: 4000

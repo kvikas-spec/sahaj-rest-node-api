@@ -1,0 +1,12 @@
+$kind: http-request
+name: customer/not-willing-gas Copy
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/customer/not-willing-gas"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "id":101,
+        "isgasinpage":true
+    }
+order: 11000

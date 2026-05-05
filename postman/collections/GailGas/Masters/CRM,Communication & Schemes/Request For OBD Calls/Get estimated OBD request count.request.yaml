@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Customer/RequestForOBDCalls/count?type=1&days=7&wardId=0&consumerNumbers="
+method: GET
+queryParams:
+  type: "1"
+  days: "7"
+  wardId: "0"
+  consumerNumbers: ""
+order: 3000

@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/upload-sd-bypass-interlock-movein"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: UploadedFile
+      src: /home/avanishkumarmaurya/Downloads/SDByPassInterLockForMoveInSample.xlsx
+order: 2000

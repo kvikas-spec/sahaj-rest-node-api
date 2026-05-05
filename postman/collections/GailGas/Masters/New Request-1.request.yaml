@@ -1,0 +1,12 @@
+$kind: http-request
+name: New Request
+url: http://localhost:8080/api/v1/masters/EscalationMatrix/IsEscalationExist?EscalationMatrixId=0&DepartmentId=1&ComplaintLevelId=1
+method: GET
+headers:
+  x-region-id: GailGas_Common
+  content-type: application/json
+queryParams:
+  EscalationMatrixId: "0"
+  DepartmentId: "1"
+  ComplaintLevelId: "1"
+order: 9000

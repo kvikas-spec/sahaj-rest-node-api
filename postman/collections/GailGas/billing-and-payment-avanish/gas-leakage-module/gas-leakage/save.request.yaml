@@ -1,0 +1,31 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/gas-leakage/Gas-Leakage"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "ConsumerNumber": "511902688",
+        "LeakageFromDate": "2025-01-01",
+        "LeakageToDate": "2025-01-10",
+        "LeakageTotalDay": "10",
+        "NormalFromDate": "2024-12-01",
+        "NormalToDate": "2024-12-10",
+        "NormalTotalDay": "10",
+        "LeakageFromConsumption": "120",
+        "LeakageToConsumption": "180",
+        "LeakageTotalConsumption": "60",
+        "NormalFromConsumption": "80",
+        "NormalToConsumption": "100",
+        "NormalTotalConsumption": "20",
+        "LeakageConsumptionInSCMD": "6",
+        "NormalConsumptionInSCMD": "2",
+        "ConsiderUnit": "80",
+        "DocumentName": "Photo,Invoice",
+        "fileUrls": [
+            "url1",
+            "url2"
+        ]
+    }
+examples: ./.resources/save.resources/examples
+order: 2000

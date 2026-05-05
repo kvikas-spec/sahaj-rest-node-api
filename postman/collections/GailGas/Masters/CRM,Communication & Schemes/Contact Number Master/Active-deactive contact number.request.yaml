@@ -1,0 +1,5 @@
+$kind: http-request
+name: Active/deactive contact number
+url: "{{api_gateway_url}}/masters/Customer/ContactNumberMaster/1/active"
+method: PATCH
+order: 3000

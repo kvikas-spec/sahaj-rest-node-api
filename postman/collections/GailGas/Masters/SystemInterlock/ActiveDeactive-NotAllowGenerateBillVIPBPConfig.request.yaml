@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/SystemInterlock/ActiveDeactive/:TableName/:Id"
+method: PUT
+pathVariables:
+  TableName: NotAllowGenerateBillVIPBPConfig
+  Id: "5"
+order: 7000

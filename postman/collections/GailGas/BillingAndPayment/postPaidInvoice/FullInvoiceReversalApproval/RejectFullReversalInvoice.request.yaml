@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/RejectFullReversalInvoice/:DemandMasterId"
+method: PATCH
+pathVariables:
+  DemandMasterId: "7163040"
+body:
+  type: json
+  content: ""
+order: 3000

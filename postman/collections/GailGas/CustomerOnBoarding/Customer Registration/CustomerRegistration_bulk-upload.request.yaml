@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/bulk-registration"
+method: POST
+queryParams:
+  - key: file
+    value: ""
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: file
+      key: file
+      src: /home/mohithharibabu/Downloads/ApplicationForm__new.xlsx
+order: 7000

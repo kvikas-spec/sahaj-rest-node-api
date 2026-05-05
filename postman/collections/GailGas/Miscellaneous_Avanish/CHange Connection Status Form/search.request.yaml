@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/check-consumer-exist-for-form13/2600503321"
+method: GET
+body:
+  type: json
+  content: ""
+order: 1000

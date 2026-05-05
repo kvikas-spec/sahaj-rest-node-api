@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Customer/RequestForOBDCalls/1/cancel"
+method: PATCH
+order: 6000

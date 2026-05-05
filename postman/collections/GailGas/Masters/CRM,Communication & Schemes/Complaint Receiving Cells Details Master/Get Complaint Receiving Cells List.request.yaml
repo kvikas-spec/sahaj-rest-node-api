@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/GetComplaintReceivingCellsList"
+method: GET
+headers:
+  x-region-id: "{{regionId}}"
+  content-type: application/json
+order: 1000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/Agencies"
+method: GET
+order: 2000

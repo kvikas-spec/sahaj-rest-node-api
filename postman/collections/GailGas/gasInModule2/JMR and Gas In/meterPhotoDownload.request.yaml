@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/meter/document?consumerNumber=46456546"
+method: GET
+queryParams:
+  consumerNumber: "46456546"
+order: 5000

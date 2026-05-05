@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Customer/RequestForOBDCalls?pageNo=1&pageSize=100"
+method: GET
+queryParams:
+  pageNo: "1"
+  pageSize: "100"
+order: 2000

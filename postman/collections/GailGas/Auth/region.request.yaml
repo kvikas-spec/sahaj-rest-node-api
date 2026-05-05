@@ -1,0 +1,46 @@
+$kind: http-request
+description: |-
+  Generated from cURL: curl --request POST \
+      --url http://localhost:4020/login \
+      --header 'Authorization: Basic TklSQUpQQU5DSEFMMUBXRUJNWU5FU1lTVEVNUy5DT006MTIzNDU2Nw==' \
+      --header 'content-type: application/json' \
+      --header 'x-region-id: GailGas_Common'
+url: "{{api_gateway_url}}/test-region"
+method: POST
+headers:
+  Authorization: Basic TklSQUpQQU5DSEFMMUBXRUJNWU5FU1lTVEVNUy5DT006MTIzNDU2Nw==
+  content-type: application/json
+  x-region-id: GailGas_Common
+body:
+  type: json
+  content: ""
+auth:
+  type: basic
+  credentials:
+    password: "1234567"
+    username: NIRAJPANCHAL1@WEBMYNESYSTEMS.COM
+scripts:
+  - type: afterResponse
+    code: |-
+      const tempToken = pm.response.headers.get("x-temp-token");
+
+      if(tempToken){
+
+          pm.collectionVariables.set("temp_token", tempToken);
+          // pm.collectionVariables.set("refresh_token", data.refresh_token);
+          // tests['Logged in successfully'] = !!(data.access_token);
+      }
+
+      console.log("Temp Token from header:", tempToken);
+      // if( pm.response.code === 200 ){
+      //     const querystring = require("querystring");
+      //     const redirectUrl = responseBody;
+      //     const query = redirectUrl.split("?")[1];
+      //     const data = querystring.parse(query);
+
+      //     pm.collectionVariables.set("access_token", data.access_token);
+      //     pm.collectionVariables.set("refresh_token", data.refresh_token);
+      //     pm.test['Logged in successfully'] = !!(data.access_token);
+      // }
+    language: text/javascript
+order: 3000

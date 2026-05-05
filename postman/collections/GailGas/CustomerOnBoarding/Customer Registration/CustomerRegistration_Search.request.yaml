@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/customer-by-application?Search=3000298077"
+method: GET
+queryParams:
+  Search: "3000298077"
+order: 1000

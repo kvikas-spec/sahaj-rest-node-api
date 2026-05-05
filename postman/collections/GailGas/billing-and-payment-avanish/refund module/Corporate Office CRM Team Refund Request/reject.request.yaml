@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/refund/corporate-office/document-verification"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "RefundRequestId": 133,
+        "IsVerification": false,
+        "RejectionReason":"resona ksjdf"
+    }
+order: 6000

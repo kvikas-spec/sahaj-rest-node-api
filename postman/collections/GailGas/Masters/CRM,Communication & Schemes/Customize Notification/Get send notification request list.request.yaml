@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Template/NotificationManagement/requests?pageNo=1&pageSize=10"
+method: GET
+queryParams:
+  pageNo: "1"
+  pageSize: "10"
+order: 7000

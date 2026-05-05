@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/DeviceUserMapping"
+method: GET
+queryParams:
+  - key: IsFilter
+    value: "1"
+    disabled: true
+  - key: pageNo
+    value: ""
+    disabled: true
+  - key: pagesize
+    value: "1"
+    disabled: true
+order: 1000

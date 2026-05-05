@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/refund/document-verification/:consumerNumber"
+method: GET
+pathVariables:
+  consumerNumber: "3000297766"
+examples: ./.resources/documents on click.resources/examples
+order: 3000

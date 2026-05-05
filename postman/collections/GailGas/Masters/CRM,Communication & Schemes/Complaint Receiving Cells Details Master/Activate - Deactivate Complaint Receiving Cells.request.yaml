@@ -1,0 +1,15 @@
+$kind: http-request
+name: Activate / Deactivate Complaint Receiving Cells
+url: "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/IsActiveComplaintReceivingCellsDetails"
+method: POST
+headers:
+  Authorization: Bearer {{accessToken}}
+  x-region-id: "{{regionId}}"
+  content-type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "InChargeComplaintReceivingCellsId": 1
+    }
+order: 4000

@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/payment/UploadAllGAPaymentVerificationFile"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: file
+      src: /home/vikaskumar/Downloads/online-payment-verification (1).xlsx
+    - type: text
+      key: TransactionDate
+      value: 2026-04-09
+    - type: text
+      key: PaymentTypeId
+      value: "16"
+order: 2000

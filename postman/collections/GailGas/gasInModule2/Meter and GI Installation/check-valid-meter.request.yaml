@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/check-valid-meter/?meterNumber=343425&meterCompanyId=1&meterType=0&consumerNumber=0&isUpdate=true&IsJMRProcess=false"
+method: GET
+queryParams:
+  meterNumber: "343425"
+  meterCompanyId: "1"
+  meterType: "0"
+  consumerNumber: "0"
+  isUpdate: "true"
+  IsJMRProcess: "false"
+order: 5000

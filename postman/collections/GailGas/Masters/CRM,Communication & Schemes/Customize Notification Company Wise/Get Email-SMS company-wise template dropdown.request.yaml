@@ -1,0 +1,9 @@
+$kind: http-request
+name: Get Email/SMS company-wise template dropdown
+url: "{{api_gateway_url}}/masters/Template/CustomizedNotificationCompanyWise/templates?Email=true&SMS=true&companyId=1"
+method: GET
+queryParams:
+  Email: "true"
+  SMS: "true"
+  companyId: "1"
+order: 2000

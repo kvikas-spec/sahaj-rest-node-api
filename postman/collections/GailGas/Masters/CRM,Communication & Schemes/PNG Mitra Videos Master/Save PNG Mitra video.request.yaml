@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Customer/PNGMitraVideosMaster"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "PNGVideosMasterId": 0,
+      "Title": "Safety Video",
+      "Description": "PNG safety video",
+      "YoutubeURl": "https://youtube.com/watch?v=sample",
+      "YoutubeOrOther": "Youtube"
+    }
+order: 3000

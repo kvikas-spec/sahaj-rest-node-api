@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/CNGPromo/FleetOperatorVehicleMaster?pageNo=1&pageSize=100&foCardNumber=&vehicleNumber=&isPhysicalCard="
+method: GET
+queryParams:
+  pageNo: "1"
+  pageSize: "100"
+  foCardNumber: ""
+  vehicleNumber: ""
+  isPhysicalCard: ""
+order: 1000

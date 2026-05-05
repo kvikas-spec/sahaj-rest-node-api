@@ -1,0 +1,13 @@
+$kind: http-request
+name: CustomerRegistration_toCheckduplicate(mobile,email,applicationNo)
+url: "{{api_gateway_url}}{{customer_reg_url}}/exist-mobile"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "mobileNo": "8328377749",
+      "emailId": "new@test.com",
+      "applicationNo": "A111111111298015"
+    }
+order: 5000

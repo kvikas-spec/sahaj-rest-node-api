@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/SystemInterlock/AddEditMeterRejectionDetails"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "MeterStatusId": 5,
+        "RejectionReason": "HOUSE WAS NOT FOUND"
+    }
+order: 3000

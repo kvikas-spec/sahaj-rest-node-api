@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "TemplateId": 0,
+      "TemplateTitle": "Sample Template",
+      "TemplateCode": "SAMPLE_TEMPLATE",
+      "TemplateText": "Dear {ConsumerName}, your message text",
+      "IsSMS": true,
+      "IsEmail": true,
+      "EmailSubject": "Sample Subject",
+      "OnlyEnglishText": true
+    }
+order: 4000

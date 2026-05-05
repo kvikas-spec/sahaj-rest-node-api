@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/upload-bp-assignment-feasibility/"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: UploadedFile
+      src: ""
+    - type: text
+      key: Controller
+      value: Customer
+    - type: text
+      key: Action
+      value: AccountTypeMaster
+order: 2000

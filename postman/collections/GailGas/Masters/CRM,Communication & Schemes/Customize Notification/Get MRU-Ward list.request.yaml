@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get MRU/Ward list
+url: "{{api_gateway_url}}/masters/Template/NotificationManagement/wards"
+method: GET
+order: 1000

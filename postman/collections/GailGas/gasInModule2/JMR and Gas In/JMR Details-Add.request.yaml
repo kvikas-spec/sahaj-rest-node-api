@@ -1,0 +1,44 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/update-jmr-details/"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ConsumerNumber
+      value: "3000298384"
+    - type: text
+      key: ISUpdate
+      value: "true"
+    - type: text
+      key: MeterSerialNo
+      value: "123451009"
+    - type: text
+      key: MeterCompanyId
+      value: "1"
+    - type: text
+      key: MeterType
+      value: LHS
+    - type: text
+      key: MeterReading
+      value: "1"
+    - type: text
+      key: TransactionDate
+      value: 2025-01-30
+    - type: text
+      key: JMRDate
+      value: 2025-01-06
+    - type: text
+      key: WardId
+      value: "25"
+    - type: text
+      key: MeterRemarks
+      value: Initial JMR done
+    - type: text
+      key: meterFileUrl
+      value: "meter url "
+    - type: text
+      key: jmrFileUrl
+      value: jmr url
+examples: ./.resources/JMR Details-Add.resources/examples
+order: 8000

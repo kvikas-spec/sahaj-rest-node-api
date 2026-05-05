@@ -1,0 +1,5 @@
+$kind: http-request
+name: Active/deactive recipient email
+url: "{{api_gateway_url}}/masters/CNGPromo/RecipientEmailsMaster/1/active"
+method: PATCH
+order: 4000

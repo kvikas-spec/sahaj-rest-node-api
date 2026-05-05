@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/AuthorizationManagement/Configure-Role?RoleID=2"
+method: GET
+headers:
+  x-region-id: Meerut
+queryParams:
+  RoleID: "2"
+order: 3000

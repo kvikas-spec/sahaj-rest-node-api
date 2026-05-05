@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/CNGPromo/FleetOperatorVehicleMaster/export?foCardNumber=&vehicleNumber=&isPhysicalCard="
+method: GET
+queryParams:
+  foCardNumber: ""
+  vehicleNumber: ""
+  isPhysicalCard: ""
+order: 5000

@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Users/GetDecryptedUserId"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+        "encId": "1KDitePWSKflBEj4ok9btw=="
+      }
+order: 7000

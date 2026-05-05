@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/GAwiseBillingAddress/AddGAwiseBillAddress"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+        "BillingAddress": "GAIL Gas Limited 75/1, 1st floor, Opposite central excise and customs building,Above bank of baroda, Mangal pandey Nagar Meerut – 250004, Complaint Receiving Cell : 05422-508060, 9650503792, Nodal Officer: Mr.ABC, 987543210, Appellate Desk: Mr. XYZ, 987543211, appellate@gail.co.in. (Timings: 09:15 AM to 05:45 PM)"
+      }
+order: 2000

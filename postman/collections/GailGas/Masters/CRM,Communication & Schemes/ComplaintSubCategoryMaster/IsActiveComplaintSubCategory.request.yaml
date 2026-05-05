@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/ComplaintSubCategoryMaster/IsActiveComplaintSubCategory/:ComplaintSubCategoryMasterId"
+method: PATCH
+pathVariables:
+  ComplaintSubCategoryMasterId: "123"
+order: 3000

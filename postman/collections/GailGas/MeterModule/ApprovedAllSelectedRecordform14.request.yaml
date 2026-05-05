@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_reg_url}}/MeterMaster/ApprovedAllSelectedRecordform14"
+method: POST
+headers:
+  Cookie: connect.sid=YOUR_SESSION_ID
+body:
+  type: json
+  content: |-
+    {
+        // "ids": [70155, "aaa"] //MonthlyChangeId
+        "ids": [160177]
+    }
+order: 15000

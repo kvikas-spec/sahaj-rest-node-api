@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/add-piping-details/87354"
+method: GET
+body:
+  type: text
+  content: ""
+order: 8000

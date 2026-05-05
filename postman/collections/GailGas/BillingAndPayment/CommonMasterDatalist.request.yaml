@@ -1,0 +1,32 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/CommonMasterDatalist/:MasterTableName"
+method: POST
+pathVariables:
+  MasterTableName: WardMaster
+body:
+  type: json
+  content: |-
+    // {
+    //     // "sort": "MeterStatusName:ASC",
+    //     "force": true,
+    //     "whereClause": {
+    //         "IsActive": true,
+    //         // "MeterCompanyId": "16"
+    //         "MeterStatusId": "5" // lockcase -5, NEGATIVECONSUMPTION: 12,
+    //     },
+    //     "attributes": ["RejectionReason", "MeterReadingRejectionId"],
+    //     "sort": "MeterReadingRejectionId:ASC"
+    // }
+
+    {
+        // "sort": "MeterStatusName:ASC",
+        // "force": true,
+        "whereClause": {
+            "IsActive": true
+            // "MeterCompanyId": "16"
+            // "MeterStatusId": "5" // lockcase -5, NEGATIVECONSUMPTION: 12,
+        }
+        // "attributes": ["MeterStatusId", "MeterStatusName"],
+        // "sort": "MeterStatusId:ASC"
+    }
+order: 6000

@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/EscalationMatrix/IsEscalationExist?EscalationMatrixId=0&DepartmentId=1&ComplaintLevelId=1"
+method: GET
+queryParams:
+  EscalationMatrixId: "0"
+  DepartmentId: "1"
+  ComplaintLevelId: "1"
+order: 2000

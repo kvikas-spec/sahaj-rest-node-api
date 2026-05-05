@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/billing/referral-master"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "ReferralSchemeMasterId": 0,
+      "CompanyId": 1,
+      "ReferralSchemeName": "Sample Referral Scheme",
+      "Discount": 50,
+      "RefereeDiscount": 50,
+      "ReferralSchemeLimitPerCalendarYear": 5,
+      "Remarks": "Sample referral scheme"
+    }
+order: 5000

@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateCompanyWise?pageNo=1&pageSize=10&IsFilter=0&companyId=0"
+method: GET
+queryParams:
+  pageNo: "1"
+  pageSize: "10"
+  IsFilter: "0"
+  companyId: "0"
+order: 1000

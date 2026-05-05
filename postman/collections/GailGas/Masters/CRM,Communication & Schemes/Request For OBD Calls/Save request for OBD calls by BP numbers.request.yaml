@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Customer/RequestForOBDCalls"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "Type": 2,
+      "Days": 30,
+      "WardId": 0,
+      "ConsumerNumbers": "3000000001,3000000002"
+    }
+order: 5000

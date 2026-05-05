@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/billing/referral-master/check-active?CompanyId=1"
+method: GET
+queryParams:
+  CompanyId: "1"
+order: 4000

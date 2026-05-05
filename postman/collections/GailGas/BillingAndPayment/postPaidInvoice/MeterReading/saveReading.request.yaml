@@ -1,0 +1,28 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/meter-reading/saveReading"
+method: POST
+headers:
+  Authorization: Bearer <ACCESS_TOKEN>
+body:
+  type: json
+  content: |-
+    {
+        "MeterReadingId": 0,
+        "Latitude": "19",
+        "Longitude": "18",
+        "MeterBillReceiptImagePath": "Meerut/meter-reading/1777535829312-975928249_Abnormal Consumption Approval (1).pdf",
+        "ConsumerNumber": 3000038716,
+        "Cycle": "2601",
+        "WardId": 11,
+        "ReadingDate": "2026-03-09",
+        "BillDate": "2026-03-09",
+        "FullName": "meter reading promo",
+        "BillNumber": 3000038716202601,
+        "CurrentReading": 20,
+        "PreviousReading": 10,
+        "MeterStatusId": 1,
+        "AccountTypeId": 1,
+        "Remarks": "Meter reading taken successfully",
+        "UnitUsed": 10
+    }
+order: 2000

@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Template/BulkSMSTemplate"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "CustomizedSMSInBulkTemplateDetailsId": 1,
+      "TemplateTitle": "Updated Bulk SMS Template",
+      "TemplateCode": "UPDATED_BULK_SMS",
+      "TemplateText": "Dear consumer, this is an updated SMS.",
+      "OnlyEnglishText": true
+    }
+order: 4000

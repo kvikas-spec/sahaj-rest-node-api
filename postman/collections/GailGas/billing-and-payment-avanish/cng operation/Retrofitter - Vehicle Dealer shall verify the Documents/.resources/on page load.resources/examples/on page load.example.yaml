@@ -1,0 +1,204 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}/billing-payment/cng-operation/retrofitter-vehicle-dealer-verify-list"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770894726101-432891
+    content-type: application/json; charset=utf-8
+    etag: W/"107e-iqwlYDQinzntw7zB0KiZDHs83zQ"
+    Vary: Accept-Encoding
+    content-encoding: br
+    date: Thu, 12 Feb 2026 11:12:06 GMT
+    connection: close
+    Content-Length: "806"
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "pagination": {
+              "recordCount": 51,
+              "pageCount": 6,
+              "currentPage": 1,
+              "pageSize": 10
+          },
+          "data": [
+              {
+                  "CustomerRegistrationId": "56",
+                  "AgencyName": "TEST DUMMY VEHICLE DEALER",
+                  "CustomerName": "Test krishiv",
+                  "Address": "Industrial society ",
+                  "VehicleNumber": "gj098899",
+                  "VehicleType": "Test Test",
+                  "InvoiceDate": "2024-09-01T00:00:00.000Z",
+                  "RegistrationDate": "2024-09-01T00:00:00.000Z",
+                  "NameOfDealer": "Hffghjklll",
+                  "IsPhysicalCard": false,
+                  "AadharNo": "86668889****",
+                  "PanNo": "778900****",
+                  "MobileNumber": "950097****",
+                  "EmailId": null
+              },
+              {
+                  "CustomerRegistrationId": "104",
+                  "AgencyName": "PANCHAL RETRO",
+                  "CustomerName": "Hshs",
+                  "Address": "Hsgsg",
+                  "VehicleNumber": "FH47483838",
+                  "VehicleType": "LCV",
+                  "InvoiceDate": "2024-10-01T00:00:00.000Z",
+                  "RegistrationDate": "2024-10-01T00:00:00.000Z",
+                  "NameOfDealer": "Vsgsg",
+                  "IsPhysicalCard": false,
+                  "AadharNo": "73737373****",
+                  "PanNo": "747474****",
+                  "MobileNumber": "063663****",
+                  "EmailId": null
+              },
+              {
+                  "CustomerRegistrationId": "111",
+                  "AgencyName": "PANCHAL RETRO",
+                  "CustomerName": "Dummy test",
+                  "Address": "Dummy test",
+                  "VehicleNumber": "GJ06NQ3312",
+                  "VehicleType": "car ",
+                  "InvoiceDate": "2024-10-02T00:00:00.000Z",
+                  "RegistrationDate": "2024-10-03T00:00:00.000Z",
+                  "NameOfDealer": "Dummy teat",
+                  "IsPhysicalCard": false,
+                  "AadharNo": "37966478****",
+                  "PanNo": "Atttt9****",
+                  "MobileNumber": "963678****",
+                  "EmailId": null
+              },
+              {
+                  "CustomerRegistrationId": "149",
+                  "AgencyName": "PANCHAL RETRO",
+                  "CustomerName": "Parth soni",
+                  "Address": "Test",
+                  "VehicleNumber": "GJ09TT4545",
+                  "VehicleType": "Two Wheeler",
+                  "InvoiceDate": "2024-10-09T00:00:00.000Z",
+                  "RegistrationDate": "2024-10-09T00:00:00.000Z",
+                  "NameOfDealer": "Niraj",
+                  "IsPhysicalCard": false,
+                  "AadharNo": "57898653****",
+                  "PanNo": "529997****",
+                  "MobileNumber": "981111****",
+                  "EmailId": null
+              },
+              {
+                  "CustomerRegistrationId": "178",
+                  "AgencyName": "PARTH RETROFITTER",
+                  "CustomerName": "Jaydeep Shah",
+                  "Address": "T52/ Test apartment near test circle",
+                  "VehicleNumber": "GJ00000068",
+                  "VehicleType": "LCV",
+                  "InvoiceDate": "2024-10-11T00:00:00.000Z",
+                  "RegistrationDate": "2024-10-11T00:00:00.000Z",
+                  "NameOfDealer": "Vraj Patel",
+                  "IsPhysicalCard": false,
+                  "AadharNo": "12345678****",
+                  "PanNo": "PN0000****",
+                  "MobileNumber": "635434****",
+                  "EmailId": null
+              },
+              {
+                  "CustomerRegistrationId": "179",
+                  "AgencyName": "PARTH RETROFITTER",
+                  "CustomerName": "Jeevan Patel",
+                  "Address": "T02/ Test apartment near test circle",
+                  "VehicleNumber": "GJ00000069",
+                  "VehicleType": "4 W Taxi",
+                  "InvoiceDate": "2024-10-11T00:00:00.000Z",
+                  "RegistrationDate": "2024-10-11T00:00:00.000Z",
+                  "NameOfDealer": "Niyati Patel",
+                  "IsPhysicalCard": false,
+                  "AadharNo": "96638219****",
+                  "PanNo": "PN1111****",
+                  "MobileNumber": "983654****",
+                  "EmailId": null
+              },
+              {
+                  "CustomerRegistrationId": "180",
+                  "AgencyName": "PARTH RETROFITTER",
+                  "CustomerName": "Kartik Patel",
+                  "Address": "T05 - Test apartment near test cinema",
+                  "VehicleNumber": "GJ00000070",
+                  "VehicleType": "Truck",
+                  "InvoiceDate": "2024-10-11T00:00:00.000Z",
+                  "RegistrationDate": "2024-10-11T00:00:00.000Z",
+                  "NameOfDealer": "Niyati Patel",
+                  "IsPhysicalCard": false,
+                  "AadharNo": "96638219****",
+                  "PanNo": "PN1111****",
+                  "MobileNumber": "855848****",
+                  "EmailId": null
+              },
+              {
+                  "CustomerRegistrationId": "181",
+                  "AgencyName": "PARTH RETROFITTER",
+                  "CustomerName": "Ashish Patel",
+                  "Address": "T022/ Test apartment near test circle",
+                  "VehicleNumber": "GJ00000071",
+                  "VehicleType": "LCV",
+                  "InvoiceDate": "2024-10-14T00:00:00.000Z",
+                  "RegistrationDate": "2024-10-14T00:00:00.000Z",
+                  "NameOfDealer": "Niyati Patel",
+                  "IsPhysicalCard": false,
+                  "AadharNo": "12345678****",
+                  "PanNo": "PN1111****",
+                  "MobileNumber": "852878****",
+                  "EmailId": null
+              },
+              {
+                  "CustomerRegistrationId": "182",
+                  "AgencyName": "PARTH RETROFITTER",
+                  "CustomerName": "Bhargav Shah",
+                  "Address": "T023/ Test apartment near test cinema",
+                  "VehicleNumber": "GJ00000072",
+                  "VehicleType": "car ",
+                  "InvoiceDate": "2024-10-14T00:00:00.000Z",
+                  "RegistrationDate": "2024-10-14T00:00:00.000Z",
+                  "NameOfDealer": "Niyati Patel",
+                  "IsPhysicalCard": false,
+                  "AadharNo": "12345678****",
+                  "PanNo": "PN1111****",
+                  "MobileNumber": "789454****",
+                  "EmailId": null
+              },
+              {
+                  "CustomerRegistrationId": "183",
+                  "AgencyName": "PARTH RETROFITTER",
+                  "CustomerName": "Sagar Patel",
+                  "Address": "T029/ Test apartment near test circle",
+                  "VehicleNumber": "GJ00000073",
+                  "VehicleType": "LCV",
+                  "InvoiceDate": "2024-10-14T00:00:00.000Z",
+                  "RegistrationDate": "2024-10-14T00:00:00.000Z",
+                  "NameOfDealer": "Niyati Patel",
+                  "IsPhysicalCard": false,
+                  "AadharNo": "12345678****",
+                  "PanNo": "PN7777****",
+                  "MobileNumber": "963489****",
+                  "EmailId": null
+              }
+          ]
+      }
+order: 1000

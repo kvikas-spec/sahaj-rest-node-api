@@ -1,0 +1,18 @@
+$kind: http-request
+name: Create customized notification request by MRU/Ward
+url: "{{api_gateway_url}}/masters/Template/NotificationManagement"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "WardList": "1,2",
+      "IsEmail": true,
+      "IsSMS": true,
+      "EmailTemplateId": 1,
+      "EmailSubject": "Subject from selected template",
+      "HtmlContent": "Notification template text"
+    }
+order: 5000

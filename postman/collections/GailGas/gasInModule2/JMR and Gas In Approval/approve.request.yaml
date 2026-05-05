@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/update-jmr-approval"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "ConsumerNumber": "2600503322",
+      "ISUpdateMeterDetails": true,
+      "MeterSerialNo": "MTR-987654",
+      "MeterCompanyId": 2,
+      "MeterType": "LHS",
+      "MeterReading": 256.75,
+      "TransactionDate": "2026-01-23",
+      "JMRDate": "2026-01-22",
+      "WardId": 5,
+      "MeterFileUrl":"meter file url",
+      "JmrFileUrl": "jmr file url",
+      "MeterDetailsRemarks": "Meter installed and verified",
+      "MeterRemarks": "Meter reading looks correct"
+    }
+examples: ./.resources/approve.resources/examples
+order: 14000

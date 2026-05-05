@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/listOfGenerateBill?pageNo=1&pageSize=10&isFilter=1"
+method: GET
+queryParams:
+  - key: pageNo
+    value: "1"
+  - key: pageSize
+    value: "10"
+  - key: isFilter
+    value: "1"
+  - key: DemanadGenerateRequestId
+    value: "134520"
+    disabled: true
+  - key: sort
+    value: DemanadGenerateRequestId:ASC
+    disabled: true
+order: 13000

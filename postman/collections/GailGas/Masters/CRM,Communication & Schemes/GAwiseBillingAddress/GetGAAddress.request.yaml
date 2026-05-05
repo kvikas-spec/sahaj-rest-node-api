@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/GAwiseBillingAddress/GetGAAddress"
+method: GET
+headers:
+  Content-Type: application/json
+order: 3000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/receipt-generation/check"
+method: GET
+order: 2000

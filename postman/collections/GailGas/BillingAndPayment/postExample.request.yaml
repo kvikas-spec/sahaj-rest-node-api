@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/entities"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "name": "vikas kumar"
+    }
+order: 5000

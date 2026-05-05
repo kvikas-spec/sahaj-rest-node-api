@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/assign-supervisor/lmc-work/"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "ids": [
+            148302,
+            180596
+        ],
+        "supervisorId": 10227
+    }
+order: 2000

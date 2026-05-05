@@ -1,0 +1,201 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}/billing-payment/gas-leakage/ApproveGasLeakageList?sEcho=1&iDisplayStart=0&iDisplayLength=10&iSortCol_0=2&sSortDir_0=asc&IsFilter=1&ConsumerNumber=511902688"
+  method: GET
+  queryParams:
+    sEcho: "1"
+    iDisplayStart: "0"
+    iDisplayLength: "10"
+    iSortCol_0: "2"
+    sSortDir_0: asc
+    IsFilter: "1"
+    ConsumerNumber: "511902688"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1769681897088-133871
+    content-type: application/json; charset=utf-8
+    etag: W/"105d-l30vOKLOWrow8sdkgsFgQKS1m+o"
+    Vary: Accept-Encoding
+    content-encoding: br
+    date: Thu, 29 Jan 2026 10:18:17 GMT
+    connection: close
+    Content-Length: "339"
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "sEcho": "1",
+              "iTotalRecords": 6,
+              "iTotalDisplayRecords": 6,
+              "aaData": [
+                  {
+                      "SrNo": "6",
+                      "GasLeakageId": "30086",
+                      "ConsumerNumber": "511902688",
+                      "LeakageFromDate": "2025-01-01T00:00:00.000Z",
+                      "LeakageFromDateString": "01-01-2025",
+                      "LeakageToDate": "2025-01-10T00:00:00.000Z",
+                      "LeakageToDateString": "10-01-2025",
+                      "LeakageTotalDay": "10",
+                      "NormalFromDate": "2024-12-01T00:00:00.000Z",
+                      "NormalFromDateString": "01-12-2024",
+                      "NormalToDate": "2024-12-10T00:00:00.000Z",
+                      "NormalToDateString": "10-12-2024",
+                      "NormalTotalDay": "10",
+                      "LeakageFromConsumption": 120,
+                      "LeakageToConsumption": 180,
+                      "LeakageTotalConsumption": 60,
+                      "NormalFromConsumption": 80,
+                      "NormalToConsumption": 100,
+                      "NormalTotalConsumption": 20,
+                      "LeakageConsumptionInSCMD": 6,
+                      "NormalConsumptionInSCMD": 2,
+                      "ConsiderUnit": 80,
+                      "CreditUnit": 20
+                  },
+                  {
+                      "SrNo": "5",
+                      "GasLeakageId": "30085",
+                      "ConsumerNumber": "511902688",
+                      "LeakageFromDate": "2025-01-01T00:00:00.000Z",
+                      "LeakageFromDateString": "01-01-2025",
+                      "LeakageToDate": "2025-01-10T00:00:00.000Z",
+                      "LeakageToDateString": "10-01-2025",
+                      "LeakageTotalDay": "10",
+                      "NormalFromDate": "2024-12-01T00:00:00.000Z",
+                      "NormalFromDateString": "01-12-2024",
+                      "NormalToDate": "2024-12-10T00:00:00.000Z",
+                      "NormalToDateString": "10-12-2024",
+                      "NormalTotalDay": "10",
+                      "LeakageFromConsumption": 120,
+                      "LeakageToConsumption": 180,
+                      "LeakageTotalConsumption": 60,
+                      "NormalFromConsumption": 80,
+                      "NormalToConsumption": 100,
+                      "NormalTotalConsumption": 20,
+                      "LeakageConsumptionInSCMD": 6,
+                      "NormalConsumptionInSCMD": 2,
+                      "ConsiderUnit": 80,
+                      "CreditUnit": 20
+                  },
+                  {
+                      "SrNo": "4",
+                      "GasLeakageId": "30084",
+                      "ConsumerNumber": "511902688",
+                      "LeakageFromDate": "2025-01-01T00:00:00.000Z",
+                      "LeakageFromDateString": "01-01-2025",
+                      "LeakageToDate": "2025-01-10T00:00:00.000Z",
+                      "LeakageToDateString": "10-01-2025",
+                      "LeakageTotalDay": "10",
+                      "NormalFromDate": "2024-12-01T00:00:00.000Z",
+                      "NormalFromDateString": "01-12-2024",
+                      "NormalToDate": "2024-12-10T00:00:00.000Z",
+                      "NormalToDateString": "10-12-2024",
+                      "NormalTotalDay": "10",
+                      "LeakageFromConsumption": 120,
+                      "LeakageToConsumption": 180,
+                      "LeakageTotalConsumption": 60,
+                      "NormalFromConsumption": 80,
+                      "NormalToConsumption": 100,
+                      "NormalTotalConsumption": 20,
+                      "LeakageConsumptionInSCMD": 6,
+                      "NormalConsumptionInSCMD": 2,
+                      "ConsiderUnit": 80,
+                      "CreditUnit": 20
+                  },
+                  {
+                      "SrNo": "3",
+                      "GasLeakageId": "30083",
+                      "ConsumerNumber": "511902688",
+                      "LeakageFromDate": "2025-01-01T00:00:00.000Z",
+                      "LeakageFromDateString": "01-01-2025",
+                      "LeakageToDate": "2025-01-10T00:00:00.000Z",
+                      "LeakageToDateString": "10-01-2025",
+                      "LeakageTotalDay": "10",
+                      "NormalFromDate": "2024-12-01T00:00:00.000Z",
+                      "NormalFromDateString": "01-12-2024",
+                      "NormalToDate": "2024-12-10T00:00:00.000Z",
+                      "NormalToDateString": "10-12-2024",
+                      "NormalTotalDay": "10",
+                      "LeakageFromConsumption": 120,
+                      "LeakageToConsumption": 180,
+                      "LeakageTotalConsumption": 60,
+                      "NormalFromConsumption": 80,
+                      "NormalToConsumption": 100,
+                      "NormalTotalConsumption": 20,
+                      "LeakageConsumptionInSCMD": 6,
+                      "NormalConsumptionInSCMD": 2,
+                      "ConsiderUnit": 80,
+                      "CreditUnit": 20
+                  },
+                  {
+                      "SrNo": "2",
+                      "GasLeakageId": "30082",
+                      "ConsumerNumber": "511902688",
+                      "LeakageFromDate": "2025-01-01T00:00:00.000Z",
+                      "LeakageFromDateString": "01-01-2025",
+                      "LeakageToDate": "2025-01-10T00:00:00.000Z",
+                      "LeakageToDateString": "10-01-2025",
+                      "LeakageTotalDay": "10",
+                      "NormalFromDate": "2024-12-01T00:00:00.000Z",
+                      "NormalFromDateString": "01-12-2024",
+                      "NormalToDate": "2024-12-10T00:00:00.000Z",
+                      "NormalToDateString": "10-12-2024",
+                      "NormalTotalDay": "10",
+                      "LeakageFromConsumption": 120,
+                      "LeakageToConsumption": 180,
+                      "LeakageTotalConsumption": 60,
+                      "NormalFromConsumption": 80,
+                      "NormalToConsumption": 100,
+                      "NormalTotalConsumption": 20,
+                      "LeakageConsumptionInSCMD": 6,
+                      "NormalConsumptionInSCMD": 2,
+                      "ConsiderUnit": 80,
+                      "CreditUnit": 20
+                  },
+                  {
+                      "SrNo": "1",
+                      "GasLeakageId": "30081",
+                      "ConsumerNumber": "511902688",
+                      "LeakageFromDate": "2025-01-01T00:00:00.000Z",
+                      "LeakageFromDateString": "01-01-2025",
+                      "LeakageToDate": "2025-01-10T00:00:00.000Z",
+                      "LeakageToDateString": "10-01-2025",
+                      "LeakageTotalDay": "10",
+                      "NormalFromDate": "2024-12-01T00:00:00.000Z",
+                      "NormalFromDateString": "01-12-2024",
+                      "NormalToDate": "2024-12-10T00:00:00.000Z",
+                      "NormalToDateString": "10-12-2024",
+                      "NormalTotalDay": "10",
+                      "LeakageFromConsumption": 120,
+                      "LeakageToConsumption": 180,
+                      "LeakageTotalConsumption": 60,
+                      "NormalFromConsumption": 80,
+                      "NormalToConsumption": 100,
+                      "NormalTotalConsumption": 20,
+                      "LeakageConsumptionInSCMD": 6,
+                      "NormalConsumptionInSCMD": 2,
+                      "ConsiderUnit": 80,
+                      "CreditUnit": 20
+                  }
+              ]
+          }
+      }
+order: 1000

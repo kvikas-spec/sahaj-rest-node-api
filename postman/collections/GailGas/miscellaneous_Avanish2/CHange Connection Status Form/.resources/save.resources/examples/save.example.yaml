@@ -1,0 +1,69 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/form-13/"
+  method: POST
+  body:
+    type: json
+    content: |
+      {
+        "ChangeConnectionStatusId": 0,
+        "ConsumerNumber": 1234567890,
+        "Cycle": 0,
+        "TransactionDate": "2026-01-13T10:30:00",
+        "OldConnectionStatusId": 1,
+        "NewConnectionStatusId": 2,
+        "ReDisConnectionDate": "2026-01-15T00:00:00",
+
+        "MeterNumber": "MTR-987654",
+        "MeterCompanyId": 3,
+        "MeterType": "Domestic",
+        "Reading": 125.50,
+
+        "ResolutionNumber": "RES-2026-01",
+        "ResolutionDate": "2026-01-10T00:00:00",
+
+        "OldKitchenPoints": 1,
+        "NewKitchenPoints": 2,
+        "OldGeyserPoints": 0,
+        "NewGeyserPoints": 1,
+        "OldTotalPoints": 1,
+        "NewTotalPoints": 3,
+
+        "ChallanNumber": "1001,1002",
+        "ConsumerChallanId": "1001,1002",
+
+        "Remark": "Meter replaced due to fault",
+        "NewMeterRemark": "New meter installed successfully"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770471070256-700175
+    content-type: application/json; charset=utf-8
+    Content-Length: "105"
+    etag: W/"69-neAum35c3VwbFSETTENm/ZQ7y88"
+    date: Sat, 07 Feb 2026 13:31:10 GMT
+    connection: close
+    Vary: Accept-Encoding
+  body:
+    type: json
+    content: |-
+      {
+          "success": false,
+          "message": "Invoice is not generated for the approved change connection status request!"
+      }
+order: 1000

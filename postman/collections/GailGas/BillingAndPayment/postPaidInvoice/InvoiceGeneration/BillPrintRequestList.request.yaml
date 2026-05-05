@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/BillPrintRequestList"
+method: GET
+body:
+  type: text
+  content: s
+order: 3000

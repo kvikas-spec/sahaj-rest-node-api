@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/ManageDeviceUserMapping?DeviceMappingId=5"
+method: GET
+queryParams:
+  DeviceMappingId: "5"
+order: 6000

@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/single-sd-bypass-interlock-movein"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "ConsumerNumber": 2600503322
+    }
+order: 3000

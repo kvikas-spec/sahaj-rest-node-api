@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Template/NotificationManagement/email-subject?TemplateId=1"
+method: GET
+queryParams:
+  TemplateId: "1"
+order: 4000

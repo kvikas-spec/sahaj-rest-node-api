@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/UploadMRUUpdateDetials/:mruUpdateBulkUploadId"
+method: PATCH
+headers:
+  Authorization: Bearer <ACCESS_TOKEN>
+pathVariables:
+  mruUpdateBulkUploadId: "5"
+body:
+  type: formdata
+  content: []
+order: 2000

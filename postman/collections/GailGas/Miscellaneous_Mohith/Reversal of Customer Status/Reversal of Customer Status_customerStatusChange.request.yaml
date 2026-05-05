@@ -1,0 +1,52 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/customerStatusChange"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "ConsumerNumber": 3000297958,
+      "OldStatusId": 10,
+      "NewStatusId": 3,
+      "PrevCycle": 0,
+      "MeterNumber": "1173",
+      "MeterCompanyId": 1,
+      "OldMeterType": "RHS",
+        "OldRouteId": null,
+        "OldWardId": 11,
+        "OldSerialNo": null,
+        "State": "Uttar Pradesh",
+        "OpeningReading": 0.000,
+        "AreaId": 40,
+        "UniqueID": 0,
+        "LPGConsumerNumber": "",
+        "DealerName": "",
+        "OMCName": 0,
+        "Ownership": "Owner",
+        "LPGConn": false,
+        "RouteId": null,
+        "WardId": 11,
+        "SanctionNumber": "",
+        "SerialNumber": null,
+        "SwitchOnDate": "01-01-2025 00:00:00",
+        "SwitchOnDateString": "01-01-2025",
+        "WardName": "03DC01B1",
+        "FirstName": "Veer",
+        "MiddleName": "Patel",
+        "MobileNumber": "8757347547",
+        "PhoneNumber": "",
+        "ResidencePhoneNumber": "",
+        "EmailId": "",
+        "Society": "Test apartment",
+        "Street": "Test",
+        "TypeOfHouse": "Independent",
+        "Floor": "Ground",
+        "OthersAreaName": "",
+        "PromoId": 0,
+        "Address": "G09,Test apartment,Test",
+        "City": "BARODA",
+        "PinCode": "756758",
+        "ApplicationDate": "2025-12-30",
+        "StatusId": 1
+    }
+order: 3000

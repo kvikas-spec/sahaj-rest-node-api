@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Customer/PNGMitraVideosMaster/check?Title=Safety%20Video"
+method: GET
+queryParams:
+  Title: Safety%20Video
+order: 2000

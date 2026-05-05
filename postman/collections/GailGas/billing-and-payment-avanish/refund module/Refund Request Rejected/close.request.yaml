@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/refund/close-refund-request"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "RefundRequestId": 31
+    }
+examples: ./.resources/close.resources/examples
+order: 3000

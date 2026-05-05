@@ -1,0 +1,76 @@
+$kind: http-request
+description: |-
+  Generated from cURL: curl --request POST \
+      --url http://localhost:4020/login \
+      --header 'Authorization: Basic TklSQUpQQU5DSEFMMUBXRUJNWU5FU1lTVEVNUy5DT006MTIzNDU2Nw==' \
+      --header 'content-type: application/json' \
+      --header 'x-region-id: GailGas_Common'
+url: "{{api_gateway_url}}/auth/login"
+method: POST
+headers:
+  - key: Authorization
+    value: Basic TklSQUpQQU5DSEFMMUBXRUJNWU5FU1lTVEVNUy5DT006MTIzNDU2Nw==
+    disabled: true
+  - key: content-type
+    value: application/json
+  - key: x-region-id
+    value: GailGas_Common
+auth:
+  type: basic
+  credentials:
+    username: ANK08195@GAIL.CO.IN
+    password: "1234567"
+scripts:
+  - type: afterResponse
+    code: |
+      // ========== DEBUG: Response Status ==========
+      console.log("========== LOGIN RESPONSE DEBUG ==========");
+      console.log("Response Status Code:", pm.response.code);
+      console.log("Response Status:", pm.response.status);
+
+      // ========== DEBUG: Log All Response Headers ==========
+      console.log("\n========== ALL RESPONSE HEADERS ==========");
+      pm.response.headers.each((header) => {
+          console.log(`${header.key}: ${header.value}`);
+      });
+
+      // ========== SEARCH FOR x-temp-token ==========
+      console.log("\n========== SEARCHING FOR TEMP TOKEN ==========");
+
+      const headerName = "x-temp-token";
+      let tempToken = null;
+
+      // Case-insensitive search (Postman headers ARE case-insensitive, but safer)
+      pm.response.headers.each((header) => {
+          if (header.key.toLowerCase() === headerName) {
+              tempToken = header.value;
+              console.log(`✓ Found header: ${header.key}`);
+          }
+      });
+
+      // ========== SET ENVIRONMENT VARIABLE ==========
+      console.log("\n========== TOKEN RESULT ==========");
+      if (tempToken) {
+          pm.environment.set("temp_token", tempToken);
+          console.log("✓ temp_token ENVIRONMENT variable set");
+          console.log("Token value:", tempToken);
+      } else {
+          console.log("✗ x-temp-token header NOT FOUND");
+      }
+
+      // ========== TESTS ==========
+      pm.test("Response status code is successful (2xx)", function () {
+          pm.expect(pm.response.code).to.be.within(200, 299);
+      });
+
+      pm.test("x-temp-token header exists", function () {
+          pm.expect(tempToken).to.not.be.null;
+      });
+
+      pm.test("temp_token environment variable was set", function () {
+          const storedToken = pm.environment.get("temp_token");
+          pm.expect(storedToken).to.not.be.undefined;
+          pm.expect(storedToken).to.not.be.empty;
+      });
+    language: text/javascript
+order: 2000

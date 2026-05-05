@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/_MeterReplacementDocuments/?MonthlyChangeId=100177"
+method: GET
+queryParams:
+  - key: consumerNo
+    value: ""
+    disabled: true
+  - key: MonthlyChangeId
+    value: "100177"
+order: 16000

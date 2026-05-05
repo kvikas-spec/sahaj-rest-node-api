@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/CNGPromo/RecipientEmailsMaster"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "RecipientEmailsMasterId": 0,
+      "EmailId": "test@example.com"
+    }
+order: 3000

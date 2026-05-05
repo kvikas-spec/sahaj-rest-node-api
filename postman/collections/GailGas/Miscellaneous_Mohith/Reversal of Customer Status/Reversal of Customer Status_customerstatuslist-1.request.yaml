@@ -1,0 +1,11 @@
+$kind: http-request
+name: Reversal of Customer Status_customerstatuslist
+url: "{{api_gateway_url}}{{customer_reg_url}}/customerstatuslist"
+method: GET
+body:
+  type: json
+  content: |
+    {
+      "ConsumerNumber": 3000297958
+    }
+order: 5000

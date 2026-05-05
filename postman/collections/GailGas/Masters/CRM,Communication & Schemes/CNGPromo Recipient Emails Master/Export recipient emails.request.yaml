@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/CNGPromo/RecipientEmailsMaster/export"
+method: GET
+order: 5000

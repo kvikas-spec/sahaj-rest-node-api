@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/change-promo-scheme"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "ApplicationNumber": "A2600503321",
+        "PromoId": 0,
+        "NewPromoId": 1
+    }
+order: 2000

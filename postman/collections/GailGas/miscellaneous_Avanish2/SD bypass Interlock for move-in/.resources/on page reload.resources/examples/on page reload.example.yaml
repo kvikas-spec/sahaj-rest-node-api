@@ -1,0 +1,84 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/sd-interlock?isFilter=0&pageNo=1&pageSize=3"
+  method: GET
+  queryParams:
+    isFilter: "0"
+    pageNo: "1"
+    pageSize: "3"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770982306151-375493
+    content-type: application/json; charset=utf-8
+    Content-Length: "984"
+    etag: W/"3d8-orpVGgbEGMkb7sSVBdDh4icxZL0"
+    date: Fri, 13 Feb 2026 11:31:46 GMT
+    connection: close
+    Vary: Accept-Encoding
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": [
+              {
+                  "SDByPassInterLockForMoveInId": "230287",
+                  "ConsumerNumber": "3000298397",
+                  "FirstName": "Prudwiraj2",
+                  "Society": "Prudwiraj2",
+                  "MobileNumber": "678558****",
+                  "FinalOutstanding": 0,
+                  "DateGenerated": "2026-02-13T07:38:22.393Z",
+                  "AddedBy": "22",
+                  "AddedByName": "MEHULMISTRY@YOPMAIL.COM",
+                  "IsDelete": false
+              },
+              {
+                  "SDByPassInterLockForMoveInId": "230286",
+                  "ConsumerNumber": "3000298395",
+                  "FirstName": "Dharma Khatua",
+                  "Society": "Gokul Dham Socity",
+                  "MobileNumber": "935165****",
+                  "FinalOutstanding": 0,
+                  "DateGenerated": "2026-02-13T05:24:14.813Z",
+                  "AddedBy": "22",
+                  "AddedByName": "MEHULMISTRY@YOPMAIL.COM",
+                  "IsDelete": false
+              },
+              {
+                  "SDByPassInterLockForMoveInId": "230285",
+                  "ConsumerNumber": "3000298355",
+                  "FirstName": "Dharma Khatua",
+                  "Society": "Gokul Dham Socity",
+                  "MobileNumber": "901309****",
+                  "FinalOutstanding": 0,
+                  "DateGenerated": "2026-02-12T08:12:20.267Z",
+                  "AddedBy": "22",
+                  "AddedByName": "MEHULMISTRY@YOPMAIL.COM",
+                  "IsDelete": false
+              }
+          ],
+          "pagination": {
+              "recordCount": 55,
+              "pageCount": 19,
+              "currentPage": 1,
+              "pageSize": 3
+          },
+          "filter": 0
+      }
+order: 1000

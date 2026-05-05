@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/DeviceUserMappingData"
+method: POST
+body:
+  type: json
+  content: |
+    {
+     
+      "AgencyIdHidden": 0,
+      "AgencyId": 20055,
+      "DeviceId": 30024,
+      "UserID": 110815
+    }
+order: 8000

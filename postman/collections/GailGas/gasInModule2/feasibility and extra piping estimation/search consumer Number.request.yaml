@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/feasibility-pendingData/?pageNo=1&AgencyTypeId=&AgencyUserId=&StatusId=4&ConsumerNumber=3000298039&IsFilter=1&Address=&pageSize=12"
+method: GET
+queryParams:
+  pageNo: "1"
+  AgencyTypeId: ""
+  AgencyUserId: ""
+  StatusId: "4"
+  ConsumerNumber: "3000298039"
+  IsFilter: "1"
+  Address: ""
+  pageSize: "12"
+examples: ./.resources/search consumer Number.resources/examples
+order: 5000

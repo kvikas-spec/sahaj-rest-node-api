@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/meter-reading/GetConsumerSCMValidation?ConsNo=3000038663&CycleNo=2601&UnitUsed=36&MeterStatusId=1&readingDate=2026-03-13"
+method: GET
+queryParams:
+  ConsNo: "3000038663"
+  CycleNo: "2601"
+  UnitUsed: "36"
+  MeterStatusId: "1"
+  readingDate: 2026-03-13
+body:
+  type: text
+  content: |-
+    {
+        "TransactionDate":""
+    }
+order: 5000

@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/getdocuments"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "ApplicationNumber" : "A3000298105"
+    }
+order: 7000

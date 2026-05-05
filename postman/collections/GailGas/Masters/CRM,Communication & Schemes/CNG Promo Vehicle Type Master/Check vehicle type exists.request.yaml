@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/CNGPromo/VehicleTypeMaster/check?vehicleType=Car"
+method: GET
+queryParams:
+  vehicleType: Car
+order: 3000

@@ -1,0 +1,25 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/approval-form-13"
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "ChangeConnectionStatusId": 2,
+      "ConsumerNumber": 1234567890,
+      "Cycle": 0,
+      "TransactionDate": "2026-01-23T10:30:00",
+      "OldConnectionStatusId": 1,
+      "NewConnectionStatusId": 3,
+
+      "MeterNumber": "MTR-987654",
+      "MeterCompanyId": 3,
+      "MeterType": "Domestic",
+      "Reading": 130,
+
+      "ConsumerChallanId": "101",
+      "Remark": "Status updated",
+      "NewMeterRemark": "Meter checked"
+    }
+examples: ./.resources/save of edit.resources/examples
+order: 6000

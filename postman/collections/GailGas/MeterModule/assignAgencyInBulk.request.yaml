@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/assignAgencyInBulk/:MeterNoAssignmentToAgencyBlukUploadId"
+method: PATCH
+pathVariables:
+  MeterNoAssignmentToAgencyBlukUploadId: "20065"
+order: 20000

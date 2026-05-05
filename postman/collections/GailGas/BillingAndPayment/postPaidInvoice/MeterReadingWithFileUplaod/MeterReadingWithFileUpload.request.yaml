@@ -1,0 +1,119 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/meter-reading/MeterReadingWithFileUpload?pageNo=1&pageSize=10"
+method: GET
+headers:
+  Authorization: Bearer <token>
+  x-region-id: "{{region}}"
+queryParams:
+  pageNo: "1"
+  pageSize: "10"
+body:
+  type: formdata
+  content:
+    - type: file
+      key: file
+      src: /home/vikaskumar/Downloads/MeterReadingList (1).xlsx
+scripts:
+  - type: afterResponse
+    code: |-
+      // Visualization Script
+      // Visualization Script
+      var template = `
+      <div style="padding: 20px; font-family: Arial, sans-serif;">
+          <h2 style="text-align: center; color: #333;">Meter Reading File Upload Status</h2>
+          <canvas id="fileStatusChart" height="100"></canvas>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+      <script>
+          var ctx = document.getElementById("fileStatusChart");
+          var myChart = new Chart(ctx, {
+              type: "bar",
+              data: {
+                  labels: [],
+                  datasets: [{
+                      label: 'Number of Files',
+                      data: [],
+                      backgroundColor: [
+                          'rgba(255, 193, 7, 0.7)',
+                          'rgba(40, 167, 69, 0.7)',
+                          'rgba(220, 53, 69, 0.7)',
+                          'rgba(23, 162, 184, 0.7)',
+                          'rgba(108, 117, 125, 0.7)'
+                      ],
+                      borderColor: [
+                          'rgba(255, 193, 7, 1)',
+                          'rgba(40, 167, 69, 1)',
+                          'rgba(220, 53, 69, 1)',
+                          'rgba(23, 162, 184, 1)',
+                          'rgba(108, 117, 125, 1)'
+                      ],
+                      borderWidth: 1
+                  }]
+              },
+              options: {
+                  responsive: true,
+                  legend: { display: false },
+                  title: {
+                      display: true,
+                      text: 'Files by Status'
+                  },
+                  scales: {
+                      xAxes: [{
+                          display: true,
+                          scaleLabel: {
+                              display: true,
+                              labelString: 'File Status'
+                          }
+                      }],
+                      yAxes: [{
+                          display: true,
+                          scaleLabel: {
+                              display: true,
+                              labelString: 'Count'
+                          },
+                          ticks: {
+                              beginAtZero: true,
+                              stepSize: 1
+                          }
+                      }]
+                  }
+              }
+          });
+
+          pm.getData(function (err, value) {
+              myChart.data.labels = value.statusLabels;
+              myChart.data.datasets[0].data = value.statusCounts;
+              myChart.update();
+          });
+      </script>
+      `;
+
+      function constructVisualizerPayload() {
+          var response = pm.response.json();
+          var data = response.data || [];
+          
+          // Count files by FileStatus
+          var statusCount = {};
+          data.forEach(function(item) {
+              var status = item.FileStatus || 'Unknown';
+              if (statusCount[status]) {
+                  statusCount[status]++;
+              } else {
+                  statusCount[status] = 1;
+              }
+          });
+          
+          var statusLabels = Object.keys(statusCount);
+          var statusCounts = statusLabels.map(function(label) {
+              return statusCount[label];
+          });
+          
+          return {
+              statusLabels: statusLabels,
+              statusCounts: statusCounts
+          };
+      }
+
+      pm.visualizer.set(template, constructVisualizerPayload());
+    language: text/javascript
+order: 4000

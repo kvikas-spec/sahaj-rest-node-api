@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/Customer-Master/get-GAstateandcity"
+method: GET
+order: 8000

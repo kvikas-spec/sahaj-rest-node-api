@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/cng-operation/retrofitter-vehicle-dealer-verify-list?pageNo=1&agencyId=&customerName=&mobileNumber=&pageSize=100"
+method: GET
+queryParams:
+  pageNo: "1"
+  agencyId: ""
+  customerName: ""
+  mobileNumber: ""
+  pageSize: "100"
+examples: ./.resources/on page load.resources/examples
+order: 1000

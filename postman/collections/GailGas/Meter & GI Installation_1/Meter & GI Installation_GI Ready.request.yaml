@@ -1,0 +1,25 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/GI-addextrapiping"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "ConsumerNumber": 2600503346,
+        "IsUpdate": true,
+        "CustomerMiscDebitDetailsId": 0,
+        "TotalAmount": 35000,
+        "PayableAmount": 41300.00,
+        "CGST": 3150,
+        "SGST": 3150,
+        "CGSTper": 9.0,
+        "SGSTper": 9.0,
+        "ExtraPipingdetailsList": [
+            {
+                "MiscRateId": 54,
+                "ExtraPipingUnit": 100,
+                "Amount": 35000
+            }
+        ]
+    }
+order: 1000

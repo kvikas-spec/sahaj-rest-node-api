@@ -1,0 +1,5 @@
+$kind: http-request
+name: Active/deactive bulk SMS template
+url: "{{api_gateway_url}}/masters/Template/BulkSMSTemplate/1/active"
+method: PATCH
+order: 5000

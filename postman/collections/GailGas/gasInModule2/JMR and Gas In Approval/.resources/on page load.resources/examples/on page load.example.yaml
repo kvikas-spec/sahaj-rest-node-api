@@ -1,0 +1,232 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/gas-in-approval/list/?pageNo=1&IsFilter=0&ConsumerNumber=&StatusId=11&AgencyTypeId=&AgencyUserId=&Address"
+  method: GET
+  queryParams:
+    pageNo: "1"
+    IsFilter: "0"
+    ConsumerNumber: ""
+    StatusId: "11"
+    AgencyTypeId: ""
+    AgencyUserId: ""
+    Address: null
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770793588793-731966
+    content-type: application/json; charset=utf-8
+    etag: W/"f84-dlew8wy/5WuQL5ruRsXWBzBJnR8"
+    date: Wed, 11 Feb 2026 07:06:29 GMT
+    connection: close
+    Vary: Accept-Encoding
+    Content-Encoding: br
+    Transfer-Encoding: chunked
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": [
+              {
+                  "CustomerId": "520655",
+                  "StatusId": "11",
+                  "ConsumerNumber": "3000298331",
+                  "FullName": "wewwee",
+                  "MobileNumber": "677898****",
+                  "Address": "wewe wwewe, ewwe",
+                  "AgencyId": "30061",
+                  "SupervisorId": "160930",
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": "02/09/2026",
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": "02/09/2026",
+                  "AgencyName": "ARJUN RETROFITTER",
+                  "SupervisorName": "DAVID",
+                  "IsDefective": null,
+                  "Remarks": null
+              },
+              {
+                  "CustomerId": "510655",
+                  "StatusId": "11",
+                  "ConsumerNumber": "3000298329",
+                  "FullName": "MOHITH Feb9",
+                  "MobileNumber": "984802****",
+                  "Address": "House Society, street",
+                  "AgencyId": "30061",
+                  "SupervisorId": null,
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": "02/10/2026",
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": null,
+                  "AgencyName": "ARJUN RETROFITTER",
+                  "SupervisorName": "",
+                  "IsDefective": null,
+                  "Remarks": null
+              },
+              {
+                  "CustomerId": "170327",
+                  "StatusId": "11",
+                  "ConsumerNumber": "3000297681",
+                  "FullName": "aa",
+                  "MobileNumber": "956677****",
+                  "Address": "12 asd, asd",
+                  "AgencyId": "20053",
+                  "SupervisorId": "170942",
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": "07/14/2025",
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": "08/18/2025",
+                  "AgencyName": "LMC AGENCY",
+                  "SupervisorName": "POOJADMA",
+                  "IsDefective": null,
+                  "Remarks": null
+              },
+              {
+                  "CustomerId": "160339",
+                  "StatusId": "11",
+                  "ConsumerNumber": "3000297672",
+                  "FullName": "aa",
+                  "MobileNumber": "945777****",
+                  "Address": "101 fgewr, sf",
+                  "AgencyId": "44",
+                  "SupervisorId": "10163",
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": "07/09/2025",
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": "07/09/2025",
+                  "AgencyName": "MY AGENCY",
+                  "SupervisorName": "BAIJUO",
+                  "IsDefective": null,
+                  "Remarks": null
+              },
+              {
+                  "CustomerId": "160338",
+                  "StatusId": "11",
+                  "ConsumerNumber": "3000297671",
+                  "FullName": "test ",
+                  "MobileNumber": "964346****",
+                  "Address": "22b hehsb, dbdn",
+                  "AgencyId": "20053",
+                  "SupervisorId": "170942",
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": "07/09/2025",
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": "07/09/2025",
+                  "AgencyName": "LMC AGENCY",
+                  "SupervisorName": "POOJADMA",
+                  "IsDefective": null,
+                  "Remarks": null
+              },
+              {
+                  "CustomerId": "160334",
+                  "StatusId": "11",
+                  "ConsumerNumber": "3000297667",
+                  "FullName": "test prepaid ",
+                  "MobileNumber": "967676****",
+                  "Address": "101 vfsdf, evgr",
+                  "AgencyId": "44",
+                  "SupervisorId": "10163",
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": "07/09/2025",
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": "07/09/2025",
+                  "AgencyName": "MY AGENCY",
+                  "SupervisorName": "BAIJUO",
+                  "IsDefective": null,
+                  "Remarks": null
+              },
+              {
+                  "CustomerId": "150304",
+                  "StatusId": "11",
+                  "ConsumerNumber": "3000297636",
+                  "FullName": "prepaid",
+                  "MobileNumber": "977776****",
+                  "Address": "dd s, z",
+                  "AgencyId": "20053",
+                  "SupervisorId": "170942",
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": "06/24/2025",
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": "06/24/2025",
+                  "AgencyName": "LMC AGENCY",
+                  "SupervisorName": "POOJADMA",
+                  "IsDefective": null,
+                  "Remarks": null
+              },
+              {
+                  "CustomerId": "150303",
+                  "StatusId": "11",
+                  "ConsumerNumber": "3000297635",
+                  "FullName": "Regular ",
+                  "MobileNumber": "977743****",
+                  "Address": "101 a, a",
+                  "AgencyId": "20053",
+                  "SupervisorId": "170942",
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": "06/24/2025",
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": "06/24/2025",
+                  "AgencyName": "LMC AGENCY",
+                  "SupervisorName": "POOJADMA",
+                  "IsDefective": null,
+                  "Remarks": null
+              },
+              {
+                  "CustomerId": "150292",
+                  "StatusId": "11",
+                  "ConsumerNumber": "3000297624",
+                  "FullName": "testcustomer1",
+                  "MobileNumber": "948151****",
+                  "Address": "26 teat, test",
+                  "AgencyId": "20053",
+                  "SupervisorId": "190949",
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": "06/20/2025",
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": "06/20/2025",
+                  "AgencyName": "LMC AGENCY",
+                  "SupervisorName": "TESTDMA ",
+                  "IsDefective": null,
+                  "Remarks": null
+              },
+              {
+                  "CustomerId": "150288",
+                  "StatusId": "11",
+                  "ConsumerNumber": "3000297620",
+                  "FullName": "a",
+                  "MobileNumber": "978447****",
+                  "Address": "a a, a",
+                  "AgencyId": "20053",
+                  "SupervisorId": "170942",
+                  "IsEdit": "false",
+                  "AgencyAssignedDate": "06/20/2025",
+                  "ISPipingStatus": "false",
+                  "SupervisorAssignedDate": "06/20/2025",
+                  "AgencyName": "LMC AGENCY",
+                  "SupervisorName": "POOJADMA",
+                  "IsDefective": null,
+                  "Remarks": null
+              }
+          ],
+          "pagination": {
+              "totalRecords": 41,
+              "pageCount": 5,
+              "currentPage": 1,
+              "pageSize": 10
+          }
+      }
+order: 1000

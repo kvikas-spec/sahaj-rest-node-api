@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/UploadMeterDetials/:MeterMasterBulkUploadId"
+method: PATCH
+pathVariables:
+  MeterMasterBulkUploadId: "10187"
+order: 19000

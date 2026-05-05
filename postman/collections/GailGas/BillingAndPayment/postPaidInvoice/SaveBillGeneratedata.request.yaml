@@ -1,0 +1,24 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/SaveBillGeneratedata"
+method: POST
+headers:
+  Content-Type: application/json
+  Cookie: connect.sid=YOUR_SESSION_COOKIE
+body:
+  type: json
+  content: |-
+    // {
+    //     "CycleMasterVM": {
+    //         "ConsumerCode": [3000297617],
+    //         "WardList": [15],
+    //         "AccountTypeId": 1 // send account type id from get api
+    //     }
+    // }
+    {
+        "CycleMasterVM": {
+            "ConsumerCode":[3000298190],//[3000297410, 3000297593],
+            "WardList": [], // ,36,31
+            "AccountTypeId": 1
+        }
+    }
+order: 14000

@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/AddEditComplaintReceivingCellsDetails"
+method: POST
+headers:
+  Authorization: Bearer {{accessToken}}
+  x-region-id: "{{regionId}}"
+  content-type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "InChargeComplaintReceivingCellsId": 0,
+      "InChargeComplaintReceivingCellsDetails": "Sample complaint receiving cells details"
+    }
+order: 3000

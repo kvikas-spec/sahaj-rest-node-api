@@ -1,0 +1,34 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Users/SaveUserRegistration"
+method: POST
+headers:
+  x-region-id: Meerut
+body:
+  type: json
+  content: |-
+    {
+        "RegistrationVM": {
+            // "EncryptedUserID": "61nqR+RHpTZe2mKxhXivug==",
+            "IsMobileFlag": 0,
+            "IsADUsers": false,
+            "AgencyId": 73,
+            "FirstName": "Prudwi",
+            "MiddleName": "",
+            "Surname": "raj",
+            "Address": "Hello",
+            "DateOfJoining": null,
+            "Designation": null,
+            "PhoneNumber": "9589483421",
+            "AltMobileNumber": null,
+            "Department": null,
+            "EmailId": "prudwiraj1@gmail.com",
+            "EmployeeId": "Prudwi",
+            "RoleID": "1",
+            "Roles": "1",
+            "localGAIds": [
+                1
+            ],
+            "UserImage": ""
+        }
+    }
+order: 2000

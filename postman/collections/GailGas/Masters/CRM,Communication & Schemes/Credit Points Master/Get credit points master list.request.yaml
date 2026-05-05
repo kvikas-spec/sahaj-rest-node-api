@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/CNGPromo/CreditPointsMaster?pageNo=1&pageSize=100&vehicleType="
+method: GET
+queryParams:
+  pageNo: "1"
+  pageSize: "100"
+  vehicleType: ""
+order: 1000

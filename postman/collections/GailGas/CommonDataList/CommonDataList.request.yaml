@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/CommonDataList/lmc-agency-list"
+method: GET
+order: 1000

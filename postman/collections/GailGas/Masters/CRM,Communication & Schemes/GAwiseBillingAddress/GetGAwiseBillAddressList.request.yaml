@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/GAwiseBillingAddress/GetGAwiseBillAddressList?pageNo=1&pageSize=10"
+method: GET
+headers:
+  Content-Type: application/json
+queryParams:
+  - key: billingAddress
+    value: Main%20Street
+    disabled: true
+  - key: pageNo
+    value: "1"
+  - key: pageSize
+    value: "10"
+order: 1000

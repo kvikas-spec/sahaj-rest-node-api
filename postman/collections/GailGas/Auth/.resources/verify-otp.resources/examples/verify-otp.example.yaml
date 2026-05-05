@@ -1,0 +1,111 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}/auth/otp-verification"
+  method: POST
+  headers:
+    Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9 eyJ1c2VySWQiOiIxMzA4MjEiLCJ1c2VyTmFtZSI6Ik5JUkFKUEFOQ0hBTDFAV0VCTVlORVNZU1RFTVMuQ09NIiwiZ2FJZCI6Nywicm9sZXMiOlsiMjciLCIxMDA2NSIsIjEwMDc1IiwiMTAwNzgiLCIxMDA4NCIsIjEwMDg4IiwiMTAwOTciLCIxMDEwMCJdLCJnYXMiOlsiNyJdLCJpYXQiOjE3Njc1OTczMTUsImV4cCI6MTc2NzU5NzYxNX0.FR1Y2rx6-GAxOKDo5ArD0lVeRtXgEXWHkbzKTqveZZA
+    content-type: application/json
+    x-region-id: GailGas_Common
+  body:
+    type: json
+    content: |-
+      {
+          "username": "MEHULMISTRY@YOPMAIL.COM",
+          "otp": 358573
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    x-powered-by: Express
+    Access-Control-Allow-Origin: "*"
+    X-Request-Id: 1775545916694-874652
+    RateLimit-Policy: 100;w=60
+    RateLimit-Limit: "100"
+    RateLimit-Remaining: "99"
+    RateLimit-Reset: "21"
+    x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiSFAiLCJNaWRkbGVOYW1lIjoiUlQiLCJQaG9uZU51bWJlciI6Ijk4OTg5ODk4OTMiLCJFbWFpbElkIjoiTUVIVUxNSVNUUllAWU9QTUFJTC5DT00iLCJBZGRyZXNzIjoiREFORElBIEJBWkFSIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOiJMRURHRVIgQ0xFUksiLCJEZXBhcnRtZW50IjoiTEVER0VSIiwiRW1wbG95ZWVJZCI6IkxFRDA1IiwiVXNlck5hbWUiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoibTFjcTJianRoZXY0MGEzcGFzY3VrY3o1IiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAxNy0wNi0yMFQxNjoxNjoxOS41NjNaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMTcwNjIwLCJVcGRhdGVkRGF0ZSI6bnVsbCwiVXBkYXRlZERhdGVJbnQiOm51bGwsIkFkZGVkQnkiOiIxIiwiVXBkYXRlZEJ5IjpudWxsLCJUcmFuc2FjdGlvbklkIjoiNjkzMTA1MzAzNSIsIkFnZW5jeUlkIjoiMjAwNTUiLCJJc01vYmlsZSI6ZmFsc2UsIklzQURVc2VycyI6ZmFsc2UsIlVzZXJJbWFnZSI6bnVsbCwiUGFzc3dvcmRDaGFuZ2VkRGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGUiOiIyMDI1LTA0LTIyVDE4OjEzOjA3Ljc5MFoiLCJBY2NvdW50RXhwaXJ5RGF0ZUludCI6MjAyNTA0MjIsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IiIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiICs5MS0xMS0yNjE4NTk0MSAiLCJXZWJzaXRlVXJsIjoiIHd3dy5nYWlsZ2FzLmNvbSAiLCJFbWFpbElkIjoiIGdhaWxnYXNoZWxwbGluZUBnYWlsLmNvLmluICIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IiAxODAwMTAyOTI4MiAiLCJQTkdSYXRlQ2FyZExpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvcmF0ZWNhcmQtcG5nIiwiRG9zQW5kRG9udHNQTkdMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9jb3Jwb3JhdGUjL2RvLWRvbnRzLXBuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vQWNjb3VudC9HZW5lcmF0ZUFuZFNlbmRQREZUZXJtQW5kQ29uZGl0aW9uIiwiQ29tcGFueUlkIjoiMSIsIk1lcmNoYW50SUQiOiJXVC0xMTkyIiwiQWNjZXNzQ29kZSI6IiIsIlJlZGlyZWN0VXJsIjoiaHR0cDovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9PbmxpbmUvUGF5bWVudFN1Y2Nlc3MiLCJDYW5jZWx1cmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9SZWRpcmVjdHRvVXNlciIsIlByb2Nlc3NvckFjdGlvbiI6Imh0dHBzOi8vZ2VuZXJpYy5pcGF5MmNvcnB1YXQuaWNpY2liYW5rLmNvbS9ncDJjLWFwaS93cy9wYXltZW50IiwiUXJDb2RlUEEiOiJnYWlsZ2FzQGljaWNpIiwiUXJDb2RlUE4iOiJHQUlMIEdBUyBMVEQuIiwiUXJDb2RlVFIiOiJHQUkiLCJRckNvZGVNQyI6Ijk0MDUiLCJCYW5rQWNjb3VudE51bWJlciI6IjAwMzEwNTAyNDk3NyIsIlN1YkFjY291bnRJZCI6bnVsbH0sImlhdCI6MTc3NTU0NTkxNywiZXhwIjoxNzc1NTQ5NTE3fQ.ZjXOgjNWGSpreYirKkT0IoTK9tVRNtQQM6-EDauKj4A
+    x-refresh-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkdBRW50aXRpZXMiOiJNZWVydXQiLCJpYXQiOjE3NzU1NDU5MTcsImV4cCI6MTc3NTYzMjMxN30.2Y8tHbrf8sIE3pCOCFCkbwwmR1809Gigwxm1Cw6pm4U
+    content-type: application/json; charset=utf-8
+    etag: W/"1321-2ux42+o+/MkPgNVVZqs/da6pj6k"
+    date: Tue, 07 Apr 2026 07:11:57 GMT
+    connection: close
+    Vary: Accept-Encoding
+    Content-Encoding: br
+    Transfer-Encoding: chunked
+  body:
+    type: text
+    content: |-
+      {
+          "message": "OTP verifed successfully",
+          "userInfo": {
+              "UserID": "22",
+              "RoleID": "0",
+              "Surname": "RTT",
+              "FirstName": "HP",
+              "MiddleName": "RT",
+              "PhoneNumber": "9898989893",
+              "EmailId": "MEHULMISTRY@YOPMAIL.COM",
+              "Address": "DANDIA BAZAR",
+              "DateOfJoining": null,
+              "Designation": "LEDGER CLERK",
+              "Department": "LEDGER",
+              "EmployeeId": "LED05",
+              "UserName": "MEHULMISTRY@YOPMAIL.COM",
+              "Password": "wiN2q0lFNZYcfwnN19+u4Q==",
+              "SessionID": "m1cq2bjthev40a3pascukcz5",
+              "LoggedIn": true,
+              "IsActive": true,
+              "GAId": 1,
+              "DateGenerated": "2017-06-20T16:16:19.563Z",
+              "DateGeneratedDate": 20170620,
+              "UpdatedDate": null,
+              "UpdatedDateInt": null,
+              "AddedBy": "1",
+              "UpdatedBy": null,
+              "TransactionId": "6931053035",
+              "AgencyId": "20055",
+              "IsMobile": false,
+              "IsADUsers": false,
+              "UserImage": null,
+              "PasswordChangedDate": null,
+              "AccountExpiryDate": "2025-04-22T18:13:07.790Z",
+              "AccountExpiryDateInt": 20250422,
+              "AltMobileNumber": null,
+              "GAMaster": {
+                  "GAId": 1,
+                  "GAName": "Meerut",
+                  "GAEntities": "Meerut",
+                  "BusinessAreaCode": "3000",
+                  "GACity": "Meerut",
+                  "GATelephoneNumber": "IN PH- +91-121-2603559/2603560",
+                  "GAGSTIN": "09AADCG1763C1ZV",
+                  "VATTINNumber": "06333015843",
+                  "PANNumber": "AADCG1763C",
+                  "CorporateIdentificationNo": "",
+                  "TelephoneNumber": "+91 - 120 - 2446400 , 4862400",
+                  "FaxNumber": " +91-11-26185941 ",
+                  "WebsiteUrl": " www.gailgas.com ",
+                  "EmailId": " gailgashelpline@gail.co.in ",
+                  "CustomerCareNumber": " 18001029282 ",
+                  "PNGRateCardLink": "https://gailgas.com/corporate#/ratecard-png",
+                  "DosAndDontsPNGLink": "https://gailgas.com/corporate#/do-donts-png",
+                  "TermsAndCondition": "https://customertest.gailgas-png.in/Account/GenerateAndSendPDFTermAndCondition",
+                  "CompanyId": "1",
+                  "MerchantID": "WT-1192",
+                  "AccessCode": "",
+                  "RedirectUrl": "http://customertest.gailgas-png.in/Online/PaymentSuccess",
+                  "Cancelurl": "http://customertest.gailgas-png.in/Online/RedirecttoUser",
+                  "ProcessorAction": "https://generic.ipay2corpuat.icicibank.com/gp2c-api/ws/payment",
+                  "QrCodePA": "gailgas@icici",
+                  "QrCodePN": "GAIL GAS LTD.",
+                  "QrCodeTR": "GAI",
+                  "QrCodeMC": "9405",
+                  "BankAccountNumber": "003105024977",
+                  "SubAccountId": null
+              }
+          },
+          "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiSFAiLCJNaWRkbGVOYW1lIjoiUlQiLCJQaG9uZU51bWJlciI6Ijk4OTg5ODk4OTMiLCJFbWFpbElkIjoiTUVIVUxNSVNUUllAWU9QTUFJTC5DT00iLCJBZGRyZXNzIjoiREFORElBIEJBWkFSIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOiJMRURHRVIgQ0xFUksiLCJEZXBhcnRtZW50IjoiTEVER0VSIiwiRW1wbG95ZWVJZCI6IkxFRDA1IiwiVXNlck5hbWUiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoibTFjcTJianRoZXY0MGEzcGFzY3VrY3o1IiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAxNy0wNi0yMFQxNjoxNjoxOS41NjNaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMTcwNjIwLCJVcGRhdGVkRGF0ZSI6bnVsbCwiVXBkYXRlZERhdGVJbnQiOm51bGwsIkFkZGVkQnkiOiIxIiwiVXBkYXRlZEJ5IjpudWxsLCJUcmFuc2FjdGlvbklkIjoiNjkzMTA1MzAzNSIsIkFnZW5jeUlkIjoiMjAwNTUiLCJJc01vYmlsZSI6ZmFsc2UsIklzQURVc2VycyI6ZmFsc2UsIlVzZXJJbWFnZSI6bnVsbCwiUGFzc3dvcmRDaGFuZ2VkRGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGUiOiIyMDI1LTA0LTIyVDE4OjEzOjA3Ljc5MFoiLCJBY2NvdW50RXhwaXJ5RGF0ZUludCI6MjAyNTA0MjIsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IiIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiICs5MS0xMS0yNjE4NTk0MSAiLCJXZWJzaXRlVXJsIjoiIHd3dy5nYWlsZ2FzLmNvbSAiLCJFbWFpbElkIjoiIGdhaWxnYXNoZWxwbGluZUBnYWlsLmNvLmluICIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IiAxODAwMTAyOTI4MiAiLCJQTkdSYXRlQ2FyZExpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvcmF0ZWNhcmQtcG5nIiwiRG9zQW5kRG9udHNQTkdMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9jb3Jwb3JhdGUjL2RvLWRvbnRzLXBuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vQWNjb3VudC9HZW5lcmF0ZUFuZFNlbmRQREZUZXJtQW5kQ29uZGl0aW9uIiwiQ29tcGFueUlkIjoiMSIsIk1lcmNoYW50SUQiOiJXVC0xMTkyIiwiQWNjZXNzQ29kZSI6IiIsIlJlZGlyZWN0VXJsIjoiaHR0cDovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9PbmxpbmUvUGF5bWVudFN1Y2Nlc3MiLCJDYW5jZWx1cmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9SZWRpcmVjdHRvVXNlciIsIlByb2Nlc3NvckFjdGlvbiI6Imh0dHBzOi8vZ2VuZXJpYy5pcGF5MmNvcnB1YXQuaWNpY2liYW5rLmNvbS9ncDJjLWFwaS93cy9wYXltZW50IiwiUXJDb2RlUEEiOiJnYWlsZ2FzQGljaWNpIiwiUXJDb2RlUE4iOiJHQUlMIEdBUyBMVEQuIiwiUXJDb2RlVFIiOiJHQUkiLCJRckNvZGVNQyI6Ijk0MDUiLCJCYW5rQWNjb3VudE51bWJlciI6IjAwMzEwNTAyNDk3NyIsIlN1YkFjY291bnRJZCI6bnVsbH0sImlhdCI6MTc3NTU0NTkxNywiZXhwIjoxNzc1NTQ5NTE3fQ.ZjXOgjNWGSpreYirKkT0IoTK9tVRNtQQM6-EDauKj4A",
+          "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkdBRW50aXRpZXMiOiJNZWVydXQiLCJpYXQiOjE3NzU1NDU5MTcsImV4cCI6MTc3NTYzMjMxN30.2Y8tHbrf8sIE3pCOCFCkbwwmR1809Gigwxm1Cw6pm4U"
+      }
+order: 1000

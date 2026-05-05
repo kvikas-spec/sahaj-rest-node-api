@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/meter-reading/listOfDetails?isFilter=1&pageNo=1&pageSize=20&ConsumerNumber=3000297944"
+method: GET
+queryParams:
+  - key: isFilter
+    value: "1"
+  - key: pageNo
+    value: "1"
+  - key: pageSize
+    value: "20"
+  - key: sort
+    value: MeterReadingId:DESC
+    disabled: true
+  - key: isHouseLockApproval
+    value: "1"
+    disabled: true
+  - key: ConsumerNumber
+    value: "3000297944"
+  - key: wardId
+    value: ""
+    disabled: true
+order: 1000

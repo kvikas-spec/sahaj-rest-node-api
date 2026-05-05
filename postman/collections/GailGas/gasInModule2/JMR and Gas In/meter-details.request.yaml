@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/meter-details/3000298040"
+method: GET
+order: 7000

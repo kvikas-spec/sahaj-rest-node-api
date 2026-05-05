@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/_MROGeneratedDetails?consumerNumber=3000298231"
+method: GET
+queryParams:
+  consumerNumber: "3000298231"
+order: 1000

@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/CNGPromo/CreditPointsMaster"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "VehicleTypeMasterId": 1,
+      "CreditPoints": 10
+    }
+order: 2000

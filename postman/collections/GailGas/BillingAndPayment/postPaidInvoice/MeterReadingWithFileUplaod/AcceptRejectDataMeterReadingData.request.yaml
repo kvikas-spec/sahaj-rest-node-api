@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/meter-reading/AcceptRejectDataMeterReadingData/:BillGenerateRequestWithReadingId"
+method: PATCH
+headers:
+  Authorization: Bearer <token>
+  x-region-id: "{{region}}"
+pathVariables:
+  BillGenerateRequestWithReadingId: "80314"
+body:
+  type: json
+  content: |-
+    {
+        "flag": true
+    }
+order: 2000

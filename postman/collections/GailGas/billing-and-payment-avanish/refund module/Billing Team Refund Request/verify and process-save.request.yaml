@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/refund/add-billing-team/verify"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "RefundRequestId": 150,
+        "IsVerification": true,
+        "RefundAmount": 1924,
+        "SDAvailable": 4500,
+        "InvoicePayable": 5742,
+        "OtherChargesPayable": 100
+    }
+examples: ./.resources/verify and process-save.resources/examples
+order: 4000

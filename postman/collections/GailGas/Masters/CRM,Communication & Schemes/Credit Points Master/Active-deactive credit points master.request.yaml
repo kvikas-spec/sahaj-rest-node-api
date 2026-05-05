@@ -1,0 +1,5 @@
+$kind: http-request
+name: Active/deactive credit points master
+url: "{{api_gateway_url}}/masters/CNGPromo/CreditPointsMaster/1/active"
+method: PATCH
+order: 3000

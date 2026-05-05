@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/AuthorizationManagement/IsActiveRole/:RoleID"
+method: PATCH
+headers:
+  x-region-id: Meerut
+pathVariables:
+  RoleID: "40115"
+body:
+  type: json
+  content: ""
+order: 6000

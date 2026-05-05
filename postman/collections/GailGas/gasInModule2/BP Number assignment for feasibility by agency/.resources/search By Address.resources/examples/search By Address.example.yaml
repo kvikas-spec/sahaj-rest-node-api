@@ -1,0 +1,91 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/allocate-bpno-to-agency/?pageNo=1&agencyId=&ConsumerNumber=&IsFilter=1&Address=aa&pageSize=18"
+  method: GET
+  queryParams:
+    pageNo: "1"
+    agencyId: ""
+    ConsumerNumber: ""
+    IsFilter: "1"
+    Address: aa
+    pageSize: "18"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770711860673-16223
+    content-type: application/json; charset=utf-8
+    Content-Length: "928"
+    etag: W/"3a0-cwqbs3W2BsgNFlUUSrvFZwS2Uqc"
+    date: Tue, 10 Feb 2026 08:24:21 GMT
+    connection: close
+    Vary: Accept-Encoding
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "filter": 1,
+              "recordCount": 5,
+              "pageCount": 1,
+              "currentPage": 1,
+              "pageSize": "18",
+              "data": [
+                  {
+                      "SrNo": "5",
+                      "CustomerAllotmentId": "393057",
+                      "ConsumerNumber": "3000295094",
+                      "FullName": "Hemal patel",
+                      "MobileNumber": "112121****",
+                      "Address": "AASA tarsali, tarsali"
+                  },
+                  {
+                      "SrNo": "4",
+                      "CustomerAllotmentId": "92415",
+                      "ConsumerNumber": "3000295983",
+                      "FullName": "aaa",
+                      "MobileNumber": "121212****",
+                      "Address": "00 aaa, aaa"
+                  },
+                  {
+                      "SrNo": "3",
+                      "CustomerAllotmentId": "71952",
+                      "ConsumerNumber": "4000072794",
+                      "FullName": "Saroj Bala ",
+                      "MobileNumber": "",
+                      "Address": "FLAT 203 2 Aastha Apartment, Aastha Apartment  "
+                  },
+                  {
+                      "SrNo": "2",
+                      "CustomerAllotmentId": "51547",
+                      "ConsumerNumber": "4000460870",
+                      "FullName": "SUNITA ",
+                      "MobileNumber": "975904****",
+                      "Address": "PLOT -N0-5 BANNU MIYA COLONY ROHTA RAAD MEERUT,  MEERUT "
+                  },
+                  {
+                      "SrNo": "1",
+                      "CustomerAllotmentId": "40739",
+                      "ConsumerNumber": "3000294465",
+                      "FullName": "Dummy",
+                      "MobileNumber": "875421****",
+                      "Address": "aaa aaa, Area Name"
+                  }
+              ]
+          }
+      }
+order: 1000

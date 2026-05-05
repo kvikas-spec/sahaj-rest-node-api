@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateCompanyWise/export?IsFilter=0&companyId=0"
+method: GET
+queryParams:
+  IsFilter: "0"
+  companyId: "0"
+order: 9000

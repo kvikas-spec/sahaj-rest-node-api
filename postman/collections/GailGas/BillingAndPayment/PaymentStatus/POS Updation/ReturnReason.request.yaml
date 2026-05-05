@@ -1,0 +1,48 @@
+$kind: http-request
+description: |-
+  ```
+                          <select class="form-control chosen-select" id="ReturnReason" name="ReturnReason">
+                              <option selected="selected" value="">Select Reason</option>
+                              <option value="Refer to drawer">Refer to drawer</option>
+                              <option value="Exceeds arrangement">Exceeds arrangement</option>
+                              <option value="Drawer&#x27;s signature differs from the specimen on record">Drawer&#x27;s signature differs from the specimen on record</option>
+                              <option value="Drawer&#x27;s signature required">Drawer&#x27;s signature required</option>
+                              <option value="Payment stopped by the drawer">Payment stopped by the drawer</option>
+                              <option value="Alteration in date/figures/words require drawer&#x27;s signature"> Alteration in date/figures/words require drawer&#x27;s signature</option>
+                              <option value="Cheque is post dated/out of date">Cheque is post dated/out of date</option>
+                              <option value="Account Closed">Account Closed</option>
+                              <option value="Payee&#x27;s Name Required">Payee&#x27;s Name Required</option>
+                              <option value="Not drawn on us">Not drawn on us</option>
+                              <option value="Funds insufficient">Funds insufficient</option>
+                              <option value="Amt. in words and figures differs">Amt. in words and figures differs</option>
+                              <option value="A/c. Frozen">A/c. Frozen</option>
+                              <option value="No advice. Please present again">No advice. Please present again</option>
+                              <option value="Other">Other</option>
+                          </select>
+
+   ```
+url: Please-copy payload (docs section) it is harded value
+method: GET
+body:
+  type: text
+  content: |2
+                                <select class="form-control chosen-select" id="ReturnReason" name="ReturnReason">
+                                    <option selected="selected" value="">Select Reason</option>
+                                    <option value="Refer to drawer">Refer to drawer</option>
+                                    <option value="Exceeds arrangement">Exceeds arrangement</option>
+                                    <option value="Drawer's signature differs from the specimen on record">Drawer's signature differs from the specimen on record</option>
+                                    <option value="Drawer's signature required">Drawer's signature required</option>
+                                    <option value="Payment stopped by the drawer">Payment stopped by the drawer</option>
+                                    <option value="Alteration in date/figures/words require drawer's signature"> Alteration in date/figures/words require drawer's signature</option>
+                                    <option value="Cheque is post dated/out of date">Cheque is post dated/out of date</option>
+                                    <option value="Account Closed">Account Closed</option>
+                                    <option value="Payee's Name Required">Payee's Name Required</option>
+                                    <option value="Not drawn on us">Not drawn on us</option>
+                                    <option value="Funds insufficient">Funds insufficient</option>
+                                    <option value="Amt. in words and figures differs">Amt. in words and figures differs</option>
+                                    <option value="A/c. Frozen">A/c. Frozen</option>
+                                    <option value="No advice. Please present again">No advice. Please present again</option>
+                                    <option value="Other">Other</option>
+
+                                </select>
+order: 5000

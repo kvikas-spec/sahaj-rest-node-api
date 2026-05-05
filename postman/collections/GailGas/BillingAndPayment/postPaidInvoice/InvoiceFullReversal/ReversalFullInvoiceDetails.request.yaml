@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/ReversalFullInvoiceDetails/"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "DemandMasterId": 7393870,
+        "ConsumerNumber": 3000298014
+    }
+order: 2000

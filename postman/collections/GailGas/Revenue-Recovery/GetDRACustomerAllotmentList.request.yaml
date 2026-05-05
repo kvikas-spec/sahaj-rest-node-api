@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/revenue-recovery/example/GetDRACustomerAllotmentList?pageNo=1&pageSize=10"
+method: GET
+queryParams:
+  - key: pageNo
+    value: "1"
+  - key: pageSize
+    value: "10"
+  - key: isFilter
+    value: "0"
+    disabled: true
+order: 2000

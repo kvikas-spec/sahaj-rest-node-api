@@ -1,0 +1,153 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/wards/all"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770469468749-978252
+    content-type: application/json; charset=utf-8
+    Content-Length: "997"
+    etag: W/"3e5-BoOITY+5ltJvJt4OLO2zZxyWpkQ"
+    date: Sat, 07 Feb 2026 13:04:28 GMT
+    connection: close
+    Vary: Accept-Encoding
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": [
+              {
+                  "text": "All MRU",
+                  "value": "0"
+              },
+              {
+                  "text": "03DC01B1",
+                  "value": "11"
+              },
+              {
+                  "text": "03DC02B1",
+                  "value": "12"
+              },
+              {
+                  "text": "03DC03B1",
+                  "value": "13"
+              },
+              {
+                  "text": "03DC04B1",
+                  "value": "14"
+              },
+              {
+                  "text": "03DC05B1",
+                  "value": "15"
+              },
+              {
+                  "text": "03DC06B1",
+                  "value": "16"
+              },
+              {
+                  "text": "03DC07B1",
+                  "value": "17"
+              },
+              {
+                  "text": "03DC08B1",
+                  "value": "18"
+              },
+              {
+                  "text": "03DC09B1",
+                  "value": "19"
+              },
+              {
+                  "text": "03DC10B1",
+                  "value": "20"
+              },
+              {
+                  "text": "03DC12B1",
+                  "value": "21"
+              },
+              {
+                  "text": "04DC03B1",
+                  "value": "22"
+              },
+              {
+                  "text": "04DC10B1",
+                  "value": "23"
+              },
+              {
+                  "text": "15QA003",
+                  "value": "26"
+              },
+              {
+                  "text": "ANAND MRU",
+                  "value": "33"
+              },
+              {
+                  "text": "KWH",
+                  "value": "25"
+              },
+              {
+                  "text": "MODIPURAM",
+                  "value": "2"
+              },
+              {
+                  "text": "NADIYAD MRU",
+                  "value": "34"
+              },
+              {
+                  "text": "NAVSARI MRU",
+                  "value": "35"
+              },
+              {
+                  "text": "NEW",
+                  "value": "10"
+              },
+              {
+                  "text": "NEW PREPAID",
+                  "value": "40"
+              },
+              {
+                  "text": "PREPAID MRU 01",
+                  "value": "37"
+              },
+              {
+                  "text": "PREPAID MRU 02",
+                  "value": "38"
+              },
+              {
+                  "text": "PREPAID MRU 03",
+                  "value": "39"
+              },
+              {
+                  "text": "SAKET",
+                  "value": "3"
+              },
+              {
+                  "text": "TEST23",
+                  "value": "31"
+              },
+              {
+                  "text": "TEST2324",
+                  "value": "30"
+              },
+              {
+                  "text": "TESTPREPAIDMRU",
+                  "value": "36"
+              }
+          ]
+      }
+order: 1000

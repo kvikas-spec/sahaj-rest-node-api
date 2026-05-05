@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Template/SendSMSInBulk/templates"
+method: GET
+order: 2000

@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/customer-details-for-promo-scheme?consumerNumber=4000351807"
+method: GET
+queryParams:
+  consumerNumber: "4000351807"
+order: 1000

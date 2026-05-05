@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/CNGPromo/FleetOperatorVehicleMaster"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "FOCardNumber": 1234567890,
+      "VehicleMake": "Sample",
+      "VehicleTypeMasterId": 1,
+      "VehicleNumber": "GJ01AB1234",
+      "YearOfRegistration": 2024,
+      "Ownership": "Self"
+    }
+order: 6000

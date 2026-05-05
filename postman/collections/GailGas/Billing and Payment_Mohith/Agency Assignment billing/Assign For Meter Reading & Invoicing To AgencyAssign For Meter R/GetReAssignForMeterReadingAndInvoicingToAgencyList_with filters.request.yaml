@@ -1,0 +1,30 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/getReAssignForMeterReadingAndInvoicingToAgencyList?isFilter=&BpNumber=&search=&AgencyId=&WardId=&AreaId=&pageNo=&fromDate=01-01-2023&toDate=30-01-2023&AssignedStartDate=&AssignedEndDate="
+method: GET
+queryParams:
+  - key: isFilter
+    value: ""
+  - key: BpNumber
+    value: ""
+  - key: search
+    value: ""
+  - key: AgencyId
+    value: ""
+  - key: WardId
+    value: ""
+  - key: AreaId
+    value: ""
+  - key: pageNo
+    value: ""
+  - key: fromDate
+    value: 01-01-2023
+  - key: toDate
+    value: 30-01-2023
+  - key: AssignedStartDate
+    value: ""
+  - key: AssignedEndDate
+    value: ""
+  - key: pagesize
+    value: "11"
+    disabled: true
+order: 8000

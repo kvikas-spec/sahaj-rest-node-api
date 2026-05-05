@@ -1,0 +1,44 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/add-gi-rfc-status/"
+  method: POST
+  body:
+    type: json
+    content: |-
+      {
+          "CustomerId": 180638,
+          "IsVerification": true
+      }
+response:
+  statusCode: 500
+  statusText: Internal Server Error
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: DENY
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1769175058104-626751
+    content-type: application/json; charset=utf-8
+    cache-control: no-store
+    Content-Length: "48"
+    etag: W/"30-rtPpMb8X2E6wjovx8UFxpjaA790"
+    date: Fri, 23 Jan 2026 13:30:58 GMT
+    connection: close
+    Vary: Accept-Encoding
+  body:
+    type: json
+    content: |-
+      {
+          "success": false,
+          "message": "Customer not found"
+      }
+order: 1000

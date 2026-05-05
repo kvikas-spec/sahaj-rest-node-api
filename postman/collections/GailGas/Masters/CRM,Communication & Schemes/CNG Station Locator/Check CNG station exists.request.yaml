@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Customer/CNGStationLocator/check?StationName=Sample%20Station"
+method: GET
+queryParams:
+  StationName: Sample%20Station
+order: 2000

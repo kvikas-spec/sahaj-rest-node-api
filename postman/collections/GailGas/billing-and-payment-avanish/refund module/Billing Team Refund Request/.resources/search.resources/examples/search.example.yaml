@@ -1,0 +1,71 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}/billing-payment/refund/request-list?IsFilter=1&ConsumerNumber=3000295474&sEcho=1&iDisplayStart=0&iDisplayLength=10&iSortCol_0=3&sSortDir_0=asc"
+  method: GET
+  queryParams:
+    IsFilter: "1"
+    ConsumerNumber: "3000295474"
+    sEcho: "1"
+    iDisplayStart: "0"
+    iDisplayLength: "10"
+    iSortCol_0: "3"
+    sSortDir_0: asc
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770031489276-807390
+    content-type: application/json; charset=utf-8
+    Content-Length: "605"
+    etag: W/"25d-GX/g212tOi5UUQNSzXyifb5Wa5g"
+    Vary: Accept-Encoding
+    date: Mon, 02 Feb 2026 11:24:49 GMT
+    connection: close
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "sEcho": "1",
+              "iTotalRecords": 1,
+              "iTotalDisplayRecords": 1,
+              "aaData": [
+                  {
+                      "SrNo": "1",
+                      "RefundRequestId": "151",
+                      "ConsumerNumber": "3000295474",
+                      "BankId": "10040",
+                      "BankName": "ABN AMRO BANK N.V.",
+                      "Branch": "BOBDS",
+                      "BankAccountNumber": "4946556565665",
+                      "IFSCCode": "BOBejweo2121",
+                      "BankAccountHolderName": "Niraj",
+                      "ConnectionStatusId": "2",
+                      "RejectionReason": null,
+                      "ConnectionStatusName": "NotConnected (REGULAR)",
+                      "MeterReading": null,
+                      "MeterReadingDate": null,
+                      "MeterReadingDateStr": "",
+                      "MeterSerialNo": null,
+                      "RequestNumber": "3000000142",
+                      "FullName": "Niraj6F677 rO3pOeq8Yh",
+                      "Address": "1 tLVwyhOs6X, 3vKFUENVSo"
+                  }
+              ]
+          }
+      }
+order: 1000

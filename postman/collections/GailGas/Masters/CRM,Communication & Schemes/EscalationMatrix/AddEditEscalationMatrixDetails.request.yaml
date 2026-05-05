@@ -1,0 +1,25 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/EscalationMatrix/AddEditEscalationMatrixDetails"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer <your_token>
+body:
+  type: json
+  content: |-
+    // {
+    //   "escalationMatrixId": 0,
+    //   "departmentId": 1,
+    //   "complaintLevelId": 1,
+    //   "day": 5,
+    //   "ddluserIds": "50205,50206"
+    // }
+
+    {
+        "escalationMatrixId": 363,
+        "departmentId": 4,
+        "complaintLevelId": 4,
+        "day": 1,
+        "ddluserIds": "131,50191"
+    }
+order: 4000

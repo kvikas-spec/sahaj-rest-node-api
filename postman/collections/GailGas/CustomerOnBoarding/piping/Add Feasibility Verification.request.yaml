@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/add-feasibility-verification"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+    "ConsumerNumber": "3000295092",
+    "IsVerification": false,
+    "RejectionReason": "NA"
+    }
+order: 3000

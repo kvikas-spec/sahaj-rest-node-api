@@ -1,0 +1,5 @@
+$kind: http-request
+name: Active/deactive PNG Mitra video
+url: "{{api_gateway_url}}/masters/Customer/PNGMitraVideosMaster/1/active"
+method: PATCH
+order: 4000

@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Customer/CNGRateMaster"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    // {
+    //   "CNGRateMasterId": 0,
+    //   "CityId": 1,
+    //   "Rate": 85,
+    //   "EffectiveDate": "2026-05-02"
+    // }
+
+    {
+        "CNGRateMasterId": 0,
+        "CityId": 19,
+        "Rate": 88,
+        "EffectiveDate": "2026-05-02"
+    }
+order: 2000

@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Template/ActiveDeactiveTermsAndConditions/:CNGPromoTandCTemplateMasterId"
+method: PATCH
+pathVariables:
+  CNGPromoTandCTemplateMasterId: "3"
+order: 2000

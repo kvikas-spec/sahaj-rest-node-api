@@ -1,0 +1,8 @@
+$kind: http-request
+name: Export company-wise customized notification template list by company
+url: "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateCompanyWise/export?IsFilter=1&companyId=1"
+method: GET
+queryParams:
+  IsFilter: "1"
+  companyId: "1"
+order: 10000

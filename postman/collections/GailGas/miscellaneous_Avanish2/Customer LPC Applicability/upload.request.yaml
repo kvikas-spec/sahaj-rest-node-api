@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/upload-lpv"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: UploadedFile
+      src: /home/avanishkumarmaurya/Downloads/LPCSample.xlsx
+auth:
+  type: bearer
+  credentials:
+    token: "{{access_token}}"
+order: 1000

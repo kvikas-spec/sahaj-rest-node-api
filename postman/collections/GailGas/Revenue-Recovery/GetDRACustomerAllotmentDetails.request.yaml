@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/revenue-recovery/example/GetDRACustomerAllotmentDetails/:CustomerAllotmentId"
+method: GET
+pathVariables:
+  CustomerAllotmentId: "20941"
+order: 3000

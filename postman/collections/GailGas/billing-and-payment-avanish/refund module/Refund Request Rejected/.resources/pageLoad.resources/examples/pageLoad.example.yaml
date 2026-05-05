@@ -1,0 +1,271 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}/billing-payment/refund/refund-rejected-rejected-list?sEcho=1&iDisplayStart=0&iDisplayLength=10&iSortCol_0=3&sSortDir_0=asc&IsFilter=0&ConsumerNumber"
+  method: GET
+  queryParams:
+    sEcho: "1"
+    iDisplayStart: "0"
+    iDisplayLength: "10"
+    iSortCol_0: "3"
+    sSortDir_0: asc
+    IsFilter: "0"
+    ConsumerNumber: null
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770208851723-290274
+    content-type: application/json; charset=utf-8
+    etag: W/"14c5-xj7JZeNP6ju9JY2V5dOZ0cL2dtU"
+    Vary: Accept-Encoding
+    content-encoding: br
+    date: Wed, 04 Feb 2026 12:40:52 GMT
+    connection: close
+    Content-Length: "1358"
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "sEcho": "1",
+              "iTotalRecords": 14,
+              "iTotalDisplayRecords": 14,
+              "aaData": [
+                  {
+                      "SrNo": "7",
+                      "RefundRequestId": "98",
+                      "ConsumerNumber": "3000293397",
+                      "BankId": "10061",
+                      "BankName": "AHMEDABAD DIST. CO=OP. BANK LTD ",
+                      "Branch": "ss",
+                      "BankAccountNumber": "123",
+                      "IFSCCode": "aa",
+                      "BankAccountHolderName": "1010",
+                      "ConnectionStatusId": "2",
+                      "ConnectionStatusName": "NotConnected",
+                      "MeterReading": null,
+                      "MeterReadingDate": null,
+                      "MeterReadingDateStr": "",
+                      "MeterSerialNo": null,
+                      "RequestNumber": "3000000098",
+                      "FullName": "hex9 Father",
+                      "Address": "House Society, Street",
+                      "RejectionReason": "Getting Rid Of Daily Email Notification",
+                      "StatusId": "9"
+                  },
+                  {
+                      "SrNo": "13",
+                      "RefundRequestId": "115",
+                      "ConsumerNumber": "3000294034",
+                      "BankId": "10163",
+                      "BankName": "Y",
+                      "Branch": "DFDF",
+                      "BankAccountNumber": "2534534545",
+                      "IFSCCode": "BAKI9994",
+                      "BankAccountHolderName": "TESTING",
+                      "ConnectionStatusId": "1",
+                      "ConnectionStatusName": "Connected",
+                      "MeterReading": 1,
+                      "MeterReadingDate": "2023-05-29T00:00:00.000Z",
+                      "MeterReadingDateStr": "29-05-2023",
+                      "MeterSerialNo": "fgfg2354",
+                      "RequestNumber": "3000000115",
+                      "FullName": "asfas dgsdg",
+                      "Address": "75 sdfasdf, dasfasd",
+                      "RejectionReason": "REJECT TESING",
+                      "StatusId": "3"
+                  },
+                  {
+                      "SrNo": "1",
+                      "RefundRequestId": "30",
+                      "ConsumerNumber": "3000294253",
+                      "BankId": "10040",
+                      "BankName": "ABN AMRO BANK N.V.",
+                      "Branch": "aaa",
+                      "BankAccountNumber": "888",
+                      "IFSCCode": "88",
+                      "BankAccountHolderName": "7787/",
+                      "ConnectionStatusId": "2",
+                      "ConnectionStatusName": "NotConnected",
+                      "MeterReading": null,
+                      "MeterReadingDate": null,
+                      "MeterReadingDateStr": "",
+                      "MeterSerialNo": null,
+                      "RequestNumber": "3000000030",
+                      "FullName": "Upfront  To Flexi78979",
+                      "Address": "78979 78979, 789798",
+                      "RejectionReason": "15:07 Approving Authority Rejection Reason",
+                      "StatusId": "3"
+                  },
+                  {
+                      "SrNo": "9",
+                      "RefundRequestId": "103",
+                      "ConsumerNumber": "3000294446",
+                      "BankId": "10081",
+                      "BankName": "ALAVI CO-OP BANK LTD ",
+                      "Branch": "dasfasdf",
+                      "BankAccountNumber": "345345345",
+                      "IFSCCode": "465465",
+                      "BankAccountHolderName": "dgfsfdsfs dsfsdfsdf dsfdsfdsfds",
+                      "ConnectionStatusId": "2",
+                      "ConnectionStatusName": "NotConnected",
+                      "MeterReading": null,
+                      "MeterReadingDate": null,
+                      "MeterReadingDateStr": "",
+                      "MeterSerialNo": null,
+                      "RequestNumber": "3000000103",
+                      "FullName": "EMI H",
+                      "Address": "456 Bengaluru, HJKLH",
+                      "RejectionReason": "mm",
+                      "StatusId": "9"
+                  },
+                  {
+                      "SrNo": "4",
+                      "RefundRequestId": "78",
+                      "ConsumerNumber": "3000294792",
+                      "BankId": "10081",
+                      "BankName": "ALAVI CO-OP BANK LTD ",
+                      "Branch": "fghfgh",
+                      "BankAccountNumber": "546546546",
+                      "IFSCCode": "235423",
+                      "BankAccountHolderName": "fdgdfgdfg",
+                      "ConnectionStatusId": "2",
+                      "ConnectionStatusName": "NotConnected",
+                      "MeterReading": null,
+                      "MeterReadingDate": null,
+                      "MeterReadingDateStr": "",
+                      "MeterSerialNo": null,
+                      "RequestNumber": "3000000078",
+                      "FullName": "Bob The Builder",
+                      "Address": "bhg 67898, ST",
+                      "RejectionReason": "j1!",
+                      "StatusId": "3"
+                  },
+                  {
+                      "SrNo": "10",
+                      "RefundRequestId": "105",
+                      "ConsumerNumber": "3000294794",
+                      "BankId": "10071",
+                      "BankName": "AXIS BANK LTD ",
+                      "Branch": "Alkapuri",
+                      "BankAccountNumber": "798798798",
+                      "IFSCCode": "456789",
+                      "BankAccountHolderName": "Resh Patel",
+                      "ConnectionStatusId": "2",
+                      "ConnectionStatusName": "NotConnected",
+                      "MeterReading": 0,
+                      "MeterReadingDate": null,
+                      "MeterReadingDateStr": "",
+                      "MeterSerialNo": null,
+                      "RequestNumber": "3000000105",
+                      "FullName": "WEBMYNE Test",
+                      "Address": "hkhk hkjhk, xhfjfjfj",
+                      "RejectionReason": "xx",
+                      "StatusId": "9"
+                  },
+                  {
+                      "SrNo": "2",
+                      "RefundRequestId": "31",
+                      "ConsumerNumber": "3000294796",
+                      "BankId": "10055",
+                      "BankName": "ABHYUDAYA CO-OP BANK LTD ",
+                      "Branch": "fgfg",
+                      "BankAccountNumber": "45454",
+                      "IFSCCode": "8787",
+                      "BankAccountHolderName": "45454",
+                      "ConnectionStatusId": "2",
+                      "ConnectionStatusName": "NotConnected",
+                      "MeterReading": null,
+                      "MeterReadingDate": null,
+                      "MeterReadingDateStr": "",
+                      "MeterSerialNo": null,
+                      "RequestNumber": "3000000031",
+                      "FullName": "Pet CT Scan",
+                      "Address": "420 sdfsd, sfsdf",
+                      "RejectionReason": "333",
+                      "StatusId": "3"
+                  },
+                  {
+                      "SrNo": "5",
+                      "RefundRequestId": "79",
+                      "ConsumerNumber": "3000294798",
+                      "BankId": "10044",
+                      "BankName": "BANK OF MADURA",
+                      "Branch": "tertrete",
+                      "BankAccountNumber": "3453453",
+                      "IFSCCode": "dfg3w",
+                      "BankAccountHolderName": "gjhgj gjhgj",
+                      "ConnectionStatusId": "2",
+                      "ConnectionStatusName": "NotConnected",
+                      "MeterReading": 0,
+                      "MeterReadingDate": null,
+                      "MeterReadingDateStr": "",
+                      "MeterSerialNo": null,
+                      "RequestNumber": "3000000079",
+                      "FullName": "Test test",
+                      "Address": "hghgh ghgh, hghg",
+                      "RejectionReason": "syhr",
+                      "StatusId": "5"
+                  },
+                  {
+                      "SrNo": "14",
+                      "RefundRequestId": "116",
+                      "ConsumerNumber": "3000295170",
+                      "BankId": "10040",
+                      "BankName": "ABN AMRO BANK N.V.",
+                      "Branch": "ASASA",
+                      "BankAccountNumber": "112121212",
+                      "IFSCCode": "2121212121",
+                      "BankAccountHolderName": "12121ASASA",
+                      "ConnectionStatusId": "1",
+                      "ConnectionStatusName": "Connected",
+                      "MeterReading": 1212121,
+                      "MeterReadingDate": "2023-06-01T00:00:00.000Z",
+                      "MeterReadingDateStr": "01-06-2023",
+                      "MeterSerialNo": "121112121",
+                      "RequestNumber": "3000000116",
+                      "FullName": "Hemal patel asasa",
+                      "Address": "aasa aaaasasasa, tarsali",
+                      "RejectionReason": "AASASA",
+                      "StatusId": "5"
+                  },
+                  {
+                      "SrNo": "8",
+                      "RefundRequestId": "100",
+                      "ConsumerNumber": "3000973774",
+                      "BankId": "10061",
+                      "BankName": "AHMEDABAD DIST. CO=OP. BANK LTD ",
+                      "Branch": "123",
+                      "BankAccountNumber": "101010",
+                      "IFSCCode": "123",
+                      "BankAccountHolderName": "zcxx",
+                      "ConnectionStatusId": "2",
+                      "ConnectionStatusName": "NotConnected",
+                      "MeterReading": null,
+                      "MeterReadingDate": null,
+                      "MeterReadingDateStr": "",
+                      "MeterSerialNo": null,
+                      "RequestNumber": "3000000100",
+                      "FullName": "DRUBHAI PARMAR S jfakj",
+                      "Address": "6 werewt jsdfa lkfal, F F 18 ARCHNA SOC NR ARVIND SOC NIZAMPURA NEW SAMA ROAD VADODARA",
+                      "RejectionReason": "abc",
+                      "StatusId": "9"
+                  }
+              ]
+          }
+      }
+order: 1000

@@ -1,0 +1,10 @@
+$kind: http-request
+name: Get company-wise customized notification template list by company
+url: "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateCompanyWise?pageNo=1&pageSize=10&IsFilter=1&companyId=1"
+method: GET
+queryParams:
+  pageNo: "1"
+  pageSize: "10"
+  IsFilter: "1"
+  companyId: "1"
+order: 2000

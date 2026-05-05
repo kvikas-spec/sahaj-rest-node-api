@@ -1,0 +1,33 @@
+$kind: http-request
+url: "{{api_gateway_url}}/auth/users/SaveUserRegistration"
+method: POST
+headers:
+  x-region-id: Meerut
+body:
+  type: json
+  content: |
+    {
+      "RegistrationVM": {
+        "UserID": 25,
+        "EncryptedUserID": "EncryptedValueHere",
+        "IsMobileFlag": 0,
+        "IsADUsers": true,
+        "AgencyId": 1,
+        "FirstName": "Vikas",
+        "MiddleName": "Kumar",
+        "Surname": "Updated",
+        "Address": "Updated Address",
+        "DateOfJoining": "2026-01-01",
+        "Designation": "Senior Developer",
+        "PhoneNumber": "9876543210",
+        "AltMobileNumber": "9123456780",
+        "Department": "IT",
+        "EmailId": "vikas.updated@example.com",
+        "EmployeeId": "EMP1001",
+        "Password": "AlreadyEncryptedPassword",
+        "RoleID": 3,
+        "Roles": "3,4",
+        "localGAIds": [1]
+      }
+    }
+order: 9000

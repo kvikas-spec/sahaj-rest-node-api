@@ -1,0 +1,192 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/bp-number-reassignment-lmc/?pageNo=1&AgencyTypeId=1&ConsumerNumber=&IsFilter=1&Address=&pageSize=10"
+  method: GET
+  queryParams:
+    pageNo: "1"
+    AgencyTypeId: "1"
+    ConsumerNumber: ""
+    IsFilter: "1"
+    Address: ""
+    pageSize: "10"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770720152084-202502
+    content-type: application/json; charset=utf-8
+    etag: W/"b6f-nnHU8lLOh9LJBW4n7HH4EQZZHXE"
+    date: Tue, 10 Feb 2026 10:42:32 GMT
+    connection: close
+    Vary: Accept-Encoding
+    Content-Encoding: br
+    Transfer-Encoding: chunked
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": [
+              {
+                  "SrNo": "94",
+                  "CustomerId": "77221",
+                  "ConsumerNumber": "3000294459",
+                  "FullName": "demo",
+                  "MobileNumber": "875421****",
+                  "Address": "demo demo, Area Name",
+                  "AgencyId": "1",
+                  "SupervisorId": null,
+                  "StatusId": "9",
+                  "StatusName": " RFC done",
+                  "AgencyName": "DEMOUPDATED",
+                  "SupervisorName": ""
+              },
+              {
+                  "SrNo": "93",
+                  "CustomerId": "77120",
+                  "ConsumerNumber": "3000294358",
+                  "FullName": "dummy",
+                  "MobileNumber": "856236****",
+                  "Address": "60 dummy, dummy",
+                  "AgencyId": "1",
+                  "SupervisorId": "10212",
+                  "StatusId": "9",
+                  "StatusName": " RFC done",
+                  "AgencyName": "DEMOUPDATED",
+                  "SupervisorName": "SUJAL"
+              },
+              {
+                  "SrNo": "92",
+                  "CustomerId": "67145",
+                  "ConsumerNumber": "3000294350",
+                  "FullName": "wef",
+                  "MobileNumber": "875421****",
+                  "Address": "sdasd sdf, AREA NAME",
+                  "AgencyId": "1",
+                  "SupervisorId": "10212",
+                  "StatusId": "4",
+                  "StatusName": "Verification Done",
+                  "AgencyName": "DEMOUPDATED",
+                  "SupervisorName": "SUJAL"
+              },
+              {
+                  "SrNo": "91",
+                  "CustomerId": "67124",
+                  "ConsumerNumber": "3000294329",
+                  "FullName": "DMa",
+                  "MobileNumber": "962443****",
+                  "Address": "hdhhdhd hfhdhdhdh, hfhdhdhh",
+                  "AgencyId": "1",
+                  "SupervisorId": "10212",
+                  "StatusId": "4",
+                  "StatusName": "Verification Done",
+                  "AgencyName": "DEMOUPDATED",
+                  "SupervisorName": "SUJAL"
+              },
+              {
+                  "SrNo": "90",
+                  "CustomerId": "67121",
+                  "ConsumerNumber": "3000294326",
+                  "FullName": "TEJAL PARMAR",
+                  "MobileNumber": "875421****",
+                  "Address": "isb AREA NAME, isb",
+                  "AgencyId": "1",
+                  "SupervisorId": "10212",
+                  "StatusId": "4",
+                  "StatusName": "Verification Done",
+                  "AgencyName": "DEMOUPDATED",
+                  "SupervisorName": "SUJAL"
+              },
+              {
+                  "SrNo": "89",
+                  "CustomerId": "67107",
+                  "ConsumerNumber": "3000294312",
+                  "FullName": "demo",
+                  "MobileNumber": "875465****",
+                  "Address": "sdf dsf, Area Name",
+                  "AgencyId": "1",
+                  "SupervisorId": "10212",
+                  "StatusId": "4",
+                  "StatusName": "Verification Done",
+                  "AgencyName": "DEMOUPDATED",
+                  "SupervisorName": "SUJAL"
+              },
+              {
+                  "SrNo": "88",
+                  "CustomerId": "67091",
+                  "ConsumerNumber": "3000294296",
+                  "FullName": "zsdfdxadf",
+                  "MobileNumber": "875487****",
+                  "Address": "asdasd ZSa, asdasd",
+                  "AgencyId": "1",
+                  "SupervisorId": "10212",
+                  "StatusId": "4",
+                  "StatusName": "Verification Done",
+                  "AgencyName": "DEMOUPDATED",
+                  "SupervisorName": "SUJAL"
+              },
+              {
+                  "SrNo": "87",
+                  "CustomerId": "67053",
+                  "ConsumerNumber": "3000294258",
+                  "FullName": "Installment to 500 OFF",
+                  "MobileNumber": "798794****",
+                  "Address": "79879 9879879, 789798",
+                  "AgencyId": "1",
+                  "SupervisorId": "10212",
+                  "StatusId": "4",
+                  "StatusName": "Verification Done",
+                  "AgencyName": "DEMOUPDATED",
+                  "SupervisorName": "SUJAL"
+              },
+              {
+                  "SrNo": "86",
+                  "CustomerId": "66993",
+                  "ConsumerNumber": "3000294198",
+                  "FullName": "Test",
+                  "MobileNumber": "887845****",
+                  "Address": "55 We Society, Meerut-1",
+                  "AgencyId": "1",
+                  "SupervisorId": "10150",
+                  "StatusId": "9",
+                  "StatusName": " RFC done",
+                  "AgencyName": "DEMOUPDATED",
+                  "SupervisorName": "TEST"
+              },
+              {
+                  "SrNo": "85",
+                  "CustomerId": "66974",
+                  "ConsumerNumber": "3000294180",
+                  "FullName": "dfsdf",
+                  "MobileNumber": "875421****",
+                  "Address": "asdasd sdasd, Area Name",
+                  "AgencyId": "1",
+                  "SupervisorId": "10212",
+                  "StatusId": "9",
+                  "StatusName": " RFC done",
+                  "AgencyName": "DEMOUPDATED",
+                  "SupervisorName": "SUJAL"
+              }
+          ],
+          "pagination": {
+              "totalRecords": 94,
+              "pageCount": 10,
+              "currentPage": 1,
+              "pageSize": 10
+          },
+          "filter": 1
+      }
+order: 1000

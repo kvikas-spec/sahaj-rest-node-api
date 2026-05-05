@@ -1,0 +1,8 @@
+$kind: http-request
+name: Get Email/SMS template dropdown
+url: "{{api_gateway_url}}/masters/Template/NotificationManagement/templates?Email=true&SMS=true"
+method: GET
+queryParams:
+  Email: "true"
+  SMS: "true"
+order: 2000

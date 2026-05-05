@@ -1,0 +1,30 @@
+$kind: http-request
+url: "{{api_gateway_url}}/{{customer_base_url}}/MeterMaster/AddUpdateDisconnectedMeters"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer YOUR_JWT_TOKEN
+body:
+  type: json
+  content: |-
+    // {
+    //     // "MeterMasterId": 0,
+    //     "DisconnectedMetersActivityId": 1,
+    //     "DisconnectedMetersPlaceId": 1,
+    //     "MeterCompanyId": 1,
+    //     "MeterNumber": "112244",
+    //     "MeterType": "LHS",
+    //     "IsPrepaidMeter": false,
+    //     "GeneratedDate": "2026-01-30T14:49:31.250Z"
+    // }
+
+    {
+        "DisconnectedMetersActivityId": 1,
+        "DisconnectedMetersPlaceId": 4,
+        "MeterCompanyId": 9,
+        "MeterNumber": "112244",
+        "MeterType": "LHS",
+        "IsPrepaidMeter": false,
+        "GeneratedDate": "2026-02-04T10:16:01.202Z"
+    }
+order: 9000

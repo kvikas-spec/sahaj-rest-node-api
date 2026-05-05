@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoiceFullReversalDetails/:consumerNumber"
+method: GET
+pathVariables:
+  consumerNumber: "3000298014"
+body:
+  type: text
+  content: ""
+order: 1000

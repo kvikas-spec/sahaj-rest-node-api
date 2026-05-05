@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/CNGPromo/CreditPointsRedeemLimitMaster"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "VehicleTypeMasterId": 1,
+      "CreditPointsRedeemLimit": 100,
+      "DailyCreditPointsRedeemLimit": 10,
+      "MonthlyCreditPointsRedeemLimit": 50
+    }
+order: 2000

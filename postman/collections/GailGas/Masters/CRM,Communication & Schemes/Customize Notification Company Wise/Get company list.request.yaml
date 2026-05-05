@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Template/CustomizedNotificationCompanyWise/companies"
+method: GET
+order: 1000

@@ -1,0 +1,36 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url}}/consumer-tag"
+method: POST
+body:
+  type: json
+  content: |
+    {
+    "ApplicationNumber": "A3000298221",
+    "TransactionId": 0,
+    "ConsumerId": 220648,
+    "ConsumerRegistrationId": 0,
+    "ConsumerNumber": "3000298221",
+    "Profession": "",
+    "OwnerName": "",
+    "OwnerPhoneNumber": "",
+    "AllowedStatus": false,
+    "IsStatusChange": true,
+    "FirstName": "HM",
+    "MiddleName": "HM",
+    "Surname": "",
+    "MobileNumber": "1234123456",
+    "Address": "Test,Test,AHMED",
+    "City": "AHMED",
+    "PinCode": "123456",
+    "EmailId": "",
+    "IsBulk": false,
+    "IsBlock": false,
+    "IsUrgent": false,
+    "NonFeasible": true,
+    "CustomerNotWillingToTakeGas": true,
+    "TagID": 2,
+    "BuilderBPNumber": 0,
+    "Remark": "Remaks text",
+    "file_url":"customercategorizationurl"
+    }
+order: 1000

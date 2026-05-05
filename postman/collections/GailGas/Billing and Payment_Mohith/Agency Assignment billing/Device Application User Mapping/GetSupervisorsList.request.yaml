@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/GetSupervisorsList?AgencyId=20055"
+method: GET
+queryParams:
+  AgencyId: "20055"
+order: 5000

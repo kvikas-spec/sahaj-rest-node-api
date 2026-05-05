@@ -1,0 +1,161 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}/billing-payment/refund/bank-website-refund-request-list?sEcho=1&iDisplayStart=0&iDisplayLength=10&iSortCol_0=2&sSortDir_0=asc&IsFilter=0&ConsumerNumber=0"
+  method: GET
+  queryParams:
+    sEcho: "1"
+    iDisplayStart: "0"
+    iDisplayLength: "10"
+    iSortCol_0: "2"
+    sSortDir_0: asc
+    IsFilter: "0"
+    ConsumerNumber: "0"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770118359758-533475
+    content-type: application/json; charset=utf-8
+    etag: W/"bc7-af2duigjTi1Cs9VTWIiIRuXYov0"
+    Vary: Accept-Encoding
+    content-encoding: br
+    date: Tue, 03 Feb 2026 11:32:40 GMT
+    connection: close
+    Content-Length: "857"
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "sEcho": 1,
+              "iTotalRecords": 5,
+              "iTotalDisplayRecords": 5,
+              "aaData": [
+                  {
+                      "SrNo": "1",
+                      "RefundRequestId": "126",
+                      "ConsumerNumber": "3000293544",
+                      "BankId": "10055",
+                      "BankName": "ABHYUDAYA CO-OP BANK LTD ",
+                      "Branch": "Branch Name",
+                      "BankAccountNumber": "1132545436",
+                      "IFSCCode": "bank456869",
+                      "BankAccountHolderName": "hhg hgh rrtr",
+                      "ConnectionStatusId": "2",
+                      "ConnectionStatusName": "NotConnected (TEMPORARY CLOSE)",
+                      "MeterReading": null,
+                      "MeterReadingDate": null,
+                      "MeterReadingDateStr": "",
+                      "MeterSerialNo": null,
+                      "RequestNumber": "3000000121",
+                      "FullName": "test sdfs",
+                      "Address": "254 asd, dfsdf",
+                      "VoucherFile": "RefundRequestVoucher_3000293544_20241126_104146.pdf",
+                      "RefundAmount": 1313
+                  },
+                  {
+                      "SrNo": "2",
+                      "RefundRequestId": "10153",
+                      "ConsumerNumber": "3000297099",
+                      "BankId": "10055",
+                      "BankName": "ABHYUDAYA CO-OP BANK LTD ",
+                      "Branch": "gj",
+                      "BankAccountNumber": "865477",
+                      "IFSCCode": "657b7",
+                      "BankAccountHolderName": "bhg",
+                      "ConnectionStatusId": "1",
+                      "ConnectionStatusName": "Connected (NEW CONNECTION)",
+                      "MeterReading": 0,
+                      "MeterReadingDate": "2022-01-01T00:00:00.000Z",
+                      "MeterReadingDateStr": "01-01-2022",
+                      "MeterSerialNo": "565",
+                      "RequestNumber": "3000000152",
+                      "FullName": "new new",
+                      "Address": "34 dsf, sdf",
+                      "VoucherFile": "RefundRequestVoucher_3000297099_20250319_122804.pdf",
+                      "RefundAmount": 800
+                  },
+                  {
+                      "SrNo": "3",
+                      "RefundRequestId": "10159",
+                      "ConsumerNumber": "3000297150",
+                      "BankId": "10055",
+                      "BankName": "ABHYUDAYA CO-OP BANK LTD ",
+                      "Branch": "das",
+                      "BankAccountNumber": "423",
+                      "IFSCCode": "sa2",
+                      "BankAccountHolderName": "34cd",
+                      "ConnectionStatusId": "1",
+                      "ConnectionStatusName": "Connected (NEW CONNECTION)",
+                      "MeterReading": 11,
+                      "MeterReadingDate": "2022-01-02T00:00:00.000Z",
+                      "MeterReadingDateStr": "02-01-2022",
+                      "MeterSerialNo": "dsx",
+                      "RequestNumber": "3000000158",
+                      "FullName": "a a",
+                      "Address": "a a, a",
+                      "VoucherFile": "RefundRequestVoucher_3000297150_20250403_045544.pdf",
+                      "RefundAmount": 4500
+                  },
+                  {
+                      "SrNo": "4",
+                      "RefundRequestId": "10160",
+                      "ConsumerNumber": "3000297696",
+                      "BankId": "10087",
+                      "BankName": "KOTAK MAHINDRA BANK LTD. ",
+                      "Branch": "Test Branch",
+                      "BankAccountNumber": "9090909090909090",
+                      "IFSCCode": "12211221",
+                      "BankAccountHolderName": "Test",
+                      "ConnectionStatusId": "1",
+                      "ConnectionStatusName": "Connected (REGULAR)",
+                      "MeterReading": 0,
+                      "MeterReadingDate": "2025-08-08T00:00:00.000Z",
+                      "MeterReadingDateStr": "08-08-2025",
+                      "MeterSerialNo": "123456",
+                      "RequestNumber": "3000000159",
+                      "FullName": "Shayam Shah R",
+                      "Address": "09 Test apartment, Test",
+                      "VoucherFile": "RefundRequestVoucher_3000297696_20250808_104147.pdf",
+                      "RefundAmount": 0
+                  },
+                  {
+                      "SrNo": "5",
+                      "RefundRequestId": "10162",
+                      "ConsumerNumber": "3000297766",
+                      "BankId": "10055",
+                      "BankName": "ABHYUDAYA CO-OP BANK LTD ",
+                      "Branch": "5yrfdgcv",
+                      "BankAccountNumber": "56666666666",
+                      "IFSCCode": "drh56364",
+                      "BankAccountHolderName": "poojA COOLKARNI",
+                      "ConnectionStatusId": "1",
+                      "ConnectionStatusName": "Connected (REGULAR)",
+                      "MeterReading": 0.23,
+                      "MeterReadingDate": "2025-02-10T00:00:00.000Z",
+                      "MeterReadingDateStr": "10-02-2025",
+                      "MeterSerialNo": "98826",
+                      "RequestNumber": "3000000161",
+                      "FullName": "aa aa",
+                      "Address": "aa aa, aa",
+                      "VoucherFile": "RefundRequestVoucher_3000297766_20250811_034253.pdf",
+                      "RefundAmount": 3894
+                  }
+              ]
+          }
+      }
+order: 1000

@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/piping-rate-data/:rateId"
+method: GET
+pathVariables:
+  rateId: "79"
+examples: ./.resources/getPipingRate.resources/examples
+order: 9000

@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/masters/ComplaintReceivingCells/GetEditvalue?ID={{InChargeComplaintReceivingCellsId}}"
+method: GET
+headers:
+  x-region-id: "{{regionId}}"
+  content-type: application/json
+queryParams:
+  ID: "{{InChargeComplaintReceivingCellsId}}"
+order: 2000

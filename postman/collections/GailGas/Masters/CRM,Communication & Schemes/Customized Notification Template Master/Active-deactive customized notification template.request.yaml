@@ -1,0 +1,5 @@
+$kind: http-request
+name: Active/deactive customized notification template
+url: "{{api_gateway_url}}/masters/Template/CustomizedNotificationTemplateMaster/1/active"
+method: PATCH
+order: 6000

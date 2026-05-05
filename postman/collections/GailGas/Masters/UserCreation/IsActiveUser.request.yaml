@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Users/IsActiveUser/:EncryptedUserID"
+method: PATCH
+headers:
+  Content-Type: application/json
+pathVariables:
+  EncryptedUserID: 1KDitePWSKflBEj4ok9btw==
+body:
+  type: json
+  content: ""
+order: 9000

@@ -1,0 +1,100 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/allocate-bpno-to-agency/?pageNo=1&agencyId=4&ConsumerNumber=&IsFilter=0&Address=&pageSize=16"
+  method: GET
+  queryParams:
+    pageNo: "1"
+    agencyId: "4"
+    ConsumerNumber: ""
+    IsFilter: "0"
+    Address: ""
+    pageSize: "16"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1770707977864-300434
+    content-type: application/json; charset=utf-8
+    etag: W/"426-eO32URRphNXQZ7ZxAhmgkWhgzEM"
+    date: Tue, 10 Feb 2026 07:19:37 GMT
+    connection: close
+    Vary: Accept-Encoding
+    Content-Encoding: br
+    Transfer-Encoding: chunked
+  body:
+    type: json
+    content: |-
+      {
+          "success": true,
+          "data": {
+              "filter": 0,
+              "recordCount": 6,
+              "pageCount": 1,
+              "currentPage": 1,
+              "pageSize": 16,
+              "data": [
+                  {
+                      "SrNo": "6",
+                      "CustomerAllotmentId": "30712",
+                      "ConsumerNumber": "3000294442",
+                      "FullName": "rahil",
+                      "MobileNumber": "541654****",
+                      "Address": "r/30 dsgsghdrfhdrfc, dfcdsfdsf"
+                  },
+                  {
+                      "SrNo": "5",
+                      "CustomerAllotmentId": "30711",
+                      "ConsumerNumber": "3000294437",
+                      "FullName": "Jamin",
+                      "MobileNumber": "852753****",
+                      "Address": "JM/21 Near temple, NEAR SCHOOL"
+                  },
+                  {
+                      "SrNo": "4",
+                      "CustomerAllotmentId": "30710",
+                      "ConsumerNumber": "3000294440",
+                      "FullName": "tia",
+                      "MobileNumber": "584641****",
+                      "Address": "t/2o near school, bhasarwad"
+                  },
+                  {
+                      "SrNo": "3",
+                      "CustomerAllotmentId": "30709",
+                      "ConsumerNumber": "3000294439",
+                      "FullName": "jiya",
+                      "MobileNumber": "789654****",
+                      "Address": "j/20  near suryamandir, park"
+                  },
+                  {
+                      "SrNo": "2",
+                      "CustomerAllotmentId": "30707",
+                      "ConsumerNumber": "3000294438",
+                      "FullName": "Dhaval",
+                      "MobileNumber": "546546****",
+                      "Address": "a/20 dcfsfde, dcfff"
+                  },
+                  {
+                      "SrNo": "1",
+                      "CustomerAllotmentId": "30705",
+                      "ConsumerNumber": "3000294436",
+                      "FullName": "Sakhi  A ",
+                      "MobileNumber": "085216****",
+                      "Address": "S/20 silverpoint, vehra"
+                  }
+              ]
+          }
+      }
+order: 1000

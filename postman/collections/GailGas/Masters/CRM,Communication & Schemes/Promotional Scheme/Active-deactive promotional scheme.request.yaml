@@ -1,0 +1,5 @@
+$kind: http-request
+name: Active/deactive promotional scheme
+url: "{{api_gateway_url}}/masters/operational-mapping/promotional-scheme/1/active"
+method: PATCH
+order: 3000

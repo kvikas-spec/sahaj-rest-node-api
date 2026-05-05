@@ -1,0 +1,43 @@
+$kind: http-example
+request:
+  url: "{{api_gateway_url}}/billing-payment/cng-operation/gailgas1/reject-customer-documents"
+  method: POST
+  body:
+    type: json
+    content: |-
+      {
+          "customerRegistrationId": 7,
+          "rejectionReason": "Documents are invalid"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-security-policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    cross-origin-opener-policy: same-origin
+    cross-origin-resource-policy: same-origin
+    origin-agent-cluster: ?1
+    referrer-policy: no-referrer
+    strict-transport-security: max-age=15552000; includeSubDomains
+    x-content-type-options: nosniff
+    x-dns-prefetch-control: off
+    x-download-options: noopen
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-xss-protection: "0"
+    access-control-allow-origin: "*"
+    X-Request-Id: 1771248223303-415850
+    content-type: application/json; charset=utf-8
+    Content-Length: "62"
+    etag: W/"3e-WNny7teQnIX5YhrsyiVXlnRO11k"
+    Vary: Accept-Encoding
+    date: Mon, 16 Feb 2026 13:23:44 GMT
+    connection: close
+  body:
+    type: json
+    content: |-
+      {
+          "success": false,
+          "Message": "Customer Registration not found."
+      }
+order: 1000

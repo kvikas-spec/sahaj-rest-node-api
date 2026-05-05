@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/assignAgencyForMeterReadingAndInvoicingMRU"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+
+      "AgencyId": 30057,
+      "WardId": 7
+    }
+order: 5000

@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/DepartmentMasters/IsDepartmentNameExist?value=IT&DepartmentId=0"
+method: GET
+queryParams:
+  value: IT
+  DepartmentId: "0"
+order: 2000

@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/Template/NotificationManagement"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "ConsumerNumber": "1000000001,1000000002",
+      "IsEmail": true,
+      "IsSMS": false,
+      "EmailTemplateId": 1,
+      "EmailSubject": "Subject from selected template",
+      "HtmlContent": "Notification template text"
+    }
+order: 6000

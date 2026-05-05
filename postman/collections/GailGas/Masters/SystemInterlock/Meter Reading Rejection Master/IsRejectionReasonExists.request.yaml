@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/SystemInterlock/IsRejectionReasonExists?meterStatusId=5&value=HOUSE WAS LOCKED"
+method: GET
+queryParams:
+  meterStatusId: "5"
+  value: HOUSE WAS LOCKED
+order: 2000

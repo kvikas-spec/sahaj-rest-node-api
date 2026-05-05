@@ -1,0 +1,36 @@
+$kind: http-request
+url: "{{api_gateway_url}}/customer-registration/Inquiry"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    // {
+    //     "FirstName":"Vikas",
+    //     "MiddleName":"yadav",
+    //     "Date":"2026-01-06",
+    //     "HouseNo":"A-101",
+    //     "Society":"Green Valley Society",
+    //     "Street":"MG Road",
+    //     "City":"Jaipur",
+    //     "MobileNumber":"9876543210",
+    //     "PhoneNumber":"0141400000",
+    //     "Email":"vikas.kumar@example.com",
+    //     "Ownership":"Owner"
+    //   }
+
+    {
+        "FirstName": "Mothukuru SaiKrishna",
+        "MiddleName": "",
+        "Date": "2026-02-04",
+        "Ownership": "",
+        "HouseNo": "",
+        "Society": "",
+        "Street": "505, F-block,Sai raghava And Gnr Enclave ,Chandanagar,Hyderabad",
+        "City": "Hyderabad",
+        "MobileNumber": "6304186304",
+        "PhoneNumber": "",
+        "Email": "myvsaikrishna@gmail.com"
+    }
+order: 2000

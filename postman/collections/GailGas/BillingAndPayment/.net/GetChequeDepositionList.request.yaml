@@ -1,0 +1,23 @@
+$kind: http-request
+url: https://admintest.gailgas-png.in/Payment/GetChequeDepositionList
+method: POST
+headers:
+  accept: application/json, text/javascript, */*; q=0.01
+  accept-language: en-US,en;q=0.9
+  content-type: application/x-www-form-urlencoded; charset=UTF-8
+  origin: https://admintest.gailgas-png.in
+  priority: u=1, i
+  referer: https://admintest.gailgas-png.in/
+  sec-ch-ua: '"Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"'
+  sec-ch-ua-mobile: ?0
+  sec-ch-ua-platform: '"Linux"'
+  sec-fetch-dest: empty
+  sec-fetch-mode: cors
+  sec-fetch-site: same-origin
+  user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+  x-requested-with: XMLHttpRequest
+  Cookie: __RequestVerificationToken=ZfURIj7gtrCHdte7rIUb-r1rY1Ma2Y5M-AKnKy29Dc4IStJVSwfszjy3zR_-NTGyYBucZkGI_ukW0FnyIgI11G7eDTlB3hJ-TCgFnymv7ew1; ASP.NET_SessionId=idoolnysms4icxanelkjr5ro; .ASPXAUTH=E83724EEC3C72D41FD828B15F6134BE4E3DDCFFD5EFF45A0CE8E6273AF4E4AA55BCD246F3F4B583C15736CAD476BA769241BD3C2FC1C45B10013A1B658C4B980CB99BFBDE806D14D97246A4C8EDB4700443CF99545AB9EA6BD980A46B782BEB1A679EB62C1024EAA7082AC5C48FDDD39A61AD98864B4B2AFB9AB067B8C7EEB85
+body:
+  type: text
+  content: sEcho=1&iColumns=10&sColumns=SRNo%2CSiteName%2CConsumerNumber%2CChequeDDNumber%2CBankName%2CChequeDDDate%2CReceiptDate%2CPaidAmount%2CpaymentStatus%2CConsumerName&iDisplayStart=0&iDisplayLength=50&mDataProp_0=SRNO&mDataProp_1=SiteName&mDataProp_2=ConsumerNumber&mDataProp_3=ChequeDDNumber&mDataProp_4=BankName&mDataProp_5=ChequeDDDate&mDataProp_6=ReceiptDate&mDataProp_7=PaidAmount&mDataProp_8=paymentStatus&mDataProp_9=ConsumerName&pageNumber=1&isFilter=false&fromDate=&toDate=&consumerNumber=&__RequestVerificationToken=XgEOfwCbJqo-I5qCWRJA7aqVJC6badOqos_Xv6SncZe6FX8Xgo3G6wLxAhEvGqqWF3N_QqlqkXqaTCD7c8rFhspjFVhhL1s4AoplHL8Y0MfI-rEKVYlnlC38NeGTnIkb0
+order: 4000

@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/get-meter-details-for-jmr-approval/?ConsumerNumber=2600503321"
+method: GET
+queryParams:
+  ConsumerNumber: "2600503321"
+examples: ./.resources/get-meter-details.resources/examples
+order: 12000

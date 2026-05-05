@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/DepartmentMasters/IsActiveDepartmentMaster/:DepartmentId"
+method: PATCH
+pathVariables:
+  DepartmentId: "72"
+order: 3000

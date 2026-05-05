@@ -1,0 +1,97 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/postpaid-invoice/getInvoiceFullReversalPendingList?pageNo=1&pageSize=10&order=DateGenerated:DESC"
+method: GET
+queryParams:
+  - key: pageNo
+    value: "1"
+  - key: pageSize
+    value: "10"
+  - key: isFilter
+    value: "1"
+    disabled: true
+  - key: ConsumerNo
+    value: "134520"
+    disabled: true
+  - key: order
+    value: DateGenerated:DESC
+body:
+  type: text
+  content: |
+    {
+      "txtConsumerNumber": "3000297997",
+      "ConsumerId": "",
+      "DemandMasterId": "7173105",
+      "DemandCalculationId": "",
+      "AddedBy": "0",
+      "IsDataFound": "False",
+      "RouteID": "0",
+      "TaxDetailId": "20049",
+      "BillRateMasterId": "20044",
+      "AccountTypeId": "1",
+      "Cycle": "2501",
+      "ApprovedBy": "0",
+      "ConsumerNumber": "3000297997",
+      "DemandAccumlateRoundOff": "0",
+      "MeterStatus": "",
+      "IsMeterReading": "False",
+      "NewCurrentReading": "15.000",
+      "NewUnitUsed": "14.750",
+      "NewConsumptionCharges": "737.50",
+      "NewNetworkTariffCharge": "42.04",
+      "NewCGST": "77.95",
+      "NewChequeReturnCharge": "0.00",
+      "NewCGSTOnChequeReturnCharges": "0.00",
+      "NewSGSTOnChequeReturnCharges": "0.00",
+      "NewInterest": "0.00",
+      "NewEstimateAmount": "0.00",
+      "NewEDICharges": "0.00",
+      "NewFlexiCharges": "0.00",
+      "NewCGSTOnFlexiCharges": "0.00",
+      "NewSGSTOnFlexiCharges": "0.00",
+      "NewEquipmentSDAmount": "0.00",
+      "NewConsumptionSDAmount": "0.00",
+      "NewTotalAmount": "0.00",
+      "NewPayableAmount": "0.00",
+      "MessageStatus": "",
+      "ConsumerName": "aa",
+      "Ward": "PREPAID MRU 03",
+      "ReadingDate": "01-02-2025",
+      "BillDate": "01-02-2025",
+      "BillDueDate": "22-02-2025",
+      "OldCurrentReading": "15.000",
+      "LastReading": "0.250",
+      "OldUnitUsed": "14.750",
+      "OldConsumptionCharges": "737.50",
+      "OldNetworkTariffCharge": "42.04",
+      "OldCGST": "77.95",
+      "AdditionalVAT": "0.00",
+      "SurchargeForVAT": "15.59",
+      "PromoConsumption": "-737.50",
+      "PromoNetworkTeriff": "-42.04",
+      "PromoVAT": "-77.95",
+      "PromoAdditionalVAT": "0.00",
+      "PromoSurchargeForVAT": "-15.59",
+      "OldChequeReturnCharge": "0.00",
+      "OldCGSTOnChequeReturnCharges": "0.00",
+      "OldSGSTOnChequeReturnCharges": "0.00",
+      "OldEstimateAmount": "0.00",
+      "CGSTONExtraPipeCharge": "0.00",
+      "SGSTONExtraPipeCharge": "0.00",
+      "OldFlexiCharges": "0.00",
+      "OldCGSTOnFlexiCharges": "0.00",
+      "OldSGSTOnFlexiCharges": "0.00",
+      "OldEDICharges": "0.00",
+      "OldEquipmentSDAmount": "0.00",
+      "OldConsumptionSDAmount": "0.00",
+      "OldInterest": "0.00",
+      "AdvancePayment": "0.00",
+      "DiscountForOnlinePayment": "0.00",
+      "DiscountForSelfBilling": "0.00",
+      "OldTotalAmount": "0.00",
+      "OldRoundingOff": "0.00",
+      "OldBillAmount": "0.00",
+      "OldAdjustmentAmount": "0.00",
+      "OldPayableAmount": "0.00",
+      "IsReversal": "false"
+    }
+order: 1000

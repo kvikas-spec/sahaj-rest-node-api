@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{api_gateway_url}}/document-upload/files?folderPath=meter/replacement&fileName=1768998384632-746056158_Screenshot from 2026-01-09 11-13-30.png"
+method: DELETE
+queryParams:
+  folderPath: meter/replacement
+  fileName: 1768998384632-746056158_Screenshot from 2026-01-09 11-13-30.png
+order: 4000

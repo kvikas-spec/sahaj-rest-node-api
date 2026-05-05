@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/ComplaintSubCategoryMaster/AddEditComplaintSubCategoryDetails"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer <your_token>
+body:
+  type: json
+  content: |-
+    {
+        "ComplaintTypeId": 5,
+        "ComplaintsSubCategory": "Gas Leak Sub Category",
+        "Remarks": "New sub category"
+    }
+order: 4000

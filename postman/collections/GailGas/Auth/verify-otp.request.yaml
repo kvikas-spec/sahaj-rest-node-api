@@ -1,0 +1,47 @@
+$kind: http-request
+url: "{{api_gateway_url}}/auth/otp-verification"
+method: POST
+headers:
+  - key: Authorization
+    value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9 eyJ1c2VySWQiOiIxMzA4MjEiLCJ1c2VyTmFtZSI6Ik5JUkFKUEFOQ0hBTDFAV0VCTVlORVNZU1RFTVMuQ09NIiwiZ2FJZCI6Nywicm9sZXMiOlsiMjciLCIxMDA2NSIsIjEwMDc1IiwiMTAwNzgiLCIxMDA4NCIsIjEwMDg4IiwiMTAwOTciLCIxMDEwMCJdLCJnYXMiOlsiNyJdLCJpYXQiOjE3Njc1OTczMTUsImV4cCI6MTc2NzU5NzYxNX0.FR1Y2rx6-GAxOKDo5ArD0lVeRtXgEXWHkbzKTqveZZA
+    disabled: true
+  - key: content-type
+    value: application/json
+  - key: x-region-id
+    value: GailGas_Common
+body:
+  type: json
+  content: "{
+
+    \    \"username\": \"ANK08195@GAIL.CO.IN\",
+
+    \    \"otp\": 123456
+
+    }
+
+
+    // Meerut - ANK08195@GAIL.CO.IN
+
+    // Patna -  SANJEEV.KUMAR2@GAIL.CO.IN
+
+    \ "
+auth:
+  type: bearer
+  credentials:
+    token: "{{temp_token}}"
+scripts:
+  - type: afterResponse
+    code: |
+      let accessToken = pm.response.headers.get("x-access-token");
+      let refreshToken = pm.response.headers.get("x-refresh-token");
+
+      if (accessToken) {
+          pm.environment.set("access_token", accessToken);
+      }
+
+      if(refreshToken){
+          pm.environment.set("refresh_token", refreshToken);
+      }
+    language: text/javascript
+examples: ./.resources/verify-otp.resources/examples
+order: 1000

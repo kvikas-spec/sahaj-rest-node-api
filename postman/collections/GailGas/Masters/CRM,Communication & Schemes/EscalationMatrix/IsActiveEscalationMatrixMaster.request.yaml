@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/EscalationMatrix/IsActiveEscalationMatrixMaster"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer <your_token>
+body:
+  type: json
+  content: |-
+    {
+      "Id": 1
+    }
+order: 5000

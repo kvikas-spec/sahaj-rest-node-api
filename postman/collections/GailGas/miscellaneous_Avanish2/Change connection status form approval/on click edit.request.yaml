@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{api_gateway_url}}{{customer_reg_url_gasin}}/miscellaneous/form-13/2"
+method: GET
+examples: ./.resources/on click edit.resources/examples
+order: 5000

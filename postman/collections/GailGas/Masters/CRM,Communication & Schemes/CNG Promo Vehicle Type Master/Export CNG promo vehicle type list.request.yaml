@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/masters/CNGPromo/VehicleTypeMaster/export"
+method: GET
+order: 7000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{api_gateway_url}}/billing-payment/agency-assignment-billing/getReAssignForMeterReadingAndInvoicingToAgencyList"
+method: GET
+order: 7000
