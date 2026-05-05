@@ -1,0 +1,8 @@
+name: local
+values:
+  - key: temp_token
+    value: ''
+  - key: access_token
+    value: ''
+  - key: refresh_token
+    value: ''
