@@ -6422,7 +6422,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1777535829312-975928249_Abnormal Consumption Approval (1).pdf\",\n    \"ConsumerNumber\": 3000038716,\n    \"Cycle\": \"2601\",\n    \"WardId\": 11,\n    \"ReadingDate\": \"2026-03-09\",\n    \"BillDate\": \"2026-03-09\",\n    \"FullName\": \"meter reading promo\",\n    \"BillNumber\": 3000038716202601,\n    \"CurrentReading\": 20,\n    \"PreviousReading\": 10,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 10\n}",
+											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1778078008092-300140448_Screenshot from 2026-05-05 12-56-18.png\",\n    \"ConsumerNumber\": 3000038574,\n    \"Cycle\": \"2601\",\n    \"WardId\": 16,\n    \"ReadingDate\": \"2026-05-06\",\n    \"BillDate\": \"2026-05-06\",\n    \"FullName\": \"asSDAasd\",\n    \"BillNumber\": 3000038574202601,\n    \"CurrentReading\": 15,\n    \"PreviousReading\": 10,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 5\n}",
 											"options": {
 												"raw": {
 													"language": "json"
