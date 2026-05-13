@@ -31938,7 +31938,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"FinancialYear\": \"2026-27\",\n    \"GaId\": 1,\n    \"DPNGTarget\": \"1000\"\n  }",
+											"raw": "{\n    \"FinancialYear\": \"2026-27\",\n    \"GaId\": 18,\n    \"DPNGTarget\": \"10\"\n  }",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -31946,9 +31946,9 @@
 											}
 										},
 										"url": {
-											"raw": "api_gateway_url/masters/SystemInterlock/SetDPR2DPNGTarget",
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/SetDPR2DPNGTarget",
 											"host": [
-												"api_gateway_url"
+												"{{api_gateway_url}}"
 											],
 											"path": [
 												"masters",
