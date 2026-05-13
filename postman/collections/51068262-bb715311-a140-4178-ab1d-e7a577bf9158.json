@@ -30962,7 +30962,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/IsMobileNoExist?value=9304047599",
+									"raw": "{{api_gateway_url}}/masters/Users/IsMobileNoExist?value=9889998287&encUserID=Qw20OhlCQS8R37ijK~gh2A==",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30974,7 +30974,11 @@
 									"query": [
 										{
 											"key": "value",
-											"value": "9304047599"
+											"value": "9889998287"
+										},
+										{
+											"key": "encUserID",
+											"value": "Qw20OhlCQS8R37ijK~gh2A=="
 										}
 									]
 								}
