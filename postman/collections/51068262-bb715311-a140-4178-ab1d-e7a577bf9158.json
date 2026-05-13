@@ -31901,7 +31901,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/masters/SystemInterlock/GetDailyProgressDPNGTargetList",
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/GetDailyProgressDPNGTargetList?financialyear=2026-27",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -31909,6 +31909,13 @@
 												"masters",
 												"SystemInterlock",
 												"GetDailyProgressDPNGTargetList"
+											],
+											"query": [
+												{
+													"key": "financialyear",
+													"value": "2026-27",
+													"type": "text"
+												}
 											]
 										}
 									},
