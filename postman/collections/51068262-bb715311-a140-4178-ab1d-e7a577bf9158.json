@@ -30748,7 +30748,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList?isFilter=1&isEscalationMatrix=1",
+									"raw": "{{api_gateway_url}}/masters/Users/_GetUserCreationList?isLimitedAccess=1&search=dinesh@gmail.com",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30760,7 +30760,8 @@
 									"query": [
 										{
 											"key": "isFilter",
-											"value": "1"
+											"value": "1",
+											"disabled": true
 										},
 										{
 											"key": "Search",
@@ -30789,7 +30790,16 @@
 										},
 										{
 											"key": "isEscalationMatrix",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "isLimitedAccess",
 											"value": "1"
+										},
+										{
+											"key": "search",
+											"value": "dinesh@gmail.com"
 										}
 									]
 								}
