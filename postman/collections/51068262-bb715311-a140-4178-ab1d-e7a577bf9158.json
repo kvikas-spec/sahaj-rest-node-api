@@ -31915,14 +31915,47 @@
 									"response": []
 								},
 								{
-									"name": "New Request",
+									"name": "SetDPR2DPNGTarget",
 									"id": "51068262-48e391bd-15eb-455a-8c57-a9a1e423e14e",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
-										"header": []
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer $access_token"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "x-region-id",
+												"value": "GailGas_Common"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"FinancialYear\": \"2026-27\",\n    \"GaId\": 1,\n    \"DPNGTarget\": \"1000\"\n  }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "api_gateway_url/masters/SystemInterlock/SetDPR2DPNGTarget",
+											"host": [
+												"api_gateway_url"
+											],
+											"path": [
+												"masters",
+												"SystemInterlock",
+												"SetDPR2DPNGTarget"
+											]
+										}
 									},
 									"response": []
 								}
