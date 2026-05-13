@@ -31913,6 +31913,18 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "New Request",
+									"id": "51068262-48e391bd-15eb-455a-8c57-a9a1e423e14e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
 								}
 							],
 							"id": "51068262-80ac5d2a-62f5-4abf-ba45-36d32b6f9fb7"
