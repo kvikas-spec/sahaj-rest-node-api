@@ -8311,7 +8311,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/listOfGenerateBill?pageNo=1&pageSize=10&isFilter=1",
+									"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/listOfGenerateBill?pageNo=1&pageSize=100&isFilter=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -8327,7 +8327,7 @@
 										},
 										{
 											"key": "pageSize",
-											"value": "10"
+											"value": "100"
 										},
 										{
 											"key": "isFilter",
