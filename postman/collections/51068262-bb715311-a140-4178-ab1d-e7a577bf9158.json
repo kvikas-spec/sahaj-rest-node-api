@@ -31971,7 +31971,7 @@
 									"response": []
 								},
 								{
-									"name": "GetFinanciaYear",
+									"name": "GetFinancialYear",
 									"id": "51068262-1a3be837-be85-42e3-9ea2-1b4f0e159ba3",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -31989,14 +31989,14 @@
 											}
 										],
 										"url": {
-											"raw": "{{api_gateway_url}}/masters/SystemInterlock/GetFinanciaYear",
+											"raw": "{{api_gateway_url}}/masters/SystemInterlock/GetFinancialYear",
 											"host": [
 												"{{api_gateway_url}}"
 											],
 											"path": [
 												"masters",
 												"SystemInterlock",
-												"GetFinanciaYear"
+												"GetFinancialYear"
 											]
 										}
 									},
