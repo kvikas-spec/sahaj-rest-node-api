@@ -36562,7 +36562,7 @@
 										"method": "PATCH",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/masters/Customer/PaymentPlan/1/active",
+											"raw": "{{api_gateway_url}}/masters/Customer/PaymentPlan/:SchemeId/active",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -36570,8 +36570,14 @@
 												"masters",
 												"Customer",
 												"PaymentPlan",
-												"1",
+												":SchemeId",
 												"active"
+											],
+											"variable": [
+												{
+													"key": "SchemeId",
+													"value": "10"
+												}
 											]
 										}
 									},
