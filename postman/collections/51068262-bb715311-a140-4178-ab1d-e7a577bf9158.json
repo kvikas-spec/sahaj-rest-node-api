@@ -36463,6 +36463,7 @@
 							"item": [
 								{
 									"name": "Get Payment Plan",
+									"id": "51068262-44f30614-c6d7-46b0-be30-2382f4a81f55",
 									"request": {
 										"auth": {
 											"type": "bearer",
@@ -36477,7 +36478,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/masters/Customer/PaymentPlan?pageNo=1&pageSize=100",
+											"raw": "{{api_gateway_url}}/masters/Customer/PaymentPlan?pageNo=1&pageSize=10",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -36493,7 +36494,7 @@
 												},
 												{
 													"key": "pageSize",
-													"value": "100"
+													"value": "10"
 												}
 											]
 										}
@@ -36502,6 +36503,7 @@
 								},
 								{
 									"name": "Add Scheme Details",
+									"id": "51068262-68f5c8a0-0044-4393-9ded-2661116461ba",
 									"request": {
 										"auth": {
 											"type": "bearer",
@@ -36538,14 +36540,14 @@
 												"masters",
 												"Customer",
 												"PaymentPlan"
-											],
-											"query": []
+											]
 										}
 									},
 									"response": []
 								},
 								{
 									"name": "Active Deactive Payment Plan",
+									"id": "51068262-157146f5-136c-45ce-95b7-643e6fbd5ca9",
 									"request": {
 										"auth": {
 											"type": "bearer",
@@ -36570,14 +36572,14 @@
 												"PaymentPlan",
 												"1",
 												"active"
-											],
-											"query": []
+											]
 										}
 									},
 									"response": []
 								},
 								{
 									"name": "Export Payment Plan",
+									"id": "51068262-901ecc89-c896-4048-b8ec-e047cc42f5df",
 									"request": {
 										"auth": {
 											"type": "bearer",
@@ -36601,13 +36603,13 @@
 												"Customer",
 												"PaymentPlan",
 												"export"
-											],
-											"query": []
+											]
 										}
 									},
 									"response": []
 								}
-							]
+							],
+							"id": "51068262-d9397b07-c79b-4fc0-9cdf-d529abe1b552"
 						}
 					],
 					"id": "51068262-6328181d-5ee3-4ba2-88a2-70a39aef6e09"
