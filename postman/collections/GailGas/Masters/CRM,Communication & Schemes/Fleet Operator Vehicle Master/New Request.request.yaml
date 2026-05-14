@@ -1,0 +1,54 @@
+$kind: http-request
+name: New Request
+url: "{{api_gateway_url}}/masters/CNGPromo/FleetOperatorVehicleMaster"
+method: POST
+headers:
+  - key: Authorization
+    value: Bearer $access_token
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: FOCardNumber
+      value: "1234567890"
+      description: ""
+      disabled: false
+    - type: text
+      key: VehicleMake
+      value: Sample
+      description: ""
+      disabled: false
+    - type: text
+      key: VehicleTypeMasterId
+      value: "1"
+      description: ""
+      disabled: false
+    - type: text
+      key: VehicleNumber
+      value: GJ01AB1234
+      description: ""
+      disabled: false
+    - type: text
+      key: YearOfRegistration
+      value: "2024"
+      description: ""
+      disabled: false
+    - type: text
+      key: Ownership
+      value: Self
+      description: ""
+      disabled: false
+    - type: file
+      key: RCBook
+      src:
+        - /home/vikaskumar/Pictures/Screenshots/Screenshot from 2026-05-05 12-56-18.png
+      description: ""
+      disabled: false
+    - type: file
+      key: AgreementForAttachedVehicle
+      src:
+        - /home/vikaskumar/Pictures/Screenshots/Screenshot from 2026-05-05 12-55-22.png
+      description: ""
+      disabled: false
+order: 1674868967870764
