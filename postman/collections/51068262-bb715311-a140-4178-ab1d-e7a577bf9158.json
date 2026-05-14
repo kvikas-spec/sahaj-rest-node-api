@@ -36457,6 +36457,157 @@
 								}
 							],
 							"id": "51068262-3aa1f3af-36a7-43da-ba76-570987ca47cf"
+						},
+						{
+							"name": "Payment Plan",
+							"item": [
+								{
+									"name": "Get Payment Plan",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Customer/PaymentPlan?pageNo=1&pageSize=100",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Customer",
+												"PaymentPlan"
+											],
+											"query": [
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "100"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add Scheme Details",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"Name\": \"Sample Payment Plan\",\n  \"Amount\": 5000,\n  \"IsOneTime\": false,\n  \"IsGST\": true,\n  \"InstallmentCount\": 10,\n  \"InstallmentAmount\": 500,\n  \"ConsumptionSDAmount\": 1000\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Customer/PaymentPlan",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Customer",
+												"PaymentPlan"
+											],
+											"query": []
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Active Deactive Payment Plan",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Customer/PaymentPlan/1/active",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Customer",
+												"PaymentPlan",
+												"1",
+												"active"
+											],
+											"query": []
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Export Payment Plan",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Customer/PaymentPlan/export",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Customer",
+												"PaymentPlan",
+												"export"
+											],
+											"query": []
+										}
+									},
+									"response": []
+								}
+							]
 						}
 					],
 					"id": "51068262-6328181d-5ee3-4ba2-88a2-70a39aef6e09"
