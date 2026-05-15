@@ -8174,7 +8174,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?demandMasterId=5257307",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?demandMasterId=5257288",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -8191,7 +8191,50 @@
 												},
 												{
 													"key": "demandMasterId",
-													"value": "5257307"
+													"value": "5257288"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "InvoicePDFPrint Copy",
+									"id": "51068262-50c96b4b-a6cb-4af1-a016-df76020d6117",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?demandMasterId=5257288",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"postpaid-invoice",
+												"InvoicePDFPrint"
+											],
+											"query": [
+												{
+													"key": "consumerNumber",
+													"value": "3000038650",
+													"disabled": true
+												},
+												{
+													"key": "demandMasterId",
+													"value": "5257288"
 												}
 											]
 										}
