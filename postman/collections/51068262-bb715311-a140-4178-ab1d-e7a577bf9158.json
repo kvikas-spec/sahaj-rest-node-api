@@ -6422,7 +6422,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "// {\n//     \"MeterReadingId\": 0,\n//     \"Latitude\": \"19\",\n//     \"Longitude\": \"18\",\n//     \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1778652983768-67182422_Screenshot from 2026-05-08 15-41-11.png\",\n//     \"ConsumerNumber\": 3000038900,\n//     \"Cycle\": \"2605\",\n//     \"WardId\": 13,\n//     \"ReadingDate\": \"2026-04-25\",\n//     \"BillDate\": \"2026-04-25\",\n//     \"FullName\": \"LPC\",\n//     \"BillNumber\": 3000038900202611,\n//     \"CurrentReading\": 42,\n//     \"PreviousReading\": 52,\n//     \"MeterStatusId\": 12,\n//     \"AccountTypeId\": 1,\n//     \"Remarks\": \"Meter reading taken successfully\",\n//     \"UnitUsed\": -10\n// }\n{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1778665476292-813054440_GailGasInvoice(20260511)-77b29765-23d3-4fb2-a5f9-612dfce921e2-1.pdf\",\n    \"ConsumerNumber\": 3000036775,\n    \"Cycle\": \"2601\",\n    \"WardId\": 37,\n    \"ReadingDate\": \"2026-03-15\",\n    \"BillDate\": \"2026-03-15\",\n    \"FullName\": \"Nitin Garg \",\n    \"BillNumber\": 3000036775202601,\n    \"CurrentReading\": 11,\n    \"PreviousReading\": 0.01,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 10.99\n}",
+											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1778652983768-67182422_Screenshot from 2026-05-08 15-41-11.png\",\n    \"ConsumerNumber\": 3000038900,\n    \"Cycle\": \"2605\",\n    \"WardId\": 13,\n    \"ReadingDate\": \"2026-04-25\",\n    \"BillDate\": \"2026-04-25\",\n    \"FullName\": \"LPC\",\n    \"BillNumber\": 3000038900202611,\n    \"CurrentReading\": 42,\n    \"PreviousReading\": 52,\n    \"MeterStatusId\": 12,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": -10\n}\n",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7893,7 +7893,7 @@
 											"variable": [
 												{
 													"key": "MeterReadingId",
-													"value": "621434"
+													"value": "1540796"
 												}
 											]
 										}
@@ -8174,7 +8174,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?demandMasterId=5257322",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?demandMasterId=5257337",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -8191,7 +8191,50 @@
 												},
 												{
 													"key": "demandMasterId",
-													"value": "5257322"
+													"value": "5257337"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "InvoicePDFPrint Copy",
+									"id": "51068262-50c96b4b-a6cb-4af1-a016-df76020d6117",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?demandMasterId=5257335",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"billing-payment",
+												"postpaid-invoice",
+												"InvoicePDFPrint"
+											],
+											"query": [
+												{
+													"key": "consumerNumber",
+													"value": "3000038650",
+													"disabled": true
+												},
+												{
+													"key": "demandMasterId",
+													"value": "5257335"
 												}
 											]
 										}
@@ -8430,7 +8473,7 @@
 									"variable": [
 										{
 											"key": "DemanadGenerateRequestId",
-											"value": "68159"
+											"value": "68178"
 										}
 									]
 								}
@@ -36463,6 +36506,7 @@
 							"item": [
 								{
 									"name": "Get Payment Plan",
+									"id": "51068262-44f30614-c6d7-46b0-be30-2382f4a81f55",
 									"request": {
 										"auth": {
 											"type": "bearer",
@@ -36477,7 +36521,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/masters/Customer/PaymentPlan?pageNo=1&pageSize=100",
+											"raw": "{{api_gateway_url}}/masters/Customer/PaymentPlan?pageNo=1&pageSize=10",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -36493,7 +36537,7 @@
 												},
 												{
 													"key": "pageSize",
-													"value": "100"
+													"value": "10"
 												}
 											]
 										}
@@ -36502,6 +36546,7 @@
 								},
 								{
 									"name": "Add Scheme Details",
+									"id": "51068262-68f5c8a0-0044-4393-9ded-2661116461ba",
 									"request": {
 										"auth": {
 											"type": "bearer",
@@ -36538,14 +36583,14 @@
 												"masters",
 												"Customer",
 												"PaymentPlan"
-											],
-											"query": []
+											]
 										}
 									},
 									"response": []
 								},
 								{
 									"name": "Active Deactive Payment Plan",
+									"id": "51068262-157146f5-136c-45ce-95b7-643e6fbd5ca9",
 									"request": {
 										"auth": {
 											"type": "bearer",
@@ -36560,7 +36605,7 @@
 										"method": "PATCH",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/masters/Customer/PaymentPlan/1/active",
+											"raw": "{{api_gateway_url}}/masters/Customer/PaymentPlan/:SchemeId/active",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -36568,16 +36613,22 @@
 												"masters",
 												"Customer",
 												"PaymentPlan",
-												"1",
+												":SchemeId",
 												"active"
 											],
-											"query": []
+											"variable": [
+												{
+													"key": "SchemeId",
+													"value": "10"
+												}
+											]
 										}
 									},
 									"response": []
 								},
 								{
 									"name": "Export Payment Plan",
+									"id": "51068262-901ecc89-c896-4048-b8ec-e047cc42f5df",
 									"request": {
 										"auth": {
 											"type": "bearer",
@@ -36601,13 +36652,13 @@
 												"Customer",
 												"PaymentPlan",
 												"export"
-											],
-											"query": []
+											]
 										}
 									},
 									"response": []
 								}
-							]
+							],
+							"id": "51068262-d9397b07-c79b-4fc0-9cdf-d529abe1b552"
 						}
 					],
 					"id": "51068262-6328181d-5ee3-4ba2-88a2-70a39aef6e09"
