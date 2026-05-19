@@ -37062,6 +37062,211 @@
 										"description": "SuperAdmin advance onboarding grid."
 									},
 									"response": []
+								},
+								{
+									"name": "SuperAdmin Advance Dashboard Sales",
+									"id": "51068262-70bf9896-6772-4cde-8a46-ebefad393611",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-region-id",
+												"value": "Meerut",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Dashboard",
+												"GetSuperAdminAdvanceDashboardSalesData"
+											],
+											"query": [
+												{
+													"key": "iDisplayStart",
+													"value": "0"
+												},
+												{
+													"key": "iDisplayLength",
+													"value": "10"
+												},
+												{
+													"key": "sEcho",
+													"value": "1"
+												}
+											]
+										},
+										"description": "SuperAdmin advance sales grid."
+									},
+									"response": []
+								},
+								{
+									"name": "SuperAdmin Advance Dashboard Complaints",
+									"id": "51068262-03d8a7b5-da8c-48b3-9646-de689d2f848f",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-region-id",
+												"value": "Meerut",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Dashboard",
+												"GetSuperAdminAdvanceSummariesRegisteredComplaintsReport"
+											],
+											"query": [
+												{
+													"key": "iDisplayStart",
+													"value": "0"
+												},
+												{
+													"key": "iDisplayLength",
+													"value": "10"
+												},
+												{
+													"key": "sEcho",
+													"value": "1"
+												}
+											]
+										},
+										"description": "SuperAdmin advance complaints grid."
+									},
+									"response": []
+								},
+								{
+									"name": "SuperAdmin GAIL CMP Advance Onboarding",
+									"id": "51068262-ef76e3e1-6f7c-403f-b8b7-0bc85a57db9b",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-region-id",
+												"value": "Meerut",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceGAILCMPDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Dashboard",
+												"GetSuperAdminAdvanceGAILCMPDashboardOnBoardingData"
+											],
+											"query": [
+												{
+													"key": "iDisplayStart",
+													"value": "0"
+												},
+												{
+													"key": "iDisplayLength",
+													"value": "10"
+												},
+												{
+													"key": "sEcho",
+													"value": "1"
+												}
+											]
+										},
+										"description": "SuperAdmin GAIL CMP advance onboarding grid."
+									},
+									"response": []
+								},
+								{
+									"name": "SuperAdmin GAIL CMP Advance Sales",
+									"id": "51068262-e0e95924-ee0c-46a8-80eb-c61ebb887b2b",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-region-id",
+												"value": "Meerut",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceGAILCMPDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Dashboard",
+												"GetSuperAdminAdvanceGAILCMPDashboardSalesData"
+											],
+											"query": [
+												{
+													"key": "iDisplayStart",
+													"value": "0"
+												},
+												{
+													"key": "iDisplayLength",
+													"value": "10"
+												},
+												{
+													"key": "sEcho",
+													"value": "1"
+												}
+											]
+										},
+										"description": "SuperAdmin GAIL CMP advance sales grid."
+									},
+									"response": []
+								},
+								{
+									"name": "SuperAdmin GAIL CMP Advance Complaints",
+									"id": "51068262-adffc5f7-9d4e-40c2-ba20-bcbca04ac353",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-region-id",
+												"value": "Meerut",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceGAILCMPSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Dashboard",
+												"GetSuperAdminAdvanceGAILCMPSummariesRegisteredComplaintsReport"
+											],
+											"query": [
+												{
+													"key": "iDisplayStart",
+													"value": "0"
+												},
+												{
+													"key": "iDisplayLength",
+													"value": "10"
+												},
+												{
+													"key": "sEcho",
+													"value": "1"
+												}
+											]
+										},
+										"description": "SuperAdmin GAIL CMP advance complaints grid."
+									},
+									"response": []
 								}
 							],
 							"id": "51068262-e7ebc816-854f-41d9-b9bf-67d40cb4bfa6"
@@ -37137,211 +37342,6 @@
 									]
 								},
 								"description": "Migrated from .NET DashboardController for the new dashboard screens. Gateway should inject regionconfig, common_config, and userinfo headers."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin Advance Dashboard Sales",
-							"id": "51068262-70bf9896-6772-4cde-8a46-ebefad393611",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Dashboard",
-										"GetSuperAdminAdvanceDashboardSalesData"
-									],
-									"query": [
-										{
-											"key": "iDisplayStart",
-											"value": "0"
-										},
-										{
-											"key": "iDisplayLength",
-											"value": "10"
-										},
-										{
-											"key": "sEcho",
-											"value": "1"
-										}
-									]
-								},
-								"description": "SuperAdmin advance sales grid."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin Advance Dashboard Complaints",
-							"id": "51068262-03d8a7b5-da8c-48b3-9646-de689d2f848f",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Dashboard",
-										"GetSuperAdminAdvanceSummariesRegisteredComplaintsReport"
-									],
-									"query": [
-										{
-											"key": "iDisplayStart",
-											"value": "0"
-										},
-										{
-											"key": "iDisplayLength",
-											"value": "10"
-										},
-										{
-											"key": "sEcho",
-											"value": "1"
-										}
-									]
-								},
-								"description": "SuperAdmin advance complaints grid."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin GAIL CMP Advance Onboarding",
-							"id": "51068262-ef76e3e1-6f7c-403f-b8b7-0bc85a57db9b",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceGAILCMPDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Dashboard",
-										"GetSuperAdminAdvanceGAILCMPDashboardOnBoardingData"
-									],
-									"query": [
-										{
-											"key": "iDisplayStart",
-											"value": "0"
-										},
-										{
-											"key": "iDisplayLength",
-											"value": "10"
-										},
-										{
-											"key": "sEcho",
-											"value": "1"
-										}
-									]
-								},
-								"description": "SuperAdmin GAIL CMP advance onboarding grid."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin GAIL CMP Advance Sales",
-							"id": "51068262-e0e95924-ee0c-46a8-80eb-c61ebb887b2b",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceGAILCMPDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Dashboard",
-										"GetSuperAdminAdvanceGAILCMPDashboardSalesData"
-									],
-									"query": [
-										{
-											"key": "iDisplayStart",
-											"value": "0"
-										},
-										{
-											"key": "iDisplayLength",
-											"value": "10"
-										},
-										{
-											"key": "sEcho",
-											"value": "1"
-										}
-									]
-								},
-								"description": "SuperAdmin GAIL CMP advance sales grid."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin GAIL CMP Advance Complaints",
-							"id": "51068262-adffc5f7-9d4e-40c2-ba20-bcbca04ac353",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceGAILCMPSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Dashboard",
-										"GetSuperAdminAdvanceGAILCMPSummariesRegisteredComplaintsReport"
-									],
-									"query": [
-										{
-											"key": "iDisplayStart",
-											"value": "0"
-										},
-										{
-											"key": "iDisplayLength",
-											"value": "10"
-										},
-										{
-											"key": "sEcho",
-											"value": "1"
-										}
-									]
-								},
-								"description": "SuperAdmin GAIL CMP advance complaints grid."
 							},
 							"response": []
 						},
