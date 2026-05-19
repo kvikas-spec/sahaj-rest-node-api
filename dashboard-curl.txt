@@ -11,22 +11,22 @@ curl --location '{{api_gateway_url}}/masters/Dashboard/oic?company=all-ga&dateRa
   --header 'x-region-id: Meerut'
 
 GA Admin Sales Chart
-curl --location '{{api_gateway_url}}/masters/Dashboard/BindDashboardSalesDetailsForGAAdmin' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/BindDashboardSalesDetailsForGAAdmin' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
 GA Admin Activity Pie Chart
-curl --location '{{api_gateway_url}}/masters/Dashboard/BindDashboardCustomerActivityForGAAdminJSON' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/BindDashboardCustomerActivityForGAAdminJSON' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
 SuperAdmin Sales Chart
-curl --location '{{api_gateway_url}}/masters/Dashboard/BindDashboardSalesDetailsForSuperAdminJson' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/BindDashboardSalesDetailsForSuperAdminJson' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
 SuperAdmin Activity Pie Chart
-curl --location '{{api_gateway_url}}/masters/Dashboard/BindDashboardCustomerActivityForSuperAdminJSON' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/BindDashboardCustomerActivityForSuperAdminJSON' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
@@ -37,66 +37,66 @@ Optional query parameters:
 - fromDate/toDate: YYYY-MM-DD custom range
 
 SuperAdmin GAIL CMP Dashboard Page
-curl --location '{{api_gateway_url}}/masters/Dashboard/gail-cmp' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/gail-cmp' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
 SuperAdmin GAIL CMP Sales Chart
-curl --location '{{api_gateway_url}}/masters/Dashboard/BindDashboardSalesDetailsForSuperAdminJsonForGAILCMP' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/BindDashboardSalesDetailsForSuperAdminJsonForGAILCMP' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
 SuperAdmin GAIL CMP Activity Pie Chart
-curl --location '{{api_gateway_url}}/masters/Dashboard/BindDashboardCustomerActivityForSuperAdminJSONForGAILCMP' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/BindDashboardCustomerActivityForSuperAdminJSONForGAILCMP' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
 Advance Dashboard Status Summary
-curl --location '{{api_gateway_url}}/masters/Dashboard/GetAdvanceDashboardCustomerSummariesStatus?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/GetAdvanceDashboardCustomerSummariesStatus?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
 GA Advance Dashboard Onboarding
-curl --location '{{api_gateway_url}}/masters/Dashboard/GetAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/GetAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
 GA Advance Dashboard Sales
-curl --location '{{api_gateway_url}}/masters/Dashboard/GetAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/GetAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
 GA Advance Dashboard Complaints
-curl --location '{{api_gateway_url}}/masters/Dashboard/GetAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/GetAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
 SuperAdmin Advance Dashboard Onboarding
-curl --location '{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
 SuperAdmin Advance Dashboard Sales
-curl --location '{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
 SuperAdmin Advance Dashboard Complaints
-curl --location '{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
 SuperAdmin GAIL CMP Advance Dashboard Onboarding
-curl --location '{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceGAILCMPDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceGAILCMPDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
 SuperAdmin GAIL CMP Advance Dashboard Sales
-curl --location '{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceGAILCMPDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceGAILCMPDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
 
 SuperAdmin GAIL CMP Advance Dashboard Complaints
-curl --location '{{api_gateway_url}}/masters/Dashboard/GetSuperAdminAdvanceGAILCMPSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
+curl --location '{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceGAILCMPSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
