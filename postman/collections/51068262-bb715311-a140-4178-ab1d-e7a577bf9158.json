@@ -36679,7 +36679,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/management?company=all-ga&dateRange=6m",
+									"raw": "{{api_gateway_url}}/masters/Dashboard/management?company=Meerut&dateRange=6m",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -36691,7 +36691,7 @@
 									"query": [
 										{
 											"key": "company",
-											"value": "all-ga"
+											"value": "Meerut"
 										},
 										{
 											"key": "dateRange",
