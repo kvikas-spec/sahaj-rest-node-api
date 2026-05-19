@@ -36667,6 +36667,11 @@
 					"name": "Dashboard",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "51068262-e7ebc816-854f-41d9-b9bf-67d40cb4bfa6"
+						},
+						{
 							"name": "Management Dashboard",
 							"id": "51068262-cd0edd17-15be-4450-b009-f4b2c2bbc751",
 							"request": {
@@ -37336,6 +37341,18 @@
 									]
 								},
 								"description": "SuperAdmin GAIL CMP advance complaints grid."
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "51068262-6d8cc35b-f881-47f8-9aac-46540df36605",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
 							},
 							"response": []
 						}
