@@ -36668,7 +36668,116 @@
 					"item": [
 						{
 							"name": "OLD_DASHBOARD",
-							"item": [],
+							"item": [
+								{
+									"name": "GA Admin Sales Chart",
+									"id": "51068262-273fc011-68aa-4707-9b22-15cd75ec71e6",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-region-id",
+												"value": "Meerut",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Dashboard/BindDashboardSalesDetailsForGAAdmin",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Dashboard",
+												"BindDashboardSalesDetailsForGAAdmin"
+											]
+										},
+										"description": "Migrated from .NET DashboardController.BindDashboardSalesDetailsForGAAdmin. Used by Dashboard.cshtml Morris sales chart."
+									},
+									"response": []
+								},
+								{
+									"name": "GA Admin Activity Pie Chart",
+									"id": "51068262-c532e104-23eb-4668-bd8e-5da6cc3f4223",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-region-id",
+												"value": "Meerut",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Dashboard/BindDashboardCustomerActivityForGAAdminJSON",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Dashboard",
+												"BindDashboardCustomerActivityForGAAdminJSON"
+											]
+										},
+										"description": "Migrated from .NET DashboardController.BindDashboardCustomerActivityForGAAdminJSON. Used by Dashboard.cshtml c3 activity pie chart."
+									},
+									"response": []
+								},
+								{
+									"name": "SuperAdmin Sales Chart",
+									"id": "51068262-31a2dae4-e8b9-4a81-88db-0f739b094513",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-region-id",
+												"value": "Meerut",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Dashboard/BindDashboardSalesDetailsForSuperAdminJson",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Dashboard",
+												"BindDashboardSalesDetailsForSuperAdminJson"
+											]
+										},
+										"description": "Migrated from .NET DashboardController.BindDashboardSalesDetailsForSuperAdminJson. Used by SuperAdminDashboard.cshtml Morris sales chart."
+									},
+									"response": []
+								},
+								{
+									"name": "SuperAdmin Activity Pie Chart",
+									"id": "51068262-634df202-d342-4725-8fed-7b4dd824d2eb",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-region-id",
+												"value": "Meerut",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Dashboard/BindDashboardCustomerActivityForSuperAdminJSON",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Dashboard",
+												"BindDashboardCustomerActivityForSuperAdminJSON"
+											]
+										},
+										"description": "Migrated from .NET DashboardController.BindDashboardCustomerActivityForSuperAdminJSON. Used by SuperAdminDashboard.cshtml c3 activity pie chart."
+									},
+									"response": []
+								}
+							],
 							"id": "51068262-e7ebc816-854f-41d9-b9bf-67d40cb4bfa6"
 						},
 						{
@@ -36742,114 +36851,6 @@
 									]
 								},
 								"description": "Migrated from .NET DashboardController for the new dashboard screens. Gateway should inject regionconfig, common_config, and userinfo headers."
-							},
-							"response": []
-						},
-						{
-							"name": "GA Admin Sales Chart",
-							"id": "51068262-273fc011-68aa-4707-9b22-15cd75ec71e6",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/BindDashboardSalesDetailsForGAAdmin",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Dashboard",
-										"BindDashboardSalesDetailsForGAAdmin"
-									]
-								},
-								"description": "Migrated from .NET DashboardController.BindDashboardSalesDetailsForGAAdmin. Used by Dashboard.cshtml Morris sales chart."
-							},
-							"response": []
-						},
-						{
-							"name": "GA Admin Activity Pie Chart",
-							"id": "51068262-c532e104-23eb-4668-bd8e-5da6cc3f4223",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/BindDashboardCustomerActivityForGAAdminJSON",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Dashboard",
-										"BindDashboardCustomerActivityForGAAdminJSON"
-									]
-								},
-								"description": "Migrated from .NET DashboardController.BindDashboardCustomerActivityForGAAdminJSON. Used by Dashboard.cshtml c3 activity pie chart."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin Sales Chart",
-							"id": "51068262-31a2dae4-e8b9-4a81-88db-0f739b094513",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/BindDashboardSalesDetailsForSuperAdminJson",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Dashboard",
-										"BindDashboardSalesDetailsForSuperAdminJson"
-									]
-								},
-								"description": "Migrated from .NET DashboardController.BindDashboardSalesDetailsForSuperAdminJson. Used by SuperAdminDashboard.cshtml Morris sales chart."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin Activity Pie Chart",
-							"id": "51068262-634df202-d342-4725-8fed-7b4dd824d2eb",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/BindDashboardCustomerActivityForSuperAdminJSON",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Dashboard",
-										"BindDashboardCustomerActivityForSuperAdminJSON"
-									]
-								},
-								"description": "Migrated from .NET DashboardController.BindDashboardCustomerActivityForSuperAdminJSON. Used by SuperAdminDashboard.cshtml c3 activity pie chart."
 							},
 							"response": []
 						},
