@@ -36679,7 +36679,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/management?company=all-ga&dateRange=cfy",
+									"raw": "{{api_gateway_url}}/masters/Dashboard/management?company=all-ga&dateRange=6m",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -36695,7 +36695,7 @@
 										},
 										{
 											"key": "dateRange",
-											"value": "cfy"
+											"value": "6m"
 										}
 									]
 								},
