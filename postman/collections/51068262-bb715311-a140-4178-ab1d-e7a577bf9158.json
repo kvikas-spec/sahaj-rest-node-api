@@ -37353,6 +37353,21 @@
 							},
 							"request": {
 								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "51068262-67aca5cd-45c6-4257-95e1-8e5eebf4db16",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
 								"header": []
 							},
 							"response": []
@@ -37360,6 +37375,693 @@
 					],
 					"id": "51068262-1466d752-ef50-4d7f-9a23-f0087d69046c",
 					"description": "Dashboard, SuperAdmin Dashboard, GAIL CMP Dashboard, and advance dashboard report APIs migrated from GAIL GAS .NET DashboardController."
+				},
+				{
+					"name": "Dashboard",
+					"item": [
+						{
+							"name": "Management Dashboard",
+							"id": "51068262-7dd3881e-eff7-4da5-b96a-796cacf38955",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Dashboard/management?company=all-ga&dateRange=cfy",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Dashboard",
+										"management"
+									],
+									"query": [
+										{
+											"key": "company",
+											"value": "all-ga"
+										},
+										{
+											"key": "dateRange",
+											"value": "cfy"
+										}
+									]
+								},
+								"description": "Migrated from .NET DashboardController for the new dashboard screens. Gateway should inject regionconfig, common_config, and userinfo headers."
+							},
+							"response": []
+						},
+						{
+							"name": "OIC Dashboard",
+							"id": "51068262-f776bcc2-ea48-4ec6-9aa5-832d036c8ca4",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Dashboard/oic?company=all-ga&dateRange=cfy",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Dashboard",
+										"oic"
+									],
+									"query": [
+										{
+											"key": "company",
+											"value": "all-ga"
+										},
+										{
+											"key": "dateRange",
+											"value": "cfy"
+										}
+									]
+								},
+								"description": "Migrated from .NET DashboardController for the new dashboard screens. Gateway should inject regionconfig, common_config, and userinfo headers."
+							},
+							"response": []
+						}
+					],
+					"id": "51068262-8a601baf-e2f7-4c71-9f79-6004430cea16",
+					"description": "Active dashboard APIs. Use these for the current Management and OIC dashboard screens."
+				},
+				{
+					"name": "Dashboard Reference",
+					"item": [
+						{
+							"name": "GA Admin Sales Chart",
+							"id": "51068262-b0ff6200-e641-4005-bd0f-3428d0c058ac",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardSalesDetailsForGAAdmin",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"BindDashboardSalesDetailsForGAAdmin"
+									]
+								},
+								"description": "Migrated from .NET DashboardController.BindDashboardSalesDetailsForGAAdmin. Used by Dashboard.cshtml Morris sales chart."
+							},
+							"response": []
+						},
+						{
+							"name": "GA Admin Activity Pie Chart",
+							"id": "51068262-3c9203ca-4cb1-40d2-a504-610b2d0d17b0",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardCustomerActivityForGAAdminJSON",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"BindDashboardCustomerActivityForGAAdminJSON"
+									]
+								},
+								"description": "Migrated from .NET DashboardController.BindDashboardCustomerActivityForGAAdminJSON. Used by Dashboard.cshtml c3 activity pie chart."
+							},
+							"response": []
+						},
+						{
+							"name": "SuperAdmin Sales Chart",
+							"id": "51068262-427ea848-dbf1-45e5-ad73-17c8570c4a44",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardSalesDetailsForSuperAdminJson",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"BindDashboardSalesDetailsForSuperAdminJson"
+									]
+								},
+								"description": "Migrated from .NET DashboardController.BindDashboardSalesDetailsForSuperAdminJson. Used by SuperAdminDashboard.cshtml Morris sales chart."
+							},
+							"response": []
+						},
+						{
+							"name": "SuperAdmin Activity Pie Chart",
+							"id": "51068262-ff386454-f285-4b08-9b03-ea08b477734a",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardCustomerActivityForSuperAdminJSON",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"BindDashboardCustomerActivityForSuperAdminJSON"
+									]
+								},
+								"description": "Migrated from .NET DashboardController.BindDashboardCustomerActivityForSuperAdminJSON. Used by SuperAdminDashboard.cshtml c3 activity pie chart."
+							},
+							"response": []
+						},
+						{
+							"name": "SuperAdmin GAIL CMP Dashboard",
+							"id": "51068262-6b90b79c-fd15-4805-a285-f493c1e541b5",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/gail-cmp",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"gail-cmp"
+									]
+								},
+								"description": "SuperAdminDashboardForGAILCMP page data."
+							},
+							"response": []
+						},
+						{
+							"name": "SuperAdmin GAIL CMP Sales Chart",
+							"id": "51068262-bf2a074c-9a18-485b-a3e6-3932eec082c6",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardSalesDetailsForSuperAdminJsonForGAILCMP",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"BindDashboardSalesDetailsForSuperAdminJsonForGAILCMP"
+									]
+								},
+								"description": "GAIL CMP dashboard sales chart."
+							},
+							"response": []
+						},
+						{
+							"name": "SuperAdmin GAIL CMP Activity Pie Chart",
+							"id": "51068262-2e9884c9-193e-4e7e-8f7b-ebb659ab3a54",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardCustomerActivityForSuperAdminJSONForGAILCMP",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"BindDashboardCustomerActivityForSuperAdminJSONForGAILCMP"
+									]
+								},
+								"description": "GAIL CMP dashboard activity pie chart."
+							},
+							"response": []
+						},
+						{
+							"name": "Advance Dashboard Status Summary",
+							"id": "51068262-1281526e-86c3-4f54-9c45-eceb376211c2",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetAdvanceDashboardCustomerSummariesStatus?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"GetAdvanceDashboardCustomerSummariesStatus"
+									],
+									"query": [
+										{
+											"key": "iDisplayStart",
+											"value": "0"
+										},
+										{
+											"key": "iDisplayLength",
+											"value": "10"
+										},
+										{
+											"key": "sEcho",
+											"value": "1"
+										}
+									]
+								},
+								"description": "Advance report status summary grid."
+							},
+							"response": []
+						},
+						{
+							"name": "GA Advance Dashboard Onboarding",
+							"id": "51068262-3f63aa47-8e8f-4027-86d0-638e32a49122",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"GetAdvanceDashboardOnBoardingData"
+									],
+									"query": [
+										{
+											"key": "iDisplayStart",
+											"value": "0"
+										},
+										{
+											"key": "iDisplayLength",
+											"value": "10"
+										},
+										{
+											"key": "sEcho",
+											"value": "1"
+										}
+									]
+								},
+								"description": "GA advance onboarding grid."
+							},
+							"response": []
+						},
+						{
+							"name": "GA Advance Dashboard Sales",
+							"id": "51068262-b26f451e-8bb3-4d1d-8e62-c06b9c86a5fd",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"GetAdvanceDashboardSalesData"
+									],
+									"query": [
+										{
+											"key": "iDisplayStart",
+											"value": "0"
+										},
+										{
+											"key": "iDisplayLength",
+											"value": "10"
+										},
+										{
+											"key": "sEcho",
+											"value": "1"
+										}
+									]
+								},
+								"description": "GA advance sales grid."
+							},
+							"response": []
+						},
+						{
+							"name": "GA Advance Dashboard Complaints",
+							"id": "51068262-ea038b7f-0e16-4dc6-bec7-965fbb982476",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"GetAdvanceSummariesRegisteredComplaintsReport"
+									],
+									"query": [
+										{
+											"key": "iDisplayStart",
+											"value": "0"
+										},
+										{
+											"key": "iDisplayLength",
+											"value": "10"
+										},
+										{
+											"key": "sEcho",
+											"value": "1"
+										}
+									]
+								},
+								"description": "GA advance complaints grid."
+							},
+							"response": []
+						},
+						{
+							"name": "SuperAdmin Advance Dashboard Onboarding",
+							"id": "51068262-04f34ef0-8bfb-4470-a230-f5adeed67a5f",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"GetSuperAdminAdvanceDashboardOnBoardingData"
+									],
+									"query": [
+										{
+											"key": "iDisplayStart",
+											"value": "0"
+										},
+										{
+											"key": "iDisplayLength",
+											"value": "10"
+										},
+										{
+											"key": "sEcho",
+											"value": "1"
+										}
+									]
+								},
+								"description": "SuperAdmin advance onboarding grid."
+							},
+							"response": []
+						},
+						{
+							"name": "SuperAdmin Advance Dashboard Sales",
+							"id": "51068262-17d215a3-4e0b-4396-8643-f7d6abd92949",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"GetSuperAdminAdvanceDashboardSalesData"
+									],
+									"query": [
+										{
+											"key": "iDisplayStart",
+											"value": "0"
+										},
+										{
+											"key": "iDisplayLength",
+											"value": "10"
+										},
+										{
+											"key": "sEcho",
+											"value": "1"
+										}
+									]
+								},
+								"description": "SuperAdmin advance sales grid."
+							},
+							"response": []
+						},
+						{
+							"name": "SuperAdmin Advance Dashboard Complaints",
+							"id": "51068262-c490c1d0-3449-432b-a525-f6e4d7dc4405",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"GetSuperAdminAdvanceSummariesRegisteredComplaintsReport"
+									],
+									"query": [
+										{
+											"key": "iDisplayStart",
+											"value": "0"
+										},
+										{
+											"key": "iDisplayLength",
+											"value": "10"
+										},
+										{
+											"key": "sEcho",
+											"value": "1"
+										}
+									]
+								},
+								"description": "SuperAdmin advance complaints grid."
+							},
+							"response": []
+						},
+						{
+							"name": "SuperAdmin GAIL CMP Advance Onboarding",
+							"id": "51068262-d49e68da-56ab-46b4-9e3d-c48cef0942ea",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceGAILCMPDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"GetSuperAdminAdvanceGAILCMPDashboardOnBoardingData"
+									],
+									"query": [
+										{
+											"key": "iDisplayStart",
+											"value": "0"
+										},
+										{
+											"key": "iDisplayLength",
+											"value": "10"
+										},
+										{
+											"key": "sEcho",
+											"value": "1"
+										}
+									]
+								},
+								"description": "SuperAdmin GAIL CMP advance onboarding grid."
+							},
+							"response": []
+						},
+						{
+							"name": "SuperAdmin GAIL CMP Advance Sales",
+							"id": "51068262-8f55c66e-78d1-45fe-9e7f-04cac0c71f5b",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceGAILCMPDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"GetSuperAdminAdvanceGAILCMPDashboardSalesData"
+									],
+									"query": [
+										{
+											"key": "iDisplayStart",
+											"value": "0"
+										},
+										{
+											"key": "iDisplayLength",
+											"value": "10"
+										},
+										{
+											"key": "sEcho",
+											"value": "1"
+										}
+									]
+								},
+								"description": "SuperAdmin GAIL CMP advance sales grid."
+							},
+							"response": []
+						},
+						{
+							"name": "SuperAdmin GAIL CMP Advance Complaints",
+							"id": "51068262-4a104866-0d53-40eb-b628-213281219507",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceGAILCMPSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"DashboardReference",
+										"GetSuperAdminAdvanceGAILCMPSummariesRegisteredComplaintsReport"
+									],
+									"query": [
+										{
+											"key": "iDisplayStart",
+											"value": "0"
+										},
+										{
+											"key": "iDisplayLength",
+											"value": "10"
+										},
+										{
+											"key": "sEcho",
+											"value": "1"
+										}
+									]
+								},
+								"description": "SuperAdmin GAIL CMP advance complaints grid."
+							},
+							"response": []
+						}
+					],
+					"id": "51068262-cb4ee225-2a65-4a0d-9f18-fc76f9a99385",
+					"description": "Reference-only legacy dashboard APIs moved from /masters/Dashboard to /masters/DashboardReference. Current UI should use /masters/Dashboard/management and /masters/Dashboard/oic."
 				},
 				{
 					"name": "health-check",
@@ -37514,672 +38216,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "Dashboard",
-					"item": [
-						{
-							"name": "Management Dashboard",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/management?company=all-ga&dateRange=cfy",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Dashboard",
-										"management"
-									],
-									"query": [
-										{
-											"key": "company",
-											"value": "all-ga"
-										},
-										{
-											"key": "dateRange",
-											"value": "cfy"
-										}
-									]
-								},
-								"description": "Migrated from .NET DashboardController for the new dashboard screens. Gateway should inject regionconfig, common_config, and userinfo headers."
-							},
-							"response": []
-						},
-						{
-							"name": "OIC Dashboard",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/oic?company=all-ga&dateRange=cfy",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Dashboard",
-										"oic"
-									],
-									"query": [
-										{
-											"key": "company",
-											"value": "all-ga"
-										},
-										{
-											"key": "dateRange",
-											"value": "cfy"
-										}
-									]
-								},
-								"description": "Migrated from .NET DashboardController for the new dashboard screens. Gateway should inject regionconfig, common_config, and userinfo headers."
-							},
-							"response": []
-						}
-					],
-					"description": "Active dashboard APIs. Use these for the current Management and OIC dashboard screens."
-				},
-				{
-					"name": "Dashboard Reference",
-					"item": [
-						{
-							"name": "GA Admin Sales Chart",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardSalesDetailsForGAAdmin",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"BindDashboardSalesDetailsForGAAdmin"
-									]
-								},
-								"description": "Migrated from .NET DashboardController.BindDashboardSalesDetailsForGAAdmin. Used by Dashboard.cshtml Morris sales chart."
-							},
-							"response": []
-						},
-						{
-							"name": "GA Admin Activity Pie Chart",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardCustomerActivityForGAAdminJSON",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"BindDashboardCustomerActivityForGAAdminJSON"
-									]
-								},
-								"description": "Migrated from .NET DashboardController.BindDashboardCustomerActivityForGAAdminJSON. Used by Dashboard.cshtml c3 activity pie chart."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin Sales Chart",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardSalesDetailsForSuperAdminJson",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"BindDashboardSalesDetailsForSuperAdminJson"
-									]
-								},
-								"description": "Migrated from .NET DashboardController.BindDashboardSalesDetailsForSuperAdminJson. Used by SuperAdminDashboard.cshtml Morris sales chart."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin Activity Pie Chart",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardCustomerActivityForSuperAdminJSON",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"BindDashboardCustomerActivityForSuperAdminJSON"
-									]
-								},
-								"description": "Migrated from .NET DashboardController.BindDashboardCustomerActivityForSuperAdminJSON. Used by SuperAdminDashboard.cshtml c3 activity pie chart."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin GAIL CMP Dashboard",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/gail-cmp",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"gail-cmp"
-									]
-								},
-								"description": "SuperAdminDashboardForGAILCMP page data."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin GAIL CMP Sales Chart",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardSalesDetailsForSuperAdminJsonForGAILCMP",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"BindDashboardSalesDetailsForSuperAdminJsonForGAILCMP"
-									]
-								},
-								"description": "GAIL CMP dashboard sales chart."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin GAIL CMP Activity Pie Chart",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardCustomerActivityForSuperAdminJSONForGAILCMP",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"BindDashboardCustomerActivityForSuperAdminJSONForGAILCMP"
-									]
-								},
-								"description": "GAIL CMP dashboard activity pie chart."
-							},
-							"response": []
-						},
-						{
-							"name": "Advance Dashboard Status Summary",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetAdvanceDashboardCustomerSummariesStatus?iDisplayStart=0&iDisplayLength=10&sEcho=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"GetAdvanceDashboardCustomerSummariesStatus"
-									],
-									"query": [
-										{
-											"key": "iDisplayStart",
-											"value": "0"
-										},
-										{
-											"key": "iDisplayLength",
-											"value": "10"
-										},
-										{
-											"key": "sEcho",
-											"value": "1"
-										}
-									]
-								},
-								"description": "Advance report status summary grid."
-							},
-							"response": []
-						},
-						{
-							"name": "GA Advance Dashboard Onboarding",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"GetAdvanceDashboardOnBoardingData"
-									],
-									"query": [
-										{
-											"key": "iDisplayStart",
-											"value": "0"
-										},
-										{
-											"key": "iDisplayLength",
-											"value": "10"
-										},
-										{
-											"key": "sEcho",
-											"value": "1"
-										}
-									]
-								},
-								"description": "GA advance onboarding grid."
-							},
-							"response": []
-						},
-						{
-							"name": "GA Advance Dashboard Sales",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"GetAdvanceDashboardSalesData"
-									],
-									"query": [
-										{
-											"key": "iDisplayStart",
-											"value": "0"
-										},
-										{
-											"key": "iDisplayLength",
-											"value": "10"
-										},
-										{
-											"key": "sEcho",
-											"value": "1"
-										}
-									]
-								},
-								"description": "GA advance sales grid."
-							},
-							"response": []
-						},
-						{
-							"name": "GA Advance Dashboard Complaints",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"GetAdvanceSummariesRegisteredComplaintsReport"
-									],
-									"query": [
-										{
-											"key": "iDisplayStart",
-											"value": "0"
-										},
-										{
-											"key": "iDisplayLength",
-											"value": "10"
-										},
-										{
-											"key": "sEcho",
-											"value": "1"
-										}
-									]
-								},
-								"description": "GA advance complaints grid."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin Advance Dashboard Onboarding",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"GetSuperAdminAdvanceDashboardOnBoardingData"
-									],
-									"query": [
-										{
-											"key": "iDisplayStart",
-											"value": "0"
-										},
-										{
-											"key": "iDisplayLength",
-											"value": "10"
-										},
-										{
-											"key": "sEcho",
-											"value": "1"
-										}
-									]
-								},
-								"description": "SuperAdmin advance onboarding grid."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin Advance Dashboard Sales",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"GetSuperAdminAdvanceDashboardSalesData"
-									],
-									"query": [
-										{
-											"key": "iDisplayStart",
-											"value": "0"
-										},
-										{
-											"key": "iDisplayLength",
-											"value": "10"
-										},
-										{
-											"key": "sEcho",
-											"value": "1"
-										}
-									]
-								},
-								"description": "SuperAdmin advance sales grid."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin Advance Dashboard Complaints",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"GetSuperAdminAdvanceSummariesRegisteredComplaintsReport"
-									],
-									"query": [
-										{
-											"key": "iDisplayStart",
-											"value": "0"
-										},
-										{
-											"key": "iDisplayLength",
-											"value": "10"
-										},
-										{
-											"key": "sEcho",
-											"value": "1"
-										}
-									]
-								},
-								"description": "SuperAdmin advance complaints grid."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin GAIL CMP Advance Onboarding",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceGAILCMPDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"GetSuperAdminAdvanceGAILCMPDashboardOnBoardingData"
-									],
-									"query": [
-										{
-											"key": "iDisplayStart",
-											"value": "0"
-										},
-										{
-											"key": "iDisplayLength",
-											"value": "10"
-										},
-										{
-											"key": "sEcho",
-											"value": "1"
-										}
-									]
-								},
-								"description": "SuperAdmin GAIL CMP advance onboarding grid."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin GAIL CMP Advance Sales",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceGAILCMPDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"GetSuperAdminAdvanceGAILCMPDashboardSalesData"
-									],
-									"query": [
-										{
-											"key": "iDisplayStart",
-											"value": "0"
-										},
-										{
-											"key": "iDisplayLength",
-											"value": "10"
-										},
-										{
-											"key": "sEcho",
-											"value": "1"
-										}
-									]
-								},
-								"description": "SuperAdmin GAIL CMP advance sales grid."
-							},
-							"response": []
-						},
-						{
-							"name": "SuperAdmin GAIL CMP Advance Complaints",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceGAILCMPSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"DashboardReference",
-										"GetSuperAdminAdvanceGAILCMPSummariesRegisteredComplaintsReport"
-									],
-									"query": [
-										{
-											"key": "iDisplayStart",
-											"value": "0"
-										},
-										{
-											"key": "iDisplayLength",
-											"value": "10"
-										},
-										{
-											"key": "sEcho",
-											"value": "1"
-										}
-									]
-								},
-								"description": "SuperAdmin GAIL CMP advance complaints grid."
-							},
-							"response": []
-						}
-					],
-					"description": "Reference-only legacy dashboard APIs moved from /masters/Dashboard to /masters/DashboardReference. Current UI should use /masters/Dashboard/management and /masters/Dashboard/oic."
 				}
 			],
 			"id": "51068262-bc5ef91a-fd4d-415b-976d-667cabe9da6e"
