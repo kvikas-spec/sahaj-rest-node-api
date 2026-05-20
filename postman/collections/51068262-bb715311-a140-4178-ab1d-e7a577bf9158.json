@@ -36679,7 +36679,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/management?company=Sonepat&dateRange=cfy",
+									"raw": "{{api_gateway_url}}/masters/Dashboard/management?company=Bharatpur&dateRange=cfy",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -36691,7 +36691,7 @@
 									"query": [
 										{
 											"key": "company",
-											"value": "Sonepat"
+											"value": "Bharatpur"
 										},
 										{
 											"key": "dateRange",
