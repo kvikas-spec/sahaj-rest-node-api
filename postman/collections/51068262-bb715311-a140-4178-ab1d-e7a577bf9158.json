@@ -36744,6 +36744,96 @@
 								"description": "Migrated from .NET DashboardController for the new dashboard screens. Gateway should inject regionconfig, common_config, and userinfo headers."
 							},
 							"response": []
+						},
+						{
+							"name": "Schedule Dashboard Summary",
+							"id": "51068262-777ea520-688e-4e2a-bcf1-75d645534657",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Dashboard/schedule-summary",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Dashboard",
+										"schedule-summary"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Refresh Dashboard Summary",
+							"id": "51068262-cbca8377-cceb-43d0-8731-33305740fb02",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"dashboardType\": \"management\",\n  \"filters\": {\n    \"dateRange\": \"cfy\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Dashboard/refresh-summary",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Dashboard",
+										"refresh-summary"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "51068262-8a601baf-e2f7-4c71-9f79-6004430cea16",
@@ -37348,96 +37438,6 @@
 									]
 								},
 								"description": "SuperAdmin GAIL CMP advance complaints grid."
-							},
-							"response": []
-						},
-						{
-							"name": "Refresh Dashboard Summary",
-							"id": "51068262-cbca8377-cceb-43d0-8731-33305740fb02",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{access_token}}",
-										"type": "text"
-									},
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"dashboardType\": \"management\",\n  \"filters\": {\n    \"dateRange\": \"cfy\"\n  }\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/refresh-summary",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Dashboard",
-										"refresh-summary"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Schedule Dashboard Summary",
-							"id": "51068262-777ea520-688e-4e2a-bcf1-75d645534657",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{access_token}}",
-										"type": "text"
-									},
-									{
-										"key": "x-region-id",
-										"value": "Meerut",
-										"type": "text"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/schedule-summary",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"masters",
-										"Dashboard",
-										"schedule-summary"
-									]
-								}
 							},
 							"response": []
 						}
