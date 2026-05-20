@@ -36679,7 +36679,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/management?company=Patna&dateRange=cfy",
+									"raw": "{{api_gateway_url}}/masters/Dashboard/management?company=Sonepat&dateRange=cfy",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -36691,7 +36691,7 @@
 									"query": [
 										{
 											"key": "company",
-											"value": "Patna"
+											"value": "Sonepat"
 										},
 										{
 											"key": "dateRange",
