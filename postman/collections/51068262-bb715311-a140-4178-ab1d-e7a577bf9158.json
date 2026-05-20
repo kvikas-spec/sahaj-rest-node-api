@@ -37356,6 +37356,94 @@
 								"header": []
 							},
 							"response": []
+						},
+						{
+							"name": "Refresh Dashboard Summary",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Dashboard/refresh-summary",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Dashboard",
+										"refresh-summary"
+									]
+								},
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"dashboardType\": \"management\",\n  \"filters\": {\n    \"dateRange\": \"cfy\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Schedule Dashboard Summary",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Dashboard/schedule-summary",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Dashboard",
+										"schedule-summary"
+									]
+								},
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "51068262-1466d752-ef50-4d7f-9a23-f0087d69046c",

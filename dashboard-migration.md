@@ -35,6 +35,8 @@
 
 - `GET /masters/Dashboard/management`
 - `GET /masters/Dashboard/oic`
+- `POST /masters/Dashboard/refresh-summary`
+- `POST /masters/Dashboard/schedule-summary`
 
 ### Reference dashboard APIs
 
@@ -69,3 +71,10 @@
   - Management: summary cards, estimated vs actual billing, sale quantity, sale amount, legacy GA Admin sales/activity payloads, key activities, pricing, complaints.
   - OIC: summary cards, sale quantity, sale amount, financial-year trends, complaints.
 - Query parameters supported: `company`, `gaId`, `dateRange`, `fromDate`, `toDate`.
+- Dashboard responses are cached in common DB `dbo.DashboardSummaryCache` summary table. The cache is stored by dashboard card/section instead of one full payload column:
+  - card metrics use `SummarySection`, `MetricKey`, `MetricLabel`, `MetricFormat`, and `MetricValueDecimal`.
+  - chart/table/filter sections use `SectionPayload` per section, not one full dashboard payload.
+- Cache writes use common DB stored procedures `dbo.uspDeleteDashboardSummaryCache` and `dbo.uspUpsertDashboardSummaryCache`; live regional queries only run on cache miss, forced refresh, or stale data from a previous day.
+- Expired same-day summaries are returned with `summarySource: "summary-stale"` so dashboard calls stay fast; the request also queues a BullMQ refresh when regional/common DB context is available.
+- `refresh-summary` enqueues a BullMQ rebuild job for a dashboard type and filter set.
+- `schedule-summary` registers BullMQ repeatable summary rebuild jobs for the current regional DB, storing refreshed card/section rows in the common DB.

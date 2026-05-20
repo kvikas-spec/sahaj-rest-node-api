@@ -100,3 +100,22 @@ SuperAdmin GAIL CMP Advance Dashboard Complaints
 curl --location '{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceGAILCMPSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1' \
   --header 'Authorization: Bearer {{access_token}}' \
   --header 'x-region-id: Meerut'
+
+Refresh Dashboard Summary
+curl --location '{{api_gateway_url}}/masters/Dashboard/refresh-summary' \
+  --header 'Authorization: Bearer {{access_token}}' \
+  --header 'x-region-id: Meerut' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "dashboardType": "management",
+    "filters": {
+      "dateRange": "cfy"
+    }
+  }'
+
+Schedule Dashboard Summary
+curl --location '{{api_gateway_url}}/masters/Dashboard/schedule-summary' \
+  --header 'Authorization: Bearer {{access_token}}' \
+  --header 'x-region-id: Meerut' \
+  --header 'Content-Type: application/json' \
+  --data '{}'
