@@ -36674,12 +36674,12 @@
 								"header": [
 									{
 										"key": "x-region-id",
-										"value": "Meerut",
+										"value": "Patna",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/management?company=Meerut&dateRange=cfy",
+									"raw": "{{api_gateway_url}}/masters/Dashboard/management?company=Patna&dateRange=cfy",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -36691,7 +36691,7 @@
 									"query": [
 										{
 											"key": "company",
-											"value": "Meerut"
+											"value": "Patna"
 										},
 										{
 											"key": "dateRange",
