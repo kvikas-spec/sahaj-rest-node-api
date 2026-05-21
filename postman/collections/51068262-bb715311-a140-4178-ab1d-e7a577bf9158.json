@@ -36679,7 +36679,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/management?company=Bharatpur&dateRange=cfy",
+									"raw": "{{api_gateway_url}}/masters/Dashboard/management?company=Meerut&dateRange=cfy",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -36691,7 +36691,7 @@
 									"query": [
 										{
 											"key": "company",
-											"value": "Bharatpur"
+											"value": "Meerut"
 										},
 										{
 											"key": "dateRange",
