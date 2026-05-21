@@ -36679,7 +36679,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/management?company=all-ga&dateRange=cfy",
+									"raw": "{{api_gateway_url}}/masters/Dashboard/management?dateRange=cfy&gaId=19",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -36691,7 +36691,8 @@
 									"query": [
 										{
 											"key": "company",
-											"value": "all-ga"
+											"value": "all-ga",
+											"disabled": true
 										},
 										{
 											"key": "dateRange",
@@ -36701,6 +36702,11 @@
 											"key": "dateRange",
 											"value": "6m",
 											"disabled": true
+										},
+										{
+											"key": "gaId",
+											"value": "19",
+											"type": "text"
 										}
 									]
 								},
