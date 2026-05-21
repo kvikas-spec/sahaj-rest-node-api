@@ -36679,7 +36679,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/management?dateRange=cfy&gaId=0",
+									"raw": "{{api_gateway_url}}/masters/Dashboard/management?dateRange=cfy&gaId=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -36705,7 +36705,7 @@
 										},
 										{
 											"key": "gaId",
-											"value": "0"
+											"value": "1"
 										}
 									]
 								},
