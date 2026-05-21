@@ -36721,7 +36721,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/oic?company=Patna&dateRange=cfy",
+									"raw": "{{api_gateway_url}}/masters/Dashboard/oic?company=Meerut&dateRange=cfy",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -36733,7 +36733,7 @@
 									"query": [
 										{
 											"key": "company",
-											"value": "Patna"
+											"value": "Meerut"
 										},
 										{
 											"key": "dateRange",
