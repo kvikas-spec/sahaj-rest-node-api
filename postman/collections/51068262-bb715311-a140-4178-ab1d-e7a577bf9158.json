@@ -68,7 +68,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"SUNILJHA@GAIL.CO.IN\",\n    \"otp\": 123456\n}\n\n// Meerut - ANK08195@GAIL.CO.IN, supervisor1@gmail.com\n// Patna -  SANJEEV.KUMAR2@GAIL.CO.IN\n//BISHUMINZ@GAIL.CO.IN\n// SUPER_ADMIN   -  SUNILJHA@GAIL.CO.IN\n ",
+							"raw": "{\n    \"username\": \"ANK08195@GAIL.CO.IN\",\n    \"otp\": 123456\n}\n\n// Meerut - ANK08195@GAIL.CO.IN, supervisor1@gmail.com\n// Patna -  SANJEEV.KUMAR2@GAIL.CO.IN\n//BISHUMINZ@GAIL.CO.IN\n// SUPER_ADMIN   -  SUNILJHA@GAIL.CO.IN\n ",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -276,7 +276,7 @@
 							"basic": [
 								{
 									"key": "username",
-									"value": "SUNILJHA@GAIL.CO.IN",
+									"value": "ANK08195@GAIL.CO.IN",
 									"type": "string"
 								},
 								{
