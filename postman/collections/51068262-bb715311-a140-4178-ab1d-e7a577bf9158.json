@@ -6422,7 +6422,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1778652983768-67182422_Screenshot from 2026-05-08 15-41-11.png\",\n    \"ConsumerNumber\": 3000038900,\n    \"Cycle\": \"2605\",\n    \"WardId\": 13,\n    \"ReadingDate\": \"2026-04-25\",\n    \"BillDate\": \"2026-04-25\",\n    \"FullName\": \"LPC\",\n    \"BillNumber\": 3000038900202611,\n    \"CurrentReading\": 42,\n    \"PreviousReading\": 52,\n    \"MeterStatusId\": 12,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": -10\n}\n",
+											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1779805632751-806116689_Screenshot from 2026-05-25 16-35-48.png\",\n    \"ConsumerNumber\": 3000039081,\n    \"Cycle\": \"2603\",\n    \"WardId\": 16,\n    \"ReadingDate\": \"2026-03-20\",\n    \"BillDate\": \"2026-03-20\",\n    \"FullName\": \"Dustin Cochran\",\n    \"BillNumber\": 3000039081202601,\n    \"CurrentReading\": 20,\n    \"PreviousReading\": 18,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 2\n}",
 											"options": {
 												"raw": {
 													"language": "json"
