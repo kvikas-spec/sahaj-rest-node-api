@@ -36690,11 +36690,6 @@
 									],
 									"query": [
 										{
-											"key": "company",
-											"value": "all-ga",
-											"disabled": true
-										},
-										{
 											"key": "dateRange",
 											"value": "cfy"
 										},
@@ -36739,11 +36734,6 @@
 										{
 											"key": "dateRange",
 											"value": "cfy"
-										},
-										{
-											"key": "company",
-											"value": "Meerut",
-											"disabled": true
 										},
 										{
 											"key": "gaId",
