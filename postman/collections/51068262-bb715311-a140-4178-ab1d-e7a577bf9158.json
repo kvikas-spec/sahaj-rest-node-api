@@ -6360,7 +6360,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/listOfDetails?isFilter=1&pageNo=1&pageSize=20&ConsumerNumber=3000297944",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/listOfDetails?isFilter=1&pageNo=1&pageSize=10",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6379,10 +6379,6 @@
 													"value": "1"
 												},
 												{
-													"key": "pageSize",
-													"value": "20"
-												},
-												{
 													"key": "sort",
 													"value": "MeterReadingId:DESC",
 													"disabled": true
@@ -6394,12 +6390,17 @@
 												},
 												{
 													"key": "ConsumerNumber",
-													"value": "3000297944"
+													"value": "3000297944",
+													"disabled": true
 												},
 												{
 													"key": "wardId",
 													"value": "",
 													"disabled": true
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
 												}
 											]
 										}
