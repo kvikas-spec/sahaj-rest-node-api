@@ -36680,7 +36680,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/management?dateRange=cfy&gaId=2",
+									"raw": "{{api_gateway_url}}/masters/Dashboard/management?dateRange=cfy",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -36696,12 +36696,19 @@
 										},
 										{
 											"key": "dateRange",
-											"value": "6m",
+											"value": "last-6-months",
 											"disabled": true
 										},
 										{
 											"key": "gaId",
-											"value": "2"
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "dateRange",
+											"value": "last-12-months",
+											"type": "text",
+											"disabled": true
 										}
 									]
 								},
@@ -36722,7 +36729,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/oic?dateRange=cfy&gaId=0",
+									"raw": "{{api_gateway_url}}/masters/Dashboard/oic?dateRange=cfy",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -36737,8 +36744,19 @@
 											"value": "cfy"
 										},
 										{
+											"key": "dateRange",
+											"value": "last-6-months",
+											"disabled": true
+										},
+										{
 											"key": "gaId",
-											"value": "0"
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "dateRange",
+											"value": "last-12-months",
+											"disabled": true
 										}
 									]
 								},
