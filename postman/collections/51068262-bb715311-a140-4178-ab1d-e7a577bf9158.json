@@ -797,7 +797,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"Email\": \"kvikas-patna@yopmail.com\"\n}",
+							"raw": "{\n    \"Email\": \"kvikas-patna@yopmail.com\",\n    \"isForgetPassword\": 1\n}",
 							"options": {
 								"raw": {
 									"language": "json"
