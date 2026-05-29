@@ -769,6 +769,55 @@
 					"response": []
 				},
 				{
+					"name": "ForgotPassword Copy",
+					"id": "51068262-2935801c-537a-4001-8719-6e9c75fa1a67",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "regionconfig",
+								"value": "{{regionconfig}}"
+							},
+							{
+								"key": "common_config",
+								"value": "{{common_config}}"
+							},
+							{
+								"key": "user_metadata",
+								"value": "{{user_metadata}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\": \"kvikas-patna@yopmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_gateway_url}}/auth/ForgotPassword",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"auth",
+								"ForgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "logout",
 					"event": [
 						{
