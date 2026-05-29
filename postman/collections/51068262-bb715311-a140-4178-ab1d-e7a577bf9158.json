@@ -767,6 +767,35 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "logout",
+					"id": "51068262-2531e978-a94c-4a0a-8aaa-07cd43416d41",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/get?logout=1",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"get"
+							],
+							"query": [
+								{
+									"key": "logout",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "51068262-2b02da7e-6a66-4db2-8e8f-68ed95ebdaf8"
