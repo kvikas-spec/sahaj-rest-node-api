@@ -769,7 +769,7 @@
 					"response": []
 				},
 				{
-					"name": "ForgotPassword Copy",
+					"name": "ForgotPassword Otp Verification",
 					"id": "51068262-2935801c-537a-4001-8719-6e9c75fa1a67",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -805,13 +805,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{api_gateway_url}}/auth/ForgotPassword",
+							"raw": "{{api_gateway_url}}/auth/otp-verification",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
 								"auth",
-								"ForgotPassword"
+								"otp-verification"
 							]
 						}
 					},
