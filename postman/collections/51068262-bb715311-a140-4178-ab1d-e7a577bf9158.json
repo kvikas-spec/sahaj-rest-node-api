@@ -742,7 +742,8 @@
 							},
 							{
 								"key": "user_metadata",
-								"value": "{{user_metadata}}"
+								"value": "{{user_metadata}}",
+								"disabled": true
 							}
 						],
 						"body": {
