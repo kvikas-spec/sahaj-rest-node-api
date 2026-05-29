@@ -770,6 +770,21 @@
 				},
 				{
 					"name": "logout",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b2b1f801-88fd-4ccd-934e-0ad4f5383a45",
+								"exec": [
+									"pm.environment.unset(\"access_token\");",
+									"pm.environment.unset(\"temp_token\");"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "51068262-2531e978-a94c-4a0a-8aaa-07cd43416d41",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
