@@ -726,8 +726,44 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "regionconfig",
+								"value": "{{regionconfig}}"
+							},
+							{
+								"key": "common_config",
+								"value": "{{common_config}}"
+							},
+							{
+								"key": "user_metadata",
+								"value": "{{user_metadata}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\": \"user@example.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_gateway_url}}/auth/ForgotPassword",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"auth",
+								"ForgotPassword"
+							]
+						}
 					},
 					"response": []
 				}
