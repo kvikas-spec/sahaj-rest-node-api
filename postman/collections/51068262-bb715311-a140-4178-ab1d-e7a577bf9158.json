@@ -805,12 +805,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{api_gateway_url}}/auth/otp-verification",
+							"raw": "{{api_gateway_url}}/auth//ForgotPassword/otp-verification",
 							"host": [
 								"{{api_gateway_url}}"
 							],
 							"path": [
 								"auth",
+								"",
+								"ForgotPassword",
 								"otp-verification"
 							]
 						}
