@@ -6566,7 +6566,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1779805632751-806116689_Screenshot from 2026-05-25 16-35-48.png\",\n    \"ConsumerNumber\": 3000039081,\n    \"Cycle\": \"2603\",\n    \"WardId\": 16,\n    \"ReadingDate\": \"2026-03-20\",\n    \"BillDate\": \"2026-03-20\",\n    \"FullName\": \"Dustin Cochran\",\n    \"BillNumber\": 3000039081202601,\n    \"CurrentReading\": 20,\n    \"PreviousReading\": 18,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 2\n}",
+											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1780310328127-954042639_Screenshot from 2026-05-27 19-51-42.png\",\n    \"ConsumerNumber\": 3000039114,\n    \"Cycle\": \"2601\",\n    \"WardId\": 37,\n    \"ReadingDate\": \"2026-02-10\",\n    \"BillDate\": \"2026-02-10\",\n    \"FullName\": \"Jamalia Duffy\",\n    \"BillNumber\": 3000039114202601,\n    \"CurrentReading\": 30,\n    \"PreviousReading\": 10,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 20\n}",
 											"options": {
 												"raw": {
 													"language": "json"
