@@ -30982,6 +30982,88 @@
 							"response": []
 						},
 						{
+							"name": "GetAgencyUserGAWiseList",
+							"id": "51068262-4fd9a214-9f2e-4b5c-9cf7-6f8b3b2f8f91",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Users/GetAgencyUserGAWiseList?GAID=1",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Users",
+										"GetAgencyUserGAWiseList"
+									],
+									"query": [
+										{
+											"key": "GAID",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetCommonAgency",
+							"id": "51068262-7e6de41f-60c6-47f4-b06d-31df8ed9b0ec",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-region-id",
+										"value": "Meerut",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"gaIds\": [1, 2]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/Users/GetCommonAgency",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"Users",
+										"GetCommonAgency"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "IsEmailIdExist",
 							"id": "51068262-e67f9ea4-fe69-4834-9675-27f9344c27bb",
 							"protocolProfileBehavior": {
