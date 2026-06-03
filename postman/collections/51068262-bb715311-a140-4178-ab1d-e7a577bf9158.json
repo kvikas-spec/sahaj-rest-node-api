@@ -68,7 +68,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"ANK08195@GAIL.CO.IN\",\n    \"otp\": 123456\n}\n\n// Meerut - ANK08195@GAIL.CO.IN, supervisor1@gmail.com\n// Patna -  SANJEEV.KUMAR2@GAIL.CO.IN\n//BISHUMINZ@GAIL.CO.IN\n// SUPER_ADMIN   -  SUNILJHA@GAIL.CO.IN\n ",
+							"raw": "{\n    \"username\": \"parth.bhatt@gail.co.in\",\n    \"otp\": 123456\n}\n\n// Meerut - ANK08195@GAIL.CO.IN, supervisor1@gmail.com\n// Patna -  SANJEEV.KUMAR2@GAIL.CO.IN\n//BISHUMINZ@GAIL.CO.IN\n// SUPER_ADMIN   -  SUNILJHA@GAIL.CO.IN\n ",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -276,7 +276,7 @@
 							"basic": [
 								{
 									"key": "username",
-									"value": "ANK08195@GAIL.CO.IN",
+									"value": "parth.bhatt@gail.co.in",
 									"type": "string"
 								},
 								{
@@ -763,6 +763,56 @@
 							"path": [
 								"auth",
 								"ForgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ForgotPassword Otp Verification",
+					"id": "51068262-2935801c-537a-4001-8719-6e9c75fa1a67",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "regionconfig",
+								"value": "{{regionconfig}}"
+							},
+							{
+								"key": "common_config",
+								"value": "{{common_config}}"
+							},
+							{
+								"key": "user_metadata",
+								"value": "{{user_metadata}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"kvikas-patna@yopmail.com\",\n    \"otp\": 123456,\n    \"isForgetPassword\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_gateway_url}}/auth/ForgotPassword/otp-verification",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"auth",
+								"ForgotPassword",
+								"otp-verification"
 							]
 						}
 					},
@@ -6516,7 +6566,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1779805632751-806116689_Screenshot from 2026-05-25 16-35-48.png\",\n    \"ConsumerNumber\": 3000039081,\n    \"Cycle\": \"2603\",\n    \"WardId\": 16,\n    \"ReadingDate\": \"2026-03-20\",\n    \"BillDate\": \"2026-03-20\",\n    \"FullName\": \"Dustin Cochran\",\n    \"BillNumber\": 3000039081202601,\n    \"CurrentReading\": 20,\n    \"PreviousReading\": 18,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 2\n}",
+											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1780316979702-150036580_Screenshot from 2026-05-27 19-51-42.png\",\n    \"ConsumerNumber\": 3000039115,\n    \"Cycle\": \"2602\",\n    \"WardId\": 37,\n    \"ReadingDate\": \"2026-02-17\",\n    \"BillDate\": \"2026-02-17\",\n    \"FullName\": \"Howard Grimes\",\n    \"BillNumber\": 3000039115202601,\n    \"CurrentReading\": 40,\n    \"PreviousReading\": 20,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 20\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -8311,7 +8361,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?demandMasterId=5183067",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?demandMasterId=5257412",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -8328,7 +8378,7 @@
 												},
 												{
 													"key": "demandMasterId",
-													"value": "5183067"
+													"value": "5257412"
 												}
 											]
 										}
@@ -8567,7 +8617,7 @@
 									"variable": [
 										{
 											"key": "DemanadGenerateRequestId",
-											"value": "68244"
+											"value": "68251"
 										}
 									]
 								}
@@ -30960,7 +31010,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"RegistrationVM\": {\n        // \"EncryptedUserID\": \"61nqR+RHpTZe2mKxhXivug==\",\n        \"IsMobileFlag\": 0,\n        \"IsADUsers\": false,\n        \"AgencyId\": 73,\n        \"FirstName\": \"Prudwi\",\n        \"MiddleName\": \"\",\n        \"Surname\": \"raj\",\n        \"Address\": \"Hello\",\n        \"DateOfJoining\": null,\n        \"Designation\": null,\n        \"PhoneNumber\": \"9589483421\",\n        \"AltMobileNumber\": null,\n        \"Department\": null,\n        \"EmailId\": \"prudwiraj1@gmail.com\",\n        \"EmployeeId\": \"Prudwi\",\n        \"RoleID\": \"1\",\n        \"Roles\": \"1\",\n        \"localGAIds\": [\n            1\n        ],\n        \"UserImage\": \"\"\n    }\n}",
+									"raw": "// {\n//     \"RegistrationVM\": {\n//         // \"EncryptedUserID\": \"61nqR+RHpTZe2mKxhXivug==\",\n//         \"IsMobileFlag\": 0,\n//         \"IsADUsers\": false,\n//         \"AgencyId\": 73,\n//         \"FirstName\": \"Prudwi\",\n//         \"MiddleName\": \"\",\n//         \"Surname\": \"raj\",\n//         \"Address\": \"Hello\",\n//         \"DateOfJoining\": null,\n//         \"Designation\": null,\n//         \"PhoneNumber\": \"9589483421\",\n//         \"AltMobileNumber\": null,\n//         \"Department\": null,\n//         \"EmailId\": \"prudwiraj1@gmail.com\",\n//         \"EmployeeId\": \"Prudwi\",\n//         \"RoleID\": \"1\",\n//         \"Roles\": \"1\",\n//         \"localGAIds\": [\n//             1\n//         ],\n//         \"UserImage\": \"\"\n//     }\n// }\n\n{\n    \"RegistrationVM\": {\n        \"IsMobileFlag\": 0,\n        \"IsADUsers\": false,\n        \"AgencyId\": 98,\n        \"FirstName\": \"Ut est natus enim po\",\n        \"MiddleName\": \"Et perferendis volup\",\n        \"Surname\": \"Ullamco a et natus c\",\n        \"Address\": \"Maxime fugiat adipis\",\n        \"DateOfJoining\": \"2012-02-19\",\n        \"Designation\": \"Doloremque pariatur\",\n        \"PhoneNumber\": \"8681212229\",\n        \"AltMobileNumber\": null,\n        \"Department\": \"Enim amet minim mol\",\n        \"EmailId\": \"magesilax2@mailinator.com\",\n        \"EmployeeId\": \"Blanditiis amet con\",\n        \"RoleID\": \"2\",\n        \"Roles\": \"2\",\n        \"localGAIds\": [\n            5\n        ],\n        \"UserImage\": \"\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
