@@ -30795,14 +30795,14 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/reports/technical-audit/mr-arrival-notification-history?pageNo=1&pageSize=10&meterReader=John&notifFromDate=2026-01-01&notifToDate=2026-06-30&invoiceFromDate=2026-03-01&invoiceToDate=2026-03-31&search=3000036044",
+									"raw": "{{api_gateway_url}}/reports/technical-audit/ocr-detail-report?pageNo=1&pageSize=10",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"reports",
 										"technical-audit",
-										"mr-arrival-notification-history"
+										"ocr-detail-report"
 									],
 									"query": [
 										{
@@ -30812,30 +30812,6 @@
 										{
 											"key": "pageSize",
 											"value": "10"
-										},
-										{
-											"key": "meterReader",
-											"value": "John"
-										},
-										{
-											"key": "notifFromDate",
-											"value": "2026-01-01"
-										},
-										{
-											"key": "notifToDate",
-											"value": "2026-06-30"
-										},
-										{
-											"key": "invoiceFromDate",
-											"value": "2026-03-01"
-										},
-										{
-											"key": "invoiceToDate",
-											"value": "2026-03-31"
-										},
-										{
-											"key": "search",
-											"value": "3000036044"
 										}
 									]
 								}
