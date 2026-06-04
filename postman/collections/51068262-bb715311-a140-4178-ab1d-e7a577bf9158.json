@@ -31033,7 +31033,7 @@
 						},
 						{
 							"name": "GetAgencyUserGAWiseList",
-							"id": "51068262-4fd9a214-9f2e-4b5c-9cf7-6f8b3b2f8f91",
+							"id": "51068262-9b8b4599-8cd0-4363-8f76-e4e27f21f9b6",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -31077,7 +31077,7 @@
 						},
 						{
 							"name": "GetCommonAgency",
-							"id": "51068262-7e6de41f-60c6-47f4-b06d-31df8ed9b0ec",
+							"id": "51068262-ac5278ab-fc76-48cb-ac20-571f0e5416b8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
