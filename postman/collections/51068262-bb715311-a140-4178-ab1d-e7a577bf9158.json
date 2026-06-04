@@ -30705,7 +30705,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/reports/technical-audit/mr-arrival-notification-history?pageNo=1&pageSize=10&invoiceFromDate=2026-03-01&invoiceToDate=2026-03-30",
+									"raw": "{{api_gateway_url}}/reports/technical-audit/mr-arrival-notification-history?pageNo=1&pageSize=10&notifFromDate=2026-03-01&notifToDate=2026-03-31&invoiceFromDate=2026-03-01&invoiceToDate=2026-03-31",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30730,13 +30730,11 @@
 										},
 										{
 											"key": "notifFromDate",
-											"value": "2026-05-01",
-											"disabled": true
+											"value": "2026-03-01"
 										},
 										{
 											"key": "notifToDate",
-											"value": "2026-05-31",
-											"disabled": true
+											"value": "2026-03-31"
 										},
 										{
 											"key": "invoiceFromDate",
@@ -30744,7 +30742,7 @@
 										},
 										{
 											"key": "invoiceToDate",
-											"value": "2026-03-30"
+											"value": "2026-03-31"
 										},
 										{
 											"key": "search",
