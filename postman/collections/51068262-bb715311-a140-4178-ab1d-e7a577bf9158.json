@@ -30795,7 +30795,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/reports/technical-audit/ocr-detail-report?pageNo=1&pageSize=25&fromDate=2026-01-01&toDate=2026-05-31&isRegistrationDone=Yes",
+									"raw": "{{api_gateway_url}}/reports/technical-audit/ocr-detail-report?pageNo=1&pageSize=25&fromDate=2026-01-01&toDate=2026-05-31",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30823,11 +30823,12 @@
 										},
 										{
 											"key": "isRegistrationDone",
-											"value": "Yes"
+											"value": "Yes",
+											"disabled": true
 										},
 										{
 											"key": "search",
-											"value": "12345",
+											"value": "4000489282",
 											"disabled": true
 										}
 									]
