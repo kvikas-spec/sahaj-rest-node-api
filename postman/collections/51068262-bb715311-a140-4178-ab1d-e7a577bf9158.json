@@ -30705,7 +30705,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/reports/technical-audit/mr-arrival-notification-history?pageNo=1&pageSize=10&notifFromDate=2026-01-01&notifToDate=2026-03-31",
+									"raw": "{{api_gateway_url}}/reports/technical-audit/mr-arrival-notification-history?pageNo=1&pageSize=10&notifFromDate=2026-01-01&notifToDate=2026-06-30&search=3000036044",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -30734,7 +30734,7 @@
 										},
 										{
 											"key": "notifToDate",
-											"value": "2026-03-31"
+											"value": "2026-06-30"
 										},
 										{
 											"key": "invoiceFromDate",
@@ -30748,8 +30748,7 @@
 										},
 										{
 											"key": "search",
-											"value": "BHARGAV",
-											"disabled": true
+											"value": "3000036044"
 										}
 									]
 								}
