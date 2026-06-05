@@ -30296,16 +30296,16 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "push-notification",
 					"id": "51068262-dc4ade0b-8cd0-4a1a-b2be-743299199022",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:4008/api/v1/notifications//send-to-users",
+							"raw": "http://localhost:4008/api/v1/push-notification/send-to-users",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -30314,8 +30314,7 @@
 							"path": [
 								"api",
 								"v1",
-								"notifications",
-								"",
+								"push-notification",
 								"send-to-users"
 							]
 						}
