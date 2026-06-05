@@ -30303,7 +30303,21 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3005/api/v1/notifications/email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"notifications",
+								"email"
+							]
+						}
 					},
 					"response": []
 				}
