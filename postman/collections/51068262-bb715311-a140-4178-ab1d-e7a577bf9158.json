@@ -30304,6 +30304,15 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tokenList\": [],\n    \"notification\": {\n        \"Title\": \"GailGas Notification\",\n        \"Body\": \"Your bill has been generated successfully.\"\n    },\n    \"Data\": {\n        // custom payload — all values must be strings \n        \"ConsumerId\": 12345,\n        \"FormType\": \"BillGeneration\",\n        \"RedirectTo\": \"QuickPaymentActivity\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://localhost:4008/api/v1/push-notification/send-to-users",
 							"protocol": "http",
