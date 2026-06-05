@@ -30314,7 +30314,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:4008/api/v1/push-notification/send-to-users",
+							"raw": "http://localhost:4008/api/v1/push-notification/send-to-device",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -30324,7 +30324,7 @@
 								"api",
 								"v1",
 								"push-notification",
-								"send-to-users"
+								"send-to-device"
 							]
 						}
 					},
