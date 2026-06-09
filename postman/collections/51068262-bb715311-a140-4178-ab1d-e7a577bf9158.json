@@ -6606,7 +6606,7 @@
 											"formdata": []
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetLastReadingDateByConsumerNo?ConsNo=3000038711&CycleNo=2601",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetLastReadingDateByConsumerNo?ConsNo=3000036050&CycleNo=2501",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6618,11 +6618,11 @@
 											"query": [
 												{
 													"key": "ConsNo",
-													"value": "3000038711"
+													"value": "3000036050"
 												},
 												{
 													"key": "CycleNo",
-													"value": "2601"
+													"value": "2501"
 												}
 											]
 										}
