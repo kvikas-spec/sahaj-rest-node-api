@@ -30314,16 +30314,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://10.0.53.162:4008/api/v1/push-notification/send-to-device",
+							"raw": "http://http://10.0.54.170:4008/api/v1/push-notification/send-to-device",
 							"protocol": "http",
 							"host": [
-								"10",
-								"0",
-								"53",
-								"162"
+								"http"
 							],
-							"port": "4008",
+							"port": "",
 							"path": [
+								"",
+								"10.0.54.170:4008",
 								"api",
 								"v1",
 								"push-notification",
