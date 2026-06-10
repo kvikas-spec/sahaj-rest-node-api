@@ -6606,7 +6606,7 @@
 											"formdata": []
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetLastReadingDateByConsumerNo?ConsNo=3000036050&CycleNo=2501",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetLastReadingDateByConsumerNo?ConsNo=3000038906&CycleNo=2501",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6618,7 +6618,7 @@
 											"query": [
 												{
 													"key": "ConsNo",
-													"value": "3000036050"
+													"value": "3000038906"
 												},
 												{
 													"key": "CycleNo",
@@ -6681,7 +6681,7 @@
 											"raw": "{\n    \"TransactionDate\":\"\"\n}"
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetConsumerSCMValidation?ConsNo=4000375033&CycleNo=2602&UnitUsed=5&MeterStatusId=1&readingDate=2026-05-01",
+											"raw": "{{api_gateway_url}}/billing-payment/meter-reading/GetConsumerSCMValidation?ConsNo=4000375033&CycleNo=2602&UnitUsed=55&MeterStatusId=1&readingDate=2026-05-08&isMeterReplacement=1",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -6701,7 +6701,7 @@
 												},
 												{
 													"key": "UnitUsed",
-													"value": "5"
+													"value": "55"
 												},
 												{
 													"key": "MeterStatusId",
@@ -6709,7 +6709,12 @@
 												},
 												{
 													"key": "readingDate",
-													"value": "2026-05-01"
+													"value": "2026-05-08"
+												},
+												{
+													"key": "isMeterReplacement",
+													"value": "1",
+													"type": "text"
 												}
 											]
 										}
@@ -30306,7 +30311,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"token\": \"dJ5mwoY_SdadkgI9PEwsno:APA91bE8M7e0QZ-MhO7saUceSgAXkuAhW3p7FTVB6thEOuR1xxmPxigvJHEK8A0aexAzYjNd5miD6tP6cSLDDGYU9jfSPh_7StjhoZvYq8xL10HTfwQGVq8\",\n    \"notification\": {\n        \"Title\": \"GailGas Notification\",\n        \"Body\": \"Your bill has been generated successfully.\"\n    },\n    \"Data\": {\n        // custom payload — all values must be strings \n        \"ConsumerId\": \"3000002390\",\n        \"ConsumerNumber\": \"3000002390\",\n        \"FormType\": \"BillGeneration\",\n        \"RedirectTo\": \"QuickPaymentActivity\"\n    }\n}",
+							"raw": "{\n    \"token\": \"fFrf4EfLqkyAuarZqDlxjX:APA91bEtZJdtpqah7ydQfzfFoc_myWcXEvVltuL6dQmXMQTDocxnSQwilf4LsJ0lzgQe2rUdQMGYHJ8bOehsa9nCZA_qMc88uZ2A_LrY8ECc0268C8TUEZA\",\n    \"notification\": {\n        \"Title\": \"GailGas Notification\",\n        \"Body\": \"Your bill has been generated successfully.\"\n    },\n    \"Data\": {\n        // custom payload — all values must be strings \n        \"ConsumerId\": \"3000002390\",\n        \"ConsumerNumber\": \"3000002390\",\n        \"FormType\": \"BillGeneration\",\n        \"RedirectTo\": \"QuickPaymentActivity\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
