@@ -6566,7 +6566,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1780316979702-150036580_Screenshot from 2026-05-27 19-51-42.png\",\n    \"ConsumerNumber\": 3000039115,\n    \"Cycle\": \"2602\",\n    \"WardId\": 37,\n    \"ReadingDate\": \"2026-02-17\",\n    \"BillDate\": \"2026-02-17\",\n    \"FullName\": \"Howard Grimes\",\n    \"BillNumber\": 3000039115202601,\n    \"CurrentReading\": 40,\n    \"PreviousReading\": 20,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 20\n}",
+											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1781076909288-22041580_Screenshot from 2026-06-08 17-48-35.png\",\n    \"ConsumerNumber\": 3000038906,\n    \"Cycle\": \"2601\",\n    \"WardId\": 19,\n    \"ReadingDate\": \"2026-04-15\",\n    \"BillDate\": \"2026-04-15\",\n    \"FullName\": \"Lokesh kumar \",\n    \"BillNumber\": 3000038906202601,\n    \"CurrentReading\": 5,\n    \"PreviousReading\": 0.05,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 4.95\n}",
 											"options": {
 												"raw": {
 													"language": "json"
