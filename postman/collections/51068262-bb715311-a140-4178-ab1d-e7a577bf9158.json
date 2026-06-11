@@ -30311,7 +30311,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"token\": \"fFrf4EfLqkyAuarZqDlxjX:APA91bEtZJdtpqah7ydQfzfFoc_myWcXEvVltuL6dQmXMQTDocxnSQwilf4LsJ0lzgQe2rUdQMGYHJ8bOehsa9nCZA_qMc88uZ2A_LrY8ECc0268C8TUEZA\",\n    \"notification\": {\n        \"Title\": \"GailGas Notification\",\n        \"Body\": \"Your bill has been generated successfully.\"\n    },\n    \"Data\": {\n        // custom payload — all values must be strings \n        \"ConsumerId\": \"3000002390\",\n        \"ConsumerNumber\": \"3000002390\",\n        \"FormType\": \"BillGeneration\",\n        \"RedirectTo\": \"QuickPaymentActivity\"\n    }\n}",
+							"raw": "{\n    \"token\": \"fFrf4EfLqkyAuarZqDlxjX:APA91bEtZJdtpqah7ydQfzfFoc_myWcXEvVltuL6dQmXMQTDocxnSQwilf4LsJ0lzgQe2rUdQMGYHJ8bOehsa9nCZA_qMc88uZ2A_LrY8ECc0268C8TUEZA\",\n    \"notification\": {\n        \"Title\": \"GailGas Notification\",\n        \"Body\": \"Your bill has been generated successfully.\"\n    },\n    \"Data\": { // ConsumerNumber: String(objDemandMaster.ConsumerNumber),\n        \"ConsumerId\": \"3000002390\",\n        \"RedirectTo\": \"QuickPaymentActivity\",\n        // image_url: \"https://www.gailonline.com/upload/images/email-banner.png\",\n        \"category\": \"QuickPaymentActivity\",\n        \"GAId\": \"1\",\n        \"ConsumerNumber\": \"\",\n        \"DemandMasterId\": \"\",\n        \"UserId\": \"\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
