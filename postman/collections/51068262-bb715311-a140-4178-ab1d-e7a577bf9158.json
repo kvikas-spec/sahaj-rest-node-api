@@ -38173,7 +38173,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "pending-records",
 					"id": "51068262-fe9ec64f-a7a0-4898-b532-16ac8bf281ea",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -38205,6 +38205,51 @@
 									"key": "limit",
 									"value": "5"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "run-record",
+					"id": "51068262-54fee07e-e0ea-4c3a-a460-bd0f4a21b9a6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "regionconfig",
+								"value": "{...}"
+							},
+							{
+								"key": "common_config",
+								"value": "{...}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"recordId\": 123, \"gaName\": \"Ranchi\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_gateway_url}}/automated-mro/test/run-record",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"automated-mro",
+								"test",
+								"run-record"
 							]
 						}
 					},
