@@ -38151,7 +38151,7 @@
 			"name": "AutoMatedMro",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "health-check",
 					"id": "51068262-ccc83505-e6d4-402c-b40a-bac3a609c299",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
