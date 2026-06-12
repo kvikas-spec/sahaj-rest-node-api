@@ -38171,6 +38171,44 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "51068262-fe9ec64f-a7a0-4898-b532-16ac8bf281ea",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "regionconfig",
+								"value": "{...}"
+							},
+							{
+								"key": "common_config",
+								"value": "{...}"
+							}
+						],
+						"url": {
+							"raw": "{{api_gateway_url}}/automated-mro/test/pending-records?limit=5",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"automated-mro",
+								"test",
+								"pending-records"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "51068262-1e0746bd-66b5-47d8-bc77-23b1e711f5ec"
