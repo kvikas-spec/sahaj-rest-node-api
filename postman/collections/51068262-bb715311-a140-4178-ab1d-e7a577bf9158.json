@@ -38158,7 +38158,17 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/automated-mro/health",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"automated-mro",
+								"health"
+							]
+						}
 					},
 					"response": []
 				}
