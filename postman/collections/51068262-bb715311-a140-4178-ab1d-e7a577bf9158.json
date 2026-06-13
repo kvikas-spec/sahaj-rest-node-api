@@ -33691,7 +33691,19 @@
 									},
 									"request": {
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Template/CustomizedNotification/send",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Template",
+												"CustomizedNotification",
+												"send"
+											]
+										}
 									},
 									"response": []
 								}
