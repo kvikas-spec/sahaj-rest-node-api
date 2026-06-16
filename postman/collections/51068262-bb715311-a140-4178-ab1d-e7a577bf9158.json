@@ -33412,7 +33412,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/templates?Email=true&SMS=true&IsPushNotification=true",
+											"raw": "{{api_gateway_url}}/masters/Template/NotificationManagement/templates",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -33425,16 +33425,18 @@
 											"query": [
 												{
 													"key": "Email",
-													"value": "true"
+													"value": "true",
+													"disabled": true
 												},
 												{
 													"key": "SMS",
-													"value": "true"
+													"value": "true",
+													"disabled": true
 												},
 												{
-													"key": "IsPushNotification",
+													"key": "PushNotification",
 													"value": "true",
-													"type": "text"
+													"disabled": true
 												}
 											]
 										}
