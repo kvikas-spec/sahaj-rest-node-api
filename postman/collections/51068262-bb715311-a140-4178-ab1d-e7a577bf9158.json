@@ -33555,7 +33555,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"ConsumerNumber\": \"1000000001,1000000002\",\n  \"IsEmail\": true,\n  \"IsSMS\": false,\n  \"EmailTemplateId\": 1,\n  \"EmailSubject\": \"Subject from selected template\",\n  \"HtmlContent\": \"Notification template text\"\n}",
+											"raw": "{\n    \"Email\": true,\n    \"SMS\": true,\n    \"IsEmail\": true,\n    \"IsSMS\": true,\n    \"PushNotification\": true,\n    \"IsPushNotification\": true,\n    \"EmailTemplateId\": 20979,\n    \"EmailSubject\": \"Awareness SMS\",\n    \"HtmlContent\": \"<p>Dear Customer,Please ignore any messages from unknown numbers/individuals, claiming to be from GAIL Gas and threatening to cut-off gas supply due to non-payment of bills. Please do not make any payment of your gas bills to such individuals OR on links/QR codes provided by them.Please pay your gas bills only through 1) PNG Mitra APP. or 2) GAIL Gas WEBPORTAL or 3) GAIL Gas Authorised Channels only. Regards,Team GAIL Gas</p>\",\n    \"ConsumerNumber\": \"3000038906\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
