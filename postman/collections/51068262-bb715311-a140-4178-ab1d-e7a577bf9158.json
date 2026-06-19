@@ -302,6 +302,15 @@
 								"value": "GailGas_Common"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"forceLogin\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{api_gateway_url}}/auth/login",
 							"host": [
