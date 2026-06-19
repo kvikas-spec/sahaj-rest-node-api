@@ -869,8 +869,18 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/auth/logout",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
 					},
 					"response": []
 				}
