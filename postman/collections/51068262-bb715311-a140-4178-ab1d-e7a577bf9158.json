@@ -317,6 +317,28 @@
 					"response": []
 				},
 				{
+					"name": "logout",
+					"id": "51068262-f88c9f9c-923c-4d0b-a564-c7ac9ed9e354",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/auth/logout",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "region",
 					"event": [
 						{
@@ -857,28 +879,6 @@
 									"key": "logout",
 									"value": "1"
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "New Request",
-					"id": "51068262-f88c9f9c-923c-4d0b-a564-c7ac9ed9e354",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"url": {
-							"raw": "{{api_gateway_url}}/auth/logout",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"auth",
-								"logout"
 							]
 						}
 					},
