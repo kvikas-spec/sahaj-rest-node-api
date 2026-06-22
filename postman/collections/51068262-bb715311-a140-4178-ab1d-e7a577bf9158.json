@@ -37348,7 +37348,7 @@
 									"response": []
 								},
 								{
-									"name": "New Request",
+									"name": "Add prepaid non communicating meter mapping email",
 									"id": "51068262-057383e5-bcf6-4dfa-ab9b-c4581665a76e",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -37385,6 +37385,18 @@
 												"PrepaidNONCommunicatingMeterMappingEmailAndSMS"
 											]
 										}
+									},
+									"response": []
+								},
+								{
+									"name": "New Request",
+									"id": "51068262-2ec2ba6f-0179-4cd2-9005-4826273d6c2f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
 									},
 									"response": []
 								}
