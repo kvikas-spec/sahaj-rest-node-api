@@ -37485,7 +37485,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{api_gateway_url}}/masters/Customer/PrepaidNONCommunicatingMeterMappingEmailAndSMS/:ID/active",
+											"raw": "{{api_gateway_url}}/masters/Customer/PrepaidNONCommunicatingMeterMappingEmailAndSMS/:PrepaidNONCommunicatingMeterMappingEmailSMSId/active",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -37493,12 +37493,12 @@
 												"masters",
 												"Customer",
 												"PrepaidNONCommunicatingMeterMappingEmailAndSMS",
-												":ID",
+												":PrepaidNONCommunicatingMeterMappingEmailSMSId",
 												"active"
 											],
 											"variable": [
 												{
-													"key": "ID",
+													"key": "PrepaidNONCommunicatingMeterMappingEmailSMSId",
 													"value": "1"
 												}
 											]
