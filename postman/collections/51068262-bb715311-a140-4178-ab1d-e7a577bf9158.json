@@ -37309,14 +37309,41 @@
 									"response": []
 								},
 								{
-									"name": "New Request",
+									"name": "Check prepaid non communicating meter mapping value exists",
 									"id": "51068262-80bebf1b-824b-479c-85fa-403c807e4270",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
 									"request": {
 										"method": "GET",
-										"header": []
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer $access_token"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Customer/PrepaidNONCommunicatingMeterMappingEmailAndSMS/check?MappingTypeId=1&MappingTypeValue=test@example.com",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Customer",
+												"PrepaidNONCommunicatingMeterMappingEmailAndSMS",
+												"check"
+											],
+											"query": [
+												{
+													"key": "MappingTypeId",
+													"value": "1"
+												},
+												{
+													"key": "MappingTypeValue",
+													"value": "test@example.com"
+												}
+											]
+										}
 									},
 									"response": []
 								}
