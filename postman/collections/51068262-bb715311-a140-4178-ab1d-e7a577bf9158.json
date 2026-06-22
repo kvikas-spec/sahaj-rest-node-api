@@ -37354,8 +37354,37 @@
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
-										"header": []
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer $access_token"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"PrepaidNONCommunicatingMeterMappingEmailSMSId\": 0,\n    \"MappingTypeId\": 1,\n    \"MappingTypeValue\": \"test@yopmail.com\"\n  }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Customer/PrepaidNONCommunicatingMeterMappingEmailAndSMS",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Customer",
+												"PrepaidNONCommunicatingMeterMappingEmailAndSMS"
+											]
+										}
 									},
 									"response": []
 								}
