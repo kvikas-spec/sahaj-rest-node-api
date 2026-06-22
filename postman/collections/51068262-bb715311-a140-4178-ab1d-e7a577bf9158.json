@@ -304,7 +304,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"forceLogin\": false\n}",
+							"raw": "{\n    \"forceLogin\": true\n}",
 							"options": {
 								"raw": {
 									"language": "json"
