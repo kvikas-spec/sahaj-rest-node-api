@@ -37389,8 +37389,49 @@
 									"response": []
 								},
 								{
-									"name": "New Request",
+									"name": "Add prepaid non communicating meter mapping SMS",
 									"id": "51068262-2ec2ba6f-0179-4cd2-9005-4826273d6c2f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer $access_token"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"PrepaidNONCommunicatingMeterMappingEmailSMSId\": 0,\n    \"MappingTypeId\": 2,\n    \"MappingTypeValue\": \"9876543210\"\n  }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Customer/PrepaidNONCommunicatingMeterMappingEmailAndSMS",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Customer",
+												"PrepaidNONCommunicatingMeterMappingEmailAndSMS"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "New Request",
+									"id": "51068262-e1ab42df-7bf8-4263-bdb0-9ecd7c8ca771",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
