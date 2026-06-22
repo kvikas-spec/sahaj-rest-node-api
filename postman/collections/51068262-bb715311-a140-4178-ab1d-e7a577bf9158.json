@@ -37271,7 +37271,7 @@
 									"response": []
 								},
 								{
-									"name": "New Request",
+									"name": "Get prepaid non communicating meter mapping email and SMS list",
 									"id": "51068262-1e609d03-dc54-4c47-842a-f1731a09a100",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -37305,6 +37305,18 @@
 												}
 											]
 										}
+									},
+									"response": []
+								},
+								{
+									"name": "New Request",
+									"id": "51068262-80bebf1b-824b-479c-85fa-403c807e4270",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
 									},
 									"response": []
 								}
