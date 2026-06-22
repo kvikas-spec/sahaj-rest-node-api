@@ -37237,6 +37237,24 @@
 								}
 							],
 							"id": "51068262-d9397b07-c79b-4fc0-9cdf-d529abe1b552"
+						},
+						{
+							"name": "Prepaid NON Communicating Meter Mapping Email and SMS Master",
+							"item": [
+								{
+									"name": "New Request",
+									"id": "51068262-38652b00-cb12-4d55-b881-d63e62f72851",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
+							"id": "51068262-fb860383-da3f-42f0-a0d8-0a357017ab3d"
 						}
 					],
 					"id": "51068262-6328181d-5ee3-4ba2-88a2-70a39aef6e09"
