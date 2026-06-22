@@ -37278,7 +37278,33 @@
 									},
 									"request": {
 										"method": "GET",
-										"header": []
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer $access_token"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Customer/PrepaidNONCommunicatingMeterMappingEmailAndSMS?pageNo=1&pageSize=10",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Customer",
+												"PrepaidNONCommunicatingMeterMappingEmailAndSMS"
+											],
+											"query": [
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
 									},
 									"response": []
 								}
