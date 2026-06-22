@@ -37430,8 +37430,49 @@
 									"response": []
 								},
 								{
-									"name": "New Request",
+									"name": "Update prepaid non communicating meter mapping",
 									"id": "51068262-e1ab42df-7bf8-4263-bdb0-9ecd7c8ca771",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer $access_token"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"PrepaidNONCommunicatingMeterMappingEmailSMSId\": 1,\n    \"MappingTypeId\": 1,\n    \"MappingTypeValue\": \"updated@example.com\"\n  }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Customer/PrepaidNONCommunicatingMeterMappingEmailAndSMS",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Customer",
+												"PrepaidNONCommunicatingMeterMappingEmailAndSMS"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "New Request",
+									"id": "51068262-83c7c6cb-bc11-4612-9016-1f61816721c3",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
