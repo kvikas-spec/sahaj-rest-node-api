@@ -37471,14 +37471,32 @@
 									"response": []
 								},
 								{
-									"name": "New Request",
+									"name": "Active/deactive prepaid non communicating meter mapping",
 									"id": "51068262-83c7c6cb-bc11-4612-9016-1f61816721c3",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
-										"header": []
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer $access_token"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Customer/PrepaidNONCommunicatingMeterMappingEmailAndSMS/1/active",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Customer",
+												"PrepaidNONCommunicatingMeterMappingEmailAndSMS",
+												"1",
+												"active"
+											]
+										}
 									},
 									"response": []
 								}
