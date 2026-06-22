@@ -37242,8 +37242,37 @@
 							"name": "Prepaid NON Communicating Meter Mapping Email and SMS Master",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "mapping-types",
 									"id": "51068262-38652b00-cb12-4d55-b881-d63e62f72851",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer $access_token"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Customer/PrepaidNONCommunicatingMeterMappingEmailAndSMS/mapping-types",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Customer",
+												"PrepaidNONCommunicatingMeterMappingEmailAndSMS",
+												"mapping-types"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "New Request",
+									"id": "51068262-1e609d03-dc54-4c47-842a-f1731a09a100",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
