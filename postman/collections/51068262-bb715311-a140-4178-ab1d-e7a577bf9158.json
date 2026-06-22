@@ -37505,6 +37505,35 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "Export prepaid non communicating meter mapping email and SMS",
+									"id": "51068262-e019f251-2978-4886-af61-d8dc781a0dfb",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer $access_token"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/masters/Customer/PrepaidNONCommunicatingMeterMappingEmailAndSMS/export",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"masters",
+												"Customer",
+												"PrepaidNONCommunicatingMeterMappingEmailAndSMS",
+												"export"
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "51068262-fb860383-da3f-42f0-a0d8-0a357017ab3d"
