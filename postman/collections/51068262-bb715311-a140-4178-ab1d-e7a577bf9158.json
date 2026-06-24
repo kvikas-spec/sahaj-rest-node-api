@@ -38353,14 +38353,44 @@
 					"name": "PrePaidNonCommuncatingService",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "GAWiseSendEmailAndSMS",
 							"id": "51068262-2b223868-cf73-4161-8977-1bdf6470086e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer $token"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "regionconfig",
+										"value": "$regionconfig"
+									},
+									{
+										"key": "common_config",
+										"value": "$common_config"
+									},
+									{
+										"key": "userinfo",
+										"value": "$userinfo"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"currentDate\": \"2026-06-24\",\n    \"forceRun\": true\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "{{api_gateway_url}}/masters/PrepaidNONCommunicatingMeterService/GAWiseSendEmailAndSMS",
 									"host": [
