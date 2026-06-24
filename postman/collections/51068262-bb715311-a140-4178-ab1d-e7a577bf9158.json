@@ -38359,8 +38359,19 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/masters/PrepaidNONCommunicatingMeterService/GAWiseSendEmailAndSMS",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"masters",
+										"PrepaidNONCommunicatingMeterService",
+										"GAWiseSendEmailAndSMS"
+									]
+								}
 							},
 							"response": []
 						}
