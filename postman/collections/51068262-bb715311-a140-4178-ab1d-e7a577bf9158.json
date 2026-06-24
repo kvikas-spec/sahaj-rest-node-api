@@ -38351,7 +38351,20 @@
 				},
 				{
 					"name": "PrePaidNonCommuncatingService",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "51068262-2b223868-cf73-4161-8977-1bdf6470086e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "51068262-bbb79ec2-779e-4250-b9cf-a3f9b1cea559"
 				},
 				{
