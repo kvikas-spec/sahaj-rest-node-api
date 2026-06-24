@@ -38350,6 +38350,11 @@
 					"description": "Reference-only legacy dashboard APIs moved from /masters/Dashboard to /masters/DashboardReference. Current UI should use /masters/Dashboard/management and /masters/Dashboard/oic."
 				},
 				{
+					"name": "PrePaidNonCommuncatingService",
+					"item": [],
+					"id": "51068262-bbb79ec2-779e-4250-b9cf-a3f9b1cea559"
+				},
+				{
 					"name": "health-check",
 					"id": "51068262-1112f955-49ea-4658-9aa2-7f348199ab92",
 					"protocolProfileBehavior": {
