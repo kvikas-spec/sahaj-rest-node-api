@@ -6597,7 +6597,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Bharatpur/meter-reading/1781765320698-386507567_Invoice_Batch_1781760692916.pdf\",\n    \"ConsumerNumber\": 2500007539,\n    \"Cycle\": \"2602\",\n    \"WardId\": 1,\n    \"ReadingDate\": \"2026-06-18\",\n    \"BillDate\": \"2026-06-18\",\n    \"FullName\": \"mro generation\",\n    \"BillNumber\": 2500007539202611,\n    \"CurrentReading\": 9,\n    \"PreviousReading\": 8,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 1\n}",
+											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"meter-reading/1782380838395-665679437_Screenshot from 2026-06-11 23-21-18.png\",\n    \"ConsumerNumber\": 3000042927,\n    \"Cycle\": \"2601\",\n    \"WardId\": 21,\n    \"ReadingDate\": \"2026-05-10\",\n    \"BillDate\": \"2026-05-10\",\n    \"FullName\": \"Referral check\",\n    \"BillNumber\": 3000042927202601,\n    \"CurrentReading\": 30,\n    \"PreviousReading\": 1,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 29\n}",
 											"options": {
 												"raw": {
 													"language": "json"
