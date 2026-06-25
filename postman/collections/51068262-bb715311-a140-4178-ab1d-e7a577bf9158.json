@@ -37367,7 +37367,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"PrepaidNONCommunicatingMeterMappingEmailSMSId\": 0,\n    \"MappingTypeId\": 1,\n    \"MappingTypeValue\": \"test@yopmail.com\"\n  }",
+											"raw": "{\n    \"PrepaidNONCommunicatingMeterMappingEmailSMSId\": 0,\n    \"MappingTypeId\": 1,\n    \"MappingTypeValue\": \"vy24754@yopmail.com\"\n  }",
 											"options": {
 												"raw": {
 													"language": "json"
