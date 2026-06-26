@@ -6597,7 +6597,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"meter-reading/1782380838395-665679437_Screenshot from 2026-06-11 23-21-18.png\",\n    \"ConsumerNumber\": 3000042927,\n    \"Cycle\": \"2601\",\n    \"WardId\": 21,\n    \"ReadingDate\": \"2026-05-10\",\n    \"BillDate\": \"2026-05-10\",\n    \"FullName\": \"Referral check\",\n    \"BillNumber\": 3000042927202601,\n    \"CurrentReading\": 30,\n    \"PreviousReading\": 1,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 29\n}",
+											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1782457422211-201739219_Screenshot from 2026-06-11 23-21-18.png\",\n    \"ConsumerNumber\": 3000041893,\n    \"Cycle\": \"2601\",\n    \"WardId\": 15,\n    \"ReadingDate\": \"2026-04-25\",\n    \"BillDate\": \"2026-04-25\",\n    \"FullName\": \"Shyam prakash \",\n    \"BillNumber\": 3000041893202601,\n    \"CurrentReading\": 30,\n    \"PreviousReading\": 0.07,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 29.93\n}",
 											"options": {
 												"raw": {
 													"language": "json"
