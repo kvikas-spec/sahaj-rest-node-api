@@ -511,6 +511,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "eedf616e-6341-4e12-bfe0-a19cdb315ab3",
 								"exec": [
 									"// Parse the response body JSON",
 									"const responseBody = pm.response.json();",
@@ -525,8 +526,7 @@
 								],
 								"type": "text/javascript",
 								"packages": {},
-								"requests": {},
-								"id": "eedf616e-6341-4e12-bfe0-a19cdb315ab3"
+								"requests": {}
 							}
 						}
 					],
