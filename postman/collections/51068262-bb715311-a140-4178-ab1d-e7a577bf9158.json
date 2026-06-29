@@ -30970,7 +30970,32 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/reports/prepaid-cng-promo/PrepaidNONCommunicatingMeterExport?fromDate=01/03/2026&toDate=31/03/2026&searchNumber=3000038726",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"reports",
+										"prepaid-cng-promo",
+										"PrepaidNONCommunicatingMeterExport"
+									],
+									"query": [
+										{
+											"key": "fromDate",
+											"value": "01/03/2026"
+										},
+										{
+											"key": "toDate",
+											"value": "31/03/2026"
+										},
+										{
+											"key": "searchNumber",
+											"value": "3000038726"
+										}
+									]
+								}
 							},
 							"response": []
 						}
