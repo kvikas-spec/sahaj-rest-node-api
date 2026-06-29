@@ -38209,7 +38209,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=30&sEcho=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -38225,7 +38225,7 @@
 										},
 										{
 											"key": "iDisplayLength",
-											"value": "10"
+											"value": "30"
 										},
 										{
 											"key": "sEcho",
