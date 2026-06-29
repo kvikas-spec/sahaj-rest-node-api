@@ -30914,6 +30914,24 @@
 					"id": "51068262-ce6f3f66-d762-49ef-8064-94878181ad1a"
 				},
 				{
+					"name": "NonCommPrePaidMeters",
+					"item": [
+						{
+							"name": "New Request",
+							"id": "51068262-19dc5a6d-a6ef-44ef-95b7-199e11f8174e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
+					"id": "51068262-d43df18b-335b-4887-b7e6-aa814b2d45de"
+				},
+				{
 					"name": "health-check",
 					"id": "51068262-4f80165f-3fee-4240-bbaf-4febc5131ea5",
 					"protocolProfileBehavior": {
