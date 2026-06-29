@@ -30924,7 +30924,41 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/reports/prepaid-cng-promo/prepaid-non-communicating-meter?fromDate=01/03/2026&toDate=31/03/2026&pageNo=1&pageSize=100",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"reports",
+										"prepaid-cng-promo",
+										"prepaid-non-communicating-meter"
+									],
+									"query": [
+										{
+											"key": "fromDate",
+											"value": "01/03/2026"
+										},
+										{
+											"key": "toDate",
+											"value": "31/03/2026"
+										},
+										{
+											"key": "pageNo",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "100"
+										},
+										{
+											"key": "searchNumber",
+											"value": "3000038726",
+											"disabled": true
+										}
+									]
+								}
 							},
 							"response": []
 						}
