@@ -30926,14 +30926,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{api_gateway_url}}/reports/prepaid-cng-promo/prepaid-non-communicating-meter?fromDate=01/01/2026&toDate=20/06/2026&pageNo=1&pageSize=100",
+									"raw": "{{api_gateway_url}}/reports/prepaid-cng-promo/PrepaidNONCommunicatingMeter?fromDate=01/01/2026&toDate=20/06/2026&pageNo=1&pageSize=100",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"reports",
 										"prepaid-cng-promo",
-										"prepaid-non-communicating-meter"
+										"PrepaidNONCommunicatingMeter"
 									],
 									"query": [
 										{
