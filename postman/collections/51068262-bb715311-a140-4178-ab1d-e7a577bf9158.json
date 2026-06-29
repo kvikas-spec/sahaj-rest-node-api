@@ -38168,7 +38168,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1&StartDate=2026-03-31&EndDate=2027-03-30",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -38189,6 +38189,14 @@
 										{
 											"key": "sEcho",
 											"value": "1"
+										},
+										{
+											"key": "StartDate",
+											"value": "2026-03-31"
+										},
+										{
+											"key": "EndDate",
+											"value": "2027-03-30"
 										}
 									]
 								},
@@ -38209,7 +38217,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=30&sEcho=1",
+									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=50&sEcho=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -38225,7 +38233,7 @@
 										},
 										{
 											"key": "iDisplayLength",
-											"value": "30"
+											"value": "50"
 										},
 										{
 											"key": "sEcho",
