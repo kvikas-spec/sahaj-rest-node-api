@@ -30917,7 +30917,7 @@
 					"name": "NonCommPrePaidMeters",
 					"item": [
 						{
-							"name": "prepaid-non-communicating-meter",
+							"name": "PrepaidNONCommunicatingMeter",
 							"id": "51068262-19dc5a6d-a6ef-44ef-95b7-199e11f8174e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
