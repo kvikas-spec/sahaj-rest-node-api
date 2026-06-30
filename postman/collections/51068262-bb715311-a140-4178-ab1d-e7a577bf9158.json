@@ -38029,7 +38029,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/GetAdvanceDashboardCustomerSummariesStatus?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/GetAdvanceDashboardCustomerSummariesStatus?iDisplayStart=0&iDisplayLength=10&sEcho=1&EndDate=2026-06-30",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -38050,6 +38050,11 @@
 										{
 											"key": "sEcho",
 											"value": "1"
+										},
+										{
+											"key": "EndDate",
+											"value": "2026-06-30",
+											"type": "text"
 										}
 									]
 								},
