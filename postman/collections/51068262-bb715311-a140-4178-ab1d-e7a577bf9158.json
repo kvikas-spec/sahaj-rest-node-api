@@ -38270,7 +38270,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/GetSuperAdminAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1&StartDate=2026-03-31&EndDate=2027-03-30",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/GetSuperAdminAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=50&sEcho=1&StartDate=2026-03-31&EndDate=2027-03-30",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -38286,7 +38286,7 @@
 										},
 										{
 											"key": "iDisplayLength",
-											"value": "10"
+											"value": "50"
 										},
 										{
 											"key": "sEcho",
