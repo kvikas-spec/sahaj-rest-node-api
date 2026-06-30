@@ -37840,13 +37840,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardSalesDetailsForGAAdmin",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/BindDashboardSalesDetailsForGAAdmin",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"BindDashboardSalesDetailsForGAAdmin"
 									]
 								},
@@ -37867,13 +37867,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardCustomerActivityForGAAdminJSON",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/BindDashboardCustomerActivityForGAAdminJSON",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"BindDashboardCustomerActivityForGAAdminJSON"
 									]
 								},
@@ -37894,13 +37894,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardSalesDetailsForSuperAdminJson",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/BindDashboardSalesDetailsForSuperAdminJson",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"BindDashboardSalesDetailsForSuperAdminJson"
 									]
 								},
@@ -37921,13 +37921,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardCustomerActivityForSuperAdminJSON",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/BindDashboardCustomerActivityForSuperAdminJSON",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"BindDashboardCustomerActivityForSuperAdminJSON"
 									]
 								},
@@ -37948,13 +37948,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/gail-cmp",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/gail-cmp",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"gail-cmp"
 									]
 								},
@@ -37975,13 +37975,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardSalesDetailsForSuperAdminJsonForGAILCMP",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/BindDashboardSalesDetailsForSuperAdminJsonForGAILCMP",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"BindDashboardSalesDetailsForSuperAdminJsonForGAILCMP"
 									]
 								},
@@ -38002,13 +38002,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/BindDashboardCustomerActivityForSuperAdminJSONForGAILCMP",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/BindDashboardCustomerActivityForSuperAdminJSONForGAILCMP",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"BindDashboardCustomerActivityForSuperAdminJSONForGAILCMP"
 									]
 								},
@@ -38029,13 +38029,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetAdvanceDashboardCustomerSummariesStatus?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/GetAdvanceDashboardCustomerSummariesStatus?iDisplayStart=0&iDisplayLength=10&sEcho=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"GetAdvanceDashboardCustomerSummariesStatus"
 									],
 									"query": [
@@ -38070,13 +38070,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1&StartDate=2026-03-31&EndDate=2027-03-30",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/GetAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1&StartDate=2026-03-31&EndDate=2027-03-30",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"GetAdvanceDashboardOnBoardingData"
 									],
 									"query": [
@@ -38119,13 +38119,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1&StartDate=2026-03-31&EndDate=2027-03-30",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/GetAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1&StartDate=2026-03-31&EndDate=2027-03-30",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"GetAdvanceDashboardSalesData"
 									],
 									"query": [
@@ -38168,13 +38168,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1&StartDate=2026-03-31&EndDate=2027-03-30",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/GetAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1&StartDate=2026-03-31&EndDate=2027-03-30",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"GetAdvanceSummariesRegisteredComplaintsReport"
 									],
 									"query": [
@@ -38217,13 +38217,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=50&sEcho=1&StartDate=2026-01-01&EndDate=2026-03-31",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/GetSuperAdminAdvanceDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=50&sEcho=1&StartDate=2026-01-01&EndDate=2026-03-31",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"GetSuperAdminAdvanceDashboardOnBoardingData"
 									],
 									"query": [
@@ -38266,13 +38266,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/GetSuperAdminAdvanceDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"GetSuperAdminAdvanceDashboardSalesData"
 									],
 									"query": [
@@ -38307,13 +38307,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/GetSuperAdminAdvanceSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"GetSuperAdminAdvanceSummariesRegisteredComplaintsReport"
 									],
 									"query": [
@@ -38348,13 +38348,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceGAILCMPDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/GetSuperAdminAdvanceGAILCMPDashboardOnBoardingData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"GetSuperAdminAdvanceGAILCMPDashboardOnBoardingData"
 									],
 									"query": [
@@ -38389,13 +38389,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceGAILCMPDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/GetSuperAdminAdvanceGAILCMPDashboardSalesData?iDisplayStart=0&iDisplayLength=10&sEcho=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"GetSuperAdminAdvanceGAILCMPDashboardSalesData"
 									],
 									"query": [
@@ -38430,13 +38430,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/DashboardReference/GetSuperAdminAdvanceGAILCMPSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1",
+									"raw": "{{api_gateway_url}}/masters/DashboardAdvance/GetSuperAdminAdvanceGAILCMPSummariesRegisteredComplaintsReport?iDisplayStart=0&iDisplayLength=10&sEcho=1",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"masters",
-										"DashboardReference",
+										"DashboardAdvance",
 										"GetSuperAdminAdvanceGAILCMPSummariesRegisteredComplaintsReport"
 									],
 									"query": [
@@ -38460,7 +38460,7 @@
 						}
 					],
 					"id": "51068262-cb4ee225-2a65-4a0d-9f18-fc76f9a99385",
-					"description": "Reference-only legacy dashboard APIs moved from /masters/Dashboard to /masters/DashboardReference. Current UI should use /masters/Dashboard/management and /masters/Dashboard/oic."
+					"description": "Reference-only legacy dashboard APIs moved from /masters/Dashboard to /masters/DashboardAdvance. Current UI should use /masters/Dashboard/management and /masters/Dashboard/oic."
 				},
 				{
 					"name": "PrePaidNonCommuncatingService",
