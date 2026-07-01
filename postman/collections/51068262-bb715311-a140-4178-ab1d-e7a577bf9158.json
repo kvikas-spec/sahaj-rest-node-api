@@ -31319,6 +31319,754 @@
 					"id": "51068262-22896a8c-5ced-4a34-a6de-885e5ca32d71"
 				},
 				{
+					"name": "DataLists",
+					"item": [
+						{
+							"name": "Registered Complaints Summaries",
+							"item": [
+								{
+									"name": "Registered-Complaints-Summaries",
+									"id": "51068262-registered-complaints-summaries",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "GailGas_Common"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/Registered-Complaints-Summaries?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026&pageNo=1&pageSize=50",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"Registered-Complaints-Summaries"
+											],
+											"query": [
+												{
+													"key": "GAId",
+													"value": "1"
+												},
+												{
+													"key": "StartDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "EndDate",
+													"value": "31/07/2026"
+												},
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "50"
+												}
+											]
+										},
+										"description": "Same route as legacy .NET page /Registered-Complaints-Summaries."
+									},
+									"response": []
+								},
+								{
+									"name": "GetSummariesRegisteredComplaintsReport",
+									"id": "51068262-getsummariesregisteredcomplaintsreport",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "GailGas_Common"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/DataList/GetSummariesRegisteredComplaintsReport?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026&pageNo=1&pageSize=50",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"DataList",
+												"GetSummariesRegisteredComplaintsReport"
+											],
+											"query": [
+												{
+													"key": "GAId",
+													"value": "1"
+												},
+												{
+													"key": "StartDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "EndDate",
+													"value": "31/07/2026"
+												},
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "50"
+												}
+											]
+										},
+										"description": "Same endpoint name as legacy .NET summary grid action."
+									},
+									"response": []
+								},
+								{
+									"name": "GetSummariesRegisteredComplaintsResolvedReport",
+									"id": "51068262-getsummariesregisteredcomplaintsresolvedreport",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "GailGas_Common"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/DataList/GetSummariesRegisteredComplaintsResolvedReport?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026&pageNo=1&pageSize=50",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"DataList",
+												"GetSummariesRegisteredComplaintsResolvedReport"
+											],
+											"query": [
+												{
+													"key": "GAId",
+													"value": "1"
+												},
+												{
+													"key": "StartDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "EndDate",
+													"value": "31/07/2026"
+												},
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "50"
+												}
+											]
+										},
+										"description": "Same endpoint name as legacy .NET average TAT summary action."
+									},
+									"response": []
+								},
+								{
+									"name": "_ComplaintsOpeningOldToTheStartDate",
+									"id": "51068262--complaintsopeningoldtothestartdate",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "GailGas_Common"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsOpeningOldToTheStartDate?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026&pageNo=1&pageSize=50",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"DataList",
+												"_ComplaintsOpeningOldToTheStartDate"
+											],
+											"query": [
+												{
+													"key": "GAId",
+													"value": "1"
+												},
+												{
+													"key": "StartDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "EndDate",
+													"value": "31/07/2026"
+												},
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "50"
+												},
+												{
+													"key": "consumerNo",
+													"value": "3000038726",
+													"disabled": true
+												},
+												{
+													"key": "DepartmentId",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "ComplaintLevelId",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "IsVIPCustomer",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "IsVIPComplaint",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "isFilter",
+													"value": "true",
+													"disabled": true
+												}
+											]
+										},
+										"description": "Same endpoint name as legacy .NET opening complaints partial."
+									},
+									"response": []
+								},
+								{
+									"name": "_ComplaintsReceivedDuringDate",
+									"id": "51068262--complaintsreceivedduringdate",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "GailGas_Common"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsReceivedDuringDate?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026&pageNo=1&pageSize=50",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"DataList",
+												"_ComplaintsReceivedDuringDate"
+											],
+											"query": [
+												{
+													"key": "GAId",
+													"value": "1"
+												},
+												{
+													"key": "StartDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "EndDate",
+													"value": "31/07/2026"
+												},
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "50"
+												},
+												{
+													"key": "consumerNo",
+													"value": "3000038726",
+													"disabled": true
+												},
+												{
+													"key": "DepartmentId",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "ComplaintLevelId",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "IsVIPCustomer",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "IsVIPComplaint",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "isFilter",
+													"value": "true",
+													"disabled": true
+												}
+											]
+										},
+										"description": "Same endpoint name as legacy .NET received complaints partial."
+									},
+									"response": []
+								},
+								{
+									"name": "_ComplaintsResolvedDuringDate",
+									"id": "51068262--complaintsresolvedduringdate",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "GailGas_Common"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsResolvedDuringDate?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026&pageNo=1&pageSize=50",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"DataList",
+												"_ComplaintsResolvedDuringDate"
+											],
+											"query": [
+												{
+													"key": "GAId",
+													"value": "1"
+												},
+												{
+													"key": "StartDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "EndDate",
+													"value": "31/07/2026"
+												},
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "50"
+												},
+												{
+													"key": "consumerNo",
+													"value": "3000038726",
+													"disabled": true
+												},
+												{
+													"key": "DepartmentId",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "ComplaintLevelId",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "IsVIPCustomer",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "IsVIPComplaint",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "isFilter",
+													"value": "true",
+													"disabled": true
+												}
+											]
+										},
+										"description": "Same endpoint name as legacy .NET resolved complaints partial."
+									},
+									"response": []
+								},
+								{
+									"name": "_ComplaintsOpenAsOnDate",
+									"id": "51068262--complaintsopenasondate",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "GailGas_Common"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsOpenAsOnDate?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026&pageNo=1&pageSize=50",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"DataList",
+												"_ComplaintsOpenAsOnDate"
+											],
+											"query": [
+												{
+													"key": "GAId",
+													"value": "1"
+												},
+												{
+													"key": "StartDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "EndDate",
+													"value": "31/07/2026"
+												},
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "50"
+												},
+												{
+													"key": "consumerNo",
+													"value": "3000038726",
+													"disabled": true
+												},
+												{
+													"key": "DepartmentId",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "ComplaintLevelId",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "IsVIPCustomer",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "IsVIPComplaint",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "isFilter",
+													"value": "true",
+													"disabled": true
+												}
+											]
+										},
+										"description": "Same endpoint name as legacy .NET open complaints as on date partial."
+									},
+									"response": []
+								},
+								{
+									"name": "_ComplaintsOpeningOldToTheStartDateExport",
+									"id": "51068262--complaintsopeningoldtothestartdateexport",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "GailGas_Common"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsOpeningOldToTheStartDateExport?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"DataList",
+												"_ComplaintsOpeningOldToTheStartDateExport"
+											],
+											"query": [
+												{
+													"key": "GAId",
+													"value": "1"
+												},
+												{
+													"key": "StartDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "EndDate",
+													"value": "31/07/2026"
+												}
+											]
+										},
+										"description": "Downloads OpeningNoOfComplaints.xlsx."
+									},
+									"response": []
+								},
+								{
+									"name": "_ComplaintsReceivedDuringDateExport",
+									"id": "51068262--complaintsreceivedduringdateexport",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "GailGas_Common"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsReceivedDuringDateExport?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"DataList",
+												"_ComplaintsReceivedDuringDateExport"
+											],
+											"query": [
+												{
+													"key": "GAId",
+													"value": "1"
+												},
+												{
+													"key": "StartDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "EndDate",
+													"value": "31/07/2026"
+												}
+											]
+										},
+										"description": "Downloads ComplaintReceivedDuringDate.xlsx."
+									},
+									"response": []
+								},
+								{
+									"name": "_ComplaintsResolvedDuringDateExport",
+									"id": "51068262--complaintsresolvedduringdateexport",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "GailGas_Common"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsResolvedDuringDateExport?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"DataList",
+												"_ComplaintsResolvedDuringDateExport"
+											],
+											"query": [
+												{
+													"key": "GAId",
+													"value": "1"
+												},
+												{
+													"key": "StartDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "EndDate",
+													"value": "31/07/2026"
+												}
+											]
+										},
+										"description": "Downloads ComplaintResolvedDuringDate.xlsx."
+									},
+									"response": []
+								},
+								{
+									"name": "_ComplaintsOpenAsOnDateExport",
+									"id": "51068262--complaintsopenasondateexport",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "GailGas_Common"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsOpenAsOnDateExport?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"DataList",
+												"_ComplaintsOpenAsOnDateExport"
+											],
+											"query": [
+												{
+													"key": "GAId",
+													"value": "1"
+												},
+												{
+													"key": "StartDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "EndDate",
+													"value": "31/07/2026"
+												}
+											]
+										},
+										"description": "Downloads ComplaintOpenAsOnDate.xlsx."
+									},
+									"response": []
+								}
+							],
+							"id": "51068262-registered-complaints-summaries-folder"
+						}
+					],
+					"id": "51068262-data-list-folder"
+				},
+				{
 					"name": "health-check",
 					"id": "51068262-4f80165f-3fee-4240-bbaf-4febc5131ea5",
 					"protocolProfileBehavior": {
@@ -31383,1070 +32131,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "ReportList",
-					"item": [
-						{
-							"name": "Customer Summaries Status Report",
-							"item": [
-								{
-									"name": "CustomerSummariesStatusReport",
-									"id": "51068262-customersummariesstatusreport",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "Meerut"
-											}
-										],
-										"description": "Same endpoint name as legacy .NET page action ReportList/CustomerSummariesStatusReport.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/ReportList/CustomerSummariesStatusReport?EndDate=01/07/2026&pageNo=1&pageSize=50",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"ReportList",
-												"CustomerSummariesStatusReport"
-											],
-											"query": [
-												{
-													"key": "EndDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "pageNo",
-													"value": "1"
-												},
-												{
-													"key": "pageSize",
-													"value": "50"
-												},
-												{
-													"key": "sortColumn",
-													"value": "StatusId",
-													"disabled": true
-												},
-												{
-													"key": "sortDirection",
-													"value": "asc",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "GetGetCustomerSummaryStatusCount",
-									"id": "51068262-getgetcustomersummarystatuscount",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "Meerut"
-											}
-										],
-										"description": "Same endpoint name as legacy .NET DataTable summary count action.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/ReportList/GetGetCustomerSummaryStatusCount?EndDate=01/07/2026&pageNo=1&pageSize=50",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"ReportList",
-												"GetGetCustomerSummaryStatusCount"
-											],
-											"query": [
-												{
-													"key": "EndDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "pageNo",
-													"value": "1"
-												},
-												{
-													"key": "pageSize",
-													"value": "50"
-												},
-												{
-													"key": "onPostReq",
-													"value": "1",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "_CustomerSummariesCountDetails",
-									"id": "51068262--customersummariescountdetails",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "Meerut"
-											}
-										],
-										"description": "Same endpoint name as legacy .NET modal partial action.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/ReportList/_CustomerSummariesCountDetails?StatusId=4&EndDate=01/07/2026&pageNo=1&pageSize=10",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"ReportList",
-												"_CustomerSummariesCountDetails"
-											],
-											"query": [
-												{
-													"key": "StatusId",
-													"value": "4"
-												},
-												{
-													"key": "EndDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "pageNo",
-													"value": "1"
-												},
-												{
-													"key": "pageSize",
-													"value": "10"
-												},
-												{
-													"key": "ConsumerNumber",
-													"value": "3000038726",
-													"disabled": true
-												},
-												{
-													"key": "IsFilter",
-													"value": "1",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "GetCustomerSummariesCountDetails",
-									"id": "51068262-getcustomersummariescountdetails",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "Meerut"
-											}
-										],
-										"description": "Same endpoint name as legacy .NET DataTable drill-down action.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/ReportList/GetCustomerSummariesCountDetails?StatusId=4&EndDate=01/07/2026&pageNo=1&pageSize=10",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"ReportList",
-												"GetCustomerSummariesCountDetails"
-											],
-											"query": [
-												{
-													"key": "StatusId",
-													"value": "4"
-												},
-												{
-													"key": "EndDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "pageNo",
-													"value": "1"
-												},
-												{
-													"key": "pageSize",
-													"value": "10"
-												},
-												{
-													"key": "ConsumerNumber",
-													"value": "3000038726",
-													"disabled": true
-												},
-												{
-													"key": "IsFilter",
-													"value": "1",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "ExportCustomerSummariesStatusDetailsReport",
-									"id": "51068262-exportcustomersummariesstatusdetailsreport",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "Meerut"
-											}
-										],
-										"description": "Same endpoint name as legacy .NET export action. Downloads Customer_Summaries_Status_Details_Report_List.xlsx.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/ReportList/ExportCustomerSummariesStatusDetailsReport?StatusId=4&EndDate=01/07/2026",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"ReportList",
-												"ExportCustomerSummariesStatusDetailsReport"
-											],
-											"query": [
-												{
-													"key": "StatusId",
-													"value": "4"
-												},
-												{
-													"key": "EndDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "ConsumerNumber",
-													"value": "3000038726",
-													"disabled": true
-												},
-												{
-													"key": "IsFilter",
-													"value": "1",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"response": []
-								}
-							],
-							"id": "51068262-customer-summaries-status-report-folder"
-						}
-					],
-					"id": "51068262-report-list-folder"
-				},
-				{
-					"name": "DataLists",
-					"item": [
-						{
-							"name": "Registered Complaints Summaries",
-							"id": "51068262-registered-complaints-summaries-folder",
-							"item": [
-								{
-									"name": "Registered-Complaints-Summaries",
-									"id": "51068262-registered-complaints-summaries",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "GailGas_Common"
-											}
-										],
-										"description": "Same route as legacy .NET page /Registered-Complaints-Summaries.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/Registered-Complaints-Summaries?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026&pageNo=1&pageSize=50",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"Registered-Complaints-Summaries"
-											],
-											"query": [
-												{
-													"key": "GAId",
-													"value": "1"
-												},
-												{
-													"key": "StartDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "EndDate",
-													"value": "31/07/2026"
-												},
-												{
-													"key": "pageNo",
-													"value": "1"
-												},
-												{
-													"key": "pageSize",
-													"value": "50"
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "GetSummariesRegisteredComplaintsReport",
-									"id": "51068262-getsummariesregisteredcomplaintsreport",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "GailGas_Common"
-											}
-										],
-										"description": "Same endpoint name as legacy .NET summary grid action.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/DataList/GetSummariesRegisteredComplaintsReport?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026&pageNo=1&pageSize=50",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"DataList",
-												"GetSummariesRegisteredComplaintsReport"
-											],
-											"query": [
-												{
-													"key": "GAId",
-													"value": "1"
-												},
-												{
-													"key": "StartDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "EndDate",
-													"value": "31/07/2026"
-												},
-												{
-													"key": "pageNo",
-													"value": "1"
-												},
-												{
-													"key": "pageSize",
-													"value": "50"
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "GetSummariesRegisteredComplaintsResolvedReport",
-									"id": "51068262-getsummariesregisteredcomplaintsresolvedreport",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "GailGas_Common"
-											}
-										],
-										"description": "Same endpoint name as legacy .NET average TAT summary action.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/DataList/GetSummariesRegisteredComplaintsResolvedReport?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026&pageNo=1&pageSize=50",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"DataList",
-												"GetSummariesRegisteredComplaintsResolvedReport"
-											],
-											"query": [
-												{
-													"key": "GAId",
-													"value": "1"
-												},
-												{
-													"key": "StartDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "EndDate",
-													"value": "31/07/2026"
-												},
-												{
-													"key": "pageNo",
-													"value": "1"
-												},
-												{
-													"key": "pageSize",
-													"value": "50"
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "_ComplaintsOpeningOldToTheStartDate",
-									"id": "51068262--complaintsopeningoldtothestartdate",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "GailGas_Common"
-											}
-										],
-										"description": "Same endpoint name as legacy .NET opening complaints partial.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsOpeningOldToTheStartDate?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026&pageNo=1&pageSize=50",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"DataList",
-												"_ComplaintsOpeningOldToTheStartDate"
-											],
-											"query": [
-												{
-													"key": "GAId",
-													"value": "1"
-												},
-												{
-													"key": "StartDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "EndDate",
-													"value": "31/07/2026"
-												},
-												{
-													"key": "pageNo",
-													"value": "1"
-												},
-												{
-													"key": "pageSize",
-													"value": "50"
-												},
-												{
-													"key": "consumerNo",
-													"value": "3000038726",
-													"disabled": true
-												},
-												{
-													"key": "DepartmentId",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "ComplaintLevelId",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "IsVIPCustomer",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "IsVIPComplaint",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "isFilter",
-													"value": "true",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "_ComplaintsReceivedDuringDate",
-									"id": "51068262--complaintsreceivedduringdate",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "GailGas_Common"
-											}
-										],
-										"description": "Same endpoint name as legacy .NET received complaints partial.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsReceivedDuringDate?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026&pageNo=1&pageSize=50",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"DataList",
-												"_ComplaintsReceivedDuringDate"
-											],
-											"query": [
-												{
-													"key": "GAId",
-													"value": "1"
-												},
-												{
-													"key": "StartDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "EndDate",
-													"value": "31/07/2026"
-												},
-												{
-													"key": "pageNo",
-													"value": "1"
-												},
-												{
-													"key": "pageSize",
-													"value": "50"
-												},
-												{
-													"key": "consumerNo",
-													"value": "3000038726",
-													"disabled": true
-												},
-												{
-													"key": "DepartmentId",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "ComplaintLevelId",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "IsVIPCustomer",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "IsVIPComplaint",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "isFilter",
-													"value": "true",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "_ComplaintsResolvedDuringDate",
-									"id": "51068262--complaintsresolvedduringdate",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "GailGas_Common"
-											}
-										],
-										"description": "Same endpoint name as legacy .NET resolved complaints partial.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsResolvedDuringDate?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026&pageNo=1&pageSize=50",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"DataList",
-												"_ComplaintsResolvedDuringDate"
-											],
-											"query": [
-												{
-													"key": "GAId",
-													"value": "1"
-												},
-												{
-													"key": "StartDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "EndDate",
-													"value": "31/07/2026"
-												},
-												{
-													"key": "pageNo",
-													"value": "1"
-												},
-												{
-													"key": "pageSize",
-													"value": "50"
-												},
-												{
-													"key": "consumerNo",
-													"value": "3000038726",
-													"disabled": true
-												},
-												{
-													"key": "DepartmentId",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "ComplaintLevelId",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "IsVIPCustomer",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "IsVIPComplaint",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "isFilter",
-													"value": "true",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "_ComplaintsOpenAsOnDate",
-									"id": "51068262--complaintsopenasondate",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "GailGas_Common"
-											}
-										],
-										"description": "Same endpoint name as legacy .NET open complaints as on date partial.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsOpenAsOnDate?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026&pageNo=1&pageSize=50",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"DataList",
-												"_ComplaintsOpenAsOnDate"
-											],
-											"query": [
-												{
-													"key": "GAId",
-													"value": "1"
-												},
-												{
-													"key": "StartDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "EndDate",
-													"value": "31/07/2026"
-												},
-												{
-													"key": "pageNo",
-													"value": "1"
-												},
-												{
-													"key": "pageSize",
-													"value": "50"
-												},
-												{
-													"key": "consumerNo",
-													"value": "3000038726",
-													"disabled": true
-												},
-												{
-													"key": "DepartmentId",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "ComplaintLevelId",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "IsVIPCustomer",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "IsVIPComplaint",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "isFilter",
-													"value": "true",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "_ComplaintsOpeningOldToTheStartDateExport",
-									"id": "51068262--complaintsopeningoldtothestartdateexport",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "GailGas_Common"
-											}
-										],
-										"description": "Downloads OpeningNoOfComplaints.xlsx.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsOpeningOldToTheStartDateExport?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"DataList",
-												"_ComplaintsOpeningOldToTheStartDateExport"
-											],
-											"query": [
-												{
-													"key": "GAId",
-													"value": "1"
-												},
-												{
-													"key": "StartDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "EndDate",
-													"value": "31/07/2026"
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "_ComplaintsReceivedDuringDateExport",
-									"id": "51068262--complaintsreceivedduringdateexport",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "GailGas_Common"
-											}
-										],
-										"description": "Downloads ComplaintReceivedDuringDate.xlsx.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsReceivedDuringDateExport?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"DataList",
-												"_ComplaintsReceivedDuringDateExport"
-											],
-											"query": [
-												{
-													"key": "GAId",
-													"value": "1"
-												},
-												{
-													"key": "StartDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "EndDate",
-													"value": "31/07/2026"
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "_ComplaintsResolvedDuringDateExport",
-									"id": "51068262--complaintsresolvedduringdateexport",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "GailGas_Common"
-											}
-										],
-										"description": "Downloads ComplaintResolvedDuringDate.xlsx.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsResolvedDuringDateExport?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"DataList",
-												"_ComplaintsResolvedDuringDateExport"
-											],
-											"query": [
-												{
-													"key": "GAId",
-													"value": "1"
-												},
-												{
-													"key": "StartDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "EndDate",
-													"value": "31/07/2026"
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "_ComplaintsOpenAsOnDateExport",
-									"id": "51068262--complaintsopenasondateexport",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json, text/plain, */*"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
-											},
-											{
-												"key": "x-region-id",
-												"value": "GailGas_Common"
-											}
-										],
-										"description": "Downloads ComplaintOpenAsOnDate.xlsx.",
-										"url": {
-											"raw": "{{api_gateway_url}}/reports/DataList/_ComplaintsOpenAsOnDateExport?GAId=1&StartDate=01/07/2026&EndDate=31/07/2026",
-											"host": [
-												"{{api_gateway_url}}"
-											],
-											"path": [
-												"reports",
-												"DataList",
-												"_ComplaintsOpenAsOnDateExport"
-											],
-											"query": [
-												{
-													"key": "GAId",
-													"value": "1"
-												},
-												{
-													"key": "StartDate",
-													"value": "01/07/2026"
-												},
-												{
-													"key": "EndDate",
-													"value": "31/07/2026"
-												}
-											]
-										}
-									},
-									"response": []
-								}
-							]
-						}
-					],
-					"id": "51068262-data-list-folder"
 				}
 			],
 			"id": "51068262-7ce36c5d-9fba-48d9-9cde-a1cafc858a91"
