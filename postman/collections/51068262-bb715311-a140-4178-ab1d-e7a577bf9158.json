@@ -31010,7 +31010,7 @@
 							"item": [
 								{
 									"name": "CustomerSummariesStatusReport",
-									"id": "51068262-customersummariesstatusreport",
+									"id": "51068262-68ab5809-8526-4890-a872-fe0545ea7b5d",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -31071,7 +31071,7 @@
 								},
 								{
 									"name": "GetGetCustomerSummaryStatusCount",
-									"id": "51068262-getgetcustomersummarystatuscount",
+									"id": "51068262-2ee61b18-40c4-41a3-9e8b-aea1438ea671",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -31127,7 +31127,7 @@
 								},
 								{
 									"name": "_CustomerSummariesCountDetails",
-									"id": "51068262--customersummariescountdetails",
+									"id": "51068262-b4314c1e-f712-4628-84b2-91d54c593c81",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -31192,7 +31192,7 @@
 								},
 								{
 									"name": "GetCustomerSummariesCountDetails",
-									"id": "51068262-getcustomersummariescountdetails",
+									"id": "51068262-770d4c2c-0cc2-46eb-bee3-9bcdf7063bc0",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -31257,7 +31257,7 @@
 								},
 								{
 									"name": "ExportCustomerSummariesStatusDetailsReport",
-									"id": "51068262-exportcustomersummariesstatusdetailsreport",
+									"id": "51068262-4df0697c-d92a-4aed-ac81-59d32f2aa180",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -31313,10 +31313,10 @@
 									"response": []
 								}
 							],
-							"id": "51068262-customer-summaries-status-report-folder"
+							"id": "51068262-6119c766-fd3c-40e9-b375-f2d9c24dea60"
 						}
 					],
-					"id": "51068262-report-list-folder"
+					"id": "51068262-22896a8c-5ced-4a34-a6de-885e5ca32d71"
 				},
 				{
 					"name": "health-check",
