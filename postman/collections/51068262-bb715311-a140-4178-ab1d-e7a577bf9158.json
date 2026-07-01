@@ -31067,6 +31067,274 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "ReportList",
+					"item": [
+						{
+							"name": "Customer Summaries Status Report",
+							"item": [
+								{
+									"name": "CustomerSummariesStatusReport - Legacy Route Alias",
+									"id": "51068262-customer-summaries-status-report-legacy",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "Meerut"
+											}
+										],
+										"description": "Legacy-compatible alias for ReportList/CustomerSummariesStatusReport. Returns paginated summary status counts.",
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/ReportList/CustomerSummariesStatusReport?EndDate=01/07/2026&pageNo=1&pageSize=50",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"ReportList",
+												"CustomerSummariesStatusReport"
+											],
+											"query": [
+												{
+													"key": "EndDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "50"
+												},
+												{
+													"key": "sortColumn",
+													"value": "StatusId",
+													"disabled": true
+												},
+												{
+													"key": "sortDirection",
+													"value": "asc",
+													"disabled": true
+												},
+												{
+													"key": "onPostReq",
+													"value": "1",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Customer Summaries Status Report - Summary Counts",
+									"id": "51068262-customer-summaries-status-report-summary",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "Meerut"
+											}
+										],
+										"description": "REST endpoint for Customer Summaries Status Report summary counts.",
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/report-list/customer-summaries-status-report?EndDate=01/07/2026&pageNo=1&pageSize=50",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"report-list",
+												"customer-summaries-status-report"
+											],
+											"query": [
+												{
+													"key": "EndDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "50"
+												},
+												{
+													"key": "sortColumn",
+													"value": "StatusId",
+													"disabled": true
+												},
+												{
+													"key": "sortDirection",
+													"value": "asc",
+													"disabled": true
+												},
+												{
+													"key": "onPostReq",
+													"value": "1",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Customer Summaries Status Report - Details",
+									"id": "51068262-customer-summaries-status-report-details",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "Meerut"
+											}
+										],
+										"description": "Paginated customer drill-down details for the selected summary StatusId.",
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/report-list/customer-summaries-status-report/details?StatusId=4&EndDate=01/07/2026&pageNo=1&pageSize=10",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"report-list",
+												"customer-summaries-status-report",
+												"details"
+											],
+											"query": [
+												{
+													"key": "StatusId",
+													"value": "4"
+												},
+												{
+													"key": "EndDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												},
+												{
+													"key": "ConsumerNumber",
+													"value": "3000038726",
+													"disabled": true
+												},
+												{
+													"key": "IsFilter",
+													"value": "1",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Customer Summaries Status Report - Export",
+									"id": "51068262-customer-summaries-status-report-export",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "Meerut"
+											}
+										],
+										"description": "Downloads Customer_Summaries_Status_Details_Report_List.xlsx for the selected summary StatusId.",
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/report-list/customer-summaries-status-report/export?StatusId=4&EndDate=01/07/2026",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"report-list",
+												"customer-summaries-status-report",
+												"export"
+											],
+											"query": [
+												{
+													"key": "StatusId",
+													"value": "4"
+												},
+												{
+													"key": "EndDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "ConsumerNumber",
+													"value": "3000038726",
+													"disabled": true
+												},
+												{
+													"key": "IsFilter",
+													"value": "1",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "51068262-customer-summaries-status-report-folder"
+						}
+					],
+					"id": "51068262-report-list-folder"
 				}
 			],
 			"id": "51068262-7ce36c5d-9fba-48d9-9cde-a1cafc858a91"
