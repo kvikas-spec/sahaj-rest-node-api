@@ -31003,6 +31003,322 @@
 					"id": "51068262-d43df18b-335b-4887-b7e6-aa814b2d45de"
 				},
 				{
+					"name": "ReportList",
+					"item": [
+						{
+							"name": "Customer Summaries Status Report",
+							"item": [
+								{
+									"name": "CustomerSummariesStatusReport",
+									"id": "51068262-customersummariesstatusreport",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "Meerut"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/ReportList/CustomerSummariesStatusReport?EndDate=01/07/2026&pageNo=1&pageSize=50",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"ReportList",
+												"CustomerSummariesStatusReport"
+											],
+											"query": [
+												{
+													"key": "EndDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "50"
+												},
+												{
+													"key": "sortColumn",
+													"value": "StatusId",
+													"disabled": true
+												},
+												{
+													"key": "sortDirection",
+													"value": "asc",
+													"disabled": true
+												}
+											]
+										},
+										"description": "Same endpoint name as legacy .NET page action ReportList/CustomerSummariesStatusReport."
+									},
+									"response": []
+								},
+								{
+									"name": "GetGetCustomerSummaryStatusCount",
+									"id": "51068262-getgetcustomersummarystatuscount",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "Meerut"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/ReportList/GetGetCustomerSummaryStatusCount?EndDate=01/07/2026&pageNo=1&pageSize=50",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"ReportList",
+												"GetGetCustomerSummaryStatusCount"
+											],
+											"query": [
+												{
+													"key": "EndDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "50"
+												},
+												{
+													"key": "onPostReq",
+													"value": "1",
+													"disabled": true
+												}
+											]
+										},
+										"description": "Same endpoint name as legacy .NET DataTable summary count action."
+									},
+									"response": []
+								},
+								{
+									"name": "_CustomerSummariesCountDetails",
+									"id": "51068262--customersummariescountdetails",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "Meerut"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/ReportList/_CustomerSummariesCountDetails?StatusId=1&EndDate=01/07/2026&pageNo=1&pageSize=10",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"ReportList",
+												"_CustomerSummariesCountDetails"
+											],
+											"query": [
+												{
+													"key": "StatusId",
+													"value": "1"
+												},
+												{
+													"key": "EndDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												},
+												{
+													"key": "ConsumerNumber",
+													"value": "3000038726",
+													"disabled": true
+												},
+												{
+													"key": "IsFilter",
+													"value": "1",
+													"disabled": true
+												}
+											]
+										},
+										"description": "Same endpoint name as legacy .NET modal partial action."
+									},
+									"response": []
+								},
+								{
+									"name": "GetCustomerSummariesCountDetails",
+									"id": "51068262-getcustomersummariescountdetails",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "Meerut"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/ReportList/GetCustomerSummariesCountDetails?StatusId=4&EndDate=01/07/2026&pageNo=1&pageSize=10",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"ReportList",
+												"GetCustomerSummariesCountDetails"
+											],
+											"query": [
+												{
+													"key": "StatusId",
+													"value": "4"
+												},
+												{
+													"key": "EndDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "pageNo",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												},
+												{
+													"key": "ConsumerNumber",
+													"value": "3000038726",
+													"disabled": true
+												},
+												{
+													"key": "IsFilter",
+													"value": "1",
+													"disabled": true
+												}
+											]
+										},
+										"description": "Same endpoint name as legacy .NET DataTable drill-down action."
+									},
+									"response": []
+								},
+								{
+									"name": "ExportCustomerSummariesStatusDetailsReport",
+									"id": "51068262-exportcustomersummariesstatusdetailsreport",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json, text/plain, */*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}"
+											},
+											{
+												"key": "x-region-id",
+												"value": "Meerut"
+											}
+										],
+										"url": {
+											"raw": "{{api_gateway_url}}/reports/ReportList/ExportCustomerSummariesStatusDetailsReport?StatusId=4&EndDate=01/07/2026",
+											"host": [
+												"{{api_gateway_url}}"
+											],
+											"path": [
+												"reports",
+												"ReportList",
+												"ExportCustomerSummariesStatusDetailsReport"
+											],
+											"query": [
+												{
+													"key": "StatusId",
+													"value": "4"
+												},
+												{
+													"key": "EndDate",
+													"value": "01/07/2026"
+												},
+												{
+													"key": "ConsumerNumber",
+													"value": "3000038726",
+													"disabled": true
+												},
+												{
+													"key": "IsFilter",
+													"value": "1",
+													"disabled": true
+												}
+											]
+										},
+										"description": "Same endpoint name as legacy .NET export action. Downloads Customer_Summaries_Status_Details_Report_List.xlsx."
+									},
+									"response": []
+								}
+							],
+							"id": "51068262-customer-summaries-status-report-folder"
+						}
+					],
+					"id": "51068262-report-list-folder"
+				},
+				{
 					"name": "health-check",
 					"id": "51068262-4f80165f-3fee-4240-bbaf-4febc5131ea5",
 					"protocolProfileBehavior": {
