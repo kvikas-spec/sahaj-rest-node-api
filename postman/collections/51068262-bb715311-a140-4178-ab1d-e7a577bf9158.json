@@ -8397,7 +8397,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?demandMasterId=5291634",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?demandMasterId=5291634&temp_token={{temp_token}}",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -8408,13 +8408,17 @@
 											],
 											"query": [
 												{
+													"key": "demandMasterId",
+													"value": "5291634"
+												},
+												{
 													"key": "consumerNumber",
 													"value": "3000038650",
 													"disabled": true
 												},
 												{
-													"key": "demandMasterId",
-													"value": "5291634"
+													"key": "temp_token",
+													"value": "{{temp_token}}"
 												}
 											]
 										}
