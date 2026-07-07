@@ -32407,7 +32407,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/reports/customers/ExportSDRequiredVsAvailable?statusId=3&startDate=01/07/2026&endDate=31/07/2026&ConsumerNumber={{consumerNumber}}",
+									"raw": "{{api_gateway_url}}/reports/customers/ExportSDRequiredVsAvailable?statusId=2&startDate=01/07/2026&endDate=31/07/2026",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -32419,7 +32419,7 @@
 									"query": [
 										{
 											"key": "statusId",
-											"value": "3"
+											"value": "2"
 										},
 										{
 											"key": "startDate",
@@ -32431,7 +32431,8 @@
 										},
 										{
 											"key": "ConsumerNumber",
-											"value": "{{consumerNumber}}"
+											"value": "{{consumerNumber}}",
+											"disabled": true
 										}
 									]
 								}
