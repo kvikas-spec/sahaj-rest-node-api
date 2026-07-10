@@ -6597,7 +6597,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Meerut/meter-reading/1782457422211-201739219_Screenshot from 2026-06-11 23-21-18.png\",\n    \"ConsumerNumber\": 3000041893,\n    \"Cycle\": \"2601\",\n    \"WardId\": 15,\n    \"ReadingDate\": \"2026-04-25\",\n    \"BillDate\": \"2026-04-25\",\n    \"FullName\": \"Shyam prakash \",\n    \"BillNumber\": 3000041893202601,\n    \"CurrentReading\": 30,\n    \"PreviousReading\": 0.07,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 29.93\n}",
+											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Bharatpur/meter-reading/1783671077704-418876547_Screenshot from 2026-06-09 13-10-16.png\",\n    \"ConsumerNumber\": 2500007729,\n    \"Cycle\": \"2601\",\n    \"WardId\": 2,\n    \"ReadingDate\": \"2026-05-17\",\n    \"BillDate\": \"2026-05-17\",\n    \"FullName\": \"doc\",\n    \"BillNumber\": 2500007729202601,\n    \"CurrentReading\": 21,\n    \"PreviousReading\": 21,\n    \"MeterStatusId\": 6,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 0\n}",
 											"options": {
 												"raw": {
 													"language": "json"
