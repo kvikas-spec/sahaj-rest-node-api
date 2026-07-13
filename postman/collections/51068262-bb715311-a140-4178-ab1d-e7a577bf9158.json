@@ -40310,11 +40310,6 @@
 			"name": "GailGas Prepaid Meter API",
 			"item": [
 				{
-					"name": "New Folder",
-					"item": [],
-					"id": "51068262-523336be-62ac-4144-b282-0685d01a464a"
-				},
-				{
 					"name": "Login",
 					"id": "51068262-bf3d5e8b-dbd2-4a5d-bcd0-3187f4842dc2",
 					"protocolProfileBehavior": {
