@@ -40308,20 +40308,7 @@
 		},
 		{
 			"name": "GailGas Prepaid Meter API",
-			"item": [
-				{
-					"name": "New Request",
-					"id": "51068262-92620306-586e-4ace-b3ce-98e925ab0387",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				}
-			],
+			"item": [],
 			"id": "51068262-033bd5bd-09b5-4676-b38c-5dbcedb449f3"
 		},
 		{
