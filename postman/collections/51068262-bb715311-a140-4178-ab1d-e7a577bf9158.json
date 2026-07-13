@@ -40308,7 +40308,316 @@
 		},
 		{
 			"name": "GailGas Prepaid Meter API",
-			"item": [],
+			"item": [
+				{
+					"name": "New Folder",
+					"item": [
+						{
+							"name": "Login",
+							"id": "51068262-bf3d5e8b-dbd2-4a5d-bcd0-3187f4842dc2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"RequestTime\": \"2026-07-13T10:00:00\",\n    \"UserName\": \"9b5b2c848d129cfb51339f808ceb1a98a4485a47701f8e61e68e46eab81fc4c32B70388F8733D6CE000EF0FAB72904E47C3B99565161B2BF1A32E8DA1245A5F7FBF2B2DEB3EF88B32FDD2C986AC390966B9D15107403F27ACFA4D52CA4C314A5\",\n    \"Password\": \"9b5b2c848d129cfb51339f808ceb1a98a4485a47701f8e61e68e46eab81fc4c32B70388F8733D6CE000EF0FAB72904E47C3B99565161B2BF1A32E8DA1245A5F7FBF2B2DEB3EF88B32FDD2C986AC390966B9D15107403F27ACFA4D52CA4C314A5\"\n}"
+								},
+								"url": {
+									"raw": "{{prepaidMeterBaseUrl}}/Login",
+									"host": [
+										"{{prepaidMeterBaseUrl}}"
+									],
+									"path": [
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SaveDailyMeterReading",
+							"id": "51068262-63cfb365-855a-493c-8f0e-0e117679d4dd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "fb04649230fdf3b85ac0e79eb12b3d0b55759d818fe86b8f43803703099a52ff181aefa9902328aa048c17790804a469",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{prepaidToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"transactionId\":\"TXN1\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"isFurtherDataAvailable\":false,\"data\":[{\"id\":1,\"bpId\":\"1000000001\",\"deviceId\":\"MTR001\",\"rtc\":\"2026-07-13T09:00:00\",\"reading\":12.345}]}"
+								},
+								"url": {
+									"raw": "{{prepaidMeterBaseUrl}}/SaveDailyMeterReading",
+									"host": [
+										"{{prepaidMeterBaseUrl}}"
+									],
+									"path": [
+										"SaveDailyMeterReading"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SaveMonthlyMeterReading",
+							"id": "51068262-e270e7c5-7110-4879-b91d-d7aeea93bbca",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{prepaidToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"transactionId\":\"TXN2\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"isFurtherDataAvailable\":false,\"data\":[{\"id\":1,\"bpId\":\"1000000001\",\"deviceId\":\"MTR001\",\"rtc\":\"2026-07-13T09:00:00\",\"reading\":12.345}]}"
+								},
+								"url": {
+									"raw": "{{prepaidMeterBaseUrl}}/SaveMonthlyMeterReading",
+									"host": [
+										"{{prepaidMeterBaseUrl}}"
+									],
+									"path": [
+										"SaveMonthlyMeterReading"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SaveDailyPrepaidComputation",
+							"id": "51068262-f7b55d60-2b98-41c5-91cd-b2235895b534",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{prepaidToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"transactionId\":\"TXN3\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"data\":[{\"deviceid\":\"MTR001\",\"bpid\":\"1000000001\",\"readingdate\":\"2026-07-13\",\"previous_reading\":10,\"currentreading\":12,\"consumption\":2,\"cf\":1,\"billunits\":2,\"tariffcode\":\"T1\",\"gascharge\":100,\"vatpercentage\":5,\"totalcharge\":105,\"openingbalance\":500,\"availableamount\":395,\"daydebit\":105,\"daycredit\":0,\"surcharge\":0,\"networktariff\":0}]}"
+								},
+								"url": {
+									"raw": "{{prepaidMeterBaseUrl}}/SaveDailyPrepaidComputation",
+									"host": [
+										"{{prepaidMeterBaseUrl}}"
+									],
+									"path": [
+										"SaveDailyPrepaidComputation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SavePrepaidValveStatus",
+							"id": "51068262-f990f290-702e-45bc-aad0-f0d80424c793",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{prepaidToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"transactionId\":\"TXN4\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"message\":\"ok\",\"data\":[{\"deviceId\":\"MTR001\",\"bpId\":\"1000000001\",\"status\":\"Open\",\"date\":\"2026-07-13T10:00:00\"}]}"
+								},
+								"url": {
+									"raw": "{{prepaidMeterBaseUrl}}/SavePrepaidValveStatus",
+									"host": [
+										"{{prepaidMeterBaseUrl}}"
+									],
+									"path": [
+										"SavePrepaidValveStatus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PrepaidSMSGateway",
+							"id": "51068262-e31a2fec-f914-47e5-8baa-34907ec50bde",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{prepaidToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"transactionId\":\"TXN5\",\"responseTime\":\"2026-07-13T10:00:00\",\"gaCode\":1,\"consumerNo\":\"1000000001\",\"templateId\":\"TMP001\",\"message\":\"Test prepaid SMS\",\"mobileNumber\":\"9999999999\"}"
+								},
+								"url": {
+									"raw": "{{prepaidMeterBaseUrl}}/PrepaidSMSGateway",
+									"host": [
+										"{{prepaidMeterBaseUrl}}"
+									],
+									"path": [
+										"PrepaidSMSGateway"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SavePrepaidCommandStatus",
+							"id": "51068262-123d216d-612b-428c-86e1-c08d95e003fe",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{prepaidToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"transactionId\":\"TXN6\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"message\":\"ok\",\"data\":[{\"deviceid\":\"MTR001\",\"bpid\":\"1000000001\",\"command\":\"Close\",\"commandtime\":\"2026-07-13T10:00:00\"}]}"
+								},
+								"url": {
+									"raw": "{{prepaidMeterBaseUrl}}/SavePrepaidCommandStatus",
+									"host": [
+										"{{prepaidMeterBaseUrl}}"
+									],
+									"path": [
+										"SavePrepaidCommandStatus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SavePrepaidNONCommunicatingMeter",
+							"id": "51068262-e5411a47-5720-4010-8b24-f546283027cb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{prepaidToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"transactionId\":\"TXN7\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"data\":[{\"msn\":\"MTR001\",\"bpId\":\"1000000001\",\"lastRecharge\":100,\"lastRechargeTimestamp\":\"2026-07-12T10:00:00\",\"availableBalance\":250,\"lastCommunicatedTimestamp\":\"2026-07-13T08:00:00\"}]}"
+								},
+								"url": {
+									"raw": "{{prepaidMeterBaseUrl}}/SavePrepaidNONCommunicatingMeter",
+									"host": [
+										"{{prepaidMeterBaseUrl}}"
+									],
+									"path": [
+										"SavePrepaidNONCommunicatingMeter"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "health",
+							"id": "51068262-e76eeefa-fd1b-4f38-80e2-cfef82c5042f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{prepaidMeterBaseUrl}}/health",
+									"host": [
+										"{{prepaidMeterBaseUrl}}"
+									],
+									"path": [
+										"health"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "51068262-523336be-62ac-4144-b282-0685d01a464a"
+				}
+			],
 			"id": "51068262-033bd5bd-09b5-4676-b38c-5dbcedb449f3"
 		},
 		{
