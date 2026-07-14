@@ -8644,11 +8644,16 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/BillGeneration/:DemanadGenerateRequestId",
+									"raw": "https://gailgaspng.xbotapps.com/api/v1/billing-payment/postpaid-invoice/BillGeneration/:DemanadGenerateRequestId",
+									"protocol": "https",
 									"host": [
-										"{{api_gateway_url}}"
+										"gailgaspng",
+										"xbotapps",
+										"com"
 									],
 									"path": [
+										"api",
+										"v1",
 										"billing-payment",
 										"postpaid-invoice",
 										"BillGeneration",
