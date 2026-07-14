@@ -40316,6 +40316,34 @@
 			"item": [
 				{
 					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b349ce61-e0d3-4bce-9351-647cb558b562",
+								"exec": [
+									"// Parse the response body JSON",
+									"const responseBody = pm.response.json();",
+									"",
+									"// Extract access_token and refresh_token from response body",
+									"let accessToken = responseBody.token;",
+									"// let refreshToken = responseBody.refresh_token;",
+									"",
+									"// Set tokens in environment variables",
+									"if (accessToken) {",
+									"    pm.environment.set(\"prepaid_meter_access_token\", accessToken);",
+									"}",
+									"",
+									"// if(refreshToken){",
+									"//     pm.environment.set(\"refresh_token\", refreshToken);",
+									"// }"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "51068262-bf3d5e8b-dbd2-4a5d-bcd0-3187f4842dc2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
