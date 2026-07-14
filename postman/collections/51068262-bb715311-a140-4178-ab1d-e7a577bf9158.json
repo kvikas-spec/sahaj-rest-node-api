@@ -40387,7 +40387,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "fb04649230fdf3b85ac0e79eb12b3d0b55759d818fe86b8f43803703099a52ff181aefa9902328aa048c17790804a469",
+									"value": "{{prepaid_meter_access_token}}",
 									"type": "string"
 								}
 							]
