@@ -40405,7 +40405,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"transactionId\":\"TXN1\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"isFurtherDataAvailable\":false,\"data\":[{\"id\":1,\"bpId\":\"1000000001\",\"deviceId\":\"MTR001\",\"rtc\":\"2026-07-13T09:00:00\",\"reading\":12.345}]}"
+							"raw": "{\n    \"transactionId\": \"TXN1\",\n    \"responseTime\": \"2026-07-13T10:00:00\",\n    \"GACode\": 5,\n    \"isFurtherDataAvailable\": false,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"bpId\": \"1000000001\",\n            \"deviceId\": \"MTR001\",\n            \"rtc\": \"2026-07-13T09:00:00\",\n            \"reading\": 12.345\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{prepaidMeterBaseUrl}}/SaveDailyMeterReading",
