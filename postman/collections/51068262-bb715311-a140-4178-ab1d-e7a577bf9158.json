@@ -40602,6 +40602,16 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{prepaid_meter_access_token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -40615,7 +40625,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"transactionId\":\"TXN6\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"message\":\"ok\",\"data\":[{\"deviceid\":\"MTR001\",\"bpid\":\"1000000001\",\"command\":\"Close\",\"commandtime\":\"2026-07-13T10:00:00\"}]}"
+							"raw": "{\n    \"transactionId\": \"TXN6\",\n    \"responseTime\": \"2026-07-13T10:00:00\",\n    \"GACode\": 1,\n    \"message\": \"ok\",\n    \"data\": [\n        {\n            \"deviceid\": \"MTR001\",\n            \"bpid\": \"1000000001\",\n            \"command\": \"Close\",\n            \"commandtime\": \"2026-07-13T10:00:00\"\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{prepaidMeterBaseUrl}}/SavePrepaidCommandStatus",
@@ -40636,6 +40646,16 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{prepaid_meter_access_token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
