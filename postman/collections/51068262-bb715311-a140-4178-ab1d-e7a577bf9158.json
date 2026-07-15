@@ -40558,6 +40558,16 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{prepaid_meter_access_token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -40571,7 +40581,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"transactionId\":\"TXN5\",\"responseTime\":\"2026-07-13T10:00:00\",\"gaCode\":1,\"consumerNo\":\"1000000001\",\"templateId\":\"TMP001\",\"message\":\"Test prepaid SMS\",\"mobileNumber\":\"9999999999\"}"
+							"raw": "{\n    \"transactionId\": \"TXN5\",\n    \"responseTime\": \"2026-07-13T10:00:00\",\n    \"gaCode\": 1,\n    \"consumerNo\": \"1000000001\",\n    \"templateId\": \"TMP001\",\n    \"message\": \"Test prepaid SMS\",\n    \"mobileNumber\": \"9999999999\"\n}"
 						},
 						"url": {
 							"raw": "{{prepaidMeterBaseUrl}}/PrepaidSMSGateway",
