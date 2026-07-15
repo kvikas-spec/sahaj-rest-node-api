@@ -40581,7 +40581,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"transactionId\": \"TXN5\",\n    \"responseTime\": \"2026-07-13T10:00:00\",\n    \"gaCode\": 1,\n    \"consumerNo\": \"1000000001\",\n    \"templateId\": \"TMP001\",\n    \"message\": \"Test prepaid SMS\",\n    \"mobileNumber\": \"9999999999\"\n}"
+							"raw": "{\n    \"transactionId\": \"d0a9eb94-e0b4-4943-a74b-1a0b1020afa6\",\n    \"responseTime\": \"2025-06-12T16:00:00\",\n    \"gaCode\": 18,\n    \"consumerNo\": \"3000297225\",\n    \"templateId\": \"1407173814933553914\",\n    \"message\": \"Hi Demoprepaiduser,Your Gail Gas DPNG Customer registration is done Successfully! BP Number: 3000297225 Pay SD Online website https: //customer.gailgaspng.com/online/billpay. Please don't pay to any individual person either through UPI/QR code/ Cash against GAIL Gas.Thanks, GAIL Gas\",\n    \"mobileNumber\": \"9876543210\"\n}"
 						},
 						"url": {
 							"raw": "{{prepaidMeterBaseUrl}}/PrepaidSMSGateway",
