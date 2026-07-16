@@ -8354,7 +8354,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?demandMasterId=5257337",
+											"raw": "{{api_gateway_url}}/billing-payment/postpaid-invoice/InvoicePDFPrint?demandMasterId=5257337&temp_token={{tempfile_token}}",
 											"host": [
 												"{{api_gateway_url}}"
 											],
@@ -8372,6 +8372,11 @@
 												{
 													"key": "demandMasterId",
 													"value": "5257337"
+												},
+												{
+													"key": "temp_token",
+													"value": "{{tempfile_token}}",
+													"type": "text"
 												}
 											]
 										}
