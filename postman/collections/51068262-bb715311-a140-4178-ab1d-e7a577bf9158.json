@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "51068262-bb715311-a140-4178-ab1d-e7a577bf9158",
 		"name": "GailGas",
-		"description": "# GailGas API Documentation\n\n## Overview\n\nThe GailGas API is a comprehensive platform for managing gas connection services, customer onboarding, and installation processes. This API enables end-to-end management of gas service operations including customer registration, document verification, installation scheduling, meter management, and payment processing.\n\nThe API supports the complete lifecycle of gas connection services from initial customer inquiry through installation, activation, and ongoing service management.\n\n## Authentication\n\nThe GailGas API uses **Bearer Token Authentication**. All API requests (except the authentication endpoint) must include a valid access token in the Authorization header.\n\n### Getting an Access Token\n\n1. Use the authentication endpoint with your credentials (`{{auth_username}}` and `{{auth_password}}`)\n    \n2. Store the returned `access_token` in your environment\n    \n3. Include the token in subsequent requests using: `Authorization: Bearer {{access_token}}`\n    \n\n### Token Management\n\n- Access tokens have a limited validity period\n    \n- Use the `{{refresh_token}}` to obtain a new access token when needed\n    \n- Tokens are automatically managed through environment variables\n    \n\n## Getting Started\n\n### Prerequisites\n\n- Valid GailGas API credentials (username and password)\n    \n- Postman or any API client\n    \n- Access to the GailGas API gateway\n    \n\n### Setup Steps\n\n1. **Import the Collection**: Import this GailGas collection into your Postman workspace\n    \n2. **Configure Environment**: Set up the required environment variables (see Environment Variables section)\n    \n3. **Authenticate**: Run the authentication request to obtain your access token\n    \n4. **Start Making Requests**: Use the organized folders to navigate different API functionalities\n    \n\n### Quick Start\n\n1. Navigate to the **Auth** folder\n    \n2. Execute the authentication request with your credentials\n    \n3. The `{{access_token}}` will be automatically saved to your environment\n    \n4. Proceed to use any other API endpoints\n    \n\n## API Sections\n\n### 🔐 Authentication\n\nHandles user authentication and token management for secure API access.\n\n### 👤 Customer Registration\n\nManages new customer registration processes, capturing essential customer information and initiating the onboarding workflow.\n\n### 📋 Customer Onboarding\n\nComprehensive onboarding workflows including document collection, verification, and customer profile setup.\n\n### 🔧 Gas Installation Module\n\nComplete gas installation management with the following sub-modules:\n\n- **BP Number Assignment**: Assign and manage Building Premise numbers\n    \n- **BP Number Reassignment**: Handle reassignment of BP numbers when needed\n    \n- **Piping and Feasibility**: Assess piping requirements and installation feasibility\n    \n- **Meter Installation**: Manage gas meter installation processes\n    \n- **GI (Gas In) Installation**: Handle gas inlet installation procedures\n    \n- **JMR (Job Material Request)**: Manage material requests for installation jobs\n    \n- **RFC Status**: Track Request for Connection status\n    \n- **Installation Scheduling**: Coordinate and schedule installation activities\n    \n\n### 📄 Document Management\n\n- **Document Upload**: Upload customer documents and installation records\n    \n- **Document Verification**: Verify and approve submitted documents\n    \n\n### 💰 Payment Plan Management\n\nManage payment plans, installment schedules, and payment processing for gas connections.\n\n### 👥 Customer Master Details\n\n- **Customer Details Update**: Modify customer information\n    \n- **Update Approval**: Approval workflows for customer data changes\n    \n\n### 📊 Gas In Processes\n\nManage the gas activation and supply initiation processes.\n\n## Environment Variables\n\nConfigure the following variables in your Postman environment:\n\n| Variable | Description | Example |\n| --- | --- | --- |\n| `baseurl` | Base URL for the API | `https://api.gailgas.com` |\n| `api_gateway_url` | API Gateway endpoint URL | `https://gateway.gailgas.com` |\n| `auth_username` | Your API username | `your_username` |\n| `auth_password` | Your API password | `your_password` |\n| `access_token` | Bearer token (auto-populated after auth) | Auto-generated |\n| `refresh_token` | Token for refreshing access (auto-populated) | Auto-generated |\n\n### Additional Variables\n\nThe collection also uses workflow-specific variables:\n\n- `customer-onboarding-reg`: Customer registration reference\n    \n- `customer-onboarding-gasin`: Gas installation reference\n    \n\n## Error Handling\n\nThe API uses standard HTTP status codes:\n\n- `200 OK`: Successful request\n    \n- `201 Created`: Resource successfully created\n    \n- `400 Bad Request`: Invalid request parameters\n    \n- `401 Unauthorized`: Missing or invalid authentication token\n    \n- `403 Forbidden`: Insufficient permissions\n    \n- `404 Not Found`: Resource not found\n    \n- `500 Internal Server Error`: Server-side error\n    \n\n## Rate Limiting\n\nPlease refer to your API subscription plan for rate limiting details. Implement appropriate retry logic with exponential backoff for production applications.\n\n## Best Practices\n\n1. **Always authenticate first** before making other API calls\n    \n2. **Store tokens securely** and refresh them before expiration\n    \n3. **Use environment variables** for sensitive data and dynamic values\n    \n4. **Follow the workflow order** in sequential processes (registration → onboarding → installation)\n    \n5. **Validate data** before submission to minimize errors\n    \n6. **Handle errors gracefully** with appropriate retry mechanisms\n    \n\n## Support and Contact\n\nFor API support, technical assistance, or to report issues:\n\n- **Technical Support**: \\[Contact your API administrator\\]\n    \n- **Documentation**: Refer to individual request descriptions for detailed endpoint information\n    \n- **API Status**: \\[Status page URL to be provided\\]\n    \n\n## Version Information\n\nThis collection is maintained and updated regularly. Check the changelog for recent updates and modifications.\n\n---\n\n_For detailed information about specific endpoints, navigate to the respective folders and review individual request documentation._",
+		"description": "# GailGas API Documentation\n\n## Cookie-Based Authentication\n\nThis collection is configured for **HTTP-only cookie authorization**.\n\nRun the Auth login flow first. The API sets these cookies automatically in Postman's cookie jar:\n\n- `temp_token` after login / temp-token flows\n- `access_token` after OTP verification\n- `refresh_token` for access-token refresh\n\nFor protected GailGas APIs, do not manually send `Authorization: Bearer ...`. Postman sends the stored cookies automatically for the same gateway host. Keep `x-region-id` on regional APIs.\n\n## Testing Flow\n\n1. Run **Auth / login** with Basic Auth credentials.\n2. Open **Cookies** in Postman for the gateway host, for example `localhost`, and confirm `temp_token` exists.\n3. Run **Auth / verify-otp**. Confirm `access_token` and `refresh_token` exist.\n4. Run protected APIs without a Bearer token.\n5. Run **Auth / logout** to revoke the session and clear auth cookies.\n\n## Local Note\n\nFor `http://localhost` testing, run the API with `COOKIE_SECURE=false` or leave it unset. Secure cookies are only sent over HTTPS.\n\n## Variables\n\n- `baseurl`: API gateway base URL\n- `api_gateway_url`: API gateway endpoint URL\n- `auth_username`: login username\n- `auth_password`: login password\n- `access_token`, `refresh_token`, `temp_token`: legacy fallback/debug variables only\n",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -17,6 +17,8 @@
 							"script": {
 								"id": "b5b05210-18d4-4e4b-871f-4a0d214de10f",
 								"exec": [
+									"// Cookie auth note: access_token, refresh_token, and temp_token are now stored as HttpOnly cookies by Postman automatically.",
+									"// These legacy environment variables are kept only for fallback/debugging.",
 									"let accessToken = pm.response.headers.get(\"x-access-token\");",
 									"let refreshToken = pm.response.headers.get(\"x-refresh-token\");",
 									"",
@@ -41,14 +43,7 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{temp_token}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [
@@ -209,6 +204,8 @@
 							"script": {
 								"id": "1ba45038-6145-433a-b50e-4d5d7e541a8f",
 								"exec": [
+									"// Cookie auth note: access_token, refresh_token, and temp_token are now stored as HttpOnly cookies by Postman automatically.",
+									"// These legacy environment variables are kept only for fallback/debugging.",
 									"// ========== DEBUG: Response Status ==========",
 									"console.log(\"========== LOGIN RESPONSE DEBUG ==========\");",
 									"console.log(\"Response Status Code:\", pm.response.code);",
@@ -354,6 +351,8 @@
 							"listen": "test",
 							"script": {
 								"exec": [
+									"// Cookie auth note: access_token, refresh_token, and temp_token are now stored as HttpOnly cookies by Postman automatically.",
+									"// These legacy environment variables are kept only for fallback/debugging.",
 									"const tempToken = pm.response.headers.get(\"x-temp-token\");",
 									"",
 									"if(tempToken){",
@@ -447,6 +446,8 @@
 							"script": {
 								"id": "60f0762f-3f75-4a97-af86-fcb99ea20cee",
 								"exec": [
+									"// Cookie auth note: access_token, refresh_token, and temp_token are now stored as HttpOnly cookies by Postman automatically.",
+									"// These legacy environment variables are kept only for fallback/debugging.",
 									"// Parse the response body JSON",
 									"const responseBody = pm.response.json();",
 									"",
@@ -475,14 +476,7 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{refresh_token}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [
@@ -513,6 +507,8 @@
 							"script": {
 								"id": "eedf616e-6341-4e12-bfe0-a19cdb315ab3",
 								"exec": [
+									"// Cookie auth note: access_token, refresh_token, and temp_token are now stored as HttpOnly cookies by Postman automatically.",
+									"// These legacy environment variables are kept only for fallback/debugging.",
 									"// Parse the response body JSON",
 									"const responseBody = pm.response.json();",
 									"",
@@ -536,14 +532,7 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [
@@ -574,6 +563,8 @@
 							"script": {
 								"id": "1a01d072-0167-478d-8745-45ed838af56b",
 								"exec": [
+									"// Cookie auth note: access_token, refresh_token, and temp_token are now stored as HttpOnly cookies by Postman automatically.",
+									"// These legacy environment variables are kept only for fallback/debugging.",
 									"// Parse the response body JSON",
 									"const responseBody = pm.response.json();",
 									"",
@@ -597,14 +588,7 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [
@@ -635,14 +619,7 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [
@@ -857,6 +834,8 @@
 							"script": {
 								"id": "b2b1f801-88fd-4ccd-934e-0ad4f5383a45",
 								"exec": [
+									"// Cookie auth note: access_token, refresh_token, and temp_token are now stored as HttpOnly cookies by Postman automatically.",
+									"// These legacy environment variables are kept only for fallback/debugging.",
 									"pm.environment.unset(\"access_token\");",
 									"pm.environment.unset(\"temp_token\");"
 								],
@@ -917,7 +896,9 @@
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer <YOUR_JWT_TOKEN>"
+										"value": "Bearer <YOUR_JWT_TOKEN>",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									}
 								],
 								"url": {
@@ -1067,7 +1048,9 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer <TOKEN>"
+								"value": "Bearer <TOKEN>",
+								"disabled": true,
+								"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 							}
 						],
 						"body": {
@@ -2468,14 +2451,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIxMzA4MjEiLCJSb2xlSUQiOiIwIiwiU3VybmFtZSI6IlBBTkNIQUwiLCJGaXJzdE5hbWUiOiJOSVJBSiIsIk1pZGRsZU5hbWUiOm51bGwsIlBob25lTnVtYmVyIjoiODE2MDYwNTQyNCIsIkVtYWlsSWQiOiJOSVJBSlBBTkNIQUwxQFdFQk1ZTkVTWVNURU1TLkNPTSIsIkFkZHJlc3MiOiJLQU5OQSIsIkRhdGVPZkpvaW5pbmciOm51bGwsIkRlc2lnbmF0aW9uIjoiUUEiLCJEZXBhcnRtZW50IjoiUUEiLCJFbXBsb3llZUlkIjoiMTY1NDIzMyIsIlVzZXJOYW1lIjoiTklSQUpQQU5DSEFMMUBXRUJNWU5FU1lTVEVNUy5DT00iLCJQYXNzd29yZCI6IndpTjJxMGxGTlpZY2Z3bk4xOSt1NFE9PSIsIlNlc3Npb25JRCI6bnVsbCwiTG9nZ2VkSW4iOm51bGwsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjo3LCJEYXRlR2VuZXJhdGVkIjoiMjAyNC0wMy0yMlQxNTo1Mjo0OC4yNTNaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjQwMzIyLCJVcGRhdGVkRGF0ZSI6IjIwMjUtMDItMjdUMTI6MDM6NDAuMDM3WiIsIlVwZGF0ZWREYXRlSW50IjoyMDI1MDIyNywiQWRkZWRCeSI6IjExMDgxOCIsIlVwZGF0ZWRCeSI6IjEwMDgxNiIsIlRyYW5zYWN0aW9uSWQiOiI0MDc0NDMxMTQiLCJBZ2VuY3lJZCI6IjIiLCJJc01vYmlsZSI6ZmFsc2UsIklzQURVc2VycyI6ZmFsc2UsIlVzZXJJbWFnZSI6bnVsbCwiUGFzc3dvcmRDaGFuZ2VkRGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGUiOiIyMDI1LTExLTI3VDAwOjAwOjAwLjAwMFoiLCJBY2NvdW50RXhwaXJ5RGF0ZUludCI6MjAyNTExMjcsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6NywiR0FOYW1lIjoiR2FuYWptLU5heWFnYXJoLVB1cmkgRGlzdHJpY3RzIiwiR0FFbnRpdGllcyI6IkdhbmphbSIsIkJ1c2luZXNzQXJlYUNvZGUiOiIyNjAwIiwiR0FTdGF0ZSI6Ik9kaXNoYSIsIkdBQ2l0eSI6IkdhbmphbSIsIkdBQWRkcmVzcyI6IkdhbmphbSAoVGltaW5nczogMDk6MTUgQU0gdG8gMDU6NDUgUE0pIiwiR0FUZWxlcGhvbmVOdW1iZXIiOm51bGwsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJPZmZpY2VBZGRyZXNzIjoiIDE2LEJoaWthaWppIENhbWEgUGxhY2UsIFIuSy5QdXJhbSwgTmV3IERlbGhpICAtMTEwMDY2ICIsIkNvcnBvcmF0ZUlkZW50aWZpY2F0aW9uTm8iOiIiLCJUZWxlcGhvbmVOdW1iZXIiOiIrOTEgLSAxMjAgLSAyNDQ2NDAwICwgNDg2MjQwMCIsIkZheE51bWJlciI6IiArOTEtMTEtMjYxODU5NDEgIiwiV2Vic2l0ZVVybCI6IiB3d3cuZ2FpbGdhcy5jb20gIiwiRW1haWxJZCI6IiBnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiAiLCJDdXN0b21lckNhcmVOdW1iZXIiOiIgMTgwMDEwMjkyODIgIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9jb3Jwb3JhdGUjL3JhdGVjYXJkLXBuZyIsIkRvc0FuZERvbnRzUE5HTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9kby1kb250cy1wbmciLCJUZXJtc0FuZENvbmRpdGlvbiI6Imh0dHBzOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL0FjY291bnQvR2VuZXJhdGVBbmRTZW5kUERGVGVybUFuZENvbmRpdGlvbiIsIkNvbXBhbnlJZCI6IjEiLCJNZXJjaGFudElEIjoiV1QtMTE5MiIsIkFjY2Vzc0NvZGUiOiIiLCJSZWRpcmVjdFVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1BheW1lbnRTdWNjZXNzIiwiQ2FuY2VsdXJsIjoiaHR0cDovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9PbmxpbmUvUmVkaXJlY3R0b1VzZXIiLCJQcm9jZXNzb3JBY3Rpb24iOiJodHRwczovL2dlbmVyaWMuaXBheTJjb3JwdWF0LmljaWNpYmFuay5jb20vZ3AyYy1hcGkvd3MvcGF5bWVudCIsIlFyQ29kZVBBIjoiZ2FpbGdhc0BpY2ljaSIsIlFyQ29kZVBOIjoiR0FJTCBHQVMgTFRELiIsIlFyQ29kZVRSIjoiR0FJIiwiUXJDb2RlTUMiOiI5NDA1IiwiQmFua0FjY291bnROdW1iZXIiOiIwMDMxMDUwMjQ5NzciLCJTdWJBY2NvdW50SWQiOm51bGx9LCJpYXQiOjE3Njg1NDYxOTcsImV4cCI6MTc2ODU0OTc5N30.lIabZJDSNMvMf8sT-79zdQ8WfV-hD2lMpVerKzCKJrc",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -2510,14 +2486,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -2555,7 +2524,9 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIxMzA4MjEiLCJSb2xlSUQiOiIwIiwiU3VybmFtZSI6IlBBTkNIQUwiLCJGaXJzdE5hbWUiOiJOSVJBSiIsIk1pZGRsZU5hbWUiOm51bGwsIlBob25lTnVtYmVyIjoiODE2MDYwNTQyNCIsIkVtYWlsSWQiOiJOSVJBSlBBTkNIQUwxQFdFQk1ZTkVTWVNURU1TLkNPTSIsIkFkZHJlc3MiOiJLQU5OQSIsIkRhdGVPZkpvaW5pbmciOm51bGwsIkRlc2lnbmF0aW9uIjoiUUEiLCJEZXBhcnRtZW50IjoiUUEiLCJFbXBsb3llZUlkIjoiMTY1NDIzMyIsIlVzZXJOYW1lIjoiTklSQUpQQU5DSEFMMUBXRUJNWU5FU1lTVEVNUy5DT00iLCJQYXNzd29yZCI6IndpTjJxMGxGTlpZY2Z3bk4xOSt1NFE9PSIsIlNlc3Npb25JRCI6bnVsbCwiTG9nZ2VkSW4iOm51bGwsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjo3LCJEYXRlR2VuZXJhdGVkIjoiMjAyNC0wMy0yMlQxNTo1Mjo0OC4yNTNaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjQwMzIyLCJVcGRhdGVkRGF0ZSI6IjIwMjUtMDItMjdUMTI6MDM6NDAuMDM3WiIsIlVwZGF0ZWREYXRlSW50IjoyMDI1MDIyNywiQWRkZWRCeSI6IjExMDgxOCIsIlVwZGF0ZWRCeSI6IjEwMDgxNiIsIlRyYW5zYWN0aW9uSWQiOiI0MDc0NDMxMTQiLCJBZ2VuY3lJZCI6IjIiLCJJc01vYmlsZSI6ZmFsc2UsIklzQURVc2VycyI6ZmFsc2UsIlVzZXJJbWFnZSI6bnVsbCwiUGFzc3dvcmRDaGFuZ2VkRGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGUiOiIyMDI1LTExLTI3VDAwOjAwOjAwLjAwMFoiLCJBY2NvdW50RXhwaXJ5RGF0ZUludCI6MjAyNTExMjcsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6NywiR0FOYW1lIjoiR2FuYWptLU5heWFnYXJoLVB1cmkgRGlzdHJpY3RzIiwiR0FFbnRpdGllcyI6IkdhbmphbSIsIkJ1c2luZXNzQXJlYUNvZGUiOiIyNjAwIiwiR0FTdGF0ZSI6Ik9kaXNoYSIsIkdBQ2l0eSI6IkdhbmphbSIsIkdBQWRkcmVzcyI6IkdhbmphbSAoVGltaW5nczogMDk6MTUgQU0gdG8gMDU6NDUgUE0pIiwiR0FUZWxlcGhvbmVOdW1iZXIiOm51bGwsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJPZmZpY2VBZGRyZXNzIjoiIDE2LEJoaWthaWppIENhbWEgUGxhY2UsIFIuSy5QdXJhbSwgTmV3IERlbGhpICAtMTEwMDY2ICIsIkNvcnBvcmF0ZUlkZW50aWZpY2F0aW9uTm8iOiIiLCJUZWxlcGhvbmVOdW1iZXIiOiIrOTEgLSAxMjAgLSAyNDQ2NDAwICwgNDg2MjQwMCIsIkZheE51bWJlciI6IiArOTEtMTEtMjYxODU5NDEgIiwiV2Vic2l0ZVVybCI6IiB3d3cuZ2FpbGdhcy5jb20gIiwiRW1haWxJZCI6IiBnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiAiLCJDdXN0b21lckNhcmVOdW1iZXIiOiIgMTgwMDEwMjkyODIgIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9jb3Jwb3JhdGUjL3JhdGVjYXJkLXBuZyIsIkRvc0FuZERvbnRzUE5HTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9kby1kb250cy1wbmciLCJUZXJtc0FuZENvbmRpdGlvbiI6Imh0dHBzOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL0FjY291bnQvR2VuZXJhdGVBbmRTZW5kUERGVGVybUFuZENvbmRpdGlvbiIsIkNvbXBhbnlJZCI6IjEiLCJNZXJjaGFudElEIjoiV1QtMTE5MiIsIkFjY2Vzc0NvZGUiOiIiLCJSZWRpcmVjdFVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1BheW1lbnRTdWNjZXNzIiwiQ2FuY2VsdXJsIjoiaHR0cDovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9PbmxpbmUvUmVkaXJlY3R0b1VzZXIiLCJQcm9jZXNzb3JBY3Rpb24iOiJodHRwczovL2dlbmVyaWMuaXBheTJjb3JwdWF0LmljaWNpYmFuay5jb20vZ3AyYy1hcGkvd3MvcGF5bWVudCIsIlFyQ29kZVBBIjoiZ2FpbGdhc0BpY2ljaSIsIlFyQ29kZVBOIjoiR0FJTCBHQVMgTFRELiIsIlFyQ29kZVRSIjoiR0FJIiwiUXJDb2RlTUMiOiI5NDA1IiwiQmFua0FjY291bnROdW1iZXIiOiIwMDMxMDUwMjQ5NzciLCJTdWJBY2NvdW50SWQiOm51bGx9LCJpYXQiOjE3NjkwNzY0NDIsImV4cCI6MTc2OTA4MDA0Mn0.UstcBz5GGv9ZDut0wnzjbNm_IWYDii_6sTcVGXyfYd0"
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIxMzA4MjEiLCJSb2xlSUQiOiIwIiwiU3VybmFtZSI6IlBBTkNIQUwiLCJGaXJzdE5hbWUiOiJOSVJBSiIsIk1pZGRsZU5hbWUiOm51bGwsIlBob25lTnVtYmVyIjoiODE2MDYwNTQyNCIsIkVtYWlsSWQiOiJOSVJBSlBBTkNIQUwxQFdFQk1ZTkVTWVNURU1TLkNPTSIsIkFkZHJlc3MiOiJLQU5OQSIsIkRhdGVPZkpvaW5pbmciOm51bGwsIkRlc2lnbmF0aW9uIjoiUUEiLCJEZXBhcnRtZW50IjoiUUEiLCJFbXBsb3llZUlkIjoiMTY1NDIzMyIsIlVzZXJOYW1lIjoiTklSQUpQQU5DSEFMMUBXRUJNWU5FU1lTVEVNUy5DT00iLCJQYXNzd29yZCI6IndpTjJxMGxGTlpZY2Z3bk4xOSt1NFE9PSIsIlNlc3Npb25JRCI6bnVsbCwiTG9nZ2VkSW4iOm51bGwsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjo3LCJEYXRlR2VuZXJhdGVkIjoiMjAyNC0wMy0yMlQxNTo1Mjo0OC4yNTNaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjQwMzIyLCJVcGRhdGVkRGF0ZSI6IjIwMjUtMDItMjdUMTI6MDM6NDAuMDM3WiIsIlVwZGF0ZWREYXRlSW50IjoyMDI1MDIyNywiQWRkZWRCeSI6IjExMDgxOCIsIlVwZGF0ZWRCeSI6IjEwMDgxNiIsIlRyYW5zYWN0aW9uSWQiOiI0MDc0NDMxMTQiLCJBZ2VuY3lJZCI6IjIiLCJJc01vYmlsZSI6ZmFsc2UsIklzQURVc2VycyI6ZmFsc2UsIlVzZXJJbWFnZSI6bnVsbCwiUGFzc3dvcmRDaGFuZ2VkRGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGUiOiIyMDI1LTExLTI3VDAwOjAwOjAwLjAwMFoiLCJBY2NvdW50RXhwaXJ5RGF0ZUludCI6MjAyNTExMjcsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6NywiR0FOYW1lIjoiR2FuYWptLU5heWFnYXJoLVB1cmkgRGlzdHJpY3RzIiwiR0FFbnRpdGllcyI6IkdhbmphbSIsIkJ1c2luZXNzQXJlYUNvZGUiOiIyNjAwIiwiR0FTdGF0ZSI6Ik9kaXNoYSIsIkdBQ2l0eSI6IkdhbmphbSIsIkdBQWRkcmVzcyI6IkdhbmphbSAoVGltaW5nczogMDk6MTUgQU0gdG8gMDU6NDUgUE0pIiwiR0FUZWxlcGhvbmVOdW1iZXIiOm51bGwsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJPZmZpY2VBZGRyZXNzIjoiIDE2LEJoaWthaWppIENhbWEgUGxhY2UsIFIuSy5QdXJhbSwgTmV3IERlbGhpICAtMTEwMDY2ICIsIkNvcnBvcmF0ZUlkZW50aWZpY2F0aW9uTm8iOiIiLCJUZWxlcGhvbmVOdW1iZXIiOiIrOTEgLSAxMjAgLSAyNDQ2NDAwICwgNDg2MjQwMCIsIkZheE51bWJlciI6IiArOTEtMTEtMjYxODU5NDEgIiwiV2Vic2l0ZVVybCI6IiB3d3cuZ2FpbGdhcy5jb20gIiwiRW1haWxJZCI6IiBnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiAiLCJDdXN0b21lckNhcmVOdW1iZXIiOiIgMTgwMDEwMjkyODIgIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9jb3Jwb3JhdGUjL3JhdGVjYXJkLXBuZyIsIkRvc0FuZERvbnRzUE5HTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9kby1kb250cy1wbmciLCJUZXJtc0FuZENvbmRpdGlvbiI6Imh0dHBzOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL0FjY291bnQvR2VuZXJhdGVBbmRTZW5kUERGVGVybUFuZENvbmRpdGlvbiIsIkNvbXBhbnlJZCI6IjEiLCJNZXJjaGFudElEIjoiV1QtMTE5MiIsIkFjY2Vzc0NvZGUiOiIiLCJSZWRpcmVjdFVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1BheW1lbnRTdWNjZXNzIiwiQ2FuY2VsdXJsIjoiaHR0cDovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9PbmxpbmUvUmVkaXJlY3R0b1VzZXIiLCJQcm9jZXNzb3JBY3Rpb24iOiJodHRwczovL2dlbmVyaWMuaXBheTJjb3JwdWF0LmljaWNpYmFuay5jb20vZ3AyYy1hcGkvd3MvcGF5bWVudCIsIlFyQ29kZVBBIjoiZ2FpbGdhc0BpY2ljaSIsIlFyQ29kZVBOIjoiR0FJTCBHQVMgTFRELiIsIlFyQ29kZVRSIjoiR0FJIiwiUXJDb2RlTUMiOiI5NDA1IiwiQmFua0FjY291bnROdW1iZXIiOiIwMDMxMDUwMjQ5NzciLCJTdWJBY2NvdW50SWQiOm51bGx9LCJpYXQiOjE3NjkwNzY0NDIsImV4cCI6MTc2OTA4MDA0Mn0.UstcBz5GGv9ZDut0wnzjbNm_IWYDii_6sTcVGXyfYd0",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									}
 								],
 								"body": {
@@ -3535,7 +3506,9 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIxMzA4MjEiLCJSb2xlSUQiOiIwIiwiU3VybmFtZSI6IlBBTkNIQUwiLCJGaXJzdE5hbWUiOiJOSVJBSiIsIk1pZGRsZU5hbWUiOm51bGwsIlBob25lTnVtYmVyIjoiODE2MDYwNTQyNCIsIkVtYWlsSWQiOiJOSVJBSlBBTkNIQUwxQFdFQk1ZTkVTWVNURU1TLkNPTSIsIkFkZHJlc3MiOiJLQU5OQSIsIkRhdGVPZkpvaW5pbmciOm51bGwsIkRlc2lnbmF0aW9uIjoiUUEiLCJEZXBhcnRtZW50IjoiUUEiLCJFbXBsb3llZUlkIjoiMTY1NDIzMyIsIlVzZXJOYW1lIjoiTklSQUpQQU5DSEFMMUBXRUJNWU5FU1lTVEVNUy5DT00iLCJQYXNzd29yZCI6IndpTjJxMGxGTlpZY2Z3bk4xOSt1NFE9PSIsIlNlc3Npb25JRCI6bnVsbCwiTG9nZ2VkSW4iOm51bGwsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjo3LCJEYXRlR2VuZXJhdGVkIjoiMjAyNC0wMy0yMlQxNTo1Mjo0OC4yNTNaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjQwMzIyLCJVcGRhdGVkRGF0ZSI6IjIwMjUtMDItMjdUMTI6MDM6NDAuMDM3WiIsIlVwZGF0ZWREYXRlSW50IjoyMDI1MDIyNywiQWRkZWRCeSI6IjExMDgxOCIsIlVwZGF0ZWRCeSI6IjEwMDgxNiIsIlRyYW5zYWN0aW9uSWQiOiI0MDc0NDMxMTQiLCJBZ2VuY3lJZCI6IjIiLCJJc01vYmlsZSI6ZmFsc2UsIklzQURVc2VycyI6ZmFsc2UsIlVzZXJJbWFnZSI6bnVsbCwiUGFzc3dvcmRDaGFuZ2VkRGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGUiOiIyMDI1LTExLTI3VDAwOjAwOjAwLjAwMFoiLCJBY2NvdW50RXhwaXJ5RGF0ZUludCI6MjAyNTExMjcsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6NywiR0FOYW1lIjoiR2FuYWptLU5heWFnYXJoLVB1cmkgRGlzdHJpY3RzIiwiR0FFbnRpdGllcyI6IkdhbmphbSIsIkJ1c2luZXNzQXJlYUNvZGUiOiIyNjAwIiwiR0FTdGF0ZSI6Ik9kaXNoYSIsIkdBQ2l0eSI6IkdhbmphbSIsIkdBQWRkcmVzcyI6IkdhbmphbSAoVGltaW5nczogMDk6MTUgQU0gdG8gMDU6NDUgUE0pIiwiR0FUZWxlcGhvbmVOdW1iZXIiOm51bGwsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJPZmZpY2VBZGRyZXNzIjoiIDE2LEJoaWthaWppIENhbWEgUGxhY2UsIFIuSy5QdXJhbSwgTmV3IERlbGhpICAtMTEwMDY2ICIsIkNvcnBvcmF0ZUlkZW50aWZpY2F0aW9uTm8iOiIiLCJUZWxlcGhvbmVOdW1iZXIiOiIrOTEgLSAxMjAgLSAyNDQ2NDAwICwgNDg2MjQwMCIsIkZheE51bWJlciI6IiArOTEtMTEtMjYxODU5NDEgIiwiV2Vic2l0ZVVybCI6IiB3d3cuZ2FpbGdhcy5jb20gIiwiRW1haWxJZCI6IiBnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiAiLCJDdXN0b21lckNhcmVOdW1iZXIiOiIgMTgwMDEwMjkyODIgIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9jb3Jwb3JhdGUjL3JhdGVjYXJkLXBuZyIsIkRvc0FuZERvbnRzUE5HTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9kby1kb250cy1wbmciLCJUZXJtc0FuZENvbmRpdGlvbiI6Imh0dHBzOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL0FjY291bnQvR2VuZXJhdGVBbmRTZW5kUERGVGVybUFuZENvbmRpdGlvbiIsIkNvbXBhbnlJZCI6IjEiLCJNZXJjaGFudElEIjoiV1QtMTE5MiIsIkFjY2Vzc0NvZGUiOiIiLCJSZWRpcmVjdFVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1BheW1lbnRTdWNjZXNzIiwiQ2FuY2VsdXJsIjoiaHR0cDovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9PbmxpbmUvUmVkaXJlY3R0b1VzZXIiLCJQcm9jZXNzb3JBY3Rpb24iOiJodHRwczovL2dlbmVyaWMuaXBheTJjb3JwdWF0LmljaWNpYmFuay5jb20vZ3AyYy1hcGkvd3MvcGF5bWVudCIsIlFyQ29kZVBBIjoiZ2FpbGdhc0BpY2ljaSIsIlFyQ29kZVBOIjoiR0FJTCBHQVMgTFRELiIsIlFyQ29kZVRSIjoiR0FJIiwiUXJDb2RlTUMiOiI5NDA1IiwiQmFua0FjY291bnROdW1iZXIiOiIwMDMxMDUwMjQ5NzciLCJTdWJBY2NvdW50SWQiOm51bGx9LCJpYXQiOjE3NjkwODY1MTEsImV4cCI6MTc2OTA5MDExMX0.OUVNqsYNiC-TM1ogVOZyvH6Vs-x9xRuWg0tZOSZrnr4"
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIxMzA4MjEiLCJSb2xlSUQiOiIwIiwiU3VybmFtZSI6IlBBTkNIQUwiLCJGaXJzdE5hbWUiOiJOSVJBSiIsIk1pZGRsZU5hbWUiOm51bGwsIlBob25lTnVtYmVyIjoiODE2MDYwNTQyNCIsIkVtYWlsSWQiOiJOSVJBSlBBTkNIQUwxQFdFQk1ZTkVTWVNURU1TLkNPTSIsIkFkZHJlc3MiOiJLQU5OQSIsIkRhdGVPZkpvaW5pbmciOm51bGwsIkRlc2lnbmF0aW9uIjoiUUEiLCJEZXBhcnRtZW50IjoiUUEiLCJFbXBsb3llZUlkIjoiMTY1NDIzMyIsIlVzZXJOYW1lIjoiTklSQUpQQU5DSEFMMUBXRUJNWU5FU1lTVEVNUy5DT00iLCJQYXNzd29yZCI6IndpTjJxMGxGTlpZY2Z3bk4xOSt1NFE9PSIsIlNlc3Npb25JRCI6bnVsbCwiTG9nZ2VkSW4iOm51bGwsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjo3LCJEYXRlR2VuZXJhdGVkIjoiMjAyNC0wMy0yMlQxNTo1Mjo0OC4yNTNaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjQwMzIyLCJVcGRhdGVkRGF0ZSI6IjIwMjUtMDItMjdUMTI6MDM6NDAuMDM3WiIsIlVwZGF0ZWREYXRlSW50IjoyMDI1MDIyNywiQWRkZWRCeSI6IjExMDgxOCIsIlVwZGF0ZWRCeSI6IjEwMDgxNiIsIlRyYW5zYWN0aW9uSWQiOiI0MDc0NDMxMTQiLCJBZ2VuY3lJZCI6IjIiLCJJc01vYmlsZSI6ZmFsc2UsIklzQURVc2VycyI6ZmFsc2UsIlVzZXJJbWFnZSI6bnVsbCwiUGFzc3dvcmRDaGFuZ2VkRGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGUiOiIyMDI1LTExLTI3VDAwOjAwOjAwLjAwMFoiLCJBY2NvdW50RXhwaXJ5RGF0ZUludCI6MjAyNTExMjcsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6NywiR0FOYW1lIjoiR2FuYWptLU5heWFnYXJoLVB1cmkgRGlzdHJpY3RzIiwiR0FFbnRpdGllcyI6IkdhbmphbSIsIkJ1c2luZXNzQXJlYUNvZGUiOiIyNjAwIiwiR0FTdGF0ZSI6Ik9kaXNoYSIsIkdBQ2l0eSI6IkdhbmphbSIsIkdBQWRkcmVzcyI6IkdhbmphbSAoVGltaW5nczogMDk6MTUgQU0gdG8gMDU6NDUgUE0pIiwiR0FUZWxlcGhvbmVOdW1iZXIiOm51bGwsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJPZmZpY2VBZGRyZXNzIjoiIDE2LEJoaWthaWppIENhbWEgUGxhY2UsIFIuSy5QdXJhbSwgTmV3IERlbGhpICAtMTEwMDY2ICIsIkNvcnBvcmF0ZUlkZW50aWZpY2F0aW9uTm8iOiIiLCJUZWxlcGhvbmVOdW1iZXIiOiIrOTEgLSAxMjAgLSAyNDQ2NDAwICwgNDg2MjQwMCIsIkZheE51bWJlciI6IiArOTEtMTEtMjYxODU5NDEgIiwiV2Vic2l0ZVVybCI6IiB3d3cuZ2FpbGdhcy5jb20gIiwiRW1haWxJZCI6IiBnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiAiLCJDdXN0b21lckNhcmVOdW1iZXIiOiIgMTgwMDEwMjkyODIgIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9jb3Jwb3JhdGUjL3JhdGVjYXJkLXBuZyIsIkRvc0FuZERvbnRzUE5HTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9kby1kb250cy1wbmciLCJUZXJtc0FuZENvbmRpdGlvbiI6Imh0dHBzOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL0FjY291bnQvR2VuZXJhdGVBbmRTZW5kUERGVGVybUFuZENvbmRpdGlvbiIsIkNvbXBhbnlJZCI6IjEiLCJNZXJjaGFudElEIjoiV1QtMTE5MiIsIkFjY2Vzc0NvZGUiOiIiLCJSZWRpcmVjdFVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1BheW1lbnRTdWNjZXNzIiwiQ2FuY2VsdXJsIjoiaHR0cDovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9PbmxpbmUvUmVkaXJlY3R0b1VzZXIiLCJQcm9jZXNzb3JBY3Rpb24iOiJodHRwczovL2dlbmVyaWMuaXBheTJjb3JwdWF0LmljaWNpYmFuay5jb20vZ3AyYy1hcGkvd3MvcGF5bWVudCIsIlFyQ29kZVBBIjoiZ2FpbGdhc0BpY2ljaSIsIlFyQ29kZVBOIjoiR0FJTCBHQVMgTFRELiIsIlFyQ29kZVRSIjoiR0FJIiwiUXJDb2RlTUMiOiI5NDA1IiwiQmFua0FjY291bnROdW1iZXIiOiIwMDMxMDUwMjQ5NzciLCJTdWJBY2NvdW50SWQiOm51bGx9LCJpYXQiOjE3NjkwODY1MTEsImV4cCI6MTc2OTA5MDExMX0.OUVNqsYNiC-TM1ogVOZyvH6Vs-x9xRuWg0tZOSZrnr4",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									}
 								],
 								"url": {
@@ -3576,14 +3549,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "POST",
 								"header": [],
@@ -4837,7 +4803,9 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer <YOUR_TOKEN>"
+								"value": "Bearer <YOUR_TOKEN>",
+								"disabled": true,
+								"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 							}
 						],
 						"url": {
@@ -4923,7 +4891,9 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer <YOUR_TOKEN>"
+								"value": "Bearer <YOUR_TOKEN>",
+								"disabled": true,
+								"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 							}
 						],
 						"url": {
@@ -5011,7 +4981,9 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer <YOUR_TOKEN>"
+								"value": "Bearer <YOUR_TOKEN>",
+								"disabled": true,
+								"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 							}
 						],
 						"url": {
@@ -5045,7 +5017,9 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer <TOKEN>"
+								"value": "Bearer <TOKEN>",
+								"disabled": true,
+								"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 							}
 						],
 						"body": {
@@ -5233,7 +5207,9 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer YOUR_JWT_TOKEN"
+								"value": "Bearer YOUR_JWT_TOKEN",
+								"disabled": true,
+								"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 							}
 						],
 						"body": {
@@ -5274,7 +5250,9 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer YOUR_JWT_TOKEN"
+								"value": "Bearer YOUR_JWT_TOKEN",
+								"disabled": true,
+								"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 							}
 						],
 						"body": {
@@ -5310,7 +5288,9 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer YOUR_JWT_TOKEN"
+								"value": "Bearer YOUR_JWT_TOKEN",
+								"disabled": true,
+								"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 							}
 						],
 						"body": {
@@ -5346,7 +5326,9 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer YOUR_JWT_TOKEN"
+								"value": "Bearer YOUR_JWT_TOKEN",
+								"disabled": true,
+								"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 							}
 						],
 						"body": {
@@ -5393,7 +5375,9 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer YOUR_JWT_TOKEN"
+								"value": "Bearer YOUR_JWT_TOKEN",
+								"disabled": true,
+								"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 							}
 						],
 						"body": {
@@ -6592,7 +6576,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer <ACCESS_TOKEN>"
+												"value": "Bearer <ACCESS_TOKEN>",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											}
 										],
 										"body": {
@@ -6629,7 +6615,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer <ACCESS_TOKEN>"
+												"value": "Bearer <ACCESS_TOKEN>",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											}
 										],
 										"body": {
@@ -6915,7 +6903,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer <ACCESS_TOKEN>"
+												"value": "Bearer <ACCESS_TOKEN>",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											}
 										],
 										"body": {
@@ -6958,7 +6948,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer <ACCESS_TOKEN>"
+												"value": "Bearer <ACCESS_TOKEN>",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											}
 										],
 										"body": {
@@ -7003,7 +6995,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer <token>"
+												"value": "Bearer <token>",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -7046,7 +7040,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer <token>"
+												"value": "Bearer <token>",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -7095,7 +7091,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer <token>"
+												"value": "Bearer <token>",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -7256,7 +7254,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer <token>"
+												"value": "Bearer <token>",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -7421,7 +7421,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer <token>"
+												"value": "Bearer <token>",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -9705,14 +9707,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "POST",
 								"header": [],
@@ -9909,14 +9904,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOm51bGwsIkxvZ2dlZEluIjpmYWxzZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjYtMTItMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI2MTIyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcwOTgxOTQwLCJleHAiOjE3NzEwMTc5NDB9.suynmwYbpJroOdiw82SacnGSvaEGnxIQmBLsHPdRD9E",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -10979,14 +10967,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOm51bGwsIkxvZ2dlZEluIjpmYWxzZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjYtMTItMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI2MTIyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcwOTgxOTQwLCJleHAiOjE3NzEwMTc5NDB9.suynmwYbpJroOdiw82SacnGSvaEGnxIQmBLsHPdRD9E",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "POST",
 								"header": [],
@@ -12094,14 +12075,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOm51bGwsIkxvZ2dlZEluIjpmYWxzZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjYtMTItMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI2MTIyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcxMzEzMjIyLCJleHAiOjE3NzEzNDkyMjJ9.Kc8o9Zqavi4ysDpP2LaPLCcUXkKGXpU5PvSTZyzidkU",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -12147,14 +12121,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOm51bGwsIkxvZ2dlZEluIjpmYWxzZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjYtMTItMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI2MTIyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcxMzEzMjIyLCJleHAiOjE3NzEzNDkyMjJ9.Kc8o9Zqavi4ysDpP2LaPLCcUXkKGXpU5PvSTZyzidkU",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -12328,14 +12295,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOiJtMWNxMmJqdGhldjQwYTNwYXNjdWtjejUiLCJMb2dnZWRJbiI6dHJ1ZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjUtMDQtMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI1MDQyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcwNzA2MDcwLCJleHAiOjE3NzA3NDIwNzB9.ojrEEnPaszCJlV7jfA-3ldDdNH0tguc0RwUCHzYi76E",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -13958,14 +13918,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiSFAiLCJNaWRkbGVOYW1lIjoiUlQiLCJQaG9uZU51bWJlciI6Ijk4OTg5ODk4OTMiLCJFbWFpbElkIjoiTUVIVUxNSVNUUllAWU9QTUFJTC5DT00iLCJBZGRyZXNzIjoiREFORElBIEJBWkFSIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOiJMRURHRVIgQ0xFUksiLCJEZXBhcnRtZW50IjoiTEVER0VSIiwiRW1wbG95ZWVJZCI6IkxFRDA1IiwiVXNlck5hbWUiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoibTFjcTJianRoZXY0MGEzcGFzY3VrY3o1IiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAxNy0wNi0yMFQxNjoxNjoxOS41NjNaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMTcwNjIwLCJVcGRhdGVkRGF0ZSI6bnVsbCwiVXBkYXRlZERhdGVJbnQiOm51bGwsIkFkZGVkQnkiOiIxIiwiVXBkYXRlZEJ5IjpudWxsLCJUcmFuc2FjdGlvbklkIjoiNjkzMTA1MzAzNSIsIkFnZW5jeUlkIjoiMjAwNTUiLCJJc01vYmlsZSI6ZmFsc2UsIklzQURVc2VycyI6ZmFsc2UsIlVzZXJJbWFnZSI6bnVsbCwiUGFzc3dvcmRDaGFuZ2VkRGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGUiOiIyMDI1LTA0LTIyVDE4OjEzOjA3Ljc5MFoiLCJBY2NvdW50RXhwaXJ5RGF0ZUludCI6MjAyNTA0MjIsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IiIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiICs5MS0xMS0yNjE4NTk0MSAiLCJXZWJzaXRlVXJsIjoiIHd3dy5nYWlsZ2FzLmNvbSAiLCJFbWFpbElkIjoiIGdhaWxnYXNoZWxwbGluZUBnYWlsLmNvLmluICIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IiAxODAwMTAyOTI4MiAiLCJQTkdSYXRlQ2FyZExpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvcmF0ZWNhcmQtcG5nIiwiRG9zQW5kRG9udHNQTkdMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9jb3Jwb3JhdGUjL2RvLWRvbnRzLXBuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vQWNjb3VudC9HZW5lcmF0ZUFuZFNlbmRQREZUZXJtQW5kQ29uZGl0aW9uIiwiQ29tcGFueUlkIjoiMSIsIk1lcmNoYW50SUQiOiJXVC0xMTkyIiwiQWNjZXNzQ29kZSI6IiIsIlJlZGlyZWN0VXJsIjoiaHR0cDovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9PbmxpbmUvUGF5bWVudFN1Y2Nlc3MiLCJDYW5jZWx1cmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9SZWRpcmVjdHRvVXNlciIsIlByb2Nlc3NvckFjdGlvbiI6Imh0dHBzOi8vZ2VuZXJpYy5pcGF5MmNvcnB1YXQuaWNpY2liYW5rLmNvbS9ncDJjLWFwaS93cy9wYXltZW50IiwiUXJDb2RlUEEiOiJnYWlsZ2FzQGljaWNpIiwiUXJDb2RlUE4iOiJHQUlMIEdBUyBMVEQuIiwiUXJDb2RlVFIiOiJHQUkiLCJRckNvZGVNQyI6Ijk0MDUiLCJCYW5rQWNjb3VudE51bWJlciI6IjAwMzEwNTAyNDk3NyIsIlN1YkFjY291bnRJZCI6bnVsbH0sImlhdCI6MTc3MDE5MDk5NCwiZXhwIjoxNzcwMjI2OTk0fQ.NTm6XOBXWSPhoGA5A-IkoMHdBqBR1onyEKxa_2VpU6w",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -14430,14 +14383,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOiJtb2dhejFob3YxMWlpMmhyb2ozczRha2IiLCJMb2dnZWRJbiI6dHJ1ZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjYtMTItMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI2MTIyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcwODc3MjUzLCJleHAiOjE3NzA5MTMyNTN9.kcrLSmzOUEWXB56aR0UJhkyFIiG_Mjp8FVHf7iQt0Oc",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "POST",
 								"header": [],
@@ -16846,14 +16792,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOm51bGwsIkxvZ2dlZEluIjpmYWxzZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjYtMTItMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI2MTIyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcwOTgxOTQwLCJleHAiOjE3NzEwMTc5NDB9.suynmwYbpJroOdiw82SacnGSvaEGnxIQmBLsHPdRD9E",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -17848,14 +17787,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOiJtMWNxMmJqdGhldjQwYTNwYXNjdWtjejUiLCJMb2dnZWRJbiI6dHJ1ZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjUtMDQtMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI1MDQyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcwNzA2MDcwLCJleHAiOjE3NzA3NDIwNzB9.ojrEEnPaszCJlV7jfA-3ldDdNH0tguc0RwUCHzYi76E",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -18043,14 +17975,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOiJtMWNxMmJqdGhldjQwYTNwYXNjdWtjejUiLCJMb2dnZWRJbiI6dHJ1ZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjUtMDQtMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI1MDQyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcwNzk1MTk5LCJleHAiOjE3NzA4MzExOTl9.J9DCRF4s9KjuJS-3UfpLMVHAUkygDkJclRA_cfuhRJ4",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -18234,14 +18159,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOiJtMWNxMmJqdGhldjQwYTNwYXNjdWtjejUiLCJMb2dnZWRJbiI6dHJ1ZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjUtMDQtMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI1MDQyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcwNzA1MzIxLCJleHAiOjE3NzA3NDEzMjF9.EohiILrTKUWgZmdXnkkfjxvJu51snmua552P_v8dSyo",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -18456,14 +18374,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiSFAiLCJNaWRkbGVOYW1lIjoiUlQiLCJQaG9uZU51bWJlciI6Ijk4OTg5ODk4OTMiLCJFbWFpbElkIjoiTUVIVUxNSVNUUllAWU9QTUFJTC5DT00iLCJBZGRyZXNzIjoiREFORElBIEJBWkFSIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOiJMRURHRVIgQ0xFUksiLCJEZXBhcnRtZW50IjoiTEVER0VSIiwiRW1wbG95ZWVJZCI6IkxFRDA1IiwiVXNlck5hbWUiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoibTFjcTJianRoZXY0MGEzcGFzY3VrY3o1IiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAxNy0wNi0yMFQxNjoxNjoxOS41NjNaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMTcwNjIwLCJVcGRhdGVkRGF0ZSI6bnVsbCwiVXBkYXRlZERhdGVJbnQiOm51bGwsIkFkZGVkQnkiOiIxIiwiVXBkYXRlZEJ5IjpudWxsLCJUcmFuc2FjdGlvbklkIjoiNjkzMTA1MzAzNSIsIkFnZW5jeUlkIjoiMjAwNTUiLCJJc01vYmlsZSI6ZmFsc2UsIklzQURVc2VycyI6ZmFsc2UsIlVzZXJJbWFnZSI6bnVsbCwiUGFzc3dvcmRDaGFuZ2VkRGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGUiOiIyMDI1LTA0LTIyVDE4OjEzOjA3Ljc5MFoiLCJBY2NvdW50RXhwaXJ5RGF0ZUludCI6MjAyNTA0MjIsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IiIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiICs5MS0xMS0yNjE4NTk0MSAiLCJXZWJzaXRlVXJsIjoiIHd3dy5nYWlsZ2FzLmNvbSAiLCJFbWFpbElkIjoiIGdhaWxnYXNoZWxwbGluZUBnYWlsLmNvLmluICIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IiAxODAwMTAyOTI4MiAiLCJQTkdSYXRlQ2FyZExpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvcmF0ZWNhcmQtcG5nIiwiRG9zQW5kRG9udHNQTkdMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9jb3Jwb3JhdGUjL2RvLWRvbnRzLXBuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vQWNjb3VudC9HZW5lcmF0ZUFuZFNlbmRQREZUZXJtQW5kQ29uZGl0aW9uIiwiQ29tcGFueUlkIjoiMSIsIk1lcmNoYW50SUQiOiJXVC0xMTkyIiwiQWNjZXNzQ29kZSI6IiIsIlJlZGlyZWN0VXJsIjoiaHR0cDovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9PbmxpbmUvUGF5bWVudFN1Y2Nlc3MiLCJDYW5jZWx1cmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9SZWRpcmVjdHRvVXNlciIsIlByb2Nlc3NvckFjdGlvbiI6Imh0dHBzOi8vZ2VuZXJpYy5pcGF5MmNvcnB1YXQuaWNpY2liYW5rLmNvbS9ncDJjLWFwaS93cy9wYXltZW50IiwiUXJDb2RlUEEiOiJnYWlsZ2FzQGljaWNpIiwiUXJDb2RlUE4iOiJHQUlMIEdBUyBMVEQuIiwiUXJDb2RlVFIiOiJHQUkiLCJRckNvZGVNQyI6Ijk0MDUiLCJCYW5rQWNjb3VudE51bWJlciI6IjAwMzEwNTAyNDk3NyIsIlN1YkFjY291bnRJZCI6bnVsbH0sImlhdCI6MTc3MDEwMDY0NiwiZXhwIjoxNzcwMTM2NjQ2fQ.dkA-WX1VpO27x0K-doGZZkpGjjamrUSc_uA5YrOvbY0",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -18500,14 +18411,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOiJtb2dhejFob3YxMWlpMmhyb2ozczRha2IiLCJMb2dnZWRJbiI6dHJ1ZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjYtMTItMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI2MTIyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcwNzk4OTA3LCJleHAiOjE3NzA4MzQ5MDd9.Ag7822nuFZUAgfVU0vTBRUwNWj1iXD7Q1UbTxzgJs5Q",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -18558,14 +18462,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOiJtb2dhejFob3YxMWlpMmhyb2ozczRha2IiLCJMb2dnZWRJbiI6dHJ1ZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjYtMTItMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI2MTIyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcwNzk4OTA3LCJleHAiOjE3NzA4MzQ5MDd9.Ag7822nuFZUAgfVU0vTBRUwNWj1iXD7Q1UbTxzgJs5Q",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -18753,14 +18650,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOiJtb2dhejFob3YxMWlpMmhyb2ozczRha2IiLCJMb2dnZWRJbiI6dHJ1ZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjYtMTItMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI2MTIyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcwNzk4OTA3LCJleHAiOjE3NzA4MzQ5MDd9.Ag7822nuFZUAgfVU0vTBRUwNWj1iXD7Q1UbTxzgJs5Q",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -18944,14 +18834,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOiJtb2dhejFob3YxMWlpMmhyb2ozczRha2IiLCJMb2dnZWRJbiI6dHJ1ZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjYtMTItMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI2MTIyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcwNzk4OTA3LCJleHAiOjE3NzA4MzQ5MDd9.Ag7822nuFZUAgfVU0vTBRUwNWj1iXD7Q1UbTxzgJs5Q",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -19943,7 +19826,9 @@
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIxMzA4MjEiLCJSb2xlSUQiOiIwIiwiU3VybmFtZSI6IlBBTkNIQUwiLCJGaXJzdE5hbWUiOiJOSVJBSiIsIk1pZGRsZU5hbWUiOm51bGwsIlBob25lTnVtYmVyIjoiODE2MDYwNTQyNCIsIkVtYWlsSWQiOiJOSVJBSlBBTkNIQUwxQFdFQk1ZTkVTWVNURU1TLkNPTSIsIkFkZHJlc3MiOiJLQU5OQSIsIkRhdGVPZkpvaW5pbmciOm51bGwsIkRlc2lnbmF0aW9uIjoiUUEiLCJEZXBhcnRtZW50IjoiUUEiLCJFbXBsb3llZUlkIjoiMTY1NDIzMyIsIlVzZXJOYW1lIjoiTklSQUpQQU5DSEFMMUBXRUJNWU5FU1lTVEVNUy5DT00iLCJQYXNzd29yZCI6IndpTjJxMGxGTlpZY2Z3bk4xOSt1NFE9PSIsIlNlc3Npb25JRCI6bnVsbCwiTG9nZ2VkSW4iOm51bGwsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjo3LCJEYXRlR2VuZXJhdGVkIjoiMjAyNC0wMy0yMlQxNTo1Mjo0OC4yNTNaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjQwMzIyLCJVcGRhdGVkRGF0ZSI6IjIwMjUtMDItMjdUMTI6MDM6NDAuMDM3WiIsIlVwZGF0ZWREYXRlSW50IjoyMDI1MDIyNywiQWRkZWRCeSI6IjExMDgxOCIsIlVwZGF0ZWRCeSI6IjEwMDgxNiIsIlRyYW5zYWN0aW9uSWQiOiI0MDc0NDMxMTQiLCJBZ2VuY3lJZCI6IjIiLCJJc01vYmlsZSI6ZmFsc2UsIklzQURVc2VycyI6ZmFsc2UsIlVzZXJJbWFnZSI6bnVsbCwiUGFzc3dvcmRDaGFuZ2VkRGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGUiOiIyMDI1LTExLTI3VDAwOjAwOjAwLjAwMFoiLCJBY2NvdW50RXhwaXJ5RGF0ZUludCI6MjAyNTExMjcsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6NywiR0FOYW1lIjoiR2FuYWptLU5heWFnYXJoLVB1cmkgRGlzdHJpY3RzIiwiR0FFbnRpdGllcyI6IkdhbmphbSIsIkJ1c2luZXNzQXJlYUNvZGUiOiIyNjAwIiwiR0FTdGF0ZSI6Ik9kaXNoYSIsIkdBQ2l0eSI6IkdhbmphbSIsIkdBQWRkcmVzcyI6IkdhbmphbSAoVGltaW5nczogMDk6MTUgQU0gdG8gMDU6NDUgUE0pIiwiR0FUZWxlcGhvbmVOdW1iZXIiOm51bGwsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJPZmZpY2VBZGRyZXNzIjoiIDE2LEJoaWthaWppIENhbWEgUGxhY2UsIFIuSy5QdXJhbSwgTmV3IERlbGhpICAtMTEwMDY2ICIsIkNvcnBvcmF0ZUlkZW50aWZpY2F0aW9uTm8iOiIiLCJUZWxlcGhvbmVOdW1iZXIiOiIrOTEgLSAxMjAgLSAyNDQ2NDAwICwgNDg2MjQwMCIsIkZheE51bWJlciI6IiArOTEtMTEtMjYxODU5NDEgIiwiV2Vic2l0ZVVybCI6IiB3d3cuZ2FpbGdhcy5jb20gIiwiRW1haWxJZCI6IiBnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiAiLCJDdXN0b21lckNhcmVOdW1iZXIiOiIgMTgwMDEwMjkyODIgIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9jb3Jwb3JhdGUjL3JhdGVjYXJkLXBuZyIsIkRvc0FuZERvbnRzUE5HTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9kby1kb250cy1wbmciLCJUZXJtc0FuZENvbmRpdGlvbiI6Imh0dHBzOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL0FjY291bnQvR2VuZXJhdGVBbmRTZW5kUERGVGVybUFuZENvbmRpdGlvbiIsIkNvbXBhbnlJZCI6IjEiLCJNZXJjaGFudElEIjoiV1QtMTE5MiIsIkFjY2Vzc0NvZGUiOiIiLCJSZWRpcmVjdFVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1BheW1lbnRTdWNjZXNzIiwiQ2FuY2VsdXJsIjoiaHR0cDovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9PbmxpbmUvUmVkaXJlY3R0b1VzZXIiLCJQcm9jZXNzb3JBY3Rpb24iOiJodHRwczovL2dlbmVyaWMuaXBheTJjb3JwdWF0LmljaWNpYmFuay5jb20vZ3AyYy1hcGkvd3MvcGF5bWVudCIsIlFyQ29kZVBBIjoiZ2FpbGdhc0BpY2ljaSIsIlFyQ29kZVBOIjoiR0FJTCBHQVMgTFRELiIsIlFyQ29kZVRSIjoiR0FJIiwiUXJDb2RlTUMiOiI5NDA1IiwiQmFua0FjY291bnROdW1iZXIiOiIwMDMxMDUwMjQ5NzciLCJTdWJBY2NvdW50SWQiOm51bGx9LCJpYXQiOjE3Njg4MDE5NTgsImV4cCI6MTc2ODgwNTU1OH0.5Bkl7bxHbLfkWpgOw-0Jte7LLJI3qXVpwxqbAGfgyxk"
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIxMzA4MjEiLCJSb2xlSUQiOiIwIiwiU3VybmFtZSI6IlBBTkNIQUwiLCJGaXJzdE5hbWUiOiJOSVJBSiIsIk1pZGRsZU5hbWUiOm51bGwsIlBob25lTnVtYmVyIjoiODE2MDYwNTQyNCIsIkVtYWlsSWQiOiJOSVJBSlBBTkNIQUwxQFdFQk1ZTkVTWVNURU1TLkNPTSIsIkFkZHJlc3MiOiJLQU5OQSIsIkRhdGVPZkpvaW5pbmciOm51bGwsIkRlc2lnbmF0aW9uIjoiUUEiLCJEZXBhcnRtZW50IjoiUUEiLCJFbXBsb3llZUlkIjoiMTY1NDIzMyIsIlVzZXJOYW1lIjoiTklSQUpQQU5DSEFMMUBXRUJNWU5FU1lTVEVNUy5DT00iLCJQYXNzd29yZCI6IndpTjJxMGxGTlpZY2Z3bk4xOSt1NFE9PSIsIlNlc3Npb25JRCI6bnVsbCwiTG9nZ2VkSW4iOm51bGwsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjo3LCJEYXRlR2VuZXJhdGVkIjoiMjAyNC0wMy0yMlQxNTo1Mjo0OC4yNTNaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjQwMzIyLCJVcGRhdGVkRGF0ZSI6IjIwMjUtMDItMjdUMTI6MDM6NDAuMDM3WiIsIlVwZGF0ZWREYXRlSW50IjoyMDI1MDIyNywiQWRkZWRCeSI6IjExMDgxOCIsIlVwZGF0ZWRCeSI6IjEwMDgxNiIsIlRyYW5zYWN0aW9uSWQiOiI0MDc0NDMxMTQiLCJBZ2VuY3lJZCI6IjIiLCJJc01vYmlsZSI6ZmFsc2UsIklzQURVc2VycyI6ZmFsc2UsIlVzZXJJbWFnZSI6bnVsbCwiUGFzc3dvcmRDaGFuZ2VkRGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGUiOiIyMDI1LTExLTI3VDAwOjAwOjAwLjAwMFoiLCJBY2NvdW50RXhwaXJ5RGF0ZUludCI6MjAyNTExMjcsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6NywiR0FOYW1lIjoiR2FuYWptLU5heWFnYXJoLVB1cmkgRGlzdHJpY3RzIiwiR0FFbnRpdGllcyI6IkdhbmphbSIsIkJ1c2luZXNzQXJlYUNvZGUiOiIyNjAwIiwiR0FTdGF0ZSI6Ik9kaXNoYSIsIkdBQ2l0eSI6IkdhbmphbSIsIkdBQWRkcmVzcyI6IkdhbmphbSAoVGltaW5nczogMDk6MTUgQU0gdG8gMDU6NDUgUE0pIiwiR0FUZWxlcGhvbmVOdW1iZXIiOm51bGwsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJPZmZpY2VBZGRyZXNzIjoiIDE2LEJoaWthaWppIENhbWEgUGxhY2UsIFIuSy5QdXJhbSwgTmV3IERlbGhpICAtMTEwMDY2ICIsIkNvcnBvcmF0ZUlkZW50aWZpY2F0aW9uTm8iOiIiLCJUZWxlcGhvbmVOdW1iZXIiOiIrOTEgLSAxMjAgLSAyNDQ2NDAwICwgNDg2MjQwMCIsIkZheE51bWJlciI6IiArOTEtMTEtMjYxODU5NDEgIiwiV2Vic2l0ZVVybCI6IiB3d3cuZ2FpbGdhcy5jb20gIiwiRW1haWxJZCI6IiBnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiAiLCJDdXN0b21lckNhcmVOdW1iZXIiOiIgMTgwMDEwMjkyODIgIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9jb3Jwb3JhdGUjL3JhdGVjYXJkLXBuZyIsIkRvc0FuZERvbnRzUE5HTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9kby1kb250cy1wbmciLCJUZXJtc0FuZENvbmRpdGlvbiI6Imh0dHBzOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL0FjY291bnQvR2VuZXJhdGVBbmRTZW5kUERGVGVybUFuZENvbmRpdGlvbiIsIkNvbXBhbnlJZCI6IjEiLCJNZXJjaGFudElEIjoiV1QtMTE5MiIsIkFjY2Vzc0NvZGUiOiIiLCJSZWRpcmVjdFVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1BheW1lbnRTdWNjZXNzIiwiQ2FuY2VsdXJsIjoiaHR0cDovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9PbmxpbmUvUmVkaXJlY3R0b1VzZXIiLCJQcm9jZXNzb3JBY3Rpb24iOiJodHRwczovL2dlbmVyaWMuaXBheTJjb3JwdWF0LmljaWNpYmFuay5jb20vZ3AyYy1hcGkvd3MvcGF5bWVudCIsIlFyQ29kZVBBIjoiZ2FpbGdhc0BpY2ljaSIsIlFyQ29kZVBOIjoiR0FJTCBHQVMgTFRELiIsIlFyQ29kZVRSIjoiR0FJIiwiUXJDb2RlTUMiOiI5NDA1IiwiQmFua0FjY291bnROdW1iZXIiOiIwMDMxMDUwMjQ5NzciLCJTdWJBY2NvdW50SWQiOm51bGx9LCJpYXQiOjE3Njg4MDE5NTgsImV4cCI6MTc2ODgwNTU1OH0.5Bkl7bxHbLfkWpgOw-0Jte7LLJI3qXVpwxqbAGfgyxk",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									}
 								],
 								"body": {
@@ -20846,14 +20731,7 @@
 									},
 									"request": {
 										"auth": {
-											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiSFAiLCJNaWRkbGVOYW1lIjoiUlQiLCJQaG9uZU51bWJlciI6Ijk4OTg5ODk4OTMiLCJFbWFpbElkIjoiTUVIVUxNSVNUUllAWU9QTUFJTC5DT00iLCJBZGRyZXNzIjoiREFORElBIEJBWkFSIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOiJMRURHRVIgQ0xFUksiLCJEZXBhcnRtZW50IjoiTEVER0VSIiwiRW1wbG95ZWVJZCI6IkxFRDA1IiwiVXNlck5hbWUiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoibTFjcTJianRoZXY0MGEzcGFzY3VrY3o1IiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAxNy0wNi0yMFQxNjoxNjoxOS41NjNaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMTcwNjIwLCJVcGRhdGVkRGF0ZSI6bnVsbCwiVXBkYXRlZERhdGVJbnQiOm51bGwsIkFkZGVkQnkiOiIxIiwiVXBkYXRlZEJ5IjpudWxsLCJUcmFuc2FjdGlvbklkIjoiNjkzMTA1MzAzNSIsIkFnZW5jeUlkIjoiMjAwNTUiLCJJc01vYmlsZSI6ZmFsc2UsIklzQURVc2VycyI6ZmFsc2UsIlVzZXJJbWFnZSI6bnVsbCwiUGFzc3dvcmRDaGFuZ2VkRGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGUiOiIyMDI1LTA0LTIyVDE4OjEzOjA3Ljc5MFoiLCJBY2NvdW50RXhwaXJ5RGF0ZUludCI6MjAyNTA0MjIsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IiIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiICs5MS0xMS0yNjE4NTk0MSAiLCJXZWJzaXRlVXJsIjoiIHd3dy5nYWlsZ2FzLmNvbSAiLCJFbWFpbElkIjoiIGdhaWxnYXNoZWxwbGluZUBnYWlsLmNvLmluICIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IiAxODAwMTAyOTI4MiAiLCJQTkdSYXRlQ2FyZExpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvcmF0ZWNhcmQtcG5nIiwiRG9zQW5kRG9udHNQTkdMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9jb3Jwb3JhdGUjL2RvLWRvbnRzLXBuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vQWNjb3VudC9HZW5lcmF0ZUFuZFNlbmRQREZUZXJtQW5kQ29uZGl0aW9uIiwiQ29tcGFueUlkIjoiMSIsIk1lcmNoYW50SUQiOiJXVC0xMTkyIiwiQWNjZXNzQ29kZSI6IiIsIlJlZGlyZWN0VXJsIjoiaHR0cDovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9PbmxpbmUvUGF5bWVudFN1Y2Nlc3MiLCJDYW5jZWx1cmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9SZWRpcmVjdHRvVXNlciIsIlByb2Nlc3NvckFjdGlvbiI6Imh0dHBzOi8vZ2VuZXJpYy5pcGF5MmNvcnB1YXQuaWNpY2liYW5rLmNvbS9ncDJjLWFwaS93cy9wYXltZW50IiwiUXJDb2RlUEEiOiJnYWlsZ2FzQGljaWNpIiwiUXJDb2RlUE4iOiJHQUlMIEdBUyBMVEQuIiwiUXJDb2RlVFIiOiJHQUkiLCJRckNvZGVNQyI6Ijk0MDUiLCJCYW5rQWNjb3VudE51bWJlciI6IjAwMzEwNTAyNDk3NyIsIlN1YkFjY291bnRJZCI6bnVsbH0sImlhdCI6MTc2OTY4MTE0OCwiZXhwIjoxNzY5NzE3MTQ4fQ.xrUZ2bjjLf7x3kL31ifZoXSDS5kzyGUess2GChshx1I",
-													"type": "string"
-												}
-											]
+											"type": "noauth"
 										},
 										"method": "GET",
 										"header": [],
@@ -21144,14 +21022,7 @@
 									},
 									"request": {
 										"auth": {
-											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiSFAiLCJNaWRkbGVOYW1lIjoiUlQiLCJQaG9uZU51bWJlciI6Ijk4OTg5ODk4OTMiLCJFbWFpbElkIjoiTUVIVUxNSVNUUllAWU9QTUFJTC5DT00iLCJBZGRyZXNzIjoiREFORElBIEJBWkFSIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOiJMRURHRVIgQ0xFUksiLCJEZXBhcnRtZW50IjoiTEVER0VSIiwiRW1wbG95ZWVJZCI6IkxFRDA1IiwiVXNlck5hbWUiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoibTFjcTJianRoZXY0MGEzcGFzY3VrY3o1IiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAxNy0wNi0yMFQxNjoxNjoxOS41NjNaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMTcwNjIwLCJVcGRhdGVkRGF0ZSI6bnVsbCwiVXBkYXRlZERhdGVJbnQiOm51bGwsIkFkZGVkQnkiOiIxIiwiVXBkYXRlZEJ5IjpudWxsLCJUcmFuc2FjdGlvbklkIjoiNjkzMTA1MzAzNSIsIkFnZW5jeUlkIjoiMjAwNTUiLCJJc01vYmlsZSI6ZmFsc2UsIklzQURVc2VycyI6ZmFsc2UsIlVzZXJJbWFnZSI6bnVsbCwiUGFzc3dvcmRDaGFuZ2VkRGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGUiOiIyMDI1LTA0LTIyVDE4OjEzOjA3Ljc5MFoiLCJBY2NvdW50RXhwaXJ5RGF0ZUludCI6MjAyNTA0MjIsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IiIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiICs5MS0xMS0yNjE4NTk0MSAiLCJXZWJzaXRlVXJsIjoiIHd3dy5nYWlsZ2FzLmNvbSAiLCJFbWFpbElkIjoiIGdhaWxnYXNoZWxwbGluZUBnYWlsLmNvLmluICIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IiAxODAwMTAyOTI4MiAiLCJQTkdSYXRlQ2FyZExpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvcmF0ZWNhcmQtcG5nIiwiRG9zQW5kRG9udHNQTkdMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9jb3Jwb3JhdGUjL2RvLWRvbnRzLXBuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vQWNjb3VudC9HZW5lcmF0ZUFuZFNlbmRQREZUZXJtQW5kQ29uZGl0aW9uIiwiQ29tcGFueUlkIjoiMSIsIk1lcmNoYW50SUQiOiJXVC0xMTkyIiwiQWNjZXNzQ29kZSI6IiIsIlJlZGlyZWN0VXJsIjoiaHR0cDovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9PbmxpbmUvUGF5bWVudFN1Y2Nlc3MiLCJDYW5jZWx1cmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9SZWRpcmVjdHRvVXNlciIsIlByb2Nlc3NvckFjdGlvbiI6Imh0dHBzOi8vZ2VuZXJpYy5pcGF5MmNvcnB1YXQuaWNpY2liYW5rLmNvbS9ncDJjLWFwaS93cy9wYXltZW50IiwiUXJDb2RlUEEiOiJnYWlsZ2FzQGljaWNpIiwiUXJDb2RlUE4iOiJHQUlMIEdBUyBMVEQuIiwiUXJDb2RlVFIiOiJHQUkiLCJRckNvZGVNQyI6Ijk0MDUiLCJCYW5rQWNjb3VudE51bWJlciI6IjAwMzEwNTAyNDk3NyIsIlN1YkFjY291bnRJZCI6bnVsbH0sImlhdCI6MTc2OTY4MTE0OCwiZXhwIjoxNzY5NzE3MTQ4fQ.xrUZ2bjjLf7x3kL31ifZoXSDS5kzyGUess2GChshx1I",
-													"type": "string"
-												}
-											]
+											"type": "noauth"
 										},
 										"method": "GET",
 										"header": [],
@@ -21492,14 +21363,7 @@
 									},
 									"request": {
 										"auth": {
-											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiSFAiLCJNaWRkbGVOYW1lIjoiUlQiLCJQaG9uZU51bWJlciI6Ijk4OTg5ODk4OTMiLCJFbWFpbElkIjoiTUVIVUxNSVNUUllAWU9QTUFJTC5DT00iLCJBZGRyZXNzIjoiREFORElBIEJBWkFSIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOiJMRURHRVIgQ0xFUksiLCJEZXBhcnRtZW50IjoiTEVER0VSIiwiRW1wbG95ZWVJZCI6IkxFRDA1IiwiVXNlck5hbWUiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoibTFjcTJianRoZXY0MGEzcGFzY3VrY3o1IiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAxNy0wNi0yMFQxNjoxNjoxOS41NjNaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMTcwNjIwLCJVcGRhdGVkRGF0ZSI6bnVsbCwiVXBkYXRlZERhdGVJbnQiOm51bGwsIkFkZGVkQnkiOiIxIiwiVXBkYXRlZEJ5IjpudWxsLCJUcmFuc2FjdGlvbklkIjoiNjkzMTA1MzAzNSIsIkFnZW5jeUlkIjoiMjAwNTUiLCJJc01vYmlsZSI6ZmFsc2UsIklzQURVc2VycyI6ZmFsc2UsIlVzZXJJbWFnZSI6bnVsbCwiUGFzc3dvcmRDaGFuZ2VkRGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGUiOiIyMDI1LTA0LTIyVDE4OjEzOjA3Ljc5MFoiLCJBY2NvdW50RXhwaXJ5RGF0ZUludCI6MjAyNTA0MjIsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IiIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiICs5MS0xMS0yNjE4NTk0MSAiLCJXZWJzaXRlVXJsIjoiIHd3dy5nYWlsZ2FzLmNvbSAiLCJFbWFpbElkIjoiIGdhaWxnYXNoZWxwbGluZUBnYWlsLmNvLmluICIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IiAxODAwMTAyOTI4MiAiLCJQTkdSYXRlQ2FyZExpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvcmF0ZWNhcmQtcG5nIiwiRG9zQW5kRG9udHNQTkdMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9jb3Jwb3JhdGUjL2RvLWRvbnRzLXBuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vQWNjb3VudC9HZW5lcmF0ZUFuZFNlbmRQREZUZXJtQW5kQ29uZGl0aW9uIiwiQ29tcGFueUlkIjoiMSIsIk1lcmNoYW50SUQiOiJXVC0xMTkyIiwiQWNjZXNzQ29kZSI6IiIsIlJlZGlyZWN0VXJsIjoiaHR0cDovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9PbmxpbmUvUGF5bWVudFN1Y2Nlc3MiLCJDYW5jZWx1cmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9SZWRpcmVjdHRvVXNlciIsIlByb2Nlc3NvckFjdGlvbiI6Imh0dHBzOi8vZ2VuZXJpYy5pcGF5MmNvcnB1YXQuaWNpY2liYW5rLmNvbS9ncDJjLWFwaS93cy9wYXltZW50IiwiUXJDb2RlUEEiOiJnYWlsZ2FzQGljaWNpIiwiUXJDb2RlUE4iOiJHQUlMIEdBUyBMVEQuIiwiUXJDb2RlVFIiOiJHQUkiLCJRckNvZGVNQyI6Ijk0MDUiLCJCYW5rQWNjb3VudE51bWJlciI6IjAwMzEwNTAyNDk3NyIsIlN1YkFjY291bnRJZCI6bnVsbH0sImlhdCI6MTc2OTY4MTE0OCwiZXhwIjoxNzY5NzE3MTQ4fQ.xrUZ2bjjLf7x3kL31ifZoXSDS5kzyGUess2GChshx1I",
-													"type": "string"
-												}
-											]
+											"type": "noauth"
 										},
 										"method": "POST",
 										"header": [],
@@ -23167,14 +23031,7 @@
 									},
 									"request": {
 										"auth": {
-											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiSFAiLCJNaWRkbGVOYW1lIjoiUlQiLCJQaG9uZU51bWJlciI6Ijk4OTg5ODk4OTMiLCJFbWFpbElkIjoiTUVIVUxNSVNUUllAWU9QTUFJTC5DT00iLCJBZGRyZXNzIjoiREFORElBIEJBWkFSIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOiJMRURHRVIgQ0xFUksiLCJEZXBhcnRtZW50IjoiTEVER0VSIiwiRW1wbG95ZWVJZCI6IkxFRDA1IiwiVXNlck5hbWUiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoibTFjcTJianRoZXY0MGEzcGFzY3VrY3o1IiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAxNy0wNi0yMFQxNjoxNjoxOS41NjNaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMTcwNjIwLCJVcGRhdGVkRGF0ZSI6bnVsbCwiVXBkYXRlZERhdGVJbnQiOm51bGwsIkFkZGVkQnkiOiIxIiwiVXBkYXRlZEJ5IjpudWxsLCJUcmFuc2FjdGlvbklkIjoiNjkzMTA1MzAzNSIsIkFnZW5jeUlkIjoiMjAwNTUiLCJJc01vYmlsZSI6ZmFsc2UsIklzQURVc2VycyI6ZmFsc2UsIlVzZXJJbWFnZSI6bnVsbCwiUGFzc3dvcmRDaGFuZ2VkRGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGUiOiIyMDI1LTA0LTIyVDE4OjEzOjA3Ljc5MFoiLCJBY2NvdW50RXhwaXJ5RGF0ZUludCI6MjAyNTA0MjIsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IiIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiICs5MS0xMS0yNjE4NTk0MSAiLCJXZWJzaXRlVXJsIjoiIHd3dy5nYWlsZ2FzLmNvbSAiLCJFbWFpbElkIjoiIGdhaWxnYXNoZWxwbGluZUBnYWlsLmNvLmluICIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IiAxODAwMTAyOTI4MiAiLCJQTkdSYXRlQ2FyZExpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvcmF0ZWNhcmQtcG5nIiwiRG9zQW5kRG9udHNQTkdMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9jb3Jwb3JhdGUjL2RvLWRvbnRzLXBuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vQWNjb3VudC9HZW5lcmF0ZUFuZFNlbmRQREZUZXJtQW5kQ29uZGl0aW9uIiwiQ29tcGFueUlkIjoiMSIsIk1lcmNoYW50SUQiOiJXVC0xMTkyIiwiQWNjZXNzQ29kZSI6IiIsIlJlZGlyZWN0VXJsIjoiaHR0cDovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9PbmxpbmUvUGF5bWVudFN1Y2Nlc3MiLCJDYW5jZWx1cmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9SZWRpcmVjdHRvVXNlciIsIlByb2Nlc3NvckFjdGlvbiI6Imh0dHBzOi8vZ2VuZXJpYy5pcGF5MmNvcnB1YXQuaWNpY2liYW5rLmNvbS9ncDJjLWFwaS93cy9wYXltZW50IiwiUXJDb2RlUEEiOiJnYWlsZ2FzQGljaWNpIiwiUXJDb2RlUE4iOiJHQUlMIEdBUyBMVEQuIiwiUXJDb2RlVFIiOiJHQUkiLCJRckNvZGVNQyI6Ijk0MDUiLCJCYW5rQWNjb3VudE51bWJlciI6IjAwMzEwNTAyNDk3NyIsIlN1YkFjY291bnRJZCI6bnVsbH0sImlhdCI6MTc3MDAxNzI0NywiZXhwIjoxNzcwMDUzMjQ3fQ.T9wcRzl1CqqRpyUdxEm47wo4y9bFj8H2Z0UvAu8OCMY",
-													"type": "string"
-												}
-											]
+											"type": "noauth"
 										},
 										"method": "GET",
 										"header": [],
@@ -30698,7 +30555,9 @@
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI1MDIwNSIsIlJvbGVJRCI6IjIiLCJTdXJuYW1lIjoicmR0ZmdoIiwiRmlyc3ROYW1lIjoiQU5LMDgxOTUiLCJNaWRkbGVOYW1lIjoiIiwiUGhvbmVOdW1iZXIiOiI5NzU1NTUwOTY5IiwiRW1haWxJZCI6IkFOSzA4MTk1QEdBSUwuQ08uSU4iLCJBZGRyZXNzIjoiZHJmZ2hqIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOm51bGwsIkRlcGFydG1lbnQiOm51bGwsIkVtcGxveWVlSWQiOiIwMDAwODE5NSIsIlVzZXJOYW1lIjoiQU5LMDgxOTVAR0FJTC5DTy5JTiIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoicWl1M2JkbHloM3JjMnNndDU1ZHByazNlIiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAyMC0xMS0wOFQxNjoyNzowMy43ODBaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjAxMTA4LCJVcGRhdGVkRGF0ZSI6IjIwMjYtMDQtMjdUMTQ6NDM6MDcuMTEzWiIsIlVwZGF0ZWREYXRlSW50IjoyMDI2MDQyNywiQWRkZWRCeSI6IjEzMSIsIlVwZGF0ZWRCeSI6IjUwMjA1IiwiVHJhbnNhY3Rpb25JZCI6IjI1MDc3MzI4MzgiLCJBZ2VuY3lJZCI6IjUwIiwiSXNNb2JpbGUiOmZhbHNlLCJJc0FEVXNlcnMiOnRydWUsIlVzZXJJbWFnZSI6IkNvbW1vbi91c2VyLWltYWdlcy8xNzc3MzAwOTg2OTE2LTU1OTAxNDE2MV9kb3dubG9hZC5qcGciLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGVJbnQiOm51bGwsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IlU0MDIwMERMMjAwOEdPSTE3ODYxNCIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiKzkxLTExLTI2MTg1OTQxIiwiV2Vic2l0ZVVybCI6Ind3dy5nYWlsZ2FzLmNvbSIsIkVtYWlsSWQiOiJnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IjE4MDAxMDI5MjgyIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9wcm9kdWN0cy9wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL3Byb2R1Y3RzL3BuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lci5nYWlsZ2FzcG5nLmNvbS9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExNjUiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwczovL2N1c3RvbWVyLmdhaWxnYXNwbmcuY29tL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHBzOi8vY3VzdG9tZXIuZ2FpbGdhc3BuZy5jb20vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycC5pY2ljaS5iYW5rLmluL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzgwNTUxMDgyLCJleHAiOjE3ODA1NTQ2ODJ9.5azX8lY7HtN7Gj3bcn_XPFQ4T-qkRkB0mHyZ8ydGAx0"
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI1MDIwNSIsIlJvbGVJRCI6IjIiLCJTdXJuYW1lIjoicmR0ZmdoIiwiRmlyc3ROYW1lIjoiQU5LMDgxOTUiLCJNaWRkbGVOYW1lIjoiIiwiUGhvbmVOdW1iZXIiOiI5NzU1NTUwOTY5IiwiRW1haWxJZCI6IkFOSzA4MTk1QEdBSUwuQ08uSU4iLCJBZGRyZXNzIjoiZHJmZ2hqIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOm51bGwsIkRlcGFydG1lbnQiOm51bGwsIkVtcGxveWVlSWQiOiIwMDAwODE5NSIsIlVzZXJOYW1lIjoiQU5LMDgxOTVAR0FJTC5DTy5JTiIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoicWl1M2JkbHloM3JjMnNndDU1ZHByazNlIiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAyMC0xMS0wOFQxNjoyNzowMy43ODBaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjAxMTA4LCJVcGRhdGVkRGF0ZSI6IjIwMjYtMDQtMjdUMTQ6NDM6MDcuMTEzWiIsIlVwZGF0ZWREYXRlSW50IjoyMDI2MDQyNywiQWRkZWRCeSI6IjEzMSIsIlVwZGF0ZWRCeSI6IjUwMjA1IiwiVHJhbnNhY3Rpb25JZCI6IjI1MDc3MzI4MzgiLCJBZ2VuY3lJZCI6IjUwIiwiSXNNb2JpbGUiOmZhbHNlLCJJc0FEVXNlcnMiOnRydWUsIlVzZXJJbWFnZSI6IkNvbW1vbi91c2VyLWltYWdlcy8xNzc3MzAwOTg2OTE2LTU1OTAxNDE2MV9kb3dubG9hZC5qcGciLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGVJbnQiOm51bGwsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IlU0MDIwMERMMjAwOEdPSTE3ODYxNCIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiKzkxLTExLTI2MTg1OTQxIiwiV2Vic2l0ZVVybCI6Ind3dy5nYWlsZ2FzLmNvbSIsIkVtYWlsSWQiOiJnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IjE4MDAxMDI5MjgyIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9wcm9kdWN0cy9wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL3Byb2R1Y3RzL3BuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lci5nYWlsZ2FzcG5nLmNvbS9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExNjUiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwczovL2N1c3RvbWVyLmdhaWxnYXNwbmcuY29tL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHBzOi8vY3VzdG9tZXIuZ2FpbGdhc3BuZy5jb20vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycC5pY2ljaS5iYW5rLmluL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzgwNTUxMDgyLCJleHAiOjE3ODA1NTQ2ODJ9.5azX8lY7HtN7Gj3bcn_XPFQ4T-qkRkB0mHyZ8ydGAx0",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									},
 									{
 										"key": "Connection",
@@ -30768,7 +30627,9 @@
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI1MDIwNSIsIlJvbGVJRCI6IjIiLCJTdXJuYW1lIjoicmR0ZmdoIiwiRmlyc3ROYW1lIjoiQU5LMDgxOTUiLCJNaWRkbGVOYW1lIjoiIiwiUGhvbmVOdW1iZXIiOiI5NzU1NTUwOTY5IiwiRW1haWxJZCI6IkFOSzA4MTk1QEdBSUwuQ08uSU4iLCJBZGRyZXNzIjoiZHJmZ2hqIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOm51bGwsIkRlcGFydG1lbnQiOm51bGwsIkVtcGxveWVlSWQiOiIwMDAwODE5NSIsIlVzZXJOYW1lIjoiQU5LMDgxOTVAR0FJTC5DTy5JTiIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoicWl1M2JkbHloM3JjMnNndDU1ZHByazNlIiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAyMC0xMS0wOFQxNjoyNzowMy43ODBaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjAxMTA4LCJVcGRhdGVkRGF0ZSI6IjIwMjYtMDQtMjdUMTQ6NDM6MDcuMTEzWiIsIlVwZGF0ZWREYXRlSW50IjoyMDI2MDQyNywiQWRkZWRCeSI6IjEzMSIsIlVwZGF0ZWRCeSI6IjUwMjA1IiwiVHJhbnNhY3Rpb25JZCI6IjI1MDc3MzI4MzgiLCJBZ2VuY3lJZCI6IjUwIiwiSXNNb2JpbGUiOmZhbHNlLCJJc0FEVXNlcnMiOnRydWUsIlVzZXJJbWFnZSI6IkNvbW1vbi91c2VyLWltYWdlcy8xNzc3MzAwOTg2OTE2LTU1OTAxNDE2MV9kb3dubG9hZC5qcGciLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGVJbnQiOm51bGwsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IlU0MDIwMERMMjAwOEdPSTE3ODYxNCIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiKzkxLTExLTI2MTg1OTQxIiwiV2Vic2l0ZVVybCI6Ind3dy5nYWlsZ2FzLmNvbSIsIkVtYWlsSWQiOiJnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IjE4MDAxMDI5MjgyIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9wcm9kdWN0cy9wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL3Byb2R1Y3RzL3BuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lci5nYWlsZ2FzcG5nLmNvbS9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExNjUiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwczovL2N1c3RvbWVyLmdhaWxnYXNwbmcuY29tL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHBzOi8vY3VzdG9tZXIuZ2FpbGdhc3BuZy5jb20vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycC5pY2ljaS5iYW5rLmluL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzgwNTUxMDgyLCJleHAiOjE3ODA1NTQ2ODJ9.5azX8lY7HtN7Gj3bcn_XPFQ4T-qkRkB0mHyZ8ydGAx0"
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI1MDIwNSIsIlJvbGVJRCI6IjIiLCJTdXJuYW1lIjoicmR0ZmdoIiwiRmlyc3ROYW1lIjoiQU5LMDgxOTUiLCJNaWRkbGVOYW1lIjoiIiwiUGhvbmVOdW1iZXIiOiI5NzU1NTUwOTY5IiwiRW1haWxJZCI6IkFOSzA4MTk1QEdBSUwuQ08uSU4iLCJBZGRyZXNzIjoiZHJmZ2hqIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOm51bGwsIkRlcGFydG1lbnQiOm51bGwsIkVtcGxveWVlSWQiOiIwMDAwODE5NSIsIlVzZXJOYW1lIjoiQU5LMDgxOTVAR0FJTC5DTy5JTiIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoicWl1M2JkbHloM3JjMnNndDU1ZHByazNlIiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAyMC0xMS0wOFQxNjoyNzowMy43ODBaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjAxMTA4LCJVcGRhdGVkRGF0ZSI6IjIwMjYtMDQtMjdUMTQ6NDM6MDcuMTEzWiIsIlVwZGF0ZWREYXRlSW50IjoyMDI2MDQyNywiQWRkZWRCeSI6IjEzMSIsIlVwZGF0ZWRCeSI6IjUwMjA1IiwiVHJhbnNhY3Rpb25JZCI6IjI1MDc3MzI4MzgiLCJBZ2VuY3lJZCI6IjUwIiwiSXNNb2JpbGUiOmZhbHNlLCJJc0FEVXNlcnMiOnRydWUsIlVzZXJJbWFnZSI6IkNvbW1vbi91c2VyLWltYWdlcy8xNzc3MzAwOTg2OTE2LTU1OTAxNDE2MV9kb3dubG9hZC5qcGciLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGVJbnQiOm51bGwsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IlU0MDIwMERMMjAwOEdPSTE3ODYxNCIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiKzkxLTExLTI2MTg1OTQxIiwiV2Vic2l0ZVVybCI6Ind3dy5nYWlsZ2FzLmNvbSIsIkVtYWlsSWQiOiJnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IjE4MDAxMDI5MjgyIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9wcm9kdWN0cy9wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL3Byb2R1Y3RzL3BuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lci5nYWlsZ2FzcG5nLmNvbS9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExNjUiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwczovL2N1c3RvbWVyLmdhaWxnYXNwbmcuY29tL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHBzOi8vY3VzdG9tZXIuZ2FpbGdhc3BuZy5jb20vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycC5pY2ljaS5iYW5rLmluL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzgwNTUxMDgyLCJleHAiOjE3ODA1NTQ2ODJ9.5azX8lY7HtN7Gj3bcn_XPFQ4T-qkRkB0mHyZ8ydGAx0",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									},
 									{
 										"key": "Connection",
@@ -30858,7 +30719,9 @@
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI1MDIwNSIsIlJvbGVJRCI6IjIiLCJTdXJuYW1lIjoicmR0ZmdoIiwiRmlyc3ROYW1lIjoiQU5LMDgxOTUiLCJNaWRkbGVOYW1lIjoiIiwiUGhvbmVOdW1iZXIiOiI5NzU1NTUwOTY5IiwiRW1haWxJZCI6IkFOSzA4MTk1QEdBSUwuQ08uSU4iLCJBZGRyZXNzIjoiZHJmZ2hqIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOm51bGwsIkRlcGFydG1lbnQiOm51bGwsIkVtcGxveWVlSWQiOiIwMDAwODE5NSIsIlVzZXJOYW1lIjoiQU5LMDgxOTVAR0FJTC5DTy5JTiIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoicWl1M2JkbHloM3JjMnNndDU1ZHByazNlIiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAyMC0xMS0wOFQxNjoyNzowMy43ODBaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjAxMTA4LCJVcGRhdGVkRGF0ZSI6IjIwMjYtMDQtMjdUMTQ6NDM6MDcuMTEzWiIsIlVwZGF0ZWREYXRlSW50IjoyMDI2MDQyNywiQWRkZWRCeSI6IjEzMSIsIlVwZGF0ZWRCeSI6IjUwMjA1IiwiVHJhbnNhY3Rpb25JZCI6IjI1MDc3MzI4MzgiLCJBZ2VuY3lJZCI6IjUwIiwiSXNNb2JpbGUiOmZhbHNlLCJJc0FEVXNlcnMiOnRydWUsIlVzZXJJbWFnZSI6IkNvbW1vbi91c2VyLWltYWdlcy8xNzc3MzAwOTg2OTE2LTU1OTAxNDE2MV9kb3dubG9hZC5qcGciLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGVJbnQiOm51bGwsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IlU0MDIwMERMMjAwOEdPSTE3ODYxNCIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiKzkxLTExLTI2MTg1OTQxIiwiV2Vic2l0ZVVybCI6Ind3dy5nYWlsZ2FzLmNvbSIsIkVtYWlsSWQiOiJnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IjE4MDAxMDI5MjgyIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9wcm9kdWN0cy9wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL3Byb2R1Y3RzL3BuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lci5nYWlsZ2FzcG5nLmNvbS9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExNjUiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwczovL2N1c3RvbWVyLmdhaWxnYXNwbmcuY29tL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHBzOi8vY3VzdG9tZXIuZ2FpbGdhc3BuZy5jb20vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycC5pY2ljaS5iYW5rLmluL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzgwNTUxMDgyLCJleHAiOjE3ODA1NTQ2ODJ9.5azX8lY7HtN7Gj3bcn_XPFQ4T-qkRkB0mHyZ8ydGAx0"
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI1MDIwNSIsIlJvbGVJRCI6IjIiLCJTdXJuYW1lIjoicmR0ZmdoIiwiRmlyc3ROYW1lIjoiQU5LMDgxOTUiLCJNaWRkbGVOYW1lIjoiIiwiUGhvbmVOdW1iZXIiOiI5NzU1NTUwOTY5IiwiRW1haWxJZCI6IkFOSzA4MTk1QEdBSUwuQ08uSU4iLCJBZGRyZXNzIjoiZHJmZ2hqIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOm51bGwsIkRlcGFydG1lbnQiOm51bGwsIkVtcGxveWVlSWQiOiIwMDAwODE5NSIsIlVzZXJOYW1lIjoiQU5LMDgxOTVAR0FJTC5DTy5JTiIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoicWl1M2JkbHloM3JjMnNndDU1ZHByazNlIiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAyMC0xMS0wOFQxNjoyNzowMy43ODBaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjAxMTA4LCJVcGRhdGVkRGF0ZSI6IjIwMjYtMDQtMjdUMTQ6NDM6MDcuMTEzWiIsIlVwZGF0ZWREYXRlSW50IjoyMDI2MDQyNywiQWRkZWRCeSI6IjEzMSIsIlVwZGF0ZWRCeSI6IjUwMjA1IiwiVHJhbnNhY3Rpb25JZCI6IjI1MDc3MzI4MzgiLCJBZ2VuY3lJZCI6IjUwIiwiSXNNb2JpbGUiOmZhbHNlLCJJc0FEVXNlcnMiOnRydWUsIlVzZXJJbWFnZSI6IkNvbW1vbi91c2VyLWltYWdlcy8xNzc3MzAwOTg2OTE2LTU1OTAxNDE2MV9kb3dubG9hZC5qcGciLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGVJbnQiOm51bGwsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IlU0MDIwMERMMjAwOEdPSTE3ODYxNCIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiKzkxLTExLTI2MTg1OTQxIiwiV2Vic2l0ZVVybCI6Ind3dy5nYWlsZ2FzLmNvbSIsIkVtYWlsSWQiOiJnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IjE4MDAxMDI5MjgyIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9wcm9kdWN0cy9wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL3Byb2R1Y3RzL3BuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lci5nYWlsZ2FzcG5nLmNvbS9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExNjUiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwczovL2N1c3RvbWVyLmdhaWxnYXNwbmcuY29tL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHBzOi8vY3VzdG9tZXIuZ2FpbGdhc3BuZy5jb20vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycC5pY2ljaS5iYW5rLmluL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzgwNTUxMDgyLCJleHAiOjE3ODA1NTQ2ODJ9.5azX8lY7HtN7Gj3bcn_XPFQ4T-qkRkB0mHyZ8ydGAx0",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									},
 									{
 										"key": "Connection",
@@ -31036,7 +30899,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -31097,7 +30962,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -31153,7 +31020,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -31218,7 +31087,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -31283,7 +31154,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -31352,7 +31225,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -31410,7 +31285,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -31469,7 +31346,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -31528,7 +31407,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -31617,7 +31498,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -31706,7 +31589,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -31795,7 +31680,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -31884,7 +31771,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -31935,7 +31824,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -31986,7 +31877,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -32037,7 +31930,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}"
+												"value": "Bearer {{access_token}}",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -32090,7 +31985,9 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}"
+										"value": "Bearer {{access_token}}",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									},
 									{
 										"key": "x-region-id",
@@ -32138,7 +32035,9 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}"
+										"value": "Bearer {{access_token}}",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									},
 									{
 										"key": "x-region-id",
@@ -32185,7 +32084,9 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}"
+										"value": "Bearer {{access_token}}",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									},
 									{
 										"key": "x-region-id",
@@ -32229,7 +32130,9 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}"
+										"value": "Bearer {{access_token}}",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									},
 									{
 										"key": "x-region-id",
@@ -32267,7 +32170,9 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}"
+										"value": "Bearer {{access_token}}",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									},
 									{
 										"key": "x-region-id",
@@ -32314,7 +32219,9 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}"
+										"value": "Bearer {{access_token}}",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									},
 									{
 										"key": "x-region-id",
@@ -32361,7 +32268,9 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}"
+										"value": "Bearer {{access_token}}",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									},
 									{
 										"key": "x-region-id",
@@ -32412,7 +32321,9 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}"
+										"value": "Bearer {{access_token}}",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									},
 									{
 										"key": "x-region-id",
@@ -32460,7 +32371,9 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}"
+										"value": "Bearer {{access_token}}",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									},
 									{
 										"key": "x-region-id",
@@ -33435,7 +33348,9 @@
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer <your_token>"
+										"value": "Bearer <your_token>",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									}
 								],
 								"body": {
@@ -33535,7 +33450,9 @@
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer <your_token>"
+										"value": "Bearer <your_token>",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									}
 								],
 								"body": {
@@ -34124,7 +34041,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer $access_token"
+												"value": "Bearer $access_token",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "Content-Type",
@@ -34169,7 +34088,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer $access_token"
+												"value": "Bearer $access_token",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -34466,7 +34387,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer <your_token>"
+												"value": "Bearer <your_token>",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											}
 										],
 										"body": {
@@ -34613,7 +34536,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer <your_token>"
+												"value": "Bearer <your_token>",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											}
 										],
 										"body": {
@@ -34759,7 +34684,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer <your_token>"
+												"value": "Bearer <your_token>",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											}
 										],
 										"body": {
@@ -34800,7 +34727,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer <your_token>"
+												"value": "Bearer <your_token>",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											}
 										],
 										"body": {
@@ -34913,7 +34842,9 @@
 											{
 												"key": "Authorization",
 												"value": "Bearer {{accessToken}}",
-												"type": "text"
+												"type": "text",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -34960,7 +34891,9 @@
 											{
 												"key": "Authorization",
 												"value": "Bearer {{accessToken}}",
-												"type": "text"
+												"type": "text",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "x-region-id",
@@ -37979,7 +37912,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI1MDIwNSIsIlJvbGVJRCI6IjIiLCJTdXJuYW1lIjoicmR0ZmdoIiwiRmlyc3ROYW1lIjoiQU5LMDgxOTUiLCJNaWRkbGVOYW1lIjoiIiwiUGhvbmVOdW1iZXIiOiI5NzU1NTUwOTY5IiwiRW1haWxJZCI6IkFOSzA4MTk1QEdBSUwuQ08uSU4iLCJBZGRyZXNzIjoiZHJmZ2hqIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOm51bGwsIkRlcGFydG1lbnQiOm51bGwsIkVtcGxveWVlSWQiOiIwMDAwODE5NSIsIlVzZXJOYW1lIjoiQU5LMDgxOTVAR0FJTC5DTy5JTiIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoicWl1M2JkbHloM3JjMnNndDU1ZHByazNlIiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAyMC0xMS0wOFQxNjoyNzowMy43ODBaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjAxMTA4LCJVcGRhdGVkRGF0ZSI6IjIwMjYtMDQtMjdUMTQ6NDM6MDcuMTEzWiIsIlVwZGF0ZWREYXRlSW50IjoyMDI2MDQyNywiQWRkZWRCeSI6IjEzMSIsIlVwZGF0ZWRCeSI6IjUwMjA1IiwiVHJhbnNhY3Rpb25JZCI6IjI1MDc3MzI4MzgiLCJBZ2VuY3lJZCI6IjUwIiwiSXNNb2JpbGUiOmZhbHNlLCJJc0FEVXNlcnMiOnRydWUsIlVzZXJJbWFnZSI6IkNvbW1vbi91c2VyLWltYWdlcy8xNzc3MzAwOTg2OTE2LTU1OTAxNDE2MV9kb3dubG9hZC5qcGciLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGVJbnQiOm51bGwsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IlU0MDIwMERMMjAwOEdPSTE3ODYxNCIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiKzkxLTExLTI2MTg1OTQxIiwiV2Vic2l0ZVVybCI6Ind3dy5nYWlsZ2FzLmNvbSIsIkVtYWlsSWQiOiJnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IjE4MDAxMDI5MjgyIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9wcm9kdWN0cy9wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL3Byb2R1Y3RzL3BuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lci5nYWlsZ2FzcG5nLmNvbS9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExNjUiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwczovL2N1c3RvbWVyLmdhaWxnYXNwbmcuY29tL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHBzOi8vY3VzdG9tZXIuZ2FpbGdhc3BuZy5jb20vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycC5pY2ljaS5iYW5rLmluL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzc3OTc4MTc1LCJleHAiOjE3Nzc5ODE3NzV9.h27D8UFlwOvpwQw8uk1qzKVdvK3J-nKtWojBdvBK5f8"
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI1MDIwNSIsIlJvbGVJRCI6IjIiLCJTdXJuYW1lIjoicmR0ZmdoIiwiRmlyc3ROYW1lIjoiQU5LMDgxOTUiLCJNaWRkbGVOYW1lIjoiIiwiUGhvbmVOdW1iZXIiOiI5NzU1NTUwOTY5IiwiRW1haWxJZCI6IkFOSzA4MTk1QEdBSUwuQ08uSU4iLCJBZGRyZXNzIjoiZHJmZ2hqIiwiRGF0ZU9mSm9pbmluZyI6bnVsbCwiRGVzaWduYXRpb24iOm51bGwsIkRlcGFydG1lbnQiOm51bGwsIkVtcGxveWVlSWQiOiIwMDAwODE5NSIsIlVzZXJOYW1lIjoiQU5LMDgxOTVAR0FJTC5DTy5JTiIsIlBhc3N3b3JkIjoid2lOMnEwbEZOWlljZnduTjE5K3U0UT09IiwiU2Vzc2lvbklEIjoicWl1M2JkbHloM3JjMnNndDU1ZHByazNlIiwiTG9nZ2VkSW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJHQUlkIjoxLCJEYXRlR2VuZXJhdGVkIjoiMjAyMC0xMS0wOFQxNjoyNzowMy43ODBaIiwiRGF0ZUdlbmVyYXRlZERhdGUiOjIwMjAxMTA4LCJVcGRhdGVkRGF0ZSI6IjIwMjYtMDQtMjdUMTQ6NDM6MDcuMTEzWiIsIlVwZGF0ZWREYXRlSW50IjoyMDI2MDQyNywiQWRkZWRCeSI6IjEzMSIsIlVwZGF0ZWRCeSI6IjUwMjA1IiwiVHJhbnNhY3Rpb25JZCI6IjI1MDc3MzI4MzgiLCJBZ2VuY3lJZCI6IjUwIiwiSXNNb2JpbGUiOmZhbHNlLCJJc0FEVXNlcnMiOnRydWUsIlVzZXJJbWFnZSI6IkNvbW1vbi91c2VyLWltYWdlcy8xNzc3MzAwOTg2OTE2LTU1OTAxNDE2MV9kb3dubG9hZC5qcGciLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6bnVsbCwiQWNjb3VudEV4cGlyeURhdGVJbnQiOm51bGwsIkFsdE1vYmlsZU51bWJlciI6bnVsbCwiR0FNYXN0ZXIiOnsiR0FJZCI6MSwiR0FOYW1lIjoiTWVlcnV0IiwiR0FFbnRpdGllcyI6Ik1lZXJ1dCIsIkJ1c2luZXNzQXJlYUNvZGUiOiIzMDAwIiwiR0FDaXR5IjoiTWVlcnV0IiwiR0FUZWxlcGhvbmVOdW1iZXIiOiJJTiBQSC0gKzkxLTEyMS0yNjAzNTU5LzI2MDM1NjAiLCJHQUdTVElOIjoiMDlBQURDRzE3NjNDMVpWIiwiVkFUVElOTnVtYmVyIjoiMDYzMzMwMTU4NDMiLCJQQU5OdW1iZXIiOiJBQURDRzE3NjNDIiwiQ29ycG9yYXRlSWRlbnRpZmljYXRpb25ObyI6IlU0MDIwMERMMjAwOEdPSTE3ODYxNCIsIlRlbGVwaG9uZU51bWJlciI6Iis5MSAtIDEyMCAtIDI0NDY0MDAgLCA0ODYyNDAwIiwiRmF4TnVtYmVyIjoiKzkxLTExLTI2MTg1OTQxIiwiV2Vic2l0ZVVybCI6Ind3dy5nYWlsZ2FzLmNvbSIsIkVtYWlsSWQiOiJnYWlsZ2FzaGVscGxpbmVAZ2FpbC5jby5pbiIsIkN1c3RvbWVyQ2FyZU51bWJlciI6IjE4MDAxMDI5MjgyIiwiUE5HUmF0ZUNhcmRMaW5rIjoiaHR0cHM6Ly9nYWlsZ2FzLmNvbS9wcm9kdWN0cy9wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL3Byb2R1Y3RzL3BuZyIsIlRlcm1zQW5kQ29uZGl0aW9uIjoiaHR0cHM6Ly9jdXN0b21lci5nYWlsZ2FzcG5nLmNvbS9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExNjUiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwczovL2N1c3RvbWVyLmdhaWxnYXNwbmcuY29tL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHBzOi8vY3VzdG9tZXIuZ2FpbGdhc3BuZy5jb20vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycC5pY2ljaS5iYW5rLmluL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzc3OTc4MTc1LCJleHAiOjE3Nzc5ODE3NzV9.h27D8UFlwOvpwQw8uk1qzKVdvK3J-nKtWojBdvBK5f8",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											}
 										],
 										"body": {
@@ -38682,14 +38617,7 @@
 									"id": "51068262-44f30614-c6d7-46b0-be30-2382f4a81f55",
 									"request": {
 										"auth": {
-											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{access_token}}",
-													"type": "string"
-												}
-											]
+											"type": "noauth"
 										},
 										"method": "GET",
 										"header": [],
@@ -38722,14 +38650,7 @@
 									"id": "51068262-68f5c8a0-0044-4393-9ded-2661116461ba",
 									"request": {
 										"auth": {
-											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{access_token}}",
-													"type": "string"
-												}
-											]
+											"type": "noauth"
 										},
 										"method": "POST",
 										"header": [
@@ -38766,14 +38687,7 @@
 									"id": "51068262-157146f5-136c-45ce-95b7-643e6fbd5ca9",
 									"request": {
 										"auth": {
-											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{access_token}}",
-													"type": "string"
-												}
-											]
+											"type": "noauth"
 										},
 										"method": "PATCH",
 										"header": [],
@@ -38804,14 +38718,7 @@
 									"id": "51068262-901ecc89-c896-4048-b8ec-e047cc42f5df",
 									"request": {
 										"auth": {
-											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{access_token}}",
-													"type": "string"
-												}
-											]
+											"type": "noauth"
 										},
 										"method": "GET",
 										"header": [],
@@ -38847,7 +38754,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer $access_token"
+												"value": "Bearer $access_token",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											}
 										],
 										"url": {
@@ -38876,7 +38785,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer $access_token"
+												"value": "Bearer $access_token",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											}
 										],
 										"url": {
@@ -38914,7 +38825,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer $access_token"
+												"value": "Bearer $access_token",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											}
 										],
 										"url": {
@@ -38953,7 +38866,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer $access_token"
+												"value": "Bearer $access_token",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "Content-Type",
@@ -38994,7 +38909,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer $access_token"
+												"value": "Bearer $access_token",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "Content-Type",
@@ -39035,7 +38952,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer $access_token"
+												"value": "Bearer $access_token",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											},
 											{
 												"key": "Content-Type",
@@ -39076,7 +38995,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer $access_token"
+												"value": "Bearer $access_token",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											}
 										],
 										"url": {
@@ -39112,7 +39033,9 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer $access_token"
+												"value": "Bearer $access_token",
+												"disabled": true,
+												"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 											}
 										],
 										"url": {
@@ -39245,7 +39168,9 @@
 									{
 										"key": "Authorization",
 										"value": "Bearer {{access_token}}",
-										"type": "text"
+										"type": "text",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									},
 									{
 										"key": "x-region-id",
@@ -39290,7 +39215,9 @@
 									{
 										"key": "Authorization",
 										"value": "Bearer {{access_token}}",
-										"type": "text"
+										"type": "text",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									},
 									{
 										"key": "x-region-id",
@@ -40002,7 +39929,9 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer $token"
+										"value": "Bearer $token",
+										"disabled": true,
+										"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 									},
 									{
 										"key": "Content-Type",
@@ -40326,6 +40255,8 @@
 							"script": {
 								"id": "b349ce61-e0d3-4bce-9351-647cb558b562",
 								"exec": [
+									"// Cookie auth note: access_token, refresh_token, and temp_token are now stored as HttpOnly cookies by Postman automatically.",
+									"// These legacy environment variables are kept only for fallback/debugging.",
 									"// Parse the response body JSON",
 									"const responseBody = pm.response.json();",
 									"",
@@ -40387,14 +40318,7 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{prepaid_meter_access_token}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [
@@ -40431,14 +40355,7 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{prepaid_meter_access_token}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [
@@ -40475,14 +40392,7 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{prepaid_meter_access_token}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [
@@ -40519,14 +40429,7 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{prepaid_meter_access_token}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [
@@ -40563,14 +40466,7 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{prepaid_meter_access_token}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [
@@ -40607,14 +40503,7 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{prepaid_meter_access_token}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [
@@ -40651,14 +40540,7 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{prepaid_meter_access_token}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [
@@ -40722,7 +40604,9 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOm51bGwsIkxvZ2dlZEluIjpmYWxzZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjYtMTItMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI2MTIyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcxNDg0MTcwLCJleHAiOjE3NzE1MjAxNzB9.CwUt0qIN77rd0R6u2QgE1t3jge6HWC-1ipgR0Emb2ks"
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIyMiIsIlJvbGVJRCI6IjAiLCJTdXJuYW1lIjoiUlRUIiwiRmlyc3ROYW1lIjoiIE1laHVsIE1pc3RyeSIsIk1pZGRsZU5hbWUiOiJSVCIsIlBob25lTnVtYmVyIjoiOTg5ODk4OTg5MyIsIkVtYWlsSWQiOiJNRUhVTE1JU1RSWUBZT1BNQUlMLkNPTSIsIkFkZHJlc3MiOiJEQU5ESUEgQkFaQVIiLCJEYXRlT2ZKb2luaW5nIjpudWxsLCJEZXNpZ25hdGlvbiI6IkxFREdFUiBDTEVSSyIsIkRlcGFydG1lbnQiOiJMRURHRVIiLCJFbXBsb3llZUlkIjoiTEVEMDUiLCJVc2VyTmFtZSI6Ik1FSFVMTUlTVFJZQFlPUE1BSUwuQ09NIiwiUGFzc3dvcmQiOiJ3aU4ycTBsRk5aWWNmd25OMTkrdTRRPT0iLCJTZXNzaW9uSUQiOm51bGwsIkxvZ2dlZEluIjpmYWxzZSwiSXNBY3RpdmUiOnRydWUsIkdBSWQiOjEsIkRhdGVHZW5lcmF0ZWQiOiIyMDE3LTA2LTIwVDE2OjE2OjE5LjU2M1oiLCJEYXRlR2VuZXJhdGVkRGF0ZSI6MjAxNzA2MjAsIlVwZGF0ZWREYXRlIjpudWxsLCJVcGRhdGVkRGF0ZUludCI6bnVsbCwiQWRkZWRCeSI6IjEiLCJVcGRhdGVkQnkiOm51bGwsIlRyYW5zYWN0aW9uSWQiOiI2OTMxMDUzMDM1IiwiQWdlbmN5SWQiOiIyMDA1NSIsIklzTW9iaWxlIjpmYWxzZSwiSXNBRFVzZXJzIjpmYWxzZSwiVXNlckltYWdlIjpudWxsLCJQYXNzd29yZENoYW5nZWREYXRlIjpudWxsLCJBY2NvdW50RXhwaXJ5RGF0ZSI6IjIwMjYtMTItMjJUMTg6MTM6MDcuNzkwWiIsIkFjY291bnRFeHBpcnlEYXRlSW50IjoyMDI2MTIyMiwiQWx0TW9iaWxlTnVtYmVyIjpudWxsLCJHQU1hc3RlciI6eyJHQUlkIjoxLCJHQU5hbWUiOiJNZWVydXQiLCJHQUVudGl0aWVzIjoiTWVlcnV0IiwiQnVzaW5lc3NBcmVhQ29kZSI6IjMwMDAiLCJHQUNpdHkiOiJNZWVydXQiLCJHQVRlbGVwaG9uZU51bWJlciI6IklOIFBILSArOTEtMTIxLTI2MDM1NTkvMjYwMzU2MCIsIkdBR1NUSU4iOiIwOUFBRENHMTc2M0MxWlYiLCJWQVRUSU5OdW1iZXIiOiIwNjMzMzAxNTg0MyIsIlBBTk51bWJlciI6IkFBRENHMTc2M0MiLCJDb3Jwb3JhdGVJZGVudGlmaWNhdGlvbk5vIjoiIiwiVGVsZXBob25lTnVtYmVyIjoiKzkxIC0gMTIwIC0gMjQ0NjQwMCAsIDQ4NjI0MDAiLCJGYXhOdW1iZXIiOiIgKzkxLTExLTI2MTg1OTQxICIsIldlYnNpdGVVcmwiOiIgd3d3LmdhaWxnYXMuY29tICIsIkVtYWlsSWQiOiIgZ2FpbGdhc2hlbHBsaW5lQGdhaWwuY28uaW4gIiwiQ3VzdG9tZXJDYXJlTnVtYmVyIjoiIDE4MDAxMDI5MjgyICIsIlBOR1JhdGVDYXJkTGluayI6Imh0dHBzOi8vZ2FpbGdhcy5jb20vY29ycG9yYXRlIy9yYXRlY2FyZC1wbmciLCJEb3NBbmREb250c1BOR0xpbmsiOiJodHRwczovL2dhaWxnYXMuY29tL2NvcnBvcmF0ZSMvZG8tZG9udHMtcG5nIiwiVGVybXNBbmRDb25kaXRpb24iOiJodHRwczovL2N1c3RvbWVydGVzdC5nYWlsZ2FzLXBuZy5pbi9BY2NvdW50L0dlbmVyYXRlQW5kU2VuZFBERlRlcm1BbmRDb25kaXRpb24iLCJDb21wYW55SWQiOiIxIiwiTWVyY2hhbnRJRCI6IldULTExOTIiLCJBY2Nlc3NDb2RlIjoiIiwiUmVkaXJlY3RVcmwiOiJodHRwOi8vY3VzdG9tZXJ0ZXN0LmdhaWxnYXMtcG5nLmluL09ubGluZS9QYXltZW50U3VjY2VzcyIsIkNhbmNlbHVybCI6Imh0dHA6Ly9jdXN0b21lcnRlc3QuZ2FpbGdhcy1wbmcuaW4vT25saW5lL1JlZGlyZWN0dG9Vc2VyIiwiUHJvY2Vzc29yQWN0aW9uIjoiaHR0cHM6Ly9nZW5lcmljLmlwYXkyY29ycHVhdC5pY2ljaWJhbmsuY29tL2dwMmMtYXBpL3dzL3BheW1lbnQiLCJRckNvZGVQQSI6ImdhaWxnYXNAaWNpY2kiLCJRckNvZGVQTiI6IkdBSUwgR0FTIExURC4iLCJRckNvZGVUUiI6IkdBSSIsIlFyQ29kZU1DIjoiOTQwNSIsIkJhbmtBY2NvdW50TnVtYmVyIjoiMDAzMTA1MDI0OTc3IiwiU3ViQWNjb3VudElkIjpudWxsfSwiaWF0IjoxNzcxNDg0MTcwLCJleHAiOjE3NzE1MjAxNzB9.CwUt0qIN77rd0R6u2QgE1t3jge6HWC-1ipgR0Emb2ks",
+						"disabled": true,
+						"description": "Disabled for cookie-based GailGas auth. Postman sends access_token/temp_token cookies automatically after login."
 					}
 				],
 				"url": {
@@ -40748,14 +40632,7 @@
 		}
 	],
 	"auth": {
-		"type": "bearer",
-		"bearer": [
-			{
-				"key": "token",
-				"value": "{{access_token}}",
-				"type": "string"
-			}
-		]
+		"type": "noauth"
 	},
 	"event": [
 		{
@@ -40775,6 +40652,8 @@
 				"type": "text/javascript",
 				"requests": {},
 				"exec": [
+					"// Cookie auth note: access_token, refresh_token, and temp_token are now stored as HttpOnly cookies by Postman automatically.",
+					"// These legacy environment variables are kept only for fallback/debugging.",
 					"// ============================================",
 					"// GAIL GAS COLLECTION-LEVEL TEST SUITE",
 					"// Applies to all 78 requests in the collection",
@@ -41030,6 +40909,18 @@
 		{
 			"key": "linkId",
 			"value": ""
+		},
+		{
+			"key": "cookie_auth_enabled",
+			"value": "true",
+			"type": "boolean",
+			"description": "Collection uses Postman cookie jar for GailGas auth tokens."
+		},
+		{
+			"key": "auth_cookie_note",
+			"value": "Run login then OTP verification; Postman stores HttpOnly token cookies automatically.",
+			"type": "string",
+			"description": ""
 		}
 	]
 }
