@@ -40712,6 +40712,251 @@
 			"id": "51068262-033bd5bd-09b5-4676-b38c-5dbcedb449f3"
 		},
 		{
+			"name": "WhatsApp Chatbot Copy",
+			"item": [
+				{
+					"name": "BPNumberVerification",
+					"id": "51068262-4cc23976-bf06-4551-a3e8-c80eca3dc2ff",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"MessageRequest\": \"fd9df180bbedc3c3d9757838ee0fbdeb52f4a2418368577805ec8bd806febd7b4F6CF4CCF7F94A5FBDECE5DD362F57AD0199081572E83415D8B0BA4806F6073964398311782FFECFB35BAAC5A9DBC0441F458CA8A0AA447C1F8B1856AD22916E22FD15E699EF227BC223BD8699C45318EEC98083B19439A676C7AA4B7FE7A1D6\"\n}"
+						},
+						"url": {
+							"raw": "{{whatsAppBaseUrl}}/BPNumberVerification",
+							"host": [
+								"{{whatsAppBaseUrl}}"
+							],
+							"path": [
+								"BPNumberVerification"
+							]
+						},
+						"description": "Encrypted payload: {\"MobileNumber\":\"9999999999\",\"BPNumber\":1000000001}"
+					},
+					"response": []
+				},
+				{
+					"name": "OTPVerification",
+					"id": "51068262-b488631c-2273-4b2c-b773-3b9a95af8f7a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"MessageRequest\": \"433ff024c5d9843302ec0b276f981277a6d02aaa1135af84279fcd3dda71714181A9D04AC169B820B8AF9CFF3B8EA0C42D531927BF9671EA3A8A5C165AAC2BC9914CE13F21DA25720210B44952E8FB5FDC0FE5329268FF60543974DEAF3A0B71\"\n}"
+						},
+						"url": {
+							"raw": "{{whatsAppBaseUrl}}/OTPVerification",
+							"host": [
+								"{{whatsAppBaseUrl}}"
+							],
+							"path": [
+								"OTPVerification"
+							]
+						},
+						"description": "Encrypted payload: {\"MobileNumber\":\"9999999999\"}"
+					},
+					"response": []
+				},
+				{
+					"name": "LeadGeneration",
+					"id": "51068262-7ffe458b-5bd3-40be-94bc-06d7e0af9d47",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"MessageRequest\": \"a7fc4ed46119b3e3b9a42236ad275ac34049abadcec5a6c18bf2aecd803eb99d9EDB6FD09BD64336EDFAB40D45F6F392EDE8EFAC64E8947AB95259C08B9823D15639BD9DE69BA4401D546815E7BE7C9D64BEC9FAA6C8AE04E653971CE5A7A4959377F9B1DD9570B7BF12A18A0DF63D604AE0D83400A115F5BB15680060845D6F798DF30D75F36673C8FBEF33807C10EC5732DDAEE419F675D780CC90C926E125\"\n}"
+						},
+						"url": {
+							"raw": "{{whatsAppBaseUrl}}/LeadGeneration",
+							"host": [
+								"{{whatsAppBaseUrl}}"
+							],
+							"path": [
+								"LeadGeneration"
+							]
+						},
+						"description": "Encrypted payload: {\"MobileNumber\":\"9999999999\",\"CustomerName\":\"Test Customer\",\"CityId\":1,\"GACode\":1}"
+					},
+					"response": []
+				},
+				{
+					"name": "CitiesList",
+					"id": "51068262-de854ba0-995c-4ea0-af8c-0e6e393e0304",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{whatsAppBaseUrl}}/CitiesList",
+							"host": [
+								"{{whatsAppBaseUrl}}"
+							],
+							"path": [
+								"CitiesList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "encryptPayload",
+					"id": "51068262-a2789c68-d409-4caf-94b3-eb5dd39f7132",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"MobileNumber\": \"9304047599\",\n    \"CustomerName\": \"Vikas Kumar\",\n    \"CityId\": 1,\n    \"GACode\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{whatsAppBaseUrl}}/encryptPayload",
+							"host": [
+								"{{whatsAppBaseUrl}}"
+							],
+							"path": [
+								"encryptPayload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "decryptPayload",
+					"id": "51068262-291adbbc-b932-444c-a4b4-52516ab43405",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"payload\": \"641a77b5d5be2f39b0d24705c91c8dedf09b09d516642929728239cb14b0d02204CCF982875552B92C388BA43198CA69BC063FE95CA9EF7B5CB8AF86D396BA22B2CD2164F8526C41C70D255BB79E60A95D64F3EF5F48144B48306027A1D9330CBDFA0745B7D3B55BEDFFEB0017349CC74C5BFF89C5F5087AB6B173317BFE2D368428BC0FFBF20E8A1B4A0A7700F170620F075D973F89AAF2C4892209352F42E4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{whatsAppBaseUrl}}/decryptPayload",
+							"host": [
+								"{{whatsAppBaseUrl}}"
+							],
+							"path": [
+								"decryptPayload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelfBilling",
+					"id": "51068262-79beef34-d834-4e45-bf7c-62e30d13121d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "RequestData",
+									"value": "{{messageRequest}}",
+									"type": "text"
+								},
+								{
+									"key": "FileUp",
+									"type": "file",
+									"value": null
+								}
+							]
+						},
+						"url": {
+							"raw": "{{whatsAppBaseUrl}}/SelfBilling",
+							"host": [
+								"{{whatsAppBaseUrl}}"
+							],
+							"path": [
+								"SelfBilling"
+							]
+						},
+						"description": "Encrypted RequestData: {\"CurrentReading\":123.456,\"ConsumerNumber\":1000000001,\"Latitude\":\"28.61\",\"Longitude\":\"77.20\"}"
+					},
+					"response": []
+				},
+				{
+					"name": "InvoicePDF (signed URL)",
+					"id": "51068262-3ae194b9-e44c-4d62-9afe-fbef8d752594",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{whatsAppBaseUrl}}/InvoicePDF?token=eyJjb25zdW1lck51bWJlciI6MjUwMDAwNzc2OCwiZGVtYW5kTWFzdGVySWQiOjQxMjgwNDUsImV4cGlyZXNBdCI6MTc4NDg5OTk3MDEzMX0.3GGGiolO_bpgvyBWbPu4bQe9pbdcgBhI9ntGwsA_-pQ",
+							"host": [
+								"{{whatsAppBaseUrl}}"
+							],
+							"path": [
+								"InvoicePDF"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJjb25zdW1lck51bWJlciI6MjUwMDAwNzc2OCwiZGVtYW5kTWFzdGVySWQiOjQxMjgwNDUsImV4cGlyZXNBdCI6MTc4NDg5OTk3MDEzMX0.3GGGiolO_bpgvyBWbPu4bQe9pbdcgBhI9ntGwsA_-pQ"
+								}
+							]
+						},
+						"description": "Use the complete short-lived InvoicePDFURL returned after successful BPNumberVerification."
+					},
+					"response": []
+				}
+			],
+			"id": "51068262-d29f37e4-d534-4fb4-99f8-752844356d1d"
+		},
+		{
 			"name": "http://localhost:8080/api/v1/customer-registration/miscellaneous/form13-search/3000298511/0",
 			"id": "51068262-69c5a61f-db54-4b5c-ba72-92516137d04c",
 			"protocolProfileBehavior": {
