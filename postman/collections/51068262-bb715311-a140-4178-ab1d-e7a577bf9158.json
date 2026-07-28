@@ -40697,28 +40697,6 @@
 								}
 							},
 							"response": []
-						},
-						{
-							"name": "health",
-							"id": "51068262-e76eeefa-fd1b-4f38-80e2-cfef82c5042f",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{api_gateway_url}}/third-party-api/health",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"third-party-api",
-										"health"
-									]
-								}
-							},
-							"response": []
 						}
 					],
 					"id": "51068262-033bd5bd-09b5-4676-b38c-5dbcedb449f3"
@@ -40975,6 +40953,28 @@
 						}
 					],
 					"id": "51068262-d29f37e4-d534-4fb4-99f8-752844356d1d"
+				},
+				{
+					"name": "health",
+					"id": "51068262-e76eeefa-fd1b-4f38-80e2-cfef82c5042f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/third-party-api/health",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"third-party-api",
+								"health"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "51068262-89e0d28b-1aee-46d8-8878-5720d751d707"
