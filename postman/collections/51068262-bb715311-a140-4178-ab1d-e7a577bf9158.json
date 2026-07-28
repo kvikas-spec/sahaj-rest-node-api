@@ -40765,11 +40765,12 @@
 							"raw": "{\n    \"MessageRequest\": \"433ff024c5d9843302ec0b276f981277a6d02aaa1135af84279fcd3dda71714181A9D04AC169B820B8AF9CFF3B8EA0C42D531927BF9671EA3A8A5C165AAC2BC9914CE13F21DA25720210B44952E8FB5FDC0FE5329268FF60543974DEAF3A0B71\"\n}"
 						},
 						"url": {
-							"raw": "{{whatsAppBaseUrl}}/OTPVerification",
+							"raw": "{{api_gateway_url}}/whatsapp-chatbot/OTPVerification",
 							"host": [
-								"{{whatsAppBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"whatsapp-chatbot",
 								"OTPVerification"
 							]
 						},
