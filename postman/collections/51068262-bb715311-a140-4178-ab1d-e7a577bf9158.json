@@ -40841,13 +40841,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/whatsapp-chatbot/encryptPayload",
+									"raw": "{{api_gateway_url}}/whatsapp-chatbot/EncryptPayload",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"whatsapp-chatbot",
-										"encryptPayload"
+										"EncryptPayload"
 									]
 								}
 							},
