@@ -40705,11 +40705,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{prepaidMeterBaseUrl}}/health",
+							"raw": "{{api_gateway_url}}/prepaid-meter/health",
 							"host": [
-								"{{prepaidMeterBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"prepaid-meter",
 								"health"
 							]
 						}
