@@ -30360,7 +30360,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"to\": 9304047599,\n  \"body\": \"<p>Hi {BPName},<br />Your Cheque has been Approved!</p>\\n<br/><p>Gail Gas Limited</p>\",\n  \"dltContentId\": \"1407173459086860097\"\n}",
+							"raw": "{\n  \"to\": 9304047599,\n  \"body\": \"Hi {#var#},\\nYour Cheque has been Approved!\\nGail Gas Limited\",\n  \"dltContentId\": \"1407173459086860097\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
