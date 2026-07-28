@@ -40368,11 +40368,12 @@
 							"raw": "{\n    \"RequestTime\": \"2026-07-13T10:00:00\",\n    \"UserName\": \"9b5b2c848d129cfb51339f808ceb1a98a4485a47701f8e61e68e46eab81fc4c32B70388F8733D6CE000EF0FAB72904E47C3B99565161B2BF1A32E8DA1245A5F7FBF2B2DEB3EF88B32FDD2C986AC390966B9D15107403F27ACFA4D52CA4C314A5\",\n    \"Password\": \"9b5b2c848d129cfb51339f808ceb1a98a4485a47701f8e61e68e46eab81fc4c32B70388F8733D6CE000EF0FAB72904E47C3B99565161B2BF1A32E8DA1245A5F7FBF2B2DEB3EF88B32FDD2C986AC390966B9D15107403F27ACFA4D52CA4C314A5\"\n}"
 						},
 						"url": {
-							"raw": "{{prepaidMeterBaseUrl}}/Login",
+							"raw": "{{api_gateway_url}}/prepaid-meter/Login",
 							"host": [
-								"{{prepaidMeterBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"prepaid-meter",
 								"Login"
 							]
 						}
@@ -40412,11 +40413,12 @@
 							"raw": "{\n    \"transactionId\": \"TXN1\",\n    \"responseTime\": \"2026-07-13T10:00:00\",\n    \"GACode\": 5,\n    \"isFurtherDataAvailable\": false,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"bpId\": \"1000000001\",\n            \"deviceId\": \"MTR001\",\n            \"rtc\": \"2026-07-13T09:00:00\",\n            \"reading\": 12.345\n        }\n    ]\n}"
 						},
 						"url": {
-							"raw": "{{prepaidMeterBaseUrl}}/SaveDailyMeterReading",
+							"raw": "{{api_gateway_url}}/prepaid-meter/SaveDailyMeterReading",
 							"host": [
-								"{{prepaidMeterBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"prepaid-meter",
 								"SaveDailyMeterReading"
 							]
 						}
@@ -40456,11 +40458,12 @@
 							"raw": "{\"transactionId\":\"TXN2\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"isFurtherDataAvailable\":false,\"data\":[{\"id\":1,\"bpId\":\"1000000001\",\"deviceId\":\"MTR001\",\"rtc\":\"2026-07-13T09:00:00\",\"reading\":12.345}]}"
 						},
 						"url": {
-							"raw": "{{prepaidMeterBaseUrl}}/SaveMonthlyMeterReading",
+							"raw": "{{api_gateway_url}}/prepaid-meter/SaveMonthlyMeterReading",
 							"host": [
-								"{{prepaidMeterBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"prepaid-meter",
 								"SaveMonthlyMeterReading"
 							]
 						}
@@ -40500,11 +40503,12 @@
 							"raw": "{\"transactionId\":\"TXN3\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"data\":[{\"deviceid\":\"MTR001\",\"bpid\":\"1000000001\",\"readingdate\":\"2026-07-13\",\"previous_reading\":10,\"currentreading\":12,\"consumption\":2,\"cf\":1,\"billunits\":2,\"tariffcode\":\"T1\",\"gascharge\":100,\"vatpercentage\":5,\"totalcharge\":105,\"openingbalance\":500,\"availableamount\":395,\"daydebit\":105,\"daycredit\":0,\"surcharge\":0,\"networktariff\":0}]}"
 						},
 						"url": {
-							"raw": "{{prepaidMeterBaseUrl}}/SaveDailyPrepaidComputation",
+							"raw": "{{api_gateway_url}}/prepaid-meter/SaveDailyPrepaidComputation",
 							"host": [
-								"{{prepaidMeterBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"prepaid-meter",
 								"SaveDailyPrepaidComputation"
 							]
 						}
@@ -40544,11 +40548,12 @@
 							"raw": "{\"transactionId\":\"TXN4\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"message\":\"ok\",\"data\":[{\"deviceId\":\"MTR001\",\"bpId\":\"1000000001\",\"status\":\"Open\",\"date\":\"2026-07-13T10:00:00\"}]}"
 						},
 						"url": {
-							"raw": "{{prepaidMeterBaseUrl}}/SavePrepaidValveStatus",
+							"raw": "{{api_gateway_url}}/prepaid-meter/SavePrepaidValveStatus",
 							"host": [
-								"{{prepaidMeterBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"prepaid-meter",
 								"SavePrepaidValveStatus"
 							]
 						}
@@ -40588,11 +40593,12 @@
 							"raw": "{\n    \"transactionId\": \"d0a9eb94-e0b4-4943-a74b-1a0b1020afa6\",\n    \"responseTime\": \"2025-06-12T16:00:00\",\n    \"gaCode\": 18,\n    \"consumerNo\": \"3000297225\",\n    \"templateId\": \"1407173814933553914\",\n    \"message\": \"Hi Demoprepaiduser,Your Gail Gas DPNG Customer registration is done Successfully! BP Number: 3000297225 Pay SD Online website https: //customer.gailgaspng.com/online/billpay. Please don't pay to any individual person either through UPI/QR code/ Cash against GAIL Gas.Thanks, GAIL Gas\",\n    \"mobileNumber\": \"9876543210\"\n}"
 						},
 						"url": {
-							"raw": "{{prepaidMeterBaseUrl}}/PrepaidSMSGateway",
+							"raw": "{{api_gateway_url}}/prepaid-meter/PrepaidSMSGateway",
 							"host": [
-								"{{prepaidMeterBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"prepaid-meter",
 								"PrepaidSMSGateway"
 							]
 						}
@@ -40632,11 +40638,12 @@
 							"raw": "{\n    \"transactionId\": \"TXN6\",\n    \"responseTime\": \"2026-07-13T10:00:00\",\n    \"GACode\": 1,\n    \"message\": \"ok\",\n    \"data\": [\n        {\n            \"deviceid\": \"MTR001\",\n            \"bpid\": \"1000000001\",\n            \"command\": \"Close\",\n            \"commandtime\": \"2026-07-13T10:00:00\"\n        }\n    ]\n}"
 						},
 						"url": {
-							"raw": "{{prepaidMeterBaseUrl}}/SavePrepaidCommandStatus",
+							"raw": "{{api_gateway_url}}/prepaid-meter/SavePrepaidCommandStatus",
 							"host": [
-								"{{prepaidMeterBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"prepaid-meter",
 								"SavePrepaidCommandStatus"
 							]
 						}
@@ -40676,11 +40683,12 @@
 							"raw": "{\"transactionId\":\"TXN7\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"data\":[{\"msn\":\"MTR001\",\"bpId\":\"1000000001\",\"lastRecharge\":100,\"lastRechargeTimestamp\":\"2026-07-12T10:00:00\",\"availableBalance\":250,\"lastCommunicatedTimestamp\":\"2026-07-13T08:00:00\"}]}"
 						},
 						"url": {
-							"raw": "{{prepaidMeterBaseUrl}}/SavePrepaidNONCommunicatingMeter",
+							"raw": "{{api_gateway_url}}/prepaid-meter/SavePrepaidNONCommunicatingMeter",
 							"host": [
-								"{{prepaidMeterBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"prepaid-meter",
 								"SavePrepaidNONCommunicatingMeter"
 							]
 						}
