@@ -40316,662 +40316,668 @@
 			"id": "51068262-1e0746bd-66b5-47d8-bc77-23b1e711f5ec"
 		},
 		{
-			"name": "GailGas Prepaid Meter API",
+			"name": "ThirdPartyServices",
 			"item": [
 				{
-					"name": "Login",
-					"event": [
+					"name": "GailGas Prepaid Meter API",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"id": "b349ce61-e0d3-4bce-9351-647cb558b562",
-								"exec": [
-									"// Parse the response body JSON",
-									"const responseBody = pm.response.json();",
-									"",
-									"// Extract access_token and refresh_token from response body",
-									"let accessToken = responseBody.token;",
-									"// let refreshToken = responseBody.refresh_token;",
-									"",
-									"// Set tokens in environment variables",
-									"if (accessToken) {",
-									"    pm.environment.set(\"prepaid_meter_access_token\", accessToken);",
-									"}",
-									"",
-									"// if(refreshToken){",
-									"//     pm.environment.set(\"refresh_token\", refreshToken);",
-									"// }"
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b349ce61-e0d3-4bce-9351-647cb558b562",
+										"exec": [
+											"// Parse the response body JSON",
+											"const responseBody = pm.response.json();",
+											"",
+											"// Extract access_token and refresh_token from response body",
+											"let accessToken = responseBody.token;",
+											"// let refreshToken = responseBody.refresh_token;",
+											"",
+											"// Set tokens in environment variables",
+											"if (accessToken) {",
+											"    pm.environment.set(\"prepaid_meter_access_token\", accessToken);",
+											"}",
+											"",
+											"// if(refreshToken){",
+											"//     pm.environment.set(\"refresh_token\", refreshToken);",
+											"// }"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "51068262-bf3d5e8b-dbd2-4a5d-bcd0-3187f4842dc2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
 								],
-								"type": "text/javascript",
-								"packages": {},
-								"requests": {}
-							}
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"RequestTime\": \"2026-07-13T10:00:00\",\n    \"UserName\": \"9b5b2c848d129cfb51339f808ceb1a98a4485a47701f8e61e68e46eab81fc4c32B70388F8733D6CE000EF0FAB72904E47C3B99565161B2BF1A32E8DA1245A5F7FBF2B2DEB3EF88B32FDD2C986AC390966B9D15107403F27ACFA4D52CA4C314A5\",\n    \"Password\": \"9b5b2c848d129cfb51339f808ceb1a98a4485a47701f8e61e68e46eab81fc4c32B70388F8733D6CE000EF0FAB72904E47C3B99565161B2BF1A32E8DA1245A5F7FBF2B2DEB3EF88B32FDD2C986AC390966B9D15107403F27ACFA4D52CA4C314A5\"\n}"
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/prepaid-meter/Login",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"prepaid-meter",
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SaveDailyMeterReading",
+							"id": "51068262-63cfb365-855a-493c-8f0e-0e117679d4dd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{prepaid_meter_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{prepaidToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"transactionId\": \"TXN1\",\n    \"responseTime\": \"2026-07-13T10:00:00\",\n    \"GACode\": 5,\n    \"isFurtherDataAvailable\": false,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"bpId\": \"1000000001\",\n            \"deviceId\": \"MTR001\",\n            \"rtc\": \"2026-07-13T09:00:00\",\n            \"reading\": 12.345\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/prepaid-meter/SaveDailyMeterReading",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"prepaid-meter",
+										"SaveDailyMeterReading"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SaveMonthlyMeterReading",
+							"id": "51068262-e270e7c5-7110-4879-b91d-d7aeea93bbca",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{prepaid_meter_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{prepaidToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"transactionId\":\"TXN2\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"isFurtherDataAvailable\":false,\"data\":[{\"id\":1,\"bpId\":\"1000000001\",\"deviceId\":\"MTR001\",\"rtc\":\"2026-07-13T09:00:00\",\"reading\":12.345}]}"
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/prepaid-meter/SaveMonthlyMeterReading",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"prepaid-meter",
+										"SaveMonthlyMeterReading"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SaveDailyPrepaidComputation",
+							"id": "51068262-f7b55d60-2b98-41c5-91cd-b2235895b534",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{prepaid_meter_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{prepaidToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"transactionId\":\"TXN3\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"data\":[{\"deviceid\":\"MTR001\",\"bpid\":\"1000000001\",\"readingdate\":\"2026-07-13\",\"previous_reading\":10,\"currentreading\":12,\"consumption\":2,\"cf\":1,\"billunits\":2,\"tariffcode\":\"T1\",\"gascharge\":100,\"vatpercentage\":5,\"totalcharge\":105,\"openingbalance\":500,\"availableamount\":395,\"daydebit\":105,\"daycredit\":0,\"surcharge\":0,\"networktariff\":0}]}"
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/prepaid-meter/SaveDailyPrepaidComputation",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"prepaid-meter",
+										"SaveDailyPrepaidComputation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SavePrepaidValveStatus",
+							"id": "51068262-f990f290-702e-45bc-aad0-f0d80424c793",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{prepaid_meter_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{prepaidToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"transactionId\":\"TXN4\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"message\":\"ok\",\"data\":[{\"deviceId\":\"MTR001\",\"bpId\":\"1000000001\",\"status\":\"Open\",\"date\":\"2026-07-13T10:00:00\"}]}"
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/prepaid-meter/SavePrepaidValveStatus",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"prepaid-meter",
+										"SavePrepaidValveStatus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PrepaidSMSGateway",
+							"id": "51068262-e31a2fec-f914-47e5-8baa-34907ec50bde",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{prepaid_meter_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{prepaidToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"transactionId\": \"d0a9eb94-e0b4-4943-a74b-1a0b1020afa6\",\n    \"responseTime\": \"2025-06-12T16:00:00\",\n    \"gaCode\": 18,\n    \"consumerNo\": \"3000297225\",\n    \"templateId\": \"1407173814933553914\",\n    \"message\": \"Hi Demoprepaiduser,Your Gail Gas DPNG Customer registration is done Successfully! BP Number: 3000297225 Pay SD Online website https: //customer.gailgaspng.com/online/billpay. Please don't pay to any individual person either through UPI/QR code/ Cash against GAIL Gas.Thanks, GAIL Gas\",\n    \"mobileNumber\": \"9876543210\"\n}"
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/prepaid-meter/PrepaidSMSGateway",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"prepaid-meter",
+										"PrepaidSMSGateway"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SavePrepaidCommandStatus",
+							"id": "51068262-123d216d-612b-428c-86e1-c08d95e003fe",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{prepaid_meter_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{prepaidToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"transactionId\": \"TXN6\",\n    \"responseTime\": \"2026-07-13T10:00:00\",\n    \"GACode\": 1,\n    \"message\": \"ok\",\n    \"data\": [\n        {\n            \"deviceid\": \"MTR001\",\n            \"bpid\": \"1000000001\",\n            \"command\": \"Close\",\n            \"commandtime\": \"2026-07-13T10:00:00\"\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/prepaid-meter/SavePrepaidCommandStatus",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"prepaid-meter",
+										"SavePrepaidCommandStatus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SavePrepaidNONCommunicatingMeter",
+							"id": "51068262-e5411a47-5720-4010-8b24-f546283027cb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{prepaid_meter_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{prepaidToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"transactionId\":\"TXN7\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"data\":[{\"msn\":\"MTR001\",\"bpId\":\"1000000001\",\"lastRecharge\":100,\"lastRechargeTimestamp\":\"2026-07-12T10:00:00\",\"availableBalance\":250,\"lastCommunicatedTimestamp\":\"2026-07-13T08:00:00\"}]}"
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/prepaid-meter/SavePrepaidNONCommunicatingMeter",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"prepaid-meter",
+										"SavePrepaidNONCommunicatingMeter"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "health",
+							"id": "51068262-e76eeefa-fd1b-4f38-80e2-cfef82c5042f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/third-party-api/health",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"third-party-api",
+										"health"
+									]
+								}
+							},
+							"response": []
 						}
 					],
-					"id": "51068262-bf3d5e8b-dbd2-4a5d-bcd0-3187f4842dc2",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"RequestTime\": \"2026-07-13T10:00:00\",\n    \"UserName\": \"9b5b2c848d129cfb51339f808ceb1a98a4485a47701f8e61e68e46eab81fc4c32B70388F8733D6CE000EF0FAB72904E47C3B99565161B2BF1A32E8DA1245A5F7FBF2B2DEB3EF88B32FDD2C986AC390966B9D15107403F27ACFA4D52CA4C314A5\",\n    \"Password\": \"9b5b2c848d129cfb51339f808ceb1a98a4485a47701f8e61e68e46eab81fc4c32B70388F8733D6CE000EF0FAB72904E47C3B99565161B2BF1A32E8DA1245A5F7FBF2B2DEB3EF88B32FDD2C986AC390966B9D15107403F27ACFA4D52CA4C314A5\"\n}"
-						},
-						"url": {
-							"raw": "{{api_gateway_url}}/prepaid-meter/Login",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"prepaid-meter",
-								"Login"
-							]
-						}
-					},
-					"response": []
+					"id": "51068262-033bd5bd-09b5-4676-b38c-5dbcedb449f3"
 				},
 				{
-					"name": "SaveDailyMeterReading",
-					"id": "51068262-63cfb365-855a-493c-8f0e-0e117679d4dd",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{prepaid_meter_access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
+					"name": "WhatsApp Chatbot Copy",
+					"item": [
+						{
+							"name": "BPNumberVerification",
+							"id": "51068262-4cc23976-bf06-4551-a3e8-c80eca3dc2ff",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
 							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{prepaidToken}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"transactionId\": \"TXN1\",\n    \"responseTime\": \"2026-07-13T10:00:00\",\n    \"GACode\": 5,\n    \"isFurtherDataAvailable\": false,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"bpId\": \"1000000001\",\n            \"deviceId\": \"MTR001\",\n            \"rtc\": \"2026-07-13T09:00:00\",\n            \"reading\": 12.345\n        }\n    ]\n}"
-						},
-						"url": {
-							"raw": "{{api_gateway_url}}/prepaid-meter/SaveDailyMeterReading",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"prepaid-meter",
-								"SaveDailyMeterReading"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "SaveMonthlyMeterReading",
-					"id": "51068262-e270e7c5-7110-4879-b91d-d7aeea93bbca",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{prepaid_meter_access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{prepaidToken}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"transactionId\":\"TXN2\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"isFurtherDataAvailable\":false,\"data\":[{\"id\":1,\"bpId\":\"1000000001\",\"deviceId\":\"MTR001\",\"rtc\":\"2026-07-13T09:00:00\",\"reading\":12.345}]}"
-						},
-						"url": {
-							"raw": "{{api_gateway_url}}/prepaid-meter/SaveMonthlyMeterReading",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"prepaid-meter",
-								"SaveMonthlyMeterReading"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "SaveDailyPrepaidComputation",
-					"id": "51068262-f7b55d60-2b98-41c5-91cd-b2235895b534",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{prepaid_meter_access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{prepaidToken}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"transactionId\":\"TXN3\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"data\":[{\"deviceid\":\"MTR001\",\"bpid\":\"1000000001\",\"readingdate\":\"2026-07-13\",\"previous_reading\":10,\"currentreading\":12,\"consumption\":2,\"cf\":1,\"billunits\":2,\"tariffcode\":\"T1\",\"gascharge\":100,\"vatpercentage\":5,\"totalcharge\":105,\"openingbalance\":500,\"availableamount\":395,\"daydebit\":105,\"daycredit\":0,\"surcharge\":0,\"networktariff\":0}]}"
-						},
-						"url": {
-							"raw": "{{api_gateway_url}}/prepaid-meter/SaveDailyPrepaidComputation",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"prepaid-meter",
-								"SaveDailyPrepaidComputation"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "SavePrepaidValveStatus",
-					"id": "51068262-f990f290-702e-45bc-aad0-f0d80424c793",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{prepaid_meter_access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{prepaidToken}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"transactionId\":\"TXN4\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"message\":\"ok\",\"data\":[{\"deviceId\":\"MTR001\",\"bpId\":\"1000000001\",\"status\":\"Open\",\"date\":\"2026-07-13T10:00:00\"}]}"
-						},
-						"url": {
-							"raw": "{{api_gateway_url}}/prepaid-meter/SavePrepaidValveStatus",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"prepaid-meter",
-								"SavePrepaidValveStatus"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "PrepaidSMSGateway",
-					"id": "51068262-e31a2fec-f914-47e5-8baa-34907ec50bde",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{prepaid_meter_access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{prepaidToken}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"transactionId\": \"d0a9eb94-e0b4-4943-a74b-1a0b1020afa6\",\n    \"responseTime\": \"2025-06-12T16:00:00\",\n    \"gaCode\": 18,\n    \"consumerNo\": \"3000297225\",\n    \"templateId\": \"1407173814933553914\",\n    \"message\": \"Hi Demoprepaiduser,Your Gail Gas DPNG Customer registration is done Successfully! BP Number: 3000297225 Pay SD Online website https: //customer.gailgaspng.com/online/billpay. Please don't pay to any individual person either through UPI/QR code/ Cash against GAIL Gas.Thanks, GAIL Gas\",\n    \"mobileNumber\": \"9876543210\"\n}"
-						},
-						"url": {
-							"raw": "{{api_gateway_url}}/prepaid-meter/PrepaidSMSGateway",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"prepaid-meter",
-								"PrepaidSMSGateway"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "SavePrepaidCommandStatus",
-					"id": "51068262-123d216d-612b-428c-86e1-c08d95e003fe",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{prepaid_meter_access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{prepaidToken}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"transactionId\": \"TXN6\",\n    \"responseTime\": \"2026-07-13T10:00:00\",\n    \"GACode\": 1,\n    \"message\": \"ok\",\n    \"data\": [\n        {\n            \"deviceid\": \"MTR001\",\n            \"bpid\": \"1000000001\",\n            \"command\": \"Close\",\n            \"commandtime\": \"2026-07-13T10:00:00\"\n        }\n    ]\n}"
-						},
-						"url": {
-							"raw": "{{api_gateway_url}}/prepaid-meter/SavePrepaidCommandStatus",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"prepaid-meter",
-								"SavePrepaidCommandStatus"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "SavePrepaidNONCommunicatingMeter",
-					"id": "51068262-e5411a47-5720-4010-8b24-f546283027cb",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{prepaid_meter_access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{prepaidToken}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"transactionId\":\"TXN7\",\"responseTime\":\"2026-07-13T10:00:00\",\"GACode\":1,\"data\":[{\"msn\":\"MTR001\",\"bpId\":\"1000000001\",\"lastRecharge\":100,\"lastRechargeTimestamp\":\"2026-07-12T10:00:00\",\"availableBalance\":250,\"lastCommunicatedTimestamp\":\"2026-07-13T08:00:00\"}]}"
-						},
-						"url": {
-							"raw": "{{api_gateway_url}}/prepaid-meter/SavePrepaidNONCommunicatingMeter",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"prepaid-meter",
-								"SavePrepaidNONCommunicatingMeter"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "health",
-					"id": "51068262-e76eeefa-fd1b-4f38-80e2-cfef82c5042f",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{api_gateway_url}}/third-party-api/health",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"third-party-api",
-								"health"
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"id": "51068262-033bd5bd-09b5-4676-b38c-5dbcedb449f3"
-		},
-		{
-			"name": "WhatsApp Chatbot Copy",
-			"item": [
-				{
-					"name": "BPNumberVerification",
-					"id": "51068262-4cc23976-bf06-4551-a3e8-c80eca3dc2ff",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"MessageRequest\": \"fd9df180bbedc3c3d9757838ee0fbdeb52f4a2418368577805ec8bd806febd7b4F6CF4CCF7F94A5FBDECE5DD362F57AD0199081572E83415D8B0BA4806F6073964398311782FFECFB35BAAC5A9DBC0441F458CA8A0AA447C1F8B1856AD22916E22FD15E699EF227BC223BD8699C45318EEC98083B19439A676C7AA4B7FE7A1D6\"\n}"
-						},
-						"url": {
-							"raw": "{{api_gateway_url}}/whatsapp-chatbot/BPNumberVerification",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"whatsapp-chatbot",
-								"BPNumberVerification"
-							]
-						},
-						"description": "Encrypted payload: {\"MobileNumber\":\"9999999999\",\"BPNumber\":1000000001}"
-					},
-					"response": []
-				},
-				{
-					"name": "OTPVerification",
-					"id": "51068262-b488631c-2273-4b2c-b773-3b9a95af8f7a",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"MessageRequest\": \"433ff024c5d9843302ec0b276f981277a6d02aaa1135af84279fcd3dda71714181A9D04AC169B820B8AF9CFF3B8EA0C42D531927BF9671EA3A8A5C165AAC2BC9914CE13F21DA25720210B44952E8FB5FDC0FE5329268FF60543974DEAF3A0B71\"\n}"
-						},
-						"url": {
-							"raw": "{{api_gateway_url}}/whatsapp-chatbot/OTPVerification",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"whatsapp-chatbot",
-								"OTPVerification"
-							]
-						},
-						"description": "Encrypted payload: {\"MobileNumber\":\"9999999999\"}"
-					},
-					"response": []
-				},
-				{
-					"name": "LeadGeneration",
-					"id": "51068262-7ffe458b-5bd3-40be-94bc-06d7e0af9d47",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"MessageRequest\": \"a7fc4ed46119b3e3b9a42236ad275ac34049abadcec5a6c18bf2aecd803eb99d9EDB6FD09BD64336EDFAB40D45F6F392EDE8EFAC64E8947AB95259C08B9823D15639BD9DE69BA4401D546815E7BE7C9D64BEC9FAA6C8AE04E653971CE5A7A4959377F9B1DD9570B7BF12A18A0DF63D604AE0D83400A115F5BB15680060845D6F798DF30D75F36673C8FBEF33807C10EC5732DDAEE419F675D780CC90C926E125\"\n}"
-						},
-						"url": {
-							"raw": "{{api_gateway_url}}/whatsapp-chatbot/LeadGeneration",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"whatsapp-chatbot",
-								"LeadGeneration"
-							]
-						},
-						"description": "Encrypted payload: {\"MobileNumber\":\"9999999999\",\"CustomerName\":\"Test Customer\",\"CityId\":1,\"GACode\":1}"
-					},
-					"response": []
-				},
-				{
-					"name": "CitiesList",
-					"id": "51068262-de854ba0-995c-4ea0-af8c-0e6e393e0304",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"url": {
-							"raw": "{{api_gateway_url}}/whatsapp-chatbot/CitiesList",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"whatsapp-chatbot",
-								"CitiesList"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "encryptPayload",
-					"id": "51068262-a2789c68-d409-4caf-94b3-eb5dd39f7132",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"MobileNumber\": \"9304047599\",\n    \"CustomerName\": \"Vikas Kumar\",\n    \"CityId\": 1,\n    \"GACode\": 5\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{api_gateway_url}}/whatsapp-chatbot/encryptPayload",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"whatsapp-chatbot",
-								"encryptPayload"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "decryptPayload",
-					"id": "51068262-291adbbc-b932-444c-a4b4-52516ab43405",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"payload\": \"641a77b5d5be2f39b0d24705c91c8dedf09b09d516642929728239cb14b0d02204CCF982875552B92C388BA43198CA69BC063FE95CA9EF7B5CB8AF86D396BA22B2CD2164F8526C41C70D255BB79E60A95D64F3EF5F48144B48306027A1D9330CBDFA0745B7D3B55BEDFFEB0017349CC74C5BFF89C5F5087AB6B173317BFE2D368428BC0FFBF20E8A1B4A0A7700F170620F075D973F89AAF2C4892209352F42E4\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{api_gateway_url}}/whatsapp-chatbot/decryptPayload",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"whatsapp-chatbot",
-								"decryptPayload"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "SelfBilling",
-					"id": "51068262-79beef34-d834-4e45-bf7c-62e30d13121d",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "RequestData",
-									"value": "{{messageRequest}}",
-									"type": "text"
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"MessageRequest\": \"fd9df180bbedc3c3d9757838ee0fbdeb52f4a2418368577805ec8bd806febd7b4F6CF4CCF7F94A5FBDECE5DD362F57AD0199081572E83415D8B0BA4806F6073964398311782FFECFB35BAAC5A9DBC0441F458CA8A0AA447C1F8B1856AD22916E22FD15E699EF227BC223BD8699C45318EEC98083B19439A676C7AA4B7FE7A1D6\"\n}"
 								},
-								{
-									"key": "FileUp",
-									"type": "file",
-									"value": null
+								"url": {
+									"raw": "{{api_gateway_url}}/whatsapp-chatbot/BPNumberVerification",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"whatsapp-chatbot",
+										"BPNumberVerification"
+									]
+								},
+								"description": "Encrypted payload: {\"MobileNumber\":\"9999999999\",\"BPNumber\":1000000001}"
+							},
+							"response": []
+						},
+						{
+							"name": "OTPVerification",
+							"id": "51068262-b488631c-2273-4b2c-b773-3b9a95af8f7a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"MessageRequest\": \"433ff024c5d9843302ec0b276f981277a6d02aaa1135af84279fcd3dda71714181A9D04AC169B820B8AF9CFF3B8EA0C42D531927BF9671EA3A8A5C165AAC2BC9914CE13F21DA25720210B44952E8FB5FDC0FE5329268FF60543974DEAF3A0B71\"\n}"
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/whatsapp-chatbot/OTPVerification",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"whatsapp-chatbot",
+										"OTPVerification"
+									]
+								},
+								"description": "Encrypted payload: {\"MobileNumber\":\"9999999999\"}"
+							},
+							"response": []
+						},
+						{
+							"name": "LeadGeneration",
+							"id": "51068262-7ffe458b-5bd3-40be-94bc-06d7e0af9d47",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"MessageRequest\": \"a7fc4ed46119b3e3b9a42236ad275ac34049abadcec5a6c18bf2aecd803eb99d9EDB6FD09BD64336EDFAB40D45F6F392EDE8EFAC64E8947AB95259C08B9823D15639BD9DE69BA4401D546815E7BE7C9D64BEC9FAA6C8AE04E653971CE5A7A4959377F9B1DD9570B7BF12A18A0DF63D604AE0D83400A115F5BB15680060845D6F798DF30D75F36673C8FBEF33807C10EC5732DDAEE419F675D780CC90C926E125\"\n}"
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/whatsapp-chatbot/LeadGeneration",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"whatsapp-chatbot",
+										"LeadGeneration"
+									]
+								},
+								"description": "Encrypted payload: {\"MobileNumber\":\"9999999999\",\"CustomerName\":\"Test Customer\",\"CityId\":1,\"GACode\":1}"
+							},
+							"response": []
+						},
+						{
+							"name": "CitiesList",
+							"id": "51068262-de854ba0-995c-4ea0-af8c-0e6e393e0304",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/whatsapp-chatbot/CitiesList",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"whatsapp-chatbot",
+										"CitiesList"
+									]
 								}
-							]
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "{{api_gateway_url}}/whatsapp-chatbot/SelfBilling",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"whatsapp-chatbot",
-								"SelfBilling"
-							]
-						},
-						"description": "Encrypted RequestData: {\"CurrentReading\":123.456,\"ConsumerNumber\":1000000001,\"Latitude\":\"28.61\",\"Longitude\":\"77.20\"}"
-					},
-					"response": []
-				},
-				{
-					"name": "InvoicePDF (signed URL)",
-					"id": "51068262-3ae194b9-e44c-4d62-9afe-fbef8d752594",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{api_gateway_url}}/whatsapp-chatbot/InvoicePDF?token=eyJjb25zdW1lck51bWJlciI6MjUwMDAwNzc2OCwiZGVtYW5kTWFzdGVySWQiOjQxMjgwNDUsImV4cGlyZXNBdCI6MTc4NDg5OTk3MDEzMX0.3GGGiolO_bpgvyBWbPu4bQe9pbdcgBhI9ntGwsA_-pQ",
-							"host": [
-								"{{api_gateway_url}}"
-							],
-							"path": [
-								"whatsapp-chatbot",
-								"InvoicePDF"
-							],
-							"query": [
-								{
-									"key": "token",
-									"value": "eyJjb25zdW1lck51bWJlciI6MjUwMDAwNzc2OCwiZGVtYW5kTWFzdGVySWQiOjQxMjgwNDUsImV4cGlyZXNBdCI6MTc4NDg5OTk3MDEzMX0.3GGGiolO_bpgvyBWbPu4bQe9pbdcgBhI9ntGwsA_-pQ"
+						{
+							"name": "encryptPayload",
+							"id": "51068262-a2789c68-d409-4caf-94b3-eb5dd39f7132",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"MobileNumber\": \"9304047599\",\n    \"CustomerName\": \"Vikas Kumar\",\n    \"CityId\": 1,\n    \"GACode\": 5\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/whatsapp-chatbot/encryptPayload",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"whatsapp-chatbot",
+										"encryptPayload"
+									]
 								}
-							]
+							},
+							"response": []
 						},
-						"description": "Use the complete short-lived InvoicePDFURL returned after successful BPNumberVerification."
-					},
-					"response": []
+						{
+							"name": "decryptPayload",
+							"id": "51068262-291adbbc-b932-444c-a4b4-52516ab43405",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"payload\": \"641a77b5d5be2f39b0d24705c91c8dedf09b09d516642929728239cb14b0d02204CCF982875552B92C388BA43198CA69BC063FE95CA9EF7B5CB8AF86D396BA22B2CD2164F8526C41C70D255BB79E60A95D64F3EF5F48144B48306027A1D9330CBDFA0745B7D3B55BEDFFEB0017349CC74C5BFF89C5F5087AB6B173317BFE2D368428BC0FFBF20E8A1B4A0A7700F170620F075D973F89AAF2C4892209352F42E4\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/whatsapp-chatbot/decryptPayload",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"whatsapp-chatbot",
+										"decryptPayload"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SelfBilling",
+							"id": "51068262-79beef34-d834-4e45-bf7c-62e30d13121d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "RequestData",
+											"value": "{{messageRequest}}",
+											"type": "text"
+										},
+										{
+											"key": "FileUp",
+											"type": "file",
+											"value": null
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/whatsapp-chatbot/SelfBilling",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"whatsapp-chatbot",
+										"SelfBilling"
+									]
+								},
+								"description": "Encrypted RequestData: {\"CurrentReading\":123.456,\"ConsumerNumber\":1000000001,\"Latitude\":\"28.61\",\"Longitude\":\"77.20\"}"
+							},
+							"response": []
+						},
+						{
+							"name": "InvoicePDF (signed URL)",
+							"id": "51068262-3ae194b9-e44c-4d62-9afe-fbef8d752594",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_gateway_url}}/whatsapp-chatbot/InvoicePDF?token=eyJjb25zdW1lck51bWJlciI6MjUwMDAwNzc2OCwiZGVtYW5kTWFzdGVySWQiOjQxMjgwNDUsImV4cGlyZXNBdCI6MTc4NDg5OTk3MDEzMX0.3GGGiolO_bpgvyBWbPu4bQe9pbdcgBhI9ntGwsA_-pQ",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"whatsapp-chatbot",
+										"InvoicePDF"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "eyJjb25zdW1lck51bWJlciI6MjUwMDAwNzc2OCwiZGVtYW5kTWFzdGVySWQiOjQxMjgwNDUsImV4cGlyZXNBdCI6MTc4NDg5OTk3MDEzMX0.3GGGiolO_bpgvyBWbPu4bQe9pbdcgBhI9ntGwsA_-pQ"
+										}
+									]
+								},
+								"description": "Use the complete short-lived InvoicePDFURL returned after successful BPNumberVerification."
+							},
+							"response": []
+						}
+					],
+					"id": "51068262-d29f37e4-d534-4fb4-99f8-752844356d1d"
 				}
 			],
-			"id": "51068262-d29f37e4-d534-4fb4-99f8-752844356d1d"
+			"id": "51068262-89e0d28b-1aee-46d8-8878-5720d751d707"
 		},
 		{
 			"name": "http://localhost:8080/api/v1/customer-registration/miscellaneous/form13-search/3000298511/0",
