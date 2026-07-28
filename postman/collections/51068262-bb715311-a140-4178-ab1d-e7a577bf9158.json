@@ -30360,7 +30360,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"to\": 9304047599,\n  \"body\": \"Dear Customer, You may do Self-Billing for your DPNG BP No. {#var#} using SAHAJ PNG MITRA App by following the steps mentioned in https://youtu.be/0OWtima-hUA . OR You may send clear meter reading photo with date and your BP No. to {#var#}. Regards, GAIL Gas\",\n  \"dltContentId\": \"1407173459845979865\"\n}",
+							"raw": "{\n  \"to\": 9304047599,\n  \"body\": \"Dear Customer, You may do Self-Billing for your DPNG BP No. {#var#} using SAHAJ PNG MITRA App by following the steps mentioned in https://youtu.be/0OWtima-hUA . OR You may send clear meter reading photo with date and your BP No. to {#var#}. Regards, GAIL Gas\",\n  \"dltContentId\": \"1407173459842862365\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
