@@ -40733,11 +40733,12 @@
 							"raw": "{\n    \"MessageRequest\": \"fd9df180bbedc3c3d9757838ee0fbdeb52f4a2418368577805ec8bd806febd7b4F6CF4CCF7F94A5FBDECE5DD362F57AD0199081572E83415D8B0BA4806F6073964398311782FFECFB35BAAC5A9DBC0441F458CA8A0AA447C1F8B1856AD22916E22FD15E699EF227BC223BD8699C45318EEC98083B19439A676C7AA4B7FE7A1D6\"\n}"
 						},
 						"url": {
-							"raw": "{{whatsAppBaseUrl}}/BPNumberVerification",
+							"raw": "{{api_gateway_url}}/whatsapp-chatbot/BPNumberVerification",
 							"host": [
-								"{{whatsAppBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"whatsapp-chatbot",
 								"BPNumberVerification"
 							]
 						},
