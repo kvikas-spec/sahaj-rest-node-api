@@ -40854,7 +40854,7 @@
 							"response": []
 						},
 						{
-							"name": "decryptPayload",
+							"name": "DecryptPayload",
 							"id": "51068262-291adbbc-b932-444c-a4b4-52516ab43405",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -40872,13 +40872,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/whatsapp-chatbot/decryptPayload",
+									"raw": "{{api_gateway_url}}/whatsapp-chatbot/DecryptPayload",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
 										"whatsapp-chatbot",
-										"decryptPayload"
+										"DecryptPayload"
 									]
 								}
 							},
