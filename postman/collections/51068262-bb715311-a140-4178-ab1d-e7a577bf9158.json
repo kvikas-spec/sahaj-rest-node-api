@@ -30359,27 +30359,13 @@
 							}
 						],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "body",
-									"value": "Hello {#var#},\n\nYour Invoice has been generated with the Amount {#var#}.\n\nHave a Nice Day!\n\nThanks\n\nGAIL GAS",
-									"type": "text",
-									"uuid": "c7750597-2725-4fb5-8a5d-b735feb44d1c"
-								},
-								{
-									"key": "dltContentId",
-									"value": "1407173459077808463",
-									"type": "text",
-									"uuid": "8ac4559a-fd63-4879-8420-fa3700470066"
-								},
-								{
-									"key": "to",
-									"value": "9304047599",
-									"type": "text",
-									"uuid": "01d3d5b6-4bd5-45e4-8c27-2d34dacf1138"
+							"mode": "raw",
+							"raw": "{\n  \"to\": 9304047599,\n  \"body\": \"Hello {#var#}, \\n Your Invoice has been generated with the Amount {#var#}.\\nHave a Nice Day!\\nThanks\\nGAIL GAS\",\n  \"dltContentId\": \"1407173459077808463\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
+							}
 						},
 						"url": {
 							"raw": "http://localhost:4008/api/v1/notifications/sms",
