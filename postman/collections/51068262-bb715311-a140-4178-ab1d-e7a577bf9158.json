@@ -30306,7 +30306,7 @@
 			"item": [
 				{
 					"name": "sendSampleMail",
-					"id": "51068262-b785434f-160f-41bb-9bac-3d54f2a5f0fe",
+					"id": "51068262-1bb6e946-07c9-4134-8c5b-e0512509929a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -30345,8 +30345,48 @@
 					"response": []
 				},
 				{
+					"name": "sendSampleSMS",
+					"id": "51068262-860fb890-9cb6-422c-9eb8-42de6db479d3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"to\": 9304047599,\n  \"body\": \"Dear Team, Kindly attend to IT Ticket {#var#} for {#var#} at the earliest. Request raised by {#var#}. Regards, GAIL Gas\",\n  \"dltContentId\": \"1407175506470047697\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4008/api/v1/notifications/sms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4008",
+							"path": [
+								"api",
+								"v1",
+								"notifications",
+								"sms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "push-notification",
-					"id": "51068262-dc4ade0b-8cd0-4a1a-b2be-743299199022",
+					"id": "51068262-3203ab17-eaa2-4c73-ad46-84fff2f7ede3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -30383,7 +30423,7 @@
 					"response": []
 				}
 			],
-			"id": "51068262-646efc6f-974a-43ce-b6b0-b29de7624be8"
+			"id": "51068262-78215ab0-b2f5-46fd-91bb-3afc3bc1eca2"
 		},
 		{
 			"name": "CRM",
