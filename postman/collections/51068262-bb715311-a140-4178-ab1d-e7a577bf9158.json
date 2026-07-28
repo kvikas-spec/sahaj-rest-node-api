@@ -40797,11 +40797,12 @@
 							"raw": "{\n    \"MessageRequest\": \"a7fc4ed46119b3e3b9a42236ad275ac34049abadcec5a6c18bf2aecd803eb99d9EDB6FD09BD64336EDFAB40D45F6F392EDE8EFAC64E8947AB95259C08B9823D15639BD9DE69BA4401D546815E7BE7C9D64BEC9FAA6C8AE04E653971CE5A7A4959377F9B1DD9570B7BF12A18A0DF63D604AE0D83400A115F5BB15680060845D6F798DF30D75F36673C8FBEF33807C10EC5732DDAEE419F675D780CC90C926E125\"\n}"
 						},
 						"url": {
-							"raw": "{{whatsAppBaseUrl}}/LeadGeneration",
+							"raw": "{{api_gateway_url}}/whatsapp-chatbot/LeadGeneration",
 							"host": [
-								"{{whatsAppBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"whatsapp-chatbot",
 								"LeadGeneration"
 							]
 						},
@@ -40819,11 +40820,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{whatsAppBaseUrl}}/CitiesList",
+							"raw": "{{api_gateway_url}}/whatsapp-chatbot/CitiesList",
 							"host": [
-								"{{whatsAppBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"whatsapp-chatbot",
 								"CitiesList"
 							]
 						}
@@ -40849,11 +40851,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{whatsAppBaseUrl}}/encryptPayload",
+							"raw": "{{api_gateway_url}}/whatsapp-chatbot/encryptPayload",
 							"host": [
-								"{{whatsAppBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"whatsapp-chatbot",
 								"encryptPayload"
 							]
 						}
@@ -40879,11 +40882,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{whatsAppBaseUrl}}/decryptPayload",
+							"raw": "{{api_gateway_url}}/whatsapp-chatbot/decryptPayload",
 							"host": [
-								"{{whatsAppBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"whatsapp-chatbot",
 								"decryptPayload"
 							]
 						}
