@@ -30363,7 +30363,7 @@
 							"formdata": [
 								{
 									"key": "body",
-									"value": "\"Hello {#var#},\n\nYour Invoice has been generated with the Amount {#var#}.\n\nHave a Nice Day!\n\nThanks\n\nGAIL GAS\"",
+									"value": "Hello {#var#},\n\nYour Invoice has been generated with the Amount {#var#}.\n\nHave a Nice Day!\n\nThanks\n\nGAIL GAS",
 									"type": "text",
 									"uuid": "c7750597-2725-4fb5-8a5d-b735feb44d1c"
 								},
