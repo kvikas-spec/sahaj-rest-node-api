@@ -30360,7 +30360,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"to\": 9304047599,\n  \"body\": \"Dear Customer,\\nPlease ignore any messages from unknown numbers/individuals, claiming to be from GAIL Gas and threatening to cut-off gas supply due to non-payment of bills. Please do not make any payment of your gas bills to such individuals OR on links/QR codes provided by them.\\nPlease pay your gas bills only through 1) PNG Mitra APP. or 2) GAIL Gas WEBPORTAL or 3) GAIL Gas Authorised Channels only. Regards,\\nTeam GAIL Gas\",\n  \"dltContentId\": \"1407173916968965943\"\n}",
+							"raw": "{\n  \"to\": 9304047599,\n  \"body\": \"Dear Customer, You may do Self-Billing for your DPNG BP No. {#var#} using SAHAJ PNG MITRA App by following the steps mentioned in https://youtu.be/0OWtima-hUA . OR You may send clear meter reading photo with date and your BP No. to {#var#}. Regards, GAIL Gas\",\n  \"dltContentId\": \"1407173459845979865\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
