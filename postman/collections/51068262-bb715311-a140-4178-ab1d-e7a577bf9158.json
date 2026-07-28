@@ -40919,11 +40919,12 @@
 							]
 						},
 						"url": {
-							"raw": "{{whatsAppBaseUrl}}/SelfBilling",
+							"raw": "{{api_gateway_url}}/whatsapp-chatbot/SelfBilling",
 							"host": [
-								"{{whatsAppBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"whatsapp-chatbot",
 								"SelfBilling"
 							]
 						},
@@ -40941,11 +40942,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{whatsAppBaseUrl}}/InvoicePDF?token=eyJjb25zdW1lck51bWJlciI6MjUwMDAwNzc2OCwiZGVtYW5kTWFzdGVySWQiOjQxMjgwNDUsImV4cGlyZXNBdCI6MTc4NDg5OTk3MDEzMX0.3GGGiolO_bpgvyBWbPu4bQe9pbdcgBhI9ntGwsA_-pQ",
+							"raw": "{{api_gateway_url}}/whatsapp-chatbot/InvoicePDF?token=eyJjb25zdW1lck51bWJlciI6MjUwMDAwNzc2OCwiZGVtYW5kTWFzdGVySWQiOjQxMjgwNDUsImV4cGlyZXNBdCI6MTc4NDg5OTk3MDEzMX0.3GGGiolO_bpgvyBWbPu4bQe9pbdcgBhI9ntGwsA_-pQ",
 							"host": [
-								"{{whatsAppBaseUrl}}"
+								"{{api_gateway_url}}"
 							],
 							"path": [
+								"whatsapp-chatbot",
 								"InvoicePDF"
 							],
 							"query": [
