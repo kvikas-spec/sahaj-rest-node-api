@@ -40894,6 +40894,37 @@
 							"response": []
 						},
 						{
+							"name": "encryptPayload Copy",
+							"id": "51068262-219f7236-620f-4b7c-a595-0db051507e70",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root>\n    <ConsumerNumber>2500007768</ConsumerNumber>\n</root>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/whatsapp-chatbot/EncryptPayload",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"whatsapp-chatbot",
+										"EncryptPayload"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "DecryptPayload",
 							"id": "51068262-291adbbc-b932-444c-a4b4-52516ab43405",
 							"protocolProfileBehavior": {
@@ -41112,11 +41143,12 @@
 									"raw": "{\"MessageRequest\":\"{{messageRequest}}\"}"
 								},
 								"url": {
-									"raw": "{{bbpsBaseUrl}}/BillPaymentForGail",
+									"raw": "{{api_gateway_url}}/bbps-service/BillPaymentForGail",
 									"host": [
-										"{{bbpsBaseUrl}}"
+										"{{api_gateway_url}}"
 									],
 									"path": [
+										"bbps-service",
 										"BillPaymentForGail"
 									]
 								},
@@ -41143,11 +41175,12 @@
 									"raw": "{\"MessageRequest\":\"{{messageRequest}}\"}"
 								},
 								"url": {
-									"raw": "{{bbpsBaseUrl}}/BillReversal",
+									"raw": "{{api_gateway_url}}/bbps-service/BillReversal",
 									"host": [
-										"{{bbpsBaseUrl}}"
+										"{{api_gateway_url}}"
 									],
 									"path": [
+										"bbps-service",
 										"BillReversal"
 									]
 								},
@@ -41174,11 +41207,12 @@
 									"raw": "{\"MessageRequest\":\"{{messageRequest}}\"}"
 								},
 								"url": {
-									"raw": "{{bbpsBaseUrl}}/GetStatusDetails",
+									"raw": "{{api_gateway_url}}/bbps-service/GetStatusDetails",
 									"host": [
-										"{{bbpsBaseUrl}}"
+										"{{api_gateway_url}}"
 									],
 									"path": [
+										"bbps-service",
 										"GetStatusDetails"
 									]
 								},
@@ -41205,11 +41239,12 @@
 									"raw": "{\"MessageRequest\":\"{{messageRequest}}\"}"
 								},
 								"url": {
-									"raw": "{{bbpsBaseUrl}}/GetStatusDetailsForGail",
+									"raw": "{{api_gateway_url}}/bbps-service/GetStatusDetailsForGail",
 									"host": [
-										"{{bbpsBaseUrl}}"
+										"{{api_gateway_url}}"
 									],
 									"path": [
+										"bbps-service",
 										"GetStatusDetailsForGail"
 									]
 								},
