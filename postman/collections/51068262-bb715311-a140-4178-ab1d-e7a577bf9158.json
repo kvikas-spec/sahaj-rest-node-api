@@ -40995,6 +40995,230 @@
 					"id": "51068262-d29f37e4-d534-4fb4-99f8-752844356d1d"
 				},
 				{
+					"name": "BBPS Copy",
+					"item": [
+						{
+							"name": "BillDetailFetch",
+							"id": "51068262-1851e901-b241-4c5e-be3f-3747d11488fe",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"MessageRequest\": \"cec03be8f80970561ce95cf29e4939c8415de35fe7afdd3214163e636a1fbebeA5205BB55BA65B789F00A83825A507C8399B1FF54FF978323C8283780421B317783949812DC18B828DF9D9A5505F8B3DD3E3132DC353DE85E3BB2889531F89CC29F2A8876F130DE39081E369DDB4FD0C63B8247A65E0B2121F14216460FE67DD2F83750A25980E666D4698E569801C7FCCBC93C0260E2B847CC08491C302FF64B5B4C6307B16ECF3A720B6B0B5884CE0\"\n}"
+								},
+								"url": {
+									"raw": "{{bbpsBaseUrl}}/BillDetailFetch",
+									"host": [
+										"{{bbpsBaseUrl}}"
+									],
+									"path": [
+										"BillDetailFetch"
+									]
+								},
+								"description": "Decrypted XML root RequestBasicDetails: ConsumerNumber."
+							},
+							"response": []
+						},
+						{
+							"name": "BillDetailFetchForGail",
+							"id": "51068262-8da3cfbe-cde4-41aa-96c8-02dd9a6e37c8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"MessageRequest\":\"{{messageRequest}}\"}"
+								},
+								"url": {
+									"raw": "{{bbpsBaseUrl}}/BillDetailFetchForGail",
+									"host": [
+										"{{bbpsBaseUrl}}"
+									],
+									"path": [
+										"BillDetailFetchForGail"
+									]
+								},
+								"description": "GAIL India variant. Decrypted XML root RequestBasicDetails: ConsumerNumber."
+							},
+							"response": []
+						},
+						{
+							"name": "BillPayment",
+							"id": "51068262-97cf23ef-28ee-44f8-9629-911aa517c382",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"MessageRequest\":\"{{messageRequest}}\"}"
+								},
+								"url": {
+									"raw": "{{bbpsBaseUrl}}/BillPayment",
+									"host": [
+										"{{bbpsBaseUrl}}"
+									],
+									"path": [
+										"BillPayment"
+									]
+								},
+								"description": "Decrypted XML root RequestReceiptDetails: ConsumerNumber, ConsumerName, BillNumber, OutStandingAmount, PaidAmount, TransactionDate, BBPSId, BillDate, BillDueDate."
+							},
+							"response": []
+						},
+						{
+							"name": "BillPaymentForGail",
+							"id": "51068262-fc812316-e3c7-4afc-9343-57cd27109c78",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"MessageRequest\":\"{{messageRequest}}\"}"
+								},
+								"url": {
+									"raw": "{{bbpsBaseUrl}}/BillPaymentForGail",
+									"host": [
+										"{{bbpsBaseUrl}}"
+									],
+									"path": [
+										"BillPaymentForGail"
+									]
+								},
+								"description": "GAIL India payment variant; payload matches BillPayment."
+							},
+							"response": []
+						},
+						{
+							"name": "BillReversal",
+							"id": "51068262-0c6dfd57-242b-48a6-8515-f40c5402cf8e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"MessageRequest\":\"{{messageRequest}}\"}"
+								},
+								"url": {
+									"raw": "{{bbpsBaseUrl}}/BillReversal",
+									"host": [
+										"{{bbpsBaseUrl}}"
+									],
+									"path": [
+										"BillReversal"
+									]
+								},
+								"description": "Decrypted XML root RequestReversalDetail: ConsumerNumber, BillReceiptNumber, BillNumber, PaidAmount, TransactionDate, OutStandingAmount, BillerId, BBPSId."
+							},
+							"response": []
+						},
+						{
+							"name": "GetStatusDetails",
+							"id": "51068262-77b457b4-51e6-4650-ad94-fd0337e93656",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"MessageRequest\":\"{{messageRequest}}\"}"
+								},
+								"url": {
+									"raw": "{{bbpsBaseUrl}}/GetStatusDetails",
+									"host": [
+										"{{bbpsBaseUrl}}"
+									],
+									"path": [
+										"GetStatusDetails"
+									]
+								},
+								"description": "Decrypted XML root RequestStatusDetials: BBPSId, ConsumerNumber."
+							},
+							"response": []
+						},
+						{
+							"name": "GetStatusDetailsForGail",
+							"id": "51068262-293d9765-0fe9-48c0-ae14-444f9dccc1a1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"MessageRequest\":\"{{messageRequest}}\"}"
+								},
+								"url": {
+									"raw": "{{bbpsBaseUrl}}/GetStatusDetailsForGail",
+									"host": [
+										"{{bbpsBaseUrl}}"
+									],
+									"path": [
+										"GetStatusDetailsForGail"
+									]
+								},
+								"description": "GAIL India status variant; payload matches GetStatusDetails."
+							},
+							"response": []
+						}
+					],
+					"id": "51068262-b3894874-66e3-4b06-842e-dc024c20bbd7",
+					"description": "MessageRequest must be the AES-256-CBC/HMAC encrypted legacy XML payload."
+				},
+				{
 					"name": "health",
 					"id": "51068262-e76eeefa-fd1b-4f38-80e2-cfef82c5042f",
 					"protocolProfileBehavior": {
