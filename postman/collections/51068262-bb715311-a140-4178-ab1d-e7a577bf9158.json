@@ -41222,7 +41222,7 @@
 							"response": []
 						},
 						{
-							"name": "encryptPayload Copy",
+							"name": "encryptPayload",
 							"id": "51068262-219f7236-620f-4b7c-a595-0db051507e70",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -41240,12 +41240,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gateway_url}}/whatsapp-chatbot/EncryptPayload",
+									"raw": "{{api_gateway_url}}/bbps-service/EncryptPayload",
 									"host": [
 										"{{api_gateway_url}}"
 									],
 									"path": [
-										"whatsapp-chatbot",
+										"bbps-service",
 										"EncryptPayload"
 									]
 								}
