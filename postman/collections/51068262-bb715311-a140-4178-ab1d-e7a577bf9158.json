@@ -40894,37 +40894,6 @@
 							"response": []
 						},
 						{
-							"name": "encryptPayload Copy",
-							"id": "51068262-219f7236-620f-4b7c-a595-0db051507e70",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root>\n    <ConsumerNumber>2500007768</ConsumerNumber>\n</root>",
-									"options": {
-										"raw": {
-											"language": "xml"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/whatsapp-chatbot/EncryptPayload",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"whatsapp-chatbot",
-										"EncryptPayload"
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "DecryptPayload",
 							"id": "51068262-291adbbc-b932-444c-a4b4-52516ab43405",
 							"protocolProfileBehavior": {
@@ -41249,6 +41218,68 @@
 									]
 								},
 								"description": "GAIL India status variant; payload matches GetStatusDetails."
+							},
+							"response": []
+						},
+						{
+							"name": "encryptPayload Copy",
+							"id": "51068262-219f7236-620f-4b7c-a595-0db051507e70",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root>\n    <ConsumerNumber>2500007768</ConsumerNumber>\n</root>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/whatsapp-chatbot/EncryptPayload",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"whatsapp-chatbot",
+										"EncryptPayload"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DecryptPayload",
+							"id": "51068262-65fb6568-06d3-43d6-8d0f-7d1bd013337b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"payload\": \"f3151307d887c8a46f0fb42e08b71c6ab3f3266c1137cef41e7fac0a76d36bf148364983903359DEAF649A4E98FF888557C5EAEBF90E2D82D80EEA93CFB0FFA4618CE3802445DC07D05C186595BEC547CBA084CFC78E0486C77B469D87A0C17921F8170AB703266F26B1E9F36CE0BED7A247423F20018E323572BA40B9A55F34CEBD6CC3F6778A9A5126550A23BA00444FC0E73C8FA18C69082D9F94F66ECBF773E6FF3C1F1339150A2F4F5BC34C375097E0BD058B10E66DE3CB257019AD79739EC9D65D8F12C2699EE3073EBE354E0A51DA08B6E628CE7834C72D467FD540D2D84015FD822F7538A3526E386338CD09AE2CCE4390B4BBC3DBD85BDCC470B340E9378BCF3B57D561D37712AE376638C1529FE8EB66207CAB15CA6C0C9B47D82D6E3F528032C47EFCC65934785352AA96DE3A8BEC5826EF0D8D7F14EF75CFFAE9E96EF620D3C526656AD9A921F00EDEFDAE4938CAE269F8E0E81286FBFE3923573B795875B27C53C4A2AFF8A039AC64A81A9DA70463D12032ADE6C506FF2F3D740C8FAC5396A9A8A3CE479C2D1CD81301E2A431F55A519D43F92C2D6B7ABDE1A545600BBE5A9DA0ADAD91E9A58462AB984CEE642B4F2BB6F673AB5C74460446C01D3FEA84AA5AC7FB86ADE4411DBB9CAFC8AF727EC44AC2CED0081704CC81CFAFA398A0103B9BCF316A99BA9184741515D98E2F876D9DF43BF8EEC02857E72982B6253565C720F55DB38C280FBB8E1533387674F32D875EA1B4BB4CA8134CCDBACD24E4080D3826399BB00E5B936CC64D444E9E34D7E531B13195ACBA5DBA530216C9E5A831A1F7AF2B91FEE2E1B102F4616480D5478950D075924ED29892B4C908760C6DFA8F0CF0EE678269C7237D11D9EC18381BAE96725CA2228356EED61FB2264D90955954E71CE0C0758125343D1EFB1ACC3A43E4664D27D09297BA61CC\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/bbps-service/DecryptPayload",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"bbps-service",
+										"DecryptPayload"
+									]
+								}
 							},
 							"response": []
 						}
