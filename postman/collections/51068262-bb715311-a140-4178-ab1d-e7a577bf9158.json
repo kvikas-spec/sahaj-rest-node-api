@@ -40873,10 +40873,10 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"ConsumerNumber\": \"2500007768\"\n}",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root>\n    <ConsumerNumber>2500007768</ConsumerNumber>\n</root>",
 									"options": {
 										"raw": {
-											"language": "json"
+											"language": "xml"
 										}
 									}
 								},
