@@ -41048,11 +41048,12 @@
 									"raw": "{\"MessageRequest\":\"{{messageRequest}}\"}"
 								},
 								"url": {
-									"raw": "{{bbpsBaseUrl}}/BillDetailFetchForGail",
+									"raw": "{{api_gateway_url}}/bbps-service/BillDetailFetchForGail",
 									"host": [
-										"{{bbpsBaseUrl}}"
+										"{{api_gateway_url}}"
 									],
 									"path": [
+										"bbps-service",
 										"BillDetailFetchForGail"
 									]
 								},
@@ -41079,11 +41080,12 @@
 									"raw": "{\"MessageRequest\":\"{{messageRequest}}\"}"
 								},
 								"url": {
-									"raw": "{{bbpsBaseUrl}}/BillPayment",
+									"raw": "{{api_gateway_url}}/bbps-service/BillPayment",
 									"host": [
-										"{{bbpsBaseUrl}}"
+										"{{api_gateway_url}}"
 									],
 									"path": [
+										"bbps-service",
 										"BillPayment"
 									]
 								},
