@@ -41016,11 +41016,12 @@
 									"raw": "{\n    \"MessageRequest\": \"cec03be8f80970561ce95cf29e4939c8415de35fe7afdd3214163e636a1fbebeA5205BB55BA65B789F00A83825A507C8399B1FF54FF978323C8283780421B317783949812DC18B828DF9D9A5505F8B3DD3E3132DC353DE85E3BB2889531F89CC29F2A8876F130DE39081E369DDB4FD0C63B8247A65E0B2121F14216460FE67DD2F83750A25980E666D4698E569801C7FCCBC93C0260E2B847CC08491C302FF64B5B4C6307B16ECF3A720B6B0B5884CE0\"\n}"
 								},
 								"url": {
-									"raw": "{{bbpsBaseUrl}}/BillDetailFetch",
+									"raw": "{{api_gateway_url}}/bbps-service/BillDetailFetch",
 									"host": [
-										"{{bbpsBaseUrl}}"
+										"{{api_gateway_url}}"
 									],
 									"path": [
+										"bbps-service",
 										"BillDetailFetch"
 									]
 								},
