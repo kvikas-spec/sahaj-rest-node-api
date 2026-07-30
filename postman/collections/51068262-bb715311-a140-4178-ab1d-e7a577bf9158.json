@@ -39241,7 +39241,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/oic?dateRange=cfy",
+									"raw": "{{api_gateway_url}}/masters/Dashboard/oic?dateRange=cfy&refresh=true",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -39269,6 +39269,10 @@
 											"key": "dateRange",
 											"value": "last-12-months",
 											"disabled": true
+										},
+										{
+											"key": "refresh",
+											"value": "true"
 										}
 									]
 								},
