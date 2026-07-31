@@ -39192,7 +39192,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{api_gateway_url}}/masters/Dashboard/management?dateRange=cfy",
+									"raw": "{{api_gateway_url}}/masters/Dashboard/management?dateRange=cfy&refresh=true",
 									"host": [
 										"{{api_gateway_url}}"
 									],
@@ -39221,6 +39221,10 @@
 											"value": "last-12-months",
 											"type": "text",
 											"disabled": true
+										},
+										{
+											"key": "refresh",
+											"value": "true"
 										}
 									]
 								},
