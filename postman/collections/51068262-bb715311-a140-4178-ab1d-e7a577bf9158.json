@@ -41245,7 +41245,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\n<ResponseBasicDetails xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n    <ResponseCode>1</ResponseCode>\n    <ResponseMsg>Success</ResponseMsg>\n    <ConsumerNumber>2500007768</ConsumerNumber>\n    <ConsumerName>Debit credit note Debit credit note</ConsumerName>\n    <BillNumber>2500007768202601</BillNumber>\n    <OutStandingAmount>618</OutStandingAmount>\n    <PaidAmount>618</PaidAmount>\n    <TransactionDate>>2026-07-31</TransactionDate>\n    <BillDate>2026-07-24</BillDate>\n    <BBPSId>TEST1001254</BBPSId>\n    <BillDueDate>2026-08-14</BillDueDate>\n    <BillPeriod>2026-06-11 To 2026-07-24</BillPeriod>\n</ResponseBasicDetails>",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\n<ResponseBasicDetails xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n    <ConsumerNumber>2500007768</ConsumerNumber>\n    <BBPSId>TEST1001254</BBPSId>\n</ResponseBasicDetails>",
 									"options": {
 										"raw": {
 											"language": "xml"
