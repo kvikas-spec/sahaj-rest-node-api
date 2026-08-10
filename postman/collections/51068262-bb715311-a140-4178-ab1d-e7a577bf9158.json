@@ -40886,10 +40886,10 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root>\n    <ConsumerNumber>2500007768</ConsumerNumber>\n</root>",
+									"raw": "{\"MobileNumber\":\"9500012345\",\"BPNumber\":2500007768}",
 									"options": {
 										"raw": {
-											"language": "xml"
+											"language": "json"
 										}
 									}
 								},
