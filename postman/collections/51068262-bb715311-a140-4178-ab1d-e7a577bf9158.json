@@ -40907,37 +40907,6 @@
 							"response": []
 						},
 						{
-							"name": "DecryptPayload",
-							"id": "51068262-291adbbc-b932-444c-a4b4-52516ab43405",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"payload\": \"642451f14ca29f2a9ff9bdc2b84f3aeaa5b6793a4adc1b4b14962128d89a318aD02ED9B0B47B96F22E634A433A72C7AD37CCB27D65C26DE4FC0C150CC9226612B4C5C3B79AD7BFE748F171013039D63F33DEB9207F286D263F97CA5CA7D7CC216E82B17CB6D2FDCDF97B5726CE1C3E17592D4E78ABB0EFFF54E8D0B6DB3B375623F81EE2C5FC9993A33EB55BF3D9D7BB53D56BE62349B64684C51DA564BFBC200794D488B255909EB1A4AA0A6703E9B4828CB54BA18EA7EC769F7195D64A883C3AC37D49D9AEF90E0FB02C6FAC1DA764A810B2DC6A41922117B75217F9EAC222A7180F22C4E2A7F84E24B54CCD17AB67B8BC0054746322CEDD32C19D2FF8381E517B2F59F1AAD8D7DFE623840660FEB8DAE4AE8CF9111DF1CBEFE5DE1F827449288C58CC78575B6173A95EBA81EA83438AACB2B4638B2FEECE44683F7C3094ECD69F7C95606E677F20D961552912EADF8139BE15701033EC3F2965DEFB0E24BE49CFB9E3D15B3A22121EE7C2021465F7D1907816058C455248119CE9D54E031FC6859FFD59FA2BAB5D16D2B287EF79ECC1679BC7E7FAF649CDC114B6076C70AB\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{api_gateway_url}}/whatsapp-chatbot/DecryptPayload",
-									"host": [
-										"{{api_gateway_url}}"
-									],
-									"path": [
-										"whatsapp-chatbot",
-										"DecryptPayload"
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "SelfBilling",
 							"id": "51068262-79beef34-d834-4e45-bf7c-62e30d13121d",
 							"protocolProfileBehavior": {
