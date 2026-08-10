@@ -6597,7 +6597,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Bharatpur/meter-reading/1784198218343-48315395_Screenshot (266).png\",\n    \"ConsumerNumber\": 2500007768,\n    \"Cycle\": \"2603\",\n    \"WardId\": 1,\n    \"ReadingDate\": \"2026-06-10\",\n    \"BillDate\": \"2026-06-10\",\n    \"FullName\": \"Debit credit note\",\n    \"BillNumber\": 25000077682026110,\n    \"CurrentReading\": 50,\n    \"PreviousReading\": 30,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 20\n}",
+											"raw": "{\n    \"MeterReadingId\": 0,\n    \"Latitude\": \"19\",\n    \"Longitude\": \"18\",\n    \"MeterBillReceiptImagePath\": \"Bharatpur/meter-reading/1786362927539-587145808_20.jpg\",\n    \"ConsumerNumber\": 2500007893,\n    \"Cycle\": \"2602\",\n    \"WardId\": 2,\n    \"ReadingDate\": \"2026-05-10\",\n    \"BillDate\": \"2026-05-10\",\n    \"FullName\": \"daysninet\",\n    \"BillNumber\": 2500007893202611,\n    \"CurrentReading\": 20,\n    \"PreviousReading\": 5,\n    \"MeterStatusId\": 1,\n    \"AccountTypeId\": 1,\n    \"Remarks\": \"Meter reading taken successfully\",\n    \"UnitUsed\": 15\n}",
 											"options": {
 												"raw": {
 													"language": "json"
