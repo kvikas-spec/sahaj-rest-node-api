@@ -40907,6 +40907,37 @@
 							"response": []
 						},
 						{
+							"name": "DecryptPayload",
+							"id": "51068262-a4c3259f-30d9-4cda-8432-d107ba665db3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"MobileNumber\":\"9500012345\",\"BPNumber\":2500007768}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/whatsapp-chatbot/DecryptPayload",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"whatsapp-chatbot",
+										"DecryptPayload"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "SelfBilling",
 							"id": "51068262-79beef34-d834-4e45-bf7c-62e30d13121d",
 							"protocolProfileBehavior": {
