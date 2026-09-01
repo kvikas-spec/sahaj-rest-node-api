@@ -40785,7 +40785,7 @@
 										"BPNumberVerification"
 									]
 								},
-								"description": "Encrypted payload: {\"MobileNumber\":\"9999999999\",\"BPNumber\":1000000001}"
+								"description": "Encrypted payload: { \"MobileNumber\": \"7768940852\", \"BPNumber\": 4000260116}"
 							},
 							"response": []
 						},
