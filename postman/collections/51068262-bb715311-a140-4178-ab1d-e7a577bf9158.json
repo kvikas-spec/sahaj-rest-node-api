@@ -40886,7 +40886,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"MobileNumber\": \"7768940852\",\n    \"BPNumber\": 4000260116\n}",
+									"raw": " {\"MobileNumber\":\"7768940852\"}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -40971,7 +40971,7 @@
 										"SelfBilling"
 									]
 								},
-								"description": "Encrypted RequestData: {\"CurrentReading\":123.456,\"ConsumerNumber\":1000000001,\"Latitude\":\"28.61\",\"Longitude\":\"77.20\"}"
+								"description": "Encrypted RequestData: {\"CurrentReading\":123.456,\"ConsumerNumber\":4000260116,\"Latitude\":\"28.61\",\"Longitude\":\"77.20\"}"
 							},
 							"response": []
 						},
