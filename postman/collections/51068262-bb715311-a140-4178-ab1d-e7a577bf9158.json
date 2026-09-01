@@ -40773,7 +40773,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"MessageRequest\": \"3db8643e9f05d6b3596c529f78c9d5f738f592b2d13e94d804c7c565b08116e17D9C1AE5C2A84BE04469B04F244E9AEE26A0D414BAAAB3CF559A1CD663BC35AA4DE002D6C76697D7B2705F6CFD55C21F8E75E7481BA7E4D72A69FE5DB83103357CFC7FA4827C4CB80737F45C7A34135ADA2222FF4B341DEB6F803D7C4C466D84\"\n}"
+									"raw": "{\n    \"MessageRequest\": \"cf8261a546a4bd77fcc75d45566ffe55acb84e216d9fbd4aeb97ed0c947959eaE41215CC3482F55111A8361648C941FF0A5A8B4D90638A2FDCF0135EBC71AF03F9D94F6B3ED0BD0AAFCA5574D65CBFDD96972F09807E17F1FDB15C196D26D54301232A9D290381658E9C9483EA2C427A13C58D4A16243699B31DD7B25008E115\"\n}"
 								},
 								"url": {
 									"raw": "{{api_gateway_url}}/whatsapp-chatbot/BPNumberVerification",
@@ -40886,7 +40886,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"MobileNumber\": \"7768940852\",\n    \"BPNumber\": 2500007916\n}",
+									"raw": "{\n    \"MobileNumber\": \"9414268032\",\n    \"BPNumber\": 2500007916\n}",
 									"options": {
 										"raw": {
 											"language": "json"
