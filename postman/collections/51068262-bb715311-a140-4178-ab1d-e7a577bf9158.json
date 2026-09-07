@@ -2264,14 +2264,67 @@
 							"response": []
 						},
 						{
-							"name": "/update-jmr-details",
+							"name": "update-jmr-details",
 							"id": "51068262-0ce76e5e-798d-4894-9e6f-2cf82998e973",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "POST",
+								"header": [
+									{
+										"key": "sec-ch-ua-platform",
+										"value": "\"Linux\""
+									},
+									{
+										"key": "Referer",
+										"value": "https://gailgaspng.xbotapps.com/"
+									},
+									{
+										"key": "sec-ch-ua",
+										"value": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\""
+									},
+									{
+										"key": "x-region-id",
+										"value": "Meerut"
+									},
+									{
+										"key": "sec-ch-ua-mobile",
+										"value": "?0"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json, text/plain, */*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"ConsumerNumber\":\"3000042882\",\"ISUpdateMeterDetails\":false,\"MeterSerialNo\":\"FIOI030000700007\",\"MeterCompanyId\":\"11\",\"MeterType\":\"LHS\",\"MeterReading\":0,\"TransactionDate\":\"2026-06-01\",\"JMRDate\":\"2026-06-01\",\"WardId\":\"11\",\"MeterDetailsRemarks\":\"\",\"MeterRemarks\":\"testing for prepaid\",\"meterFileUrl\":\"\",\"jmrFileUrl\":\"jmr-doc/1788767172597-380942236_sample.png\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/customer-registration/update-jmr-details/",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"customer-registration",
+										"update-jmr-details",
+										""
+									]
+								}
 							},
 							"response": []
 						}
