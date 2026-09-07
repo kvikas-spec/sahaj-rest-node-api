@@ -2307,7 +2307,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"ConsumerNumber\": \"3000042882\",\n    \"ISUpdateMeterDetails\": false,\n    \"MeterSerialNo\": \"FIOI030000700007\",\n    \"MeterCompanyId\": \"11\",\n    \"MeterType\": \"LHS\",\n    \"MeterReading\": 0.5,\n    \"TransactionDate\": \"2026-06-01\",\n    \"JMRDate\": \"2026-06-01\",\n    \"WardId\": \"11\",\n    \"MeterDetailsRemarks\": \"\",\n    \"MeterRemarks\": \"testing for prepaid\",\n    \"meterFileUrl\": \"\",\n    \"jmrFileUrl\": \"jmr-doc/1788767172597-380942236_sample.png\"\n}",
+									"raw": "{\n    \"ConsumerNumber\": \"3000042882\",\n    \"ISUpdateMeterDetails\": false,\n    \"MeterSerialNo\": \"FIOI030000700007\",\n    \"MeterCompanyId\": \"11\",\n    \"MeterType\": \"LHS\",\n    \"MeterReading\": 0.5,\n    \"TransactionDate\": \"2026-06-02\",\n    \"JMRDate\": \"2026-06-02\",\n    \"WardId\": \"11\",\n    \"MeterDetailsRemarks\": \"\",\n    \"MeterRemarks\": \"testing for prepaid\",\n    \"meterFileUrl\": \"\",\n    \"jmrFileUrl\": \"jmr-doc/1788767172597-380942236_sample.png\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
