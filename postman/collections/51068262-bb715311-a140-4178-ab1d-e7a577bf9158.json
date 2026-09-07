@@ -2194,6 +2194,77 @@
 						}
 					],
 					"id": "51068262-f114e457-c82c-4644-9ce7-b5752f7e7b6e"
+				},
+				{
+					"name": "Prepaid_test",
+					"item": [
+						{
+							"name": "New Request",
+							"id": "51068262-8a789784-b294-46f4-ab9b-037f85bf48ed",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sec-ch-ua-platform",
+										"value": "\"Linux\""
+									},
+									{
+										"key": "Referer",
+										"value": "https://gailgaspng.xbotapps.com/"
+									},
+									{
+										"key": "sec-ch-ua",
+										"value": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\""
+									},
+									{
+										"key": "x-region-id",
+										"value": "Meerut"
+									},
+									{
+										"key": "sec-ch-ua-mobile",
+										"value": "?0"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json, text/plain, */*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"CustomerId\":\"190088\",\"IsVerification\":false}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_gateway_url}}/customer-registration/add-rfc-done/",
+									"host": [
+										"{{api_gateway_url}}"
+									],
+									"path": [
+										"customer-registration",
+										"add-rfc-done",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "51068262-648117b2-5f44-4a43-986a-29ae9908914e"
 				}
 			],
 			"id": "51068262-91b3a5b3-90f6-4777-9564-f642df588bc4"
