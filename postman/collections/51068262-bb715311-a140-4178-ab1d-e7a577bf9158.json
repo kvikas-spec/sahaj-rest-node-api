@@ -2262,6 +2262,18 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "/update-jmr-details",
+							"id": "51068262-0ce76e5e-798d-4894-9e6f-2cf82998e973",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "51068262-648117b2-5f44-4a43-986a-29ae9908914e"
