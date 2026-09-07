@@ -2307,7 +2307,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\"ConsumerNumber\":\"3000042882\",\"ISUpdateMeterDetails\":false,\"MeterSerialNo\":\"FIOI030000700007\",\"MeterCompanyId\":\"11\",\"MeterType\":\"LHS\",\"MeterReading\":0,\"TransactionDate\":\"2026-06-01\",\"JMRDate\":\"2026-06-01\",\"WardId\":\"11\",\"MeterDetailsRemarks\":\"\",\"MeterRemarks\":\"testing for prepaid\",\"meterFileUrl\":\"\",\"jmrFileUrl\":\"jmr-doc/1788767172597-380942236_sample.png\"}",
+									"raw": "{\n    \"ConsumerNumber\": \"3000042882\",\n    \"ISUpdateMeterDetails\": false,\n    \"MeterSerialNo\": \"FIOI030000700007\",\n    \"MeterCompanyId\": \"11\",\n    \"MeterType\": \"LHS\",\n    \"MeterReading\": 0,\n    \"TransactionDate\": \"2026-06-07\",\n    \"JMRDate\": \"2026-06-07\",\n    \"WardId\": \"11\",\n    \"MeterDetailsRemarks\": \"\",\n    \"MeterRemarks\": \"testing for prepaid\",\n    \"meterFileUrl\": \"\",\n    \"jmrFileUrl\": \"jmr-doc/1788767172597-380942236_sample.png\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
