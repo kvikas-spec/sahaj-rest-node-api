@@ -41666,6 +41666,558 @@
 			"id": "51068262-89e0d28b-1aee-46d8-8878-5720d751d707"
 		},
 		{
+			"name": "Reports - Event-based Offline Downloads",
+			"item": [
+				{
+					"name": "List my offline requests",
+					"id": "51068262-f6b2a40a-aec6-46d1-90f6-efff2ef76b98",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-region-id",
+								"value": "Bangalore",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/offline-reports?pageNo=1&pageSize=20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"offline-reports"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export my offline request list",
+					"id": "51068262-a0627455-13d0-4fe6-9d29-9fcb75b4a96e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/offline-reports/export",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"offline-reports",
+								"export"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request status and BullMQ delivery status",
+					"id": "51068262-8c2550f5-70c7-4f3c-bc1e-506da8b4298f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/offline-reports/{{requestId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"offline-reports",
+								"{{requestId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download completed XLSX",
+					"id": "51068262-e9949b1b-19dd-416b-a3a5-c4386ceb519e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-region-id",
+								"value": "Bangalore",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/offline-reports/:requestId/download",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"offline-reports",
+								":requestId",
+								"download"
+							],
+							"variable": [
+								{
+									"key": "requestId",
+									"value": "2064"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retry pending request or enqueue a legacy request",
+					"id": "51068262-03e10742-b552-4191-80fa-e6130679d693",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/offline-reports/:requestId/retry",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"offline-reports",
+								":requestId",
+								"retry"
+							],
+							"variable": [
+								{
+									"key": "requestId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel pending request",
+					"id": "51068262-92661924-8b96-4283-8814-2158392364ea",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/offline-reports/:requestId/cancel",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"offline-reports",
+								":requestId",
+								"cancel"
+							],
+							"variable": [
+								{
+									"key": "requestId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create customer-profile offline request",
+					"id": "51068262-7ee03a97-6f6d-4d2b-8d1f-f36fa7d37240",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"linkId\": \"130338\",\n  \"IsRegularCustomer\": true,\n  \"financialYear\": \"2026-2027\",\n  \"Quarter\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/offline-reports/requests/customer-profile",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"offline-reports",
+								"requests",
+								"customer-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create last-six-invoices offline request",
+					"id": "51068262-8a558e2d-c046-40bc-8f71-077bada8bb6e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"linkId\": \"{{linkId}}\",\n  \"IsFilter\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/offline-reports/requests/last-six-invoices",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"offline-reports",
+								"requests",
+								"last-six-invoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create last-two-bills-pending offline request",
+					"id": "51068262-74791b89-fc63-4d09-b0d2-99392d49607e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"linkId\": \"{{linkId}}\",\n  \"IsFilter\": 1,\n  \"fromDate\": \"2026-01-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/offline-reports/requests/last-two-bills-pending",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"offline-reports",
+								"requests",
+								"last-two-bills-pending"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create monthly-gas-sales offline request",
+					"id": "51068262-bbb5f236-a1dd-4488-97c1-d4653e1854f9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"linkId\": \"\",\n  \"month\": 10,\n  \"year\": 2026\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/offline-reports/requests/monthly-gas-sales",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"offline-reports",
+								"requests",
+								"monthly-gas-sales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create invoice-details offline request",
+					"id": "51068262-223eda8a-2120-4acf-b883-f7a636caa934",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"linkId\": \"{{linkId}}\",\n  \"IsFilter\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/offline-reports/requests/invoice-details",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"offline-reports",
+								"requests",
+								"invoice-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Existing cumulative ledger producer",
+					"id": "51068262-4b874c23-8b71-48e1-bf93-ecef12ddf2da",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"linkId\": \"{{linkId}}\",\n  \"wardId\": 0,\n  \"search\": \"\",\n  \"meterNo\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/report-list/ExportCumulativeReport",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"report-list",
+								"ExportCumulativeReport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Existing outstanding ageing producer",
+					"id": "51068262-6d564cde-a30b-4cfd-a2b7-b9854c40d798",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/report-list/ExportDebtorsReportWithAgeingToExcel?date=2026-10-01&flag=false&linkId={{linkId}}",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"report-list",
+								"ExportDebtorsReportWithAgeingToExcel"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2026-10-01"
+								},
+								{
+									"key": "flag",
+									"value": "false"
+								},
+								{
+									"key": "linkId",
+									"value": "{{linkId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GAWiseOfflineReportConfig",
+					"id": "51068262-1d59d447-158e-4bd6-bc04-c9261548a80e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-region-id",
+								"value": "Meerut",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/offline-reports/GAWiseOfflineReportConfig",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"offline-reports",
+								"GAWiseOfflineReportConfig"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Existing move-in SD producer",
+					"id": "51068262-479b65ec-8ceb-45a0-8913-9876e8e32484",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"linkId\": \"45\",\n  \"statusId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/customers/ExportSDRequiredVsAvailable/offline-request",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"customers",
+								"ExportSDRequiredVsAvailable",
+								"offline-request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Existing non-move-in SD producer",
+					"id": "51068262-a9b64b48-71cf-449e-950f-1cbd6bd4adb1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"linkId\": \"{{linkId}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_gateway_url}}/reports/customers/ExportNonMoveInSDRequiredVsAvailable/offline-request",
+							"host": [
+								"{{api_gateway_url}}"
+							],
+							"path": [
+								"reports",
+								"customers",
+								"ExportNonMoveInSDRequiredVsAvailable",
+								"offline-request"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "51068262-78ee3c5f-2fc4-425e-8f22-d9cd11c87916"
+		},
+		{
 			"name": "http://localhost:8080/api/v1/customer-registration/miscellaneous/form13-search/3000298511/0",
 			"id": "51068262-69c5a61f-db54-4b5c-ba72-92516137d04c",
 			"protocolProfileBehavior": {
